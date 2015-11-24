@@ -45,4 +45,8 @@
     <string name="custom_theme_vivid">Vivid(Monet)</string>
     <string name="custom_theme_snowpaint">SnowPaintDrop(Monet)</string>
     <string name="custom_theme_espresso">Espresso(Monet)</string>
+
+    <!-- Battery stats reset -->
+    <string name="battery_stats_reset">Reset stats</string>
+    <string name="battery_stats_message">Battery history stats are going to be reset</string>    
 </resources>
