@@ -122,4 +122,7 @@
 
     <!-- Floating rotation button -->
     <string name="enable_floating_rotation_button_title">Floating rotate button</string>
+
+    <!-- Running services - Background processes tab -->
+    <string name="background_processes_settings_title">Background processes</string>
 </resources>
