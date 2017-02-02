@@ -654,4 +654,10 @@ public class Settings extends SettingsActivity {
         }
     }
     public static class SafetyCenterActivity extends SettingsActivity { }
+
+    /**
+     * Activity for The DevRunningServicesActivity
+     */
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
+
 }
