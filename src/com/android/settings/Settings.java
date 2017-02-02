@@ -541,6 +541,11 @@ public class Settings extends SettingsActivity {
     public static class FlashNotificationsActivity extends SettingsActivity { /* empty */ }
 
     /**
+     * Activity for The DevRunningServicesActivity
+     */
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
+
+    /**
      * Activity for WirelessDebuggingActivity
      */
     public static class WirelessDebuggingActivity extends SettingsActivity { /* empty */ }

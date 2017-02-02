@@ -60,4 +60,6 @@
     <string name="device_manufacturer">Manufacturer</string>
     <string name="device_codename">Codename</string>
 
+    <!-- Running services - Background processes tab -->
+    <string name="background_processes_settings_title">Background processes</string>
 </resources>
