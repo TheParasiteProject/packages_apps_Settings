@@ -54,6 +54,12 @@
         android:summary="@string/sensor_block_summary"
         android:fragment="com.android.settings.custom.battery.SensorBlockSettings"/>
 
+    <Preference
+        android:key="wakelock_blocker"
+        android:title="@string/wakelock_blocker_title"
+        android:summary="@string/wakelock_blocker_summary"
+        android:fragment="com.android.settings.custom.battery.WakeLockBlocker" />
+
     <SwitchPreference
         android:key="adaptive_charging"
         android:summary="@string/adaptive_charging_description"
