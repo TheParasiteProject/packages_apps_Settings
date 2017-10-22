@@ -146,6 +146,9 @@
     <string name="scroll_fling_haptic_feedback_title">Vibrate on scroll flings</string>
     <string name="scroll_fling_haptic_feedback_summary">Vibrate on reaching edges when scrolling with fling gesture</string>
 
+    <!-- Charger haptic feedback -->
+    <string name="charger_haptic_feedback_title">Vibrate on charger connection changes</string>
+
     <!-- Spoof storage encryption status -->
     <string name="spoof_storage_encryption_status_title">Use storage encryption spoofing</string>
     <string name="spoof_storage_encryption_status_summary">Spoof storage encryption status to encrypted</string>
@@ -194,4 +197,7 @@
     <!-- fingerprint lockout -->
     <string name="fingerprint_lockout_title">Disable fingerprint lockout</string>
     <string name="fingerprint_lockout_summary">Deactivates 30 second timeout as well as permanent lockout after multiple failed fingerprint unlock attempts</string>
+
+    <!-- Charging sound -->
+    <string name="charging_sounds_custom_title">Charging sounds</string>
 </resources>
