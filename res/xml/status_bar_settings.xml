@@ -18,6 +18,12 @@
         android:defaultValue="false" />
 
     <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        android:key="data_disabled_icon"
+        android:title="@string/data_disabled_icon_title"
+        android:summary="@string/data_disabled_icon_summary"
+        android:defaultValue="true"/>
+
+    <com.android.settings.custom.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_gesture"
         android:title="@string/status_bar_double_tap_to_sleep_title"
         android:summary="@string/status_bar_double_tap_to_sleep_summary"
