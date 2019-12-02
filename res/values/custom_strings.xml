@@ -103,4 +103,7 @@
     <string name="fast_charging_title">Fast charging</string>
     <string name="fast_charging_summary">Disable to reduce the heat produced by the device while charging or to extend the lifespan of the battery</string>
 
+    <!-- Hardware Info -->
+    <string name="device_manufacturer">Manufacturer</string>
+    <string name="device_codename">Codename</string>
 </resources>
