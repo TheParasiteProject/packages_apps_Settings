@@ -4,4 +4,8 @@
     <string name="wifi_do_not_validate_eap_server">Do not validate</string>
     <!-- Warning message displayed if user choses not to validate the EAP server -->
     <string name="wifi_do_not_validate_eap_server_warning">No certificate specified. Your connection will not be private.</string>
+
+    <!-- Hardware Info -->
+    <string name="device_manufacturer">Manufacturer</string>
+    <string name="device_codename">Codename</string>
 </resources>
