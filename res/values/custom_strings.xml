@@ -4,4 +4,8 @@
     <string name="wifi_do_not_validate_eap_server">Do not validate</string>
     <!-- Warning message displayed if user choses not to validate the EAP server -->
     <string name="wifi_do_not_validate_eap_server_warning">No certificate specified. Your connection will not be private.</string>
+
+    <!-- Battery light -->
+    <string name="battery_light_title">Turn on the light when charging</string>
+
 </resources>
