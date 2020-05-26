@@ -39,6 +39,14 @@
         android:key="display_category"
         android:title="@string/accessibility_screen_option">
 
+        <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:key="berry_black_theme"
+            android:dependency="dark_ui_activated"
+            android:title="@string/berry_black_theme_title"
+            android:summary="@string/berry_black_theme_summary"
+            android:defaultValue="false"
+            settings:requiresPackage="org.lineageos.overlay.customization.blacktheme" />
+
         <SwitchPreferenceCompat
             android:key="toggle_force_invert"
             android:summary="@string/accessibility_force_invert_summary"
@@ -78,5 +86,4 @@
         android:selectable="false"
         settings:searchable="false"
         settings:controller="com.android.settings.display.darkmode.DarkModeCustomModesPreferenceController" />
-
 </PreferenceScreen>
