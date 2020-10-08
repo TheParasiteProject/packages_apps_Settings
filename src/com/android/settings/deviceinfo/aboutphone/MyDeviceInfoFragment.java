@@ -123,7 +123,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
     @Override
     public void onStart() {
         super.onStart();
-        initHeader();
+        initActionbar();
     }
 
     @Override
@@ -209,6 +209,14 @@ public class MyDeviceInfoFragment extends DashboardFragment
             return;
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void initActionbar() {
+        final ActionBar actionBar = getActivity().getActionBar();
+        if (actionBar == null) {
+            return;
+        }
+        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     private void initHeader() {
