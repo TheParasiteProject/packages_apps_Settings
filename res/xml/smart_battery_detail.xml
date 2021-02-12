@@ -47,6 +47,13 @@
         settings:controller="com.android.settings.fuelgauge.batterysaver.ForceBackgroundFreezePreferenceController"
         android:defaultValue="false"/>
 
+    <!-- Sensor Block -->
+    <Preference
+        android:key="sensor_block_settings"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:fragment="com.android.settings.custom.battery.SensorBlockSettings"/>
+
     <SwitchPreference
         android:key="adaptive_charging"
         android:summary="@string/adaptive_charging_description"
