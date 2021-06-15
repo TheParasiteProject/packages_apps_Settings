@@ -106,6 +106,7 @@ android_library {
         "statslog-settings",
         "org.lineageos.platform.internal",
         "LineagePreferenceLib",
+        "com.github.bumptech.glide_glide",
         "vendor.lineage.fastcharge-V1.0-java",
         "SystemUISharedLib",
     ],
