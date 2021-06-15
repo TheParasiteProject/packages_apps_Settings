@@ -104,6 +104,7 @@ android_library {
         "settings-logtags",
         "settings-telephony-protos-lite",
         "statslog-settings",
+        "com.github.bumptech.glide_glide",
         "custom-preference",
         "vendor.lineage.fastcharge-V1.0-java",
     ],
