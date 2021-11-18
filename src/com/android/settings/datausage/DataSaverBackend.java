@@ -86,12 +86,19 @@ public class DataSaverBackend {
 
     public void setIsAllowlisted(int uid, String packageName, boolean allowlisted) {
         final int policy = allowlisted ? POLICY_ALLOW_METERED_BACKGROUND : POLICY_NONE;
+<<<<<<< HEAD
         mDynamicDenylistManager.setUidPolicyLocked(uid, policy);
+=======
+>>>>>>> ab227e7ecd1 (Settings: Add support for allowing/disallowing apps on cellular, vpn and wifi networks)
         mUidPolicies.put(uid, policy);
         if (allowlisted) {
+            mPolicyManager.addUidPolicy(uid, POLICY_ALLOW_METERED_BACKGROUND);
             mMetricsFeatureProvider.action(
                     mContext, SettingsEnums.ACTION_DATA_SAVER_WHITELIST, packageName);
+        } else {
+            mPolicyManager.removeUidPolicy(uid, POLICY_ALLOW_METERED_BACKGROUND);
         }
+        mPolicyManager.removeUidPolicy(uid, POLICY_REJECT_METERED_BACKGROUND);
     }
 
     public boolean isAllowlisted(int uid) {
@@ -116,12 +123,19 @@ public class DataSaverBackend {
 
     public void setIsDenylisted(int uid, String packageName, boolean denylisted) {
         final int policy = denylisted ? POLICY_REJECT_METERED_BACKGROUND : POLICY_NONE;
+<<<<<<< HEAD
         mDynamicDenylistManager.setUidPolicyLocked(uid, policy);
+=======
+>>>>>>> ab227e7ecd1 (Settings: Add support for allowing/disallowing apps on cellular, vpn and wifi networks)
         mUidPolicies.put(uid, policy);
         if (denylisted) {
+            mPolicyManager.addUidPolicy(uid, POLICY_REJECT_METERED_BACKGROUND);
             mMetricsFeatureProvider.action(
                     mContext, SettingsEnums.ACTION_DATA_SAVER_BLACKLIST, packageName);
+        } else {
+            mPolicyManager.removeUidPolicy(uid, POLICY_REJECT_METERED_BACKGROUND);
         }
+        mPolicyManager.removeUidPolicy(uid, POLICY_ALLOW_METERED_BACKGROUND);
     }
 
     public boolean isDenylisted(int uid) {
@@ -161,6 +175,9 @@ public class DataSaverBackend {
     private void handleUidPoliciesChanged(int uid, int newPolicy) {
         loadAllowlist();
         loadDenylist();
+
+        // We only care about allow/reject metered background policy here.
+        newPolicy &= POLICY_ALLOW_METERED_BACKGROUND | POLICY_REJECT_METERED_BACKGROUND;
 
         final int oldPolicy = mUidPolicies.get(uid, POLICY_NONE);
         if (newPolicy == POLICY_NONE) {
