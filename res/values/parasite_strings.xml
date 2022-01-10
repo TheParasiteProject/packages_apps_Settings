@@ -165,4 +165,7 @@
 
     <!-- Display settings screen, peak refresh rate settings summary [CHAR LIMIT=NONE] -->
     <string name="peak_refresh_rate_summary_custom">Automatically raises the refresh rate from 60 to %1$d Hz for some content. Increases battery usage.</string>
+
+    <!-- Floating rotation button -->
+    <string name="enable_floating_rotation_button_title">Use floating rotate button</string>
 </resources>
