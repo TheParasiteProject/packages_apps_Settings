@@ -99,4 +99,7 @@
 
     <!-- QS Brightness slider haptic -->
     <string name="qs_brightness_slider_haptic_title">Vibrate on brightness slider changes</string>
+
+    <!-- Skip biometric manual confirmation -->
+    <string name="skip_biometric_auth_confirmation_title">Skip manual confirmation</string>
 </resources>
