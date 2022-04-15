@@ -209,4 +209,10 @@
     <string name="back_options_dialog_title">Options</string>
     <string name="back_height">Edge touch area</string>
 
+    <!-- Package details -->
+    <string name="package_details_group_title">Package details</string>
+    <string name="package_name">Package name</string>
+    <string name="package_version">Package version</string>
+    <string name="package_version_text" translatable="false"><xliff:g id="version_num">%1$s</xliff:g></string>
+
 </resources>
