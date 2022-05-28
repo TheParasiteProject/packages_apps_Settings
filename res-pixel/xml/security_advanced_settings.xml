@@ -80,6 +80,13 @@
         android:title="@string/confirm_sim_deletion_title"
         settings:controller="com.android.settings.security.ConfirmSimDeletionPreferenceController" />
 
+    <com.android.settings.custom.preference.GlobalSettingSwitchPreference
+        android:key="pm_downgrade_allowed"
+        android:order="91"
+        android:title="@string/app_downgrade_title"
+        android:summary="@string/app_downgrade_summary"
+        android:defaultValue="false"/>
+
     <PreferenceCategory
         android:key="security_category_profile"
         android:order="100"
