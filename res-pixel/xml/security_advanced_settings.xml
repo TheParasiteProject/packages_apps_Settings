@@ -87,6 +87,13 @@
         android:summary="@string/app_downgrade_summary"
         android:defaultValue="false"/>
 
+    <com.android.settings.custom.preference.SecureSettingSwitchPreference
+        android:key="window_ignore_secure"
+        android:order="92"
+        android:title="@string/ignore_window_secure_title"
+        android:summary="@string/ignore_window_secure_summary"
+        android:defaultValue="false"/>
+
     <PreferenceCategory
         android:key="security_category_profile"
         android:order="100"
