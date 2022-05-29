@@ -59,6 +59,17 @@
         android:fragment="com.android.settings.datetime.DateTimeSettings"
         settings:controller="com.android.settings.datetime.DateTimePreferenceController"/>
 
+    <Preference
+        android:key="gaming_mode"
+        android:title="@string/game_space_title"
+        android:icon="@drawable/ic_settings_game_space"
+        android:order="-235">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="io.chaldeaprjkt.gamespace"
+            android:targetClass="io.chaldeaprjkt.gamespace.settings.SettingsActivity" />
+    </Preference>
+
     <com.google.android.settings.aware.AwareSettingsDialogPreference
         android:icon="@drawable/ic_aware"
         android:key="aware_settings"
