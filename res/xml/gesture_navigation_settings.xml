@@ -38,6 +38,12 @@
         android:summary="@string/show_navbar_gesture_bar_summary"
         android:defaultValue="true" />
 
+    <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        android:key="navigation_bar_gestural_narrow"
+        android:title="@string/gestural_navbar_narrow_title"
+        android:summary="@string/gestural_navbar_narrow_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="assistant_gesture_category"
         android:persistent="false"
