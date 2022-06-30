@@ -34,6 +34,12 @@
         android:summary="@string/idle_manager_summary"
         android:defaultValue="false" />
 
+    <com.android.settings.custom.preference.GlobalSettingSwitchPreference
+        android:key="strict_standby_policy"
+        android:title="@string/strict_standby_policy_title"
+        android:summary="@string/strict_standby_policy_summary"
+        android:defaultValue="false"/>
+
     <SwitchPreference
         android:key="adaptive_charging"
         android:summary="@string/adaptive_charging_description"
