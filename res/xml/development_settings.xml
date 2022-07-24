@@ -781,6 +781,7 @@
         <SwitchPreferenceCompat
             android:key="force_resizable_activities"
             android:title="@string/force_resizable_activities"
+            android:defaultValue="true"
             android:summary="@string/force_resizable_activities_summary" />
 
         <SwitchPreferenceCompat
@@ -790,6 +791,7 @@
 
         <SwitchPreferenceCompat
             android:key="override_desktop_mode_features"
+            android:defaultValue="true"
             android:title="@string/enable_desktop_mode" />
 
         <SwitchPreferenceCompat
