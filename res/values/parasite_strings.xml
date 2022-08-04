@@ -205,4 +205,9 @@
     <!-- Scroll fling haptic feedback -->
     <string name="scroll_fling_haptic_feedback_title">Vibrate on scroll flings</string>
     <string name="scroll_fling_haptic_feedback_summary">Vibrate on reaching edges when scrolling with fling gesture</string>
+
+    <!-- Statusbar lyric -->
+    <string name="status_bar_lyric_title">Status bar lyric</string>
+    <string name="status_bar_lyric_summary">Show lyric in status bar (need app support)</string>
+    <string name="status_bar_show_lyric_title">Enable status bar lyric</string>
 </resources>
