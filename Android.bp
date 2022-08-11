@@ -70,6 +70,8 @@ android_library {
         // External dependencies
         "androidx.navigation_navigation-fragment-ktx",
         "androidx.window_window-java",
+        "androidx.fragment_fragment-ktx",
+        "androidx.lifecycle_lifecycle-runtime-ktx",
         "gson",
         "guava",
 
@@ -113,6 +115,7 @@ android_library {
         "telephony_flags_core_java_lib",
         "setupdesign-lottie-loading-layout",
         "com.github.bumptech.glide_glide",
+        "SettingsLibMainSwitchPreference",
         "custom-preference",
         "vendor.lineage.fastcharge-V1.0-java",
     ],
