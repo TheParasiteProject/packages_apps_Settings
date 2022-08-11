@@ -66,6 +66,8 @@ android_library {
         // External dependencies
         "androidx.navigation_navigation-fragment-ktx",
         "androidx.window_window-java",
+        "androidx.fragment_fragment-ktx",
+        "androidx.lifecycle_lifecycle-runtime-ktx",
         "gson",
         "guava",
 
@@ -105,6 +107,7 @@ android_library {
         "settings-telephony-protos-lite",
         "statslog-settings",
         "com.github.bumptech.glide_glide",
+        "SettingsLibMainSwitchPreference",
         "custom-preference",
         "vendor.lineage.fastcharge-V1.0-java",
     ],
