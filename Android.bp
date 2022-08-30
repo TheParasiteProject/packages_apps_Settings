@@ -104,6 +104,7 @@ android_library {
         "settings-telephony-protos-lite",
         "statslog-settings",
         "org.lineageos.platform.internal",
+        "LineagePreferenceLib",
     ],
 
     plugins: ["androidx.room_room-compiler-plugin"],
