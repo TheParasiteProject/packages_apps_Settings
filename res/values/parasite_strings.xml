@@ -133,4 +133,9 @@
     <!-- Unlimited g00gle ph0t0s st0rage -->
     <string name="unlimited_photos_storage_title">Unlimited Google Photos storage</string>
     <string name="unlimited_photos_storage_summary">Unlimited storage for backup photos. Google Photos’ new features will not be available.</string>
+
+    <!-- Per-app volume control -->
+    <string name="app_volume">App volume</string>
+    <string name="app_volume_title">Per-app volume control</string>
+    <string name="app_volume_summary">Allow to set different volume levels for each app</string>
 </resources>
