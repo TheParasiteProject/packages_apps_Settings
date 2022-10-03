@@ -371,4 +371,11 @@
     <string name="x_reality_engine_mode_title">X-Reality Engine</string>
     <string name="x_reality_engine_mode_summary">An additional Bravia Engine inspired display mode to enhance your viewing experience with optimized contrast and colors.</string>
 
+    <!-- Privacy indicators -->
+    <string name="location_privacy_indicator_title">Location access indicator</string>
+    <string name="location_privacy_indicator_summary_on">Show location in the privacy chip</string>
+    <string name="location_privacy_indicator_summary_off">Show location in status bar icons</string>
+    <string name="camera_mic_indicator_title">Camera and microphone indicators</string>
+    <string name="camera_mic_indicator_summary">Show camera and microphone in the privacy chip</string>
+
 </resources>
