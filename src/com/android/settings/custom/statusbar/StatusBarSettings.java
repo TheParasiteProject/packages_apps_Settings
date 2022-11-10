@@ -32,6 +32,7 @@ import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
+import com.android.settings.custom.preference.SecureSettingListPreference;
 import com.android.settings.custom.preference.SystemSettingListPreference;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -42,10 +43,7 @@ import java.util.Set;
 public class StatusBarSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    private static final String CATEGORY_BRIGHTNESS = "status_bar_brightness_category";
-
     private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
-    private static final String STATUS_BAR_QUICK_QS_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
 
     private static final int PULLDOWN_DIR_NONE = 0;
     private static final int PULLDOWN_DIR_RIGHT = 1;
@@ -55,8 +53,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment
 
     private SwitchPreference mStatusBarQsShowAutoBrightness;
 
-    private PreferenceCategory mStatusBarBrightnessCategory;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,13 +61,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         mQuickPulldown = findPreference(STATUS_BAR_QUICK_QS_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
         updateQuickPulldownSummary(mQuickPulldown.getIntValue(0));
-
-        mStatusBarBrightnessCategory = getPreferenceScreen().findPreference(CATEGORY_BRIGHTNESS);
-        mStatusBarQsShowAutoBrightness = mStatusBarBrightnessCategory.findPreference(STATUS_BAR_QUICK_QS_SHOW_AUTO_BRIGHTNESS);
-        if (!getResources().getBoolean(
-                com.android.internal.R.bool.config_automatic_brightness_available)){
-            mStatusBarBrightnessCategory.removePreference(mStatusBarQsShowAutoBrightness);
-        }
     }
 
     @Override
