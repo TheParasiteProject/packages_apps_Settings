@@ -175,4 +175,7 @@
     <!-- WiFi Standard icon -->
     <string name="wifi_standard_icon_title">WiFi standard</string>
     <string name="wifi_standard_icon_summary">Display WiFi standard next to WiFi signal</string>
+
+    <!-- Volume slider haptic feedback -->
+    <string name="volume_slider_haptic_feedback_title">Vibrate on volume slider changes</string>
 </resources>
