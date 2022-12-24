@@ -49,4 +49,8 @@
     <!-- Battery stats reset -->
     <string name="battery_stats_reset">Reset stats</string>
     <string name="battery_stats_message">Battery history stats are going to be reset</string>    
+
+    <!-- Bluetooth A2DP preferences-->
+    <string name="bluetooth_a2dp_preferences_title">Bluetooth A2DP preferences</string>
+    <string name="bluetooth_a2dp_preferences_summary">Bluetooth low latency audio, le scan mode</string>
 </resources>

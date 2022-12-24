@@ -69,6 +69,15 @@
         settings:allowDividerAbove="true"
         settings:controller="com.android.settings.connecteddevice.AdvancedConnectedDeviceController"/>
 
+    <Preference
+        android:key="bluetooth_a2dp_preferences"
+        android:title="@string/bluetooth_a2dp_preferences_title"
+        android:summary="@string/bluetooth_a2dp_preferences_summary">
+        <intent
+            android:targetPackage="com.android.bluetooth.bthelper"
+            android:targetClass="com.android.bluetooth.bthelper.BtHelperActivity" />
+    </Preference>
+
     <com.android.settingslib.widget.FooterPreference
         android:key="discoverable_footer"
         android:title="@string/bluetooth_off_footer"
