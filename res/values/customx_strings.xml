@@ -61,7 +61,6 @@
     <string name="power_menu_shortcuts_title">Menu shortcuts</string>
     <string name="power_menu_shortcuts_summary">Customize power menu shortcuts</string>
     <string name="power_menu_screenshot_title">Screenshot</string>
-    <string name="power_menu_screenshot_summary">Long-press for partial screenshot</string>
     <string name="power_menu_airplane_title">Airplane mode</string>
     <string name="power_menu_users_title">User switcher</string>
     <string name="power_menu_emergency_title">Emergency</string>
@@ -87,8 +86,6 @@
     <string name="status_bar_brightness_slider_position_bottom">Bottom</string>
     <string name="status_bar_brightness_slider_auto_title">Auto brightness</string>
     <string name="status_bar_brightness_slider_auto_summary">Show toggle for adaptive brightness near the slider</string>
-    <string name="status_bar_toggle_brightness">Brightness control</string>
-    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 
     <!-- QS settings -->
     <string name="qs_title">Quick settings</string>
@@ -131,10 +128,6 @@
     <!-- Others settings -->
     <string name="others_settings_title">Others settings</string>
     <string name="additional_buttons_title">Additional buttons</string>
-
-    <!-- Partial screenshot -->
-    <string name="click_partial_screenshot_title">Click to partial screenshot</string>
-    <string name="click_partial_screenshot_summary">Short click Volume Down and Power to take partial screenshot</string>
 
     <!-- One shot automatic brightness -->
     <string name="auto_brightness_one_shot_title">One shot auto-brightness</string>
