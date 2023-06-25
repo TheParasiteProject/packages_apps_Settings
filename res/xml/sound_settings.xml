@@ -239,6 +239,13 @@
         android:defaultValue="false"
         settings:controller="com.android.settings.sound.IncallFeedbackPreferenceController" />
 
+    <!-- QS Bightness slider haptic -->
+    <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        android:key="qs_brightness_slider_haptic"
+        android:title="@string/qs_brightness_slider_haptic_title"
+        android:defaultValue="false"
+        settings:controller="com.android.settings.sound.BrightnessSliderHapticPreferenceController" />
+
     <!-- Dock speaker plays -->
     <DropDownPreference
         android:key="dock_audio_media"
