@@ -104,4 +104,7 @@
 
     <!-- Skip biometric manual confirmation -->
     <string name="skip_biometric_auth_confirmation_title">Skip manual confirmation</string>
+
+    <!-- Android Beam -->
+    <string name="android_beam_main_switch_title">Use Android Beam</string>
 </resources>
