@@ -197,4 +197,8 @@
 
     <!-- Volume slider haptic feedback -->
     <string name="volume_slider_haptic_feedback_title">Vibrate on volume slider changes</string>
+
+    <!-- Scroll fling haptic feedback -->
+    <string name="scroll_fling_haptic_feedback_title">Vibrate on scroll flings</string>
+    <string name="scroll_fling_haptic_feedback_summary">Vibrate on reaching edges when scrolling with fling gesture</string>
 </resources>
