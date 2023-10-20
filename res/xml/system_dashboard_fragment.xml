@@ -85,6 +85,14 @@
         android:order="-245"
         android:title="@string/usb_default_config_title"/>
 
+    <!-- Custom Advanced Settings -->
+    <Preference
+        android:key="advanced_settings"
+        android:title="@string/advanced_pref_title"
+        android:icon="@drawable/ic_advanced_settings"
+        android:order="-242"
+        android:fragment="com.android.settings.custom.advanced.AdvancedSettings"/>
+
     <Preference
         android:key="date_time_settings"
         android:title="@string/date_and_time"
