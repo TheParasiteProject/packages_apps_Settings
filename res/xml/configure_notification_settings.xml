@@ -112,6 +112,12 @@
         android:key="advanced_section_header"
         android:title="@string/advanced_section_header">
 
+        <Preference
+            android:key="island_notification"
+            android:title="@string/island_notification_title"
+            android:summary="@string/island_notification_summary"
+            android:fragment="com.android.settings.custom.fragment.notifications.IslandSettings" />
+
 	    <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="notification_sound_vib_screen_on"
             android:title="@string/notification_sound_vib_screen_on_title"
