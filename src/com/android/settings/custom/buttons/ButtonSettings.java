@@ -111,6 +111,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_NAV_GESTURES = "navbar_gestures";
     private static final String KEY_NAV_COMPACT_LAYOUT = "navigation_bar_compact_layout";
     private static final String KEY_TORCH_LONG_PRESS_POWER = "torch_long_press_power_gesture";
+    private static final String KEY_CLICK_PARTIAL_SCREENSHOT =
+            "click_partial_screenshot";
     private static final String KEY_POWER_END_CALL = "power_end_call";
     private static final String KEY_HOME_ANSWER_CALL = "home_answer_call";
     private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
