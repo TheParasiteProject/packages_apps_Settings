@@ -130,6 +130,10 @@
     <string name="others_settings_title">Others settings</string>
     <string name="additional_buttons_title">Additional buttons</string>
 
+    <!-- Partial screenshot -->
+    <string name="click_partial_screenshot_title">Click to partial screenshot</string>
+    <string name="click_partial_screenshot_summary">Short click Volume Down and Power to take partial screenshot</string>
+
     <!-- LiveDisplay -->
     <string name="live_display_summary">Optimize your screen based on time of day and ambient conditions to improve readability and reduce eyestrain</string>
     <string name="live_display_mode">Display mode</string>
