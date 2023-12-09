@@ -44,11 +44,13 @@ public class PhoneNumberPreferenceController extends BasePreferenceController {
     private final TelephonyManager mTelephonyManager;
     private final SubscriptionManager mSubscriptionManager;
     private final List<Preference> mPreferenceList = new ArrayList<>();
+    private final List<Boolean> mTappedList = new ArrayList<>();
 
     public PhoneNumberPreferenceController(Context context, String key) {
         super(context, key);
         mTelephonyManager = mContext.getSystemService(TelephonyManager.class);
         mSubscriptionManager = mContext.getSystemService(SubscriptionManager.class);
+        mTappedList.add(false);
     }
 
     @Override
@@ -71,6 +73,7 @@ public class PhoneNumberPreferenceController extends BasePreferenceController {
 
         final Preference preference = screen.findPreference(getPreferenceKey());
         final PreferenceCategory category = screen.findPreference(KEY_PREFERENCE_CATEGORY);
+        preference.setCopyingEnabled(false);
         mPreferenceList.add(preference);
 
         final int phonePreferenceOrder = preference.getOrder();
@@ -82,8 +85,10 @@ public class PhoneNumberPreferenceController extends BasePreferenceController {
             multiSimPreference.setCopyingEnabled(true);
             multiSimPreference.setOrder(phonePreferenceOrder + simSlotNumber);
             multiSimPreference.setKey(KEY_PHONE_NUMBER + simSlotNumber);
+            multiSimPreference.setCopyingEnabled(false);
             category.addPreference(multiSimPreference);
             mPreferenceList.add(multiSimPreference);
+            mTappedList.add(simSlotNumber, false);
         }
     }
 
@@ -91,25 +96,46 @@ public class PhoneNumberPreferenceController extends BasePreferenceController {
     public void updateState(Preference preference) {
         for (int simSlotNumber = 0; simSlotNumber < mPreferenceList.size(); simSlotNumber++) {
             final Preference simStatusPreference = mPreferenceList.get(simSlotNumber);
+            final boolean tapped = mTappedList.get(simSlotNumber);
             simStatusPreference.setTitle(getPreferenceTitle(simSlotNumber));
-            setPhoneNumber(simSlotNumber);
+            setPhoneNumber(simSlotNumber, tapped);
         }
     }
 
     @Override
+    public boolean isSliceable() {
+        return mTappedList.get(0);
+    }
+
+    @Override
     public boolean useDynamicSliceSummary() {
+        return mTappedList.get(0);
+    }
+
+    @Override
+    public boolean handlePreferenceTreeClick(Preference preference) {
+        final int simSlotNumber = mPreferenceList.indexOf(preference);
+        if (simSlotNumber == -1) {
+            return false;
+        }
+        final boolean tapped = !mTappedList.get(simSlotNumber);
+        mTappedList.set(simSlotNumber, tapped);
+        setPhoneNumber(simSlotNumber, tapped);
         return true;
     }
 
-    private void setPhoneNumber(int simSlot) {
+    private void setPhoneNumber(int simSlot, boolean tapped) {
         final Preference simStatusPreference = mPreferenceList.get(simSlot);
         final SubscriptionInfo subscriptionInfo = getSubscriptionInfo(simSlot);
         simStatusPreference.setEnabled(subscriptionInfo != null);
         if (subscriptionInfo == null) {
             simStatusPreference.setSummary(mContext.getString(R.string.device_info_not_available));
+        } else if (!tapped) {
+            simStatusPreference.setSummary(mContext.getString(R.string.device_info_protected_single_press));
         } else {
             simStatusPreference.setSummary(getFormattedPhoneNumber(subscriptionInfo));
         }
+        simStatusPreference.setCopyingEnabled(subscriptionInfo != null && tapped);
     }
 
     private CharSequence getPreferenceTitle(int simSlot) {
