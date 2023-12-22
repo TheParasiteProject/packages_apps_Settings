@@ -38,4 +38,7 @@
     <string name="fingerprint_enroll_touch_dialog_message_side" product="device">Touch the sensor on the side of your device.</string>
     <string name="fingerprint_enroll_touch_dialog_message_side" product="default">Touch the sensor on the side of your phone.</string>
 
+    <!-- Misc Haptics -->
+    <string name="misc_vibration_category_title">Misc Haptics</string>
+
 </resources>
