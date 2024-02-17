@@ -34,16 +34,16 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
-import com.android.settingslib.search.Indexable;
+import com.android.settingslib.search.SearchIndexable;
 
 import com.android.settings.custom.preference.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@SearchIndexable
 public class GestureTweaksSettings extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener, Indexable {
+        implements Preference.OnPreferenceChangeListener {
 
     private ListPreference mLeftSwipeActions;
     private ListPreference mRightSwipeActions;
@@ -138,6 +138,7 @@ public class GestureTweaksSettings extends SettingsPreferenceFragment
             mLeftSwipeActions.setSummary(
                     mLeftSwipeActions.getEntries()[index]);
             mLeftSwipeAppSelection.setVisible(mExtendedSwipe.isChecked() && leftSwipeActions == 4);
+            actionPreferenceReload();
             customAppCheck();
             return true;
         } else if (preference == mRightSwipeActions) {
@@ -149,6 +150,7 @@ public class GestureTweaksSettings extends SettingsPreferenceFragment
             mRightSwipeActions.setSummary(
                     mRightSwipeActions.getEntries()[index]);
             mRightSwipeAppSelection.setVisible(mExtendedSwipe.isChecked() && rightSwipeActions == 4);
+            actionPreferenceReload();            
             customAppCheck();
             return true;
         } else if (preference == mLeftVerticalSwipeActions) {
@@ -269,8 +271,8 @@ public class GestureTweaksSettings extends SettingsPreferenceFragment
                 @Override
                 public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
                         boolean enabled) {
-                    final ArrayList<SearchIndexableResource> result = new ArrayList<>();
-                    final SearchIndexableResource sir = new SearchIndexableResource(context);
+                    ArrayList<SearchIndexableResource> result = new ArrayList<>();
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
                     sir.xmlResId = R.xml.gesture_nav_tweaks;
                     result.add(sir);
                     return result;
@@ -278,7 +280,7 @@ public class GestureTweaksSettings extends SettingsPreferenceFragment
 
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
-                    final List<String> keys = super.getNonIndexableKeys(context);
+                    List<String> keys = super.getNonIndexableKeys(context);
                     return keys;
                 }
             };
