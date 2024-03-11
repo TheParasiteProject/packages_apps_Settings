@@ -219,7 +219,7 @@ public class ChargingControlSettings extends SettingsPreferenceFragment implemen
     @Override
     public void onCreateOptionsMenu(final Menu menu, final MenuInflater inflater) {
         menu.add(0, MENU_RESET, 0, R.string.reset)
-                .setIcon(R.drawable.ic_settings_backup_restore)
+                .setIcon(com.android.settings.custom.R.drawable.ic_settings_backup_restore)
                 .setAlphabeticShortcut('r')
                 .setShowAsActionFlags(
                         MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
