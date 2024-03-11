@@ -42,8 +42,8 @@ public class SetGpuRendererPreferenceController extends
     public SetGpuRendererPreferenceController(Context context) {
         super(context);
 
-        mListValues = context.getResources().getStringArray(R.array.debug_hw_renderer_values);
-        mListSummaries = context.getResources().getStringArray(R.array.debug_hw_renderer_entries);
+        mListValues = context.getResources().getStringArray(com.android.settingslib.R.array.debug_hw_renderer_values);
+        mListSummaries = context.getResources().getStringArray(com.android.settingslib.R.array.debug_hw_renderer_entries);
     }
 
     @Override
