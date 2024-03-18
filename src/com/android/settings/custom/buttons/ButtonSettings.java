@@ -35,7 +35,7 @@ import android.provider.Settings;
 import android.util.Log;
 
 import androidx.fragment.app.DialogFragment;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -96,11 +96,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private ListPreference mAssistLongPressAction;
     private ListPreference mAppSwitchPressAction;
     private ListPreference mAppSwitchLongPressAction;
-    private SwitchPreference mCameraWakeScreen;
-    private SwitchPreference mCameraSleepOnRelease;
-    private SwitchPreference mCameraLaunch;
-    private SwitchPreference mDisableNavigationKeys;
-    private SwitchPreference mSwapCapacitiveKeys;
+    private SwitchPreferenceCompat mCameraWakeScreen;
+    private SwitchPreferenceCompat mCameraSleepOnRelease;
+    private SwitchPreferenceCompat mCameraLaunch;
+    private SwitchPreferenceCompat mDisableNavigationKeys;
+    private SwitchPreferenceCompat mSwapCapacitiveKeys;
 
     private Handler mHandler;
 
@@ -125,17 +125,17 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_NAVBAR = "navbar_key";
     private static final String CATEGORY_POWER = "power_key";
 
-    private SwitchPreference mNavigationMenuArrowKeys;
-    private SwitchPreference mNavigationInverse;
+    private SwitchPreferenceCompat mNavigationMenuArrowKeys;
+    private SwitchPreferenceCompat mNavigationInverse;
     private Preference mNavigationGestures;
-    private SwitchPreference mNavigationCompactLayout;
+    private SwitchPreferenceCompat mNavigationCompactLayout;
     private Preference mTorchLongPressPower;
-    private SwitchPreference mPowerEndCall;
-    private SwitchPreference mHomeAnswerCall;
+    private SwitchPreferenceCompat mPowerEndCall;
+    private SwitchPreferenceCompat mHomeAnswerCall;
     private ListPreference mVolumeKeyCursorControl;
-    private SwitchPreference mVolumeWakeScreen;
-    private SwitchPreference mVolumeMusicControls;
-    private SwitchPreference mSwapVolumeButtons;
+    private SwitchPreferenceCompat mVolumeWakeScreen;
+    private SwitchPreferenceCompat mVolumeMusicControls;
+    private SwitchPreferenceCompat mSwapVolumeButtons;
     private PreferenceCategory mNavbarCategory;
     private Preference mGesturePowerMenu;
     
