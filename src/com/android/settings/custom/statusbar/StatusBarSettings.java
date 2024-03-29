@@ -28,7 +28,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.ListPreference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
@@ -51,7 +51,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
 
     private SystemSettingListPreference mQuickPulldown;
 
-    private SwitchPreference mStatusBarQsShowAutoBrightness;
+    private SwitchPreferenceCompat mStatusBarQsShowAutoBrightness;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
