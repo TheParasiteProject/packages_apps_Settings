@@ -388,4 +388,8 @@
     <string name="display_engine_default">Default</string>
     <string name="display_engine_mode_footer_text">Inspired by Sony\'s Bravia/X-Reality engine, the Display Engine features Vivid mode for enhanced brightness and color saturation, X-Reality mode for improved detail and color accuracy, and Triluminos mode for notorious display color accuracy.</string>
 
+    <!-- Clock auto hide -->
+    <string name="status_bar_clock_auto_hide_title">Clock hide</string>
+    <string name="status_bar_clock_auto_hide_summary">Hide clock from status bar when home app is visible.</string>
+
 </resources>
