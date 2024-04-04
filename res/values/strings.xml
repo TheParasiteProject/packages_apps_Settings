@@ -3136,6 +3136,18 @@
     <string name="auto_brightness_summary_on">On</string>
     <!-- Setting option summary when adaptive brightness is off [CHAR LIMIT=NONE] -->
     <string name="auto_brightness_summary_off">Off</string>
+
+    <!-- HDR brightness screen, setting option name to control HDR brightness [CHAR LIMIT=60] -->
+    <string name="hdr_brightness_title">Enhanced HDR brightness</string>
+    <!-- HDR brightness screen, setting the brightness level. [CHAR LIMIT=30] -->
+    <string name="hdr_brightness_level_title">Intensity</string>
+    <!-- HDR brightness screen, image label. [CHAR LIMIT=30] -->
+    <string name="hdr_brightness_standard_image_label">Standard image</string>
+    <!-- HDR brightness screen, image label. [CHAR LIMIT=30] -->
+    <string name="hdr_brightness_hdr_image_label">HDR image</string>
+    <!-- HDR brightness screen warning. -->
+    <string name="hdr_brightness_warning">This setting only affects images and videos that support High Dynamic Range (HDR).</string>
+
     <!-- Display settings screen, display white balance settings title [CHAR LIMIT=30] -->
     <string name="display_white_balance_title">Display white balance</string>
     <!-- Display settings screen, display white balance settings summary [CHAR LIMIT=NONE] -->
@@ -3286,6 +3298,9 @@
     </string>
     <!-- Dark UI screen footer action text linking to Modes settings. [CHAR LIMIT=NONE] -->
     <string name="dark_ui_modes_footer_action">Modes settings</string>
+    <!-- HDR brightness screen, summary of the feature. [CHAR LIMIT=NONE] -->
+    <string name="hdr_brigtness_text">Brighten and expand the color range and clarity in High Dynamic Range (HDR) images and videos. HDR content will appear brighter.</string>
+
 
     <!-- Sound & display settings screen, setting option name to change screen timeout -->
     <string name="screen_timeout">Screen timeout</string>
@@ -8359,6 +8374,7 @@ Data usage charges may apply.</string>
     <string name="keywords_display_font_size">text size</string>
     <!-- Search keyword for "Cast" settings [CHAR_LIMIT=NONE]-->
     <string name="keywords_display_cast_screen">project, cast, Screen mirroring, Screen sharing, mirroring, share screen, screen casting</string>
+    <string name="keywords_display_hdr_brightness">hdr, brightness, high dynamic range, brighten, brighter</string>
     <string name="keywords_storage">space, disk, hard drive, device usage</string>
     <string name="keywords_battery">power usage, charge</string>
     <string name="keywords_battery_usage">view battery usage, battery usage, power usage</string>
@@ -13608,6 +13624,8 @@ Data usage charges may apply.</string>
     <string name="dark_theme_main_switch_title">Use Dark theme</string>
     <!-- Title for bluetooth main switch. [CHAR LIMIT=50] -->
     <string name="bluetooth_main_switch_title">Use Bluetooth</string>
+    <!-- Title for HDR brightness main switch. [CHAR LIMIT=50] -->
+    <string name="hdr_brightness_main_switch_title">Use enhanced HDR brightness</string>
 
     <!-- Title for prevent ringing main switch. [CHAR LIMIT=50] -->
     <string name="prevent_ringing_main_switch_title">Use prevent ringing</string>
