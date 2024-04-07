@@ -30,6 +30,15 @@
         settings:controller="com.android.settings.deviceinfo.hardwareinfo.DeviceManufacturerPreferenceController"
         settings:enableCopying="true"/>
 
+    <!-- Market Name -->
+    <Preference
+        android:key="hardware_info_market_name"
+        android:title="@string/device_market_name"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:controller="com.android.settings.deviceinfo.hardwareinfo.MarketNamePreferenceController"
+        settings:enableCopying="true"/>
+
     <!-- Codename -->
     <Preference
         android:key="hardware_info_device_codename"
