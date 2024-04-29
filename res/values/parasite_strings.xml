@@ -249,8 +249,8 @@
     <string name="charging_control_limit_title">Limit</string>
 
     <!-- Spoof storage encryption status -->
-    <string name="spoof_storage_encryption_status_title">Use storage encryption spoofing</string>
-    <string name="spoof_storage_encryption_status_summary">Spoof storage encryption status to encrypted</string>
+    <string name="spoof_storage_encryption_status_title">Disable storage encryption status</string>
+    <string name="spoof_storage_encryption_status_summary">Prevent apps from not operating due to unencrypted storage</string>
 
     <!-- Custom actions -->
     <string name="action_nothing">No action</string>
