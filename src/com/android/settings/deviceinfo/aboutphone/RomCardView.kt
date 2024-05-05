@@ -42,7 +42,7 @@ class RomCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(contex
         rom_logo.layoutParams = rlparams
         minimumWidth = rom_logo.width
         val version = Build.VERSION.RELEASE_OR_PREVIEW_DISPLAY.toString()
-        val releaseType = SystemProperties.get("org.pixelexperience.version")
+        val releaseType = SystemProperties.get("ro.custom.build.version")
         val rom_title = TextView(context)
         rom_title.text =
             String.format(resources.getString(R.string.about_device_rom_title), version)
