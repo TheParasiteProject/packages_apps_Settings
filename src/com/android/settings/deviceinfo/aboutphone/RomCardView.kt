@@ -32,7 +32,8 @@ class RomCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(contex
         )
         */
         linearLayout.id = R.id.rom_logo_id
-        rom_logo.setImageResource(R.drawable.ic_rom_logo)
+        val ic_rom_logo = context.getPackageManager().getApplicationIcon("com.android.systemui");
+        rom_logo.setImageDrawable(ic_rom_logo)
         val rlparams = RelativeLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT,
             LinearLayout.LayoutParams.MATCH_PARENT
