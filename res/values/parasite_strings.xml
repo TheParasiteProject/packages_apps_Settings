@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Misc Haptics -->
-    <string name="misc_vibration_category_title">Misc Haptics</string>
+    <string name="misc_vibration_category_title">Additional vibration options</string>
 
     <!-- Incall vibrate options -->
     <string name="incall_vibration_category">In-call vibration options</string>
