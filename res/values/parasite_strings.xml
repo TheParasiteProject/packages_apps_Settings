@@ -366,4 +366,9 @@
 
     <!-- Color mode -->
     <string name="color_mode_balance_category">Color balance</string>
+
+    <!-- X-Reality Engine -->
+    <string name="x_reality_engine_mode_title">X-Reality Engine</string>
+    <string name="x_reality_engine_mode_summary">Enable bravia engine inspired display mode</string>
+
 </resources>
