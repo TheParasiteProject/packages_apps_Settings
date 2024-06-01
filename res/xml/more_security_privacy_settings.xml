@@ -220,6 +220,11 @@
         android:fragment="com.android.settings.security.MemtagPage"
         settings:controller="com.android.settings.security.MemtagPagePreferenceController" />
 
+    <Preference
+        android:key="misc_security"
+        android:title="@string/misc_security_title"
+        android:fragment="com.android.settings.custom.fragment.security.MiscSecuritySettings" />
+
     <com.android.settings.custom.preference.GlobalSettingSwitchPreference
         android:order="91"
         android:key="pm_downgrade_allowed"

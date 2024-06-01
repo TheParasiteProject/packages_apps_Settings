@@ -47,6 +47,9 @@
     <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
     <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
 
+    <!-- Misc security -->
+    <string name="misc_security_title">Additional security settings</string>
+
     <!-- Application downgrade -->
     <string name="app_downgrade_title">Allow application downgrade</string>
     <string name="app_downgrade_summary">Permit to downgrading applications. May lead to crashes and data corruption.</string>
