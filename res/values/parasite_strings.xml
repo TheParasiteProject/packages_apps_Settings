@@ -369,6 +369,6 @@
 
     <!-- X-Reality Engine -->
     <string name="x_reality_engine_mode_title">X-Reality Engine</string>
-    <string name="x_reality_engine_mode_summary">Enable bravia engine inspired display mode</string>
+    <string name="x_reality_engine_mode_summary">An additional Bravia Engine inspired display mode to enhance your viewing experience with optimized contrast and colors.</string>
 
 </resources>
