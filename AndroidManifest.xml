@@ -5197,6 +5197,7 @@
             android:label="@string/smart_pixels_title"
             android:taskAffinity="com.android.settings"
             android:exported="true"
+            android:enabled="@*lineageos.platform:bool/config_supportSmartPixels"
             android:parentActivityName="Settings">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.SMART_PIXELS_SETTINGS" />
