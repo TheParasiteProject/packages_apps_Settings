@@ -33,7 +33,8 @@
         android:key="navigation_bar_hint"
         android:title="@string/show_navbar_gesture_bar_title"
         android:summary="@string/show_navbar_gesture_bar_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true"
+        settings:requiresPackage="org.pixelexperience.overlay.navbar.nohint" />
 
     <com.android.settings.custom.preference.SystemSettingListPreference
         android:key="navigation_bar_ime_space"
