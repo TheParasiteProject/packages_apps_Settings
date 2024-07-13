@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 Chaldeaprjkt
+                   2022 crDroid Android Project
+                   2022 VoidUI Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="game_settings_title">Game Settings</string>
+    <string name="game_settings_summary">Enhance your gaming experience</string>
+
+    <!-- Game Dashboard -->
+    <string name="game_dashboard_title">Game Dashboard</string>
+    <string name="game_dashboard_summary">Manage Google Game Dashboard settings</string>
+
+    <!-- Game picker -->
+    <string name="game_list_title">Game library</string>
+    <string name="game_list_summary">Configure per game settings</string>
+
+    <!-- Configure game -->
+    <string name="game_settings_per_app_title">Configure game</string>
+    <string name="game_settings_per_app_mode_title">Preferred mode</string>
+    <string name="game_mode_custom">Custom</string>
+    <string name="game_mode_standard">Standard</string>
+    <string name="game_mode_performance">Performance</string>
+    <string name="game_mode_battery">Battery</string>
+</resources>
