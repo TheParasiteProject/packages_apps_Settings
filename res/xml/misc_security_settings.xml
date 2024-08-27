@@ -57,4 +57,10 @@
         android:fragment="com.android.settings.security.HideDeveloperStatusSettings"
         settings:controller="com.android.settings.security.HideDeveloperStatusPreferenceController" />
 
+    <Preference
+        android:key="clipboard_auto_clear"
+        android:title="@string/clipboard_auto_clear_title"
+        android:summary="@string/clipboard_auto_clear_summary"
+        android:fragment="com.android.settings.custom.privacy.ClipboardAutoClearFragment" />
+
 </PreferenceScreen>
