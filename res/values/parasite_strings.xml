@@ -369,10 +369,6 @@
     <!-- Color mode -->
     <string name="color_mode_balance_category">Color balance</string>
 
-    <!-- X-Reality Engine -->
-    <string name="x_reality_engine_mode_title">X-Reality Engine</string>
-    <string name="x_reality_engine_mode_summary">An additional Bravia Engine inspired display mode to enhance your viewing experience with optimized contrast and colors.</string>
-
     <!-- Wifi Display settings. The title of a menu item to disable mirroring confimration [CHAR LIMIT=40] -->
     <string name="mirroring_confirmation_disable_menu_item">Disable mirroring confirmation</string>
 
