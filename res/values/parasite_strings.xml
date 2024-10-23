@@ -366,9 +366,6 @@
     <string name="unlimit_screenrecord_title">Unlimit screenrecord</string>
     <string name="unlimit_screenrecord_summary">Remove the 15GiB file size limit\nMay result in a larger than needed output file</string>
 
-    <!-- Color mode -->
-    <string name="color_mode_balance_category">Color balance</string>
-
     <!-- Wifi Display settings. The title of a menu item to disable mirroring confimration [CHAR LIMIT=40] -->
     <string name="mirroring_confirmation_disable_menu_item">Disable mirroring confirmation</string>
 
