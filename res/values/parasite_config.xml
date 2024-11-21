@@ -9,4 +9,6 @@
     <!-- Battery Info: mAh -->
     <integer name="config_battery_divider" translatable="false">1000</integer>
 
+    <!-- Show Now Playing -->
+    <bool name="config_show_now_playing">false</bool>
 </resources>
