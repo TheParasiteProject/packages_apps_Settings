@@ -20,10 +20,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/island_notification_title">
 
-    <com.android.settings.custom.preference.SystemSettingSwitchPreference
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="island_notification_summary"
+        android:title="@string/island_notification_summary"
+        settings:searchable="false" />
+
+    <com.android.settings.custom.preference.SystemSettingMainSwitchPreference
         android:key="island_notification"
-        android:title="@string/island_notification_title"
-        android:summary="@string/island_notification_summary"
+        android:title="@string/island_notification_enabled_title"
         android:defaultValue="false" />
 
     <com.android.settings.custom.preference.SystemSettingSwitchPreference
