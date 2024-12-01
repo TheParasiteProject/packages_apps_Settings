@@ -36,7 +36,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settingslib.search.SearchIndexable;
 
-import com.android.settings.custom.preference.SystemSettingSwitchPreference;
+import com.android.settings.custom.preference.SystemSettingMainSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +53,7 @@ public class GestureTweaksSettings extends SettingsPreferenceFragment
     private ListPreference mRightVerticalSwipeActions;
     private Preference mLeftVerticalSwipeAppSelection;
     private Preference mRightVerticalSwipeAppSelection;
-    private SystemSettingSwitchPreference mExtendedSwipe;
+    private SystemSettingMainSwitchPreference mExtendedSwipe;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,7 +62,7 @@ public class GestureTweaksSettings extends SettingsPreferenceFragment
 
         final ContentResolver resolver = getActivity().getContentResolver();
 
-        mExtendedSwipe = (SystemSettingSwitchPreference) findPreference("back_swipe_extended");
+        mExtendedSwipe = (SystemSettingMainSwitchPreference) findPreference("back_swipe_extended");
         boolean extendedSwipe = Settings.System.getIntForUser(resolver,
             Settings.System.BACK_SWIPE_EXTENDED, 0,
             UserHandle.USER_CURRENT) != 0;

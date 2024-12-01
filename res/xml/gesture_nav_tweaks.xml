@@ -19,10 +19,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/navbar_gesture_tweaks_pref_title" >
 
-    <com.android.settings.custom.preference.SystemSettingSwitchPreference
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="back_swipe_extended_summary"
+        android:title="@string/back_swipe_extended_summary"
+        settings:searchable="false" />
+
+    <com.android.settings.custom.preference.SystemSettingMainSwitchPreference
         android:key="back_swipe_extended"
         android:title="@string/back_swipe_extended_title"
-        android:summary="@string/back_swipe_extended_summary"
         android:defaultValue="false" />
 
     <ListPreference
