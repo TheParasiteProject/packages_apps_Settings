@@ -114,7 +114,7 @@ android_library {
         "androidx.test.rules",
         "telephony_flags_core_java_lib",
         "setupdesign-lottie-loading-layout",
-        "com.github.bumptech.glide_glide",
+        "custom-sdk_com.github.bumptech.glide_glide",
         "SettingsLibMainSwitchPreference",
         "custom-preference",
         "vendor.lineage.fastcharge-V1.0-java",
