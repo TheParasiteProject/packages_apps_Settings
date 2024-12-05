@@ -117,7 +117,8 @@
 
     <Preference
         android:key="misc_security"
-        android:title="@string/misc_security_title"
+        android:title="@string/misc_security_privacy_title"
+        android:summary="@string/summary_placeholder"
         android:fragment="com.android.settings.custom.fragment.security.MiscSecuritySettings" />
 
     <!-- work profile security section -->

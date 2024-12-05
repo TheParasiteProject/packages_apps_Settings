@@ -18,7 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:title="@string/misc_security_title">
+    android:title="@string/misc_security_privacy_title">
 
     <PreferenceCategory
         android:title="@string/privacy_indicator_category"
@@ -84,4 +84,15 @@
         android:title="@string/clipboard_auto_clear_title"
         android:summary="@string/clipboard_auto_clear_summary"
         android:fragment="com.android.settings.custom.privacy.ClipboardAutoClearFragment" />
+
+    <PreferenceCategory
+        android:key="misc_security_category"
+        android:title="@string/security_header">
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="misc_privacy_category"
+        android:title="@string/privacy_header">
+    </PreferenceCategory>
+
 </PreferenceScreen>

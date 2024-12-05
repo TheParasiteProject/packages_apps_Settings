@@ -221,8 +221,8 @@
         settings:controller="com.android.settings.security.MemtagPagePreferenceController" />
 
     <Preference
-        android:key="misc_security"
-        android:title="@string/misc_security_title"
-        android:fragment="com.android.settings.custom.fragment.security.MiscSecuritySettings" />
+        android:key="misc_security_privacy"
+        android:title="@string/misc_security_privacy_title"
+        android:fragment="com.android.settings.custom.fragment.security.MiscSecurityPrivacySettings" />
 
 </PreferenceScreen>

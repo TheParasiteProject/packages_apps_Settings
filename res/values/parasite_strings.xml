@@ -47,8 +47,8 @@
     <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
     <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
 
-    <!-- Misc security -->
-    <string name="misc_security_title">Additional security settings</string>
+    <!-- Misc security & privacy -->
+    <string name="misc_security_privacy_title">Additional security &amp; privacy settings</string>
 
     <!-- Application downgrade -->
     <string name="app_downgrade_title">Allow application downgrade</string>
@@ -392,6 +392,9 @@
     <!-- Clock auto hide -->
     <string name="status_bar_clock_auto_hide_title">Clock hide</string>
     <string name="status_bar_clock_auto_hide_summary">Hide clock from status bar when home app is visible.</string>
+
+    <!-- Privacy category -->
+    <string name="privacy_misc_category">Privacy</string>
 
     <!-- Privacy Indicator -->
     <string name="privacy_indicator_category">Privacy indicator</string>

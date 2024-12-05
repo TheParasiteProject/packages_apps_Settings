@@ -27,14 +27,14 @@ import com.android.settingslib.search.SearchIndexable;
 import java.util.List;
 
 @SearchIndexable
-public class MiscSecuritySettings extends SettingsPreferenceFragment {
+public class MiscSecurityPrivacySettings extends SettingsPreferenceFragment {
 
-    public static final String TAG = "MiscSecuritySettings";
+    public static final String TAG = "MiscSecurityPrivacySettings";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.misc_security_settings);
+        addPreferencesFromResource(R.xml.misc_security_privacy_settings);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class MiscSecuritySettings extends SettingsPreferenceFragment {
      * For search
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.misc_security_settings) {
+            new BaseSearchIndexProvider(R.xml.misc_security_privacy_settings) {
 
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
