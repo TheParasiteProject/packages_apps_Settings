@@ -21,78 +21,78 @@
     android:title="@string/misc_security_privacy_title">
 
     <PreferenceCategory
-        android:title="@string/privacy_indicator_category"
-        android:key="privacy_indicator_category">
-        <com.android.settings.custom.preference.SecureSettingSwitchPreference
-            android:key="enable_camera_privacy_indicator"
-            android:title="@string/mic_camera_privacy_indicator_title"
-            android:summary="@string/mic_camera_privacy_indicator_summary"
-            android:defaultValue="true" />
-
-        <com.android.settings.custom.preference.SecureSettingSwitchPreference
-            android:key="enable_location_privacy_indicator"
-            android:title="@string/location_privacy_indicator_title"
-            android:summary="@string/location_privacy_indicator_summary"
-            android:defaultValue="true" />
-
-        <com.android.settings.custom.preference.SecureSettingSwitchPreference
-            android:key="enable_projection_privacy_indicator"
-            android:title="@string/projection_privacy_indicator_title"
-            android:summary="@string/projection_privacy_indicator_summary"
-            android:defaultValue="true" />
-    </PreferenceCategory>
-
-    <com.android.settings.custom.preference.GlobalSettingSwitchPreference
-        android:key="pm_downgrade_allowed"
-        android:title="@string/app_downgrade_title"
-        android:summary="@string/app_downgrade_summary"
-        android:defaultValue="false"/>
-
-    <com.android.settings.custom.preference.GlobalSettingSwitchPreference
-        android:key="window_ignore_secure"
-        android:title="@string/ignore_window_secure_title"
-        android:summary="@string/ignore_window_secure_summary"
-        android:defaultValue="false"/>
-
-    <com.android.settings.custom.preference.GlobalSettingSwitchPreference
-        android:key="hide_screen_capture_status"
-        android:title="@string/hide_screen_capture_status_title"
-        android:summary="@string/hide_screen_capture_status_summary"
-        android:defaultValue="false"/>
-
-    <com.android.settings.custom.preference.GlobalSettingSwitchPreference
-        android:key="spoof_storage_encryption_status"
-        android:title="@string/spoof_storage_encryption_status_title"
-        android:summary="@string/spoof_storage_encryption_status_summary"
-        android:defaultValue="false"/>
-
-    <com.android.settings.custom.preference.GlobalSettingSwitchPreference
-        android:key="no_storage_restrict"
-        android:title="@string/no_storage_restrict_title"
-        android:summary="@string/no_storage_restrict_summary"
-        android:defaultValue="false"/>
-
-    <Preference
-        android:key="hide_developer_status_settings"
-        android:title="@string/hide_developer_status_title"
-        android:summary="@string/hide_developer_status_summary"
-        android:fragment="com.android.settings.security.HideDeveloperStatusSettings"
-        settings:controller="com.android.settings.security.HideDeveloperStatusPreferenceController" />
-
-    <Preference
-        android:key="clipboard_auto_clear"
-        android:title="@string/clipboard_auto_clear_title"
-        android:summary="@string/clipboard_auto_clear_summary"
-        android:fragment="com.android.settings.custom.privacy.ClipboardAutoClearFragment" />
-
-    <PreferenceCategory
         android:key="misc_security_category"
         android:title="@string/security_header">
+
+        <com.android.settings.custom.preference.GlobalSettingSwitchPreference
+            android:key="pm_downgrade_allowed"
+            android:title="@string/app_downgrade_title"
+            android:summary="@string/app_downgrade_summary"
+            android:defaultValue="false"/>
+
+        <com.android.settings.custom.preference.GlobalSettingSwitchPreference
+            android:key="spoof_storage_encryption_status"
+            android:title="@string/spoof_storage_encryption_status_title"
+            android:summary="@string/spoof_storage_encryption_status_summary"
+            android:defaultValue="false"/>
+
+        <Preference
+            android:key="hide_developer_status_settings"
+            android:title="@string/hide_developer_status_title"
+            android:summary="@string/hide_developer_status_summary"
+            android:fragment="com.android.settings.security.HideDeveloperStatusSettings"
+            settings:controller="com.android.settings.security.HideDeveloperStatusPreferenceController" />
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="misc_privacy_category"
         android:title="@string/privacy_header">
+
+        <com.android.settings.custom.preference.GlobalSettingSwitchPreference
+            android:key="window_ignore_secure"
+            android:title="@string/ignore_window_secure_title"
+            android:summary="@string/ignore_window_secure_summary"
+            android:defaultValue="false"/>
+
+        <com.android.settings.custom.preference.GlobalSettingSwitchPreference
+            android:key="hide_screen_capture_status"
+            android:title="@string/hide_screen_capture_status_title"
+            android:summary="@string/hide_screen_capture_status_summary"
+            android:defaultValue="false"/>
+
+        <com.android.settings.custom.preference.GlobalSettingSwitchPreference
+            android:key="no_storage_restrict"
+            android:title="@string/no_storage_restrict_title"
+            android:summary="@string/no_storage_restrict_summary"
+            android:defaultValue="false"/>
+
+        <Preference
+            android:key="clipboard_auto_clear"
+            android:title="@string/clipboard_auto_clear_title"
+            android:summary="@string/clipboard_auto_clear_summary"
+            android:fragment="com.android.settings.custom.privacy.ClipboardAutoClearFragment" />
+
+        <PreferenceCategory
+            android:title="@string/privacy_indicator_category"
+            android:key="privacy_indicator_category">
+            <com.android.settings.custom.preference.SecureSettingSwitchPreference
+                android:key="enable_camera_privacy_indicator"
+                android:title="@string/mic_camera_privacy_indicator_title"
+                android:summary="@string/mic_camera_privacy_indicator_summary"
+                android:defaultValue="true" />
+
+            <com.android.settings.custom.preference.SecureSettingSwitchPreference
+                android:key="enable_location_privacy_indicator"
+                android:title="@string/location_privacy_indicator_title"
+                android:summary="@string/location_privacy_indicator_summary"
+                android:defaultValue="true" />
+
+            <com.android.settings.custom.preference.SecureSettingSwitchPreference
+                android:key="enable_projection_privacy_indicator"
+                android:title="@string/projection_privacy_indicator_title"
+                android:summary="@string/projection_privacy_indicator_summary"
+                android:defaultValue="true" />
+        </PreferenceCategory>
     </PreferenceCategory>
 
 </PreferenceScreen>
