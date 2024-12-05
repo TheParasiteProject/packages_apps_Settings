@@ -20,6 +20,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/misc_security_title">
 
+    <PreferenceCategory
+        android:title="@string/privacy_indicator_category"
+        android:key="privacy_indicator_category">
+        <com.android.settings.custom.preference.SecureSettingSwitchPreference
+            android:key="enable_camera_privacy_indicator"
+            android:title="@string/mic_camera_privacy_indicator_title"
+            android:summary="@string/mic_camera_privacy_indicator_summary"
+            android:defaultValue="true" />
+
+        <com.android.settings.custom.preference.SecureSettingSwitchPreference
+            android:key="enable_location_privacy_indicator"
+            android:title="@string/location_privacy_indicator_title"
+            android:summary="@string/location_privacy_indicator_summary"
+            android:defaultValue="true" />
+
+        <com.android.settings.custom.preference.SecureSettingSwitchPreference
+            android:key="enable_projection_privacy_indicator"
+            android:title="@string/projection_privacy_indicator_title"
+            android:summary="@string/projection_privacy_indicator_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
     <com.android.settings.custom.preference.GlobalSettingSwitchPreference
         android:key="pm_downgrade_allowed"
         android:title="@string/app_downgrade_title"
@@ -62,5 +84,4 @@
         android:title="@string/clipboard_auto_clear_title"
         android:summary="@string/clipboard_auto_clear_summary"
         android:fragment="com.android.settings.custom.privacy.ClipboardAutoClearFragment" />
-
 </PreferenceScreen>
