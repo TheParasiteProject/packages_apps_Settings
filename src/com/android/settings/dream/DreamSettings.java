@@ -16,6 +16,8 @@
 
 package com.android.settings.dream;
 
+import static android.service.dreams.Flags.dreamsV2;
+
 import static com.android.settings.dream.DreamMainSwitchPreferenceController.MAIN_SWITCH_PREF_KEY;
 
 import android.app.settings.SettingsEnums;
@@ -239,18 +241,22 @@ public class DreamSettings extends DashboardFragment implements OnCheckedChangeL
     @Override
     public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
             Bundle bundle) {
-        final DreamBackend dreamBackend = DreamBackend.getInstance(getContext());
+        if (!dreamsV2()) {
+            final DreamBackend dreamBackend = DreamBackend.getInstance(getContext());
 
-        final ViewGroup root = getActivity().findViewById(android.R.id.content);
-        mPreviewButton = (Button) getActivity().getLayoutInflater().inflate(
-                R.layout.dream_preview_button, root, false);
-        mPreviewButton.setVisibility(dreamBackend.isEnabled() ? View.VISIBLE : View.GONE);
-        root.addView(mPreviewButton);
-        mPreviewButton.setOnClickListener(v -> dreamBackend.preview(dreamBackend.getActiveDream()));
+            final ViewGroup root = getActivity().findViewById(android.R.id.content);
+            mPreviewButton = (Button) getActivity().getLayoutInflater().inflate(
+                    R.layout.dream_preview_button, root, false);
+            mPreviewButton.setVisibility(dreamBackend.isEnabled() ? View.VISIBLE : View.GONE);
+            root.addView(mPreviewButton);
+            mPreviewButton.setOnClickListener(v -> dreamBackend
+                    .preview(dreamBackend.getActiveDream()));
+            updatePaddingForPreviewButton();
+        }
 
         mRecyclerView = super.onCreateRecyclerView(inflater, parent, bundle);
         mRecyclerView.setFocusable(false);
-        updatePaddingForPreviewButton();
+
         return mRecyclerView;
     }
 
@@ -289,8 +295,10 @@ public class DreamSettings extends DashboardFragment implements OnCheckedChangeL
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         setAllPreferencesEnabled(isChecked);
-        mPreviewButton.setVisibility(isChecked ? View.VISIBLE : View.GONE);
-        updatePaddingForPreviewButton();
+        if (!dreamsV2()) {
+            mPreviewButton.setVisibility(isChecked ? View.VISIBLE : View.GONE);
+            updatePaddingForPreviewButton();
+        }
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
