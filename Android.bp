@@ -69,6 +69,7 @@ android_library {
     static_libs: [
         // External dependencies
         "androidx.navigation_navigation-fragment-ktx",
+        "androidx.room_room-runtime",
         "androidx.window_window-java",
         "androidx.fragment_fragment-ktx",
         "androidx.lifecycle_lifecycle-runtime-ktx",
