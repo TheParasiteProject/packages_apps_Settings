@@ -33,6 +33,8 @@ import com.android.settings.widget.SeekBarPreference;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.ButtonPreference;
 
+import lineageos.preference.LineageSystemSettingListPreference;
+
 /**
  * A fragment to include all the settings related to Gesture Navigation mode.
  */
@@ -58,6 +60,8 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
     private float[] mBackGestureInsetScales;
     private float mDefaultBackGestureInset;
 
+    private GestureNavigationImeSpaceUtils mNavSpaceUtils;
+
     public GestureNavigationSettingsFragment() {
         super();
     }
@@ -68,6 +72,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
 
         mIndicatorView = new BackGestureIndicatorView(getActivity());
         mWindowManager = (WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE);
+        mNavSpaceUtils = new GestureNavigationImeSpaceUtils(getActivity());
     }
 
     @Override
@@ -83,6 +88,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
         initSeekBarPreference(LEFT_EDGE_SEEKBAR_KEY);
         initSeekBarPreference(RIGHT_EDGE_SEEKBAR_KEY);
         initTutorialButton();
+        initNavSpacePreference(GestureNavigationImeSpaceUtils.NAVBAR_IME_SPACE_KEY);
     }
 
     @Override
@@ -174,6 +180,15 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
             mIndicatorView.setIndicatorWidth(0, key == LEFT_EDGE_SEEKBAR_KEY);
             final float scale = mBackGestureInsetScales[(int) v];
             Settings.Secure.putFloat(getContext().getContentResolver(), settingsKey, scale);
+            return true;
+        });
+    }
+
+    private void initNavSpacePreference(final String key) {
+        final LineageSystemSettingListPreference pref = getPreferenceScreen().findPreference(key);
+
+        pref.setOnPreferenceChangeListener((p, newValue) -> {
+            mNavSpaceUtils.updateSpace(key, Integer.parseInt(newValue.toString()));
             return true;
         });
     }
