@@ -36,6 +36,8 @@ import com.android.settingslib.widget.SliderPreference;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+import lineageos.preference.LineageSystemSettingListPreference;
+
 /**
  * A fragment to include all the settings related to Gesture Navigation mode.
  */
@@ -61,6 +63,8 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
     private float[] mBackGestureInsetScales;
     private float mDefaultBackGestureInset;
 
+    private GestureNavigationImeSpaceUtils mNavSpaceUtils;
+
     public GestureNavigationSettingsFragment() {
         super();
     }
@@ -71,6 +75,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
 
         mIndicatorView = new BackGestureIndicatorView(getActivity());
         mWindowManager = (WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE);
+        mNavSpaceUtils = new GestureNavigationImeSpaceUtils(getActivity());
     }
 
     @Override
@@ -86,6 +91,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
         initSliderPreference(LEFT_EDGE_SEEKBAR_KEY);
         initSliderPreference(RIGHT_EDGE_SEEKBAR_KEY);
         initTutorialButton();
+        initNavSpacePreference(GestureNavigationImeSpaceUtils.NAVBAR_IME_SPACE_KEY);
     }
 
     @Override
@@ -191,6 +197,15 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
         }
         final float percent = (progress - min) / diffProgress;
         return Math.floor(Math.max(0.0f, Math.min(1.0f, percent)) * 100) / 100;
+    }
+
+    private void initNavSpacePreference(final String key) {
+        final LineageSystemSettingListPreference pref = getPreferenceScreen().findPreference(key);
+
+        pref.setOnPreferenceChangeListener((p, newValue) -> {
+            mNavSpaceUtils.updateSpace(key, Integer.parseInt(newValue.toString()));
+            return true;
+        });
     }
 
     private static float[] getFloatArray(TypedArray array) {

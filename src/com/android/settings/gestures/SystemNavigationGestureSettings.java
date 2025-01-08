@@ -78,6 +78,8 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment i
 
     private IllustrationPreference mVideoPreference;
 
+    private static GestureNavigationImeSpaceUtils mNavSpaceUtils;
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -99,6 +101,8 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment i
         setIllustrationVideo(mVideoPreference, getDefaultKey());
 
         migrateOverlaySensitivityToSettings(context, mOverlayManager);
+
+        mNavSpaceUtils = new GestureNavigationImeSpaceUtils(getContext());
     }
 
     @Override
@@ -268,6 +272,7 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment i
 
         try {
             overlayManager.setEnabledExclusiveInCategory(overlayPackage, USER_CURRENT);
+            mNavSpaceUtils.updateSpace(key);
         } catch (RemoteException e) {
             throw e.rethrowFromSystemServer();
         }
