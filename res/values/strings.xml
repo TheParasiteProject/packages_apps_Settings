@@ -10993,6 +10993,9 @@
     <!-- Label for section about ethernet in data usage screen [CHAR LIMIT=60] -->
     <string name="ethernet">Ethernet</string>
 
+    <!-- Label for ethernet interface sub rows -->
+    <string name="ethernet_interface_title">Ethernet <xliff:g id="interfaceid">%1$s</xliff:g></string>
+
     <!-- Format string for amount of cellular data used [CHAR LIMIT=30] -->
     <string name="cell_data_template"><xliff:g id="amount" example="1 GB">^1</xliff:g> mobile data</string>
 

@@ -30,6 +30,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationManager;
+import android.net.EthernetManager;
 import android.net.NetworkTemplate;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
@@ -69,7 +70,10 @@ import com.android.settings.dashboard.RestrictedDashboardFragment;
 import com.android.settings.datausage.DataUsagePreference;
 import com.android.settings.datausage.DataUsageUtils;
 import com.android.settings.location.WifiScanningFragment;
+import com.android.settings.network.ethernet.EthernetInterface;
 import com.android.settings.network.ethernet.EthernetSwitchPreferenceController;
+import com.android.settings.network.ethernet.EthernetTracker;
+import com.android.settings.network.ethernet.EthernetTrackerImpl;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.wifi.AddNetworkFragment;
 import com.android.settings.wifi.AddWifiNetworkPreference;
@@ -99,6 +103,7 @@ import com.android.wifitrackerlib.WifiEntry;
 import com.android.wifitrackerlib.WifiEntry.ConnectCallback;
 import com.android.wifitrackerlib.WifiPickerTracker;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -147,6 +152,7 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
     static final String PREF_KEY_DATA_USAGE = "non_carrier_data_usage";
     private static final String PREF_KEY_RESET_INTERNET = "resetting_your_internet";
     private static final String PREF_KEY_WIFI_STATUS_MESSAGE = "wifi_status_message_footer";
+    private static final String PREF_KEY_ETHERNET_INTERFACES = "ethernet_interfaces";
 
     private static final int REQUEST_CODE_WIFI_DPP_ENROLLEE_QR_CODE_SCANNER = 0;
 
@@ -252,6 +258,12 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
     @VisibleForTesting
     MenuProvider mMenuProvider;
     RestrictedSwitchPreference mEthernetSwitchPreference;
+    @VisibleForTesting
+    EthernetManager mEthernetManager;
+    @VisibleForTesting
+    EthernetTracker mEthernetTracker;
+    @VisibleForTesting
+    PreferenceCategory mEthernetPreferenceCategory;
 
     /**
      * Mobile networks list for provider model
@@ -390,6 +402,7 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
                         .build(), SubscriptionManager.INVALID_SUBSCRIPTION_ID);
         mResetInternetPreference = findPreference(PREF_KEY_RESET_INTERNET);
         mEthernetSwitchPreference = findPreference(PREF_KEY_ETHERNET_TOGGLE);
+        mEthernetPreferenceCategory = findPreference(PREF_KEY_ETHERNET_INTERFACES);
         if (mResetInternetPreference != null) {
             mResetInternetPreference.setVisible(false);
         }
@@ -482,6 +495,11 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
             mWifiPickerTracker = mWifiPickerTrackerHelper.getWifiPickerTracker();
         }
         mInternetUpdater = new InternetUpdater(getContext(), getSettingsLifecycle(), this);
+        if (com.android.settings.connectivity.Flags.ethernetSettings()) {
+            mEthernetManager = getContext().getSystemService(EthernetManager.class);
+            mEthernetTracker = EthernetTrackerImpl.getInstance(
+                getContext());
+        }
 
         mSaveListener = new WifiManager.ActionListener() {
             @Override
@@ -534,6 +552,9 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
             return;
         }
         mAirplaneModeEnabler.start();
+        if (com.android.settings.connectivity.Flags.ethernetSettings()) {
+            mEthernetTracker.registerInterfaceListener(this::onInterfaceListChanged);
+        }
     }
 
     private void restrictUi() {
@@ -571,6 +592,9 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
         getView().removeCallbacks(mUpdateWifiEntryPreferencesRunnable);
         getView().removeCallbacks(mHideProgressBarRunnable);
         mAirplaneModeEnabler.stop();
+        if (com.android.settings.connectivity.Flags.ethernetSettings()) {
+            mEthernetTracker.unregisterInterfaceListener(this::onInterfaceListChanged);
+        }
         super.onStop();
     }
 
@@ -642,6 +666,11 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
             outState.putInt(SAVE_DIALOG_MODE, mDialogMode);
             outState.putString(SAVE_DIALOG_WIFIENTRY_KEY, mDialogWifiEntryKey);
         }
+    }
+
+    /** Called when the list of ethernet interfaces has changed. */
+    public void onInterfaceListChanged(List<EthernetInterface> ethernetInterfaces) {
+        updateEthernetInterfaces(ethernetInterfaces);
     }
 
     @Override
@@ -1079,6 +1108,28 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
         mAddWifiNetworkPreference.setOrder(index++);
         mWifiEntryPreferenceCategory.addPreference(mAddWifiNetworkPreference);
         setAdditionalSettingsSummaries();
+    }
+
+    void updateEthernetInterfaces(Collection<EthernetInterface> interfaces) {
+        int index = 0;
+        mEthernetPreferenceCategory.removeAll();
+        if (interfaces.size() > 0) {
+            for (EthernetInterface ethernetInterface : interfaces) {
+                Preference pref = new Preference(getPrefContext());
+                pref.setSelectable(false);
+                pref.setOrder(index++);
+                pref.setKey(ethernetInterface.getId());
+                pref.setTitle(getContext().getString(R.string.ethernet_interface_title, index));
+                pref.setSummary(
+                        (ethernetInterface.getInterfaceState() == EthernetManager.STATE_LINK_UP)
+                            ? getContext().getString(R.string.network_connected) :
+                              getContext().getString(R.string.network_disconnected));
+                mEthernetPreferenceCategory.addPreference(pref);
+            }
+            mEthernetPreferenceCategory.setVisible(true);
+        } else {
+            mEthernetPreferenceCategory.setVisible(false);
+        }
     }
 
     @VisibleForTesting
