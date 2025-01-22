@@ -57,6 +57,7 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.preference.Preference;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.internal.app.LocaleStore;
@@ -145,6 +146,8 @@ public class LocaleListEditorTest {
     private ImageView mDragHandle;
     @Mock
     private NotificationController mNotificationController;
+    @Mock
+    private Preference mAddLanguagePreference;
 
     @Rule
     public final CheckFlagsRule mCheckFlagsRule =
@@ -168,6 +171,8 @@ public class LocaleListEditorTest {
                 context.getSystemService(Context.USER_SERVICE));
         ReflectionHelpers.setField(mLocaleListEditor, "mAdapter", mAdapter);
         ReflectionHelpers.setField(mLocaleListEditor, "mAddLanguage", mAddLanguage);
+        ReflectionHelpers.setField(mLocaleListEditor, "mAddLanguagePreference",
+                mAddLanguagePreference);
         ReflectionHelpers.setField(mLocaleListEditor, "mFragmentManager", mFragmentManager);
         ReflectionHelpers.setField(mLocaleListEditor, "mMetricsFeatureProvider",
                 mMetricsFeatureProvider);
