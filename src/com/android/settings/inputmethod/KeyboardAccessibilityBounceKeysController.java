@@ -57,13 +57,6 @@ public class KeyboardAccessibilityBounceKeysController extends
     }
 
     @Override
-    public int getAvailabilityStatus() {
-        return (super.getAvailabilityStatus() == AVAILABLE)
-                && InputSettings.isAccessibilityBounceKeysFeatureEnabled() ? AVAILABLE
-                : UNSUPPORTED_ON_DEVICE;
-    }
-
-    @Override
     public boolean handlePreferenceTreeClick(@NonNull Preference preference) {
         if (!TextUtils.equals(preference.getKey(), getPreferenceKey())) {
             return false;
