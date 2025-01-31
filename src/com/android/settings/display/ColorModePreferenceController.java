@@ -16,13 +16,15 @@ package com.android.settings.display;
 import android.content.Context;
 import android.hardware.display.ColorDisplayManager;
 
-import androidx.annotation.VisibleForTesting;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.preference.Preference;
 
 import com.android.settings.core.BasePreferenceController;
 
 public class ColorModePreferenceController extends BasePreferenceController {
 
-    public ColorModePreferenceController(Context context, String key) {
+    public ColorModePreferenceController(@NonNull Context context, @NonNull String key) {
         super(context, key);
     }
 
@@ -36,11 +38,20 @@ public class ColorModePreferenceController extends BasePreferenceController {
 
     @Override
     public CharSequence getSummary() {
-        return ColorModeUtils.getColorModeMapping(mContext.getResources()).get(getColorMode());
+        return getColorModeName();
     }
 
-    @VisibleForTesting
-    public int getColorMode() {
-        return mContext.getSystemService(ColorDisplayManager.class).getColorMode();
+    @Override
+    public void updateState(@Nullable Preference preference) {
+        if (preference == null) {
+            return;
+        }
+        super.updateState(preference);
+        preference.setSummary(getSummary());
+    }
+
+    @NonNull
+    private String getColorModeName() {
+        return ColorModeUtils.getActiveColorModeName(mContext);
     }
 }
