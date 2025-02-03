@@ -71,6 +71,7 @@ import com.android.settings.datausage.DataUsagePreference;
 import com.android.settings.datausage.DataUsageUtils;
 import com.android.settings.location.WifiScanningFragment;
 import com.android.settings.network.ethernet.EthernetInterface;
+import com.android.settings.network.ethernet.EthernetInterfaceDetailsFragment;
 import com.android.settings.network.ethernet.EthernetSwitchPreferenceController;
 import com.android.settings.network.ethernet.EthernetTracker;
 import com.android.settings.network.ethernet.EthernetTrackerImpl;
@@ -1116,7 +1117,6 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
         if (interfaces.size() > 0) {
             for (EthernetInterface ethernetInterface : interfaces) {
                 Preference pref = new Preference(getPrefContext());
-                pref.setSelectable(false);
                 pref.setOrder(index++);
                 pref.setKey(ethernetInterface.getId());
                 pref.setTitle(getContext().getString(R.string.ethernet_interface_title, index));
@@ -1124,6 +1124,10 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
                         (ethernetInterface.getInterfaceState() == EthernetManager.STATE_LINK_UP)
                             ? getContext().getString(R.string.network_connected) :
                               getContext().getString(R.string.network_disconnected));
+                pref.setOnPreferenceClickListener(preference -> {
+                    launchEthernetInterfaceDetailsFragment(preference);
+                    return true;
+                });
                 mEthernetPreferenceCategory.addPreference(pref);
             }
             mEthernetPreferenceCategory.setVisible(true);
@@ -1168,6 +1172,20 @@ public class NetworkProviderSettings extends RestrictedDashboardFragment
         new SubSettingLauncher(context)
                 .setTitleText(context.getText(R.string.pref_title_network_details))
                 .setDestination(WifiNetworkDetailsFragment.class.getName())
+                .setArguments(bundle)
+                .setSourceMetricsCategory(getMetricsCategory())
+                .launch();
+    }
+
+    @VisibleForTesting
+    void launchEthernetInterfaceDetailsFragment(Preference pref) {
+        final Context context = requireContext();
+
+        final Bundle bundle = new Bundle();
+        bundle.putString("EthernetInterfaceKey", pref.getKey());
+
+        new SubSettingLauncher(context)
+                .setDestination(EthernetInterfaceDetailsFragment.class.getName())
                 .setArguments(bundle)
                 .setSourceMetricsCategory(getMetricsCategory())
                 .launch();
