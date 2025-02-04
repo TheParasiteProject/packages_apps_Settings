@@ -5621,12 +5621,27 @@
     <string name="accessibility_autoclick_longer_desc">Longer</string>
     <!-- Description for the seekbar that adjust auto click time. [CHAR_LIMIT=NONE] -->
     <string name="accessibility_autoclick_seekbar_desc">Auto click time</string>
-    <!-- Title for the seekbar that adjust auto click cursor area size. [CHAR_LIMIT=NONE] -->
-    <!-- TODO(b/383901288): Update string to translatable once approved by UXW. -->
-    <string name="autoclick_cursor_area_size_title" translatable="false">Cursor area size</string>
-    <!-- Summary for the seekbar that adjust auto click cursor area size. [CHAR_LIMIT=NONE] -->
-    <!-- TODO(b/383901288): Update string to translatable once approved by UXW. -->
-    <string name="autoclick_cursor_area_size_summary" translatable="false">Adjust the autoclick ring indicator area size</string>
+    <!-- Title for the alert dialog that adjust auto click cursor area size. [CHAR_LIMIT=NONE] -->
+    <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
+    <string name="autoclick_cursor_area_size_title" translatable="false">Click area</string>
+    <!-- Summary for the alert dialog that adjust auto click cursor area size. [CHAR_LIMIT=NONE] -->
+    <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
+    <string name="autoclick_cursor_area_size_summary" translatable="false">The area where the cursor can move freely without canceling the click once the countdown starts</string>
+    <!-- Option for the autoclick area dialog that adjust auto click cursor area size to extra large. [CHAR_LIMIT=NONE] -->
+    <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
+    <string name="autoclick_cursor_area_size_dialog_option_extra_large" translatable="false">Extra large</string>
+    <!-- Option for the autoclick area dialog that adjust auto click cursor area size to large. [CHAR_LIMIT=NONE] -->
+    <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
+    <string name="autoclick_cursor_area_size_dialog_option_large" translatable="false">Large</string>
+    <!-- Option for the autoclick area dialog that adjust auto click cursor area size to Medium(Default). [CHAR_LIMIT=NONE] -->
+    <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
+    <string name="autoclick_cursor_area_size_dialog_option_default" translatable="false">Default</string>
+    <!-- Option for the autoclick area dialog that adjust auto click cursor area size to small. [CHAR_LIMIT=NONE] -->
+    <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
+    <string name="autoclick_cursor_area_size_dialog_option_small" translatable="false">Small</string>
+    <!-- Option for the autoclick area dialog that adjust auto click cursor area size to extra small. [CHAR_LIMIT=NONE] -->
+    <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
+    <string name="autoclick_cursor_area_size_dialog_option_extra_small" translatable="false">Extra small</string>
     <!-- Title for the toggle button that turns on/off the autoclick setting of ignoring minor cursor movement. [CHAR_LIMIT=NONE] -->
     <!-- TODO(b/388845718): Update string to translatable once approved by UXW. -->
     <string name="autoclick_ignore_minor_cursor_movement_title" translatable="false">Ignore minor cursor movement</string>
