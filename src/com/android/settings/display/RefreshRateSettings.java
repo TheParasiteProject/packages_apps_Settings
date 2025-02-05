@@ -62,6 +62,7 @@ public class RefreshRateSettings extends RadioButtonPickerFragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         mContext = context;
+        setIllustration(R.raw.display_refresh_rate, IllustrationType.LOTTIE_ANIMATION);
         mUtils = new RefreshRateUtils(context);
 
         final ContentResolver cr = mContext.getContentResolver();
