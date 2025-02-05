@@ -48,7 +48,6 @@ import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.internal.telephony.flags.Flags;
 import com.android.settings.network.CarrierConfigCache;
 
 import org.junit.Before;
@@ -93,7 +92,6 @@ public class SatelliteSettingsPreferenceControllerTest {
     }
 
     @Test
-    @EnableFlags(Flags.FLAG_CARRIER_ENABLED_SATELLITE_FLAG)
     public void getAvailabilityStatus_noSatellite_returnUnsupported() {
         when(mContext.getSystemService(SatelliteManager.class)).thenReturn(null);
         mController = new SatelliteSettingPreferenceController(mContext, KEY);
@@ -105,7 +103,6 @@ public class SatelliteSettingsPreferenceControllerTest {
     }
 
     @Test
-    @EnableFlags(Flags.FLAG_CARRIER_ENABLED_SATELLITE_FLAG)
     public void getAvailabilityStatus_carrierIsNotSupport_returnUnavailable() {
         mCarrierConfig.putBoolean(
                 CarrierConfigManager.KEY_SATELLITE_ATTACH_SUPPORTED_BOOL,
@@ -118,7 +115,6 @@ public class SatelliteSettingsPreferenceControllerTest {
     }
 
     @Test
-    @EnableFlags(Flags.FLAG_CARRIER_ENABLED_SATELLITE_FLAG)
     public void getAvailabilityStatus_connectTypeIsManualButUnavailable_returnUnavailable() {
         mCarrierConfig.putBoolean(
                 CarrierConfigManager.KEY_SATELLITE_ATTACH_SUPPORTED_BOOL,
@@ -136,7 +132,6 @@ public class SatelliteSettingsPreferenceControllerTest {
     }
 
     @Test
-    @EnableFlags(Flags.FLAG_CARRIER_ENABLED_SATELLITE_FLAG)
     public void getAvailabilityStatus_connectTypeIsManualAndAvailable_returnAvailable() {
         mCarrierConfig.putBoolean(
                 CarrierConfigManager.KEY_SATELLITE_ATTACH_SUPPORTED_BOOL,
@@ -154,7 +149,6 @@ public class SatelliteSettingsPreferenceControllerTest {
     }
 
     @Test
-    @EnableFlags(Flags.FLAG_CARRIER_ENABLED_SATELLITE_FLAG)
     public void getAvailabilityStatus_connectTypeIsAuto_returnAvailable() {
         mCarrierConfig.putBoolean(
                 CarrierConfigManager.KEY_SATELLITE_ATTACH_SUPPORTED_BOOL,
