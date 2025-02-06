@@ -61,6 +61,9 @@ class MobileNetworkPhoneNumberPreferenceControllerTest {
                 .strictness(Strictness.LENIENT)
                 .startMocking()
 
+        // By default, available
+        whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(true)
+
         preferenceScreen.addPreference(preference)
         controller.init(SUB_ID)
         controller.displayPreference(preferenceScreen)
@@ -73,7 +76,6 @@ class MobileNetworkPhoneNumberPreferenceControllerTest {
 
     @Test
     fun onViewCreated_cannotGetPhoneNumber_displayUnknown() = runBlocking {
-        whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(true)
         mockSubscriptionRepository.stub {
             on { phoneNumberFlow(SUB_ID) } doReturn flowOf(null)
         }
@@ -86,7 +88,6 @@ class MobileNetworkPhoneNumberPreferenceControllerTest {
 
     @Test
     fun onViewCreated_canGetPhoneNumber_displayPhoneNumber() = runBlocking {
-        whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(true)
         mockSubscriptionRepository.stub {
             on { phoneNumberFlow(SUB_ID) } doReturn flowOf(PHONE_NUMBER)
         }
@@ -98,11 +99,17 @@ class MobileNetworkPhoneNumberPreferenceControllerTest {
     }
 
     @Test
-    fun getAvailabilityStatus_notSimHardwareVisible() {
+    fun getAvailabilityStatus_simHardwareVisible_displayed() {
+        // Use defaults from setup()
+        val availabilityStatus = controller.availabilityStatus
+        assertThat(availabilityStatus).isEqualTo(BasePreferenceController.AVAILABLE)
+    }
+
+    @Test
+    fun getAvailabilityStatus_notSimHardwareVisible_notDisplayed() {
         whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(false)
 
         val availabilityStatus = controller.availabilityStatus
-
         assertThat(availabilityStatus).isEqualTo(BasePreferenceController.CONDITIONALLY_UNAVAILABLE)
     }
 
