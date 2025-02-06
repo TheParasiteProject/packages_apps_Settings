@@ -25,20 +25,27 @@ import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceManager
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.android.dx.mockito.inline.extended.ExtendedMockito
 import com.android.settings.R
+import com.android.settings.core.BasePreferenceController
+import com.android.settings.network.SubscriptionUtil
 import com.google.common.truth.Truth.assertThat
+import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.MockitoSession
 import org.mockito.kotlin.any
 import org.mockito.kotlin.doReturn
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.spy
 import org.mockito.kotlin.verify
 import org.mockito.kotlin.whenever
+import org.mockito.quality.Strictness
 
 @RunWith(AndroidJUnit4::class)
 class PhoneNumberPreferenceControllerTest {
+    private lateinit var mockSession: MockitoSession
 
     private val mockTelephonyManager = mock<TelephonyManager>()
     private val mockSubscriptionManager = mock<SubscriptionManager>()
@@ -61,6 +68,15 @@ class PhoneNumberPreferenceControllerTest {
 
     @Before
     fun setup() {
+        mockSession =
+            ExtendedMockito.mockitoSession()
+                .mockStatic(SubscriptionUtil::class.java)
+                .strictness(Strictness.LENIENT)
+                .startMocking()
+
+        // By default, available
+        whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(true)
+
         preference.setKey(controller.preferenceKey)
         preference.isVisible = true
         preferenceScreen.addPreference(preference)
@@ -68,6 +84,11 @@ class PhoneNumberPreferenceControllerTest {
         preferenceScreen.addPreference(category)
 
         doReturn(secondPreference).whenever(controller).createNewPreference(context)
+    }
+
+    @After
+    fun teardown() {
+        mockSession.finishMocking()
     }
 
     @Test
@@ -131,5 +152,20 @@ class PhoneNumberPreferenceControllerTest {
         controller.updateState(preference)
 
         verify(preference).summary = context.getString(R.string.device_info_not_available)
+    }
+
+    @Test
+    fun getAvailabilityStatus_simHardwareVisible_displayed() {
+        // Use defaults from setup()
+        val availabilityStatus = controller.availabilityStatus
+        assertThat(availabilityStatus).isEqualTo(BasePreferenceController.AVAILABLE)
+    }
+
+    @Test
+    fun getAvailabilityStatus_notSimHardwareVisible_notDisplayed() {
+        whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(false)
+
+        val availabilityStatus = controller.availabilityStatus
+        assertThat(availabilityStatus).isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE)
     }
 }
