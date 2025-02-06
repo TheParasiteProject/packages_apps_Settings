@@ -17,6 +17,7 @@
 package com.android.settings.deviceinfo
 
 import android.content.Context
+import android.os.UserManager
 import android.telephony.SubscriptionInfo
 import android.telephony.SubscriptionManager
 import android.telephony.TelephonyManager
@@ -39,6 +40,7 @@ import org.mockito.kotlin.any
 import org.mockito.kotlin.doReturn
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.spy
+import org.mockito.kotlin.stub
 import org.mockito.kotlin.verify
 import org.mockito.kotlin.whenever
 import org.mockito.quality.Strictness
@@ -47,15 +49,15 @@ import org.mockito.quality.Strictness
 class PhoneNumberPreferenceControllerTest {
     private lateinit var mockSession: MockitoSession
 
+    private val mockUserManager = mock<UserManager>()
     private val mockTelephonyManager = mock<TelephonyManager>()
     private val mockSubscriptionManager = mock<SubscriptionManager>()
 
     private val context: Context =
         spy(ApplicationProvider.getApplicationContext()) {
-            on { getSystemService(SubscriptionManager::class.java) } doReturn
-                mockSubscriptionManager
-
+            on { getSystemService(SubscriptionManager::class.java) } doReturn mockSubscriptionManager
             on { getSystemService(TelephonyManager::class.java) } doReturn mockTelephonyManager
+            on { getSystemService(UserManager::class.java) } doReturn mockUserManager
         }
 
     private val subscriptionInfo = mock<SubscriptionInfo>()
@@ -76,6 +78,9 @@ class PhoneNumberPreferenceControllerTest {
 
         // By default, available
         whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(true)
+        mockUserManager.stub {
+            on { isAdminUser } doReturn true
+        }
 
         preference.setKey(controller.preferenceKey)
         preference.isVisible = true
@@ -155,17 +160,27 @@ class PhoneNumberPreferenceControllerTest {
     }
 
     @Test
-    fun getAvailabilityStatus_simHardwareVisible_displayed() {
+    fun getAvailabilityStatus_simHardwareVisible_userAdmin_displayed() {
         // Use defaults from setup()
         val availabilityStatus = controller.availabilityStatus
         assertThat(availabilityStatus).isEqualTo(BasePreferenceController.AVAILABLE)
     }
 
     @Test
-    fun getAvailabilityStatus_notSimHardwareVisible_notDisplayed() {
+    fun getAvailabilityStatus_notSimHardwareVisible_userAdmin_notDisplayed() {
         whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(false)
 
         val availabilityStatus = controller.availabilityStatus
         assertThat(availabilityStatus).isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE)
+    }
+
+    @Test
+    fun getAvailabilityStatus_simHardwareVisible_notUserAdmin_notDisplayed() {
+        mockUserManager.stub {
+            on { isAdminUser } doReturn false
+        }
+
+        val availabilityStatus = controller.availabilityStatus
+        assertThat(availabilityStatus).isEqualTo(BasePreferenceController.DISABLED_FOR_USER)
     }
 }
