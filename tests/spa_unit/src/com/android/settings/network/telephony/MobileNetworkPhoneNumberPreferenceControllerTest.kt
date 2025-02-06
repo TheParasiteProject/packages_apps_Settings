@@ -27,6 +27,7 @@ import com.android.dx.mockito.inline.extended.ExtendedMockito
 import com.android.settings.R
 import com.android.settings.core.BasePreferenceController
 import com.android.settings.network.SubscriptionUtil
+import com.android.settingslib.Utils
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.flowOf
@@ -65,11 +66,13 @@ class MobileNetworkPhoneNumberPreferenceControllerTest {
         mockSession =
             ExtendedMockito.mockitoSession()
                 .mockStatic(SubscriptionUtil::class.java)
+                .mockStatic(Utils::class.java)
                 .strictness(Strictness.LENIENT)
                 .startMocking()
 
         // By default, available
         whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(true)
+        whenever(Utils.isWifiOnly(context)).thenReturn(false)
         mockUserManager.stub {
             on { isAdminUser } doReturn true
         }
@@ -109,14 +112,14 @@ class MobileNetworkPhoneNumberPreferenceControllerTest {
     }
 
     @Test
-    fun getAvailabilityStatus_simHardwareVisible_userAdmin_displayed() {
+    fun getAvailabilityStatus_simHardwareVisible_userAdmin_notWifiOnly_displayed() {
         // Use defaults from setup()
         val availabilityStatus = controller.availabilityStatus
         assertThat(availabilityStatus).isEqualTo(BasePreferenceController.AVAILABLE)
     }
 
     @Test
-    fun getAvailabilityStatus_notSimHardwareVisible_userAdmin_notDisplayed() {
+    fun getAvailabilityStatus_notSimHardwareVisible_userAdmin_notWifiOnly_notDisplayed() {
         whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(false)
 
         val availabilityStatus = controller.availabilityStatus
@@ -124,13 +127,21 @@ class MobileNetworkPhoneNumberPreferenceControllerTest {
     }
 
     @Test
-    fun getAvailabilityStatus_simHardwareVisible_notUserAdmin_notDisplayed() {
+    fun getAvailabilityStatus_simHardwareVisible_notUserAdmin_notWifiOnly_notDisplayed() {
         mockUserManager.stub {
             on { isAdminUser } doReturn false
         }
 
         val availabilityStatus = controller.availabilityStatus
         assertThat(availabilityStatus).isEqualTo(BasePreferenceController.DISABLED_FOR_USER)
+    }
+
+    @Test
+    fun getAvailabilityStatus_simHardwareVisible_userAdmin_wifiOnly_notDisplayed() {
+        whenever(Utils.isWifiOnly(context)).thenReturn(true)
+
+        val availabilityStatus = controller.availabilityStatus
+        assertThat(availabilityStatus).isEqualTo(BasePreferenceController.CONDITIONALLY_UNAVAILABLE)
     }
 
     private companion object {

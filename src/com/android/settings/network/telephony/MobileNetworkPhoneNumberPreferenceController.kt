@@ -26,6 +26,7 @@ import com.android.settings.flags.Flags
 import com.android.settings.network.SubscriptionUtil
 import com.android.settingslib.spa.framework.util.collectLatestWithLifecycle
 import com.android.settingslib.spaprivileged.framework.common.userManager
+import com.android.settingslib.Utils
 
 /** Preference controller for "Phone number" */
 class MobileNetworkPhoneNumberPreferenceController
@@ -45,7 +46,8 @@ constructor(
     override fun getAvailabilityStatus(subId: Int): Int = when {
         !Flags.isDualSimOnboardingEnabled()
             || !SubscriptionManager.isValidSubscriptionId(subId)
-            || !SubscriptionUtil.isSimHardwareVisible(mContext) -> CONDITIONALLY_UNAVAILABLE
+            || !SubscriptionUtil.isSimHardwareVisible(mContext)
+            || Utils.isWifiOnly(mContext) -> CONDITIONALLY_UNAVAILABLE
         !mContext.userManager.isAdminUser -> DISABLED_FOR_USER
         else -> AVAILABLE
     }
