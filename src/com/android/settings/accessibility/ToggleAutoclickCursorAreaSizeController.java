@@ -35,6 +35,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 
 import com.android.server.accessibility.Flags;
 import com.android.settings.R;
@@ -59,6 +60,7 @@ public class ToggleAutoclickCursorAreaSizeController extends BasePreferenceContr
 
     private final ContentResolver mContentResolver;
     private final SharedPreferences mSharedPreferences;
+    private Preference mPreference;
     protected AlertDialog mAlertDialog;
 
     public ToggleAutoclickCursorAreaSizeController(@NonNull Context context,
@@ -81,6 +83,13 @@ public class ToggleAutoclickCursorAreaSizeController extends BasePreferenceContr
         if (mSharedPreferences != null) {
             mSharedPreferences.unregisterOnSharedPreferenceChangeListener(this);
         }
+    }
+
+    @Override
+    public void displayPreference(PreferenceScreen screen) {
+        super.displayPreference(screen);
+
+        mPreference = screen.findPreference(getPreferenceKey());
     }
 
     protected void constructDialog(Context context) {
@@ -139,12 +148,32 @@ public class ToggleAutoclickCursorAreaSizeController extends BasePreferenceContr
         // TODO(b/383901288): Update slider if interested preference has changed.
     }
 
+    @Override
+    public CharSequence getSummary() {
+        int autoclickCursorSize = validateSize(Settings.Secure.getInt(mContentResolver,
+                Settings.Secure.ACCESSIBILITY_AUTOCLICK_CURSOR_AREA_SIZE,
+                AccessibilityManager.AUTOCLICK_CURSOR_AREA_SIZE_DEFAULT));
+        int summaryStringId;
+        switch (autoclickCursorSize) {
+            case 100 -> summaryStringId =
+                    R.string.autoclick_cursor_area_size_dialog_option_extra_large;
+            case 80 -> summaryStringId = R.string.autoclick_cursor_area_size_dialog_option_large;
+            case 40 -> summaryStringId = R.string.autoclick_cursor_area_size_dialog_option_small;
+            case 20 -> summaryStringId =
+                    R.string.autoclick_cursor_area_size_dialog_option_extra_small;
+            default -> summaryStringId = R.string.autoclick_cursor_area_size_dialog_option_default;
+        }
+
+        return mContext.getString(summaryStringId);
+    }
+
     /** Updates autoclick cursor area size. */
     public void updateAutoclickCursorAreaSize(int size) {
         Settings.Secure.putInt(
                 mContentResolver,
                 Settings.Secure.ACCESSIBILITY_AUTOCLICK_CURSOR_AREA_SIZE,
                 validateSize(size));
+        refreshSummary(mPreference);
     }
 
     private int validateSize(int size) {
