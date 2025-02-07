@@ -81,6 +81,15 @@ public class ToggleAutoclickCursorAreaSizeControllerTest {
     }
 
     @Test
+    public void getSummary() {
+        mController.updateAutoclickCursorAreaSize(
+                mController.RADIO_BUTTON_ID_TO_CURSOR_SIZE.get(
+                        R.id.autoclick_cursor_area_size_value_large));
+        assertThat(mController.getSummary()).isEqualTo(
+                mContext.getString(R.string.autoclick_cursor_area_size_dialog_option_large));
+    }
+
+    @Test
     @DisableFlags(com.android.server.accessibility.Flags.FLAG_ENABLE_AUTOCLICK_INDICATOR)
     public void getAvailabilityStatus_conditionallyUnavailableWhenFlagOn() {
         assertThat(mController.getAvailabilityStatus())
