@@ -1671,6 +1671,9 @@
     <!-- Message shown in screen lock picker for setting up a work profile screen lock. [CHAR LIMIT=80] -->
     <string name="lock_settings_picker_profile_message">If you forget this lock, ask your IT admin to reset it</string>
 
+    <!-- Title for the category in screen lock settings page -->
+    <string name="lock_settings_screen_lock_settings_title">Screen lock settings</string>
+
     <!-- Label for button in screen lock settings, allowing users to choose other types of screen locks. [CHAR LIMIT=40] -->
     <string name="setup_lock_settings_options_button_label">Screen lock options</string>
 
