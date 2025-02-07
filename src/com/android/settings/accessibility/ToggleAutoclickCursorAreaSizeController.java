@@ -17,7 +17,6 @@
 package com.android.settings.accessibility;
 
 import static android.content.Context.MODE_PRIVATE;
-import static android.view.accessibility.AccessibilityManager.AUTOCLICK_CURSOR_AREA_INCREMENT_SIZE;
 import static android.view.accessibility.AccessibilityManager.AUTOCLICK_CURSOR_AREA_SIZE_MAX;
 import static android.view.accessibility.AccessibilityManager.AUTOCLICK_CURSOR_AREA_SIZE_MIN;
 
@@ -25,35 +24,49 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.view.accessibility.AccessibilityManager;
+import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
-import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference;
 
 import com.android.server.accessibility.Flags;
-import com.android.settings.core.SliderPreferenceController;
-import com.android.settingslib.widget.SliderPreference;
+import com.android.settings.R;
+import com.android.settings.core.BasePreferenceController;
+
+import com.google.common.collect.ImmutableBiMap;
 
 /** Controller class that controls accessibility autoclick cursor area size settings. */
-public class ToggleAutoclickCursorAreaSizeController extends SliderPreferenceController
+public class ToggleAutoclickCursorAreaSizeController extends BasePreferenceController
         implements LifecycleObserver, SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final String TAG = ToggleAutoclickCursorAreaSizeController.class.getSimpleName();
 
+    public final ImmutableBiMap<Integer, Integer> RADIO_BUTTON_ID_TO_CURSOR_SIZE =
+            new ImmutableBiMap.Builder<Integer, Integer>()
+                .put(R.id.autoclick_cursor_area_size_value_extra_large, 100)
+                .put(R.id.autoclick_cursor_area_size_value_large, 80)
+                .put(R.id.autoclick_cursor_area_size_value_default, 60)
+                .put(R.id.autoclick_cursor_area_size_value_small, 40)
+                .put(R.id.autoclick_cursor_area_size_value_extra_small, 20)
+                .buildOrThrow();
+
     private final ContentResolver mContentResolver;
     private final SharedPreferences mSharedPreferences;
-    private SliderPreference mPreference;
+    protected AlertDialog mAlertDialog;
 
     public ToggleAutoclickCursorAreaSizeController(@NonNull Context context,
             @NonNull String preferenceKey) {
         super(context, preferenceKey);
-
         mContentResolver = context.getContentResolver();
         mSharedPreferences = context.getSharedPreferences(context.getPackageName(), MODE_PRIVATE);
+        constructDialog(context);
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
@@ -70,16 +83,49 @@ public class ToggleAutoclickCursorAreaSizeController extends SliderPreferenceCon
         }
     }
 
+    protected void constructDialog(Context context) {
+        mAlertDialog = new AlertDialog.Builder(context)
+                .setView(R.layout.dialog_autoclick_cursor_area_size)
+                .setPositiveButton(android.R.string.ok,
+                        (dialog, which) -> {
+                            RadioGroup radioGroup =
+                                    mAlertDialog.findViewById(
+                                            R.id.autoclick_cursor_area_size_value_group);
+                            int checkedRadioButtonId = radioGroup.getCheckedRadioButtonId();
+                            int size = RADIO_BUTTON_ID_TO_CURSOR_SIZE.get(checkedRadioButtonId);
+                            updateAutoclickCursorAreaSize(size);
+                        })
+                .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
+                .create();
+        mAlertDialog.setOnShowListener(dialog -> {
+            initStateBasedOnSize();
+        });
+    }
+
+    private void initStateBasedOnSize() {
+        RadioGroup cannedValueRadioGroup = mAlertDialog.findViewById(
+                    R.id.autoclick_cursor_area_size_value_group);
+        int autoclickCursordefaultSize = validateSize(Settings.Secure.getInt(mContentResolver,
+                Settings.Secure.ACCESSIBILITY_AUTOCLICK_CURSOR_AREA_SIZE,
+                AccessibilityManager.AUTOCLICK_CURSOR_AREA_SIZE_DEFAULT));
+
+        int radioButtonId = RADIO_BUTTON_ID_TO_CURSOR_SIZE.inverse()
+                .get(autoclickCursordefaultSize);
+
+        cannedValueRadioGroup.check(radioButtonId);
+    }
+
     @Override
-    public void displayPreference(@NonNull PreferenceScreen screen) {
-        super.displayPreference(screen);
-        mPreference = screen.findPreference(getPreferenceKey());
-        if (mPreference != null) {
-            mPreference.setMin(getMin());
-            mPreference.setMax(getMax());
-            mPreference.setSliderIncrement(AUTOCLICK_CURSOR_AREA_INCREMENT_SIZE);
-            mPreference.setValue(getSliderPosition());
+    public boolean handlePreferenceTreeClick(@NonNull Preference preference) {
+        if (!TextUtils.equals(preference.getKey(), getPreferenceKey())) {
+            return false;
         }
+
+        if (mAlertDialog != null) {
+            mAlertDialog.show();
+        }
+
+        return true;
     }
 
     @Override
@@ -93,30 +139,12 @@ public class ToggleAutoclickCursorAreaSizeController extends SliderPreferenceCon
         // TODO(b/383901288): Update slider if interested preference has changed.
     }
 
-    @Override
-    public boolean setSliderPosition(int position) {
-        int size = validateSize(position);
+    /** Updates autoclick cursor area size. */
+    public void updateAutoclickCursorAreaSize(int size) {
         Settings.Secure.putInt(
-                mContentResolver, Settings.Secure.ACCESSIBILITY_AUTOCLICK_CURSOR_AREA_SIZE, size);
-        return true;
-    }
-
-    @Override
-    public int getSliderPosition() {
-        int size = Settings.Secure.getInt(mContentResolver,
+                mContentResolver,
                 Settings.Secure.ACCESSIBILITY_AUTOCLICK_CURSOR_AREA_SIZE,
-                AccessibilityManager.AUTOCLICK_CURSOR_AREA_SIZE_DEFAULT);
-        return validateSize(size);
-    }
-
-    @Override
-    public int getMax() {
-        return AUTOCLICK_CURSOR_AREA_SIZE_MAX;
-    }
-
-    @Override
-    public int getMin() {
-        return AUTOCLICK_CURSOR_AREA_SIZE_MIN;
+                validateSize(size));
     }
 
     private int validateSize(int size) {
