@@ -40,6 +40,7 @@ import com.android.settingslib.graph.proto.PreferenceProto
 import com.android.settingslib.graph.proto.PreferenceValueProto
 import com.android.settingslib.graph.toIntent
 import com.android.settingslib.metadata.PreferenceCoordinate
+import com.android.settingslib.metadata.ReadWritePermit
 import com.android.settingslib.metadata.SensitivityLevel
 
 /** Transform Catalyst Graph result to Framework GET METADATA result */
@@ -215,13 +216,14 @@ private fun PreferenceProto.toMetadata(
         extras.putBundle(KEY_INT_RANGE, intRange)
     }
     if (tagsCount > 0) extras.putStringArray(KEY_TAGS, tagsList.toTypedArray())
+    val writePermit = ReadWritePermit.getWritePermit(readWritePermit)
     return SettingsPreferenceMetadata.Builder(screenKey, key)
         .setTitle(title.getText(context))
         .setSummary(summary.getText(context))
         .setEnabled(enabled)
         .setAvailable(available)
         .setRestricted(restricted)
-        .setWritable(persistent)
+        .setWritable(persistent && writePermit == ReadWritePermit.ALLOW)
         .setLaunchIntent(launchIntent.toIntent())
         .setWriteSensitivity(sensitivity)
         // Returns all the permissions that are used, some of which are exclusive (e.g. p1 or p2)
