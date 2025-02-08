@@ -101,9 +101,7 @@ fun transformFrameworkGetValueRequest(
 
 /** Translate Catalyst GET VALUE result to Framework GET VALUE result */
 fun transformCatalystGetValueResponse(
-    context: Context,
-    request: GetValueRequest,
-    response: PreferenceGetterResponse
+    context: Context, request: GetValueRequest, response: PreferenceGetterResponse
 ): GetValueResult? {
     val coord = PreferenceCoordinate(request.screenKey, request.preferenceKey)
     val errorResponse = response.errors[coord]
@@ -118,36 +116,31 @@ fun transformCatalystGetValueResponse(
             return GetValueResult.Builder(errorCode).build()
         }
         valueResponse != null -> {
-            val resultBuilder = GetValueResult.Builder(GetValueResult.RESULT_OK)
-            resultBuilder.setMetadata(valueResponse.toMetadata(context, coord.screenKey))
-            val prefValue = valueResponse.value
-            when (prefValue.valueCase.number) {
-                PreferenceValueProto.BOOLEAN_VALUE_FIELD_NUMBER -> {
-                    resultBuilder.setValue(
-                        SettingsPreferenceValue.Builder(
-                            SettingsPreferenceValue.TYPE_BOOLEAN
-                        ).setBooleanValue(prefValue.booleanValue)
-                            .build()
-                    )
-                    return resultBuilder.build()
-                }
-                PreferenceValueProto.INT_VALUE_FIELD_NUMBER -> {
-                    resultBuilder.setValue(
-                        SettingsPreferenceValue.Builder(
-                            SettingsPreferenceValue.TYPE_INT
-                        ).setIntValue(prefValue.intValue)
-                            .build()
-                    )
-                    return resultBuilder.build()
-                }
-            }
-            return GetValueResult.Builder(
-                GetValueResult.RESULT_UNSUPPORTED
-            ).build()
+            val metadata = valueResponse.toMetadata(context, coord.screenKey)
+            val value = valueResponse.value.toSettingsPreferenceValue()
+            return when (value) {
+                null -> GetValueResult.Builder(GetValueResult.RESULT_UNSUPPORTED)
+                else -> GetValueResult.Builder(GetValueResult.RESULT_OK).setValue(value)
+            }.setMetadata(metadata).build()
         }
         else -> return null
     }
 }
+
+private fun PreferenceValueProto.toSettingsPreferenceValue(): SettingsPreferenceValue? =
+    when (valueCase.number) {
+        PreferenceValueProto.BOOLEAN_VALUE_FIELD_NUMBER -> {
+            SettingsPreferenceValue.Builder(
+                SettingsPreferenceValue.TYPE_BOOLEAN
+            ).setBooleanValue(booleanValue)
+        }
+        PreferenceValueProto.INT_VALUE_FIELD_NUMBER -> {
+            SettingsPreferenceValue.Builder(
+                SettingsPreferenceValue.TYPE_INT
+            ).setIntValue(intValue)
+        }
+        else -> null
+    }?.build()
 
 /** Translate Framework SET VALUE request to Catalyst SET VALUE request */
 fun transformFrameworkSetValueRequest(request: SetValueRequest): PreferenceSetterRequest? {
