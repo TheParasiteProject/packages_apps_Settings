@@ -21,8 +21,6 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.Space;
 import android.widget.TextView;
 
 import androidx.preference.Preference;
@@ -30,6 +28,7 @@ import androidx.preference.PreferenceViewHolder;
 
 import com.android.settings.R;
 import com.android.settingslib.Utils;
+import com.android.settingslib.widget.SettingsThemeHelper;
 
 /**
  * Custom preference for displaying the {@link Preference} with an optional hint chip.
@@ -37,12 +36,23 @@ import com.android.settingslib.Utils;
 public class WarningFramePreference extends Preference {
     private final int mTitleColorNormal;
     private final int mSummaryColorNormal;
+    private final int mWarningChipBackgroundResId;
+    private final boolean mIsExpressiveTheme;
 
     @Nullable private CharSequence mHintText;
 
     public WarningFramePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setLayoutResource(R.layout.warning_frame_preference);
+        mIsExpressiveTheme = SettingsThemeHelper.isExpressiveTheme(context);
+        int layoutResId =
+                mIsExpressiveTheme
+                        ? R.layout.expressive_warning_frame_preference
+                        : R.layout.warning_frame_preference;
+        setLayoutResource(layoutResId);
+        mWarningChipBackgroundResId =
+                mIsExpressiveTheme
+                        ? R.drawable.expressive_battery_hints_chip_bg_ripple
+                        : R.drawable.battery_hints_chip_bg_ripple;
         mTitleColorNormal =
                 Utils.getColorAttrDefaultColor(context, android.R.attr.textColorPrimary);
         mSummaryColorNormal =
@@ -61,14 +71,22 @@ public class WarningFramePreference extends Preference {
     public void onBindViewHolder(PreferenceViewHolder view) {
         super.onBindViewHolder(view);
 
-        final LinearLayout warningChipFrame =
-                (LinearLayout) view.findViewById(R.id.warning_chip_frame);
-        final Space warningPaddingPlaceHolder =
-                warningChipFrame.findViewById(R.id.warning_padding_placeholder);
-        warningPaddingPlaceHolder.setVisibility(getIcon() != null ? View.VISIBLE : View.GONE);
+        if (mIsExpressiveTheme) {
+            final View preferenceFrame = view.findViewById(R.id.preference_frame);
+            preferenceFrame.setBackground(null);
+            preferenceFrame.setPadding(0, 0, 0, 0);
+        }
+
+        final View warningChipFrame = view.findViewById(R.id.warning_chip_frame);
+        warningChipFrame
+                .findViewById(R.id.warning_padding_placeholder)
+                .setVisibility(getIcon() != null ? View.VISIBLE : View.GONE);
         if (!TextUtils.isEmpty(mHintText)) {
             ((TextView) warningChipFrame.findViewById(R.id.warning_info)).setText(mHintText);
             warningChipFrame.setVisibility(View.VISIBLE);
+            warningChipFrame
+                    .findViewById(R.id.warning_chip)
+                    .setBackgroundResource(mWarningChipBackgroundResId);
         } else {
             warningChipFrame.setVisibility(View.GONE);
         }
