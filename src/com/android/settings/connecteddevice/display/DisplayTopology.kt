@@ -225,6 +225,20 @@ class DisplayTopologyPreference(context : Context)
     @VisibleForTesting var injector : Injector
 
     /**
+     * How many physical pixels to move in pane coordinates (Pythagorean distance) before a drag is
+     * considered non-trivial and intentional.
+     *
+     * This value is computed on-demand so that the injector can be changed at any time.
+     */
+    @VisibleForTesting val accidentalDragDistancePx
+        get() = DisplayTopology.dpToPx(4f, injector.densityDpi)
+
+    /**
+     * How long before until a tap is considered a drag regardless of distance moved.
+     */
+    @VisibleForTesting val accidentalDragTimeLimitMs = 800L
+
+    /**
      * This is needed to prevent a repopulation of the pane causing another
      * relayout and vice-versa ad infinitum.
      */
@@ -295,15 +309,19 @@ class DisplayTopologyPreference(context : Context)
         open val wallpaper: Bitmap?
             get() = WallpaperManager.getInstance(context).bitmap
 
-        open val densityDpi: Int
-            get() {
-                val info = DisplayInfo()
-                return if (context.display.getDisplayInfo(info)) {
-                    info.logicalDensityDpi
-                } else {
-                    DisplayMetrics.DENSITY_DEFAULT
-                }
+        /**
+         * This density is the density of the current display (showing the topology pane). It is
+         * necessary to use this density here because the topology pane coordinates are in physical
+         * pixels, and the display coordinates are in density-independent pixels.
+         */
+        open val densityDpi: Int by lazy {
+            val info = DisplayInfo()
+            if (context.display.getDisplayInfo(info)) {
+                info.logicalDensityDpi
+            } else {
+                DisplayMetrics.DENSITY_DEFAULT
             }
+        }
 
         open fun registerTopologyListener(listener: Consumer<DisplayTopology>) {
             displayManager.registerTopologyListener(context.mainExecutor, listener)
@@ -323,23 +341,29 @@ class DisplayTopologyPreference(context : Context)
             val positions: List<Pair<Int, RectF>>)
 
     /**
-     * Holds information about the current drag operation.
+     * Holds information about the current drag operation. The initial rawX, rawY values of the
+     * cursor are recorded in order to detect whether the drag was a substantial drag or likely
+     * accidental.
+     *
      * @param stationaryDisps ID and position of displays that are not moving
      * @param display View that is currently being dragged
      * @param displayId ID of display being dragged
      * @param displayWidth width of display being dragged in actual (not View) coordinates
      * @param displayHeight height of display being dragged in actual (not View) coordinates
-     * @param dragOffsetX difference between event rawX coordinate and X of the display in the pane
-     * @param dragOffsetY difference between event rawY coordinate and Y of the display in the pane
-     * @param didMove true if we have detected the user intentionally wanted to drag rather than
-     *                just click
+     * @param initialBlockX block's X coordinate upon touch down event
+     * @param initialBlockY block's Y coordinate upon touch down event
+     * @param initialTouchX rawX value of the touch down event
+     * @param initialTouchY rawY value of the touch down event
+     * @param startTimeMs time when tap down occurred, needed to detect the user intentionally
+     *                    wanted to drag rather than just click
      */
     private data class BlockDrag(
             val stationaryDisps : List<Pair<Int, RectF>>,
             val display: DisplayBlock, val displayId: Int,
             val displayWidth: Float, val displayHeight: Float,
-            val dragOffsetX: Float, val dragOffsetY: Float,
-            var didMove: Boolean = false)
+            val initialBlockX: Float, val initialBlockY: Float,
+            val initialTouchX: Float, val initialTouchY: Float,
+            val startTimeMs: Long)
 
     private var mTopologyInfo : TopologyInfo? = null
     private var mDrag : BlockDrag? = null
@@ -394,14 +418,10 @@ class DisplayTopologyPreference(context : Context)
             recycleableBlocks.add(mPaneContent.getChildAt(i) as DisplayBlock)
         }
 
-        // This density is the density of the current display (showing the topology pane). It is
-        // necessary to use this density here because the topology pane coordinates are in physical
-        // pixels, and the display coordinates are in density-independent pixels.
-        val dpi = injector.densityDpi
         val scaling = TopologyScale(
                 mPaneContent.width,
-                minEdgeLength = DisplayTopology.dpToPx(60f, dpi),
-                maxEdgeLength = DisplayTopology.dpToPx(256f, dpi),
+                minEdgeLength = DisplayTopology.dpToPx(60f, injector.densityDpi),
+                maxEdgeLength = DisplayTopology.dpToPx(256f, injector.densityDpi),
                 newBounds.map { it.second }.toList())
         mPaneHolder.layoutParams.let {
             val newHeight = scaling.paneHeight.toInt()
@@ -431,7 +451,7 @@ class DisplayTopologyPreference(context : Context)
                 when (ev.actionMasked) {
                     MotionEvent.ACTION_DOWN -> onBlockTouchDown(id, pos, block, ev)
                     MotionEvent.ACTION_MOVE -> onBlockTouchMove(ev)
-                    MotionEvent.ACTION_UP -> onBlockTouchUp()
+                    MotionEvent.ACTION_UP -> onBlockTouchUp(ev)
                     else -> false
                 }
             }
@@ -462,7 +482,10 @@ class DisplayTopologyPreference(context : Context)
         // moving, and the raw coordinates are relative to the screen.
         mDrag = BlockDrag(
                 stationaryDisps.toList(), block, displayId, displayPos.width(), displayPos.height(),
-                ev.rawX - block.x, ev.rawY - block.y)
+                initialBlockX = block.x, initialBlockY = block.y,
+                initialTouchX = ev.rawX, initialTouchY = ev.rawY,
+                startTimeMs = ev.eventTime,
+        )
 
         // Prevents a container of this view from intercepting the touch events in the case the
         // pointer moves outside of the display block or the pane.
@@ -474,30 +497,31 @@ class DisplayTopologyPreference(context : Context)
         val drag = mDrag ?: return false
         val topology = mTopologyInfo ?: return false
         val dispDragCoor = topology.scaling.paneToDisplayCoor(
-                ev.rawX - drag.dragOffsetX, ev.rawY - drag.dragOffsetY)
+                ev.rawX - drag.initialTouchX + drag.initialBlockX,
+                ev.rawY - drag.initialTouchY + drag.initialBlockY)
         val dispDragRect = RectF(
                 dispDragCoor.x, dispDragCoor.y,
                 dispDragCoor.x + drag.displayWidth, dispDragCoor.y + drag.displayHeight)
         val snapRect = clampPosition(drag.stationaryDisps.map { it.second }, dispDragRect)
 
         drag.display.place(topology.scaling.displayToPaneCoor(snapRect.left, snapRect.top))
-        drag.didMove = true
 
         return true
     }
 
-    private fun onBlockTouchUp(): Boolean {
+    private fun onBlockTouchUp(ev: MotionEvent): Boolean {
         val drag = mDrag ?: return false
         val topology = mTopologyInfo ?: return false
         mPaneContent.requestDisallowInterceptTouchEvent(false)
         drag.display.setHighlighted(false)
 
-        mDrag = null
-        if (!drag.didMove) {
-            // If no move event occurred, ignore the drag completely.
-            // TODO(b/352648432): Responding to a single move event no matter how small may be too
-            // sensitive. It is easy to slide by a small amount just by force of pressing down the
-            // mouse button. Keep an eye on this.
+        val netPxDragged = Math.hypot(
+                (drag.initialBlockX - drag.display.x).toDouble(),
+                (drag.initialBlockY - drag.display.y).toDouble())
+        val timeDownMs = ev.eventTime - drag.startTimeMs
+        if (netPxDragged < accidentalDragDistancePx && timeDownMs < accidentalDragTimeLimitMs) {
+            drag.display.x = drag.initialBlockX
+            drag.display.y = drag.initialBlockY
             return true
         }
 
