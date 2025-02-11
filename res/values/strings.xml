@@ -12533,12 +12533,14 @@
 
     <!-- Summary to show the current network mode is invalid. [CHAR LIMIT=NONE]-->
     <string name="mobile_network_mode_error">Invalid Network Mode <xliff:g id="networkModeId" example="0">%1$d</xliff:g>. Ignore.</string>
-    <!-- Title for _satellite_setting_preference_layout in mobile network settings [CHAR LIMIT=60] -->
+    <!-- Title for satellite setting preference in mobile network settings [CHAR LIMIT=60] -->
     <string name="satellite_setting_title">Satellite messaging</string>
-    <!-- Summary for _satellite_setting_preference_layout. [CHAR LIMIT=NONE]-->
+    <!-- Summary for satellite setting preference. [CHAR LIMIT=NONE]-->
     <string name="satellite_setting_enabled_summary">Send and receive text messages by satellite. Included with your account.</string>
-    <!-- Summary for _satellite_setting_preference_layout. [CHAR LIMIT=NONE]-->
+    <!-- Summary for satellite setting preference. [CHAR LIMIT=NONE]-->
     <string name="satellite_setting_disabled_summary">Send and receive text messages by satellite. Not included with your account.</string>
+    <!-- Summary for satellite setting preference without entitlement [CHAR LIMIT=NONE]-->
+    <string name="satellite_setting_summary_without_entitlement">Send and receive text messages by satellite. Contact your carrier for details.</string>
     <!-- Search keywords for "_satellite_setting_preference_layout" [CHAR_LIMIT=NONE] -->
     <string name="keywords_satellite_setting">Satellite messaging, satellite connectivity</string>
     <!-- Category name "About satellite messaging" [CHAR_LIMIT=NONE] -->
@@ -12565,6 +12567,8 @@
     <string name="summary_supported_service">You can text anyone, including emergency services. Your phone will reconnect to a mobile network when available.</string>
     <!-- learn more text - more about satellite messaging [CHAR_LIMIT=NONE] -->
     <string name="satellite_setting_summary_more_information"><xliff:g id="subject" example="satellite messaging">%1$s</xliff:g> may take longer and is available only in some areas. Weather and certain structures may affect your satellite connection. Calling by satellite isn\u2019t available. Emergency calls may still connect.\n\nIt may take some time for account changes to show in Settings. Contact <xliff:g id="carrier_name" example="T-Mobile">%2$s</xliff:g> for details.</string>
+    <!-- learn more text - more about satellite messaging without emergency messaging support. [CHAR_LIMIT=NONE] -->
+    <string name="satellite_setting_summary_more_information_no_emergency_messaging"><xliff:g id="subject" example="satellite messaging">%1$s</xliff:g> may take longer and is available only in some areas. Weather and certain structures may affect your satellite connection. Calling by satellite isn\u2019t available. Emergency calls may still connect. Texting with emergency services may not be available in all areas.\n\nIt may take some time for account changes to show in Settings. Contact <xliff:g id="carrier_name" example="T-Mobile">%2$s</xliff:g> for details.</string>
     <!-- more about satellite messaging [CHAR_LIMIT=NONE] -->
     <string name="more_about_satellite_messaging">More about <xliff:g id="subject" example="satellite messaging">%1$s</xliff:g></string>
     <!-- Title for satellite warning dialog to avoid user using wifi/bluetooth/airplane mode [CHAR_LIMIT=NONE] -->
