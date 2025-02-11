@@ -187,7 +187,7 @@ class MobileNetworkImeiPreferenceControllerTest {
         }
 
         val availabilityStatus = controller.availabilityStatus
-        assertThat(availabilityStatus).isEqualTo(BasePreferenceController.CONDITIONALLY_UNAVAILABLE)
+        assertThat(availabilityStatus).isEqualTo(BasePreferenceController.DISABLED_FOR_USER)
     }
 
     @Test

@@ -67,8 +67,8 @@ class MobileNetworkImeiPreferenceController(context: Context, key: String) :
         !SubscriptionUtil.isSimHardwareVisible(mContext)
             || Utils.isWifiOnly(mContext) -> UNSUPPORTED_ON_DEVICE
         !Flags.isDualSimOnboardingEnabled()
-            || !SubscriptionManager.isValidSubscriptionId(subId)
-            || !mContext.userManager.isAdminUser -> CONDITIONALLY_UNAVAILABLE
+            || !SubscriptionManager.isValidSubscriptionId(subId) -> CONDITIONALLY_UNAVAILABLE
+        !mContext.userManager.isAdminUser -> DISABLED_FOR_USER
         else -> AVAILABLE
     }
 

@@ -265,7 +265,7 @@ public class ImeiInfoPreferenceControllerTest {
 
         when(mUserManager.isAdminUser()).thenReturn(false);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(
-                BasePreferenceController.UNSUPPORTED_ON_DEVICE);
+                BasePreferenceController.DISABLED_FOR_USER);
     }
 
     private <T> void mockService(String serviceName, Class<T> serviceClass, T service) {
