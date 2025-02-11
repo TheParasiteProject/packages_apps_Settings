@@ -28,10 +28,10 @@ import android.os.UserManager
 import android.provider.Settings
 import android.widget.Toast
 import androidx.preference.Preference
-import com.android.settings.PreferenceActionMetricsProvider
 import com.android.settings.PreferenceRestrictionMixin
 import com.android.settings.R
 import com.android.settings.contract.KEY_BLUETOOTH
+import com.android.settings.metrics.PreferenceActionMetricsProvider
 import com.android.settings.network.SatelliteRepository.Companion.isSatelliteOn
 import com.android.settings.network.SatelliteWarningDialogActivity
 import com.android.settings.widget.MainSwitchBarMetadata
