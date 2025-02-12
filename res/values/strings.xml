@@ -5217,6 +5217,16 @@
     <string name="accessibility_screen_magnification_title">Magnification</string>
     <!-- Title for accessibility shortcut preference for magnification. [CHAR LIMIT=60] -->
     <string name="accessibility_screen_magnification_shortcut_title">Magnification shortcut</string>
+    <!-- Title of cursor following mode preference for magnification. [CHAR LIMIT=60] -->
+    <string name="accessibility_magnification_cursor_following_title">Cursor following</string>
+    <!-- Header message of cursor following mode dialog for magnification. [CHAR LIMIT=none] -->
+    <string name="accessibility_magnification_cursor_following_header">Choose how Magnification follows your cursor.</string>
+    <!-- Option title of cursor following continuous mode in the mode selection dialog. [CHAR LIMIT=none] -->
+    <string name="accessibility_magnification_cursor_following_continuous">Move screen continuously as mouse moves</string>
+    <!-- Option title of cursor following center mode in the mode selection dialog. [CHAR LIMIT=none] -->
+    <string name="accessibility_magnification_cursor_following_center">Move screen keeping mouse at center of screen</string>
+    <!-- Option title of cursor following edge mode in the mode selection dialog. [CHAR LIMIT=none] -->
+    <string name="accessibility_magnification_cursor_following_edge">Move screen when mouse touches edges of screen</string>
     <!-- Title for accessibility follow typing preference for magnification. [CHAR LIMIT=35] -->
     <string name="accessibility_screen_magnification_follow_typing_title">Magnify typing</string>
     <!-- Summary for accessibility follow typing preference for magnification. [CHAR LIMIT=none] -->
