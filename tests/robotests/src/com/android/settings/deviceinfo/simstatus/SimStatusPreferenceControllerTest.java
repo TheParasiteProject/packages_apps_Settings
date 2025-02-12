@@ -251,7 +251,7 @@ public class SimStatusPreferenceControllerTest {
 
         when(mUserManager.isAdminUser()).thenReturn(false);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(
-                BasePreferenceController.CONDITIONALLY_UNAVAILABLE);
+                BasePreferenceController.DISABLED_FOR_USER);
     }
 
     private <T> void mockService(String serviceName, Class<T> serviceClass, T service) {

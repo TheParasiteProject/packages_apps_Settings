@@ -79,7 +79,7 @@ public class SimStatusPreferenceController extends BasePreferenceController {
             return UNSUPPORTED_ON_DEVICE;
         }
         if (!mContext.getSystemService(UserManager.class).isAdminUser()) {
-            return CONDITIONALLY_UNAVAILABLE;
+            return DISABLED_FOR_USER;
         }
         return AVAILABLE;
     }
