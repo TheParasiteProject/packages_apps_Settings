@@ -231,7 +231,7 @@ public class SimStatusPreferenceControllerTest {
 
         when(mResources.getBoolean(R.bool.config_show_sim_info)).thenReturn(false);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(
-                BasePreferenceController.CONDITIONALLY_UNAVAILABLE);
+                BasePreferenceController.UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
@@ -241,7 +241,7 @@ public class SimStatusPreferenceControllerTest {
 
         when(mTelephonyManager.isDataCapable()).thenReturn(false);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(
-                BasePreferenceController.CONDITIONALLY_UNAVAILABLE);
+                BasePreferenceController.UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
