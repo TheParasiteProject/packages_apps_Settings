@@ -46,6 +46,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.FragmentManager;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -53,6 +54,7 @@ import com.android.internal.app.LocalePicker;
 import com.android.internal.app.LocaleStore;
 import com.android.settings.R;
 import com.android.settings.RestrictedSettingsFragment;
+import com.android.settings.flags.Flags;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
@@ -84,6 +86,7 @@ public class LocaleListEditor extends RestrictedSettingsFragment implements View
     private static final String INDEX_KEY_ADD_LANGUAGE = "add_language";
     private static final String KEY_LANGUAGES_PICKER = "languages_picker";
     private static final String KEY_CATEGORY_TERMS_OF_ADDRESS = "key_category_terms_of_address";
+    private static final String KEY_ADD_A_LANGUAGE = "add_a_language";
     private static final String TAG_DIALOG_CONFIRM_SYSTEM_DEFAULT = "dialog_confirm_system_default";
     private static final String TAG_DIALOG_NOT_AVAILABLE = "dialog_not_available_locale";
     private static final String TAG_DIALOG_ADD_SYSTEM_LOCALE = "dialog_add_system_locale";
@@ -92,6 +95,7 @@ public class LocaleListEditor extends RestrictedSettingsFragment implements View
     private LocaleDragAndDropAdapter mAdapter;
     private Menu mMenu;
     private View mAddLanguage;
+    private Preference mAddLanguagePreference;
     private boolean mRemoveMode;
     private boolean mShowingRemoveDialog;
     private boolean mLocaleAdditionMode = false;
@@ -282,7 +286,11 @@ public class LocaleListEditor extends RestrictedSettingsFragment implements View
     private void setRemoveMode(boolean mRemoveMode) {
         this.mRemoveMode = mRemoveMode;
         mAdapter.setRemoveMode(mRemoveMode);
-        mAddLanguage.setVisibility(mRemoveMode ? View.INVISIBLE : View.VISIBLE);
+        if (Flags.settingsExpressiveDesignEnabled()) {
+            mAddLanguagePreference.setVisible(!mRemoveMode);
+        } else {
+            mAddLanguage.setVisibility(mRemoveMode ? View.INVISIBLE : View.VISIBLE);
+        }
         updateVisibilityOfRemoveMenu();
     }
 
@@ -489,19 +497,23 @@ public class LocaleListEditor extends RestrictedSettingsFragment implements View
         list.setAdapter(mAdapter);
         list.setOnTouchListener(this);
         list.requestFocus();
-        mAddLanguage = layout.findViewById(R.id.add_language);
-        mAddLanguage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FeatureFactory.getFeatureFactory().getMetricsFeatureProvider()
-                        .logSettingsTileClick(INDEX_KEY_ADD_LANGUAGE, getMetricsCategory());
+        if (Flags.settingsExpressiveDesignEnabled()) {
+            mAddLanguagePreference = getPreferenceScreen().findPreference(KEY_ADD_A_LANGUAGE);
+        } else {
+            mAddLanguage = layout.findViewById(R.id.add_language);
+            mAddLanguage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(@NonNull View v) {
+                    FeatureFactory.getFeatureFactory().getMetricsFeatureProvider()
+                            .logSettingsTileClick(INDEX_KEY_ADD_LANGUAGE, getMetricsCategory());
 
-                final Intent intent = new Intent(getActivity(),
-                        LocalePickerWithRegionActivity.class);
-                intent.putExtras(getActivity().getIntent().getExtras());
-                startActivityForResult(intent, REQUEST_LOCALE_PICKER);
-            }
-        });
+                    final Intent intent = new Intent(getActivity(),
+                            LocalePickerWithRegionActivity.class);
+                    intent.putExtras(getActivity().getIntent().getExtras());
+                    startActivityForResult(intent, REQUEST_LOCALE_PICKER);
+                }
+            });
+        }
     }
 
     @Override
