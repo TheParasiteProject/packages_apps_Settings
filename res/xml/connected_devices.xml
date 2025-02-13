@@ -26,6 +26,14 @@
         settings:allowDividerBelow="true"
         settings:controller="com.android.settings.slices.SlicePreferenceController" />
 
+    <Preference
+        android:fragment="com.android.settings.connecteddevice.audiosharing.AudioSharingDashboardFragment"
+        android:icon="@drawable/ic_bt_le_audio_sharing"
+        android:key="connected_device_audio_sharing_settings"
+        android:title="@string/audio_sharing_title"
+        settings:controller="com.android.settings.connecteddevice.audiosharing.AudioSharingPreferenceController"
+        settings:searchable="false" />
+
     <PreferenceCategory
         android:key="audio_sharing_device_list"
         android:title="@string/audio_sharing_device_group_title"
@@ -36,14 +44,6 @@
         android:key="temp_bond_device_list"
         android:title="@string/connected_device_temp_bond_device_title"
         settings:controller="com.android.settings.connecteddevice.audiosharing.TemporaryBondDeviceGroupController" />
-
-    <Preference
-        android:fragment="com.android.settings.connecteddevice.audiosharing.AudioSharingDashboardFragment"
-        android:icon="@drawable/ic_bt_le_audio_sharing"
-        android:key="connected_device_audio_sharing_settings"
-        android:title="@string/audio_sharing_title"
-        settings:controller="com.android.settings.connecteddevice.audiosharing.AudioSharingPreferenceController"
-        settings:searchable="false" />
 
     <PreferenceCategory
         android:key="available_device_list"
