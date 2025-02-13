@@ -770,7 +770,7 @@ public class ChooseLockPassword extends SettingsActivity {
             // If the stage changed, announce the header for accessibility. This
             // is a no-op when accessibility is disabled.
             if (previousStage != stage) {
-                mLayout.announceForAccessibility(mLayout.getHeaderText());
+                getActivity().setTitle(mLayout.getHeaderText());
             }
         }
 
