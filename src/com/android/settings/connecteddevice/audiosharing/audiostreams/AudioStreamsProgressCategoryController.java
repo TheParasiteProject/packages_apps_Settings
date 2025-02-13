@@ -504,6 +504,12 @@ public class AudioStreamsProgressCategoryController extends BasePreferenceContro
                                         SourceOriginForLogging.UNKNOWN)
                                 : addNewPreference(receiveState, AudioStreamState.SOURCE_PRESENT);
                     }
+                    // Some LE devices might keep retrying with bad code, in this case we don't
+                    // switch to this intermediate state.
+                    if (existingPreference.getAudioStreamState()
+                            == AudioStreamState.ADD_SOURCE_BAD_CODE) {
+                        return existingPreference;
+                    }
                     if (existingPreference.getAudioStreamState() == AudioStreamState.WAIT_FOR_SYNC
                             && existingPreference.getAudioStreamBroadcastId() == UNSET_BROADCAST_ID
                             && mSourceFromQrCode != null) {

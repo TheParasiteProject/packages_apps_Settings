@@ -873,6 +873,70 @@ public class AudioStreamsProgressCategoryControllerTest {
         assertThat(states.get(1)).isEqualTo(SOURCE_PRESENT);
     }
 
+    @Test
+    public void testHandleSourcePaused_retryBadCode_skipUpdateState() {
+        mSetFlagsRule.enableFlags(FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX);
+        String address = "11:22:33:44:55:66";
+
+        // Setup a device
+        ShadowAudioStreamsHelper.setCachedBluetoothDeviceInSharingOrLeConnected(mDevice);
+
+        // Create new controller to enable hysteresis mode
+        mController = spy(new TestController(mContext, KEY));
+        // Setup mPreference so it's not null
+        mController.displayPreference(mScreen);
+
+        // A new source found
+        when(mMetadata.getBroadcastId()).thenReturn(NEWLY_FOUND_BROADCAST_ID);
+        mController.handleSourceFound(mMetadata);
+        shadowOf(Looper.getMainLooper()).idle();
+
+        // The newly found source is identified as having a bad code
+        BluetoothLeBroadcastReceiveState badCode = mock(BluetoothLeBroadcastReceiveState.class);
+        when(badCode.getBroadcastId()).thenReturn(NEWLY_FOUND_BROADCAST_ID);
+        when(badCode.getPaSyncState())
+                .thenReturn(BluetoothLeBroadcastReceiveState.PA_SYNC_STATE_SYNCHRONIZED);
+        when(badCode.getBigEncryptionState())
+                .thenReturn(BluetoothLeBroadcastReceiveState.BIG_ENCRYPTION_STATE_BAD_CODE);
+        mController.handleSourceConnectBadCode(badCode);
+        shadowOf(Looper.getMainLooper()).idle();
+
+        // Device retrying with bad code
+        BluetoothLeBroadcastReceiveState receiveState =
+                mock(BluetoothLeBroadcastReceiveState.class);
+        when(receiveState.getBroadcastId()).thenReturn(NEWLY_FOUND_BROADCAST_ID);
+        when(receiveState.getSourceDevice()).thenReturn(mSourceDevice);
+        when(mSourceDevice.getAddress()).thenReturn(address);
+        List<Long> bisSyncState = new ArrayList<>();
+        when(receiveState.getBisSyncState()).thenReturn(bisSyncState);
+
+        mController.handleSourcePaused(mSourceDevice, receiveState);
+        shadowOf(Looper.getMainLooper()).idle();
+
+        ArgumentCaptor<AudioStreamPreference> preference =
+                ArgumentCaptor.forClass(AudioStreamPreference.class);
+        ArgumentCaptor<AudioStreamsProgressCategoryController.AudioStreamState> state =
+                ArgumentCaptor.forClass(
+                        AudioStreamsProgressCategoryController.AudioStreamState.class);
+
+        verify(mController, times(2)).moveToState(preference.capture(), state.capture());
+        List<AudioStreamPreference> preferences = preference.getAllValues();
+        assertThat(preferences.size()).isEqualTo(2);
+        List<AudioStreamsProgressCategoryController.AudioStreamState> states = state.getAllValues();
+        assertThat(states.size()).isEqualTo(2);
+
+        // Verify one preference is created with SYNCED
+        assertThat(preferences.get(0).getAudioStreamBroadcastId())
+                .isEqualTo(NEWLY_FOUND_BROADCAST_ID);
+        assertThat(states.get(0)).isEqualTo(SYNCED);
+
+        // Verify the preference is updated to state BAD_CODE, and there's no preference updated
+        // to PAUSED
+        assertThat(preferences.get(1).getAudioStreamBroadcastId())
+                .isEqualTo(NEWLY_FOUND_BROADCAST_ID);
+        assertThat(states.get(1)).isEqualTo(ADD_SOURCE_BAD_CODE);
+    }
+
     private static BluetoothLeBroadcastReceiveState createConnectedMock(int id) {
         var connected = mock(BluetoothLeBroadcastReceiveState.class);
         List<Long> bisSyncState = new ArrayList<>();
