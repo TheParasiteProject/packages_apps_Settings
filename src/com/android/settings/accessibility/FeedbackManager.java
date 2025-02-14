@@ -16,6 +16,7 @@
 package com.android.settings.accessibility;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.text.TextUtils;
 
@@ -23,6 +24,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.server.accessibility.Flags;
+import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.DeviceInfoUtils;
 
 import java.lang.ref.WeakReference;
@@ -33,14 +35,11 @@ import java.lang.ref.WeakReference;
  */
 public class FeedbackManager {
 
-    // TODO(b/393980229): Add a feature provider for Pixel overlay to expose the feedback bucket ID
-    static final String ACCESSIBILITY_FEEDBACK_REQUEST_BUCKET_ID =
-            "com.google.android.settings.intelligence.ACCESSIBILITY_FEEDBACK_REQUEST";
     static final String CATEGORY_TAG = "category_tag";
     private static final int FEEDBACK_INTENT_RESULT_CODE = 0;
 
     private final WeakReference<Activity> mActivityWeakReference;
-    @Nullable private final String mFeedbackReporterPackage;
+    @Nullable private final String mReporterPackage;
     @Nullable private final String mCategoryTag;
 
     /**
@@ -49,14 +48,36 @@ public class FeedbackManager {
      * @param activity The activity context. A WeakReference is used to prevent memory leaks.
      */
     public FeedbackManager(@Nullable Activity activity) {
-        this(activity, DeviceInfoUtils.getFeedbackReporterPackage(activity));
+        this(activity, /* componentName= */ null);
     }
 
+    /**
+     * Constructs a new FeedbackManager.
+     *
+     * @param activity The activity context. A WeakReference is used to prevent memory leaks.
+     * @param componentName The component name associated with the feedback.
+     */
+    public FeedbackManager(@Nullable Activity activity, @Nullable ComponentName componentName) {
+        this(activity,
+                DeviceInfoUtils.getFeedbackReporterPackage(activity),
+                FeatureFactory.getFeatureFactory()
+                        .getAccessibilityFeedbackFeatureProvider()
+                        .getCategory(componentName));
+    }
+
+    /**
+     * Constructs a new FeedbackManager. This constructor is visible for testing.
+     *
+     * @param activity The activity context. A WeakReference is used to prevent memory leaks.
+     * @param reporterPackage The package name of the feedback reporter.
+     * @param category The feedback bucket ID.
+     */
     @VisibleForTesting
-    public FeedbackManager(@Nullable Activity activity, @Nullable String feedbackReporterPackage) {
+    public FeedbackManager(@Nullable Activity activity, @Nullable String reporterPackage,
+            @Nullable String category) {
         this.mActivityWeakReference = new WeakReference<>(activity);
-        this.mFeedbackReporterPackage = feedbackReporterPackage;
-        this.mCategoryTag = ACCESSIBILITY_FEEDBACK_REQUEST_BUCKET_ID;
+        this.mReporterPackage = reporterPackage;
+        this.mCategoryTag = category;
     }
 
     /**
@@ -69,7 +90,9 @@ public class FeedbackManager {
             return false;
         }
 
-        return !TextUtils.isEmpty(mFeedbackReporterPackage) && mActivityWeakReference.get() != null;
+        return !TextUtils.isEmpty(mReporterPackage)
+                && !TextUtils.isEmpty(mCategoryTag)
+                && mActivityWeakReference.get() != null;
     }
 
     /**
@@ -87,7 +110,7 @@ public class FeedbackManager {
         }
 
         final Intent intent = new Intent(Intent.ACTION_BUG_REPORT);
-        intent.setPackage(mFeedbackReporterPackage);
+        intent.setPackage(mReporterPackage);
         intent.putExtra(CATEGORY_TAG, mCategoryTag);
         activity.startActivityForResult(intent, FEEDBACK_INTENT_RESULT_CODE);
         return true;

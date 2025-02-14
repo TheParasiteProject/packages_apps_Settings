@@ -113,6 +113,7 @@ public class AccessibilitySettingsTest {
     private static final String EMPTY_STRING = "";
     private static final String DEFAULT_SUMMARY = "default summary";
     private static final String DEFAULT_DESCRIPTION = "default description";
+    private static final String DEFAULT_CATEGORY = "default category";
     private static final String DEFAULT_LABEL = "default label";
     private static final Boolean SERVICE_ENABLED = true;
     private static final Boolean SERVICE_DISABLED = false;
@@ -455,7 +456,8 @@ public class AccessibilitySettingsTest {
     @EnableFlags(com.android.server.accessibility.Flags.FLAG_ENABLE_LOW_VISION_GENERIC_FEEDBACK)
     public void onCreateOptionsMenu_enableLowVisionGenericFeedback_shouldAddSendFeedbackMenu() {
         setupFragment();
-        mFragment.setFeedbackManager(new FeedbackManager(mFragment.getActivity(), PACKAGE_NAME));
+        mFragment.setFeedbackManager(
+                new FeedbackManager(mFragment.getActivity(), PACKAGE_NAME, DEFAULT_CATEGORY));
         when(mMenu.add(anyInt(), anyInt(), anyInt(), anyInt())).thenReturn(mMenuItem);
 
         mFragment.onCreateOptionsMenu(mMenu, /* inflater= */ null);
@@ -468,7 +470,8 @@ public class AccessibilitySettingsTest {
     @DisableFlags(com.android.server.accessibility.Flags.FLAG_ENABLE_LOW_VISION_GENERIC_FEEDBACK)
     public void onCreateOptionsMenu_disableLowVisionGenericFeedback_shouldNotAddSendFeedbackMenu() {
         setupFragment();
-        mFragment.setFeedbackManager(new FeedbackManager(mFragment.getActivity(), PACKAGE_NAME));
+        mFragment.setFeedbackManager(
+                new FeedbackManager(mFragment.getActivity(), PACKAGE_NAME, DEFAULT_CATEGORY));
         when(mMenu.add(anyInt(), anyInt(), anyInt(), anyInt())).thenReturn(mMenuItem);
 
         mFragment.onCreateOptionsMenu(mMenu, /* inflater= */ null);
@@ -481,7 +484,8 @@ public class AccessibilitySettingsTest {
     @EnableFlags(com.android.server.accessibility.Flags.FLAG_ENABLE_LOW_VISION_GENERIC_FEEDBACK)
     public void onOptionsItemSelected_enableLowVisionGenericFeedback_shouldStartSendFeedback() {
         setupFragment();
-        mFragment.setFeedbackManager(new FeedbackManager(mFragment.getActivity(), PACKAGE_NAME));
+        mFragment.setFeedbackManager(
+                new FeedbackManager(mFragment.getActivity(), PACKAGE_NAME, DEFAULT_CATEGORY));
         when(mMenu.add(anyInt(), anyInt(), anyInt(), anyInt())).thenReturn(mMenuItem);
         mFragment.onCreateOptionsMenu(mMenu, /* inflater= */ null);
         when(mMenuItem.getItemId()).thenReturn(AccessibilitySettings.MENU_ID_SEND_FEEDBACK);
@@ -496,7 +500,8 @@ public class AccessibilitySettingsTest {
     @DisableFlags(com.android.server.accessibility.Flags.FLAG_ENABLE_LOW_VISION_GENERIC_FEEDBACK)
     public void onOptionsItemSelected_disableLowVisionGenericFeedback_shouldNotStartSendFeedback() {
         setupFragment();
-        mFragment.setFeedbackManager(new FeedbackManager(mFragment.getActivity(), PACKAGE_NAME));
+        mFragment.setFeedbackManager(
+                new FeedbackManager(mFragment.getActivity(), PACKAGE_NAME, DEFAULT_CATEGORY));
         when(mMenu.add(anyInt(), anyInt(), anyInt(), anyInt())).thenReturn(mMenuItem);
         mFragment.onCreateOptionsMenu(mMenu, /* inflater= */ null);
         when(mMenuItem.getItemId()).thenReturn(AccessibilitySettings.MENU_ID_SEND_FEEDBACK);
