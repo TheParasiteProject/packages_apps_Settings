@@ -5643,6 +5643,9 @@
     <string name="accessibility_autoclick_longer_desc">Longer</string>
     <!-- Description for the seekbar that adjust auto click time. [CHAR_LIMIT=NONE] -->
     <string name="accessibility_autoclick_seekbar_desc">Auto click time</string>
+    <!-- Title for the toggle button that turns on/off the autoclick shortcut. [CHAR_LIMIT=NONE] -->
+    <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
+    <string name="accessibility_autoclick_shortcut_title" translatable="false">Autoclick shortcut</string>
     <!-- Title for the alert dialog that adjust auto click cursor area size. [CHAR_LIMIT=NONE] -->
     <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
     <string name="autoclick_cursor_area_size_title" translatable="false">Click area</string>
