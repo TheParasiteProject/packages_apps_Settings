@@ -6771,7 +6771,15 @@
     <string name="adaptive_connectivity_switch_off">Off</string>
     <!-- Title for adaptive connectivity main switch preferences. [CHAR LIMIT=50] -->
     <string name="adaptive_connectivity_main_switch_title">Use adaptive connectivity</string>
-
+    <!-- Title for adaptive connectivity wi-fi switch preferences. [CHAR LIMIT=50] -->
+    <string name="adaptive_connectivity_wifi_switch_title">Auto\u2011switch Wi\u2011Fi to Cellular</string>
+    <!-- Summary for adaptive connectivity wi-fi switch preferences. [CHAR LIMIT=NONE] -->
+    <string name="adaptive_connectivity_wifi_switch_summary">Automatically use cellular data when Wi\u2011Fi connection is poor or unavailable.
+Data usage charges may apply.</string>
+    <!-- Title for adaptive connectivity mobile network switch preferences. [CHAR LIMIT=50] -->
+    <string name="adaptive_connectivity_mobile_network_switch_title">Auto\u2011switch mobile network for battery life</string>
+    <!-- Summary for adaptive connectivity mobile network switch preferences. [CHAR LIMIT=NONE] -->
+    <string name="adaptive_connectivity_mobile_network_switch_summary">Extend battery life by automatically managing network connections</string>
     <!-- Cellular security related strings -->
     <!-- Title of Cellular security tile in Network & Internet settings page. [CHAR LIMIT=60]-->
     <string name="cellular_security_title">Mobile network security</string>
