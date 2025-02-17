@@ -16,28 +16,38 @@
 
 package com.android.settings.connecteddevice.audiosharing;
 
+import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast.ACTION_LE_AUDIO_SHARING_DEVICE_CONNECTED;
 import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast.ACTION_LE_AUDIO_SHARING_STATE_CHANGE;
 import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast.BROADCAST_STATE_OFF;
 import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast.BROADCAST_STATE_ON;
+import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast.EXTRA_BLUETOOTH_DEVICE;
 import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast.EXTRA_LE_AUDIO_SHARING_STATE;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
+import android.Manifest;
+import android.app.ActivityManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.settings.SettingsEnums;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothStatusCodes;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.platform.test.annotations.DisableFlags;
+import android.platform.test.annotations.EnableFlags;
 import android.platform.test.flag.junit.SetFlagsRule;
 
 import com.android.settings.bluetooth.Utils;
@@ -72,6 +82,7 @@ import java.util.stream.Collectors;
 public class AudioSharingReceiverTest {
     private static final String ACTION_LE_AUDIO_SHARING_STOP =
             "com.android.settings.action.BLUETOOTH_LE_AUDIO_SHARING_STOP";
+    private static final String TEST_DEVICE_NAME = "test";
 
     @Rule public final MockitoRule mMockitoRule = MockitoJUnit.rule();
     @Rule public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
@@ -88,7 +99,7 @@ public class AudioSharingReceiverTest {
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.getApplication();
+        mContext = spy(RuntimeEnvironment.getApplication());
         mShadowApplication = Shadow.extract(mContext);
         mShadowApplication.setSystemService(Context.NOTIFICATION_SERVICE, mNm);
         mShadowBluetoothAdapter = Shadow.extract(BluetoothAdapter.getDefaultAdapter());
@@ -130,9 +141,8 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
+    @DisableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingStateOn_flagOff_doNothing() {
-        mSetFlagsRule.disableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
-
         Intent intent = new Intent(ACTION_LE_AUDIO_SHARING_STATE_CHANGE);
         intent.setPackage(mContext.getPackageName());
         intent.putExtra(EXTRA_LE_AUDIO_SHARING_STATE, BROADCAST_STATE_ON);
@@ -144,8 +154,8 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingStateOn_broadcastDisabled_doNothing() {
-        mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
         mShadowBluetoothAdapter.setIsLeAudioBroadcastSourceSupported(
                 BluetoothStatusCodes.ERROR_BLUETOOTH_NOT_ENABLED);
 
@@ -160,9 +170,8 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingStateChangeIntentNoState_doNothing() {
-        mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
-
         Intent intent = new Intent(ACTION_LE_AUDIO_SHARING_STATE_CHANGE);
         intent.setPackage(mContext.getPackageName());
         AudioSharingReceiver audioSharingReceiver = getAudioSharingReceiver(intent);
@@ -173,9 +182,8 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingStateOn_broadcastEnabled_showNotification() {
-        mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
-
         Intent intent = new Intent(ACTION_LE_AUDIO_SHARING_STATE_CHANGE);
         intent.setPackage(mContext.getPackageName());
         intent.putExtra(EXTRA_LE_AUDIO_SHARING_STATE, BROADCAST_STATE_ON);
@@ -188,9 +196,9 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void
             broadcastReceiver_receiveAudioSharingStateOff_broadcastDisabled_cancelNotification() {
-        mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
         mShadowBluetoothAdapter.setIsLeAudioBroadcastSourceSupported(
                 BluetoothStatusCodes.ERROR_BLUETOOTH_NOT_ENABLED);
 
@@ -207,10 +215,9 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void
             broadcastReceiver_receiveAudioSharingStateOff_broadcastEnabled_cancelNotification() {
-        mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
-
         Intent intent = new Intent(ACTION_LE_AUDIO_SHARING_STATE_CHANGE);
         intent.setPackage(mContext.getPackageName());
         intent.putExtra(EXTRA_LE_AUDIO_SHARING_STATE, BROADCAST_STATE_OFF);
@@ -224,8 +231,8 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingStop_broadcastDisabled_cancelNotification() {
-        mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
         mShadowBluetoothAdapter.setIsLeAudioBroadcastSourceSupported(
                 BluetoothStatusCodes.ERROR_BLUETOOTH_NOT_ENABLED);
 
@@ -242,8 +249,8 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingStop_notInBroadcast_cancelNotification() {
-        mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
         when(mBroadcast.isEnabled(null)).thenReturn(false);
         int broadcastId = 1;
         when(mBroadcast.getLatestBroadcastId()).thenReturn(broadcastId);
@@ -261,8 +268,8 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingStop_inBroadcast_stopBroadcast() {
-        mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
         when(mBroadcast.isEnabled(null)).thenReturn(true);
         int broadcastId = 1;
         when(mBroadcast.getLatestBroadcastId()).thenReturn(broadcastId);
@@ -281,6 +288,61 @@ public class AudioSharingReceiverTest {
                         ACTION_LE_AUDIO_SHARING_STOP);
     }
 
+    @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
+    public void broadcastReceiver_receiveAudioSharingDeviceConnected_broadcastDisabled_doNothing() {
+        mShadowBluetoothAdapter.setIsLeAudioBroadcastSourceSupported(
+                BluetoothStatusCodes.ERROR_BLUETOOTH_NOT_ENABLED);
+
+        BluetoothDevice device = mock(BluetoothDevice.class);
+        when(device.getAlias()).thenReturn(TEST_DEVICE_NAME);
+        setAppInForeground(false);
+        Intent intent = new Intent(ACTION_LE_AUDIO_SHARING_DEVICE_CONNECTED);
+        intent.setPackage(mContext.getPackageName());
+        intent.putExtra(EXTRA_BLUETOOTH_DEVICE, device);
+        AudioSharingReceiver audioSharingReceiver = getAudioSharingReceiver(intent);
+        audioSharingReceiver.onReceive(mContext, intent);
+
+        verify(mNm, never()).notify(
+                eq(com.android.settings.R.string.share_audio_notification_title),
+                any(Notification.class));
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
+    public void broadcastReceiver_receiveAudioSharingDeviceConnected_showDialog() {
+        BluetoothDevice device = mock(BluetoothDevice.class);
+        when(device.getAlias()).thenReturn(TEST_DEVICE_NAME);
+        setAppInForeground(true);
+        Intent intent = new Intent(ACTION_LE_AUDIO_SHARING_DEVICE_CONNECTED);
+        intent.setPackage(mContext.getPackageName());
+        intent.putExtra(EXTRA_BLUETOOTH_DEVICE, device);
+        AudioSharingReceiver audioSharingReceiver = getAudioSharingReceiver(intent);
+        audioSharingReceiver.onReceive(mContext, intent);
+
+        verify(mNm, never()).notify(
+                eq(com.android.settings.R.string.share_audio_notification_title),
+                any(Notification.class));
+        // TODO: verify show dialog once impl complete
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
+    public void broadcastReceiver_receiveAudioSharingDeviceConnected_showNotification() {
+        BluetoothDevice device = mock(BluetoothDevice.class);
+        when(device.getAlias()).thenReturn(TEST_DEVICE_NAME);
+        setAppInForeground(false);
+        Intent intent = new Intent(ACTION_LE_AUDIO_SHARING_DEVICE_CONNECTED);
+        intent.setPackage(mContext.getPackageName());
+        intent.putExtra(EXTRA_BLUETOOTH_DEVICE, device);
+        AudioSharingReceiver audioSharingReceiver = getAudioSharingReceiver(intent);
+        audioSharingReceiver.onReceive(mContext, intent);
+
+        // TODO: verify no dialog once impl complete
+        verify(mNm).notify(eq(com.android.settings.R.string.share_audio_notification_title),
+                any(Notification.class));
+    }
+
     private AudioSharingReceiver getAudioSharingReceiver(Intent intent) {
         assertThat(mShadowApplication.hasReceiverForIntent(intent)).isTrue();
         List<BroadcastReceiver> receiversForIntent =
@@ -289,5 +351,17 @@ public class AudioSharingReceiverTest {
         BroadcastReceiver broadcastReceiver = receiversForIntent.get(0);
         assertThat(broadcastReceiver).isInstanceOf(AudioSharingReceiver.class);
         return (AudioSharingReceiver) broadcastReceiver;
+    }
+
+    private void setAppInForeground(boolean foreground) {
+        ActivityManager activityManager = mock(ActivityManager.class);
+        when(mContext.getSystemService(ActivityManager.class)).thenReturn(activityManager);
+        when(activityManager.getPackageImportance(mContext.getPackageName())).thenReturn(
+                foreground ? ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND
+                        : ActivityManager.RunningAppProcessInfo.IMPORTANCE_SERVICE);
+        PackageManager packageManager = mock(PackageManager.class);
+        when(mContext.getPackageManager()).thenReturn(packageManager);
+        when(packageManager.checkPermission(Manifest.permission.PACKAGE_USAGE_STATS,
+                mContext.getPackageName())).thenReturn(PackageManager.PERMISSION_GRANTED);
     }
 }
