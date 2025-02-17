@@ -6833,8 +6833,8 @@
     <string name="credentials_erased">Credential storage is erased.</string>
     <!-- Toast message [CHAR LIMIT=30] when credential storage containing private keys and certificates could not be erased (opposite of string credentials_erased) -->
     <string name="credentials_not_erased">Credential storage couldn\u2019t be erased.</string>
-    <!-- Title of Usage Access preference item [CHAR LIMIT=30] -->
-    <string name="usage_access_title">Apps with usage access</string>
+    <!-- Title of Usage Access preference item [CHAR LIMIT=40] -->
+    <string name="usage_access_title">Apps with access to app usage data</string>
     <!-- Title of CA certificate [CHAR LIMIT=30] -->
     <string name="ca_certificate">CA certificate</string>
     <!-- Title of User certificate [CHAR LIMIT=30] -->
@@ -10376,16 +10376,16 @@
     <string name="apps_storage">Apps storage</string>
 
     <!-- Title of usage access screen [CHAR LIMIT=30] -->
-    <string name="usage_access">Usage access</string>
+    <string name="usage_access">App usage data</string>
 
     <!-- Label for setting which controls whether app has usage access [CHAR LIMIT=45] -->
-    <string name="permit_usage_access">Permit usage access</string>
+    <string name="permit_usage_access">Permit access to app usage data</string>
 
     <!-- Link title to show stats about how much time user spent in an app [CHAR LIMIT=45] -->
     <string name="time_spent_in_app_pref_title">Screen time</string>
 
     <!-- Description of the usage access setting [CHAR LIMIT=NONE] -->
-    <string name="usage_access_description">Usage access allows an app to track what other apps you\u2019re using and how often, as well as your carrier, language settings, and other details.</string>
+    <string name="usage_access_description">App usage data allows an app to track what other apps you\u2019re using and how often, as well as your carrier, language settings, and other details.</string>
 
     <!-- Title for screen showing recent memory usage of device [CHAR LIMIT=30]-->
     <string name="memory_settings_title">Memory</string>
@@ -10678,7 +10678,7 @@
     <string name="app_list_preference_none">None</string>
 
     <!-- Warning message about disabling usage access on profile owner [CHAR LIMIT=NONE] -->
-    <string name="work_profile_usage_access_warning">Turning off usage access for this app doesn\'t
+    <string name="work_profile_usage_access_warning">Turning off app usage data for this app doesn\'t
         prevent your admin from tracking data usage for apps in your work profile</string>
 
     <!-- System Alert Window settings -->
