@@ -18,6 +18,7 @@ package com.android.settings.network.ethernet
 
 import android.content.Context
 import android.net.EthernetManager
+import android.net.EthernetNetworkUpdateRequest
 import android.net.IpConfiguration
 import android.net.LinkProperties
 import android.net.StaticIpConfiguration
@@ -40,6 +41,7 @@ class EthernetInterfaceDetailsController(
     private val lifecycle: Lifecycle,
 ) :
     AbstractPreferenceController(context),
+    EthernetDialog.EthernetDialogListener,
     EthernetInterface.EthernetInterfaceStateListener,
     LifecycleEventObserver {
     private val KEY_HEADER = "ethernet_details"
@@ -76,6 +78,22 @@ class EthernetInterfaceDetailsController(
 
             else -> {}
         }
+    }
+
+    override fun onSubmit(dialog: EthernetDialog) {
+        val ipConfiguration = dialog.getController().getConfig()
+
+        val staticIp = ipConfiguration.getStaticIpConfiguration()
+
+        val updateRequest: EthernetNetworkUpdateRequest =
+            EthernetNetworkUpdateRequest.Builder().setIpConfiguration(ipConfiguration).build()
+
+        ethernetManager.updateConfiguration(
+            preferenceId,
+            updateRequest,
+            /* executor */ null,
+            /* callback */ null,
+        )
     }
 
     override fun displayPreference(screen: PreferenceScreen) {
@@ -131,10 +149,14 @@ class EthernetInterfaceDetailsController(
 
         if (ipConfiguration?.getIpAssignment() == IpConfiguration.IpAssignment.STATIC) {
             val staticIp: StaticIpConfiguration? = ipConfiguration?.getStaticIpConfiguration()
-            ipAddressPref?.setSummary(staticIp?.getIpAddress().toString())
+            ipAddressPref?.setSummary(staticIp?.getIpAddress()?.getAddress()?.getHostAddress())
         } else {
             val addresses = linkProperties?.getAddresses()
-            ipAddressPref?.setSummary(addresses?.first().toString())
+            if (addresses != null && addresses.size > 0) {
+                ipAddressPref?.setSummary(addresses?.first()?.getHostAddress())
+            } else {
+                ipAddressPref?.setSummary("")
+            }
         }
     }
 }
