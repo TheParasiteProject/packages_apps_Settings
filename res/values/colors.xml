@@ -227,4 +227,8 @@
     <color name="seekbar_thumb_tint_color">@android:color/system_accent1_800</color>
     <color name="seekbar_progress_tint_color">@android:color/system_accent1_800</color>
     <color name="seekbar_progress_background_tint_color">@android:color/system_neutral2_50</color>
+
+    <!-- Keyboard a11y input dialog -->
+    <color name="input_dialog_slider_progress">@android:color/system_on_primary_dark</color>
+    <color name="input_dialog_slider_progress_background">@android:color/system_outline_light</color>
 </resources>
