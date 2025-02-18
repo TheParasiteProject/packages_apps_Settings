@@ -41,7 +41,6 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.telephony.flags.Flags;
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
 import com.android.settings.network.CarrierConfigCache;
@@ -90,11 +89,6 @@ public class SatelliteSettingPreferenceController extends
 
     @Override
     public int getAvailabilityStatus(int subId) {
-        if (!Flags.carrierEnabledSatelliteFlag()) {
-            logd("getAvailabilityStatus() : carrierEnabledSatelliteFlag is disabled");
-            return UNSUPPORTED_ON_DEVICE;
-        }
-
         if (mSatelliteManager == null) {
             return UNSUPPORTED_ON_DEVICE;
         }
