@@ -52,10 +52,12 @@ import android.bluetooth.BluetoothLeBroadcastMetadata;
 import android.bluetooth.BluetoothLeBroadcastReceiveState;
 import android.bluetooth.BluetoothProfile;
 import android.bluetooth.BluetoothStatusCodes;
+import android.content.ComponentName;
 import android.content.Context;
 import android.os.Looper;
 import android.platform.test.flag.junit.SetFlagsRule;
 import android.view.View;
+import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -120,9 +122,11 @@ public class AudioStreamsProgressCategoryControllerTest {
     private static final String BROADCAST_NAME_1 = "name_1";
     private static final String BROADCAST_NAME_2 = "name_2";
     private static final byte[] BROADCAST_CODE = new byte[] {1};
-    private final Context mContext = ApplicationProvider.getApplicationContext();
+    private final Context mContext = spy(ApplicationProvider.getApplicationContext());
     @Mock private LocalBluetoothManager mLocalBtManager;
     @Mock private BluetoothEventManager mBluetoothEventManager;
+    @Mock
+    private AccessibilityManager mAccessibilityManager;
     @Mock private PreferenceScreen mScreen;
     @Mock private AudioStreamsHelper mAudioStreamsHelper;
     @Mock private LocalBluetoothLeBroadcastAssistant mLeBroadcastAssistant;
@@ -152,6 +156,8 @@ public class AudioStreamsProgressCategoryControllerTest {
         ShadowBluetoothUtils.sLocalBluetoothManager = mLocalBtManager;
         when(mLocalBtManager.getEventManager()).thenReturn(mBluetoothEventManager);
         when(mLeBroadcastAssistant.isSearchInProgress()).thenReturn(false);
+        when(mContext.getSystemService(AccessibilityManager.class)).thenReturn(
+                mAccessibilityManager);
 
         when(mScreen.findPreference(anyString())).thenReturn(mPreference);
 
@@ -200,6 +206,7 @@ public class AudioStreamsProgressCategoryControllerTest {
         mController.onStop(mLifecycleOwner);
 
         verify(mBluetoothEventManager).unregisterCallback(any());
+        verify(mAccessibilityManager).removeAccessibilityServicesStateChangeListener(any());
     }
 
     @Test
@@ -247,6 +254,56 @@ public class AudioStreamsProgressCategoryControllerTest {
         assertThat(rightButton).isNotNull();
         assertThat(rightButton.getText())
                 .isEqualTo(mContext.getString(R.string.audio_streams_dialog_no_le_device_button));
+        assertThat(rightButton.hasOnClickListeners()).isTrue();
+
+        dialog.cancel();
+    }
+
+    @Test
+    public void testOnStart_initTalkbackOn_showDialog() {
+        // Setup a device
+        ShadowAudioStreamsHelper.setCachedBluetoothDeviceInSharingOrLeConnected(mDevice);
+        // Enable a screen reader service
+        ShadowAudioStreamsHelper.setEnabledScreenReaderService(new ComponentName("pkg", "class"));
+        when(mLeBroadcastAssistant.isSearchInProgress()).thenReturn(true);
+
+        FragmentController.setupFragment(mFragment);
+        mController.setFragment(mFragment);
+        mController.displayPreference(mScreen);
+        mController.onStart(mLifecycleOwner);
+        shadowOf(Looper.getMainLooper()).idle();
+
+        // Called twice, once in displayPreference, the other in init()
+        verify(mPreference, times(2)).setVisible(anyBoolean());
+        verify(mPreference).removeAudioStreamPreferences();
+        verify(mLeBroadcastAssistant).stopSearchingForSources();
+        verify(mLeBroadcastAssistant).unregisterServiceCallBack(any());
+
+        var dialog = ShadowAlertDialog.getLatestAlertDialog();
+        assertThat(dialog).isNotNull();
+        assertThat(dialog.isShowing()).isTrue();
+
+        TextView title = dialog.findViewById(R.id.dialog_title);
+        assertThat(title).isNotNull();
+        assertThat(title.getText())
+                .isEqualTo(
+                        mContext.getString(R.string.audio_streams_dialog_turn_off_talkback_title));
+        TextView subtitle1 = dialog.findViewById(R.id.dialog_subtitle);
+        assertThat(subtitle1).isNotNull();
+        assertThat(subtitle1.getVisibility()).isEqualTo(View.GONE);
+        TextView subtitle2 = dialog.findViewById(R.id.dialog_subtitle_2);
+        assertThat(subtitle2).isNotNull();
+        assertThat(subtitle2.getText())
+                .isEqualTo(mContext.getString(
+                        R.string.audio_streams_dialog_turn_off_talkback_subtitle));
+        View leftButton = dialog.findViewById(R.id.left_button);
+        assertThat(leftButton).isNotNull();
+        assertThat(leftButton.getVisibility()).isEqualTo(View.VISIBLE);
+        Button rightButton = dialog.findViewById(R.id.right_button);
+        assertThat(rightButton).isNotNull();
+        assertThat(rightButton.getText())
+                .isEqualTo(
+                        mContext.getString(R.string.audio_streams_dialog_turn_off_talkback_button));
         assertThat(rightButton.hasOnClickListeners()).isTrue();
 
         dialog.cancel();
