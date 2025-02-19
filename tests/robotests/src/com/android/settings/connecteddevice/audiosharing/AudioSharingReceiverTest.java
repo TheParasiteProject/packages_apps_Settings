@@ -82,6 +82,9 @@ import java.util.stream.Collectors;
 public class AudioSharingReceiverTest {
     private static final String ACTION_LE_AUDIO_SHARING_STOP =
             "com.android.settings.action.BLUETOOTH_LE_AUDIO_SHARING_STOP";
+    private static final String ACTION_LE_AUDIO_SHARING_CANCEL_NOTIF =
+            "com.android.settings.action.BLUETOOTH_LE_AUDIO_SHARING_CANCEL_NOTIF";
+    private static final String EXTRA_NOTIF_ID = "NOTIF_ID";
     private static final String TEST_DEVICE_NAME = "test";
 
     @Rule public final MockitoRule mMockitoRule = MockitoJUnit.rule();
@@ -341,6 +344,19 @@ public class AudioSharingReceiverTest {
         // TODO: verify no dialog once impl complete
         verify(mNm).notify(eq(com.android.settings.R.string.share_audio_notification_title),
                 any(Notification.class));
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
+    public void broadcastReceiver_receiveAudioSharingCancelNotif_cancel() {
+        Intent intent = new Intent(ACTION_LE_AUDIO_SHARING_CANCEL_NOTIF);
+        intent.setPackage(mContext.getPackageName());
+        intent.putExtra(EXTRA_NOTIF_ID,
+                com.android.settings.R.string.share_audio_notification_title);
+        AudioSharingReceiver audioSharingReceiver = getAudioSharingReceiver(intent);
+        audioSharingReceiver.onReceive(mContext, intent);
+
+        verify(mNm).cancel(com.android.settings.R.string.share_audio_notification_title);
     }
 
     private AudioSharingReceiver getAudioSharingReceiver(Intent intent) {
