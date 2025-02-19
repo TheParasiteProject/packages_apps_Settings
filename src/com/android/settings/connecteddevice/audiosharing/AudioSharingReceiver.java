@@ -141,6 +141,12 @@ public class AudioSharingReceiver extends BroadcastReceiver {
                     showAddSourceNotification(context, device);
                 }
                 break;
+            case ACTION_LE_AUDIO_SHARING_CANCEL_NOTIF:
+                int notifId = intent.getIntExtra(EXTRA_NOTIF_ID, -1);
+                if (notifId != -1) {
+                    cancelSharingNotification(context, notifId);
+                }
+                break;
             default:
                 Log.w(TAG, "Received unexpected intent " + intent.getAction());
         }
