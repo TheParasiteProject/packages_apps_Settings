@@ -14057,6 +14057,8 @@
     <string name="audio_sharing_block_pairing_dialog_content">To pair a new device, turn off Audio Sharing first.</string>
     <!-- Text for audio sharing turn off button [CHAR LIMIT=none]-->
     <string name="audio_sharing_turn_off_button_label">Turn off</string>
+    <!-- Title for audio sharing notification to share audio with headset [CHAR LIMIT=none]-->
+    <string name="share_audio_notification_title">Share audio with <xliff:g example="My buds" id="device_name">%1$s</xliff:g></string>
 
     <!-- Title for audio streams preference category [CHAR LIMIT=none]-->
     <string name="audio_streams_category_title">Connect to a LE audio stream</string>
