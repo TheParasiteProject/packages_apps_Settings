@@ -15,10 +15,15 @@
  */
 package com.android.settings.display
 
+import android.content.ContentResolver
 import android.content.Context
+import android.database.ContentObserver
 import android.hardware.display.ColorDisplayManager
+import android.provider.Settings
 
 import androidx.preference.Preference
+import androidx.preference.PreferenceScreen
+import androidx.preference.PreferenceManager
 import androidx.test.core.app.ApplicationProvider
 
 import com.android.settingslib.testutils.shadow.ShadowColorDisplayManager
@@ -31,22 +36,34 @@ import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.shadow.api.Shadow
+import org.robolectric.shadows.ShadowContentResolver
 
 @RunWith(RobolectricTestRunner::class)
-@Config(shadows = [ShadowColorDisplayManager::class])
+@Config(shadows = [ShadowColorDisplayManager::class, ShadowContentResolver::class])
 class ColorModePreferenceControllerTest {
     private lateinit var context: Context
     private lateinit var preference: Preference
     private lateinit var controller: ColorModePreferenceController
     private lateinit var shadowColorDisplayManager: ShadowColorDisplayManager
+    private lateinit var shadowContentResolver: ShadowContentResolver
 
     @Before
     fun setup() {
         context = ApplicationProvider.getApplicationContext()
+
         controller = ColorModePreferenceController(context, "test")
         preference = Preference(context)
+        val preferenceManager = PreferenceManager(context)
+        val preferenceScreen = preferenceManager.createPreferenceScreen(context)
+        preference.setKey(controller.getPreferenceKey());
+        preferenceScreen.addPreference(preference)
+
         shadowColorDisplayManager = Shadow.extract(
-            context.getSystemService(ColorDisplayManager::class.java));
+            context.getSystemService(ColorDisplayManager::class.java))
+        val contentResolver = context.getContentResolver();
+        shadowContentResolver = Shadow.extract(contentResolver)
+
+        controller.displayPreference(preferenceScreen)
     }
 
     @Test
@@ -79,5 +96,44 @@ class ColorModePreferenceControllerTest {
         controller.updateState(preference)
         val naturalColorModeName = context.getString(R.string.color_mode_option_natural)
         assertThat(preference.summary.toString()).isEqualTo(naturalColorModeName)
+    }
+
+    @Test
+    fun onResume_verifyRegisterColorModeObserver() {
+        controller.onResume()
+        assertThat(shadowContentResolver.getContentObservers(
+            Settings.System.getUriFor(Settings.System.DISPLAY_COLOR_MODE)))
+            .hasSize(1)
+    }
+
+    @Test
+    fun onPause_verifyUnregisterColorModeObserver() {
+        controller.onResume()
+        controller.onPause()
+        assertThat(shadowContentResolver.getContentObservers(
+            Settings.System.getUriFor(Settings.System.DISPLAY_COLOR_MODE)))
+            .isEmpty()
+    }
+
+    @Test
+    fun contentObserver_onChange_updatesPreferenceSummary() {
+        controller.onResume()
+        assertThat(shadowContentResolver.getContentObservers(
+            Settings.System.getUriFor(Settings.System.DISPLAY_COLOR_MODE)))
+            .hasSize(1)
+
+        shadowColorDisplayManager.setColorMode(ColorDisplayManager.COLOR_MODE_NATURAL)
+        triggerOnChangeListener()
+        assertThat(preference.summary).isEqualTo(context.getString(R.string.color_mode_option_natural))
+
+        shadowColorDisplayManager.setColorMode(ColorDisplayManager.COLOR_MODE_AUTOMATIC)
+        triggerOnChangeListener()
+        assertThat(preference.summary).isEqualTo(context.getString(R.string.color_mode_option_automatic))
+    }
+
+    private fun triggerOnChangeListener() {
+        shadowContentResolver.getContentObservers(
+            Settings.System.getUriFor(Settings.System.DISPLAY_COLOR_MODE))
+            .forEach {it.onChange(false, null)};
     }
 }
