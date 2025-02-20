@@ -29,7 +29,6 @@ import com.android.server.accessibility.Flags;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
-import com.android.settingslib.widget.SelectorWithWidgetPreference;
 
 /**
  * Fragment for preference screen for settings related to Automatically click after mouse stops
@@ -41,7 +40,6 @@ public class ToggleAutoclickPreferenceFragment
 
     private static final String TAG = "AutoclickPrefFragment";
 
-    static final String KEY_CONTROL_DEFAULT = "accessibility_control_autoclick_default";
     static final String KEY_AUTOCLICK_SHORTCUT_PREFERENCE = "autoclick_shortcut_preference";
 
     /**
@@ -100,10 +98,7 @@ public class ToggleAutoclickPreferenceFragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
-        if (Flags.enableAutoclickIndicator()) {
-            SelectorWithWidgetPreference optionDefault = findPreference(KEY_CONTROL_DEFAULT);
-            mShortcutPreference.setOrder(optionDefault.getOrder() - 1);
-        } else {
+        if (!Flags.enableAutoclickIndicator()) {
             getPreferenceScreen().removePreference(mShortcutPreference);
         }
         return view;
