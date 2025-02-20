@@ -35,6 +35,7 @@ import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.widget.TextView;
+import android.window.DesktopExperienceFlags;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -66,7 +67,7 @@ import java.util.List;
 public class ExternalDisplayPreferenceFragment extends SettingsPreferenceFragmentBase {
     @VisibleForTesting enum PrefBasics {
         DISPLAY_TOPOLOGY(10, "display_topology_preference", null),
-        MIRROR(20, "mirror_preference", null),
+        MIRROR(20, "mirror_preference", R.string.external_display_mirroring_title),
 
         // If shown, use toggle should be before other per-display settings.
         EXTERNAL_DISPLAY_USE(30, "external_display_use_preference",
@@ -132,8 +133,6 @@ public class ExternalDisplayPreferenceFragment extends SettingsPreferenceFragmen
     private IllustrationPreference mImagePreference;
     @Nullable
     private Preference mDisplayTopologyPreference;
-    @Nullable
-    private Preference mMirrorPreference;
     @Nullable
     private PreferenceCategory mBuiltinDisplayPreference;
     @Nullable
@@ -357,12 +356,14 @@ public class ExternalDisplayPreferenceFragment extends SettingsPreferenceFragmen
         return mDisplayTopologyPreference;
     }
 
-    @NonNull Preference getMirrorPreference(@NonNull Context context) {
-        if (mMirrorPreference == null) {
-            mMirrorPreference = new MirrorPreference(context);
-            PrefBasics.MIRROR.apply(mMirrorPreference);
+    private void addMirrorPreference(Context context, PrefRefresh refresh) {
+        Preference pref = refresh.findUnusedPreference(PrefBasics.MIRROR.key);
+        if (pref == null) {
+            pref = new MirrorPreference(context,
+                DesktopExperienceFlags.ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT.isTrue());
+            PrefBasics.MIRROR.apply(pref);
         }
-        return mMirrorPreference;
+        refresh.addPreference(pref);
     }
 
     @NonNull
@@ -520,7 +521,7 @@ public class ExternalDisplayPreferenceFragment extends SettingsPreferenceFragmen
     private void maybeAddV2Components(Context context, PrefRefresh screen) {
         if (isTopologyPaneEnabled(mInjector)) {
             screen.addPreference(getDisplayTopologyPreference(context));
-            screen.addPreference(getMirrorPreference(context));
+            addMirrorPreference(context, screen);
 
             // If topology is shown, we also show a preference for the built-in display for
             // consistency with the topology.
