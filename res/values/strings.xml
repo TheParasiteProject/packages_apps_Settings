@@ -78,11 +78,6 @@
 
     <!-- Content description for preview pager. [CHAR LIMIT=NONE] -->
     <string name="preview_pager_content_description">Preview</string>
-    <!-- Previous button for preview pager. [CHAR LIMIT=NONE] -->
-    <string name="preview_pager_previous_button">Previous preview</string>
-    <!-- Next button for preview pager. [CHAR LIMIT=NONE] -->
-    <string name="preview_pager_next_button">Next preview</string>
-
     <!-- Content description for qrcode image. [CHAR LIMIT=none]-->
     <string name="qr_code_content_description">QR code</string>
 
