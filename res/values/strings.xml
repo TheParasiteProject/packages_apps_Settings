@@ -14253,4 +14253,6 @@ Data usage charges may apply.</string>
     <string name="supervision_change_pin_preference_title">Change PIN</string>
     <!-- Title for supervision forgot PIN setting entry [CHAR LIMIT=60] -->
     <string name="supervision_add_forgot_pin_preference_title">Forgot PIN</string>
+    <!-- Title for web content filters entry [CHAR LIMIT=60] -->
+    <string name="supervision_web_content_filters_title">Web content filters</string>
 </resources>
