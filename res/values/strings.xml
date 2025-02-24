@@ -80,6 +80,10 @@
     <string name="preview_pager_content_description">Preview</string>
     <!-- Content description for qrcode image. [CHAR LIMIT=none]-->
     <string name="qr_code_content_description">QR code</string>
+    <!-- Previous button for preview pager. [CHAR LIMIT=NONE] -->
+    <string name="preview_pager_previous_button">Previous preview</string>
+    <!-- Next button for preview pager. [CHAR LIMIT=NONE] -->
+    <string name="preview_pager_next_button">Next preview</string>
 
     <!-- Description for the button that makes interface elements smaller. [CHAR_LIMIT=NONE] -->
     <string name="font_size_make_smaller_desc">Make smaller</string>
