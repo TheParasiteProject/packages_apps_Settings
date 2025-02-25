@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (C) 2018 The Android Open Source Project
+  Copyright (C) 2025 The Android Open Source Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@
         <com.android.settingslib.widget.AdaptiveIconShapeDrawable
             android:width="@dimen/dashboard_tile_image_size"
             android:height="@dimen/dashboard_tile_image_size"
-            android:color="@color/homepage_location_background" />
+            android:color="@color/homepage_safety_background" />
     </item>
 
     <item
@@ -29,5 +29,5 @@
         android:height="@dimen/dashboard_tile_foreground_image_size"
         android:start="@dimen/dashboard_tile_foreground_image_inset"
         android:top="@dimen/dashboard_tile_foreground_image_inset"
-        android:drawable="@drawable/ic_settings_location_expressive"/>
+        android:drawable="@drawable/ic_settings_emergency_expressive" />
 </layer-list>
