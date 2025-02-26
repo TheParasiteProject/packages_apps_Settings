@@ -1303,7 +1303,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"Didelė skyra"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"Didžiausia skyra"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"Didžiausia skyra eikvoja daugiau akumuliatoriaus energijos. Perjungus skyrą, kai kurios programos gali būti paleistos iš naujo."</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"Pasirinkta"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"Spalvos"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"Natūrali"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"Suintensyvinta"</string>

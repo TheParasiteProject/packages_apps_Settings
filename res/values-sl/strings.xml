@@ -1302,7 +1302,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"Visoka ločljivost"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"Najvišja ločljivost"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"Za najvišjo ločljivost se porablja več energije baterije. Ob spremembi ločljivosti se bodo morda nekatere aplikacije znova zagnale."</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"Izbrano"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"Barve"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"Naravne"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"Poudarjene"</string>

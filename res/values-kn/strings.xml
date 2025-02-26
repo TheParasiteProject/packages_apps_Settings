@@ -1303,7 +1303,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"ಹೆಚ್ಚಿನ ರೆಸಲ್ಯೂಷನ್"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"ಗರಿಷ್ಠ ರೆಸಲ್ಯೂಶನ್"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"ಗರಿಷ್ಠ ರೆಸಲ್ಯೂಶನ್ ನಿಮ್ಮ ಬ್ಯಾಟರಿಯನ್ನು ಹೆಚ್ಚು ಬಳಸುತ್ತದೆ. ನಿಮ್ಮ ರೆಸಲ್ಯೂಶನ್ ಅನ್ನು ಬದಲಿಸುವುದರಿಂದ ಕೆಲವು ಆ್ಯಪ್‌ಗಳು ಮರುಪ್ರಾರಂಭವಾಗಬಹುದು."</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"ಬಣ್ಣಗಳು"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"ಸ್ವಾಭಾವಿಕ"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"ಬೂಸ್ಟ್ ಮಾಡಿರುವುದು"</string>

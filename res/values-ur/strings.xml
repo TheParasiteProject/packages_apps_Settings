@@ -1303,7 +1303,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"اعلی ریزولیوشن"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"زیادہ سے زیادہ ریزولیوشن"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"زیادہ سے زیادہ ریزولیوشن آپ کی زیادہ بیٹری کا استعمال کرتا ہے۔ آپ کی ریزولیوشن پر سوئچ کرنے سے کچھ ایپس ری سٹارٹ ہو سکتی ہیں۔"</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"منتخب کردہ"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"رنگ"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"قدرتی"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"بڑھایا گیا"</string>

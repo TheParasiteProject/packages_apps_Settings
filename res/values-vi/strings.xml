@@ -1304,7 +1304,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"Độ phân giải cao"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"Độ phân giải tối đa"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"Độ phân giải tối đa sẽ làm tiêu tốn nhiều pin hơn. Việc điều chỉnh độ phân giải có thể khiến một số ứng dụng khởi động lại."</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"Đã chọn"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"Màu"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"Tự nhiên"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"Tăng độ nét"</string>

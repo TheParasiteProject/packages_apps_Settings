@@ -1304,7 +1304,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"Жоғары ажыратымдылық"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"Ең жоғары ажыратымдылық"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"Ең жоғары ажыратымдылық батарея зарядын көбірек пайдаланады. Ажыратымдылықты ауыстырсаңыз, кейбір қолданбалар өшіп қосылады."</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"Таңдалды."</string>
     <string name="color_mode_title" msgid="8666690832113906028">"Түстер"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"Табиғи"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"Жарқын"</string>

@@ -1304,7 +1304,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"高分辨率"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"最大分辨率"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"最大分辨率会增加耗电量。切换分辨率可能会导致一些应用重启。"</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"已选择"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"颜色"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"自然色"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"增强色"</string>

@@ -1304,7 +1304,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"Hohe Auflösung"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"Maximale Auflösung"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"Bei maximaler Auflösung wird mehr Akkukapazität verbraucht. Wenn du die Auflösung änderst, werden einige Apps möglicherweise neu gestartet."</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"Ausgewählt"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"Farben"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"Natürlich"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"Verstärkt"</string>
