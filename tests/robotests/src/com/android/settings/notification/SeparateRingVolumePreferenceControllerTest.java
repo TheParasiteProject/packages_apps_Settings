@@ -87,6 +87,18 @@ public class SeparateRingVolumePreferenceControllerTest {
     public void isAvailable_whenNotVoiceCapable_shouldReturnTrue() {
         when(mHelper.isSingleVolume()).thenReturn(false);
         when(mTelephonyManager.isVoiceCapable()).thenReturn(false);
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(true);
+
+        assertThat(mController.isAvailable()).isTrue();
+    }
+
+    @Test
+    public void isAvailable_whenTelephonyDisabled_shouldReturnTrue() {
+        when(mHelper.isSingleVolume()).thenReturn(false);
+        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(false);
 
         assertThat(mController.isAvailable()).isTrue();
     }

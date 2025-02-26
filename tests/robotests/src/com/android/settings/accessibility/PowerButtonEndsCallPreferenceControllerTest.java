@@ -21,6 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 
@@ -57,12 +58,16 @@ public class PowerButtonEndsCallPreferenceControllerTest {
     @Spy
     private final Context mContext = ApplicationProvider.getApplicationContext();
 
+    @Spy
+    private final Resources mResources = mContext.getResources();
+
     private SwitchPreference mPreference;
     private PowerButtonEndsCallPreferenceController mController;
 
     @Before
     public void setUp() {
         when(mContext.getSystemService(Context.TELEPHONY_SERVICE)).thenReturn(mTelephonyManager);
+        when(mContext.getResources()).thenReturn(mResources);
         mPreference = new SwitchPreference(mContext);
         mController = new PowerButtonEndsCallPreferenceController(mContext, "power_button");
     }
@@ -75,6 +80,8 @@ public class PowerButtonEndsCallPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_hasPowerKeyAndVoiceCapable_shouldReturnAvailable() {
         ShadowKeyCharacterMap.setDevicehasKey(true);
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(true);
         when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus())
@@ -84,7 +91,20 @@ public class PowerButtonEndsCallPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_noVoiceCapable_shouldReturnUnsupportedOnDevice() {
         ShadowKeyCharacterMap.setDevicehasKey(true);
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(true);
         when(mTelephonyManager.isVoiceCapable()).thenReturn(false);
+
+        assertThat(mController.getAvailabilityStatus())
+                .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_telephonyDisabled_shouldReturnUnsupportedOnDevice() {
+        ShadowKeyCharacterMap.setDevicehasKey(true);
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(false);
+        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus())
                 .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);
@@ -93,6 +113,8 @@ public class PowerButtonEndsCallPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_noPowerKey_shouldReturnUnsupportedOnDevice() {
         ShadowKeyCharacterMap.setDevicehasKey(false);
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(true);
         when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus())

@@ -28,6 +28,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.media.AudioManager;
 import android.os.Vibrator;
 import android.provider.Settings;
@@ -59,6 +60,7 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
 
     private Lifecycle mLifecycle;
     private Context mContext;
+    private Resources mResources;
     private VibrationRampingRingerTogglePreferenceController mController;
     private SwitchPreference mPreference;
 
@@ -67,6 +69,8 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         mLifecycle = new Lifecycle(() -> mLifecycle);
         mContext = spy(ApplicationProvider.getApplicationContext());
+        mResources = spy(mContext.getResources());
+        when(mContext.getResources()).thenReturn(mResources);
         when(mContext.getSystemService(Context.TELEPHONY_SERVICE)).thenReturn(mTelephonyManager);
         when(mContext.getSystemService(Context.AUDIO_SERVICE)).thenReturn(mAudioManager);
         when(mAudioManager.getRingerModeInternal()).thenReturn(AudioManager.RINGER_MODE_NORMAL);
@@ -86,6 +90,8 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
 
     @Test
     public void getAvailabilityStatus_notVoiceCapable_returnUnsupportedOnDevice() {
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(true);
         when(mTelephonyManager.isVoiceCapable()).thenReturn(false);
         when(mDeviceConfigProvider.isRampingRingerEnabledOnTelephonyConfig()).thenReturn(false);
 
@@ -93,7 +99,19 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
     }
 
     @Test
+    public void getAvailabilityStatus_telephonyDisabled_returnUnsupportedOnDevice() {
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(false);
+        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mDeviceConfigProvider.isRampingRingerEnabledOnTelephonyConfig()).thenReturn(false);
+
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
     public void getAvailabilityStatus_rampingRingerEnabled_returnUnsupportedOnDevice() {
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(true);
         when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
         when(mDeviceConfigProvider.isRampingRingerEnabledOnTelephonyConfig()).thenReturn(true);
 
@@ -102,6 +120,8 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
 
     @Test
     public void getAvailabilityStatus_voiceCapableAndRampingRingerDisabled_returnAvailable() {
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(true);
         when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
         when(mDeviceConfigProvider.isRampingRingerEnabledOnTelephonyConfig()).thenReturn(false);
 

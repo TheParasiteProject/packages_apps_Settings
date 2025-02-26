@@ -87,6 +87,8 @@ public class RingVolumePreferenceControllerTest {
     public void isAvailable_singleVolume_shouldReturnFalse() {
         when(mHelper.isSingleVolume()).thenReturn(true);
         when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
+                .thenReturn(true);
 
         assertThat(mController.isAvailable()).isFalse();
     }
