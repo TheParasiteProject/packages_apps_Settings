@@ -18,11 +18,15 @@ package com.android.settings.connecteddevice.audiosharing;
 
 import android.content.Context;
 
+import androidx.annotation.Nullable;
+
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 
 public class AudioSharingJoinHandlerDashboardFragment extends DashboardFragment {
     private static final String TAG = "AudioSharingJoinHandlerFrag";
+
+    @Nullable private AudioSharingJoinHandlerController mController;
 
     @Override
     public int getMetricsCategory() {
@@ -43,6 +47,9 @@ public class AudioSharingJoinHandlerDashboardFragment extends DashboardFragment 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        use(AudioSharingJoinHandlerController.class);
+        mController = use(AudioSharingJoinHandlerController.class);
+        if (mController != null) {
+            mController.init(this);
+        }
     }
 }

@@ -16,10 +16,23 @@
 
 package com.android.settings.connecteddevice.audiosharing;
 
+import android.os.Bundle;
+
 import com.android.settings.SettingsActivity;
+import com.android.settingslib.bluetooth.BluetoothUtils;
+import com.android.settingslib.flags.Flags;
 
 public class AudioSharingJoinHandlerActivity extends SettingsActivity {
     private static final String TAG = "AudioSharingJoinHandlerActivity";
+
+    @Override
+    protected void onCreate(Bundle savedState) {
+        super.onCreate(savedState);
+        if (!Flags.promoteAudioSharingForSecondAutoConnectedLeaDevice()
+                || !BluetoothUtils.isAudioSharingUIAvailable(this)) {
+            finish();
+        }
+    }
 
     @Override
     protected boolean isToolbarEnabled() {
