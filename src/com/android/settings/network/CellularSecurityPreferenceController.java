@@ -77,7 +77,7 @@ public class CellularSecurityPreferenceController extends BasePreferenceControll
         }
         if (mTelephonyManager == null) {
             Log.w(LOG_TAG, "Telephony manager not yet initialized");
-            mTelephonyManager = mContext.getSystemService(TelephonyManager.class);
+            return CONDITIONALLY_UNAVAILABLE;
         }
 
         // Check there are valid SIM cards which can be displayed to the user, otherwise this
@@ -186,7 +186,7 @@ public class CellularSecurityPreferenceController extends BasePreferenceControll
     protected boolean areNotificationsEnabled() {
         if (mTelephonyManager == null) {
             Log.w(LOG_TAG, "Telephony manager not yet initialized");
-            mTelephonyManager = mContext.getSystemService(TelephonyManager.class);
+            return false;
         }
 
         return mTelephonyManager.isNullCipherNotificationsEnabled()
