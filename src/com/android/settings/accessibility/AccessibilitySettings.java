@@ -255,7 +255,7 @@ public class AccessibilitySettings extends DashboardFragment implements
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         if (getFeedbackManager().isAvailable()) {
             menu.add(Menu.NONE, MENU_ID_SEND_FEEDBACK, Menu.NONE,
-                    getPrefContext().getText(R.string.accessibility_send_feedback_title));
+                    R.string.accessibility_send_feedback_title);
         }
         super.onCreateOptionsMenu(menu, inflater);
     }
@@ -286,7 +286,7 @@ public class AccessibilitySettings extends DashboardFragment implements
 
     private FeedbackManager getFeedbackManager() {
         if (mFeedbackManager == null) {
-            mFeedbackManager = new FeedbackManager(getActivity());
+            mFeedbackManager = new FeedbackManager(getActivity(), SettingsEnums.ACCESSIBILITY);
         }
         return mFeedbackManager;
     }
