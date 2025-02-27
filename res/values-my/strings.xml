@@ -1309,7 +1309,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"ပုံရိပ်ပြတ်သားကိန်းမြင့်"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"အမြင့်ဆုံး ပုံရိပ်ပြတ်သားကိန်း"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"အမြင့်ဆုံး ပုံရိပ်ပြတ်သားကိန်းသည် ဘက်ထရီပိုသုံးသည်။ ပုံရိပ်ပြတ်သားကိန်း ပြောင်းပါက အချို့အက်ပ်များကို ပြန်စစေနိုင်သည်။"</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"ရွေးထားသည်"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"အရောင်များ"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"သဘာဝ"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"အရောင်တင်ထားသည်"</string>

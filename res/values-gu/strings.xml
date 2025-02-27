@@ -1309,7 +1309,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"વધુ રિઝોલ્યુશન"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"ઉચ્ચ રિઝોલ્યુશન"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"ઉચ્ચ રિઝોલ્યુશનથી તમારી બૅટરીનો વપરાશ વધુ થાય છે. તમારું રિઝોલ્યુશન સ્વિચ કરવાથી કેટલીક ઍપ કદાચ ફરી શરૂ થઈ શકે છે."</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"પસંદ કર્યું"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"રંગો"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"કુદરતી"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"બુસ્ટ કરેલ"</string>

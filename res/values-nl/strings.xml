@@ -1309,7 +1309,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"Hoge resolutie"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"Maximale resolutie"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"De maximale resolutie gebruikt meer batterijlading. Als je de resolutie wijzigt, worden sommige apps misschien opnieuw gestart."</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"Geselecteerd"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"Kleuren"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"Natuurlijk"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"Versterkt"</string>

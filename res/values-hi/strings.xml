@@ -1309,7 +1309,6 @@
     <string name="screen_resolution_option_high" msgid="2617496842852992853">"हाई रिज़ॉल्यूशन"</string>
     <string name="screen_resolution_option_full" msgid="4456839315039000517">"फ़ुल रिज़ॉल्यूशन"</string>
     <string name="screen_resolution_footer" msgid="1230761249204935717">"फ़ुल रिज़ॉल्यूशन में ज़्यादा बैटरी खर्च होती है. रिज़ॉल्यूशन बदलने पर, कुछ ऐप्लिकेशन रीस्टार्ट हो सकते हैं."</string>
-    <string name="screen_resolution_selected_a11y" msgid="6158451180032224977">"चुना गया"</string>
     <string name="color_mode_title" msgid="8666690832113906028">"रंग"</string>
     <string name="color_mode_option_natural" msgid="6192875655101283303">"बिना किसी बदलाव के"</string>
     <string name="color_mode_option_boosted" msgid="4698797857766774289">"बूस्ट किया गया"</string>
