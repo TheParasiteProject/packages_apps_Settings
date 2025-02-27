@@ -9324,7 +9324,7 @@ Data usage charges may apply.</string>
     <string name="nls_feature_settings_summary">It can turn Do Not Disturb on or off and change related settings.</string>
     <string name="nls_feature_modes_settings_summary">It can manage and activate Modes, and change related settings.</string>
     <string name="notification_listener_disable_warning_summary">
-        If you turn off notification access for <xliff:g id="notification_listener_name">%1$s</xliff:g>, Do Not Disturb access may also be turned off.
+        If you turn off notification access for <xliff:g id="notification_listener_name">%1$s</xliff:g>, Do Not Disturb control may also be turned off.
     </string>
     <string name="notification_listener_disable_modes_warning_summary">
         If you turn off notification access for <xliff:g id="notification_listener_name">%1$s</xliff:g>, Modes access may also be turned off.
@@ -9507,14 +9507,14 @@ Data usage charges may apply.</string>
     The placeholder would be the app name (e.g. Calendar). [CHAR LIMIT=NONE]-->
     <string name="interact_across_profiles_install_app_summary">Tap to get the app</string>
 
-    <!-- Sound & notification > Advanced section: Title for managing Do Not Disturb access option. [CHAR LIMIT=40] -->
-    <string name="manage_zen_access_title">Do Not Disturb access</string>
+    <!-- Sound & notification > Advanced section: Title for managing Do Not Disturb control option. [CHAR LIMIT=40] -->
+    <string name="manage_zen_access_title">Do Not Disturb control</string>
 
     <!-- Button title that grants 'Do Not Disturb' permission to an app [CHAR_LIMIT=60]-->
     <string name="zen_access_detail_switch">Allow Do Not Disturb</string>
 
-    <!-- Sound & notification > Do Not Disturb access > Text to display when the list is empty. [CHAR LIMIT=NONE] -->
-    <string name="zen_access_empty_text">No installed apps have requested Do Not Disturb access</string>
+    <!-- Sound & notification > Do Not Disturb control > Text to display when the list is empty. [CHAR LIMIT=NONE] -->
+    <string name="zen_access_empty_text">No installed apps have requested Do Not Disturb control</string>
 
     <!-- Special App Access: Title for managing Modes access option. [CHAR LIMIT=40] -->
     <string name="manage_zen_modes_access_title">Modes access</string>
@@ -9522,7 +9522,7 @@ Data usage charges may apply.</string>
     <!-- Button title that grants 'Modes' permission to an app [CHAR_LIMIT=60]-->
     <string name="zen_modes_access_detail_switch">Allow Modes access</string>
 
-    <!-- Special App Access > Do Not Disturb access > Text to display when the list is empty. [CHAR LIMIT=NONE] -->
+    <!-- Special App Access > Do Not Disturb control > Text to display when the list is empty. [CHAR LIMIT=NONE] -->
     <string name="zen_modes_access_empty_text">No installed apps have requested Modes access</string>
 
     <!-- [CHAR LIMIT=NONE] Text appearing when app notifications are off -->
