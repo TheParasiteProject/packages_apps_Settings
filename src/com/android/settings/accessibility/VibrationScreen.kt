@@ -62,6 +62,10 @@ class VibrationScreen : PreferenceScreenCreator, PreferenceAvailabilityProvider 
                 +NotificationVibrationIntensitySwitchPreference()
                 +AlarmVibrationIntensitySwitchPreference()
             }
+            +InteractiveHapticsPreferenceCategory() += {
+                +TouchVibrationIntensitySwitchPreference()
+                +MediaVibrationIntensitySwitchPreference()
+            }
         }
     }
 
@@ -82,6 +86,13 @@ private class NotificationAlarmVibrationPreferenceCategory :
     PreferenceCategory(
         "vibration_category_notification_alarm",
         R.string.accessibility_notification_alarm_vibration_category_title,
+    )
+
+/** Interactive haptics preferences (e.g. touch feedback, media, keyboard, etc). */
+private class InteractiveHapticsPreferenceCategory :
+    PreferenceCategory(
+        "vibration_category_haptics",
+        R.string.accessibility_interactive_haptics_category_title,
     )
 
 /** Returns true if the device has a system vibrator, false otherwise. */
