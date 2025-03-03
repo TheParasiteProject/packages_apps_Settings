@@ -3194,11 +3194,6 @@
     </string>
     <!-- Dark UI screen footer action text linking to Modes settings. [CHAR LIMIT=NONE] -->
     <string name="dark_ui_modes_footer_action">Modes settings</string>
-    <!-- Even Dimmer setting title. Allows device to reduce brightness even further than standard range. [CHAR LIMIT=NONE] -->
-    <string name="even_dimmer_display_title">Extra dim</string>
-    <!-- Even Dimmer setting summary. [CHAR LIMIT=NONE] -->
-    <string name="even_dimmer_display_summary">Allow device to go dimmer than usual</string>
-
 
     <!-- Sound & display settings screen, setting option name to change screen timeout -->
     <string name="screen_timeout">Screen timeout</string>
