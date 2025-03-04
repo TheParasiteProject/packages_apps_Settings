@@ -185,7 +185,7 @@ public class FingerprintSafetySourceTest {
 
         assertSafetySourceDisabledDataSetWithSingularSummary(
                 "security_settings_fingerprint",
-                "security_settings_fingerprint_preference_summary_none");
+                "security_settings_fingerprint_preference_summary_none_new");
     }
 
     @Test
@@ -203,7 +203,7 @@ public class FingerprintSafetySourceTest {
 
         assertSafetySourceDisabledDataSetWithSingularSummary(
                 "security_settings_fingerprint",
-                "security_settings_fingerprint_preference_summary_none");
+                "security_settings_fingerprint_preference_summary_none_new");
     }
 
     @Test
@@ -218,7 +218,7 @@ public class FingerprintSafetySourceTest {
 
         assertSafetySourceEnabledDataSetWithSingularSummary(
                 "security_settings_fingerprint",
-                "security_settings_fingerprint_preference_summary_none",
+                "security_settings_fingerprint_preference_summary_none_new",
                 FingerprintSettings.class.getName());
     }
 

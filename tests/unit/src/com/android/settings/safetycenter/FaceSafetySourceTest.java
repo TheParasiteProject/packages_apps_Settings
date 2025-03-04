@@ -171,7 +171,7 @@ public class FaceSafetySourceTest {
 
         assertSafetySourceDisabledDataSetWithSingularSummary(
                 "security_settings_face_preference_title_new",
-                "security_settings_face_preference_summary_none");
+                "security_settings_face_preference_summary_none_new");
     }
 
     @Test
@@ -188,7 +188,7 @@ public class FaceSafetySourceTest {
 
         assertSafetySourceDisabledDataSetWithSingularSummary(
                 "security_settings_face_preference_title_new",
-                "security_settings_face_preference_summary_none");
+                "security_settings_face_preference_summary_none_new");
     }
 
     @Test
@@ -202,7 +202,7 @@ public class FaceSafetySourceTest {
 
         assertSafetySourceEnabledDataSetWithSingularSummary(
                 "security_settings_face_preference_title_new",
-                "security_settings_face_preference_summary_none",
+                "security_settings_face_preference_summary_none_new",
                 FaceEnrollIntroductionInternal.class.getName());
     }
 
