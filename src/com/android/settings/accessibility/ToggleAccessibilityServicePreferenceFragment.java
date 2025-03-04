@@ -74,6 +74,11 @@ public class ToggleAccessibilityServicePreferenceFragment extends
     }
 
     @Override
+    public int getFeedbackCategory() {
+        return getArguments().getInt(AccessibilitySettings.EXTRA_FEEDBACK_CATEGORY);
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {

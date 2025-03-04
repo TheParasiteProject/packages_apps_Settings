@@ -58,6 +58,11 @@ public class LaunchAccessibilityActivityPreferenceFragment extends ToggleFeature
     }
 
     @Override
+    public int getFeedbackCategory() {
+        return getArguments().getInt(AccessibilitySettings.EXTRA_FEEDBACK_CATEGORY);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         // Init new preference to replace the switch preference instead.

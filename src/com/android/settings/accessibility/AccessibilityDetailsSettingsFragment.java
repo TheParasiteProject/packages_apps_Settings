@@ -232,6 +232,7 @@ public class AccessibilityDetailsSettingsFragment extends InstrumentedFragment {
                 .getAccessibilityMetricsFeatureProvider()
                 .getDownloadedFeatureMetricsCategory(componentName);
         extras.putInt(AccessibilitySettings.EXTRA_METRICS_CATEGORY, metricsCategory);
+        extras.putInt(AccessibilitySettings.EXTRA_FEEDBACK_CATEGORY, metricsCategory);
         extras.putParcelable(AccessibilitySettings.EXTRA_COMPONENT_NAME, componentName);
         extras.putInt(AccessibilitySettings.EXTRA_ANIMATED_IMAGE_RES, info.getAnimatedImageRes());
 
