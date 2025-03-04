@@ -18,50 +18,64 @@ package com.android.settings.accessibility;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.when;
+
 import android.content.Context;
 import android.provider.Settings;
+import android.telephony.TelephonyManager;
 
 import androidx.preference.SwitchPreference;
+import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settings.core.BasePreferenceController;
 import com.android.settings.testutils.shadow.ShadowKeyCharacterMap;
-import com.android.settings.testutils.shadow.ShadowUtils;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.Spy;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowUtils.class, ShadowKeyCharacterMap.class})
+@Config(shadows = {ShadowKeyCharacterMap.class})
 public class PowerButtonEndsCallPreferenceControllerTest {
 
     private static final int UNKNOWN = -1;
 
-    private Context mContext;
+    @Rule
+    public MockitoRule mMockitoRule = MockitoJUnit.rule();
+
+    @Mock
+    private TelephonyManager mTelephonyManager;
+
+    @Spy
+    private final Context mContext = ApplicationProvider.getApplicationContext();
+
     private SwitchPreference mPreference;
     private PowerButtonEndsCallPreferenceController mController;
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        when(mContext.getSystemService(Context.TELEPHONY_SERVICE)).thenReturn(mTelephonyManager);
         mPreference = new SwitchPreference(mContext);
         mController = new PowerButtonEndsCallPreferenceController(mContext, "power_button");
     }
 
     @After
     public void tearDown() {
-        ShadowUtils.reset();
         ShadowKeyCharacterMap.reset();
     }
 
     @Test
     public void getAvailabilityStatus_hasPowerKeyAndVoiceCapable_shouldReturnAvailable() {
         ShadowKeyCharacterMap.setDevicehasKey(true);
-        ShadowUtils.setIsVoiceCapable(true);
+        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus())
                 .isEqualTo(BasePreferenceController.AVAILABLE);
@@ -70,7 +84,7 @@ public class PowerButtonEndsCallPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_noVoiceCapable_shouldReturnUnsupportedOnDevice() {
         ShadowKeyCharacterMap.setDevicehasKey(true);
-        ShadowUtils.setIsVoiceCapable(false);
+        when(mTelephonyManager.isVoiceCapable()).thenReturn(false);
 
         assertThat(mController.getAvailabilityStatus())
                 .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);
@@ -79,7 +93,7 @@ public class PowerButtonEndsCallPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_noPowerKey_shouldReturnUnsupportedOnDevice() {
         ShadowKeyCharacterMap.setDevicehasKey(false);
-        ShadowUtils.setIsVoiceCapable(true);
+        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus())
                 .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);
