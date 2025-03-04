@@ -4553,7 +4553,7 @@
         </activity>
 
         <activity android:name=".security.ActionDisabledByAdvancedProtectionDialog"
-            android:theme="@style/Theme.AlertDialog"
+            android:theme="@style/Theme.SpaLib.Dialog"
             android:taskAffinity="com.android.settings.security"
             android:excludeFromRecents="true"
             android:exported="false"
