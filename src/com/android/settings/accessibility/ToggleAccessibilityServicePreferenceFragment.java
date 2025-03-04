@@ -39,8 +39,6 @@ import android.os.SystemClock;
 import android.text.BidiFormatter;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.CompoundButton;
 
@@ -73,13 +71,6 @@ public class ToggleAccessibilityServicePreferenceFragment extends
     @Override
     public int getMetricsCategory() {
         return getArguments().getInt(AccessibilitySettings.EXTRA_METRICS_CATEGORY);
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        // Do not call super. We don't want to see the "Help & feedback" option on this page so as
-        // not to confuse users who think they might be able to send feedback about a specific
-        // accessibility service from this page.
     }
 
     @Override
