@@ -74,7 +74,7 @@ public class SoundWorkSettingsControllerTest {
         MockitoAnnotations.initMocks(this);
         when(mContext.getSystemService(Context.TELEPHONY_SERVICE)).thenReturn(mTelephonyManager);
         when(mContext.getResources()).thenReturn(mResources);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
         when(mFragment.getPreferenceScreen()).thenReturn(mScreen);
@@ -129,7 +129,7 @@ public class SoundWorkSettingsControllerTest {
 
     @Test
     public void onResume_noVoiceCapability_shouldHidePhoneRingtone() {
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(false);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(false);
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
         mController = new SoundWorkSettingsController(mContext, mFragment, null, mAudioHelper);
@@ -151,7 +151,7 @@ public class SoundWorkSettingsControllerTest {
 
     @Test
     public void onResume_telephonyDisabled_shouldHidePhoneRingtone() {
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(false);
         mController = new SoundWorkSettingsController(mContext, mFragment, null, mAudioHelper);

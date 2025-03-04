@@ -72,7 +72,7 @@ public class HearingDeviceCallRoutingPreferenceControllerTest {
     public void getAvailabilityStatus_telephonyEnabled_voiceCapable_available() {
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
@@ -81,7 +81,7 @@ public class HearingDeviceCallRoutingPreferenceControllerTest {
     public void getAvailabilityStatus_telephonyEnabled_notVoiceCapable_unsupported() {
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(false);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(false);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }
@@ -90,7 +90,7 @@ public class HearingDeviceCallRoutingPreferenceControllerTest {
     public void getAvailabilityStatus_telephonyDisabled_voiceCapable_unsupported() {
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(false);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }

@@ -92,7 +92,7 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
     public void getAvailabilityStatus_notVoiceCapable_returnUnsupportedOnDevice() {
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(false);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(false);
         when(mDeviceConfigProvider.isRampingRingerEnabledOnTelephonyConfig()).thenReturn(false);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
@@ -102,7 +102,7 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
     public void getAvailabilityStatus_telephonyDisabled_returnUnsupportedOnDevice() {
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(false);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
         when(mDeviceConfigProvider.isRampingRingerEnabledOnTelephonyConfig()).thenReturn(false);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
@@ -112,7 +112,7 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
     public void getAvailabilityStatus_rampingRingerEnabled_returnUnsupportedOnDevice() {
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
         when(mDeviceConfigProvider.isRampingRingerEnabledOnTelephonyConfig()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
@@ -122,7 +122,7 @@ public class VibrationRampingRingerTogglePreferenceControllerTest {
     public void getAvailabilityStatus_voiceCapableAndRampingRingerDisabled_returnAvailable() {
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
         when(mDeviceConfigProvider.isRampingRingerEnabledOnTelephonyConfig()).thenReturn(false);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);

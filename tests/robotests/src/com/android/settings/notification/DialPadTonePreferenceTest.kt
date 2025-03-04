@@ -53,7 +53,7 @@ class DialPadTonePreferenceTest {
     @Test
     fun isAvailable_voiceCapable_shouldReturnTrue() {
         mockResources = mock { on { getBoolean(com.android.settings.R.bool.config_show_sim_info) } doReturn true }
-        telephonyManager = mock { on { isVoiceCapable } doReturn true }
+        telephonyManager = mock { on { isDeviceVoiceCapable } doReturn true }
 
         assertThat(dialPadTonePreference.isAvailable(context)).isTrue()
     }
@@ -61,7 +61,7 @@ class DialPadTonePreferenceTest {
     @Test
     fun isAvailable_noVoiceCapable_shouldReturnFalse() {
         mockResources = mock { on { getBoolean(com.android.settings.R.bool.config_show_sim_info) } doReturn true }
-        telephonyManager = mock { on { isVoiceCapable } doReturn false }
+        telephonyManager = mock { on { isDeviceVoiceCapable } doReturn false }
 
         assertThat(dialPadTonePreference.isAvailable(context)).isFalse()
     }
@@ -69,7 +69,7 @@ class DialPadTonePreferenceTest {
     @Test
     fun isAvailable_telephonyDisabled_shouldReturnFalse() {
         mockResources = mock { on { getBoolean(com.android.settings.R.bool.config_show_sim_info) } doReturn false }
-        telephonyManager = mock { on { isVoiceCapable } doReturn true }
+        telephonyManager = mock { on { isDeviceVoiceCapable } doReturn true }
 
         assertThat(dialPadTonePreference.isAvailable(context)).isFalse()
     }

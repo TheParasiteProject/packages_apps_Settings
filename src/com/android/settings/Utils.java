@@ -217,7 +217,7 @@ public final class Utils extends com.android.settingslib.Utils {
         if (isTelephonyDisabled(context)) return false;
         final TelephonyManager telephony =
                 (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        return telephony != null && telephony.isVoiceCapable();
+        return telephony != null && telephony.isDeviceVoiceCapable();
     }
 
     /**

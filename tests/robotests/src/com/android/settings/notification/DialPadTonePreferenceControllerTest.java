@@ -70,7 +70,7 @@ public class DialPadTonePreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         when(mContext.getResources()).thenReturn(mResources);
         when(mContext.getSystemService(Context.TELEPHONY_SERVICE)).thenReturn(mTelephonyManager);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
         when(mSetting.getActivity()).thenReturn(mActivity);
@@ -90,7 +90,7 @@ public class DialPadTonePreferenceControllerTest {
 
     @Test
     public void isAvailable_notVoiceCapable_shouldReturnFalse() {
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(false);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(false);
 
         assertThat(mController.isAvailable()).isFalse();
     }

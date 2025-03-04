@@ -82,7 +82,7 @@ public class PowerButtonEndsCallPreferenceControllerTest {
         ShadowKeyCharacterMap.setDevicehasKey(true);
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus())
                 .isEqualTo(BasePreferenceController.AVAILABLE);
@@ -93,7 +93,7 @@ public class PowerButtonEndsCallPreferenceControllerTest {
         ShadowKeyCharacterMap.setDevicehasKey(true);
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(false);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(false);
 
         assertThat(mController.getAvailabilityStatus())
                 .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);
@@ -104,7 +104,7 @@ public class PowerButtonEndsCallPreferenceControllerTest {
         ShadowKeyCharacterMap.setDevicehasKey(true);
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(false);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus())
                 .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);
@@ -115,7 +115,7 @@ public class PowerButtonEndsCallPreferenceControllerTest {
         ShadowKeyCharacterMap.setDevicehasKey(false);
         when(mResources.getBoolean(com.android.settings.R.bool.config_show_sim_info))
                 .thenReturn(true);
-        when(mTelephonyManager.isVoiceCapable()).thenReturn(true);
+        when(mTelephonyManager.isDeviceVoiceCapable()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus())
                 .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);

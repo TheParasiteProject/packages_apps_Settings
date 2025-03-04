@@ -295,7 +295,7 @@ public class UserDetailsSettingsTest {
     @Test
     public void initialize_adminWithTelephonyVoiceCapable_shouldShowPhonePreference() {
         setupSelectedUser();
-        doReturn(true).when(mTelephonyManager).isVoiceCapable();
+        doReturn(true).when(mTelephonyManager).isDeviceVoiceCapable();
         doReturn(true).when(mResources)
                 .getBoolean(com.android.settings.R.bool.config_show_sim_info);
         mUserManager.setIsAdminUser(true);
@@ -309,7 +309,7 @@ public class UserDetailsSettingsTest {
     @Test
     public void initialize_adminNoVoiceCapable_shouldNotShowPhonePreference() {
         setupSelectedUser();
-        doReturn(false).when(mTelephonyManager).isVoiceCapable();
+        doReturn(false).when(mTelephonyManager).isDeviceVoiceCapable();
         doReturn(true).when(mResources)
                 .getBoolean(com.android.settings.R.bool.config_show_sim_info);
         mUserManager.setIsAdminUser(true);
@@ -323,7 +323,7 @@ public class UserDetailsSettingsTest {
     @Test
     public void initialize_adminNoTelephony_shouldNotShowPhonePreference() {
         setupSelectedUser();
-        doReturn(true).when(mTelephonyManager).isVoiceCapable();
+        doReturn(true).when(mTelephonyManager).isDeviceVoiceCapable();
         doReturn(false).when(mResources)
                 .getBoolean(com.android.settings.R.bool.config_show_sim_info);
         mUserManager.setIsAdminUser(true);
@@ -337,7 +337,7 @@ public class UserDetailsSettingsTest {
     @Test
     public void initialize_nonAdminWithTelephonyVoiceCapable_shouldNotShowPhonePreference() {
         setupSelectedUser();
-        doReturn(true).when(mTelephonyManager).isVoiceCapable();
+        doReturn(true).when(mTelephonyManager).isDeviceVoiceCapable();
         doReturn(true).when(mResources)
                 .getBoolean(com.android.settings.R.bool.config_show_sim_info);
         mUserManager.setIsAdminUser(false);
@@ -395,7 +395,7 @@ public class UserDetailsSettingsTest {
     public void initialize_adminSelectsRestrictedUser_shouldSetupPreferences() {
         setupSelectedRestrictedUser();
         mUserManager.setIsAdminUser(true);
-        doReturn(true).when(mTelephonyManager).isVoiceCapable();
+        doReturn(true).when(mTelephonyManager).isDeviceVoiceCapable();
         doReturn(true).when(mResources)
                 .getBoolean(com.android.settings.R.bool.config_show_sim_info);
 
