@@ -190,7 +190,7 @@ class PackageInfoPresenter(
         requireAuthAndExecute {
             coroutineScope.launch(Dispatchers.Default) {
                 Log.d(TAG, "Stopping package $packageName for user")
-                context.activityManager.stopPackageForUser(packageName)
+                userContext.activityManager.stopPackageForUser(packageName)
             }
         }
     }
