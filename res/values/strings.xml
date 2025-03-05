@@ -3650,6 +3650,21 @@
     <string name="communal_settings_title">Communal</string>
     <!-- Summary of the communal settings under Settings > Communal [CHAR LIMIT=50] -->
     <string name="communal_settings_summary">Communal settings</string>
+    <!-- Title of Hub mode category [CHAR LIMIT=30] -->
+    <string name="hub_mode_category_title">Hub mode</string>
+    <!-- Title of the "widgets on lockscreen" settings page. [CHAR LIMIT=NONE] -->
+    <string name="widgets_on_lockscreen_title">Widgets on lock screen</string>
+
+    <!-- Title of a setting to control when to automatically show widgets on the lockscren. [CHAR LIMIT=NONE] -->
+    <string name="when_to_auto_show_hubmode_title">When to automatically show</string>
+    <!-- Summary for when to automatically show hub mode (widgets on lockscreen): never  [CHAR LIMIT=100] -->
+    <string name="when_to_show_hubmode_never">Never</string>
+    <!-- Summary for when to automatically show hub mode (widgets on lockscreen): charging  [CHAR LIMIT=100] -->
+    <string name="when_to_show_hubmode_charging">While charging</string>
+    <!-- Summary for when to automatically show hub mode (widgets on lockscreen): charging and upright  [CHAR LIMIT=100] -->
+    <string name="when_to_show_hubmode_charging_and_upright">While charging and upright</string>
+    <!-- Summary for when to automatically show hub mode (widgets on lockscreen): docked  [CHAR LIMIT=100] -->
+    <string name="when_to_show_hubmode_docked">While docked</string>
 
     <!-- _satellite_setting_preference_layout -->
     <!-- _satellite_setting_preference_layout screen title-->
