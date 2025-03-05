@@ -42,6 +42,8 @@
     <string name="radioInfo_unknown" msgid="2892562356748600367">"Onbekend"</string>
     <string name="preview_pager_content_description" msgid="3762247188224576303">"Voorbeeld"</string>
     <string name="qr_code_content_description" msgid="1852208464419291347">"QR-code"</string>
+    <string name="preview_pager_previous_button" msgid="607771113300838313">"Vorig voorbeeld"</string>
+    <string name="preview_pager_next_button" msgid="8700907912508927271">"Volgend voorbeeld"</string>
     <string name="font_size_make_smaller_desc" msgid="4978038055549590140">"Verkleinen"</string>
     <string name="font_size_make_larger_desc" msgid="5583046033381722247">"Vergroten"</string>
     <string name="stay_awake_on_fold_title" msgid="6590454679898134221">"Altijd"</string>
@@ -103,10 +105,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"Over audio-uitvoer"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Leid geluiden naar je hoortoestel of telefoonspeaker"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Gerelateerd"</string>
-    <!-- no translation found for bluetooth_try_nearby_share_title (4996427014054610877) -->
-    <skip />
-    <!-- no translation found for bluetooth_try_nearby_share_summary (329823028635487822) -->
-    <skip />
+    <string name="bluetooth_try_nearby_share_title" msgid="4996427014054610877">"Probeer te delen met <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="329823028635487822">"De snelste manier om bestanden naar Android-apparaten in de buurt te sturen"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Ringtone en wekkers"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"Audio tijdens gesprekken"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Media- en systeemgeluiden"</string>
@@ -784,6 +784,10 @@
     <string name="unlock_set_unlock_password_title" msgid="2559842616268607041">"Wachtwoord"</string>
     <string name="unlock_set_do_later_title" msgid="6565575303676064364">"Niet nu"</string>
     <string name="current_screen_lock" msgid="1367883977261098017">"Huidige schermvergrendeling"</string>
+    <!-- no translation found for unlock_accessibility_pin_area (437104569661316525) -->
+    <skip />
+    <!-- no translation found for unlock_accessibility_password (5404713613573232309) -->
+    <skip />
     <string name="fingerprint_unlock_set_unlock_pattern" msgid="2229689425933043901">"Patroon • Vingerafdruk"</string>
     <string name="fingerprint_unlock_set_unlock_pin" msgid="7979848492740627674">"Pincode • Vingerafdruk"</string>
     <string name="fingerprint_unlock_set_unlock_password" msgid="6207676267295036963">"Wachtwoord • Vingerafdruk"</string>
@@ -899,8 +903,7 @@
     <string name="lockpassword_credential_changed" msgid="5934778179732392028">"Schermvergrendeling is al gewijzigd. Probeer het opnieuw met de nieuwe schermvergrendeling."</string>
     <string name="lockpattern_tutorial_cancel_label" msgid="775215267818384016">"Annuleren"</string>
     <string name="lockpattern_tutorial_continue_label" msgid="1329049481210689408">"Volgende"</string>
-    <!-- no translation found for manage_device_admin (7272894919651600481) -->
-    <skip />
+    <string name="manage_device_admin" msgid="7272894919651600481">"Apparaatbeheer"</string>
     <string name="number_of_device_admins_none" msgid="152926922020437312">"Geen actieve apps"</string>
     <string name="number_of_device_admins" msgid="3402909995362162876">"{count,plural, =1{# actieve app}other{# actieve apps}}"</string>
     <string name="manage_trust_agents" msgid="6410149930029992356">"Trust agents"</string>
@@ -1391,12 +1394,12 @@
     <string name="dark_ui_summary_on_auto_mode_custom_bedtime" msgid="1976993025762551246">"Gaat na bedtijd automatisch uit"</string>
     <string name="dark_ui_summary_on_auto_mode_modes" msgid="7769594183411785087">"Wordt uitgezet als <xliff:g id="ID_1">%1$s</xliff:g> is afgelopen"</string>
     <string name="dark_ui_text" msgid="4392646155331126666">"Het donkere thema gebruikt een zwarte achtergrond zodat je batterij langer meegaat op sommige schermen. Schema\'s voor het donkere thema worden pas aangezet als je scherm uitstaat."</string>
+    <!-- no translation found for dark_ui_text_force_invert (3776487375947497387) -->
+    <skip />
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Het donkere thema volgt op dit moment je schema voor de Bedtijdmodus"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Instellingen voor Bedtijdmodus"</string>
     <string name="dark_ui_modes_footer_summary" msgid="1041117250408363391">"{count,plural,offset:2 =0{Modi kunnen ook het donkere thema activeren}=1{{mode_1} activeert ook het donkere thema}=2{{mode_1} en {mode_2} activeren ook het donkere thema}=3{{mode_1}, {mode_2} en {mode_3} activeren ook het donkere thema}other{{mode_1}, {mode_2} en nog # activeren ook het donkere thema}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Instellingen voor modi"</string>
-    <string name="even_dimmer_display_title" msgid="4509732439977906028">"Extra dimmen"</string>
-    <string name="even_dimmer_display_summary" msgid="120301078873242172">"Sta toe dat apparaat nog meer wordt gedimd"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Time-out voor scherm"</string>
     <string name="screen_timeout_summary" msgid="5558778019594643427">"Na <xliff:g id="TIMEOUT_DESCRIPTION">%1$s</xliff:g> inactiviteit"</string>
     <string name="screen_timeout_summary_not_set" msgid="5107680774964178875">"Niet ingesteld"</string>
@@ -2061,12 +2064,9 @@
     <string name="mouse_keys_summary" msgid="7030731235143286467">"Gebruik je toetsenbord om de cursor te bedienen"</string>
     <string name="mouse_reverse_vertical_scrolling" msgid="4067297170762853966">"Omgekeerd scrollen"</string>
     <string name="mouse_reverse_vertical_scrolling_summary" msgid="3386655598642587942">"Scroll omhoog om de pagina omlaag te verplaatsen"</string>
-    <!-- no translation found for mouse_scrolling_category_title (2992126595687187296) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_acceleration (7119758828203396430) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed (3999483025392860903) -->
-    <skip />
+    <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Scrollen"</string>
+    <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Gecontroleerd scrollen"</string>
+    <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Scrollsnelheid"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Primaire muisknop omwisselen"</string>
     <string name="mouse_swap_primary_button_summary" msgid="3276638019321067902">"Gebruik de linkermuisknop als je rechtermuisknop"</string>
     <string name="mouse_pointer_acceleration" msgid="388336576055293329">"Cursorversnelling"</string>
@@ -2115,8 +2115,7 @@
     <string name="trackpad_touch_gesture" msgid="8641725062131922497">"Touchpadgebaren leren"</string>
     <string name="keywords_touchpad" msgid="8159846254066666032">"trackpad, track pad, muis, cursor, aanwijzer, scrollen, swipen, vegen, klikken met de rechtermuisknop, rechtsklikken, klikken, klik"</string>
     <string name="keywords_trackpad_bottom_right_tap" msgid="1285062446073929305">"klikken met de rechtermuisknop, rechtsklikken, tikken"</string>
-    <!-- no translation found for three_finger_tap_middle_click (1759914275939765929) -->
-    <skip />
+    <string name="three_finger_tap_middle_click" msgid="1759914275939765929">"Klikken op middelste muisknop"</string>
     <string name="three_finger_tap_launch_gemini" msgid="4030401656711588982">"Assistent starten"</string>
     <string name="three_finger_tap_go_home" msgid="6526301745535089812">"Naar startscherm"</string>
     <string name="three_finger_tap_go_back" msgid="2898205524575684271">"Terug"</string>
@@ -2322,6 +2321,8 @@
     <string name="accessibility_screen_magnification_navbar_short_summary" msgid="4885018322430052037">"Zoomen door te tikken op een knop"</string>
     <string name="accessibility_screen_magnification_intro_text" msgid="3856180549393526339">"Zoom snel in op het scherm om content groter te maken"</string>
     <string name="accessibility_screen_magnification_summary" msgid="8267672508057326959">"&lt;b&gt;Zo zoom je in:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Gebruik de snelkoppeling om de vergroting te starten.&lt;br/&gt; {1,number,integer}. Tik op het scherm.&lt;br/&gt; {2,number,integer}. Sleep met 2 vingers om te navigeren op het scherm.&lt;br/&gt; {3,number,integer}. Knijp met 2 vingers om het zoomniveau aan te passen.&lt;br/&gt; {4,number,integer}. Gebruik de snelkoppeling om de vergroting te stoppen.&lt;br/&gt;&lt;br/&gt; &lt;b&gt;Zo zoom je tijdelijk in:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Zorg dat je vergrotingstype is ingesteld op volledig scherm.&lt;br/&gt; {1,number,integer}. Gebruik de snelkoppeling om de vergroting te starten.&lt;br/&gt; {2,number,integer}. Houd je vinger op het scherm.&lt;br/&gt; {3,number,integer}. Sleep met een vinger om te navigeren op het scherm.&lt;br/&gt; {4,number,integer}. Haal je vinger van het scherm om de vergroting te stoppen."</string>
+    <!-- no translation found for accessibility_screen_magnification_keyboard_summary (2504303274186294767) -->
+    <skip />
     <string name="accessibility_screen_magnification_summary_one_finger_panning_off" msgid="1779959623535122324">"&lt;b&gt;Zo zoom je in:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Gebruik de snelkoppeling om de vergroting te starten.&lt;br/&gt; {1,number,integer}. Tik op het scherm.&lt;br/&gt; {2,number,integer}. Sleep met 2 vingers om te navigeren op het scherm.&lt;br/&gt; {3,number,integer}. Knijp met 2 vingers om het zoomniveau aan te passen.&lt;br/&gt; {4,number,integer}. Gebruik de snelkoppeling om de vergroting te stoppen.&lt;br/&gt;&lt;br/&gt; Je kunt ook tijdelijk inzoomen en meer."</string>
     <string name="accessibility_screen_magnification_summary_one_finger_panning_on" msgid="7323930759240678965">"&lt;b&gt;Zo zoom je in:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Gebruik de snelkoppeling om de vergroting te starten.&lt;br/&gt; {1,number,integer}. Tik op het scherm.&lt;br/&gt; {2,number,integer}. Sleep 1 of 2 vingers om over het scherm te bewegen.&lt;br/&gt; {3,number,integer}. Knijp met 2 vingers om het zoomniveau aan te passen.&lt;br/&gt; {4,number,integer}. Gebruik de snelkoppeling om de vergroting te stoppen.&lt;br/&gt;&lt;br/&gt; Je kunt ook tijdelijk inzoomen en meer."</string>
     <string name="accessibility_screen_magnification_navbar_summary" msgid="807985499898802296">"Als vergroting aanstaat, kun je op je scherm het beeld vergroten.\n\n"<b>"Als je wilt inzoomen"</b>", start je de vergroting en tik je waar dan ook op het scherm.\n"<ul><li>"Veeg met 2 of meer vingers om te scrollen."</li>\n<li>"Knijp 2 of meer vingers samen om de zoom aan te passen."</li></ul>\n\n<b>"Als je tijdelijk wilt zoomen"</b>", start je de vergroting, waarna je ergens op het scherm tikt en vasthoudt.\n"<ul><li>"Sleep om een ander deel van het scherm weer te geven."</li>\n<li>"Haal je vinger van het scherm om uit te zoomen."</li></ul>\n\n"Je kunt niet inzoomen op het toetsenbord of de navigatiebalk."</string>
@@ -2411,7 +2412,8 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Schermvergroting updaten bij app-overgangen"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Aan/uit-knop beëindigt gesprek"</string>
     <string name="accessibility_force_invert_title" msgid="5248504501753732051">"Meer apps donker maken"</string>
-    <string name="accessibility_force_invert_summary" msgid="179237803986895815">"Apps met licht thema automatisch omzetten naar donker thema"</string>
+    <!-- no translation found for accessibility_force_invert_summary (257503086198180749) -->
+    <skip />
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Animaties verwijderen"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Minder beweging op het scherm"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"Monogeluid"</string>
@@ -2907,14 +2909,10 @@
     <string name="adaptive_connectivity_switch_on" msgid="3653067561620745493">"Aan"</string>
     <string name="adaptive_connectivity_switch_off" msgid="5076172560836115265">"Uit"</string>
     <string name="adaptive_connectivity_main_switch_title" msgid="261045483524512420">"Aanpasbare connectiviteit gebruiken"</string>
-    <!-- no translation found for adaptive_connectivity_wifi_switch_title (5899985025046319472) -->
-    <skip />
-    <!-- no translation found for adaptive_connectivity_wifi_switch_summary (4650230240134029595) -->
-    <skip />
-    <!-- no translation found for adaptive_connectivity_mobile_network_switch_title (2473274404695643218) -->
-    <skip />
-    <!-- no translation found for adaptive_connectivity_mobile_network_switch_summary (2432517485362085341) -->
-    <skip />
+    <string name="adaptive_connectivity_wifi_switch_title" msgid="5899985025046319472">"Wifi automatisch wisselen naar mobiel"</string>
+    <string name="adaptive_connectivity_wifi_switch_summary" msgid="4650230240134029595">"Gebruik automatisch mobiele data als de wifi-verbinding slecht of niet beschikbaar is. Er kunnen kosten voor datagebruik in rekening worden gebracht."</string>
+    <string name="adaptive_connectivity_mobile_network_switch_title" msgid="2473274404695643218">"Mobiel netwerk automatisch wisselen voor langere batterijduur"</string>
+    <string name="adaptive_connectivity_mobile_network_switch_summary" msgid="2432517485362085341">"Verleng de batterijduur door netwerkverbindingen automatisch te beheren"</string>
     <string name="cellular_security_title" msgid="5562899485544677941">"Beveiliging van mobiel netwerk"</string>
     <string name="cellular_security_summary" msgid="1893770670709928113">"Netwerktype, versleuteling, beheeropties voor meldingen"</string>
     <string name="cellular_security_top_intro" msgid="6749166804080092892">"Met deze instellingen kun je je gesprekken, berichten en gegevens beschermen tegen verouderde of niet-versleutelde netwerken die je misschien blootstellen aan gegevensdiefstal of toezicht"</string>
@@ -2989,8 +2987,7 @@
     <string name="remove_device_admin" msgid="3143059558744287259">"Deze app voor apparaatbeheer deactiveren"</string>
     <string name="uninstall_device_admin" msgid="4481095209503956916">"App verwijderen"</string>
     <string name="remove_and_uninstall_device_admin" msgid="707912012681691559">"Uitzetten en verwijderen"</string>
-    <!-- no translation found for select_device_admin_msg (2506262585633022884) -->
-    <skip />
+    <string name="select_device_admin_msg" msgid="2506262585633022884">"Apparaatbeheer"</string>
     <string name="no_device_admins" msgid="8888779888103079854">"Geen apparaatbeheer-apps beschikbaar"</string>
     <string name="no_trust_agents" msgid="8659098725864191600">"Geen beschikbare trust-agents"</string>
     <string name="add_device_admin_msg" msgid="7730006568970042119">"App voor apparaatbeheer activeren?"</string>
@@ -3857,7 +3854,8 @@
     <string name="nls_feature_settings_title" msgid="8208164329853194414">"Instellingen wijzigen"</string>
     <string name="nls_feature_settings_summary" msgid="3770028705648985689">"De app kan Niet storen aan- of uitzetten en gerelateerde instellingen wijzigen"</string>
     <string name="nls_feature_modes_settings_summary" msgid="70022458305195595">"De app kan modi beheren en activeren, en gerelateerde instellingen wijzigen."</string>
-    <string name="notification_listener_disable_warning_summary" msgid="8373396293802088961">"Als je <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> geen toegang tot meldingen geeft, krijgt Niet storen mogelijk ook geen toegang."</string>
+    <!-- no translation found for notification_listener_disable_warning_summary (205200471571837170) -->
+    <skip />
     <string name="notification_listener_disable_modes_warning_summary" msgid="7528432011433844158">"Als je toegang tot meldingen intrekt voor <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, wordt toegang tot modi misschien ook ingetrokken."</string>
     <string name="notification_listener_disable_warning_confirm" msgid="841492108402184976">"Uitzetten"</string>
     <string name="notification_listener_disable_warning_cancel" msgid="8802784105045594324">"Annuleren"</string>
@@ -3879,8 +3877,7 @@
     <string name="notif_listener_more_settings_desc" msgid="7995492074281663658">"Er zijn meer instellingen beschikbaar in deze app"</string>
     <string name="notification_polite_title" msgid="6121016426991791557">"Afkoelperiode van meldingen"</string>
     <string name="notification_polite_main_control_title" msgid="5812529809151927149">"Afkoelperiode van meldingen gebruiken"</string>
-    <!-- no translation found for notification_polite_description (6137533404978878957) -->
-    <skip />
+    <string name="notification_polite_description" msgid="6137533404978878957">"Als je in korte tijd veel meldingen krijgt, wordt het volume op je apparaat lager gezet en worden meldingen geminimaliseerd gedurende maximaal één minuut. Dit is niet van invloed op gesprekken, wekkers en prioriteitsgesprekken. \n\nJe kunt meldingen die je tijdens de afkoelperiode krijgt, vinden door omlaag te swipen vanaf de bovenkant van het scherm."</string>
     <string name="notification_polite_work" msgid="8823596456640216391">"Toepassen op werkprofielen"</string>
     <string name="notification_polite_work_summary" msgid="5014189280132951378">"Pas deze instelling toe op apps in werkprofielen"</string>
     <string name="notification_bundle_title" msgid="460988459835922719">"Gebundelde meldingen"</string>
@@ -3926,9 +3923,11 @@
     <string name="interact_across_profiles_install_work_app_title" msgid="2821669067014436056">"Installeer <xliff:g id="NAME">%1$s</xliff:g> in je werkprofiel om deze apps te koppelen"</string>
     <string name="interact_across_profiles_install_personal_app_title" msgid="4790651223324866344">"Installeer <xliff:g id="NAME">%1$s</xliff:g> in je persoonlijke profiel om deze apps te koppelen"</string>
     <string name="interact_across_profiles_install_app_summary" msgid="7715324358034968657">"Tik om de app te installeren"</string>
-    <string name="manage_zen_access_title" msgid="1562322900340107269">"Toegang tot Niet storen"</string>
+    <!-- no translation found for manage_zen_access_title (4123905441114743974) -->
+    <skip />
     <string name="zen_access_detail_switch" msgid="4183681772666138993">"Niet storen toestaan"</string>
-    <string name="zen_access_empty_text" msgid="3779921853282293080">"Er zijn geen geïnstalleerde apps die toegang tot \'Niet storen\' hebben aangevraagd"</string>
+    <!-- no translation found for zen_access_empty_text (2662270585004373785) -->
+    <skip />
     <string name="manage_zen_modes_access_title" msgid="2520680004915648824">"Toegang tot modi"</string>
     <string name="zen_modes_access_detail_switch" msgid="4060429747631111299">"Toegang tot modi toestaan"</string>
     <string name="zen_modes_access_empty_text" msgid="8750927923904377110">"Er zijn geen geïnstalleerde apps die toegang tot modi hebben aangevraagd"</string>
@@ -5030,10 +5029,8 @@
     <string name="title_supported_service_for_manual_type" msgid="6009284624466359864">"Volg de stappen om verbinding te maken met de satelliet"</string>
     <string name="summary_supported_service" msgid="4320535903444834786">"Je kunt iedereen een tekstbericht sturen, ook hulpdiensten. Je telefoon maakt opnieuw verbinding met een mobiel netwerk zodra het beschikbaar is."</string>
     <string name="summary_supported_service_for_manual_type" msgid="2147958362763058271">"Nadat je telefoon verbinding heeft gemaakt, kun je iedereen een tekstbericht sturen, ook hulpdiensten."</string>
-    <!-- no translation found for satellite_setting_summary_more_information (276312352285564071) -->
-    <skip />
-    <!-- no translation found for satellite_setting_summary_more_information_no_emergency_messaging (2090170250936862158) -->
-    <skip />
+    <string name="satellite_setting_summary_more_information" msgid="276312352285564071">"Een satellietverbinding kan langzamer zijn en is alleen in bepaalde gebieden beschikbaar. Het weer en bepaalde constructies kunnen de verbinding beïnvloeden. Bellen via satelliet is niet beschikbaar. Noodoproepen kunnen nog steeds worden verbonden.\n\nHet kan even duren voordat accountwijzigingen in Instellingen worden getoond. Neem voor informatie contact op met <xliff:g id="CARRIER_NAME">%1$s</xliff:g>."</string>
+    <string name="satellite_setting_summary_more_information_no_emergency_messaging" msgid="2090170250936862158">"Een satellietverbinding kan langzamer zijn en is alleen in bepaalde gebieden beschikbaar. Het weer en bepaalde constructies kunnen de verbinding beïnvloeden. Bellen via satelliet is niet beschikbaar. Noodoproepen kunnen nog steeds worden verbonden. Tekstberichten uitwisselen met hulpdiensten is misschien niet in alle gebieden beschikbaar.\n\nHet kan even duren voordat accountwijzigingen in Instellingen worden getoond. Neem voor informatie contact op met <xliff:g id="CARRIER_NAME">%1$s</xliff:g>."</string>
     <string name="more_about_satellite_messaging" msgid="1039277943532711584">"Meer over <xliff:g id="SUBJECT">%1$s</xliff:g>"</string>
     <string name="satellite_warning_dialog_title" msgid="1610117852475376931">"Kan <xliff:g id="FUNCTION">%1$s</xliff:g> niet aanzetten"</string>
     <string name="satellite_warning_dialog_content" msgid="936419945275934955">"Als je <xliff:g id="FUNCTION">%1$s</xliff:g> wilt aanzetten, verbreek je eerst de satellietverbinding"</string>
@@ -5212,47 +5209,35 @@
     <string name="work_policy_privacy_settings" msgid="2702644843505242596">"Informatie over je werkbeleid"</string>
     <string name="work_policy_privacy_settings_summary" msgid="690118670737638405">"Instellingen beheerd door je IT-beheerder"</string>
     <string name="track_frame_time_keywords" msgid="7885340257945922239">"GPU"</string>
-    <!-- no translation found for enable_16k_pages (1758111531461408337) -->
-    <skip />
-    <!-- no translation found for enable_16k_pages_summary (1937836453571509085) -->
-    <skip />
-    <!-- no translation found for confirm_enable_16k_pages_title (5477376227161609124) -->
-    <skip />
-    <!-- no translation found for confirm_enable_16k_pages_text (6211693250692246982) -->
-    <skip />
-    <!-- no translation found for confirm_enable_4k_pages_title (3001009010581393119) -->
-    <skip />
-    <!-- no translation found for confirm_enable_4k_pages_text (3398001587586470689) -->
-    <skip />
-    <!-- no translation found for toast_16k_update_failed_text (7848383020572918850) -->
-    <skip />
+    <string name="enable_16k_pages" msgid="1758111531461408337">"Opstarten met paginagrootte 16 K"</string>
+    <string name="enable_16k_pages_summary" msgid="1937836453571509085">"Opstarten met kernel voor paginagrootte van 16 K"</string>
+    <string name="confirm_enable_16k_pages_title" msgid="5477376227161609124">"Wisselen van 4 KB-modus naar 16 KB-modus"</string>
+    <string name="confirm_enable_16k_pages_text" msgid="6211693250692246982">"Je gebruikt de niet-paginagebonden modus met een kernel van 4 KB en je gaat naar de 16 KB-modus. In deze modus kan de software-integriteit niet worden gegarandeerd en kunnen alle gegevens die op de telefoon zijn opgeslagen, terwijl de bootloader is ontgrendeld, gevaar lopen. Je apparaat wordt opnieuw opgestart. Sommige functies worden in deze modi uitgezet, dus sommige apps werken misschien niet. Als je het apparaat wilt terugzetten naar de productiemodus, moet je teruggaan naar de 4 KB-modus en de bootloader vergrendelen. Hierdoor worden de fabrieksinstellingen teruggezet op het apparaat. Nadat het apparaat is opgestart in Android, zet je OEM-ontgrendeling uit in de Ontwikkelaarsopties."</string>
+    <string name="confirm_enable_4k_pages_title" msgid="3001009010581393119">"Wisselen van 16 KB-modus naar 4 KB-modus"</string>
+    <string name="confirm_enable_4k_pages_text" msgid="3398001587586470689">"Je gebruikt de niet-paginagebonden modus met een kernel van 16 KB en je gaat naar de 4 KB-modus. In deze modus kan de software-integriteit niet worden gegarandeerd en kunnen alle gegevens die op de telefoon zijn opgeslagen, terwijl de bootloader is ontgrendeld, gevaar lopen. Je apparaat wordt opnieuw opgestart. Sommige functies worden in deze modi uitgezet, dus sommige apps werken misschien niet. Als je het apparaat wilt terugzetten naar de productiemodus, moet je de bootloader vergrendelen. Hierdoor worden de fabrieksinstellingen teruggezet op het apparaat. Nadat het apparaat is opgestart in Android, zet je OEM-ontgrendeling uit in de Ontwikkelaarsopties."</string>
+    <string name="toast_16k_update_failed_text" msgid="7848383020572918850">"Kan kernel niet updaten naar kernel voor pagina\'s van 16 KB."</string>
     <string name="progress_16k_ota_title" msgid="2117218313875523741">"Wijziging toepassen"</string>
-    <!-- no translation found for confirm_format_ext4_title (4754057414728537125) -->
-    <skip />
-    <!-- no translation found for confirm_format_ext4_text (432847493298532536) -->
-    <skip />
+    <string name="confirm_format_ext4_title" msgid="4754057414728537125">"Apparaat omzetten naar ext4? (vereist voor 16 KB-modus)"</string>
+    <string name="confirm_format_ext4_text" msgid="432847493298532536">"De gegevenspartitie van dit apparaat moet worden geconverteerd naar ext4 voordat je de 16 KB-ontwikkelaarsoptie kunt gebruiken. In deze modus kan de software-integriteit niet worden gegarandeerd en kunnen alle gegevens die op de telefoon zijn opgeslagen, terwijl de bootloader is ontgrendeld, gevaar lopen. Als je de 16 KB-optie activeert, moet je het apparaat hierna nog een keer opnieuw opstarten. Zodra je in deze modus zit, kun met één keer opnieuw opstarten wisselen tussen de 4 KB- en 16 KB-modus. Sommige functies worden in deze modi uitgezet, dus sommige apps werken misschien niet. Als je het apparaat wilt terugzetten naar de productiemodus, moet je teruggaan naar de 4 KB-modus en daarna de bootloader vergrendelen. Hierdoor worden de fabrieksinstellingen teruggezet op het apparaat. Nadat het apparaat is opgestart in Android, zet je OEM-ontgrendeling uit in de Ontwikkelaarsopties. Het apparaat wordt gewist en het bestandssysteem wordt na bevestiging gewijzigd in ext4. Kom hierna terug om 16 KB opnieuw aan te zetten."</string>
     <string name="confirm_ext4_button_text" msgid="6045501984773738407">"Alle gegevens wissen"</string>
     <string name="format_ext4_failure_toast" msgid="8059453995800471549">"Kan niet omzetten en de gegevenspartitie niet wissen naar ext4."</string>
     <string name="confirm_oem_unlock_for_16k_title" msgid="6062041826568112078">"Ontgrendeling van bootloader vereist"</string>
-    <!-- no translation found for confirm_oem_unlock_for_16k_text (8089310116854544106) -->
-    <skip />
-    <!-- no translation found for page_agnostic_4k_pages_title (293797217034340398) -->
-    <skip />
-    <!-- no translation found for page_agnostic_4k_pages_text_short (731597455785555266) -->
-    <skip />
-    <!-- no translation found for page_agnostic_4k_pages_text (7572233914423063169) -->
-    <skip />
-    <!-- no translation found for page_agnostic_16k_pages_title (8940585327969638637) -->
-    <skip />
-    <!-- no translation found for page_agnostic_16k_pages_text_short (7613206944532151035) -->
-    <skip />
-    <!-- no translation found for page_agnostic_16k_pages_text (2860363435021452169) -->
-    <skip />
-    <!-- no translation found for page_agnostic_notification_channel_name (2058933148654316447) -->
-    <skip />
+    <string name="confirm_oem_unlock_for_16k_text" msgid="8089310116854544106">"De bootloader moet op dit apparaat ontgrendeld zijn voordat je de 16 KB-ontwikkelaarsoptie kunt gebruiken. In deze modus kan de software-integriteit niet worden gegarandeerd en kunnen alle gegevens die op de telefoon zijn opgeslagen, terwijl de bootloader is ontgrendeld, gevaar lopen. Alle gebruikersgegevens en instellingen worden gewist als de 16 KB-modus wordt geactiveerd. Na het ontgrendelen van de bootloader moet je voor het activeren van de 16 KB-optie het apparaat 2 keer opnieuw opstarten. Zodra je in deze modus zit, kun met één keer opnieuw opstarten wisselen tussen de 4 KB- en 16 KB-modus. Sommige functies worden in deze modi uitgezet, dus sommige apps werken misschien niet. Als je het apparaat wilt terugzetten naar de productiemodus, moet je teruggaan naar de 4 KB-modus en daarna OEM en de bootloader vergrendelen. Hierdoor worden de fabrieksinstellingen teruggezet op het apparaat. Ontgrendel de bootloader en probeer het opnieuw. Instructies hiervoor vind je op &lt;a href=\"https://source.android.com/docs/core/architecture/bootloader/locking_unlocking\"&gt;https://source.android.com/docs/core/architecture/bootloader/locking_unlocking&lt;/a&gt;"</string>
+    <string name="page_agnostic_4k_pages_title" msgid="293797217034340398">"Niet-paginagebonden 4 KB-modus gebruiken"</string>
+    <string name="page_agnostic_4k_pages_text_short" msgid="731597455785555266">"Je zit in de 4 KB-modus van de niet-paginagebonden modus. In deze modus kan de software-integriteit niet worden gegarandeerd en kunnen alle gegevens die op de telefoon zijn opgeslagen, terwijl de bootloader is ontgrendeld, gevaar lopen. Sommige functies worden in deze modi uitgezet, dus sommige apps werken misschien niet. Als je wilt terugkeren naar de productiemodus, moet je de bootloader van het apparaat vergrendelen. Tik om meer te lezen."</string>
+    <string name="page_agnostic_4k_pages_text" msgid="7572233914423063169">"Je zit in de 4 KB-modus van de niet-paginagebonden modus. In deze modus kan de software-integriteit niet worden gegarandeerd en kunnen alle gegevens die op de telefoon zijn opgeslagen, terwijl de bootloader is ontgrendeld, gevaar lopen. Sommige functies worden in deze modi uitgezet, dus sommige apps werken misschien niet. Als je wilt terugkeren naar de productiemodus, moet je de bootloader van het apparaat vergrendelen. Hierdoor worden de fabrieksinstellingen teruggezet en worden de productie-instellingen hersteld op het apparaat. Nadat het apparaat is opgestart in Android, zet je OEM-ontgrendeling uit in de Ontwikkelaarsopties. Als het apparaat niet opstart in Android of instabiel is, flash je het apparaat opnieuw met de nieuwste fabrieksimages van &lt;a href=\"https://developers.google.com/android/images\"&gt;https://developers.google.com/android/images&lt;/a&gt; of gebruik je &lt;a href=\"https://flash.android.com/back-to-public\"&gt;https://flash.android.com/back-to-public&lt;/a&gt; en selecteer je Apparaat wissen, Bootloader vergrendelen en Alle partities geforceerd flashen."</string>
+    <string name="page_agnostic_16k_pages_title" msgid="8940585327969638637">"Niet-paginagebonden 16 KB-modus gebruiken"</string>
+    <string name="page_agnostic_16k_pages_text_short" msgid="7613206944532151035">"Je zit in de 16 KB-modus van de niet-paginagebonden modus. In deze modus kan de software-integriteit niet worden gegarandeerd en kunnen alle gegevens die op de telefoon zijn opgeslagen, terwijl de bootloader is ontgrendeld, gevaar lopen. Sommige functies worden in deze modi uitgezet, dus sommige apps werken misschien niet. Als je wilt terugkeren naar de productiemodus, moet je teruggaan naar de 4 KB-modus en daarna de bootloader van het apparaat vergrendelen. Tik om meer te lezen."</string>
+    <string name="page_agnostic_16k_pages_text" msgid="2860363435021452169">"Je zit in de 16 KB-modus van de niet-paginagebonden modus. In deze modus kan de software-integriteit niet worden gegarandeerd en kunnen alle gegevens die op de telefoon zijn opgeslagen, terwijl de bootloader is ontgrendeld, gevaar lopen. Sommige functies worden in deze modi uitgezet, dus sommige apps werken misschien niet. Als je wilt terugkeren naar de productiemodus, moet je teruggaan naar de 4 KB-modus en daarna de bootloader van het apparaat vergrendelen. Hierdoor worden de fabrieksinstellingen teruggezet en worden de productie-instellingen hersteld op het apparaat. Nadat het apparaat is opgestart in Android, zet je OEM-ontgrendeling uit in de Ontwikkelaarsopties. Als het apparaat niet opstart in Android of instabiel is, flash je het apparaat opnieuw met de nieuwste fabrieksimages van &lt;a href=\"https://developers.google.com/android/images\"&gt;https://developers.google.com/android/images&lt;/a&gt; of gebruik je &lt;a href=\"https://flash.android.com/back-to-public\"&gt;https://flash.android.com/back-to-public&lt;/a&gt; en selecteer je Apparaat wissen, Bootloader vergrendelen en Alle partities geforceerd flashen."</string>
+    <string name="page_agnostic_notification_channel_name" msgid="2058933148654316447">"Niet-paginagebonden 16 KB-modus"</string>
     <string name="page_agnostic_notification_action" msgid="2309805437430150456">"Meer lezen"</string>
     <string name="enable_16k_app_compat_title" msgid="4173159228844992989">"App uitvoeren met compatibiliteitsmodus voor paginagrootte"</string>
-    <string name="enable_16k_app_compat_details" msgid="3389401258168314266">"De app wordt uitgevoerd in de compatibiliteitsmodus voor paginagrootte op een apparaat met 16 KB indien aangezet."</string>
+    <!-- no translation found for enable_16k_app_compat_details (8008347535539304604) -->
+    <skip />
+    <!-- no translation found for stop_app_dlg_title (3153921585174512587) -->
+    <skip />
+    <!-- no translation found for stop_app_dlg_text (4373849065005318901) -->
+    <skip />
     <string name="bug_report_handler_title" msgid="713439959113250125">"App voor verwerking bugrapport"</string>
     <string name="bug_report_handler_picker_footer_text" msgid="4935758328366585673">"Hierdoor wordt bepaald welke app de snelkoppeling voor het bugrapport verwerkt op je apparaat."</string>
     <string name="personal_profile_app_subtext" msgid="5586060806997067676">"Privé"</string>
@@ -5586,6 +5571,8 @@
     <string name="content_protection_preference_subpage_summary" msgid="3595621220981703364"></string>
     <string name="content_protection_preference_subpage_info" msgid="6890886357653365489"></string>
     <string name="accessibility_setup_password_complete" msgid="6358749253318369077">"Wachtwoord is nu ingesteld"</string>
+    <!-- no translation found for accessibility_setup_pin_complete (7626702882001984236) -->
+    <skip />
     <string name="show_stylus_pointer_icon" msgid="1010583689203665786">"Aanwijzer tonen bij cursor plaatsen"</string>
     <string name="media_drm_settings_title" msgid="897424966554739867">"DRM-instellingen voor media"</string>
     <string name="force_swcrypto_fallback_title" msgid="8053166299808645593">"Gebruik van Software Secure Crypto afdwingen"</string>
@@ -5733,4 +5720,6 @@
     <string name="supervision_pin_management_preference_summary_add" msgid="3244161328612671896">"Een methode voor pincodeherstel toevoegen"</string>
     <string name="supervision_change_pin_preference_title" msgid="2288584039438231801">"Pincode wijzigen"</string>
     <string name="supervision_add_forgot_pin_preference_title" msgid="8939945404255748516">"Pincode vergeten"</string>
+    <!-- no translation found for supervision_web_content_filters_title (3653430162065686156) -->
+    <skip />
 </resources>

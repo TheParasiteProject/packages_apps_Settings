@@ -42,6 +42,8 @@
     <string name="radioInfo_unknown" msgid="2892562356748600367">"غير معروف"</string>
     <string name="preview_pager_content_description" msgid="3762247188224576303">"معاينة"</string>
     <string name="qr_code_content_description" msgid="1852208464419291347">"رمز الاستجابة السريعة"</string>
+    <string name="preview_pager_previous_button" msgid="607771113300838313">"المعاينة السابقة"</string>
+    <string name="preview_pager_next_button" msgid="8700907912508927271">"المعاينة التالية"</string>
     <string name="font_size_make_smaller_desc" msgid="4978038055549590140">"تصغير"</string>
     <string name="font_size_make_larger_desc" msgid="5583046033381722247">"تكبير"</string>
     <string name="stay_awake_on_fold_title" msgid="6590454679898134221">"دائمًا"</string>
@@ -103,10 +105,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"لمحة عن إخراج الصوت"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"يمكنك توجيه الأصوات إلى سماعة الأذن الطبية أو مكبّر صوت الهاتف."</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"أدوات مشابهة"</string>
-    <!-- no translation found for bluetooth_try_nearby_share_title (4996427014054610877) -->
-    <skip />
-    <!-- no translation found for bluetooth_try_nearby_share_summary (329823028635487822) -->
-    <skip />
+    <string name="bluetooth_try_nearby_share_title" msgid="4996427014054610877">"يمكنك المشاركة باستخدام \"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>\""</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="329823028635487822">"‏أسرع طريقة لإرسال الملفات إلى أجهزة Android قريبة منك"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"نغمة الرنين والمنبّهات"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"الصوت أثناء المكالمات"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"أصوات الوسائط والنظام"</string>
@@ -784,6 +784,10 @@
     <string name="unlock_set_unlock_password_title" msgid="2559842616268607041">"كلمة مرور"</string>
     <string name="unlock_set_do_later_title" msgid="6565575303676064364">"ليس الآن"</string>
     <string name="current_screen_lock" msgid="1367883977261098017">"قفل الشاشة الحالي"</string>
+    <!-- no translation found for unlock_accessibility_pin_area (437104569661316525) -->
+    <skip />
+    <!-- no translation found for unlock_accessibility_password (5404713613573232309) -->
+    <skip />
     <string name="fingerprint_unlock_set_unlock_pattern" msgid="2229689425933043901">"النقش • بصمة الإصبع"</string>
     <string name="fingerprint_unlock_set_unlock_pin" msgid="7979848492740627674">"رقم التعريف الشخصي • بصمة الإصبع"</string>
     <string name="fingerprint_unlock_set_unlock_password" msgid="6207676267295036963">"كلمة المرور • بصمة الإصبع"</string>
@@ -899,8 +903,7 @@
     <string name="lockpassword_credential_changed" msgid="5934778179732392028">"تم تغيير قفل الشاشة. يمكنك إعادة المحاولة بقفل الشاشة الجديد."</string>
     <string name="lockpattern_tutorial_cancel_label" msgid="775215267818384016">"إلغاء"</string>
     <string name="lockpattern_tutorial_continue_label" msgid="1329049481210689408">"التالي"</string>
-    <!-- no translation found for manage_device_admin (7272894919651600481) -->
-    <skip />
+    <string name="manage_device_admin" msgid="7272894919651600481">"مشرف الجهاز"</string>
     <string name="number_of_device_admins_none" msgid="152926922020437312">"ما مِن تطبيقات نشطة"</string>
     <string name="number_of_device_admins" msgid="3402909995362162876">"{count,plural, =1{تطبيق واحد نشط}zero{# تطبيق نشط}two{تطبيقان نشطان}few{# تطبيقات نشطة}many{# تطبيقًا نشطًا}other{# تطبيق نشط}}"</string>
     <string name="manage_trust_agents" msgid="6410149930029992356">"الوكلاء المعتمدون"</string>
@@ -1391,12 +1394,12 @@
     <string name="dark_ui_summary_on_auto_mode_custom_bedtime" msgid="1976993025762551246">"سيتم إيقافه تلقائيًا بعد انتهاء وقت النوم."</string>
     <string name="dark_ui_summary_on_auto_mode_modes" msgid="7769594183411785087">"سيتم إيقاف هذا الوضع عندما تكون ميزة \"<xliff:g id="ID_1">%1$s</xliff:g>\" غير مفعَّلة"</string>
     <string name="dark_ui_text" msgid="4392646155331126666">"يستخدم \"المظهر الداكن\" خلفية سوداء لتوفير طاقة البطارية والحفاظ عليها لفترة أطول في بعض الشاشات. لا يتم تفعيل الجداول الزمنية لعمل \"المظهر الداكن\" إلا بعد قفل الشاشة."</string>
+    <!-- no translation found for dark_ui_text_force_invert (3776487375947497387) -->
+    <skip />
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"يتبع وضع \"المظهر الداكن\" حاليًا الجدول الزمني لوضع \"وقت النوم\"."</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"إعدادات وضع \"وقت النوم\""</string>
     <string name="dark_ui_modes_footer_summary" msgid="1041117250408363391">"{count,plural,offset:2 =0{\"الأوضاع\" يمكنها تفعيل \"المظهر الداكن\" أيضًا}=1{يمكن لوضع \"{mode_1}\" تفعيل \"المظهر الداكن\" أيضًا}=2{يمكن لوضع \"{mode_1}\" ووضع \"{mode_2}\" تفعيل \"المظهر الداكن\" أيضًا}=3{يمكن لوضع \"{mode_1}\" ووضع \"{mode_2}\" ووضع \"{mode_3}\" تفعيل \"المظهر الداكن\" أيضًا}few{يمكن لوضع \"{mode_1}\" ووضع \"{mode_2}\" و# أوضاع أخرى تفعيل \"المظهر الداكن\" أيضًا}many{يمكن لوضع \"{mode_1}\" ووضع \"{mode_2}\" و# وضعًا آخر تفعيل \"المظهر الداكن\" أيضًا}other{يمكن لوضع \"{mode_1}\" ووضع \"{mode_2}\" و# وضع آخر تفعيل \"المظهر الداكن\" أيضًا}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"إعدادات \"الأوضاع\""</string>
-    <string name="even_dimmer_display_title" msgid="4509732439977906028">"زيادة تعتيم الشاشة"</string>
-    <string name="even_dimmer_display_summary" msgid="120301078873242172">"السماح للجهاز بزيادة تعتيم الشاشة أكثر من المعتاد"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"المهلة قبل غلق الشاشة"</string>
     <string name="screen_timeout_summary" msgid="5558778019594643427">"بعد <xliff:g id="TIMEOUT_DESCRIPTION">%1$s</xliff:g> من عدم النشاط"</string>
     <string name="screen_timeout_summary_not_set" msgid="5107680774964178875">"لم يتم تحديد اقتراح مطابق."</string>
@@ -2061,12 +2064,9 @@
     <string name="mouse_keys_summary" msgid="7030731235143286467">"يمكنك استخدام لوحة المفاتيح للتحكّم في المؤشر"</string>
     <string name="mouse_reverse_vertical_scrolling" msgid="4067297170762853966">"عكس اتجاه التنقّل"</string>
     <string name="mouse_reverse_vertical_scrolling_summary" msgid="3386655598642587942">"يمكنك الانتقال للأعلى لتحريك محتوى الصفحة للأسفل"</string>
-    <!-- no translation found for mouse_scrolling_category_title (2992126595687187296) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_acceleration (7119758828203396430) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed (3999483025392860903) -->
-    <skip />
+    <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"الانتقال"</string>
+    <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"الانتقال المتناسب مع سرعة دوران العجلة"</string>
+    <string name="mouse_scrolling_speed" msgid="3999483025392860903">"سرعة الانتقال للأعلى أو للأسفل"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"تبديل زر الماوس الرئيسي"</string>
     <string name="mouse_swap_primary_button_summary" msgid="3276638019321067902">"يمكنك استخدام زر الماوس الأيسر كزر الماوس الأيمن"</string>
     <string name="mouse_pointer_acceleration" msgid="388336576055293329">"تسريع المؤشر"</string>
@@ -2115,8 +2115,7 @@
     <string name="trackpad_touch_gesture" msgid="8641725062131922497">"التعرّف على إيماءات لوحة اللمس"</string>
     <string name="keywords_touchpad" msgid="8159846254066666032">"لوحة اللمس، لوحة لمس، ماوس، مؤشر، الانتقال للأسفل أو للأعلى، تمرير سريع، النقر بزر الماوس الأيمن، نقرة، مؤشر"</string>
     <string name="keywords_trackpad_bottom_right_tap" msgid="1285062446073929305">"النقر بزر الماوس الأيمن، النقر"</string>
-    <!-- no translation found for three_finger_tap_middle_click (1759914275939765929) -->
-    <skip />
+    <string name="three_finger_tap_middle_click" msgid="1759914275939765929">"زر النقر الأوسط على الماوس"</string>
     <string name="three_finger_tap_launch_gemini" msgid="4030401656711588982">"‏تشغيل \"مساعد Google\""</string>
     <string name="three_finger_tap_go_home" msgid="6526301745535089812">"الانتقال إلى الشاشة الرئيسية"</string>
     <string name="three_finger_tap_go_back" msgid="2898205524575684271">"رجوع"</string>
@@ -2322,6 +2321,8 @@
     <string name="accessibility_screen_magnification_navbar_short_summary" msgid="4885018322430052037">"انقر على أحد الأزرار للتكبير"</string>
     <string name="accessibility_screen_magnification_intro_text" msgid="3856180549393526339">"يمكنك تكبير الشاشة بسرعة لتكبير المحتوى"</string>
     <string name="accessibility_screen_magnification_summary" msgid="8267672508057326959">"‏&lt;b&gt;لتكبير الشاشة، نفِّذ الخطوات التالية:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. استخدِم الاختصار المخصّص لبدء تكبير المحتوى&lt;br/&gt; {1,number,integer}. انقر على الشاشة&lt;br/&gt; {2,number,integer}. اسحب إصبعين للتنقّل على الشاشة&lt;br/&gt; {3,number,integer}. باعِد أو قارِب بإصبعين لتعديل مستوى التكبير/التصغير&lt;br/&gt; {4,number,integer}. استخدِم الاختصار المخصّص لإيقاف تكبير المحتوى&lt;br/&gt;&lt;br/&gt;&lt;b&gt;لتكبير المحتوى مؤقتًا، نفِّذ الخطوات التالية:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. تأكّد من ضبط نوع التكبير على وضع ملء الشاشة&lt;br/&gt; {1,number,integer}. استخدِم الاختصار المخصّص لبدء تكبير المحتوى&lt;br/&gt; {2,number,integer}. انقر مع الاستمرار على أي مكان على الشاشة&lt;br/&gt; {3,number,integer}. اسحب إصبعك للتنقّل على الشاشة&lt;br/&gt; {4,number,integer}. ارفع إصبعك لإيقاف تكبير الشاشة"</string>
+    <!-- no translation found for accessibility_screen_magnification_keyboard_summary (2504303274186294767) -->
+    <skip />
     <string name="accessibility_screen_magnification_summary_one_finger_panning_off" msgid="1779959623535122324">"‏&lt;b&gt;لتكبير الشاشة:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. استخدِم الاختصار المخصّص لبدء التكبير&lt;br/&gt; {1,number,integer}. انقر على الشاشة&lt;br/&gt; {2,number,integer}. اسحب بإصبعين للتنقّل على الشاشة&lt;br/&gt; {3,number,integer}. باعِد أو قارِب بإصبعين لتعديل مستوى التكبير أو التصغير&lt;br/&gt; {4,number,integer}. استخدِم الاختصار المخصَّص لإيقاف التكبير&lt;br/&gt;&lt;br/&gt; يمكنك أيضًا التكبير بشكل مؤقت وغير ذلك."</string>
     <string name="accessibility_screen_magnification_summary_one_finger_panning_on" msgid="7323930759240678965">"‏&lt;b&gt;لتكبير الشاشة:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. استخدِم الاختصار المخصّص لبدء التكبير&lt;br/&gt; {1,number,integer}. انقر على الشاشة&lt;br/&gt; {2,number,integer}. اسحب بإصبع واحد أو إصبعين للتنقّل على الشاشة&lt;br/&gt; {3,number,integer}. باعِد أو قارِب بإصبعين لتعديل مستوى التكبير أو التصغير&lt;br/&gt; {4,number,integer}. استخدِم الاختصار المخصَّص لإيقاف التكبير&lt;br/&gt;&lt;br/&gt; يمكنك أيضًا التكبير بشكل مؤقت وغير ذلك."</string>
     <string name="accessibility_screen_magnification_navbar_summary" msgid="807985499898802296">"عند تفعيل ميزة \"التكبير\"، يمكنك تكبير حجم المحتوى على الشاشة.\n\n"<b>"للتكبير"</b>"، يمكنك تفعيل ميزة \"التكبير\" والنقر بعد ذلك على أي مكان في الشاشة.\n"<ul><li>"يمكنك سحب إصبعين أو أكثر للتمرير."</li>\n<li>"يمكنك ضمّ إصبعين أو أكثر لتعديل حجم المحتوى."</li></ul>\n\n<b>"للتكبير مؤقتًا"</b>"، يمكنك تفعيل ميزة التكبير والنقر مع الاستمرار على أي مكان في الشاشة.\n"<ul><li>"يمكنك السحب للتنقّل داخل الشاشة."</li>\n<li>"يمكنك رفع إصبعك للتصغير."</li></ul>\n\n"لن يكون بإمكانك التكبير على لوحة المفاتيح أو شريط التنقل."</string>
@@ -2411,7 +2412,8 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"تحديث تكبير الشاشة أثناء تنقلات التطبيق"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"إنهاء الاتصال عبر زر التشغيل"</string>
     <string name="accessibility_force_invert_title" msgid="5248504501753732051">"استخدام المظهر الداكن في مزيد من التطبيقات"</string>
-    <string name="accessibility_force_invert_summary" msgid="179237803986895815">"يتغيّر مظهر التطبيقات من فاتح إلى داكن تلقائيًا"</string>
+    <!-- no translation found for accessibility_force_invert_summary (257503086198180749) -->
+    <skip />
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"إزالة الصور المتحركة"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"تقليل الحركة على الشاشة"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"صوت أحادي"</string>
@@ -2907,14 +2909,10 @@
     <string name="adaptive_connectivity_switch_on" msgid="3653067561620745493">"مفعّل"</string>
     <string name="adaptive_connectivity_switch_off" msgid="5076172560836115265">"إيقاف"</string>
     <string name="adaptive_connectivity_main_switch_title" msgid="261045483524512420">"استخدام \"الاتصال التكيفي\""</string>
-    <!-- no translation found for adaptive_connectivity_wifi_switch_title (5899985025046319472) -->
-    <skip />
-    <!-- no translation found for adaptive_connectivity_wifi_switch_summary (4650230240134029595) -->
-    <skip />
-    <!-- no translation found for adaptive_connectivity_mobile_network_switch_title (2473274404695643218) -->
-    <skip />
-    <!-- no translation found for adaptive_connectivity_mobile_network_switch_summary (2432517485362085341) -->
-    <skip />
+    <string name="adaptive_connectivity_wifi_switch_title" msgid="5899985025046319472">"‏التبديل التلقائي من شبكة Wi-Fi إلى بيانات شبكة الجوّال"</string>
+    <string name="adaptive_connectivity_wifi_switch_summary" msgid="4650230240134029595">"‏يتم استخدام بيانات شبكة الجوّال تلقائيًا عندما يكون اتصال Wi‑Fi ضعيفًا أو غير متوفّر. وقد يتم تحصيل رسوم مقابل استخدام البيانات."</string>
+    <string name="adaptive_connectivity_mobile_network_switch_title" msgid="2473274404695643218">"التبديل التلقائي بين شبكات الجوّال لإطالة عمر البطارية"</string>
+    <string name="adaptive_connectivity_mobile_network_switch_summary" msgid="2432517485362085341">"إطالة عمر البطارية عن طريق إدارة اتصالات الشبكة تلقائيًا"</string>
     <string name="cellular_security_title" msgid="5562899485544677941">"أمان شبكة الجوّال"</string>
     <string name="cellular_security_summary" msgid="1893770670709928113">"عناصر التحكّم في نوع الشبكة والتشفير والإشعارات"</string>
     <string name="cellular_security_top_intro" msgid="6749166804080092892">"تساعد هذه الإعدادات في حماية مكالماتك والرسائل والبيانات من خطر الاختراق أو المراقبة عبر الشبكات القديمة أو الشبكات غير المشفّرة"</string>
@@ -2989,8 +2987,7 @@
     <string name="remove_device_admin" msgid="3143059558744287259">"إيقاف تطبيق مشرف الجهاز"</string>
     <string name="uninstall_device_admin" msgid="4481095209503956916">"إلغاء تثبيت التطبيق"</string>
     <string name="remove_and_uninstall_device_admin" msgid="707912012681691559">"إيقاف وإلغاء التثبيت"</string>
-    <!-- no translation found for select_device_admin_msg (2506262585633022884) -->
-    <skip />
+    <string name="select_device_admin_msg" msgid="2506262585633022884">"مشرف الجهاز"</string>
     <string name="no_device_admins" msgid="8888779888103079854">"لا تتوفر تطبيقات لمشرف الجهاز"</string>
     <string name="no_trust_agents" msgid="8659098725864191600">"ليس هناك وكلاء معتمدون متاحون"</string>
     <string name="add_device_admin_msg" msgid="7730006568970042119">"هل تريد تفعيل تطبيق مشرف الجهاز؟"</string>
@@ -3857,7 +3854,8 @@
     <string name="nls_feature_settings_title" msgid="8208164329853194414">"تغيير الإعدادات"</string>
     <string name="nls_feature_settings_summary" msgid="3770028705648985689">"يمكنه تفعيل ميزة \"عدم الإزعاج\" أو إيقافها وتغيير الإعدادات ذات الصلة."</string>
     <string name="nls_feature_modes_settings_summary" msgid="70022458305195595">"يمكنه إدارة \"الأوضاع\" وتفعيلها وتغيير الإعدادات ذات الصلة بها."</string>
-    <string name="notification_listener_disable_warning_summary" msgid="8373396293802088961">"في حال إيقاف وصول \"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>\" إلى الإشعارات، قد يتم إيقاف الوصول إلى ميزة \"عدم الإزعاج\" أيضًا."</string>
+    <!-- no translation found for notification_listener_disable_warning_summary (205200471571837170) -->
+    <skip />
     <string name="notification_listener_disable_modes_warning_summary" msgid="7528432011433844158">"في حال إيقاف الوصول إلى إشعارات \"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>\"، قد يتم إيقاف الوصول إلى \"الأوضاع\" أيضًا."</string>
     <string name="notification_listener_disable_warning_confirm" msgid="841492108402184976">"إيقاف"</string>
     <string name="notification_listener_disable_warning_cancel" msgid="8802784105045594324">"إلغاء"</string>
@@ -3879,8 +3877,7 @@
     <string name="notif_listener_more_settings_desc" msgid="7995492074281663658">"تتوفّر إعدادات إضافية داخل التطبيق."</string>
     <string name="notification_polite_title" msgid="6121016426991791557">"تخفيض الإشعارات الصوتية والاهتزاز"</string>
     <string name="notification_polite_main_control_title" msgid="5812529809151927149">"استخدام الإعداد \"تخفيض الإشعارات الصوتية والاهتزاز\""</string>
-    <!-- no translation found for notification_polite_description (6137533404978878957) -->
-    <skip />
+    <string name="notification_polite_description" msgid="6137533404978878957">"حينما تصلك الكثير من الإشعارات خلال وقت قصير، سيتم خفض مستوى صوت الجهاز وتقليل ظهور التنبيهات لمدة تصل إلى دقيقة واحدة. ولن تتأثر المكالمات والمنبّهات والمحادثات ذات الأولوية بتلك الإجراءات. \n\nيمكنك العثور على الإشعارات المُرسلة إليك أثناء فترة تخفيض الإشعارات الصوتية والاهتزاز من خلال سحب الشاشة من أعلى لأسفل."</string>
     <string name="notification_polite_work" msgid="8823596456640216391">"التطبيق على ملفات العمل"</string>
     <string name="notification_polite_work_summary" msgid="5014189280132951378">"يسري على تطبيقات ملف العمل"</string>
     <string name="notification_bundle_title" msgid="460988459835922719">"إشعارات مُجمّعة"</string>
@@ -3926,9 +3923,11 @@
     <string name="interact_across_profiles_install_work_app_title" msgid="2821669067014436056">"لربط هذه التطبيقات، عليك تثبيت تطبيق <xliff:g id="NAME">%1$s</xliff:g> في ملف العمل الخاص بك."</string>
     <string name="interact_across_profiles_install_personal_app_title" msgid="4790651223324866344">"لربط هذه التطبيقات، عليك تثبيت تطبيق <xliff:g id="NAME">%1$s</xliff:g> في ملفك الشخصي."</string>
     <string name="interact_across_profiles_install_app_summary" msgid="7715324358034968657">"انقر لتنزيل التطبيق."</string>
-    <string name="manage_zen_access_title" msgid="1562322900340107269">"الوصول إلى إعداد \"عدم الإزعاج\""</string>
+    <!-- no translation found for manage_zen_access_title (4123905441114743974) -->
+    <skip />
     <string name="zen_access_detail_switch" msgid="4183681772666138993">"السماح بميزة \"عدم الإزعاج\""</string>
-    <string name="zen_access_empty_text" msgid="3779921853282293080">"لم تطلّب أي تطبيقات مثبّتة الإذن بالوصول إلى إعداد \"عدم الإزعاج\""</string>
+    <!-- no translation found for zen_access_empty_text (2662270585004373785) -->
+    <skip />
     <string name="manage_zen_modes_access_title" msgid="2520680004915648824">"الوصول إلى \"الأوضاع\""</string>
     <string name="zen_modes_access_detail_switch" msgid="4060429747631111299">"السماح بالوصول إلى \"الأوضاع\""</string>
     <string name="zen_modes_access_empty_text" msgid="8750927923904377110">"لم تطلب أي تطبيقات مثبَّتة الوصول إلى \"الأوضاع\""</string>
@@ -4617,7 +4616,7 @@
     <string name="double_tap_power_camera_action_summary" msgid="4942585540579590444">"فتح تطبيق \"الكاميرا\""</string>
     <string name="double_tap_power_wallet_action_title" msgid="2460162990983117189">"‏محفظة Google"</string>
     <string name="double_tap_power_wallet_action_summary" msgid="3463748484407928770">"‏فتح \"محفظة Google\""</string>
-    <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"قلب الكاميرا لالتقاط صورة ذاتية"</string>
+    <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"قلب الكاميرا لالتقاط سيلفي"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"وضع التنقّل"</string>
     <string name="swipe_up_to_switch_apps_title" msgid="6677266952021118342">"التنقل باستخدام زرّين"</string>
@@ -5030,10 +5029,8 @@
     <string name="title_supported_service_for_manual_type" msgid="6009284624466359864">"يُرجى اتّباع التعليمات للاتصال بالقمر الصناعي"</string>
     <string name="summary_supported_service" msgid="4320535903444834786">"يمكنك إرسال رسائل نصية إلى أي شخص، وكذلك الاستفادة من خدمات الطوارئ. سيحاول هاتفك الاتصال بشبكة جوّال مجددًا عند توفُّرها."</string>
     <string name="summary_supported_service_for_manual_type" msgid="2147958362763058271">"بعد اتصال هاتفك، يمكنك إرسال رسائل نصية إلى أي شخص، وكذلك الاستفادة من خدمات الطوارئ."</string>
-    <!-- no translation found for satellite_setting_summary_more_information (276312352285564071) -->
-    <skip />
-    <!-- no translation found for satellite_setting_summary_more_information_no_emergency_messaging (2090170250936862158) -->
-    <skip />
+    <string name="satellite_setting_summary_more_information" msgid="276312352285564071">"قد يكون الاتصال بالقمر الصناعي أبطأ ولا يتوفّر إلا في بعض المناطق، وقد يتأثر بالطقس وبعض المباني. لا تتوفّر إمكانية الاتصال باستخدام القمر الصناعي. قد تظل مكالمات الطوارئ مفعَّلة.\n\nقد يستغرق ظهور التغييرات في حسابك ضمن \"الإعدادات\" بعض الوقت. لمعرفة التفاصيل، يُرجى التواصل مع \"<xliff:g id="CARRIER_NAME">%1$s</xliff:g>\"."</string>
+    <string name="satellite_setting_summary_more_information_no_emergency_messaging" msgid="2090170250936862158">"قد يكون الاتصال بالقمر الصناعي أبطأ ولا يتوفّر إلا في بعض المناطق، وقد يتأثر بالطقس وبعض المباني. لا تتوفّر إمكانية الاتصال باستخدام القمر الصناعي. وقد تظل مكالمات الطوارئ مفعَّلة. وقد لا تكون خدمة المراسلة النصية مع خدمات الطوارئ متاحة في كل المناطق.\n\nقد يستغرق ظهور التغييرات في حسابك ضِمن \"الإعدادات\" بعض الوقت. لمعرفة التفاصيل، يُرجى التواصل مع \"<xliff:g id="CARRIER_NAME">%1$s</xliff:g>\"."</string>
     <string name="more_about_satellite_messaging" msgid="1039277943532711584">"المزيد حول \"<xliff:g id="SUBJECT">%1$s</xliff:g>\""</string>
     <string name="satellite_warning_dialog_title" msgid="1610117852475376931">"يتعذّر تفعيل <xliff:g id="FUNCTION">%1$s</xliff:g>"</string>
     <string name="satellite_warning_dialog_content" msgid="936419945275934955">"لتفعيل <xliff:g id="FUNCTION">%1$s</xliff:g>، عليك أولاً إنهاء الاتصال بالقمر الصناعي"</string>
@@ -5212,47 +5209,35 @@
     <string name="work_policy_privacy_settings" msgid="2702644843505242596">"معلومات سياسة العمل"</string>
     <string name="work_policy_privacy_settings_summary" msgid="690118670737638405">"يتولى مشرف تكنولوجيا المعلومات إدارة الإعدادات."</string>
     <string name="track_frame_time_keywords" msgid="7885340257945922239">"وحدة معالجة الرسومات"</string>
-    <!-- no translation found for enable_16k_pages (1758111531461408337) -->
-    <skip />
-    <!-- no translation found for enable_16k_pages_summary (1937836453571509085) -->
-    <skip />
-    <!-- no translation found for confirm_enable_16k_pages_title (5477376227161609124) -->
-    <skip />
-    <!-- no translation found for confirm_enable_16k_pages_text (6211693250692246982) -->
-    <skip />
-    <!-- no translation found for confirm_enable_4k_pages_title (3001009010581393119) -->
-    <skip />
-    <!-- no translation found for confirm_enable_4k_pages_text (3398001587586470689) -->
-    <skip />
-    <!-- no translation found for toast_16k_update_failed_text (7848383020572918850) -->
-    <skip />
+    <string name="enable_16k_pages" msgid="1758111531461408337">"التشغيل مع صفحات حجمها 16 كيلوبايت"</string>
+    <string name="enable_16k_pages_summary" msgid="1937836453571509085">"التشغيل بنواة متوافقة مع صفحات حجمها 16 كيلوبايت"</string>
+    <string name="confirm_enable_16k_pages_title" msgid="5477376227161609124">"التبديل من الوضع 4 كيلوبايت إلى الوضع 16 كيلوبايت"</string>
+    <string name="confirm_enable_16k_pages_text" msgid="6211693250692246982">"‏جهازك حاليًا في الوضع غير المستند إلى حجم الصفحة، ويستخدم نواة متوافقة مع الصفحات بحجم 4 كيلوبايت. أنت بصدد التبديل إلى الوضع الذي يستخدم صفحات بحجم 16 كيلوبايت. وفي هذا الوضع، لا يمكن ضمان صحة بيانات البرامج. وفي حال فتح برنامج الإقلاع، قد تصبح البيانات المخزَّنة على الهاتف معرَّضة للخطر. سيؤدي هذا الإجراء إلى إعادة تشغيل جهازك. سيتم إيقاف بعض الميزات في هذَين الوضعَين، وبالتالي قد لا تعمل بعض التطبيقات. لإعادة الجهاز إلى وضع الإنتاج، عليك التبديل مرة أخرى إلى الوضع 4 كيلوبايت وقفل برنامج الإقلاع، وسيؤدي ذلك إلى إعادة ضبط الجهاز على الإعدادات الأصلية. بعد تشغيل نظام Android على الجهاز بنجاح، يُرجى إيقاف الإعداد \"فتح قفل المصنّع الأصلي للجهاز\" ضِمن \"خيارات المطوّرين\"."</string>
+    <string name="confirm_enable_4k_pages_title" msgid="3001009010581393119">"التبديل من الوضع 16 كيلوبايت إلى الوضع 4 كيلوبايت"</string>
+    <string name="confirm_enable_4k_pages_text" msgid="3398001587586470689">"‏جهازك حاليًا في الوضع غير المستند إلى حجم الصفحة، ويستخدم نواة متوافقة مع الصفحات بحجم 16 كيلوبايت. أنت بصدد التبديل إلى الوضع الذي يستخدم صفحات بحجم 4 كيلوبايت. وفي هذا الوضع، لا يمكن ضمان صحة بيانات البرامج. وفي حال فتح برنامج الإقلاع، قد تصبح البيانات المخزَّنة على الهاتف معرَّضة للخطر. سيؤدي هذا الإجراء إلى إعادة تشغيل جهازك. سيتم إيقاف بعض الميزات في هذَين الوضعَين، وبالتالي قد لا تعمل بعض التطبيقات. لإعادة الجهاز إلى وضع الإنتاج، عليك قفل برنامج الإقلاع، وسيؤدي ذلك إلى إعادة ضبط الجهاز على الإعدادات الأصلية. بعد تشغيل نظام Android على الجهاز بنجاح، يُرجى إيقاف الإعداد \"فتح قفل المصنّع الأصلي للجهاز\" ضِمن \"خيارات المطوّرين\"."</string>
+    <string name="toast_16k_update_failed_text" msgid="7848383020572918850">"تعذَّر تحديث النواة إلى إصدار متوافق مع الصفحات التي حجمها 16 كيلوبايت."</string>
     <string name="progress_16k_ota_title" msgid="2117218313875523741">"جارٍ تطبيق التغييرات"</string>
-    <!-- no translation found for confirm_format_ext4_title (4754057414728537125) -->
-    <skip />
-    <!-- no translation found for confirm_format_ext4_text (432847493298532536) -->
-    <skip />
+    <string name="confirm_format_ext4_title" msgid="4754057414728537125">"‏هل المطلوب إعادة تنسيق بيانات الجهاز إلى ext4؟ (مطلوب للوضع 16 كيلوبايت)"</string>
+    <string name="confirm_format_ext4_text" msgid="432847493298532536">"‏يجب تحويل قسم البيانات في هذا الجهاز إلى نظام الملفات ext4 لكي يصبح خيار استخدام الوضع 16 كيلوبايت متاحًا ضِمن خيارات المطوِّرين. وفي هذا الوضع، لا يمكن ضمان صحة بيانات البرامج. وفي حال فتح برنامج الإقلاع، قد تصبح البيانات المخزَّنة على الهاتف معرَّضة للخطر. لتفعيل الخيار 16 كيلوبايت، يجب إعادة تشغيل الجهاز مرة أخرى بعد ذلك. بعد تفعيل هذا الوضع، يمكنك التبديل بين الوضعَين 4 كيلوبايت و16 كيلوبايت من خلال إعادة تشغيل الجهاز لمرّة واحدة. سيتم إيقاف بعض الميزات في هذَين الوضعَين، وبالتالي قد لا تعمل بعض التطبيقات. لإعادة الجهاز إلى وضع الإنتاج، عليك التبديل مرة أخرى إلى الوضع 4 كيلوبايت وقفل برنامج الإقلاع، وسيؤدي ذلك إلى إعادة ضبط الجهاز على الإعدادات الأصلية. بعد تشغيل نظام Android على الجهاز بنجاح، يُرجى إيقاف الإعداد \"فتح قفل المصنّع الأصلي للجهاز\" ضِمن \"خيارات المطوّرين\". بعد التأكيد، سيتم حجب بيانات الجهاز وتغيير نظام الملفات إلى ext4. بعد إتمام هذه الخطوات، يُرجى إعادة تفعيل الوضع 16 كيلوبايت."</string>
     <string name="confirm_ext4_button_text" msgid="6045501984773738407">"محو جميع البيانات"</string>
     <string name="format_ext4_failure_toast" msgid="8059453995800471549">"‏تعذَّر حجب قسم البيانات وإعادة تنسيقه إلى ext4."</string>
     <string name="confirm_oem_unlock_for_16k_title" msgid="6062041826568112078">"يجب فتح قفل برنامج الإقلاع"</string>
-    <!-- no translation found for confirm_oem_unlock_for_16k_text (8089310116854544106) -->
-    <skip />
-    <!-- no translation found for page_agnostic_4k_pages_title (293797217034340398) -->
-    <skip />
-    <!-- no translation found for page_agnostic_4k_pages_text_short (731597455785555266) -->
-    <skip />
-    <!-- no translation found for page_agnostic_4k_pages_text (7572233914423063169) -->
-    <skip />
-    <!-- no translation found for page_agnostic_16k_pages_title (8940585327969638637) -->
-    <skip />
-    <!-- no translation found for page_agnostic_16k_pages_text_short (7613206944532151035) -->
-    <skip />
-    <!-- no translation found for page_agnostic_16k_pages_text (2860363435021452169) -->
-    <skip />
-    <!-- no translation found for page_agnostic_notification_channel_name (2058933148654316447) -->
-    <skip />
+    <string name="confirm_oem_unlock_for_16k_text" msgid="8089310116854544106">"‏يجب فتح قفل برنامج الإقلاع على هذا الجهاز قبل استخدام الوضع 16 كيلوبايت ضِمن خيارات المطوِّرين. وفي هذا الوضع، لا يمكن ضمان صحة بيانات البرامج. وفي حال فتح برنامج الإقلاع، قد تصبح البيانات المخزَّنة على الهاتف معرَّضة للخطر. وعند تفعيل الوضع 16 كيلوبايت، سيتم حجب كل بيانات المستخدم وإعداداته. بعد فتح قفل برنامج الإقلاع، سيكون عليك إعادة تشغيل الجهاز مرّتين لتفعيل الخيار 16 كيلوبايت. بعد تفعيل هذا الوضع، يمكنك التبديل بين الوضعَين 4 كيلوبايت و16 كيلوبايت من خلال إعادة تشغيل الجهاز لمرّة واحدة. سيتم إيقاف بعض الميزات في هذَين الوضعَين، وبالتالي قد لا تعمل بعض التطبيقات. لإعادة الجهاز إلى وضع الإنتاج، عليك التبديل مرة أخرى إلى الوضع 4 كيلوبايت وقفل برنامج الإقلاع أو إعدادات المصنّع الأصلي للجهاز، وسيؤدي ذلك إلى إعادة ضبط الجهاز على الإعدادات الأصلية. يُرجى فتح قفل برنامج الإقلاع ثم إعادة المحاولة. يمكنك الاطّلاع على تعليمات حول كيفية تنفيذ هذا الإجراء من خلال الانتقال إلى &lt;a href=\"https://source.android.com/docs/core/architecture/bootloader/locking_unlocking\"&gt;https://source.android.com/docs/core/architecture/bootloader/locking_unlocking&lt;/a&gt;."</string>
+    <string name="page_agnostic_4k_pages_title" msgid="293797217034340398">"استخدام الوضع 4 كيلوبايت غير المستند إلى حجم الصفحة"</string>
+    <string name="page_agnostic_4k_pages_text_short" msgid="731597455785555266">"جهازك الآن في الوضع 4 كيلوبايت ضِمن الوضع غير المستند إلى حجم الصفحة. وفي هذا الوضع، لا يمكن ضمان صحة بيانات البرامج. وفي حال فتح برنامج الإقلاع، قد تصبح البيانات المخزَّنة على الهاتف معرَّضة للخطر. سيتم إيقاف بعض الميزات في هذَين الوضعَين، وبالتالي قد لا تعمل بعض التطبيقات. لإعادة تفعيل وضع الإنتاج، عليك قفل برنامج إقلاع الجهاز. يمكنك النقر لقراءة المزيد."</string>
+    <string name="page_agnostic_4k_pages_text" msgid="7572233914423063169">"‏جهازك الآن في الوضع 4 كيلوبايت ضِمن الوضع غير المستند إلى حجم الصفحة. وفي هذا الوضع، لا يمكن ضمان صحة بيانات البرامج. وفي حال فتح برنامج الإقلاع، قد تصبح البيانات المخزَّنة على الهاتف معرَّضة للخطر. سيتم إيقاف بعض الميزات في هذَين الوضعَين، وبالتالي قد لا تعمل بعض التطبيقات. لإعادة تفعيل وضع الإنتاج، عليك قفل برنامج إقلاع الجهاز. سيؤدي هذا الإجراء إلى إعادة ضبط الجهاز على الإعدادات الأصلية لوضع الإنتاج. بعد تشغيل نظام Android على الجهاز بنجاح، يُرجى إيقاف الإعداد \"فتح قفل المصنّع الأصلي للجهاز\" ضِمن \"خيارات المطوّرين\". إذا تعذَّر تشغيل نظام Android أو كان يعمل بشكل غير مستقر، عليك إعادة تثبيت أحدث نسخ برامج الجهة المصنِّعة من خلال &lt;a href=\"https://developers.google.com/android/images\"&gt;https://developers.google.com/android/images&lt;/a&gt; أو استخدام &lt;a href=\"https://flash.android.com/back-to-public\"&gt;https://flash.android.com/back-to-public&lt;/a&gt;، وتحديد الخيارات \"حجب بيانات الجهاز\" (Wipe Device)، و\"قفل برنامج الإقلاع\" (Lock Bootloader)، و\"فرض تثبيت البيانات في جميع الأقسام\" (Force Flash all partitions)."</string>
+    <string name="page_agnostic_16k_pages_title" msgid="8940585327969638637">"استخدام الوضع 16 كيلوبايت غير المستند إلى حجم الصفحة"</string>
+    <string name="page_agnostic_16k_pages_text_short" msgid="7613206944532151035">"جهازك الآن في الوضع 16 كيلوبايت ضِمن الوضع غير المستند إلى حجم الصفحة. وفي هذا الوضع، لا يمكن ضمان صحة بيانات البرامج. وفي حال فتح برنامج الإقلاع، قد تصبح البيانات المخزَّنة على الهاتف معرَّضة للخطر. سيتم إيقاف بعض الميزات في هذَين الوضعَين، وبالتالي قد لا تعمل بعض التطبيقات. لإعادة تفعيل وضع الإنتاج، عليك التبديل مرة أخرى إلى الوضع 4 كيلوبايت وقفل برنامج الإقلاع للجهاز. يمكنك النقر لقراءة المزيد."</string>
+    <string name="page_agnostic_16k_pages_text" msgid="2860363435021452169">"‏جهازك الآن في الوضع 16 كيلوبايت ضِمن الوضع غير المستند إلى حجم الصفحة. وفي هذا الوضع، لا يمكن ضمان صحة بيانات البرامج. وفي حال فتح برنامج الإقلاع، قد تصبح البيانات المخزَّنة على الهاتف معرَّضة للخطر. سيتم إيقاف بعض الميزات في هذَين الوضعَين، وبالتالي قد لا تعمل بعض التطبيقات. لإعادة تفعيل وضع الإنتاج، عليك التبديل مرة أخرى إلى الوضع 4 كيلوبايت وقفل برنامج الإقلاع للجهاز. سيؤدي هذا الإجراء إلى إعادة ضبط الجهاز على الإعدادات الأصلية لوضع الإنتاج. بعد تشغيل نظام Android على الجهاز بنجاح، يُرجى إيقاف الإعداد \"فتح قفل المصنّع الأصلي للجهاز\" ضِمن \"خيارات المطوّرين\". إذا تعذَّر تشغيل نظام Android أو كان يعمل بشكل غير مستقر، عليك إعادة تثبيت أحدث نسخ برامج الجهة المصنِّعة من خلال &lt;a href=\"https://developers.google.com/android/images\"&gt;https://developers.google.com/android/images&lt;/a&gt; أو استخدام &lt;a href=\"https://flash.android.com/back-to-public\"&gt;https://flash.android.com/back-to-public&lt;/a&gt;، وتحديد الخيارات \"حجب بيانات الجهاز\" (Wipe Device)، و\"قفل برنامج الإقلاع\" (Lock Bootloader)، و\"فرض تثبيت البيانات في جميع الأقسام\" (Force Flash all partitions)."</string>
+    <string name="page_agnostic_notification_channel_name" msgid="2058933148654316447">"الوضع 16 كيلوبايت غير المستند إلى حجم الصفحة"</string>
     <string name="page_agnostic_notification_action" msgid="2309805437430150456">"قراءة المزيد"</string>
     <string name="enable_16k_app_compat_title" msgid="4173159228844992989">"تشغيل التطبيق في وضع التوافق مع حجم الصفحة"</string>
-    <string name="enable_16k_app_compat_details" msgid="3389401258168314266">"سيتم تشغيل التطبيق في وضع التوافق مع حجم الصفحة على جهاز يعرض الصفحة بحجم 16 كيلوبايت عند التبديل."</string>
+    <!-- no translation found for enable_16k_app_compat_details (8008347535539304604) -->
+    <skip />
+    <!-- no translation found for stop_app_dlg_title (3153921585174512587) -->
+    <skip />
+    <!-- no translation found for stop_app_dlg_text (4373849065005318901) -->
+    <skip />
     <string name="bug_report_handler_title" msgid="713439959113250125">"معالِج تقارير الأخطاء"</string>
     <string name="bug_report_handler_picker_footer_text" msgid="4935758328366585673">"يحدّد هذا الإعداد التطبيق الذي سيعالج اختصار \"تقرير الأخطاء\" على جهازك."</string>
     <string name="personal_profile_app_subtext" msgid="5586060806997067676">"شخصي"</string>
@@ -5590,6 +5575,8 @@
     <string name="content_protection_preference_subpage_summary" msgid="3595621220981703364"></string>
     <string name="content_protection_preference_subpage_info" msgid="6890886357653365489"></string>
     <string name="accessibility_setup_password_complete" msgid="6358749253318369077">"تم إعداد كلمة المرور."</string>
+    <!-- no translation found for accessibility_setup_pin_complete (7626702882001984236) -->
+    <skip />
     <string name="show_stylus_pointer_icon" msgid="1010583689203665786">"إظهار المؤشر عند التمرير"</string>
     <string name="media_drm_settings_title" msgid="897424966554739867">"إعدادات إدارة الحقوق الرقمية للوسائط"</string>
     <string name="force_swcrypto_fallback_title" msgid="8053166299808645593">"فرض استخدام تشفير آمن في البرامج"</string>
@@ -5737,4 +5724,6 @@
     <string name="supervision_pin_management_preference_summary_add" msgid="3244161328612671896">"إضافة طريقة لاسترداد رقم التعريف الشخصي"</string>
     <string name="supervision_change_pin_preference_title" msgid="2288584039438231801">"تغيير رقم التعريف الشخصي"</string>
     <string name="supervision_add_forgot_pin_preference_title" msgid="8939945404255748516">"نسيتُ رقم التعريف الشخصي"</string>
+    <!-- no translation found for supervision_web_content_filters_title (3653430162065686156) -->
+    <skip />
 </resources>

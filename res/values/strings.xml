@@ -3021,6 +3021,8 @@
     <string name="screen_resolution_option_full">Max resolution</string>
     <!-- The footer message for switch screen resolution [CHAR LIMIT=NONE] -->
     <string name="screen_resolution_footer">Max resolution uses more of your battery. Switching your resolution may cause some apps to restart.</string>
+    <!-- Screen resolution a11y message announced to replace 'x' in entry e.g. 600 by 800 [CHAR LIMIT=NONE] -->
+    <string name="screen_resolution_delimiter_a11y"><xliff:g id="width">%1$s</xliff:g> by <xliff:g id="height">%2$s</xliff:g></string>
     <!-- Display settings screen, Color mode settings title [CHAR LIMIT=30] -->
     <string name="color_mode_title">Colors</string>
     <!-- Display settings screen, Color mode option for "natural(sRGB) color"  [CHAR LIMIT=45] -->
@@ -10890,9 +10892,17 @@ Data usage charges may apply.</string>
         associated with this device, manage apps, and change this device\’s settings.</string>
 
     <!-- Title for dialog displayed when user taps a setting on their phone that's blocked by Advanced Protection. [CHAR LIMIT=50] -->
-    <string name="disabled_by_advanced_protection_title">Prevented by Advanced Protection</string>
-    <!-- Short summary for dialog displayed when user taps a setting on their phone that's blocked by Advanced Protection. [CHAR LIMIT=NONE] -->
-    <string name="disabled_by_advanced_protection_message">This action is not allowed because Advanced Protection is on for your device.</string>
+    <string name="disabled_by_advanced_protection_title">Restricted by Advanced Protection</string>
+    <!-- Short summary for dialog displayed when user taps an enabled setting on their phone that's blocked by Advanced Protection. [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_advanced_protection_setting_is_on_message">For your security, Advanced Protection requires this setting to remain on</string>
+    <!-- Short summary for dialog displayed when user taps a disabled setting on their phone that's blocked by Advanced Protection. [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_advanced_protection_setting_is_off_message">For your security, Advanced Protection requires this setting to remain off</string>
+    <!-- Short summary for dialog displayed when user performs an action on their phone that's blocked by Advanced Protection. [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_advanced_protection_action_message">For your security, Advanced Protection prevents this action</string>
+    <!-- Short summary for dialog displayed when user tries to connect to a Wi-Fi Wired Equivalent Privacy (WEP) network on their phone that's blocked by Advanced Protection. [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_advanced_protection_wep_action_message">This network uses WEP, an outdated encryption method that can put your data at risk. WEP connections are blocked by Advanced Protection.</string>
+    <!-- Title for a button that will resolve to a help URL explaining what Advanced Protection is. [CHAR LIMIT=50] -->
+    <string name="disabled_by_advanced_protection_help_button_title">Settings</string>
 
     <!-- Turn off a conditional state of the device (e.g. airplane mode, or hotspot) [CHAR LIMIT=30] -->
     <string name="condition_turn_off">Turn off</string>
@@ -11537,6 +11547,9 @@ Data usage charges may apply.</string>
 
     <!-- Title for the screen to show all the gesture navigation settings [CHAR LIMIT=80] -->
     <string name="gesture_settings_activity_title">Gesture Navigation</string>
+
+    <!-- Title for the screen to show the gesture navigation tutorial [CHAR LIMIT=80] -->
+    <string name="gesture_navigation_tutorial_title">Try a demo</string>
 
     <!-- Title for the screen to show all the 2- and 3-button navigation settings. [CHAR LIMIT=80] -->
     <string name="button_navigation_settings_activity_title">Button navigation</string>
@@ -13143,7 +13156,7 @@ Data usage charges may apply.</string>
     <string name="page_agnostic_notification_action">Read more</string>
 
     <string name= "enable_16k_app_compat_title">Run app with page size compat mode</string>
-    <string name= "enable_16k_app_compat_details">App will be forced stopped and run in page size compatibility mode on 16 KB device when toggled.</string>
+    <string name= "enable_16k_app_compat_details">App will be stopped and run in page size compatibility mode on 16 KB device when toggled.</string>
 
     <string name="stop_app_dlg_title">Stop app?</string>
     <!-- [CHAR LIMIT=200] Manage applications, text for dialog when killing persistent apps-->
