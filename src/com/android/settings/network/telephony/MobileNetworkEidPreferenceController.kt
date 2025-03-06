@@ -72,12 +72,12 @@ open class MobileNetworkEidPreferenceController(context: Context, key: String) :
     override fun getAvailabilityStatus(subId: Int): Int = when {
         !SubscriptionUtil.isSimHardwareVisible(mContext)
                 || Utils.isWifiOnly(mContext) -> UNSUPPORTED_ON_DEVICE
-        !Flags.isDualSimOnboardingEnabled() -> CONDITIONALLY_UNAVAILABLE
-        SubscriptionManager.isValidSubscriptionId(subId)
-                && eid.isNotEmpty()
-                && mContext.userManager.isAdminUser -> AVAILABLE
+        !mContext.userManager.isAdminUser -> DISABLED_FOR_USER
+        !Flags.isDualSimOnboardingEnabled()
+                || !SubscriptionManager.isValidSubscriptionId(subId)
+                || eid.isEmpty() -> CONDITIONALLY_UNAVAILABLE
 
-        else -> CONDITIONALLY_UNAVAILABLE
+        else -> AVAILABLE
     }
 
     override fun displayPreference(screen: PreferenceScreen) {
