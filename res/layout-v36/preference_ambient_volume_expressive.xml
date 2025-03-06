@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2024 The Android Open Source Project
+<!-- Copyright (C) 2025 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -17,50 +17,28 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
     android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:gravity="center_vertical"
+    android:background="?android:attr/selectableItemBackground"
     android:paddingStart="?android:attr/listPreferredItemPaddingStart"
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-    android:clickable="false"
-    android:orientation="horizontal">
+    android:clipToPadding="false">
 
-    <LinearLayout
-        android:id="@+id/icon_frame"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:layout_marginEnd="@dimen/settingslib_expressive_space_extrasmall6"
-        android:filterTouchesWhenObscured="false">
-        <androidx.preference.internal.PreferenceImageView
-            android:id="@android:id/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:maxWidth="48dp"
-            app:maxHeight="48dp" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@android:id/title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:singleLine="true"
-        android:textAppearance="?android:attr/textAppearanceListItem"
-        android:textColor="?android:attr/textColorPrimary"
-        android:ellipsize="marquee"
-        android:fadingEdge="horizontal"/>
+    <include layout="@layout/settingslib_expressive_preference_icon_frame"/>
+    <include layout="@layout/settingslib_expressive_preference_text_frame" />
     <ImageView
         android:id="@+id/expand_icon"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:contentDescription="@null"
         android:tint="@androidprv:color/materialColorOnPrimaryContainer"
         android:src="@drawable/ic_keyboard_arrow_down"
-        android:background="@drawable/ambient_expand_icon_background"/>
+        android:background="@drawable/ambient_expand_icon_background_expressive" />
 
 </LinearLayout>
