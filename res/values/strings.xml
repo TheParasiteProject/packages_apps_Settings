@@ -502,6 +502,9 @@
     <!-- The content of a confirmation dialog indicating the impact when the user change the system region. [CHAR LIMIT=NONE]-->
     <string name="desc_notice_device_region_change">Your device will keep %s as a system language</string>
 
+    <!-- The content of a confirmation dialog indicating the impact when the user change the region of the preferred languages. [CHAR LIMIT=NONE]-->
+    <string name="desc_notice_device_region_change_for_preferred_language">%1$s will replace %2$s in your preferred languages</string>
+
     <!-- Title for asking to change system locale or not. [CHAR LIMIT=50]-->
     <string name="title_change_system_locale">Change system language to %s ?</string>
 
