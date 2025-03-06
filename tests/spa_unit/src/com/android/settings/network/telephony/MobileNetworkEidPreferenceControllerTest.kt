@@ -84,6 +84,12 @@ class MobileNetworkEidPreferenceControllerTest {
             .strictness(Strictness.LENIENT)
             .startMocking()
 
+        // By default, available
+        whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(true)
+        mockTelephonyManager.stub {
+            on { isDataCapable } doReturn true
+        }
+
         preferenceScreen.addPreference(preference)
         controller.displayPreference(preferenceScreen)
     }
@@ -95,7 +101,6 @@ class MobileNetworkEidPreferenceControllerTest {
 
     @Test
     fun refreshData_getEmptyEid_preferenceIsNotVisible() = runBlocking {
-        whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(true)
         whenever(SubscriptionUtil.getActiveSubscriptions(any())).thenReturn(
             listOf(
                 SUB_INFO_1,
@@ -113,7 +118,6 @@ class MobileNetworkEidPreferenceControllerTest {
 
     @Test
     fun refreshData_getEmptyEid_preferenceSummaryIsExpected() = runBlocking {
-        whenever(SubscriptionUtil.isSimHardwareVisible(context)).thenReturn(true)
         whenever(SubscriptionUtil.getActiveSubscriptions(any())).thenReturn(
             listOf(
                 SUB_INFO_1,
@@ -138,7 +142,18 @@ class MobileNetworkEidPreferenceControllerTest {
 
         val availabilityStatus = controller.availabilityStatus
 
-        assertThat(availabilityStatus).isEqualTo(BasePreferenceController.CONDITIONALLY_UNAVAILABLE)
+        assertThat(availabilityStatus).isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE)
+    }
+
+    @Test
+    fun getAvailabilityStatus_notDataCapable() {
+        mockTelephonyManager.stub {
+            on { isDataCapable } doReturn false
+        }
+
+        val availabilityStatus = controller.availabilityStatus
+
+        assertThat(availabilityStatus).isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE)
     }
 
     private companion object {
