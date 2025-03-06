@@ -7275,6 +7275,12 @@ Data usage charges may apply.</string>
         generic error. [CHAR LIMIT=120] -->
     <string name="vpn_always_on_invalid_reason_other">The information entered doesn\'t support
         always-on VPN</string>
+    <!-- Hint for an optional field in a VPN profile. [CHAR LIMIT=40] -->
+    <string name="vpn_optional">(optional)</string>
+    <!-- Hint for a required field in a VPN profile. [CHAR LIMIT=40] -->
+    <string name="vpn_required">(required)</string>
+    <!-- Error message displayed below the VPN EditText when the filed is required. [CHAR LIMIT=NONE] -->
+    <string name="vpn_field_required">The field is required</string>
 
     <!-- Button label to cancel changing a VPN profile. [CHAR LIMIT=40] -->
     <string name="vpn_cancel">Cancel</string>
