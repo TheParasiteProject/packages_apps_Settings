@@ -14309,6 +14309,14 @@ Data usage charges may apply.</string>
     <string name="supervision_add_forgot_pin_preference_title">Forgot PIN</string>
     <!-- Title for web content filters entry [CHAR LIMIT=60] -->
     <string name="supervision_web_content_filters_title">Web content filters</string>
+    <!-- Title for web content filters browser category [CHAR LIMIT=60] -->
+    <string name="supervision_web_content_filters_browser_title">Google Chrome and Web</string>
+    <!-- Title for web content filters browser category block explicit sites option [CHAR LIMIT=60] -->
+    <string name="supervision_web_content_filters_browser_block_explicit_sites_title">Try to block explicit sites</string>
+    <!-- Summary for web content filters browser category block explicit sites option [CHAR LIMIT=None] -->
+    <string name="supervision_web_content_filters_browser_block_explicit_sites_summary">No filter is perfect, but this should help hide sexually explicit sites</string>
+    <!-- Title for web content filters browser category allow all sites option [CHAR LIMIT=60] -->
+    <string name="supervision_web_content_filters_browser_allow_all_sites_title">Allow all sites</string>
     <!-- Generic content description that is attached to the preview illustration at the top of an Accessibility feature toggle page. [CHAR LIMIT=NONE] -->
     <string name="accessibility_illustration_content_description"><xliff:g id="feature" example="Select to Speak">%1$s</xliff:g> animation</string>
 </resources>
