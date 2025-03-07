@@ -13149,6 +13149,11 @@ Data usage charges may apply.</string>
     <!-- [CHAR LIMIT=200] Manage applications, text for dialog when killing persistent apps-->
     <string name="stop_app_dlg_text">Application will be stopped to apply page size compat setting.</string>
 
+    <!-- Error messages for 16 KB Developer option-->
+    <string name="error_pending_updates">Kernel update failed. Check and install any pending updates.</string>
+
+    <string name="error_ota_failed">Kernel update failed. Error occurred while applying OTA.</string>
+
     <!-- DSU Loader. Do not translate. -->
 
     <string name="dsu_loader_title" translatable="false">DSU Loader</string>
