@@ -36,6 +36,7 @@ import android.widget.TextView;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.PreferenceScreen;
 
+import com.android.server.accessibility.Flags;
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
 import com.android.settingslib.core.lifecycle.LifecycleObserver;
@@ -83,7 +84,7 @@ public class ToggleAutoclickCustomSeekbarController extends BasePreferenceContro
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        return Flags.enableAutoclickIndicator() ? CONDITIONALLY_UNAVAILABLE : AVAILABLE;
     }
 
     @Override
