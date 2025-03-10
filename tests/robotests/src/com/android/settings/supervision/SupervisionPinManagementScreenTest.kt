@@ -18,6 +18,7 @@ package com.android.settings.supervision
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.android.settings.R
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -41,7 +42,7 @@ class SupervisionPinManagementScreenTest {
 
     @Test
     fun getSummary_addPin() {
-        assertThat(supervisionPinManagementScreen.getPreferenceSummary(context))
-            .isEqualTo("Add a PIN recovery method")
+        assertThat(supervisionPinManagementScreen.summary)
+            .isEqualTo(R.string.supervision_pin_management_preference_summary_add)
     }
 }
