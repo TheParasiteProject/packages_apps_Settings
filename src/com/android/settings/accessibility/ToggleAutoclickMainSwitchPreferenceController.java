@@ -21,9 +21,19 @@ import static com.android.settings.accessibility.AccessibilityUtil.State.ON;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.database.ContentObserver;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
+import androidx.lifecycle.DefaultLifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 
 import com.android.server.accessibility.Flags;
 import com.android.settings.R;
@@ -31,9 +41,24 @@ import com.android.settings.core.TogglePreferenceController;
 
 /** The controller to handle main switch to turn on or turn off accessibility autoclick. */
 public class ToggleAutoclickMainSwitchPreferenceController
-        extends TogglePreferenceController {
+        extends TogglePreferenceController implements DefaultLifecycleObserver {
 
+    static final Uri ACCESSIBILITY_AUTOCLICK_ENABLED_URI =
+            Settings.Secure.getUriFor(Settings.Secure.ACCESSIBILITY_AUTOCLICK_ENABLED);
     private final ContentResolver mContentResolver;
+    private @Nullable Preference mPreference;
+
+    @VisibleForTesting
+    final ContentObserver mSettingsObserver =
+            new ContentObserver(new Handler(Looper.getMainLooper())) {
+                @Override
+                public void onChange(boolean selfChange, @Nullable Uri uri) {
+                    if (mPreference == null || uri == null) {
+                        return;
+                    }
+                    updateState(mPreference);
+                }
+            };
 
     public ToggleAutoclickMainSwitchPreferenceController(
             @NonNull Context context, @NonNull String preferenceKey) {
@@ -44,6 +69,12 @@ public class ToggleAutoclickMainSwitchPreferenceController
     @Override
     public int getAvailabilityStatus() {
         return Flags.enableAutoclickIndicator() ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+    }
+
+    @Override
+    public void displayPreference(@NonNull PreferenceScreen screen) {
+        super.displayPreference(screen);
+        mPreference = screen.findPreference(getPreferenceKey());
     }
 
     @Override
@@ -59,6 +90,19 @@ public class ToggleAutoclickMainSwitchPreferenceController
                 isChecked ? ON : OFF);
 
         return true;
+    }
+
+    @Override
+    public void onStart(@NonNull LifecycleOwner owner) {
+        mContentResolver.registerContentObserver(
+                ACCESSIBILITY_AUTOCLICK_ENABLED_URI,
+                /* notifyForDescendants= */ false,
+                mSettingsObserver);
+    }
+
+    @Override
+    public void onStop(@NonNull LifecycleOwner owner) {
+        mContentResolver.unregisterContentObserver(mSettingsObserver);
     }
 
     @Override
