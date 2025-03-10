@@ -36,8 +36,8 @@ class SupervisionPinManagementScreenTest {
 
     @Test
     fun getTitle() {
-        assertThat(supervisionPinManagementScreen.getPreferenceTitle(context))
-            .isEqualTo("Manage PIN")
+        assertThat(supervisionPinManagementScreen.title)
+            .isEqualTo(R.string.supervision_pin_management_preference_title)
     }
 
     @Test
