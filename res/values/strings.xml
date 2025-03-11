@@ -3912,6 +3912,18 @@
     <!-- Label for bluetooth tether checkbox [CHAR LIMIT=25]-->
     <string name="bluetooth_tether_checkbox_text">Bluetooth tethering</string>
 
+    <!-- Ethernet settings-->
+    <!-- Label for ethernet IP address [CHAR LIMIT=NONE]-->
+    <string name="ethernet_ip_address">IP address</string>
+    <!-- Label for ethernet MAC address [CHAR LIMIT=NONE]-->
+    <string name="ethernet_mac_address_title">MAC address</string>
+    <!-- Label for ethernet transfer speed [CHAR LIMIT=NONE]-->
+    <string name="tx_ethernet_speed">Transit link speed</string>
+    <!-- Label for ethernet receive speed [CHAR LIMIT=NONE]-->
+    <string name="rx_ethernet_speed">Receive link speed</string>
+    <!-- Label for ethernet network usage [CHAR LIMIT=NONE]-->
+    <string name="ethernet_network_usage">Network usage</string>
+
     <!-- Ethernet Tethering settings-->
     <!-- Label for ethernet tether checkbox [CHAR LIMIT=NONE]-->
     <string name="ethernet_tether_checkbox_text">Ethernet tethering</string>
