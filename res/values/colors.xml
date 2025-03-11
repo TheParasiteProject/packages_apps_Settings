@@ -64,8 +64,8 @@
     <color name="homepage_sound_background">@color/homepage_pink_bg</color>
     <color name="homepage_modes_foreground">@color/homepage_pink_fg</color>
     <color name="homepage_modes_background">@color/homepage_pink_bg</color>
-    <color name="homepage_hub_mode_foreground">@color/homepage_pink_fg</color>
-    <color name="homepage_hub_mode_background">@color/homepage_pink_bg</color>
+    <color name="homepage_hub_mode_foreground">@color/homepage_orange_fg</color>
+    <color name="homepage_hub_mode_background">@color/homepage_orange_bg</color>
     <color name="homepage_display_foreground">@color/homepage_orange_fg</color>
     <color name="homepage_display_background">@color/homepage_orange_bg</color>
     <color name="homepage_wallpaper_foreground">@color/homepage_orange_fg</color>
