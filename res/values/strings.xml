@@ -2073,13 +2073,17 @@
     <string name="bluetooth_scan_change">Change</string>
 
     <!-- Dialog title when key is missing in a Bluetooth device -->
-    <string name="bluetooth_key_missing_title"><xliff:g id="device_name">%1$s</xliff:g> not connected</string>
+    <string name="bluetooth_key_missing_title">Can’t connect <xliff:g id="device_name">%1$s</xliff:g></string>
     <!-- Dialog content when key is missing in a Bluetooth device -->
-    <string name="bluetooth_key_missing_message">For your security, forget this device, then pair it again</string>
+    <string name="bluetooth_key_missing_message">For more details, go to device settings</string>
     <!-- Button text to forget device when bluetooth key is missing -->
     <string name="bluetooth_key_missing_forget">Forget device</string>
     <!-- Button text to cancel when bluetooth key is missing-->
     <string name="bluetooth_key_missing_cancel">Cancel</string>
+    <!-- Button text to go to device settings when bluetooth key is missing -->
+    <string name="bluetooth_key_missing_device_settings">Device settings</string>
+    <!-- Button text to close the bluetooth key missing dialog-->
+    <string name="bluetooth_key_missing_close">Close</string>
 
     <!-- Title of device details screen [CHAR LIMIT=28]-->
     <string name="device_details_title">Device details</string>
@@ -2109,6 +2113,8 @@
     <string name="device_details_battery">Battery</string>
     <!-- Content Description for battery charging icon in device details screen [CHAR LIMIT=NONE]-->
     <string name="device_details_battery_charging">Battery, charging</string>
+    <!-- Title of item to let user know the bluetooth key is missing [CHAR LIMIT=NONE]-->
+    <string name="device_details_key_missing_title">Try restarting <xliff:g id="device_name">%1$s</xliff:g>. If that doesn’t work, forget the device. For your security, only pair it again when you aren’t in a public space.\n\nIf this device isn’t nearby, you don’t need to do anything.</string>
 
 
     <!--  Bluetooth device details. In the confirmation dialog for unpairing a paired device, this is the label on the button that will complete the unpairing action. -->
