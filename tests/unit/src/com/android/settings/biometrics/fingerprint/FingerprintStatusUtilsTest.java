@@ -179,13 +179,25 @@ public class FingerprintStatusUtilsTest {
     }
 
     @Test
-    public void getSummary_whenNotEnrolled_returnsSummaryNone() {
+    @DisableFlags(com.android.settings.flags.Flags.FLAG_BIOMETRICS_ONBOARDING_EDUCATION)
+    public void getSummary_whenNotEnrolled_flagOff_returnsSummaryNone() {
         when(mFingerprintManager.hasEnrolledTemplates(anyInt())).thenReturn(false);
 
         assertThat(mFingerprintStatusUtils.getSummary())
                 .isEqualTo(ResourcesUtils.getResourcesString(
                         mApplicationContext,
                         "security_settings_fingerprint_preference_summary_none"));
+    }
+
+    @Test
+    @EnableFlags(com.android.settings.flags.Flags.FLAG_BIOMETRICS_ONBOARDING_EDUCATION)
+    public void getSummary_whenNotEnrolled_flagOn_returnsSummaryNone() {
+        when(mFingerprintManager.hasEnrolledTemplates(anyInt())).thenReturn(false);
+
+        assertThat(mFingerprintStatusUtils.getSummary())
+                .isEqualTo(ResourcesUtils.getResourcesString(
+                        mApplicationContext,
+                        "security_settings_fingerprint_preference_summary_none_new"));
     }
 
     @Test
