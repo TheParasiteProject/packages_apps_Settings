@@ -211,6 +211,7 @@ public class FingerprintSafetySourceTest {
     @EnableFlags(android.app.supervision.flags.Flags.FLAG_DEPRECATE_DPM_SUPERVISION_APIS)
     public void setSafetySourceData_withFingerprintNotEnrolled_whenSupervisionIsOn_setsData() {
         when(mSupervisionManager.isSupervisionEnabledForUser(USER_ID)).thenReturn(true);
+        when(mSupervisionManager.getActiveSupervisionAppPackage()).thenReturn("supervision.pkg");
         when(mSafetyCenterManagerWrapper.isEnabled(mApplicationContext)).thenReturn(true);
         when(mFingerprintManager.isHardwareDetected()).thenReturn(true);
         when(mFingerprintManager.hasEnrolledFingerprints(anyInt())).thenReturn(false);
@@ -272,6 +273,7 @@ public class FingerprintSafetySourceTest {
     public void setSafetySourceData_withFingerprintsEnrolled_whenSupervisionIsOn_setsData() {
         int enrolledFingerprintsCount = 2;
         when(mSupervisionManager.isSupervisionEnabledForUser(USER_ID)).thenReturn(true);
+        when(mSupervisionManager.getActiveSupervisionAppPackage()).thenReturn("supervision.pkg");
         when(mSafetyCenterManagerWrapper.isEnabled(mApplicationContext)).thenReturn(true);
         when(mFingerprintManager.isHardwareDetected()).thenReturn(true);
         when(mFingerprintManager.hasEnrolledFingerprints(anyInt())).thenReturn(true);

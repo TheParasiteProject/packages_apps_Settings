@@ -155,6 +155,7 @@ public class FaceStatusUtilsTest {
     @EnableFlags(android.app.supervision.flags.Flags.FLAG_DEPRECATE_DPM_SUPERVISION_APIS)
     public void getDisabledAdmin_whenFaceDisabled_returnsRestriction() {
         when(mSupervisionManager.isSupervisionEnabledForUser(USER_ID)).thenReturn(true);
+        when(mSupervisionManager.getActiveSupervisionAppPackage()).thenReturn("supervision.pkg");
         when(mDevicePolicyManager.getKeyguardDisabledFeatures(null))
                 .thenReturn(DevicePolicyManager.KEYGUARD_DISABLE_FACE);
 
