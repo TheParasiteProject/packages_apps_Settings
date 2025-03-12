@@ -2817,6 +2817,15 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".supervision.ConfirmSupervisionCredentialsActivity"
+            android:exported="true"
+            android:featureFlag="android.app.supervision.flags.supervision_manager_apis">
+            <intent-filter>
+                <action android:name="android.app.supervision.action.CONFIRM_SUPERVISION_CREDENTIALS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".SetupRedactionInterstitial"
             android:enabled="false"
             android:exported="true"
