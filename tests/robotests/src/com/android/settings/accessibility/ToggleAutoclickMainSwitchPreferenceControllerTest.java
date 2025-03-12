@@ -16,6 +16,9 @@
 
 package com.android.settings.accessibility;
 
+import static androidx.lifecycle.Lifecycle.Event.ON_START;
+import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
+
 import static com.android.settings.accessibility.AccessibilityUtil.State.OFF;
 import static com.android.settings.accessibility.AccessibilityUtil.State.ON;
 
@@ -26,15 +29,19 @@ import android.platform.test.annotations.EnableFlags;
 import android.platform.test.flag.junit.SetFlagsRule;
 import android.provider.Settings;
 
+import androidx.lifecycle.LifecycleOwner;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settings.core.BasePreferenceController;
+import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowContentResolver;
 
 @RunWith(RobolectricTestRunner.class)
 public class ToggleAutoclickMainSwitchPreferenceControllerTest {
@@ -43,11 +50,20 @@ public class ToggleAutoclickMainSwitchPreferenceControllerTest {
 
     @Rule public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
     private final Context mContext = ApplicationProvider.getApplicationContext();
+
+    private ShadowContentResolver mShadowContentResolver;
     private ToggleAutoclickMainSwitchPreferenceController mController;
+    private LifecycleOwner mLifecycleOwner;
+    private Lifecycle mLifecycle;
 
     @Before
     public void setUp() {
+        mShadowContentResolver = Shadow.extract(mContext.getContentResolver());
+
         mController = new ToggleAutoclickMainSwitchPreferenceController(mContext, PREFERENCE_KEY);
+        mLifecycleOwner = () -> mLifecycle;
+        mLifecycle = new Lifecycle(mLifecycleOwner);
+        mLifecycle.addObserver(mController);
     }
 
     @Test
@@ -79,5 +95,24 @@ public class ToggleAutoclickMainSwitchPreferenceControllerTest {
         assertThat(Settings.Secure.getInt(mContext.getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_AUTOCLICK_ENABLED, OFF))
                 .isEqualTo(OFF);
+    }
+
+    @Test
+    public void onStart_shouldRegisterContentObserver() {
+        mLifecycle.handleLifecycleEvent(ON_START);
+
+        assertThat(mShadowContentResolver.getContentObservers(
+                Settings.Secure.getUriFor(Settings.Secure.ACCESSIBILITY_AUTOCLICK_ENABLED)))
+                .hasSize(1);
+    }
+
+    @Test
+    public void onStop_shouldUnregisterContentObserver() {
+        mLifecycle.handleLifecycleEvent(ON_START);
+        mLifecycle.handleLifecycleEvent(ON_STOP);
+
+        assertThat(mShadowContentResolver.getContentObservers(
+                Settings.Secure.getUriFor(Settings.Secure.ACCESSIBILITY_AUTOCLICK_ENABLED)))
+                .isEmpty();
     }
 }
