@@ -2383,7 +2383,7 @@
     <!-- Extended message for talkback to say when Advanced Options is collapsed. (e.g., Double-tap to expand) [CHAR LIMIT=NONE] -->
     <string name="wifi_advanced_toggle_description_collapsed">expand</string>
     <!-- Label for the SSID of the network -->
-    <string name="wifi_ssid">Network name</string>
+    <string name="wifi_ssid">Network name*</string>
     <!-- Hint for a text field to enter the SSID of a hidden wifi network. [CHAR LIMIT=35] -->
     <string name="wifi_ssid_hint">Enter the SSID</string>
     <!-- Label for the security of the connection -->
@@ -2429,7 +2429,9 @@
     <!-- Label for the EAP anonymous identity of the network -->
     <string name="wifi_eap_anonymous">Anonymous identity</string>
     <!-- Label for the password of the secured network -->
-    <string name="wifi_password">Password</string>
+    <string name="wifi_password">Password*</string>
+    <!-- Label for the password of the secured network -->
+    <string name="wifi_password_invalid">The password is invalid</string>
     <!-- Label for the check box to show password -->
     <string name="wifi_show_password">Show password</string>
     <!-- Label for the radio button to choose wifi ap 2.4 GHz band -->
@@ -2562,6 +2564,8 @@
     <string name="wifi_scan_always_turn_on_message_unknown">To improve location accuracy and for other purposes, an unknown app wants to turn on network scanning, even when Wi\u2011Fi is off.\n\nAllow this for all apps that want to scan?</string>
     <string name="wifi_scan_always_confirm_allow">Allow</string>
     <string name="wifi_scan_always_confirm_deny">Deny</string>
+    <!-- Error message displayed below the Wi-Fi EditText when the filed is required. [CHAR LIMIT=NONE] -->
+    <string name="wifi_field_required">*required</string>
 
     <!-- Dialog text to tell the user that the selected network does not have Internet access. -->
     <string name="no_internet_access_text">This network has no internet access. Stay connected?</string>
