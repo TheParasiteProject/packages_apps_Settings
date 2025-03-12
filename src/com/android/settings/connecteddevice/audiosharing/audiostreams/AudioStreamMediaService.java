@@ -103,7 +103,7 @@ public class AudioStreamMediaService extends Service {
     private final PlaybackState.Builder mPlayStateHysteresisBuilder =
             new PlaybackState.Builder()
                     .setState(
-                            PlaybackState.STATE_STOPPED,
+                            PlaybackState.STATE_PAUSED,
                             STATIC_PLAYBACK_POSITION,
                             ZERO_PLAYBACK_SPEED)
                     .addCustomAction(
