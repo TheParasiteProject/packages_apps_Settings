@@ -78,6 +78,12 @@
 
     <!-- Content description for preview pager. [CHAR LIMIT=NONE] -->
     <string name="preview_pager_content_description">Preview</string>
+    <!-- Content description for home screen preview. [CHAR LIMIT=NONE] -->
+    <string name="preview_pager_home_content_description">Home screen preview</string>
+    <!-- Content description for message preview. [CHAR LIMIT=NONE] -->
+    <string name="preview_pager_message_content_description">Message preview</string>
+    <!-- Content description for email preview. [CHAR LIMIT=NONE] -->
+    <string name="preview_pager_email_content_description">Email preview</string>
     <!-- Content description for qrcode image. [CHAR LIMIT=none]-->
     <string name="qr_code_content_description">QR code</string>
     <!-- Previous button for preview pager. [CHAR LIMIT=NONE] -->
