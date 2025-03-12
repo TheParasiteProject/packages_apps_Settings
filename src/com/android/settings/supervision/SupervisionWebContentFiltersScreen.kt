@@ -47,8 +47,9 @@ class SupervisionWebContentFiltersScreen : PreferenceScreenCreator {
                 R.string.supervision_web_content_filters_browser_title,
             ) +=
                 {
-                    +SupervisionBlockExplicitSitesPreference()
-                    +SupervisionAllowAllSitesPreference()
+                    val dataStore = SupervisionSafeSitesDataStore(context)
+                    +SupervisionBlockExplicitSitesPreference(dataStore)
+                    +SupervisionAllowAllSitesPreference(dataStore)
                 }
             // TODO(b/401569571) implement the SafeSearch group.
         }
