@@ -24,7 +24,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
-import com.android.settings.dashboard.DashboardFragment;
+import com.android.settings.accessibility.BaseSupportFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.search.SearchIndexable;
@@ -36,7 +36,7 @@ import java.util.List;
  * Settings screen for Dark UI Mode
  */
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
-public class DarkModeSettingsFragment extends DashboardFragment {
+public class DarkModeSettingsFragment extends BaseSupportFragment {
 
     private static final String TAG = "DarkModeSettingsFrag";
     private static final String DARK_THEME_END_TIME = "dark_theme_end_time";
