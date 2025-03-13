@@ -5608,6 +5608,14 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name="com.android.settings.connecteddevice.audiosharing.audiostreams.PrivateBroadcastReceiver"
+            android:permission="android.permission.BLUETOOTH_PRIVILEGED"
+            android:exported="true"> <!-- Exported for SystemUI. -->
+            <intent-filter>
+                <action android:name="com.android.settings.action.BLUETOOTH_LE_AUDIO_PRIVATE_BROADCAST_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
         <receiver
             android:name=".shortcut.ShortcutsUpdateReceiver"
             android:exported="true">
