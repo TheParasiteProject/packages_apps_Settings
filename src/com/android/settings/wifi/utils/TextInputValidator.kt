@@ -16,17 +16,20 @@
 
 package com.android.settings.wifi.utils
 
-import android.util.Log
-import androidx.appcompat.app.AlertDialog
+/**
+ * The validator used to validate all {@code TextInputGroup} at the same time
+ */
+class TextInputValidator {
 
-class WifiDialogHelper(
-    alertDialog: AlertDialog,
-    private val validator: TextInputValidator,
-) : AlertDialogHelper(alertDialog) {
+    private val textInputList: MutableList<TextInputGroup> = ArrayList()
 
-    override fun canDismiss(): Boolean = validator.validate()
+    fun addTextInput(textInputGroup: TextInputGroup) {
+        textInputList += textInputGroup
+    }
 
-    companion object {
-        const val TAG = "WifiDialogHelper"
+    fun validate(): Boolean {
+        var isValidate = true
+        for (input in textInputList) if (!input.validate()) isValidate = false
+        return isValidate
     }
 }
