@@ -37,6 +37,7 @@ import android.view.accessibility.AccessibilityManager;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settings.R;
@@ -108,6 +109,14 @@ public class AccessibilitySettingsForSetupWizard extends DashboardFragment
                         });
             }
         }
+    }
+
+    @Override
+    protected RecyclerView.Adapter onCreateAdapter(PreferenceScreen preferenceScreen) {
+        if (ThemeHelper.shouldApplyGlifExpressiveStyle(getContext())) {
+            return new PreferenceAdapterInSuw(preferenceScreen);
+        }
+        return super.onCreateAdapter(preferenceScreen);
     }
 
     @Override
