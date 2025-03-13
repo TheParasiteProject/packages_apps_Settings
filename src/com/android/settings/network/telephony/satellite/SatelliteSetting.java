@@ -61,8 +61,6 @@ import java.util.Set;
 /** Handle Satellite Setting Preference Layout. */
 public class SatelliteSetting extends RestrictedDashboardFragment {
     private static final String TAG = "SatelliteSetting";
-    private static final String PREF_KEY_ABOUT_SATELLITE_MESSAGING =
-            "key_about_satellite_messaging";
     private static final String PREF_KEY_CATEGORY_YOUR_SATELLITE_PLAN =
             "key_category_your_satellite_plan";
     private static final String PREF_KEY_YOUR_SATELLITE_PLAN = "key_your_satellite_plan";
@@ -98,14 +96,17 @@ public class SatelliteSetting extends RestrictedDashboardFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        mActivity = getActivity();
+        mSubId = mActivity.getIntent().getIntExtra(SUB_ID,
+                SubscriptionManager.INVALID_SUBSCRIPTION_ID);
+
         use(SatelliteAppListCategoryController.class).init();
+        use(SatelliteSettingAboutContentController.class).init(mSubId);
     }
 
     @Override
     public void onCreate(@NonNull Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mActivity = getActivity();
-
         mSatelliteManager = mActivity.getSystemService(SatelliteManager.class);
         if (mSatelliteManager == null) {
             Log.d(TAG, "SatelliteManager is null, do nothing.");
@@ -113,8 +114,6 @@ public class SatelliteSetting extends RestrictedDashboardFragment {
             return;
         }
 
-        mSubId = mActivity.getIntent().getIntExtra(SUB_ID,
-                SubscriptionManager.INVALID_SUBSCRIPTION_ID);
         mConfigBundle = fetchCarrierConfigData(mSubId);
 
         if (!isSatelliteAttachSupported(mSubId)) {
@@ -135,7 +134,6 @@ public class SatelliteSetting extends RestrictedDashboardFragment {
         super.onViewCreated(view, savedInstanceState);
         boolean isSatelliteEligible = isSatelliteEligible();
         updateTitle();
-        updateAboutSatelliteContent();
         updateMobilePlan(isSatelliteEligible);
         updateHowItWorksContent(isSatelliteEligible);
         updateFooterContent();
@@ -153,18 +151,6 @@ public class SatelliteSetting extends RestrictedDashboardFragment {
 
     private void updateTitle() {
         findPreference("satellite_setting").setTitle(getSubjectString());
-    }
-
-    // About satellite content
-    private void updateAboutSatelliteContent() {
-        Preference categoryTitle = findPreference(PREF_KEY_CATEGORY_ABOUT_SATELLITE);
-        categoryTitle.setTitle(
-                getString(R.string.category_name_about_satellite_messaging,
-                        getDescriptionString()));
-
-        Preference preference = findPreference(PREF_KEY_ABOUT_SATELLITE_MESSAGING);
-        preference.setTitle(
-                getResources().getString(R.string.title_about_satellite_setting, mSimOperatorName));
     }
 
     private void updateMobilePlan(boolean isSatelliteEligible) {
