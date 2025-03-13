@@ -121,10 +121,6 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
             return false;
         }
 
-        if (!Enable16kUtils.isDataExt4()) {
-            EnableExt4WarningDialog.show(mFragment, this);
-            return false;
-        }
         Enable16kPagesWarningDialog.show(mFragment, this, mEnable16k);
         return true;
     }
@@ -397,9 +393,14 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
                         createUpdateInfo(SystemUpdateManager.STATUS_WAITING_REBOOT);
                 manager.updateSystemUpdateInfo(info);
 
-                // Restart device to complete update
-                PowerManager pm = mContext.getSystemService(PowerManager.class);
-                pm.reboot(REBOOT_REASON);
+                if (!Enable16kUtils.isDataExt4()) {
+                    wipeData();
+                } else {
+                    // Restart device to complete update
+                    PowerManager pm = mContext.getSystemService(PowerManager.class);
+                    pm.reboot(REBOOT_REASON);
+                }
+
             } else {
                 Log.e(TAG, "applyPayload failed, error code: " + errorCode);
                 displayToast(mContext.getString(R.string.toast_16k_update_failed_text));
