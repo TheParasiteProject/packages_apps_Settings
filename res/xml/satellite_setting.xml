@@ -66,7 +66,7 @@
         android:key="key_category_satellite_apps"
         android:title="@string/category_title_satellite_supported_apps"
         settings:isPreferenceVisible="false"
-        settings:controller="com.android.settings.network.telephony.SatelliteAppListCategoryController"
+        settings:controller="com.android.settings.network.telephony.satellite.SatelliteAppListCategoryController"
         settings:searchable="false">
 
         <!-- See all satellite apps -->
@@ -74,7 +74,7 @@
             android:key="key_see_all_satellite_apps"
             android:title="@string/title_satellite_supported_app_list_entry"
             android:icon="@drawable/ic_chevron_right_24dp"
-            android:fragment="com.android.settings.network.telephony.SatelliteAppListFragment"
+            android:fragment="com.android.settings.network.telephony.satellite.SatelliteAppListFragment"
             android:order="5"
             settings:searchable="false"/>
     </PreferenceCategory>
