@@ -2448,6 +2448,8 @@
     <string name="wifi_eap_anonymous">Anonymous identity</string>
     <!-- Label for the password of the secured network -->
     <string name="wifi_password">Password*</string>
+    <!-- Label for the optional password of the secured network -->
+    <string name="wifi_password_optional">Password (optional)</string>
     <!-- Label for the password of the secured network -->
     <string name="wifi_password_invalid">The password is invalid</string>
     <!-- Label for the check box to show password -->
