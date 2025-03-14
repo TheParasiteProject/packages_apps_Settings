@@ -606,10 +606,10 @@
     <string name="regional_pref_footer_learn_more_link" translatable="false">https://support.google.com/android?p=regional_preferences</string>
     <!-- The title of metric for preference of measurement system. [CHAR LIMIT=50] -->
     <string name="metric_measurement_system">Metric</string>
-    <!-- The title of imperial US for preference of measurement system. [CHAR LIMIT=50] -->
-    <string name="us_measurement_system">Imperial (US)</string>
-    <!-- The title of imperial UK for preference of measurement system. [CHAR LIMIT=50] -->
-    <string name="uk_measurement_system">Imperial (UK)</string>
+    <!-- The title of the measurement system used in the US, for example temperature is in Fahrenheit, and wind speed is mph. [CHAR LIMIT=50] -->
+    <string name="us_measurement_system">US</string>
+    <!-- The title of the measurement system used in the UK, for example temperature is in Celsius, and wind speed is mph. [CHAR LIMIT=50] -->
+    <string name="uk_measurement_system">UK</string>
 
     <!-- Category for the terms of address. [CHAR LIMIT=NONE]-->
     <string name="category_title_terms_of_address">Additional preferences</string>
