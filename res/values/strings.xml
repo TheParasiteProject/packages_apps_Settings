@@ -12695,10 +12695,10 @@ Data usage charges may apply.</string>
     <string name="satellite_setting_summary_without_entitlement">Send and receive text messages by satellite. Contact your carrier for details.</string>
     <!-- Search keywords for "_satellite_setting_preference_layout" [CHAR_LIMIT=NONE] -->
     <string name="keywords_satellite_setting">Satellite messaging, satellite connectivity</string>
-    <!-- Category name "About satellite messaging" [CHAR_LIMIT=NONE] -->
-    <string name="category_name_about_satellite_messaging">About <xliff:g id="subject" example="satellite messaging">%1$s</xliff:g></string>
-    <!-- Summary for category "About satellite messaging" [CHAR_LIMIT=NONE] -->
-    <string name="title_about_satellite_setting">You can send and receive text messages by satellite with an eligible <xliff:g id="carrier_name" example="T-Mobile">%1$s</xliff:g> account</string>
+    <!-- Category name "About satellite connectivity" [CHAR_LIMIT=NONE] -->
+    <string name="category_name_about_satellite_connectivity">About satellite connectivity</string>
+    <!-- Description for category "About satellite connectivity" [CHAR_LIMIT=NONE] -->
+    <string name="description_about_satellite_setting">You can send and receive text messages and use some apps by satellite with an eligible <xliff:g id="carrier_name" example="T-Mobile">%1$s</xliff:g> account</string>
     <!-- Category title "Your mobile plan" [CHAR_LIMIT=NONE] -->
     <string name="category_title_your_satellite_plan">Your <xliff:g id="carrier_name" example="T-Mobile">%1$s</xliff:g> account</string>
     <!-- Title for category "Your mobile plan when satellite is included in plan" [CHAR_LIMIT=NONE] -->
