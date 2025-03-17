@@ -145,7 +145,6 @@ public class SatelliteSettingPreferenceController extends
     public void updateState(@Nullable Preference preference) {
         super.updateState(preference);
         if (preference != null && preference.getKey().equals(getPreferenceKey())) {
-            updateTitle(preference);
             updateSummary(preference);
         }
     }
@@ -168,12 +167,6 @@ public class SatelliteSettingPreferenceController extends
         }
 
         return false;
-    }
-
-    private void updateTitle(Preference preference) {
-        preference.setTitle(mCarrierRoamingNtnModeCallback.isSatelliteServiceDataType()
-                ? R.string.title_satellite_setting_connectivity
-                : R.string.satellite_setting_title);
     }
 
     private void updateSummary(Preference preference) {

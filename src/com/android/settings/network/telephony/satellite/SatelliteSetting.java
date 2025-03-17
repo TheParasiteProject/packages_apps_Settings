@@ -133,7 +133,6 @@ public class SatelliteSetting extends RestrictedDashboardFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         boolean isSatelliteEligible = isSatelliteEligible();
-        updateTitle();
         updateMobilePlan(isSatelliteEligible);
         updateHowItWorksContent(isSatelliteEligible);
         updateFooterContent();
@@ -147,10 +146,6 @@ public class SatelliteSetting extends RestrictedDashboardFragment {
     @Override
     protected int getPreferenceScreenResId() {
         return R.xml.satellite_setting;
-    }
-
-    private void updateTitle() {
-        findPreference("satellite_setting").setTitle(getSubjectString());
     }
 
     private void updateMobilePlan(boolean isSatelliteEligible) {
@@ -238,7 +233,7 @@ public class SatelliteSetting extends RestrictedDashboardFragment {
 
             final String[] link = new String[1];
             link[0] = readSatelliteMoreInfoString();
-            if (link[0] != null && !link[0].isEmpty()) {
+            if (true) {
                 footerPreference.setLearnMoreAction(view -> {
                     if (!link[0].isEmpty()) {
                         Intent helpIntent = HelpUtils.getHelpIntent(mActivity, link[0],
@@ -250,7 +245,7 @@ public class SatelliteSetting extends RestrictedDashboardFragment {
                 });
 
                 footerPreference.setLearnMoreText(
-                        getString(R.string.more_about_satellite_messaging, getDescriptionString()));
+                        getString(R.string.more_about_satellite_messaging));
             }
         }
     }
@@ -302,32 +297,6 @@ public class SatelliteSetting extends RestrictedDashboardFragment {
 
     private boolean isSatelliteAttachSupported(int subId) {
         return mConfigBundle.getBoolean(KEY_SATELLITE_ATTACH_SUPPORTED_BOOL, false);
-    }
-
-    // This is for a word which first letter is uppercase. e.g. Satellite messaging.
-    private String getSubjectString() {
-        int result;
-        if (com.android.settings.flags.Flags.satelliteOemSettingsUxMigration()) {
-            result = mIsServiceDataType
-                    ? R.string.title_satellite_setting_connectivity
-                    : R.string.satellite_setting_title;
-        } else {
-            result = R.string.satellite_setting_title;
-        }
-        return getString(result);
-    }
-
-    // This is for a word without uppercase letter. e.g. satellite messaging.
-    private String getDescriptionString() {
-        int result;
-        if (com.android.settings.flags.Flags.satelliteOemSettingsUxMigration()) {
-            result = mIsServiceDataType
-                    ? R.string.description_satellite_setting_connectivity
-                    : R.string.description_satellite_setting_messaging;
-        } else {
-            result = R.string.satellite_setting_title;
-        }
-        return getString(result);
     }
 
     private static void loge(String message) {
