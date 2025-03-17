@@ -217,7 +217,10 @@ public class SatelliteSettingsPreferenceControllerTest {
 
     @Test
     @EnableFlags(com.android.settings.flags.Flags.FLAG_SATELLITE_OEM_SETTINGS_UX_MIGRATION)
-    public void summary_noEntitlement_showSummaryWithoutEntitlement() {
+    public void summary_noEntitlementAndTypeIsAuto_showSummaryWithoutEntitlement() {
+        mCarrierConfig.putInt(
+                CarrierConfigManager.KEY_CARRIER_ROAMING_NTN_CONNECT_TYPE_INT,
+                CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC);
         mCarrierConfig.putBoolean(
                 KEY_SATELLITE_ENTITLEMENT_SUPPORTED_BOOL,
                 false);
@@ -237,9 +240,6 @@ public class SatelliteSettingsPreferenceControllerTest {
     @Test
     @EnableFlags(com.android.settings.flags.Flags.FLAG_SATELLITE_OEM_SETTINGS_UX_MIGRATION)
     public void summary_smsAvailableForManualType_showSummaryWithAccount() {
-        mCarrierConfig.putBoolean(
-                KEY_SATELLITE_ENTITLEMENT_SUPPORTED_BOOL,
-                true);
         mCarrierConfig.putInt(
                 CarrierConfigManager.KEY_CARRIER_ROAMING_NTN_CONNECT_TYPE_INT,
                 CARRIER_ROAMING_NTN_CONNECT_MANUAL);
