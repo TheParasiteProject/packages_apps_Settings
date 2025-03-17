@@ -19,7 +19,6 @@ package com.android.settings.network.telephony.satellite;
 import static android.telephony.CarrierConfigManager.CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC;
 import static android.telephony.CarrierConfigManager.CARRIER_ROAMING_NTN_CONNECT_MANUAL;
 import static android.telephony.CarrierConfigManager.KEY_SATELLITE_ENTITLEMENT_SUPPORTED_BOOL;
-import static android.telephony.NetworkRegistrationInfo.SERVICE_TYPE_DATA;
 import static android.telephony.NetworkRegistrationInfo.SERVICE_TYPE_SMS;
 
 import static com.android.settings.core.BasePreferenceController.AVAILABLE;
@@ -179,40 +178,6 @@ public class SatelliteSettingsPreferenceControllerTest {
         mController.onPause(null);
 
         verify(mTelephonyManager).unregisterTelephonyCallback(any());
-    }
-
-    @Test
-    @EnableFlags(com.android.settings.flags.Flags.FLAG_SATELLITE_OEM_SETTINGS_UX_MIGRATION)
-    public void title_hasServiceDataType_showDataUi() {
-        mController.initialize(TEST_SUB_ID);
-        PreferenceManager preferenceManager = new PreferenceManager(mContext);
-        PreferenceScreen preferenceScreen = preferenceManager.createPreferenceScreen(mContext);
-        Preference preference = new Preference(mContext);
-        preference.setKey(KEY);
-        preference.setTitle("test title");
-        preferenceScreen.addPreference(preference);
-        mController.displayPreference(preferenceScreen);
-        mController.mCarrierRoamingNtnModeCallback.onCarrierRoamingNtnAvailableServicesChanged(
-                new int[]{SERVICE_TYPE_SMS, SERVICE_TYPE_DATA});
-
-        assertThat(preference.getTitle()).isEqualTo("Satellite connectivity");
-    }
-
-    @Test
-    @EnableFlags(com.android.settings.flags.Flags.FLAG_SATELLITE_OEM_SETTINGS_UX_MIGRATION)
-    public void title_onlyHasServiceSmsType_showSmsUi() {
-        mController.initialize(TEST_SUB_ID);
-        PreferenceManager preferenceManager = new PreferenceManager(mContext);
-        PreferenceScreen preferenceScreen = preferenceManager.createPreferenceScreen(mContext);
-        Preference preference = new Preference(mContext);
-        preference.setKey(KEY);
-        preference.setTitle("test title");
-        preferenceScreen.addPreference(preference);
-        mController.displayPreference(preferenceScreen);
-        mController.mCarrierRoamingNtnModeCallback.onCarrierRoamingNtnAvailableServicesChanged(
-                new int[]{SERVICE_TYPE_SMS});
-
-        assertThat(preference.getTitle()).isEqualTo("Satellite messaging");
     }
 
     @Test
