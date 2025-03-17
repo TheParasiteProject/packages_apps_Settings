@@ -186,17 +186,17 @@ public class SatelliteSettingPreferenceController extends
             return;
         }
 
-        if (!mCarrierConfigs.getBoolean(KEY_SATELLITE_ENTITLEMENT_SUPPORTED_BOOL)) {
-            preference.setSummary(R.string.satellite_setting_summary_without_entitlement);
-            return;
-        }
-
         if (isCarrierRoamingNtnConnectedTypeManual()) {
             preference.setSummary(
                     mCarrierRoamingNtnModeCallback.isSatelliteSmsAvailable()
                             ? R.string.satellite_setting_enabled_summary
                             : R.string.satellite_setting_disabled_summary);
         } else {
+            if (!mCarrierConfigs.getBoolean(KEY_SATELLITE_ENTITLEMENT_SUPPORTED_BOOL)) {
+                preference.setSummary(R.string.satellite_setting_summary_without_entitlement);
+                return;
+            }
+
             try {
                 Set<Integer> restrictionReason =
                         mSatelliteManager.getAttachRestrictionReasonsForCarrier(mSubId);
