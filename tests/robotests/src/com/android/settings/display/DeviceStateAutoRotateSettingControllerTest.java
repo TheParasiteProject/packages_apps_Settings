@@ -37,7 +37,7 @@ import com.android.settings.R;
 import com.android.settings.testutils.shadow.ShadowDeviceStateRotationLockSettingsManager;
 import com.android.settings.testutils.shadow.ShadowRotationPolicy;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
-import com.android.settingslib.devicestate.DeviceStateRotationLockSettingsManager;
+import com.android.settingslib.devicestate.DeviceStateAutoRotateSettingManager;
 import com.android.settingslib.search.SearchIndexableRaw;
 
 import org.junit.Before;
@@ -66,7 +66,7 @@ public class DeviceStateAutoRotateSettingControllerTest {
     private static final int DEFAULT_ORDER = -10;
 
     private final Context mContext = Mockito.spy(RuntimeEnvironment.application);
-    private DeviceStateRotationLockSettingsManager mAutoRotateSettingsManager;
+    private DeviceStateAutoRotateSettingManager mAutoRotateSettingsManager;
 
     @Mock private MetricsFeatureProvider mMetricsFeatureProvider;
     @Mock private DeviceStateManager mDeviceStateManager;
@@ -82,7 +82,7 @@ public class DeviceStateAutoRotateSettingControllerTest {
         doReturn(List.of(DEFAULT_DEVICE_STATE)).when(
                 mDeviceStateManager).getSupportedDeviceStates();
         mAutoRotateSettingsManager =
-                DeviceStateRotationLockSettingsManager.getInstance(mContext);
+                DeviceStateAutoRotateSettingManagerProvider.getSingletonInstance(mContext);
         mController = new DeviceStateAutoRotateSettingController(
                 mContext,
                 DEFAULT_DEVICE_STATE.getIdentifier(),

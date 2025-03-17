@@ -58,7 +58,6 @@ import com.android.settings.testutils.ResolveInfoBuilder;
 import com.android.settings.testutils.shadow.ShadowDeviceStateRotationLockSettingsManager;
 import com.android.settings.testutils.shadow.ShadowRotationPolicy;
 import com.android.settingslib.core.AbstractPreferenceController;
-import com.android.settingslib.devicestate.DeviceStateRotationLockSettingsManager;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -258,15 +257,14 @@ public class SmartAutoRotatePreferenceFragmentTest {
     private void enableDeviceStateSettableRotationStates(
             String[] settableStates, String[] settableStatesDescriptions) {
         when(mResources.getStringArray(
-                        com.android.internal.R.array.config_perDeviceStateRotationLockDefaults))
+                com.android.internal.R.array.config_perDeviceStateRotationLockDefaults))
                 .thenReturn(settableStates);
         when(mResources.getStringArray(R.array.config_settableAutoRotationDeviceStatesDescriptions))
                 .thenReturn(settableStatesDescriptions);
         when(mResources.getBoolean(R.bool.config_auto_rotate_face_detection_available))
                 .thenReturn(true);
-        DeviceStateRotationLockSettingsManager.resetInstance();
-        DeviceStateRotationLockSettingsManager.getInstance(mContext)
-                .resetStateForTesting(mResources);
+        DeviceStateAutoRotateSettingManagerProvider.resetInstance();
+        when(mContext.getResources()).thenReturn(mResources);
     }
 
     // Sets up posture mappings for PosturesHelper
