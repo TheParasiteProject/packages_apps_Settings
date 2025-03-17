@@ -5226,12 +5226,6 @@
     <string name="accessibility_tap_assistance_title">Timing controls</string>
     <!-- Title for the accessibility system controls page. [CHAR LIMIT=50] -->
     <string name="accessibility_system_controls_title">System controls</string>
-    <!-- Title for the accessibility feedback preference. [CHAR LIMIT=50] -->
-    <string name="accessibility_feedback_title">Feedback</string>
-    <!-- Summary for the accessibility feedback preference. [CHAR LIMIT=100] -->
-    <string name="accessibility_feedback_summary">Help improve by taking a survey</string>
-    <!-- Summary for the accessibility feedback preference is disabled. [CHAR LIMIT=100] -->
-    <string name="accessibility_feedback_disabled_summary">No surveys available</string>
     <!-- The menu item to start the feedback process for the accessibility [CHAR LIMIT=30] -->
     <string name="accessibility_send_feedback_title">Send feedback</string>
     <!-- The menu item to start the survey process for the accessibility [CHAR LIMIT=30] -->
