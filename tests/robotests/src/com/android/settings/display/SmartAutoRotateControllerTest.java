@@ -19,6 +19,7 @@ package com.android.settings.display;
 import static com.android.settings.core.BasePreferenceController.AVAILABLE;
 import static com.android.settings.core.BasePreferenceController.DISABLED_DEPENDENT_SETTING;
 import static com.android.settings.core.BasePreferenceController.UNSUPPORTED_ON_DEVICE;
+import static com.android.settings.testutils.DeviceStateAutoRotateSettingTestUtils.setDeviceStateRotationLockEnabled;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -33,6 +34,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
+import android.content.res.Resources;
 import android.hardware.devicestate.DeviceState;
 import android.hardware.devicestate.DeviceStateManager;
 import android.os.UserHandle;
@@ -41,7 +43,7 @@ import android.provider.Settings;
 import androidx.preference.Preference;
 
 import com.android.settings.testutils.ResolveInfoBuilder;
-import com.android.settings.testutils.shadow.ShadowDeviceStateRotationLockSettingsManager;
+import com.android.settings.testutils.shadow.ShadowDeviceStateAutoRotateSettingManager;
 import com.android.settings.testutils.shadow.ShadowRotationPolicy;
 import com.android.settings.testutils.shadow.ShadowSensorPrivacyManager;
 import com.android.settings.testutils.shadow.ShadowSystemSettings;
@@ -73,6 +75,8 @@ public class SmartAutoRotateControllerTest {
     private Preference mPreference;
     @Mock
     private DeviceStateManager mDeviceStateManager;
+    @Mock
+    private Resources mResources;
     private ContentResolver mContentResolver;
     private DeviceStateAutoRotateSettingManager mDeviceStateAutoRotateSettingManager;
 
@@ -81,9 +85,11 @@ public class SmartAutoRotateControllerTest {
         MockitoAnnotations.initMocks(this);
         final Context context = Mockito.spy(RuntimeEnvironment.application);
         mContentResolver = RuntimeEnvironment.application.getContentResolver();
+        mResources = Mockito.spy(RuntimeEnvironment.application.getResources());
 
         when(context.getPackageManager()).thenReturn(mPackageManager);
         when(context.getContentResolver()).thenReturn(mContentResolver);
+        when(context.getResources()).thenReturn(mResources);
         doReturn(PACKAGE_NAME).when(mPackageManager).getRotationResolverPackageName();
         doReturn(PackageManager.PERMISSION_GRANTED).when(mPackageManager).checkPermission(
                 Manifest.permission.CAMERA, PACKAGE_NAME);
@@ -91,6 +97,7 @@ public class SmartAutoRotateControllerTest {
         doReturn(context).when(context).getApplicationContext();
         doReturn(mDeviceStateManager).when(context).getSystemService(DeviceStateManager.class);
         doReturn(getDeviceStateList()).when(mDeviceStateManager).getSupportedDeviceStates();
+        setDeviceStateRotationLockEnabled(false, mResources);
         mDeviceStateAutoRotateSettingManager =
                 DeviceStateAutoRotateSettingManagerProvider.getSingletonInstance(context);
         mController = Mockito.spy(new SmartAutoRotateController(context, "test_key"));
@@ -144,7 +151,7 @@ public class SmartAutoRotateControllerTest {
 
     @Test
     @Config(shadows = {
-            ShadowDeviceStateRotationLockSettingsManager.class,
+            ShadowDeviceStateAutoRotateSettingManager.class,
             ShadowRotationPolicy.class
     })
     public void getAvailabilityStatus_deviceStateRotationLocked_returnDisableDependentSetting() {
@@ -158,7 +165,7 @@ public class SmartAutoRotateControllerTest {
 
     @Test
     @Config(shadows = {
-            ShadowDeviceStateRotationLockSettingsManager.class,
+            ShadowDeviceStateAutoRotateSettingManager.class,
             ShadowRotationPolicy.class
     })
     public void getAvailabilityStatus_deviceStateRotationUnlocked_returnAvailable() {
@@ -182,17 +189,17 @@ public class SmartAutoRotateControllerTest {
 
     private void enableDeviceStateRotation() {
         ShadowRotationPolicy.setRotationSupported(true);
-        ShadowDeviceStateRotationLockSettingsManager.setDeviceStateRotationLockEnabled(true);
+        setDeviceStateRotationLockEnabled(true, mResources);
     }
 
     private void lockDeviceStateRotation() {
-        ShadowDeviceStateRotationLockSettingsManager shadowManager =
+        ShadowDeviceStateAutoRotateSettingManager shadowManager =
                 Shadow.extract(mDeviceStateAutoRotateSettingManager);
         shadowManager.setRotationLockedForAllStates(true);
     }
 
     private void unlockDeviceStateRotation() {
-        ShadowDeviceStateRotationLockSettingsManager shadowManager =
+        ShadowDeviceStateAutoRotateSettingManager shadowManager =
                 Shadow.extract(mDeviceStateAutoRotateSettingManager);
         shadowManager.setRotationLockedForAllStates(false);
     }
