@@ -15,11 +15,13 @@
 package com.android.settings.display.darkmode;
 
 import android.app.Dialog;
+import android.app.UiModeManager;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.PowerManager;
 
+import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
@@ -41,6 +43,7 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
     private static final String TAG = "DarkModeSettingsFrag";
     private static final String DARK_THEME_END_TIME = "dark_theme_end_time";
     private static final String DARK_THEME_START_TIME = "dark_theme_start_time";
+    public static final String FORCE_INVERT_SURVEY_KEY = "A11yForceInvertUser";
     private DarkModeObserver mContentObserver;
     private DarkModeCustomPreferenceController mCustomStartController;
     private DarkModeCustomPreferenceController mCustomEndController;
@@ -131,6 +134,17 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
     @Override
     public int getMetricsCategory() {
         return SettingsEnums.DARK_UI_SETTINGS;
+    }
+
+    @Override
+    @NonNull
+    public String getSurveyKey() {
+        final UiModeManager uiModeManager = getContext().getSystemService(UiModeManager.class);
+        if (uiModeManager != null
+                && uiModeManager.getForceInvertState() == UiModeManager.FORCE_INVERT_TYPE_DARK) {
+            return FORCE_INVERT_SURVEY_KEY;
+        }
+        return super.getSurveyKey();
     }
 
     @Override

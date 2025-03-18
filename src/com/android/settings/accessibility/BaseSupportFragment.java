@@ -17,11 +17,14 @@
 package com.android.settings.accessibility;
 
 import android.app.settings.SettingsEnums;
+import android.content.Context;
 import android.os.Bundle;
+import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
 
 import com.android.settings.accessibility.actionbar.FeedbackMenuController;
+import com.android.settings.accessibility.actionbar.SurveyMenuController;
 import com.android.settings.dashboard.DashboardFragment;
 
 /**
@@ -35,9 +38,18 @@ public abstract class BaseSupportFragment extends DashboardFragment {
     @Override
     public void onCreate(@NonNull Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         int feedbackCategory = getFeedbackCategory();
         if (feedbackCategory != SettingsEnums.PAGE_UNKNOWN) {
             FeedbackMenuController.init(this, getFeedbackCategory());
+        }
+
+        String surveyKey = getSurveyKey();
+        if (!TextUtils.isEmpty(surveyKey)) {
+            final Context context = getActivity();
+            if (context != null) {
+                SurveyMenuController.init(this, context, surveyKey);
+            }
         }
     }
 
@@ -67,5 +79,9 @@ public abstract class BaseSupportFragment extends DashboardFragment {
      */
     protected int getFeedbackCategory() {
         return getMetricsCategory();
+    }
+
+    protected String getSurveyKey() {
+        return "";
     }
 }

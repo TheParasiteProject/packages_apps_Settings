@@ -32,6 +32,7 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 
 import com.android.settings.accessibility.actionbar.FeedbackMenuController;
+import com.android.settings.accessibility.actionbar.SurveyMenuController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import org.junit.Before;
@@ -56,6 +57,8 @@ public class BaseSupportFragmentTest {
     @Rule
     public ActivityScenarioRule<EmptyFragmentActivity> mActivityScenario =
             new ActivityScenarioRule<>(EmptyFragmentActivity.class);
+
+    private static final String PLACEHOLDER_SURVEY_KEY = "survey_key";
 
     private final Context mContext = ApplicationProvider.getApplicationContext();
     private FragmentActivity mActivity;
@@ -122,5 +125,29 @@ public class BaseSupportFragmentTest {
         mHost.onCreate(/* savedInstanceState= */ null);
 
         verify(mLifecycle).addObserver(any(FeedbackMenuController.class));
+    }
+
+    @Test
+    public void initSurveyMenuController_surveyKeyNull_shouldNotAttachToLifecycle() {
+        when(mHost.getSurveyKey()).thenReturn(/* value= */ null);
+        mHost.onCreate(/* savedInstanceState= */ null);
+
+        verify(mLifecycle, never()).addObserver(any(SurveyMenuController.class));
+    }
+
+    @Test
+    public void initSurveyMenuController_surveyKeyEmpty_shouldNotAttachToLifecycle() {
+        when(mHost.getSurveyKey()).thenReturn(/* value= */ "");
+        mHost.onCreate(/* savedInstanceState= */ null);
+
+        verify(mLifecycle, never()).addObserver(any(SurveyMenuController.class));
+    }
+
+    @Test
+    public void initSurveyMenuController_surveyKeyNotEmpty_shouldNotAttachToLifecycle() {
+        when(mHost.getSurveyKey()).thenReturn(PLACEHOLDER_SURVEY_KEY);
+        mHost.onCreate(/* savedInstanceState= */ null);
+
+        verify(mLifecycle).addObserver(any(SurveyMenuController.class));
     }
 }
