@@ -118,7 +118,7 @@ class ActionDisabledByAdvancedProtectionDialog : SpaDialogWindowTypeActivity() {
     }
 
     override fun getDialogWindowType(): Int? = if (intent.hasExtra(DIALOG_WINDOW_TYPE)) {
-        intent.getIntExtra(DIALOG_WINDOW_TYPE, WindowManager.LayoutParams.FIRST_APPLICATION_WINDOW)
+        intent.getIntExtra(DIALOG_WINDOW_TYPE, WindowManager.LayoutParams.TYPE_APPLICATION)
     } else null
 
     private fun getIntentFeatureId(): Int {
