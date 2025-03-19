@@ -2099,6 +2099,8 @@
     <string name="bluetooth_key_missing_device_settings">Device settings</string>
     <!-- Button text to close the bluetooth key missing dialog-->
     <string name="bluetooth_key_missing_close">Close</string>
+    <!-- Toast text to when bluetooth key is missing -->
+    <string name="bluetooth_key_missing_toast"><xliff:g id="device_name">%1$s</xliff:g> failed to connect</string>
 
     <!-- Title of device details screen [CHAR LIMIT=28]-->
     <string name="device_details_title">Device details</string>
