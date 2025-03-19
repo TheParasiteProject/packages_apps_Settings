@@ -70,3 +70,10 @@ flag {
   description: "Flag for Screen resolution in 25Q3"
   bug: "352179685"
 }
+
+flag {
+  name: "catalyst_auto_rotate"
+  namespace: "android_settings"
+  description: "Flag for Auto-rotate screen in 25Q3"
+  bug: "352179685"
+}
