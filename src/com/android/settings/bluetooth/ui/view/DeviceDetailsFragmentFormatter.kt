@@ -26,9 +26,13 @@ import android.os.Bundle
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toDrawable
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -227,6 +231,7 @@ class DeviceDetailsFragmentFormatterImpl(
 
         dashboardFragment.lifecycleScope.launch {
             if (isLoading) {
+                scrollToTop()
                 dashboardFragment.setLoading(false, false)
                 isLoading = false
             }
@@ -492,6 +497,19 @@ class DeviceDetailsFragmentFormatterImpl(
 
         if (controller is OnStop) {
             (controller as OnStop).onStop()
+        }
+    }
+
+    private fun scrollToTop() {
+        // Temporary fix to make sure the screen is scroll to the top when rendering.
+        ComposePreference(context).apply {
+            order = -1
+            isEnabled = false
+            isSelectable = false
+            setContent { Spacer(modifier = Modifier.height(1.dp)) }
+        }.also {
+            dashboardFragment.preferenceScreen.addPreference(it)
+            dashboardFragment.scrollToPreference(it)
         }
     }
 
