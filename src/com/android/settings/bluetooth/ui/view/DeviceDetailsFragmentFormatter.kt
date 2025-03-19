@@ -296,7 +296,6 @@ class DeviceDetailsFragmentFormatterImpl(
                                             prefKey,
                                             if (newState) EVENT_SWITCH_ON else EVENT_SWITCH_OFF,
                                         )
-                                        isEnabled = false
                                         model.onCheckedChange.invoke(newState)
                                     }
                                     return false
@@ -332,7 +331,6 @@ class DeviceDetailsFragmentFormatterImpl(
                                         prefKey,
                                         if (newState) EVENT_SWITCH_ON else EVENT_SWITCH_OFF,
                                     )
-                                    isSwitchEnabled = false
                                     model.onCheckedChange.invoke(newState)
                                     return false
                                 }
