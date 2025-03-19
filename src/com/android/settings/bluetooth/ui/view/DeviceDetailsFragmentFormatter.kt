@@ -265,12 +265,10 @@ class DeviceDetailsFragmentFormatterImpl(
                     summary = model.summary
                     icon = getDrawable(model.icon)
                     onPreferenceClickListener =
-                        object : Preference.OnPreferenceClickListener {
-                            override fun onPreferenceClick(p: Preference): Boolean {
-                                logItemClick(prefKey, EVENT_CLICK_PRIMARY)
-                                model.action?.let { triggerAction(it) }
-                                return true
-                            }
+                        Preference.OnPreferenceClickListener {
+                            logItemClick(prefKey, EVENT_CLICK_PRIMARY)
+                            model.action?.let { triggerAction(it) }
+                            true
                         }
                 }
             }
@@ -313,12 +311,10 @@ class DeviceDetailsFragmentFormatterImpl(
                         isEnabled = !model.disabled
                         isSwitchEnabled = !model.disabled
                         onPreferenceClickListener =
-                            object : Preference.OnPreferenceClickListener {
-                                override fun onPreferenceClick(p: Preference): Boolean {
-                                    logItemClick(prefKey, EVENT_CLICK_PRIMARY)
-                                    triggerAction(model.action)
-                                    return true
-                                }
+                            Preference.OnPreferenceClickListener {
+                                logItemClick(prefKey, EVENT_CLICK_PRIMARY)
+                                triggerAction(model.action)
+                                true
                             }
                         onPreferenceChangeListener =
                             object : Preference.OnPreferenceChangeListener {
@@ -389,6 +385,12 @@ class DeviceDetailsFragmentFormatterImpl(
                 deviceSettingIcon.bitmap.toDrawable(context.resources)
             is DeviceSettingIcon.ResourceIcon -> context.getDrawable(deviceSettingIcon.resId)
             null -> null
+        }?.apply {
+            setTint(
+                context.getColor(
+                    com.android.settingslib.widget.theme.R.color.settingslib_materialColorOnSurfaceVariant
+                )
+            )
         }
 
     @Composable
