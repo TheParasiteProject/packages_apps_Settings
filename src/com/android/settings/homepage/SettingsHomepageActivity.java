@@ -778,6 +778,16 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         // Prevent inner RecyclerView gets focus and invokes scrolling.
         view.setFocusableInTouchMode(true);
         view.requestFocus();
+
+        if (Flags.extendedScreenshotsExcludeNestedScrollables()) {
+            // Force scroll capture to select the NestedScrollView, instead of the non-scrollable
+            // RecyclerView which is contained inside it with no height constraint.
+            final View scrollableContainer = findViewById(R.id.main_content_scrollable_container);
+            if (scrollableContainer != null) {
+                scrollableContainer.setScrollCaptureHint(
+                        View.SCROLL_CAPTURE_HINT_EXCLUDE_DESCENDANTS);
+            }
+        }
     }
 
     private void updateHomepageAppBar() {
