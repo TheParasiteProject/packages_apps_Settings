@@ -335,7 +335,7 @@ public class BiometricEnrollActivity extends InstrumentedActivity {
         // enrollments already exists.
         if (!setupWizard && !mParentalOptionsRequired) {
             final BiometricManager bm = getSystemService(BiometricManager.class);
-            final @BiometricError int result = bm.canAuthenticate(authenticators);
+            final @BiometricError int result = bm.canAuthenticate(mUserId, authenticators);
             if (result != BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED) {
                 Log.e(TAG, "Unexpected result (has enrollments): " + result);
                 finish();
