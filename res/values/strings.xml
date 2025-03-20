@@ -4890,7 +4890,7 @@
     <!-- Title text for 'Pointer speed'. [CHAR LIMIT=35] -->
     <string name="trackpad_pointer_speed">Cursor speed</string>
     <!-- Title text for 'Three finger tap' touchpad preference. This preference allows the user to select an action that will trigger when they tap three fingers on a touchpad. [CHAR LIMIT=60] -->
-    <string name="three_finger_tap_preference_title">Customize 3-finger tap</string>
+    <string name="three_finger_tap_preference_title">Use three-finger tap</string>
     <!-- Title for the 'Touchpad acceleration' preference switch, which dynamically adjusts cursor movement based on speed. [CHAR LIMIT=60] -->
     <string name="touchpad_acceleration_title">Touchpad acceleration</string>
     <!-- Summary text for the 'Touchpad acceleration' preference switch indicating to users that when this switch is enabled, faster movements with your fingers will move the cursor farther. [CHAR LIMIT=NONE] -->
@@ -4927,7 +4927,7 @@
     <!-- Search keywords for 'Bottom-right tap', the name of the touchpad setting that allows the user to click the bottom right corner of the touchpad for more options. -->
     <string name="keywords_trackpad_bottom_right_tap">right click, tap</string>
     <!-- Radio button text for 'middle click' action. This is one of multiple actions the user can select from the three finger tap customization radio group. The action if selected will act as a middle-click when a three-finger tap is performed on a touchpad. [CHAR LIMIT=35] -->
-    <string name="three_finger_tap_middle_click">Middle click</string>
+    <string name="three_finger_tap_middle_click">Middle mouse button</string>
     <!-- Radio button text for 'launch assistant' action. This is one of multiple actions the user can select from the three finger tap customization radio group. The action if selected will launch the Assistant when a three-finger tap is performed on a touchpad. [CHAR LIMIT=35] -->
     <string name="three_finger_tap_launch_gemini">Launch Assistant</string>
     <!-- Radio button text for 'Go home' action. This is one of multiple actions the user can select from the three finger tap customization radio group. The action if selected will take the user home when a three-finger tap is performed on a touchpad. [CHAR LIMIT=35] -->
