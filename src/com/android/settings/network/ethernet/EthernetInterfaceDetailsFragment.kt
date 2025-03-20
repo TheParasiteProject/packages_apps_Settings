@@ -78,6 +78,7 @@ class EthernetInterfaceDetailsFragment :
             requireContext(),
             this,
             ethernetInterface?.getConfiguration() ?: IpConfiguration(),
+            preferenceId ?: "",
         )
     }
 

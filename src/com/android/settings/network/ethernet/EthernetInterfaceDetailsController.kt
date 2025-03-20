@@ -17,6 +17,7 @@
 package com.android.settings.network.ethernet
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.net.EthernetManager
 import android.net.EthernetNetworkUpdateRequest
 import android.net.IpConfiguration
@@ -51,6 +52,9 @@ class EthernetInterfaceDetailsController(
         EthernetTrackerImpl.getInstance(context).getInterface(preferenceId)
 
     private lateinit var entityHeaderController: EntityHeaderController
+
+    private val sharedPreferences: SharedPreferences =
+        context.getSharedPreferences("ethernet_preferences", Context.MODE_PRIVATE)
 
     private var ipAddressPref: Preference? = null
 
@@ -94,6 +98,14 @@ class EthernetInterfaceDetailsController(
             /* executor */ null,
             /* callback */ null,
         )
+
+        val interfaceName = dialog.getController().getInterfaceName()
+        if (interfaceName != null && !interfaceName.isEmpty()) {
+            val editor: SharedPreferences.Editor = sharedPreferences.edit()
+            editor.putString(preferenceId, interfaceName)
+            editor.apply()
+            entityHeaderController?.setLabel(interfaceName)?.done(true)
+        }
     }
 
     override fun displayPreference(screen: PreferenceScreen) {
@@ -111,8 +123,12 @@ class EthernetInterfaceDetailsController(
         iconView?.setScaleType(ImageView.ScaleType.CENTER_INSIDE)
 
         if (entityHeaderController != null) {
+            var interfaceName: String? = sharedPreferences.getString(preferenceId, null)
+            if (interfaceName == null) {
+                interfaceName = "Ethernet"
+            }
             entityHeaderController
-                .setLabel("Ethernet")
+                .setLabel(interfaceName)
                 .setSummary(
                     if (ethernetInterface?.getInterfaceState() == EthernetManager.STATE_LINK_UP) {
                         mContext.getString(R.string.network_connected)

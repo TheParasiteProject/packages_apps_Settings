@@ -17,7 +17,6 @@
 package com.android.settings.network.ethernet
 
 import android.content.Context
-import android.content.ContextWrapper
 import android.content.DialogInterface
 import android.net.IpConfiguration
 import androidx.test.core.app.ApplicationProvider
@@ -42,7 +41,7 @@ class EthernetDialogTest {
 
     @Test
     fun clickPositiveButton() {
-        val ethernetDialog = EthernetDialogImpl(context, listener, IpConfiguration())
+        val ethernetDialog = EthernetDialogImpl(context, listener, IpConfiguration(), "eth0")
 
         ethernetDialog.onClick(mock<DialogInterface>(), DialogInterface.BUTTON_POSITIVE)
 
@@ -51,7 +50,7 @@ class EthernetDialogTest {
 
     @Test
     fun clickNegativeButton() {
-        val ethernetDialog = EthernetDialogImpl(context, listener, IpConfiguration())
+        val ethernetDialog = EthernetDialogImpl(context, listener, IpConfiguration(), "eth0")
 
         ethernetDialog.onClick(mock<DialogInterface>(), DialogInterface.BUTTON_NEGATIVE)
 

@@ -20,4 +20,6 @@ import android.net.IpConfiguration
 
 interface EthernetDialogController {
     fun getConfig(): IpConfiguration
+
+    fun getInterfaceName(): String
 }

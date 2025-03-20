@@ -31,6 +31,7 @@ class EthernetDialogImpl(
     context: Context,
     private val listener: EthernetDialogListener,
     private val ipConfiguration: IpConfiguration,
+    private val preferenceId: String,
     @StyleRes style: Int = 0,
 ) : AlertDialog(context, style), DialogInterface.OnClickListener, EthernetDialog {
 
@@ -51,7 +52,8 @@ class EthernetDialogImpl(
         setSubmitButton(context.getString(R.string.ethernet_config_submit))
         setCancelButton(context.getString(R.string.ethernet_config_cancel))
         setTitle(context.getString(R.string.ethernet_config_title))
-        controller = EthernetDialogControllerImpl(context, ipConfiguration, view, this)
+        controller =
+            EthernetDialogControllerImpl(context, ipConfiguration, view, this, preferenceId)
         super.onCreate(savedInstanceState)
     }
 
