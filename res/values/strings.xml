@@ -5930,6 +5930,10 @@
     <string name="accessibility_hearing_device_pairing_page_title">Pair hearing device</string>
     <!-- Subtitle for the pair hearing device page. [CHAR LIMIT=NONE] -->
     <string name="accessibility_hearing_device_pairing_intro">You can pair ASHA and LE Audio hearing devices on this page. Make sure your hearing device is turned on and ready to pair.</string>
+    <!-- Subtitle for the pair hearing device page. This string is for device that only supports ASHA hearing aids. [CHAR LIMIT=NONE] -->
+    <string name="accessibility_hearing_device_pairing_asha_only_intro">You can pair ASHA hearing devices on this page. Make sure your hearing device is turned on and ready to pair.</string>
+    <!-- Subtitle for the pair hearing device page. This string is for device that only supports LE Audio hearing aids. [CHAR LIMIT=NONE] -->
+    <string name="accessibility_hearing_device_pairing_hap_only_intro">You can pair LE Audio hearing devices on this page. Make sure your hearing device is turned on and ready to pair.</string>
     <!-- Title for the preference category containing the list of the available hearing during and after bluetooth scanning devices. [CHAR LIMIT=30] -->
     <string name="accessibility_found_hearing_devices">Available hearing devices</string>
     <!-- Title for the preference category containing the all bluetooth devices during and after bluetooth scanning devices. Used when people can not find their hearing device in hearing device pairing list. [CHAR LIMIT=45] -->
