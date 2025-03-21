@@ -1654,7 +1654,10 @@ public class FingerprintSettings extends SubSettings {
 
             private static final String KEY_USER_ID = "user_id";
             private static final String KEY_SENSOR_PROPERTIES = "sensor_properties";
+            private static final String EXTRA_FAILURE_COUNT = "failure_count";
+            private static final int MAX_FAILURE_COUNT = 3;
             private int mUserId;
+            private int mFailureCount;
             private @Nullable CancellationSignal mCancellationSignal;
             private @Nullable FingerprintSensorPropertiesInternal mSensorPropertiesInternal;
 
@@ -1663,6 +1666,9 @@ public class FingerprintSettings extends SubSettings {
                     @NonNull LayoutInflater inflater,
                     @Nullable ViewGroup container,
                     @Nullable Bundle savedInstanceState) {
+                if (savedInstanceState != null) {
+                    mFailureCount = savedInstanceState.getInt(EXTRA_FAILURE_COUNT, 0);
+                }
                 return inflater.inflate(
                         R.layout.fingerprint_check_enrolled_dialog, container, false);
             }
@@ -1682,10 +1688,20 @@ public class FingerprintSettings extends SubSettings {
                         final UdfpsCheckEnrolledView v =
                                 dialog.findViewById(R.id.udfps_check_enrolled_view);
                         v.setSensorProperties(mSensorPropertiesInternal);
+                        v.setOnTouchListener((view, event) -> {
+                            Log.d(TAG, "CheckEnrollDialog dismissed: touch outside");
+                            dialog.dismiss();
+                            return false;
+                        });
                     });
                 }
-
                 return dialog;
+            }
+
+            @Override
+            public void onSaveInstanceState(@NonNull Bundle outState) {
+                super.onSaveInstanceState(outState);
+                outState.putInt(EXTRA_FAILURE_COUNT, mFailureCount);
             }
 
             @Override
@@ -1752,6 +1768,11 @@ public class FingerprintSettings extends SubSettings {
                                 message.postDelayed(() -> {
                                     message.setText(R.string.fingerprint_check_enroll_touch_sensor);
                                 }, 2000);
+                                mFailureCount++;
+                                if (mFailureCount >= MAX_FAILURE_COUNT) {
+                                    Log.d(TAG, "CheckEnrollDialog dismissed: failed 3 times");
+                                    dialog.dismiss();
+                                }
                             }
                         },
                         null /* handler */,
