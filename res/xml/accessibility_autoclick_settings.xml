@@ -95,7 +95,6 @@
     <Preference
         android:key="accessibility_control_autoclick_cursor_area_size"
         android:persistent="false"
-        settings:searchable="false"
         android:title="@string/autoclick_cursor_area_size_title"
         settings:controller="com.android.settings.accessibility.ToggleAutoclickCursorAreaSizeController"/>
 
