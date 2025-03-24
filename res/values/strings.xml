@@ -5281,6 +5281,14 @@
     <string name="accessibility_send_feedback_title">Send feedback</string>
     <!-- The menu item to start the survey process for the accessibility [CHAR LIMIT=30] -->
     <string name="accessibility_send_survey_title">Rate us</string>
+    <!-- Channel name for the accessibility survey notification. [CHAR LIMIT=50] -->
+    <string name="accessibility_send_survey_notification_channel">Accessibility Survey</string>
+    <!-- Title of a survey notification about dark theme. [CHAR LIMIT=50] -->
+    <string name="dark_theme_survey_notification_title">Enjoying Dark theme in more apps?</string>
+    <!-- Summary for a survey notification about dark theme. [CHAR LIMIT=100] -->
+    <string name="dark_theme_survey_notification_summary">Share your feedback</string>
+    <!-- Action for a survey notification about dark theme. [CHAR LIMIT=50] -->
+    <string name="dark_theme_survey_notification_action">Take survey</string>
     <!-- Title for the accessibility preference category of services downloaded by the user. [CHAR LIMIT=50] -->
     <string name="user_installed_services_category_title">Downloaded apps</string>
     <!-- Title for the accessibility preference category of settings considered to be experimental, meaning they might be changed or removed in the future. [CHAR LIMIT=50] -->
