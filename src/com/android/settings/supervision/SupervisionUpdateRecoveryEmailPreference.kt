@@ -15,30 +15,23 @@
  */
 package com.android.settings.supervision
 
-import android.app.supervision.flags.Flags
-import android.content.Context
-import androidx.preference.Preference
 import com.android.settings.R
-import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.PreferenceMetadata
 
-class SupervisionPinRecoveryPreference :
-    PreferenceMetadata, PreferenceAvailabilityProvider, Preference.OnPreferenceClickListener {
+/**
+ * Setting on PIN Management screen (Settings > Supervision > Manage Pin) that invokes the flow to
+ * update the PIN recovery email.
+ */
+class SupervisionUpdateRecoveryEmailPreference : PreferenceMetadata {
     override val key: String
         get() = KEY
 
     override val title: Int
-        get() = R.string.supervision_add_forgot_pin_preference_title
+        get() = R.string.supervision_update_recovery_email_preference_title
 
-    override fun isAvailable(context: Context) = Flags.enableSupervisionPinRecoveryScreen()
-
-    // TODO(b/393657542): trigger re-authentication flow to confirm user credential before PIN
-    // recovery.
-    override fun onPreferenceClick(preference: Preference): Boolean {
-        return true
-    }
+    // TODO(b/402987522): Add update recovery email flow in settings.
 
     companion object {
-        const val KEY = "supervision_pin_recovery"
+        const val KEY = "supervision_update_recovery_email"
     }
 }
