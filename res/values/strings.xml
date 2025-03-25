@@ -3287,6 +3287,8 @@
     <string name="screensaver_settings_when_to_dream">When to start</string>
     <!-- [CHAR LIMIT=40] Display settings screen, setting option name to change whether the device wakes up when a lift gesture is detected. -->
     <string name="lift_to_wake_title">Lift to wake</string>
+    <!-- Title of toggle preference in screensaver "when to start" screen to restrict to starting only when charging wirelessly [CHAR LIMIT=NONE] -->
+    <string name="screensaver_restrict_to_wireless_charging_title">Restrict to wireless charging</string>
 
     <!-- [CHAR LIMIT=30] Title of the preference that opens the Ambient display settings screen. -->
     <string name="ambient_display_screen_title">Ambient display</string>
@@ -3702,6 +3704,9 @@
     <string name="when_to_show_hubmode_charging_and_upright">While charging and upright</string>
     <!-- Summary for when to automatically show hub mode (widgets on lockscreen): docked  [CHAR LIMIT=100] -->
     <string name="when_to_show_hubmode_docked">While docked</string>
+
+    <!-- Title of toggle preference in glanceable hub "when to start" screen to restrict to starting only when charging wirelessly [CHAR LIMIT=NONE] -->
+    <string name="hub_restrict_to_wireless_charging_title">Restrict to wireless charging</string>
 
     <!-- APN Settings -->
     <!-- APN settings screen title -->
