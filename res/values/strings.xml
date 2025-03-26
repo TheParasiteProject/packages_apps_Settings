@@ -14267,6 +14267,10 @@ Data usage charges may apply.</string>
     <string name="audio_streams_qr_code_page_password">Password: <xliff:g example="123" id="password">%1$s</xliff:g></string>
     <!-- Le audio streams qr code page description [CHAR LIMIT=NONE] -->
     <string name="audio_streams_qr_code_page_description">To listen to <xliff:g example="Local Music" id="stream_name">%1$s</xliff:g>, other people can connect compatible headphones to their Android device. They can then scan this QR code.</string>
+    <!-- Le audio streams preference subtitle [CHAR LIMIT=NONE] -->
+    <string name="audio_streams_preference_subtitle">Listen to Auracast broadcast</string>
+    <!-- Le audio streams preference subtitle when audio sharing is on[CHAR LIMIT=NONE] -->
+    <string name="audio_streams_preference_subtitle_audio_sharing_on">Turn off audio sharing to find audio streams</string>
     <!-- Le audio streams main page title [CHAR LIMIT=NONE] -->
     <string name="audio_streams_main_page_title">Find an audio stream</string>
     <!-- Le audio streams main page subtitle [CHAR LIMIT=NONE] -->
