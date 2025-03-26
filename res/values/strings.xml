@@ -5753,6 +5753,12 @@
     <!-- Title for the toggle button that turns on/off the autoclick shortcut. [CHAR_LIMIT=NONE] -->
     <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
     <string name="accessibility_autoclick_shortcut_title" translatable="false">Autoclick shortcut</string>
+    <!-- Title for the alert dialog that adjust the time for the mouse to hover before autoclick performs. [CHAR_LIMIT=NONE] -->
+    <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
+    <string name="autoclick_delay_before_click_title" translatable="false">Delay before click</string>
+    <!-- Summary for the alert dialog that adjust the time for the mouse to hover before autoclick performs. [CHAR_LIMIT=NONE] -->
+    <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
+    <string name="autoclick_delay_before_click_summary" translatable="false">Time it takes to click after the cursor stops moving</string>
     <!-- Title for the alert dialog that adjust auto click cursor area size. [CHAR_LIMIT=NONE] -->
     <!-- TODO(b/394683600): Update string to translatable once approved by UXW. -->
     <string name="autoclick_cursor_area_size_title" translatable="false">Click area</string>
