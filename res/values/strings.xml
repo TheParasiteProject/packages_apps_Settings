@@ -6038,7 +6038,7 @@
         }</string>
 
     <!-- Summary for autoclick seekbar settings preference when user selected custom item. [CHAR LIMIT=35] -->
-    <string name="accessibilty_autoclick_delay_unit_second">{count, plural,
+    <string name="accessibility_autoclick_delay_unit_second">{count, plural,
         =1      {{time} second}
         other   {{time} seconds}
         }</string>
