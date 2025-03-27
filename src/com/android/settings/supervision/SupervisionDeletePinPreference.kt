@@ -15,30 +15,26 @@
  */
 package com.android.settings.supervision
 
-import android.app.supervision.flags.Flags
-import android.content.Context
-import androidx.preference.Preference
 import com.android.settings.R
-import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.PreferenceMetadata
 
-class SupervisionPinRecoveryPreference :
-    PreferenceMetadata, PreferenceAvailabilityProvider, Preference.OnPreferenceClickListener {
+/**
+ * Setting on PIN Management screen (Settings > Supervision > Manage Pin) that invokes the flow to
+ * delete the device PIN.
+ */
+class SupervisionDeletePinPreference : PreferenceMetadata {
     override val key: String
         get() = KEY
 
     override val title: Int
-        get() = R.string.supervision_add_forgot_pin_preference_title
+        get() = R.string.supervision_delete_pin_preference_title
 
-    override fun isAvailable(context: Context) = Flags.enableSupervisionPinRecoveryScreen()
+    override val summary: Int
+        get() = R.string.supervision_delete_pin_preference_summary
 
-    // TODO(b/393657542): trigger re-authentication flow to confirm user credential before PIN
-    // recovery.
-    override fun onPreferenceClick(preference: Preference): Boolean {
-        return true
-    }
+    // TODO(b/406082832): Implements the delete PIN flow in settings.
 
     companion object {
-        const val KEY = "supervision_pin_recovery"
+        const val KEY = "supervision_delete_pin"
     }
 }
