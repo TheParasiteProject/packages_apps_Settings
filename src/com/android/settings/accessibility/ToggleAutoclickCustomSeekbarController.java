@@ -178,6 +178,6 @@ public class ToggleAutoclickCustomSeekbarController extends BasePreferenceContro
     }
     private CharSequence delayTimeToString(int delayMillis) {
         return AutoclickUtils.getAutoclickDelaySummary(mContext,
-                R.string.accessibilty_autoclick_delay_unit_second, delayMillis);
+                R.string.accessibility_autoclick_delay_unit_second, delayMillis);
     }
 }

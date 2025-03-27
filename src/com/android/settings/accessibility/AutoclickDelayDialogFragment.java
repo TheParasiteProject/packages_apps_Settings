@@ -115,7 +115,7 @@ public class AutoclickDelayDialogFragment extends InstrumentedDialogFragment {
             RadioButton radioButton = dialogView.findViewById(radioButtonId);
             if (radioButton != null) {
                 radioButton.setText(AutoclickUtils.getAutoclickDelaySummary(
-                        getContext(), R.string.accessibilty_autoclick_delay_unit_second,
+                        getContext(), R.string.accessibility_autoclick_delay_unit_second,
                         RADIO_BUTTON_ID_TO_DELAY_TIME.get(radioButtonId)));
             }
         }
