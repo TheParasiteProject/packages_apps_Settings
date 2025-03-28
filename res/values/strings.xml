@@ -14488,6 +14488,8 @@ Data usage charges may apply.</string>
     <string name="supervision_web_content_filters_search_filter_off_title">SafeSearch filtering OFF</string>
     <!-- Summary for web content filters search category filter off option [CHAR LIMIT=NONE] -->
     <string name="supervision_web_content_filters_search_filter_off_summary">Account settings may still filter or blur explicit results</string>
+    <!-- Content of web content filters footer [CHAR LIMIT=NONE] -->
+    <string name="supervision_web_content_filters_footer_content">These filters only apply to this device when you visit sites using Chrome and in some Android apps, or use Search.</string>
     <!-- Generic content description that is attached to the preview illustration at the top of an Accessibility feature toggle page. [CHAR LIMIT=NONE] -->
     <!-- Title for supervision PIN verification screen [CHAR LIMIT=60] -->
     <string name="supervision_full_screen_pin_verification_title">Enter supervision PIN</string>

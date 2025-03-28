@@ -60,6 +60,7 @@ class SupervisionWebContentFiltersScreen : PreferenceScreenCreator {
                     +SupervisionSearchFilterOnPreference(dataStore)
                     +SupervisionSearchFilterOffPreference(dataStore)
                 }
+            +SupervisionWebContentFiltersFooterPreference()
         }
 
     companion object {
