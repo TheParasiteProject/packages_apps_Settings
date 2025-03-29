@@ -494,7 +494,7 @@
     <string name="spatial_audio_speaker" product="tablet" msgid="5452617980485166854">"タブレットのスピーカー"</string>
     <string name="spatial_audio_speaker" product="device" msgid="6204289590128303795">"デバイスのスピーカー"</string>
     <string name="spatial_audio_speaker" product="desktop" msgid="6204289590128303795">"デバイスのスピーカー"</string>
-    <string name="audio_sharing_dialog_share_content" product="default" msgid="708698992481271057">"このスマートフォンの音楽と動画は、両方のヘッドフォンで再生されます"</string>
+    <string name="audio_sharing_dialog_share_content" product="default" msgid="708698992481271057">"このスマートフォンの音楽と動画は、両方のヘ⁠ッ⁠ド⁠フ⁠ォ⁠ンで再生されます"</string>
     <string name="audio_sharing_dialog_share_content" product="tablet" msgid="3459594795397910145">"このタブレットの音楽と動画は、両方のヘッドフォンで再生されます"</string>
     <string name="audio_sharing_dialog_share_content" product="device" msgid="1297019559878011896">"このデバイスの音楽と動画は、両方のヘッドフォンで再生されます"</string>
     <string name="audio_sharing_dialog_share_content" product="desktop" msgid="1297019559878011896">"このデバイスの音楽と動画は、両方のヘッドフォンで再生されます"</string>
@@ -518,4 +518,7 @@
     <string name="audio_sharing_confirm_dialog_content_with_link" product="tablet" msgid="282597208139437138">"音声の共有を開始するには、まず LE Audio 対応のヘッドフォンをタブレットに接続してください。"<annotation id="link">"対応デバイスについての詳細"</annotation></string>
     <string name="audio_sharing_confirm_dialog_content_with_link" product="device" msgid="668964968208427465">"音声の共有を開始するには、まず LE Audio 対応のヘッドフォンをデバイスに接続してください。"<annotation id="link">"対応デバイスについての詳細"</annotation></string>
     <string name="audio_sharing_confirm_dialog_content_with_link" product="desktop" msgid="668964968208427465">"音声の共有を開始するには、まず LE Audio 対応のヘッドフォンをデバイスに接続してください。"<annotation id="link">"対応デバイスについての詳細"</annotation></string>
+    <string name="network_dashboard_summary_mobile" product="default" msgid="1856501121269595911">"モバイル、Wi-Fi、アクセス ポイント"</string>
+    <!-- no translation found for network_dashboard_summary_mobile (8770767156162473221) -->
+    <skip />
 </resources>
