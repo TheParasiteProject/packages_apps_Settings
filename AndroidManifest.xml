@@ -2872,6 +2872,10 @@
 
         <activity android:name=".supervision.SetupSupervisionActivity" android:exported="false" />
 
+        <activity
+            android:name=".supervision.SupervisionPinRecoveryActivity"
+            android:exported="false" />
+
         <activity android:name=".SetupRedactionInterstitial"
             android:enabled="false"
             android:exported="true"

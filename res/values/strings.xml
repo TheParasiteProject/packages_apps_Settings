@@ -14475,5 +14475,10 @@ Data usage charges may apply.</string>
     <!-- Generic content description that is attached to the preview illustration at the top of an Accessibility feature toggle page. [CHAR LIMIT=NONE] -->
     <!-- Title for supervision PIN verification screen [CHAR LIMIT=60] -->
     <string name="supervision_full_screen_pin_verification_title">Enter supervision PIN</string>
+    <!-- Title on activity to choose lock for supervision setup [CHAR LIMIT=NONE] -->
+    <string name="supervision_lock_setup_title">Choose lock for supervision</string>
+    <!-- description on activity to choose lock supervision setup [CHAR LIMIT=NONE] -->
+    <string name="supervision_lock_setup_description">You can unlock supervision settings with this code</string>
+    <string name ="supervision_pin_reset_success_toast">Parental control PIN reset</string>
     <string name="accessibility_illustration_content_description"><xliff:g id="feature" example="Select to Speak">%1$s</xliff:g> animation</string>
 </resources>
