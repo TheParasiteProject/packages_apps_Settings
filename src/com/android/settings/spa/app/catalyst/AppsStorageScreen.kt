@@ -20,6 +20,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.android.settings.Settings.StorageUseActivity
+import com.android.settings.contract.TAG_DEVICE_STATE_SCREEN
 import com.android.settings.flags.Flags
 import com.android.settings.spa.app.storage.StorageType
 import com.android.settingslib.metadata.PreferenceHierarchy
@@ -40,6 +41,8 @@ class AppStorageAppListScreen : PreferenceScreenCreator, PreferenceHierarchyGene
 
     override val title: Int
         get() = StorageType.Apps.titleResource
+
+    override fun tags(context: Context) = arrayOf(TAG_DEVICE_STATE_SCREEN)
 
     override fun isFlagEnabled(context: Context) = Flags.catalystAppList()
 
