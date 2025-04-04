@@ -441,6 +441,7 @@ public abstract class ToggleFeaturePreferenceFragment extends BaseSupportFragmen
         preference.setSelectable(false);
         preference.setMaxHeight(displayHalfHeight);
         preference.setKey(KEY_ANIMATED_IMAGE);
+        final CharSequence contentDescription = getContentDescriptionForAnimatedIllustration();
         preference.setOnBindListener(view -> {
             // isAnimatable is decided in
             // {@link IllustrationPreference#onBindViewHolder(PreferenceViewHolder)}. Therefore, we
@@ -449,8 +450,7 @@ public abstract class ToggleFeaturePreferenceFragment extends BaseSupportFragmen
             // images are decorative.
             ThreadUtils.getUiThreadHandler().post(() -> {
                 if (preference.isAnimatable()) {
-                    preference.setContentDescription(
-                            getContentDescriptionForAnimatedIllustration());
+                    preference.setContentDescription(contentDescription);
                 }
             });
         });
