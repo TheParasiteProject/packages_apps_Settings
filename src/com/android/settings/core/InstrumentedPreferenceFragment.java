@@ -82,6 +82,9 @@ public abstract class InstrumentedPreferenceFragment extends ObservablePreferenc
         if (recyclerView != null) {
             mOnScrollListener = new OnScrollListener(getClass().getName());
             recyclerView.addOnScrollListener(mOnScrollListener);
+
+            // Scrollbar should only be visible when the user is scrolling.
+            recyclerView.setVerticalScrollBarEnabled(false);
         }
         super.onResume();
     }
@@ -153,6 +156,7 @@ public abstract class InstrumentedPreferenceFragment extends ObservablePreferenc
                             Configuration.Builder.withView(CUJ_SETTINGS_PAGE_SCROLL, recyclerView)
                                     .setTag(mClassName);
                     mMonitor.begin(builder);
+                    recyclerView.setVerticalScrollBarEnabled(true);
                     break;
                 case RecyclerView.SCROLL_STATE_IDLE:
                     mMonitor.end(CUJ_SETTINGS_PAGE_SCROLL);
