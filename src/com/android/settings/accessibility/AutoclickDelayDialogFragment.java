@@ -28,6 +28,7 @@ import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
@@ -80,6 +81,10 @@ public class AutoclickDelayDialogFragment extends InstrumentedDialogFragment {
         TextView customValueTextView = dialogView.findViewById(
                 R.id.accessibility_autoclick_custom_value);
         Group sliderContainer = dialogView.findViewById(R.id.sliderContainer);
+        ImageView decreaseButton = dialogView.findViewById(
+                R.id.accessibility_autoclick_custom_value_decrease);
+        ImageView increaseButton = dialogView.findViewById(
+                R.id.accessibility_autoclick_custom_value_increase);
 
         AlertDialog alertDialog = new AlertDialog.Builder(getContext())
                 .setView(dialogView)
@@ -125,6 +130,9 @@ public class AutoclickDelayDialogFragment extends InstrumentedDialogFragment {
                 }
             });
 
+        decreaseButton.setOnClickListener(v -> decreaseDelayByImageView(customProgressBar));
+        increaseButton.setOnClickListener(v -> increaseDelayByImageView(customProgressBar));
+
         if (savedInstanceState == null) {
             initStateBasedOnDelay(radioGroup, customValueTextView, customProgressBar);
         }
@@ -147,6 +155,22 @@ public class AutoclickDelayDialogFragment extends InstrumentedDialogFragment {
         } else {
             radioGroup.check(R.id.accessibility_autoclick_dialog_custom);
         }
+    }
+
+    private void decreaseDelayByImageView(@NonNull SeekBar customProgressBar) {
+        int delay = customProgressBar.getProgress();
+        if (delay > customProgressBar.getMin()) {
+            delay--;
+        }
+        customProgressBar.setProgress(delay);
+    }
+
+    private void increaseDelayByImageView(@NonNull SeekBar customProgressBar) {
+        int delay = customProgressBar.getProgress();
+        if (delay < customProgressBar.getMax()) {
+            delay++;
+        }
+        customProgressBar.setProgress(delay);
     }
 
     private boolean isCustomButtonChecked(int checkedId) {

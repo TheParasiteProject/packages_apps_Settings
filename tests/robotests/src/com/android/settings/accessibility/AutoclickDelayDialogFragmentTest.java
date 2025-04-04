@@ -25,6 +25,7 @@ import static com.google.common.truth.Truth.assertThat;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 
@@ -95,12 +96,7 @@ public class AutoclickDelayDialogFragmentTest {
         mDialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick();
         ShadowLooper.idleMainLooper();
 
-        final int autoclickDelay = Settings.Secure.getInt(
-                ApplicationProvider.getApplicationContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_AUTOCLICK_DELAY,
-                AUTOCLICK_DELAY_WITH_INDICATOR_DEFAULT);
-
-        assertThat(autoclickDelay).isEqualTo(800);
+        assertDelayUpdatedInSettings(800);
     }
 
     @Test
@@ -134,13 +130,50 @@ public class AutoclickDelayDialogFragmentTest {
 
         mDialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick();
         ShadowLooper.idleMainLooper();
+        assertDelayUpdatedInSettings(TEST_SEEK_BAR_PROGRESS * AUTOCLICK_DELAY_STEP);
+    }
+
+    @Test
+    public void clickIncreaseAndDecreaseImageView_updatesAutoclickDelay() {
+        assertThat(mDialog.isShowing()).isTrue();
+        RadioGroup radioGroup = mDialog.findViewById(
+                R.id.autoclick_delay_before_click_value_group);
+        radioGroup.check(R.id.accessibility_autoclick_dialog_custom);
+
+        SeekBar customProgressBar = mDialog.findViewById(
+                R.id.accessibility_autoclick_custom_slider);
+        assertThat(customProgressBar.getVisibility()).isEqualTo(View.VISIBLE);
+        customProgressBar.setProgress(TEST_SEEK_BAR_PROGRESS);
+        ShadowLooper.idleMainLooper();
+
+        ImageView decreaseButton = mDialog.findViewById(
+                R.id.accessibility_autoclick_custom_value_decrease);
+        decreaseButton.callOnClick();
+        decreaseButton.callOnClick();
+        assertThat(customProgressBar.getProgress()).isEqualTo(TEST_SEEK_BAR_PROGRESS - 2);
+
+        ImageView increaseButton = mDialog.findViewById(
+                R.id.accessibility_autoclick_custom_value_increase);
+        increaseButton.callOnClick();
+        assertThat(customProgressBar.getProgress()).isEqualTo(TEST_SEEK_BAR_PROGRESS - 1);
+
+        mDialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick();
+        ShadowLooper.idleMainLooper();
 
         final int autoclickDelay = Settings.Secure.getInt(
                 ApplicationProvider.getApplicationContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_AUTOCLICK_DELAY,
                 AUTOCLICK_DELAY_WITH_INDICATOR_DEFAULT);
 
-        assertThat(autoclickDelay).isEqualTo(
-                TEST_SEEK_BAR_PROGRESS * AUTOCLICK_DELAY_STEP);
+        assertDelayUpdatedInSettings((TEST_SEEK_BAR_PROGRESS - 1) * AUTOCLICK_DELAY_STEP);
+    }
+
+    private void assertDelayUpdatedInSettings(int expectedDelay) {
+        final int autoclickDelay = Settings.Secure.getInt(
+                ApplicationProvider.getApplicationContext().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_AUTOCLICK_DELAY,
+                AUTOCLICK_DELAY_WITH_INDICATOR_DEFAULT);
+
+        assertThat(autoclickDelay).isEqualTo(expectedDelay);
     }
 }
