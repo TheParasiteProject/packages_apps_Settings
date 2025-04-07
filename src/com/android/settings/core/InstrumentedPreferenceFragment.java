@@ -160,6 +160,9 @@ public abstract class InstrumentedPreferenceFragment extends ObservablePreferenc
                     break;
                 case RecyclerView.SCROLL_STATE_IDLE:
                     mMonitor.end(CUJ_SETTINGS_PAGE_SCROLL);
+                    // Disable scrollbar when the user is not scrolling. This is to avoid the
+                    // scrollbar from being visible when the user is changing a setting.
+                    recyclerView.setVerticalScrollBarEnabled(false);
                     break;
                 default:
             }
