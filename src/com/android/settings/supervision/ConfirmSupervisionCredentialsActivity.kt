@@ -101,9 +101,11 @@ open class ConfirmSupervisionCredentialsActivity : FragmentActivity() {
         }
 
         val activityManager = getSystemService(ActivityManager::class.java)
-        if(!activityManager.startProfile(supervisingUser)) {
-            Log.w(SupervisionLog.TAG,
-                "Unable to start supervising user, cannot verify credentials.")
+        if (!activityManager.startProfile(supervisingUser)) {
+            Log.w(
+                SupervisionLog.TAG,
+                "Unable to start supervising user, cannot verify credentials.",
+            )
             setResult(RESULT_CANCELED)
             finish()
             return
@@ -123,7 +125,7 @@ open class ConfirmSupervisionCredentialsActivity : FragmentActivity() {
             CancellationSignal(),
             ContextCompat.getMainExecutor(this),
             mAuthenticationCallback,
-            userId
+            userId,
         )
     }
 
