@@ -18,13 +18,18 @@ package com.android.settings.accessibility;
 
 import static android.view.accessibility.AccessibilityManager.AUTOCLICK_DELAY_WITH_INDICATOR_DEFAULT;
 
+import static com.android.settings.accessibility.AutoclickUtils.AUTOCLICK_DELAY_STEP;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.View;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.constraintlayout.widget.Group;
 import androidx.fragment.app.testing.FragmentScenario;
 import androidx.lifecycle.Lifecycle;
 import androidx.test.core.app.ApplicationProvider;
@@ -40,6 +45,7 @@ import org.robolectric.shadows.ShadowLooper;
 @RunWith(RobolectricTestRunner.class)
 public class AutoclickDelayDialogFragmentTest {
 
+    private static final int TEST_SEEK_BAR_PROGRESS = 5;
     private AutoclickDelayDialogFragment mFragment;
     private AlertDialog mDialog;
     private FragmentScenario<AutoclickDelayDialogFragment> mFragmentScenario;
@@ -95,5 +101,46 @@ public class AutoclickDelayDialogFragmentTest {
                 AUTOCLICK_DELAY_WITH_INDICATOR_DEFAULT);
 
         assertThat(autoclickDelay).isEqualTo(800);
+    }
+
+    @Test
+    public void performClickOnNonCustomRadioButton_sliderGroupIsGone() {
+        assertThat(mDialog.isShowing()).isTrue();
+        Group sliderContainer = mDialog.findViewById(R.id.sliderContainer);
+        assertThat(sliderContainer.getVisibility()).isEqualTo(View.GONE);
+
+        RadioGroup radioGroup = mDialog.findViewById(
+                R.id.autoclick_delay_before_click_value_group);
+        radioGroup.check(R.id.accessibility_autoclick_dialog_custom);
+
+        assertThat(sliderContainer.getVisibility()).isEqualTo(View.VISIBLE);
+
+        radioGroup.check(R.id.accessibility_autoclick_dialog_800ms);
+        assertThat(sliderContainer.getVisibility()).isEqualTo(View.GONE);
+    }
+
+    @Test
+    public void performUpdateOnSeekBar_updatesAutoclickDelay() {
+        assertThat(mDialog.isShowing()).isTrue();
+        RadioGroup radioGroup = mDialog.findViewById(
+                R.id.autoclick_delay_before_click_value_group);
+        radioGroup.check(R.id.accessibility_autoclick_dialog_custom);
+
+        SeekBar customProgressBar = mDialog.findViewById(
+                R.id.accessibility_autoclick_custom_slider);
+        assertThat(customProgressBar.getVisibility()).isEqualTo(View.VISIBLE);
+        customProgressBar.setProgress(TEST_SEEK_BAR_PROGRESS);
+        ShadowLooper.idleMainLooper();
+
+        mDialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick();
+        ShadowLooper.idleMainLooper();
+
+        final int autoclickDelay = Settings.Secure.getInt(
+                ApplicationProvider.getApplicationContext().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_AUTOCLICK_DELAY,
+                AUTOCLICK_DELAY_WITH_INDICATOR_DEFAULT);
+
+        assertThat(autoclickDelay).isEqualTo(
+                TEST_SEEK_BAR_PROGRESS * AUTOCLICK_DELAY_STEP);
     }
 }

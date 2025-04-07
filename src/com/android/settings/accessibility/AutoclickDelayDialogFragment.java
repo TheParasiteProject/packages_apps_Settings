@@ -19,6 +19,8 @@ package com.android.settings.accessibility;
 
 import static android.view.accessibility.AccessibilityManager.AUTOCLICK_DELAY_WITH_INDICATOR_DEFAULT;
 
+import static com.android.settings.accessibility.AutoclickUtils.AUTOCLICK_DELAY_STEP;
+
 import android.app.Dialog;
 import android.app.settings.SettingsEnums;
 import android.os.Bundle;
@@ -28,10 +30,13 @@ import android.view.View;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.constraintlayout.widget.Group;
 
 import com.android.settings.R;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
@@ -70,6 +75,11 @@ public class AutoclickDelayDialogFragment extends InstrumentedDialogFragment {
         getRadioButtonLabels(dialogView);
         RadioGroup radioGroup = dialogView.findViewById(
                 R.id.autoclick_delay_before_click_value_group);
+        SeekBar customProgressBar = dialogView.findViewById(
+                R.id.accessibility_autoclick_custom_slider);
+        TextView customValueTextView = dialogView.findViewById(
+                R.id.accessibility_autoclick_custom_value);
+        Group sliderContainer = dialogView.findViewById(R.id.sliderContainer);
 
         AlertDialog alertDialog = new AlertDialog.Builder(getContext())
                 .setView(dialogView)
@@ -82,46 +92,89 @@ public class AutoclickDelayDialogFragment extends InstrumentedDialogFragment {
                             if (RADIO_BUTTON_ID_TO_DELAY_TIME
                                     .containsKey(checkedRadioButtonId)) {
                                 delay = RADIO_BUTTON_ID_TO_DELAY_TIME.get(checkedRadioButtonId);
+                            } else {
+                                delay = seekBarProgressToDelay(customProgressBar.getProgress());
                             }
 
-                            // TODO(b/390460859): Add custom seekbar for other delay time values.
                             updateAutoclickDelay(delay);
                         })
                 .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
                 .create();
+        radioGroup.setOnCheckedChangeListener((buttonView, checkedId) -> {
+            customValueTextView.setText(delayTimeToString(
+                    seekBarProgressToDelay(customProgressBar.getProgress())));
+            sliderContainer.setVisibility(
+                    isCustomButtonChecked(checkedId) ? View.VISIBLE : View.GONE);
+        });
+
+        customProgressBar.setOnSeekBarChangeListener(
+            new SeekBar.OnSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(
+                        @NonNull SeekBar seekBar, int progress, boolean fromUser) {
+                    CharSequence threshold = delayTimeToString(seekBarProgressToDelay(progress));
+                    customValueTextView.setText(threshold);
+                }
+
+                @Override
+                public void onStartTrackingTouch(@NonNull SeekBar seekBar) {
+                }
+
+                @Override
+                public void onStopTrackingTouch(@NonNull SeekBar seekBar) {
+                }
+            });
 
         if (savedInstanceState == null) {
-            initStateBasedOnDelay(radioGroup);
+            initStateBasedOnDelay(radioGroup, customValueTextView, customProgressBar);
         }
 
         return alertDialog;
     }
 
-    private void initStateBasedOnDelay(@NonNull RadioGroup radioGroup) {
-        // TODO(b/390460859): Add custom seekbar for other delay time values.
+    private void initStateBasedOnDelay(@NonNull RadioGroup radioGroup,
+            @NonNull TextView customValueTextView, @NonNull SeekBar customProgressBar) {
         final int autoclickDelay = Settings.Secure.getInt(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_AUTOCLICK_DELAY,
                 AccessibilityManager.AUTOCLICK_DELAY_WITH_INDICATOR_DEFAULT);
 
+        customValueTextView.setText(delayTimeToString(autoclickDelay));
+        customProgressBar.setProgress(autoclickDelay / AUTOCLICK_DELAY_STEP);
+
         Integer radioButtonId = RADIO_BUTTON_ID_TO_DELAY_TIME.inverse().get(autoclickDelay);
         if (radioButtonId != null) {
             radioGroup.check(radioButtonId);
+        } else {
+            radioGroup.check(R.id.accessibility_autoclick_dialog_custom);
         }
+    }
+
+    private boolean isCustomButtonChecked(int checkedId) {
+        return checkedId == R.id.accessibility_autoclick_dialog_custom;
     }
 
     private void getRadioButtonLabels(@NonNull View dialogView) {
         for (Integer radioButtonId : RADIO_BUTTON_ID_TO_DELAY_TIME.keySet()) {
             RadioButton radioButton = dialogView.findViewById(radioButtonId);
             if (radioButton != null) {
-                radioButton.setText(AutoclickUtils.getAutoclickDelaySummary(
-                        getContext(), R.string.accessibility_autoclick_delay_unit_second,
+                radioButton.setText(delayTimeToString(
                         RADIO_BUTTON_ID_TO_DELAY_TIME.get(radioButtonId)));
             }
         }
     }
 
+    /** Converts seek bar preference progress value to autoclick delay associated with it. */
+    private int seekBarProgressToDelay(int progress) {
+        return progress * AUTOCLICK_DELAY_STEP;
+    }
+
+    private CharSequence delayTimeToString(int delayMillis) {
+        return AutoclickUtils.getAutoclickDelaySummary(getContext(),
+                R.string.accessibility_autoclick_delay_unit_second, delayMillis);
+    }
+
     /** Updates autoclick delay time. */
-    public void updateAutoclickDelay(int delay) {
+    private void updateAutoclickDelay(int delay) {
         Settings.Secure.putInt(
                 getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_AUTOCLICK_DELAY,
