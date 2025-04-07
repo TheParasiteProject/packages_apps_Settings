@@ -58,6 +58,10 @@ class VibrationScreen : PreferenceScreenCreator, PreferenceAvailabilityProvider 
             +CallVibrationPreferenceCategory() += {
                 +RingVibrationIntensitySwitchPreference()
             }
+            +NotificationAlarmVibrationPreferenceCategory() += {
+                +NotificationVibrationIntensitySwitchPreference()
+                +AlarmVibrationIntensitySwitchPreference()
+            }
         }
     }
 
@@ -71,6 +75,13 @@ private class CallVibrationPreferenceCategory :
     PreferenceCategory(
         "vibration_category_call",
         R.string.accessibility_call_vibration_category_title,
+    )
+
+/** Notification and alarm vibration preferences. */
+private class NotificationAlarmVibrationPreferenceCategory :
+    PreferenceCategory(
+        "vibration_category_notification_alarm",
+        R.string.accessibility_notification_alarm_vibration_category_title,
     )
 
 /** Returns true if the device has a system vibrator, false otherwise. */

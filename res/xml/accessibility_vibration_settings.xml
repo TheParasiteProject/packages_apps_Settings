@@ -46,16 +46,17 @@
 
     <PreferenceCategory
         android:key="vibration_category_notification_alarm"
-        android:title="@string/accessibility_notification_alarm_vibration_category_title">
+        android:title="@string/accessibility_notification_alarm_vibration_category_title"
+        android:persistent="false">
 
         <SwitchPreferenceCompat
-            android:key="vibration_preference_notification"
+            android:key="notification_vibration_intensity"
             android:title="@string/accessibility_notification_vibration_title"
             app:keywords="@string/keywords_notification_vibration"
             app:controller="com.android.settings.accessibility.NotificationVibrationTogglePreferenceController" />
 
         <SwitchPreferenceCompat
-            android:key="vibration_preference_alarm"
+            android:key="alarm_vibration_intensity"
             android:title="@string/accessibility_alarm_vibration_title"
             app:keywords="@string/keywords_alarm_vibration"
             app:controller="com.android.settings.accessibility.AlarmVibrationTogglePreferenceController" />
