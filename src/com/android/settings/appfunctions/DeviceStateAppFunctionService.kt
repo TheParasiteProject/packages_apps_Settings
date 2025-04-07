@@ -16,13 +16,17 @@
 
 package com.android.settings.appfunctions
 
+import android.app.INotificationManager
 import android.app.appsearch.GenericDocument
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.content.pm.PackageManager.ApplicationInfoFlags
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.CancellationSignal
 import android.os.OutcomeReceiver
+import android.os.ServiceManager
 import android.util.Log
 import com.android.extensions.appfunctions.AppFunctionException
 import com.android.extensions.appfunctions.AppFunctionException.ERROR_FUNCTION_NOT_FOUND
@@ -106,6 +110,9 @@ class DeviceStateAppFunctionService : AppFunctionService() {
                 }
             }
         }
+
+        perScreenDeviceStatesList.add(buildNotificationsScreenStates())
+
         return DeviceStateResponse(
             perScreenDeviceStates = perScreenDeviceStatesList,
             deviceLocale = applicationContext.getLocale().toString()
@@ -201,6 +208,47 @@ class DeviceStateAppFunctionService : AppFunctionService() {
         val configuration = Configuration(applicationContext.resources.configuration)
         configuration.setLocale(Locale.US)
         return applicationContext.createConfigurationContext(configuration)
+    }
+
+    /**
+     * Build a PerScreenDeviceStates for the notifications screen.
+     *
+     * This is temporary solution to unblock CUJ 6 for Teamfood.
+     */
+    private fun buildNotificationsScreenStates(): PerScreenDeviceStates {
+
+        val packageManager = applicationContext.packageManager
+        val notificationManager = INotificationManager.Stub.asInterface(
+            ServiceManager.getService(Context.NOTIFICATION_SERVICE)
+        )
+        val disabledComponentsFlag =
+            (PackageManager.MATCH_DISABLED_COMPONENTS or
+                    PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS)
+                .toLong()
+        val regularFlags = ApplicationInfoFlags.of(disabledComponentsFlag)
+        val installedPackages = packageManager.getInstalledApplications(regularFlags)
+        val deviceStateItems = ArrayList<DeviceStateItem>(installedPackages.size)
+        for (info in installedPackages) {
+            val packageName = info.packageName
+            val appName = packageManager.getApplicationLabel(info.applicationInfo)
+            val uid = info.applicationInfo.uid
+            val areNotificationsEnabled =
+                notificationManager?.areNotificationsEnabledForPackage(packageName, uid) ?: false
+            deviceStateItems.add(
+                DeviceStateItem(
+                    key = "notifications_enabled_package_$packageName",
+                    hintText = "App: $appName",
+                    jsonValue = areNotificationsEnabled.toString(),
+                )
+            )
+        }
+
+        return PerScreenDeviceStates(
+            description =
+                "Notifications Settings Screen. Note that to get to the notification settings for a given package, the intent uri is intent:#Intent;action=android.settings.APP_NOTIFICATION_SETTINGS;S.android.provider.extra.APP_PACKAGE=\$packageName;end",
+            intentUri = "intent:#Intent;action=android.settings.NOTIFICATION_SETTINGS;end",
+            deviceStateItems = deviceStateItems,
+        )
     }
 
     companion object {
