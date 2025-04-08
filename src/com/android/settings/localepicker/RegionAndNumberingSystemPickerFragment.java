@@ -78,6 +78,7 @@ public class RegionAndNumberingSystemPickerFragment extends DashboardFragment im
     private static final String KEY_TOP_INTRO_PREFERENCE = "top_intro_region";
     private static final String KEY_PREFERENCE_SCREEN = "key_system_language_picker_page";
     private static final String EXTRA_EXPAND_SEARCH_VIEW = "expand_search_view";
+    private static final String EXTRA_SEARCH_VIEW_QUERY = "search_view_query";
 
     @Nullable
     private SearchView mSearchView = null;
@@ -106,6 +107,8 @@ public class RegionAndNumberingSystemPickerFragment extends DashboardFragment im
     private CharSequence mPrefix;
     @SuppressWarnings("NullAway")
     private String mPackageName;
+    @Nullable
+    private CharSequence mPreviousSearch = null;
 
     @Override
     public void onCreate(@NonNull Bundle icicle) {
@@ -120,6 +123,7 @@ public class RegionAndNumberingSystemPickerFragment extends DashboardFragment im
         mExpandSearch = mActivity.getIntent().getBooleanExtra(EXTRA_EXPAND_SEARCH_VIEW, false);
         if (icicle != null) {
             mExpandSearch = icicle.getBoolean(EXTRA_EXPAND_SEARCH_VIEW);
+            mPreviousSearch = icicle.getCharSequence(EXTRA_SEARCH_VIEW_QUERY);
         }
 
         Log.d(TAG, "onCreate, mIsNumberingMode = " + mIsNumberingMode);
@@ -157,6 +161,7 @@ public class RegionAndNumberingSystemPickerFragment extends DashboardFragment im
         super.onSaveInstanceState(outState);
         if (mSearchView != null) {
             outState.putBoolean(EXTRA_EXPAND_SEARCH_VIEW, !mSearchView.isIconified());
+            outState.putCharSequence(EXTRA_SEARCH_VIEW_QUERY, mSearchView.getQuery());
         }
     }
 
@@ -174,6 +179,15 @@ public class RegionAndNumberingSystemPickerFragment extends DashboardFragment im
             mSearchView.setMaxWidth(Integer.MAX_VALUE);
             if (mExpandSearch) {
                 searchMenuItem.expandActionView();
+            }
+            // Restore previous search status
+            if (!TextUtils.isEmpty(mPreviousSearch)) {
+                searchMenuItem.expandActionView();
+                mSearchView.setIconified(false);
+                mSearchView.setActivated(true);
+                mSearchView.setQuery(mPreviousSearch, true /* submit */);
+            } else {
+                mSearchView.setQuery(null, false /* submit */);
             }
         }
     }
