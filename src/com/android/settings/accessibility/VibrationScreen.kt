@@ -75,7 +75,7 @@ class VibrationScreen : PreferenceScreenCreator, PreferenceAvailabilityProvider 
 }
 
 /** Call vibration preferences (e.g. ringtone, ramping ringer, etc). */
-private class CallVibrationPreferenceCategory :
+class CallVibrationPreferenceCategory :
     PreferenceCategory(
         "vibration_category_call",
         R.string.accessibility_call_vibration_category_title,
@@ -98,9 +98,5 @@ private class InteractiveHapticsPreferenceCategory :
 /** Returns true if the device has a system vibrator, false otherwise. */
 fun Context.isVibratorAvailable(): Boolean =
     getSystemService(Vibrator::class.java).hasVibrator()
-
-/** Returns the number of vibration intensity levels supported by this device. */
-fun Context.getSupportedVibrationIntensityLevels(): Int =
-    resources.getInteger(R.integer.config_vibration_supported_intensity_levels)
 
 // LINT.ThenChange(VibrationPreferenceController.java)
