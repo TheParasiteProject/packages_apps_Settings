@@ -1,4 +1,3 @@
-
 /*
  * Copyright (C) 2025 The Android Open Source Project
  *
@@ -22,10 +21,10 @@ import android.provider.Settings
 import com.android.settings.R
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 
-/** Accessibility settings for media vibration, as a switch toggle. */
+/** Accessibility settings for media vibration, as a slider. */
 // LINT.IfChange
-class MediaVibrationIntensitySwitchPreference :
-    VibrationIntensitySwitchPreference(
+class MediaVibrationIntensitySliderPreference :
+    VibrationIntensitySliderPreference(
         key = KEY,
         vibrationUsage = VibrationAttributes.USAGE_MEDIA,
         title = R.string.accessibility_media_vibration_title,
@@ -39,9 +38,4 @@ class MediaVibrationIntensitySwitchPreference :
         const val KEY = Settings.System.MEDIA_VIBRATION_INTENSITY
     }
 }
-
-/** Returns true is media vibration preference is supported by this device. */
-fun Context.isMediaVibrationPreferenceSupported(): Boolean =
-    resources.getBoolean(R.bool.config_media_vibration_supported)
-
-// LINT.ThenChange(MediaVibrationTogglePreferenceController.java)
+// LINT.ThenChange(MediaVibrationIntensityPreferenceController.java)

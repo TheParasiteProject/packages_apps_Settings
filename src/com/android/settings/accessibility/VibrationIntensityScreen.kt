@@ -18,6 +18,8 @@ package com.android.settings.accessibility
 import android.content.Context
 import androidx.fragment.app.Fragment
 import com.android.settings.R
+import com.android.settings.accessibility.AlarmVibrationIntensitySwitchPreference
+import com.android.settings.accessibility.NotificationVibrationIntensitySwitchPreference
 import com.android.settings.flags.Flags
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.ProvidePreferenceScreen
@@ -59,6 +61,14 @@ class VibrationIntensityScreen : PreferenceScreenCreator, PreferenceAvailability
         if (Flags.catalystVibrationIntensityScreen25q4()) {
             +CallVibrationPreferenceCategory() += {
                 +RingVibrationIntensitySliderPreference()
+            }
+            +NotificationAlarmVibrationPreferenceCategory() += {
+                +NotificationVibrationIntensitySliderPreference()
+                +AlarmVibrationIntensitySliderPreference()
+            }
+            +InteractiveHapticsPreferenceCategory() += {
+                +TouchVibrationIntensitySliderPreference()
+                +MediaVibrationIntensitySliderPreference()
             }
         }
     }

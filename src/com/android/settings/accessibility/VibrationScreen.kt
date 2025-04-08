@@ -82,14 +82,14 @@ class CallVibrationPreferenceCategory :
     )
 
 /** Notification and alarm vibration preferences. */
-private class NotificationAlarmVibrationPreferenceCategory :
+class NotificationAlarmVibrationPreferenceCategory :
     PreferenceCategory(
         "vibration_category_notification_alarm",
         R.string.accessibility_notification_alarm_vibration_category_title,
     )
 
 /** Interactive haptics preferences (e.g. touch feedback, media, keyboard, etc). */
-private class InteractiveHapticsPreferenceCategory :
+class InteractiveHapticsPreferenceCategory :
     PreferenceCategory(
         "vibration_category_haptics",
         R.string.accessibility_interactive_haptics_category_title,
