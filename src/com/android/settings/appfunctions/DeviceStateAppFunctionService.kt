@@ -35,8 +35,14 @@ import com.android.extensions.appfunctions.ExecuteAppFunctionRequest
 import com.android.extensions.appfunctions.ExecuteAppFunctionResponse
 import com.android.settings.utils.getLocale
 import com.android.settingslib.metadata.PersistentPreference
+import com.android.settingslib.metadata.PreferenceHierarchy
 import com.android.settingslib.metadata.PreferenceScreenCoordinate
+import com.android.settingslib.metadata.PreferenceHierarchyGenerator
+import com.android.settingslib.metadata.PreferenceMetadata
+import com.android.settingslib.metadata.PreferenceScreenMetadata
 import com.android.settingslib.metadata.PreferenceScreenRegistry
+import com.android.settingslib.metadata.PreferenceSummaryProvider
+import com.android.settingslib.metadata.PreferenceTitleProvider
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateResponse
 import com.google.android.appfunctions.schema.common.v1.devicestate.LocalizedString
@@ -119,7 +125,7 @@ class DeviceStateAppFunctionService : AppFunctionService() {
         )
     }
 
-    private fun buildPerScreenDeviceStates(
+    private suspend fun buildPerScreenDeviceStates(
         screenKey: String,
         requestCategory: DeviceStateCategory,
     ): PerScreenDeviceStates? {
@@ -136,53 +142,100 @@ class DeviceStateAppFunctionService : AppFunctionService() {
             return null
         }
         val deviceStateItemList: MutableList<DeviceStateItem> = ArrayList()
-        // TODO(b/405344827): support PreferenceHierarchyGenerator
-        val hierarchy = screenMetaData.getPreferenceHierarchy(applicationContext)
-        hierarchy.forEach {
-            val metadata = it.metadata as? PersistentPreference<*> ?: return@forEach
+        val hierarchy = (screenMetaData as? PreferenceHierarchyGenerator<*>)
+            ?.asyncHierarchy(perScreenConfig)
+            ?: screenMetaData.getPreferenceHierarchy(applicationContext)
+        hierarchy.forEachRecursively {
+            val metadata = it.metadata
             val config = settingConfigMap[metadata.key]
-            if (config == null || !config.enabled) {
-                return@forEach
+            // skip over explicitly disabled preferences
+            if (!(config?.enabled ?: true)) {
+                return@forEachRecursively
             }
-            val valueType = metadata.valueType
-            var jasonValue: String? = when (valueType) {
-                Int::class.javaObjectType -> metadata.storage(applicationContext)
-                    ?.getInt("")
-                    .toString()
+            val jsonValue = (metadata as? PersistentPreference<*>)?.let {
+                when (metadata.valueType) {
+                    Int::class.javaObjectType -> metadata.storage(applicationContext)
+                        .getInt("")
+                        .toString()
 
-                Boolean::class.javaObjectType -> metadata.storage(applicationContext)
-                    ?.getBoolean("").toString()
+                    Boolean::class.javaObjectType -> metadata.storage(applicationContext)
+                        .getBoolean("").toString()
 
-                Long::class.javaObjectType -> metadata.storage(applicationContext)
-                    ?.getLong("")
-                    .toString()
+                    Long::class.javaObjectType -> metadata.storage(applicationContext)
+                        .getLong("")
+                        .toString()
 
-                Float::class.javaObjectType -> metadata.storage(applicationContext)
-                    ?.getLong("")
-                    .toString()
+                    Float::class.javaObjectType -> metadata.storage(applicationContext)
+                        .getLong("")
+                        .toString()
 
-                String::class.javaObjectType -> metadata.storage(applicationContext)?.getString("")
-                else -> null
-            }
-            if (jasonValue == null) {
-                jasonValue = tryGetStringRes(metadata.summary)
-            }
+                    String::class.javaObjectType -> metadata.storage(applicationContext)
+                        .getString("")
+                    else -> getSummary(applicationContext, metadata)
+                }
+            } ?: getSummary(applicationContext, metadata)
             deviceStateItemList.add(
                 DeviceStateItem(
                     key = metadata.key,
+                    // TODO check dynamic title
                     name = getLocalizedString(metadata.title),
-                    jsonValue = jasonValue,
-                    hintText = config.hintText
+                    jsonValue = jsonValue,
+                    hintText = config?.hintText ?: ""
                 )
             )
         }
 
         val launchingIntent = screenMetaData.getLaunchIntent(applicationContext, null)
         return PerScreenDeviceStates(
-            description = tryGetStringRes(screenMetaData.title),
+            description = getScreenTitle(screenMetaData) ?: "",
             deviceStateItems = deviceStateItemList,
             intentUri = launchingIntent?.toUri(Intent.URI_INTENT_SCHEME)
         )
+    }
+
+    private suspend fun PreferenceHierarchyGenerator<*>.asyncHierarchy(
+        config: PerScreenConfig
+    ): PreferenceHierarchy {
+        return when (config.defaultType) {
+            Boolean::class.java -> (this as PreferenceHierarchyGenerator<Boolean>)
+                .generatePreferenceHierarchy(
+                    applicationContext,
+                    config.defaultTypeValue as Boolean
+                )
+            Int::class.java -> (this as PreferenceHierarchyGenerator<Int>)
+                .generatePreferenceHierarchy(
+                    applicationContext,
+                    config.defaultTypeValue as Int
+                )
+            else -> generatePreferenceHierarchy(applicationContext)
+        }
+    }
+
+    private fun getScreenTitle(metadata: PreferenceScreenMetadata): String? {
+        val screenTitleRes = metadata.screenTitle
+        if (screenTitleRes != 0) {
+            return tryGetStringRes(screenTitleRes)
+        }
+        metadata.getScreenTitle(applicationContext)?.let {
+            return it.toString()
+        }
+        val dynamicTitle = (metadata as? PreferenceTitleProvider)?.getTitle(applicationContext)
+        if (dynamicTitle != null) {
+            return dynamicTitle.toString()
+        }
+        val titleRes = metadata.title
+        if (titleRes != 0) {
+            return tryGetStringRes(titleRes)
+        }
+        return null
+    }
+
+    private fun getSummary(context: Context, metadata: PreferenceMetadata): String? {
+        return if (metadata.summary != 0) {
+            tryGetStringRes(metadata.summary)
+        } else {
+            (metadata as? PreferenceSummaryProvider)?.getSummary(context).toString()
+        }
     }
 
     private fun tryGetStringRes(resId: Int): String {
