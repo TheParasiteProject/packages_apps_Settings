@@ -613,6 +613,27 @@ public class AudioStreamMediaServiceTest {
     }
 
     @Test
+    public void byReceiveStateFlagOff_mediaSessionCallback_onPause_modifySource() {
+        mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
+        mSetFlagsRule.disableFlags(Flags.FLAG_AUDIO_STREAM_MEDIA_SERVICE_BY_RECEIVE_STATE);
+        mSetFlagsRule.enableFlags(Flags.FLAG_AUDIO_STREAM_PLAY_PAUSE_BY_MODIFY_SOURCE);
+
+        when(mBroadcastReceiveState.getBroadcastId()).thenReturn(1);
+        when(mLeBroadcastAssistant.getAllSources(any())).thenReturn(
+                List.of(mBroadcastReceiveState));
+        when(mDevice.getAddress()).thenReturn(DEVICE_ADDRESS);
+        when(mBroadcastReceiveState.getSourceDevice()).thenReturn(mDevice);
+
+        mAudioStreamMediaService.onCreate();
+        mAudioStreamMediaService.onStartCommand(setupIntent(), /* flags= */ 0, /* startId= */ 0);
+        assertThat(mAudioStreamMediaService.mMediaSessionCallback).isNotNull();
+        mAudioStreamMediaService.mMediaSessionCallback.onPause();
+
+        verify(mVolumeControlProfile, never()).setDeviceVolume(any(), anyInt(), anyBoolean());
+        verify(mLeBroadcastAssistant).getSourceMetadata(any(), anyInt());
+    }
+
+    @Test
     public void byReceiveStateFlagOn_mediaSessionCallback_onPause_modifySource() {
         mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
         mSetFlagsRule.enableFlags(Flags.FLAG_AUDIO_STREAM_MEDIA_SERVICE_BY_RECEIVE_STATE);
@@ -663,6 +684,27 @@ public class AudioStreamMediaServiceTest {
         verify(mVolumeControlProfile).setDeviceVolume(any(), anyInt(), anyBoolean());
         verify(mFeatureFactory.metricsFeatureProvider).action(any(),
                 eq(SettingsEnums.ACTION_AUDIO_STREAM_NOTIFICATION_MUTE_BUTTON_CLICK), eq(0));
+    }
+
+    @Test
+    public void byReceiveStateFlagOff_mediaSessionCallback_onPlay_modifySource() {
+        mSetFlagsRule.enableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING);
+        mSetFlagsRule.disableFlags(Flags.FLAG_AUDIO_STREAM_MEDIA_SERVICE_BY_RECEIVE_STATE);
+        mSetFlagsRule.enableFlags(Flags.FLAG_AUDIO_STREAM_PLAY_PAUSE_BY_MODIFY_SOURCE);
+
+        when(mBroadcastReceiveState.getBroadcastId()).thenReturn(1);
+        when(mLeBroadcastAssistant.getAllSources(any())).thenReturn(
+                List.of(mBroadcastReceiveState));
+        when(mDevice.getAddress()).thenReturn(DEVICE_ADDRESS);
+        when(mBroadcastReceiveState.getSourceDevice()).thenReturn(mDevice);
+
+        mAudioStreamMediaService.onCreate();
+        mAudioStreamMediaService.onStartCommand(setupIntent(), /* flags= */ 0, /* startId= */ 0);
+        assertThat(mAudioStreamMediaService.mMediaSessionCallback).isNotNull();
+        mAudioStreamMediaService.mMediaSessionCallback.onPlay();
+
+        verify(mVolumeControlProfile, never()).setDeviceVolume(any(), anyInt(), anyBoolean());
+        verify(mLeBroadcastAssistant).getSourceMetadata(any(), anyInt());
     }
 
     @Test

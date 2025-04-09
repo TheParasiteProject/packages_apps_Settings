@@ -22,6 +22,7 @@ import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcastAssista
 import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcastAssistant.LocalBluetoothLeBroadcastSourceState.PAUSED_BY_RECEIVER;
 import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcastAssistant.LocalBluetoothLeBroadcastSourceState.STREAMING;
 import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcastAssistant.UNKNOWN_CHANNEL;
+import static com.android.settingslib.bluetooth.LocalBluetoothLeBroadcastAssistant.getLocalSourceStateWithSelectedChannel;
 
 import static java.util.Collections.emptyList;
 
@@ -277,7 +278,30 @@ public class AudioStreamMediaService extends Service {
                 stopSelf();
             } else {
                 mStateByDevice = new HashMap<>();
-                devices.forEach(d -> mStateByDevice.put(d, STREAMING));
+                devices.forEach(d -> {
+                    if (mStateByDevice == null) {
+                        return;
+                    }
+                    mStateByDevice.put(d, STREAMING);
+                    if (mLocalBtManager != null && mLeBroadcastAssistant != null) {
+                        mLeBroadcastAssistant.getAllSources(d).stream().filter(
+                                state -> state.getBroadcastId()
+                                        == mBroadcastId).findFirst().ifPresent(state -> {
+                                    if (mLocalBtManager == null) {
+                                        return;
+                                    }
+                                    var profileManager = mLocalBtManager.getProfileManager();
+                                    if (profileManager == null) {
+                                        return;
+                                    }
+                                    mSourceId = state.getSourceId();
+                                    var selectedChannel = getLocalSourceStateWithSelectedChannel(
+                                            profileManager, d, mSourceId, state).second;
+                                    cacheSelectedChannelIndex(selectedChannel, d);
+                                }
+                        );
+                    }
+                });
                 MediaSession.Token token =
                         getOrCreateLocalMediaSession(intent.getStringExtra(BROADCAST_TITLE));
                 startForeground(NOTIFICATION_ID, buildNotification(token));
@@ -333,10 +357,7 @@ public class AudioStreamMediaService extends Service {
         mSourceId = sourceId;
         mStateByDevice = new HashMap<>();
         mStateByDevice.put(device, state);
-        if (!selectedChannelIndex.equals(UNKNOWN_CHANNEL)) {
-            mSelectedChannelCacheByDevice.put(device, selectedChannelIndex);
-            Log.d(TAG, "mSelectedChannelCacheByDevice:" + mSelectedChannelCacheByDevice);
-        }
+        cacheSelectedChannelIndex(selectedChannelIndex, device);
         MediaSession.Token token = getOrCreateLocalMediaSession(
                 getBroadcastName(device, sourceId, programInfo));
         startForeground(NOTIFICATION_ID, buildNotification(token));
@@ -353,10 +374,7 @@ public class AudioStreamMediaService extends Service {
         mSourceId = sourceId;
         mStateByDevice = new HashMap<>();
         mStateByDevice.put(device, state);
-        if (!selectedChannelIndex.equals(UNKNOWN_CHANNEL)) {
-            mSelectedChannelCacheByDevice.put(device, selectedChannelIndex);
-            Log.d(TAG, "mSelectedChannelCacheByDevice:" + mSelectedChannelCacheByDevice);
-        }
+        cacheSelectedChannelIndex(selectedChannelIndex, device);
         updateMediaSessionAndNotify(device, sourceId, programInfo);
     }
 
@@ -365,10 +383,7 @@ public class AudioStreamMediaService extends Service {
             Set<Integer> selectedChannelIndex) {
         if (mStateByDevice != null) {
             mStateByDevice.put(device, state);
-            if (!selectedChannelIndex.equals(UNKNOWN_CHANNEL)) {
-                mSelectedChannelCacheByDevice.put(device, selectedChannelIndex);
-                Log.d(TAG, "mSelectedChannelCacheByDevice:" + mSelectedChannelCacheByDevice);
-            }
+            cacheSelectedChannelIndex(selectedChannelIndex, device);
         }
         if (getDeviceInValidState().isEmpty()) {
             Log.d(TAG, "handleNewDeviceOrState() : no device is in valid state. Stop service.");
@@ -533,14 +548,16 @@ public class AudioStreamMediaService extends Service {
             }
             super.onReceiveStateChanged(sink, sourceId, state);
             if (!mHysteresisModeFixAvailable || mStateByDevice == null
-                    || !mStateByDevice.containsKey(sink)) {
+                    || !mStateByDevice.containsKey(sink) || mLocalBtManager == null) {
                 return;
             }
-            var sourceState = LocalBluetoothLeBroadcastAssistant.getLocalSourceState(state);
-            boolean streaming = sourceState == STREAMING;
-            boolean paused = sourceState == PAUSED;
+            var stateWithSelectedChannel = getLocalSourceStateWithSelectedChannel(
+                    mLocalBtManager.getProfileManager(), sink, sourceId, state);
+            var sourceState = stateWithSelectedChannel.first;
+            cacheSelectedChannelIndex(stateWithSelectedChannel.second, sink);
             // Exit early if the state is neither streaming nor paused
-            if (!streaming && !paused) {
+            if (sourceState != STREAMING && sourceState != PAUSED
+                    && sourceState != PAUSED_BY_RECEIVER) {
                 return;
             }
             boolean shouldUpdate = mStateByDevice.get(sink) != sourceState;
@@ -736,5 +753,15 @@ public class AudioStreamMediaService extends Service {
                                         getApplicationContext(), event, volume == 0 ? 1 : 0);
                             }
                         });
+    }
+
+    private void cacheSelectedChannelIndex(Set<Integer> selectedChannelIndex,
+            BluetoothDevice device) {
+        if (!selectedChannelIndex.equals(UNKNOWN_CHANNEL)
+                && !selectedChannelIndex.isEmpty()) {
+            mSelectedChannelCacheByDevice.put(device, selectedChannelIndex);
+            Log.d(TAG, "mSelectedChannelCacheByDevice:"
+                    + mSelectedChannelCacheByDevice);
+        }
     }
 }
