@@ -47,20 +47,19 @@ import org.robolectric.RobolectricTestRunner
 @RunWith(RobolectricTestRunner::class)
 class DisplayTopologyPreferenceTest {
     val context = ApplicationProvider.getApplicationContext<Context>()
-    val preference = DisplayTopologyPreference(context)
     val injector = TestInjector(context)
+    val preference = DisplayTopologyPreference(injector)
     val rootView = View.inflate(context, preference.layoutResource, /*parent=*/ null)
     val holder = PreferenceViewHolder.createInstanceForTests(rootView)
     val wallpaper = Bitmap.createBitmap(
             intArrayOf(Color.MAGENTA), /*width=*/ 1, /*height=*/ 1, Bitmap.Config.RGB_565)
 
     init {
-        preference.injector = injector
         injector.systemWallpaper = wallpaper
         preference.onBindViewHolder(holder)
     }
 
-    class TestInjector(context : Context) : DisplayTopologyPreference.Injector(context) {
+    class TestInjector(context : Context) : ConnectedDisplayInjector(context) {
         var topology: DisplayTopology? = null
         var systemWallpaper: Bitmap? = null
         var topologyListener: Consumer<DisplayTopology>? = null

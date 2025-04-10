@@ -24,10 +24,8 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.PointF
 import android.graphics.RectF
-import android.hardware.display.DisplayManager
 import android.hardware.display.DisplayTopology
 import android.util.DisplayMetrics
-import android.view.DisplayInfo
 import android.view.MotionEvent
 import android.view.ViewTreeObserver
 import android.widget.FrameLayout
@@ -45,13 +43,12 @@ import kotlin.math.abs
  * DisplayTopologyPreference allows the user to change the display topology
  * when there is one or more extended display attached.
  */
-class DisplayTopologyPreference(context : Context)
-        : Preference(context), ViewTreeObserver.OnGlobalLayoutListener, GroupSectionDividerMixin {
+class DisplayTopologyPreference(val injector: ConnectedDisplayInjector)
+        : Preference(injector.context!!), ViewTreeObserver.OnGlobalLayoutListener,
+          GroupSectionDividerMixin {
     @VisibleForTesting lateinit var mPaneContent : FrameLayout
     @VisibleForTesting lateinit var mPaneHolder : FrameLayout
     @VisibleForTesting lateinit var mTopologyHint : TextView
-
-    @VisibleForTesting var injector : Injector
 
     /**
      * How many physical pixels to move in pane coordinates (Pythagorean distance) before a drag is
@@ -84,8 +81,6 @@ class DisplayTopologyPreference(context : Context)
         isPersistent = false
 
         isCopyingEnabled = false
-
-        injector = Injector(context)
     }
 
     override fun onBindViewHolder(holder: PreferenceViewHolder) {
@@ -122,44 +117,6 @@ class DisplayTopologyPreference(context : Context)
         if (mPaneNeedsRefresh) {
             mPaneNeedsRefresh = false
             refreshPane()
-        }
-    }
-
-    open class Injector(val context : Context) {
-        /**
-         * Lazy property for Display Manager, to prevent eagerly getting the service in unit tests.
-         */
-        private val displayManager : DisplayManager by lazy {
-            context.getSystemService(Context.DISPLAY_SERVICE) as DisplayManager
-        }
-
-        open var displayTopology : DisplayTopology?
-            get() = displayManager.displayTopology
-            set(value) { displayManager.displayTopology = value }
-
-        open val wallpaper: Bitmap?
-            get() = WallpaperManager.getInstance(context).bitmap
-
-        /**
-         * This density is the density of the current display (showing the topology pane). It is
-         * necessary to use this density here because the topology pane coordinates are in physical
-         * pixels, and the display coordinates are in density-independent pixels.
-         */
-        open val densityDpi: Int by lazy {
-            val info = DisplayInfo()
-            if (context.display.getDisplayInfo(info)) {
-                info.logicalDensityDpi
-            } else {
-                DisplayMetrics.DENSITY_DEFAULT
-            }
-        }
-
-        open fun registerTopologyListener(listener: Consumer<DisplayTopology>) {
-            displayManager.registerTopologyListener(context.mainExecutor, listener)
-        }
-
-        open fun unregisterTopologyListener(listener: Consumer<DisplayTopology>) {
-            displayManager.unregisterTopologyListener(listener)
         }
     }
 
