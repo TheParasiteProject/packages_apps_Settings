@@ -164,7 +164,7 @@ class DeviceStateAppFunctionService : AppFunctionService() {
                         localized = metadata.getPreferenceTitle(applicationContext).toString()
                     ),
                     jsonValue = jsonValue,
-                    hintText = config?.hintText ?: ""
+                    hintText = config?.hintText(englishContext, metadata)
                 )
             )
         }
