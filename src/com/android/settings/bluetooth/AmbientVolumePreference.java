@@ -135,7 +135,7 @@ public class AmbientVolumePreference extends PreferenceGroup implements AmbientV
 
         mExpandIcon = holder.itemView.requireViewById(R.id.expand_icon);
         mExpandIcon.setOnClickListener(v -> {
-            setExpanded(!mExpanded);
+            setControlExpanded(!mExpanded);
             logMetrics(METRIC_KEY_AMBIENT_EXPAND, mExpanded ? 1 : 0);
             if (mListener != null) {
                 mListener.onExpandIconClick();
@@ -145,21 +145,21 @@ public class AmbientVolumePreference extends PreferenceGroup implements AmbientV
     }
 
     @Override
-    public void setExpandable(boolean expandable) {
+    public void setControlExpandable(boolean expandable) {
         mExpandable = expandable;
         if (!mExpandable) {
-            setExpanded(false);
+            setControlExpanded(false);
         }
         updateExpandIcon();
     }
 
     @Override
-    public boolean isExpandable() {
+    public boolean isControlExpandable() {
         return mExpandable;
     }
 
     @Override
-    public void setExpanded(boolean expanded) {
+    public void setControlExpanded(boolean expanded) {
         if (!mExpandable && expanded) {
             return;
         }
@@ -169,7 +169,7 @@ public class AmbientVolumePreference extends PreferenceGroup implements AmbientV
     }
 
     @Override
-    public boolean isExpanded() {
+    public boolean isControlExpanded() {
         return mExpanded;
     }
 
