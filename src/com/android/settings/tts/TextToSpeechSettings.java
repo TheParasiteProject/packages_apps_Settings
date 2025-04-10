@@ -739,8 +739,6 @@ public class TextToSpeechSettings extends SettingsPreferenceFragment
     private void updateWidgetState(boolean enable) {
         getActivity().runOnUiThread(() -> {
             mActionButtons.setButton1Enabled(enable);
-            mDefaultRatePref.setEnabled(enable);
-            mDefaultPitchPref.setEnabled(enable);
         });
     }
 
