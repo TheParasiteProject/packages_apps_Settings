@@ -100,10 +100,6 @@
     <string name="stay_awake_on_fold_title">Always</string>
     <!-- Summary for stay awake on fold radio button. [CHAR_LIMIT=NONE] -->
     <string name="stay_awake_on_fold_summary">Front display turns on when you fold your device</string>
-    <!-- Title for selective stay awake radio button. [CHAR_LIMIT=NONE] -->
-    <string name="selective_stay_awake_title">Only games, videos, and more</string>
-    <!-- Summary for selective stay awake radio button. [CHAR_LIMIT=NONE] -->
-    <string name="selective_stay_awake_summary">Front display turns on for apps that stop your screen going idle</string>
     <!-- Title for fold grace period radio button that, on fold, goes to the lockscreen. [CHAR_LIMIT=NONE] -->
     <string name="stay_awake_on_lockscreen_title">Swipe up to continue</string>
     <!-- Summary for folding grace period radio button that, on fold, goes to the lockscreen. [CHAR_LIMIT=NONE] -->
