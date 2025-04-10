@@ -39,6 +39,7 @@ import androidx.preference.PreferenceViewHolder;
 import com.android.settings.R;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.bluetooth.AmbientVolumeUi;
+import com.android.settingslib.widget.Expandable;
 import com.android.settingslib.widget.SettingsThemeHelper;
 import com.android.settingslib.widget.SliderPreference;
 
@@ -55,7 +56,8 @@ import java.util.Map;
  * separated control for devices in the same set. Toggle the expand icon will make the UI switch
  * between unified and separated control.
  */
-public class AmbientVolumePreference extends PreferenceGroup implements AmbientVolumeUi {
+public class AmbientVolumePreference extends PreferenceGroup implements AmbientVolumeUi,
+        Expandable {
 
     private static final int ORDER_AMBIENT_VOLUME_CONTROL_UNIFIED = 0;
     private static final int ORDER_AMBIENT_VOLUME_CONTROL_SEPARATED = 1;
@@ -371,5 +373,14 @@ public class AmbientVolumePreference extends PreferenceGroup implements AmbientV
     private void logMetrics(String key, int value) {
         FeatureFactory.getFeatureFactory().getMetricsFeatureProvider().changed(
                 getMetricsCategory(), key, value);
+    }
+
+    @Override
+    public boolean isExpanded() {
+        // isExpanded() is different from isControlExpanded(), this is at the point of view if a
+        // preference group shows any of its child preference.
+        // Should always return true for AmbientVolumePreference as it always shows at least one
+        // child preference no matter in collapsed or expanded mode.
+        return true;
     }
 }
