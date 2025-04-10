@@ -1042,6 +1042,8 @@
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks">Not now</string>
     <!-- Button text to agree the consent and continue to the next screen from the introduction [CHAR LIMIT=22] -->
     <string name="security_settings_fingerprint_enroll_introduction_agree">I agree</string>
+    <!-- The content description for rename a fingerprint. [CHAR LIMIT=100] -->
+    <string name="security_settings_fingerprint_rename_description">Double tap to rename</string>
     <!-- Title of dialog shown when the user tries to skip setting up fingerprint after adding lock screen during initial setup. [CHAR LIMIT=30] -->
     <string name="setup_fingerprint_enroll_skip_title">Skip fingerprint?</string>
     <!-- Body text of dialog shown when the user tries to skip setting up fingerprint after adding lock screen during initial setup [CHAR LIMIT=NONE] -->
