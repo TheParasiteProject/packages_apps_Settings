@@ -910,11 +910,9 @@ public class UserSettings extends SettingsPreferenceFragment
                                         UserIcons.convertToBitmapAtUserIconSize(
                                                 activity.getResources(), newUserIcon)));
                         mMePreference.setIcon(newUserIcon);
-                        if (Flags.avatarSync()) {
-                            final String pkg = getString(R.string.config_avatar_picker_package);
-                            final String action = pkg + ".set.confirm";
-                            activity.sendBroadcast(new Intent(action).setPackage(pkg));
-                        }
+                        final String pkg = getString(R.string.config_avatar_picker_package);
+                        final String action = pkg + ".set.confirm";
+                        activity.sendBroadcast(new Intent(action).setPackage(pkg));
                     }
 
                     if (!TextUtils.isEmpty(newUserName) && !newUserName.equals(user.name)) {
@@ -922,11 +920,9 @@ public class UserSettings extends SettingsPreferenceFragment
                         mUserManager.setUserName(user.id, newUserName);
                     }
                 }, () -> {
-                    if (Flags.avatarSync()) {
-                        final String pkg = getString(R.string.config_avatar_picker_package);
-                        final String action = pkg + ".set.cancel";
-                        activity.sendBroadcast(new Intent(action).setPackage(pkg));
-                    }
+                    final String pkg = getString(R.string.config_avatar_picker_package);
+                    final String action = pkg + ".set.cancel";
+                    activity.sendBroadcast(new Intent(action).setPackage(pkg));
                 });
     }
 
