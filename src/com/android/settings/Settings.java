@@ -17,6 +17,8 @@
 package com.android.settings;
 
 import static android.provider.Settings.ACTION_PRIVACY_SETTINGS;
+import static android.provider.Settings.EXTRA_AUTOMATIC_ZEN_RULE_ID;
+import static android.service.notification.ZenModeConfig.MANUAL_RULE_ID;
 
 import android.annotation.FlaggedApi;
 import android.app.Flags;
@@ -358,6 +360,17 @@ public class Settings extends SettingsActivity {
     public static class ModeSettingsActivity extends SettingsActivity { /* empty */ }
     @FlaggedApi(Flags.FLAG_MODES_UI)
     public static class ModesSettingsActivity extends SettingsActivity { /* empty */ }
+    @FlaggedApi(Flags.FLAG_MODES_UI)
+    public static class ModeDisplaySettingsActivity extends SettingsActivity {
+        @Override
+        protected void onCreate(Bundle savedState) {
+            super.onCreate(savedState);
+            if (getIntent() != null && !TextUtils.equals(
+                    getIntent().getStringExtra(EXTRA_AUTOMATIC_ZEN_RULE_ID), MANUAL_RULE_ID)) {
+                finish();
+            }
+        }
+    }
     public static class SoundSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ConfigureNotificationSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ConversationListSettingsActivity extends SettingsActivity { /* empty */ }
