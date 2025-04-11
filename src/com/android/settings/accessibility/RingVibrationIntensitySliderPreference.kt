@@ -19,10 +19,10 @@ import android.os.VibrationAttributes
 import android.provider.Settings
 import com.android.settings.R
 
-/** Accessibility settings for ring vibration, using a switch toggle. */
+/** Accessibility settings for ring vibration, using an intensity slider. */
 // LINT.IfChange
-class RingVibrationIntensitySwitchPreference :
-    VibrationIntensitySwitchPreference(
+class RingVibrationIntensitySliderPreference :
+    VibrationIntensitySliderPreference(
         key = KEY,
         vibrationUsage = VibrationAttributes.USAGE_RINGTONE,
         title = R.string.accessibility_ring_vibration_title,
@@ -34,4 +34,4 @@ class RingVibrationIntensitySwitchPreference :
         const val KEY = Settings.System.RING_VIBRATION_INTENSITY
     }
 }
-// LINT.ThenChange(RingVibrationTogglePreferenceController.java)
+// LINT.ThenChange(RingVibrationIntensityPreferenceController.java)
