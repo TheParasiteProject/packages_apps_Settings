@@ -3297,20 +3297,20 @@
     <string name="screensaver_settings_when_to_dream_bedtime">Unavailable because bedtime mode is on</string>
     <!-- The title for the toggle which disables/enables screen savers [CHAR_LIMIT=30] -->
     <string name="screensaver_settings_toggle_title">Use screen saver</string>
-    <!-- Display settings screen, summary fragment for screen saver options, activated when docked or asleep and charging [CHAR LIMIT=35] -->
+    <!-- Display settings screen, summary fragment for screen saver options, activated when docked or asleep and charging [CHAR LIMIT=40] -->
     <string name="screensaver_settings_summary_either_long">While charging or docked</string>
-    <!-- Display settings screen, summary fragment for screen saver options, actived while docked and charging [CHAR LIMIT=35] -->
+    <!-- Display settings screen, summary fragment for screen saver options, actived while docked and charging [CHAR LIMIT=40] -->
     <string name="screensaver_settings_summary_dock_and_charging">While docked and charging</string>
-    <!-- Display settings screen, summary fragment for screen saver options, activated when asleep and charging [CHAR LIMIT=35] -->
+    <!-- Display settings screen, summary fragment for screen saver options, activated when asleep and charging [CHAR LIMIT=40] -->
     <string name="screensaver_settings_summary_sleep">While charging</string>
-    <!-- Display settings screen, summary fragment for screen saver options, activated when docked [CHAR LIMIT=35] -->
+    <!-- Display settings screen, summary fragment for screen saver options, activated when docked [CHAR LIMIT=40] -->
     <string name="screensaver_settings_summary_dock">While docked</string>
-    <!-- Display settings screen, summary fragment for screen saver options, activated never [CHAR LIMIT=35] -->
+    <!-- Display settings screen, summary fragment for screen saver options, activated never [CHAR LIMIT=40] -->
     <string name="screensaver_settings_summary_never">Never</string>
-    <!-- Summary for when screensaver is enabled, only while stationary and upright [CHAR LIMIT=35] -->
-    <string name="screensaver_settings_summary_postured">While postured</string>
-    <!-- Summary for when screensaver is enabled, only while stationary and upright and charging [CHAR LIMIT=35] -->
-    <string name="screensaver_settings_summary_postured_and_charging">While postured and charging</string>
+    <!-- Summary for when screensaver is enabled, only while stationary and upright [CHAR LIMIT=40] -->
+    <string name="screensaver_settings_summary_postured">While upright</string>
+    <!-- Summary for when screensaver is enabled, only while stationary and upright and charging [CHAR LIMIT=40] -->
+    <string name="screensaver_settings_summary_postured_and_charging">While upright and charging</string>
     <!-- Display settings screen, summary for screen saver options, screen saver is turned on [CHAR LIMIT=50] -->
     <string name="screensaver_settings_summary_on">
         On / <xliff:g id="screen_saver" example="Art gallery">%1$s</xliff:g>
@@ -3734,10 +3734,10 @@
     <string name="when_to_show_hubmode_never">Never</string>
     <!-- Summary for when to automatically show hub mode (widgets on lockscreen): charging  [CHAR LIMIT=100] -->
     <string name="when_to_show_hubmode_charging">While charging</string>
-    <!-- Summary for when to automatically show hub mode (widgets on lockscreen): charging and upright  [CHAR LIMIT=100] -->
-    <string name="when_to_show_hubmode_charging_and_upright">While charging and upright</string>
-    <!-- Summary for when to automatically show hub mode (widgets on lockscreen): docked  [CHAR LIMIT=100] -->
-    <string name="when_to_show_hubmode_docked">While docked</string>
+    <!-- Summary for when to automatically show hub mode (widgets on lockscreen): upright and charging  [CHAR LIMIT=100] -->
+    <string name="when_to_show_hubmode_charging_and_upright">While upright and charging</string>
+    <!-- Summary for when to automatically show hub mode (widgets on lockscreen): docked and charging [CHAR LIMIT=100] -->
+    <string name="when_to_show_hubmode_docked">While docked and charging</string>
 
     <!-- Title of toggle preference in glanceable hub "when to start" screen to restrict to starting only when charging wirelessly [CHAR LIMIT=NONE] -->
     <string name="hub_restrict_to_wireless_charging_title">Restrict to wireless charging</string>
