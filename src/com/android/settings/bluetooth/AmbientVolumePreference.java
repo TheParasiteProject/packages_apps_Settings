@@ -100,10 +100,13 @@ public class AmbientVolumePreference extends PreferenceGroup implements AmbientV
 
     public AmbientVolumePreference(@NonNull Context context) {
         super(context, null);
-        int resId = SettingsThemeHelper.isExpressiveTheme(context)
-                ? R.layout.preference_ambient_volume_expressive
-                : R.layout.preference_ambient_volume;
-        setLayoutResource(resId);
+        if (SettingsThemeHelper.isExpressiveTheme(context)) {
+            setLayoutResource(R.layout.preference_ambient_volume_expressive);
+            setWidgetLayoutResource(com.android.settingslib.widget.preference.expandable
+                    .R.layout.settingslib_widget_expandable_icon);
+        } else {
+            setLayoutResource(R.layout.preference_ambient_volume);
+        }
         setIcon(com.android.settingslib.R.drawable.ic_ambient_volume);
         setTitle(R.string.bluetooth_ambient_volume_control);
         setSelectable(false);
