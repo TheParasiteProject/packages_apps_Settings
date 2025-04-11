@@ -5201,6 +5201,9 @@
     <!-- label for usage time -->
     <string name="usage_time_label">Usage time</string>
 
+    <!-- In the Testing screen. The item title of the activity that shows the new phone information v2.  -->
+    <string name="phone_information_v2_title">Phone Information V2</string>
+
     <!-- Accessibility settings -->
     <skip />
 
