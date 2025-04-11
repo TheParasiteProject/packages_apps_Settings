@@ -19,19 +19,19 @@ import android.os.VibrationAttributes
 import android.provider.Settings
 import com.android.settings.R
 
-/** Accessibility settings for touch haptic feedback, as a switch toggle */
+/** Accessibility settings for notification vibration, using an intensity slider. */
 // LINT.IfChange
-class TouchVibrationIntensitySwitchPreference :
-    VibrationIntensitySwitchPreference(
+class NotificationVibrationIntensitySliderPreference :
+    VibrationIntensitySliderPreference(
         key = KEY,
-        vibrationUsage = VibrationAttributes.USAGE_TOUCH,
-        title = R.string.accessibility_touch_vibration_title,
+        vibrationUsage = VibrationAttributes.USAGE_NOTIFICATION,
+        title = R.string.accessibility_notification_vibration_title,
     ) {
     override val keywords: Int
-        get() = R.string.keywords_touch_vibration
+        get() = R.string.keywords_notification_vibration
 
     companion object {
-        const val KEY = Settings.System.HAPTIC_FEEDBACK_INTENSITY
+        const val KEY = Settings.System.NOTIFICATION_VIBRATION_INTENSITY
     }
 }
-// LINT.ThenChange(HapticFeedbackTogglePreferenceController.java)
+// LINT.ThenChange(NotificationVibrationIntensityPreferenceController.java)

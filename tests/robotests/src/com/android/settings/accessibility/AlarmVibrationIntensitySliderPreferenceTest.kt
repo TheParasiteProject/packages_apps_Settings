@@ -15,23 +15,12 @@
  */
 package com.android.settings.accessibility
 
-import android.os.VibrationAttributes
-import android.provider.Settings
-import com.android.settings.R
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.junit.runner.RunWith
 
-/** Accessibility settings for touch haptic feedback, as a switch toggle */
 // LINT.IfChange
-class TouchVibrationIntensitySwitchPreference :
-    VibrationIntensitySwitchPreference(
-        key = KEY,
-        vibrationUsage = VibrationAttributes.USAGE_TOUCH,
-        title = R.string.accessibility_touch_vibration_title,
-    ) {
-    override val keywords: Int
-        get() = R.string.keywords_touch_vibration
-
-    companion object {
-        const val KEY = Settings.System.HAPTIC_FEEDBACK_INTENSITY
-    }
+@RunWith(AndroidJUnit4::class)
+class AlarmVibrationIntensitySliderPreferenceTest : VibrationIntensitySliderPreferenceTestCase() {
+    override val preference = AlarmVibrationIntensitySliderPreference()
 }
-// LINT.ThenChange(HapticFeedbackTogglePreferenceController.java)
+// LINT.ThenChange(AlarmVibrationIntensityPreferenceControllerTest.java)
