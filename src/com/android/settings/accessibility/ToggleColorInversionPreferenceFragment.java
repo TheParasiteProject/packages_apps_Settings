@@ -201,13 +201,11 @@ public class ToggleColorInversionPreferenceFragment extends ToggleFeaturePrefere
                             R.string.accessibility_display_inversion_shortcut_title);
                     rawData.add(raw);
 
-                    if (Flags.fixA11ySettingsSearch()) {
-                        SearchIndexableRaw mainPreferenceRaw = new SearchIndexableRaw(context);
-                        mainPreferenceRaw.key = KEY_SWITCH_PREFERENCE;
-                        mainPreferenceRaw.title = context.getString(
-                                R.string.accessibility_display_inversion_switch_title);
-                        rawData.add(mainPreferenceRaw);
-                    }
+                    SearchIndexableRaw mainPreferenceRaw = new SearchIndexableRaw(context);
+                    mainPreferenceRaw.key = KEY_SWITCH_PREFERENCE;
+                    mainPreferenceRaw.title = context.getString(
+                            R.string.accessibility_display_inversion_switch_title);
+                    rawData.add(mainPreferenceRaw);
                     return rawData;
                 }
             };
