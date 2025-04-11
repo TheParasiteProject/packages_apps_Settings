@@ -4123,11 +4123,34 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+            <meta-data
+                android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.notification.SoundSettings" />
-            <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
-                       android:value="@string/menu_key_sound"/>
-            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+            <meta-data
+                android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                android:value="@string/menu_key_sound"/>
+            <meta-data
+                android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
+        </activity>
+
+        <activity
+            android:name="Settings$VibrationIntensitySettingsActivity"
+            android:label="@string/accessibility_vibration_settings_title"
+            android:featureFlag="com.android.settings.flags.device_state"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.accessibility.VibrationIntensitySettingsFragment" />
+            <meta-data
+                android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                android:value="@string/menu_key_sound"/>
+            <meta-data
+                android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                 android:value="true" />
         </activity>
 
