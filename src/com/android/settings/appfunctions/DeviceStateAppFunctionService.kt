@@ -16,13 +16,17 @@
 
 package com.android.settings.appfunctions
 
+import android.app.INotificationManager
 import android.app.appsearch.GenericDocument
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.content.pm.PackageManager.ApplicationInfoFlags
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.CancellationSignal
 import android.os.OutcomeReceiver
+import android.os.ServiceManager
 import android.util.Log
 import com.android.extensions.appfunctions.AppFunctionException
 import com.android.extensions.appfunctions.AppFunctionException.ERROR_FUNCTION_NOT_FOUND
@@ -31,8 +35,14 @@ import com.android.extensions.appfunctions.ExecuteAppFunctionRequest
 import com.android.extensions.appfunctions.ExecuteAppFunctionResponse
 import com.android.settings.utils.getLocale
 import com.android.settingslib.metadata.PersistentPreference
+import com.android.settingslib.metadata.PreferenceHierarchy
 import com.android.settingslib.metadata.PreferenceScreenCoordinate
+import com.android.settingslib.metadata.PreferenceHierarchyGenerator
+import com.android.settingslib.metadata.PreferenceScreenMetadata
 import com.android.settingslib.metadata.PreferenceScreenRegistry
+import com.android.settingslib.metadata.getPreferenceScreenTitle
+import com.android.settingslib.metadata.getPreferenceSummary
+import com.android.settingslib.metadata.getPreferenceTitle
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateResponse
 import com.google.android.appfunctions.schema.common.v1.devicestate.LocalizedString
@@ -106,13 +116,18 @@ class DeviceStateAppFunctionService : AppFunctionService() {
                 }
             }
         }
+
+        if (requestCategory in setOf(DeviceStateCategory.UNCATEGORIZED)) {
+            perScreenDeviceStatesList.add(buildNotificationsScreenStates())
+        }
+
         return DeviceStateResponse(
             perScreenDeviceStates = perScreenDeviceStatesList,
             deviceLocale = applicationContext.getLocale().toString()
         )
     }
 
-    private fun buildPerScreenDeviceStates(
+    private suspend fun buildPerScreenDeviceStates(
         screenKey: String,
         requestCategory: DeviceStateCategory,
     ): PerScreenDeviceStates? {
@@ -123,84 +138,98 @@ class DeviceStateAppFunctionService : AppFunctionService() {
         val screenMetaData =
             PreferenceScreenRegistry.create(
                 applicationContext,
-                PreferenceScreenCoordinate(screenKey, null)
-            )
-        if (screenMetaData == null) {
-            return null
-        }
+                PreferenceScreenCoordinate(screenKey, null),
+            ) ?: return null
         val deviceStateItemList: MutableList<DeviceStateItem> = ArrayList()
-        // TODO(b/405344827): support PreferenceHierarchyGenerator
-        val hierarchy = screenMetaData.getPreferenceHierarchy(applicationContext)
-        hierarchy.forEach {
-            val metadata = it.metadata as? PersistentPreference<*> ?: return@forEach
+        // TODO if child node is PreferenceScreen, recursively process it
+        screenMetaData.getPreferenceHierarchy().forEachRecursively {
+            val metadata = it.metadata
             val config = settingConfigMap[metadata.key]
-            if (config == null || !config.enabled) {
-                return@forEach
-            }
-            val valueType = metadata.valueType
-            var jasonValue: String? = when (valueType) {
-                Int::class.javaObjectType -> metadata.storage(applicationContext)
-                    ?.getInt("")
-                    .toString()
-
-                Boolean::class.javaObjectType -> metadata.storage(applicationContext)
-                    ?.getBoolean("").toString()
-
-                Long::class.javaObjectType -> metadata.storage(applicationContext)
-                    ?.getLong("")
-                    .toString()
-
-                Float::class.javaObjectType -> metadata.storage(applicationContext)
-                    ?.getLong("")
-                    .toString()
-
-                String::class.javaObjectType -> metadata.storage(applicationContext)?.getString("")
-                else -> null
-            }
-            if (jasonValue == null) {
-                jasonValue = tryGetStringRes(metadata.summary)
-            }
+            // skip over explicitly disabled preferences
+            if (config?.enabled == false) return@forEachRecursively
+            val jsonValue =
+                when (metadata) {
+                    is PersistentPreference<*> ->
+                        metadata
+                            .storage(applicationContext)
+                            .getValue(metadata.key, metadata.valueType as Class<Any>)
+                            .toString()
+                    else -> metadata.getPreferenceSummary(applicationContext)?.toString()
+                }
             deviceStateItemList.add(
                 DeviceStateItem(
                     key = metadata.key,
-                    name = getLocalizedString(metadata.title),
-                    jsonValue = jasonValue,
-                    hintText = config.hintText
+                    name = LocalizedString(
+                        english = metadata.getPreferenceTitle(englishContext).toString(),
+                        localized = metadata.getPreferenceTitle(applicationContext).toString()
+                    ),
+                    jsonValue = jsonValue,
+                    hintText = config?.hintText(englishContext, metadata)
                 )
             )
         }
 
         val launchingIntent = screenMetaData.getLaunchIntent(applicationContext, null)
         return PerScreenDeviceStates(
-            description = tryGetStringRes(screenMetaData.title),
+            description = screenMetaData.getPreferenceScreenTitle(applicationContext)?.toString()
+                ?: "",
             deviceStateItems = deviceStateItemList,
             intentUri = launchingIntent?.toUri(Intent.URI_INTENT_SCHEME)
         )
     }
 
-    private fun tryGetStringRes(resId: Int): String {
-        return try {
-            applicationContext.getString(resId)
-        } catch (_: Resources.NotFoundException) {
-            ""
+    private suspend fun PreferenceScreenMetadata.getPreferenceHierarchy(): PreferenceHierarchy =
+        when (this) {
+            is PreferenceHierarchyGenerator<*> ->
+                generatePreferenceHierarchy(applicationContext, defaultType)
+            else -> getPreferenceHierarchy(applicationContext)
         }
-    }
-
-    private fun getLocalizedString(resId: Int): LocalizedString? {
-        return try {
-            LocalizedString(
-                english = englishContext.getString(resId),
-                localized = applicationContext.getString(resId)
-            )
-        } catch (_: Resources.NotFoundException) {
-            null
-        }
-    }
 
     private fun createEnglishContext(): Context {
         val configuration = Configuration(applicationContext.resources.configuration)
         configuration.setLocale(Locale.US)
         return applicationContext.createConfigurationContext(configuration)
+    }
+
+    /**
+     * Build a PerScreenDeviceStates for the notifications screen.
+     *
+     * This is temporary solution to unblock CUJ 6 for Teamfood.
+     */
+    private fun buildNotificationsScreenStates(): PerScreenDeviceStates {
+
+        val packageManager = applicationContext.packageManager
+        val notificationManager = INotificationManager.Stub.asInterface(
+            ServiceManager.getService(Context.NOTIFICATION_SERVICE)
+        )
+        val disabledComponentsFlag =
+            (PackageManager.MATCH_DISABLED_COMPONENTS or
+                    PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS)
+                .toLong()
+        val regularFlags = ApplicationInfoFlags.of(disabledComponentsFlag)
+        val installedPackages = packageManager.getInstalledApplications(regularFlags)
+        val deviceStateItems = ArrayList<DeviceStateItem>(installedPackages.size)
+        for (info in installedPackages) {
+            val packageName = info.packageName
+            val appName = packageManager.getApplicationLabel(info.applicationInfo)
+            val uid = info.applicationInfo.uid
+            val areNotificationsEnabled =
+                notificationManager?.areNotificationsEnabledForPackage(packageName, uid) ?: false
+            deviceStateItems.add(
+                DeviceStateItem(
+                    key = "notifications_enabled_package_$packageName",
+                    hintText = "App: $appName",
+                    jsonValue = areNotificationsEnabled.toString(),
+                )
+            )
+        }
+
+        return PerScreenDeviceStates(
+            description =
+                "Notifications Settings Screen. Note that to get to the notification settings for a given package, the intent uri is intent:#Intent;action=android.settings.APP_NOTIFICATION_SETTINGS;S.android.provider.extra.APP_PACKAGE=\$packageName;end",
+            intentUri = "intent:#Intent;action=android.settings.NOTIFICATION_SETTINGS;end",
+            deviceStateItems = deviceStateItems,
+        )
     }
 
     companion object {

@@ -15,6 +15,7 @@
  */
 package com.android.settings.supervision
 
+import android.app.Activity
 import android.app.supervision.flags.Flags
 import android.content.Context
 import android.platform.test.annotations.DisableFlags
@@ -30,6 +31,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.robolectric.Shadows.shadowOf
 
 @RunWith(AndroidJUnit4::class)
 class SupervisionWebContentFiltersScreenTest {
@@ -68,7 +70,7 @@ class SupervisionWebContentFiltersScreenTest {
 
     @Test
     @EnableFlags(Flags.FLAG_ENABLE_WEB_CONTENT_FILTERS_SCREEN)
-    fun switchSafeSitesPreferences() {
+    fun switchSafeSitesPreferences_succeedWithParentPin() {
         FragmentScenario.launchInContainer(supervisionWebContentFiltersScreen.fragmentClass())
             .onFragment { fragment ->
                 val allowAllSitesPreference =
@@ -85,6 +87,14 @@ class SupervisionWebContentFiltersScreenTest {
 
                 blockExplicitSitesPreference.performClick()
 
+                // Pretend the PIN verification succeeded.
+                val activity = shadowOf(fragment.activity)
+                activity.receiveResult(
+                    activity.nextStartedActivityForResult.intent,
+                    Activity.RESULT_OK,
+                    null,
+                )
+
                 assertThat(blockExplicitSitesPreference.isChecked).isTrue()
                 assertThat(allowAllSitesPreference.isChecked).isFalse()
             }
@@ -92,7 +102,71 @@ class SupervisionWebContentFiltersScreenTest {
 
     @Test
     @EnableFlags(Flags.FLAG_ENABLE_WEB_CONTENT_FILTERS_SCREEN)
-    fun switchSafeSearchPreferences() {
+    fun switchSafeSitesPreferences_failWithoutParentPin() {
+        FragmentScenario.launchInContainer(supervisionWebContentFiltersScreen.fragmentClass())
+            .onFragment { fragment ->
+                val allowAllSitesPreference =
+                    fragment.findPreference<SelectorWithWidgetPreference>(
+                        SupervisionAllowAllSitesPreference.KEY
+                    )!!
+                val blockExplicitSitesPreference =
+                    fragment.findPreference<SelectorWithWidgetPreference>(
+                        SupervisionBlockExplicitSitesPreference.KEY
+                    )!!
+
+                assertThat(allowAllSitesPreference.isChecked).isTrue()
+                assertThat(blockExplicitSitesPreference.isChecked).isFalse()
+
+                blockExplicitSitesPreference.performClick()
+
+                // Pretend the PIN verification succeeded.
+                val activity = shadowOf(fragment.activity)
+                activity.receiveResult(
+                    activity.nextStartedActivityForResult.intent,
+                    Activity.RESULT_CANCELED,
+                    null,
+                )
+
+                assertThat(blockExplicitSitesPreference.isChecked).isFalse()
+                assertThat(allowAllSitesPreference.isChecked).isTrue()
+            }
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_ENABLE_WEB_CONTENT_FILTERS_SCREEN)
+    fun switchSafeSearchPreferences_succeedWithParentPin() {
+        FragmentScenario.launchInContainer(supervisionWebContentFiltersScreen.fragmentClass())
+            .onFragment { fragment ->
+                val searchFilterOffWidget =
+                    fragment.findPreference<SelectorWithWidgetPreference>(
+                        SupervisionSearchFilterOffPreference.KEY
+                    )!!
+                val searchFilterOnWidget =
+                    fragment.findPreference<SelectorWithWidgetPreference>(
+                        SupervisionSearchFilterOnPreference.KEY
+                    )!!
+
+                assertThat(searchFilterOffWidget.isChecked).isTrue()
+                assertThat(searchFilterOnWidget.isChecked).isFalse()
+
+                searchFilterOnWidget.performClick()
+
+                // Pretend the PIN verification succeeded.
+                val activity = shadowOf(fragment.activity)
+                activity.receiveResult(
+                    activity.nextStartedActivityForResult.intent,
+                    Activity.RESULT_OK,
+                    null,
+                )
+
+                assertThat(searchFilterOnWidget.isChecked).isTrue()
+                assertThat(searchFilterOffWidget.isChecked).isFalse()
+            }
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_ENABLE_WEB_CONTENT_FILTERS_SCREEN)
+    fun switchSafeSearchPreferences_failedWithParentPin() {
         FragmentScenario.launchInContainer(supervisionWebContentFiltersScreen.fragmentClass())
             .onFragment { fragment ->
                 val searchFilterOffPreference =
@@ -109,8 +183,16 @@ class SupervisionWebContentFiltersScreenTest {
 
                 searchFilterOnPreference.performClick()
 
-                assertThat(searchFilterOnPreference.isChecked).isTrue()
-                assertThat(searchFilterOffPreference.isChecked).isFalse()
+                // Pretend the PIN verification failed.
+                val activity = shadowOf(fragment.activity)
+                activity.receiveResult(
+                    activity.nextStartedActivityForResult.intent,
+                    Activity.RESULT_CANCELED,
+                    null,
+                )
+
+                assertThat(searchFilterOnPreference.isChecked).isFalse()
+                assertThat(searchFilterOffPreference.isChecked).isTrue()
             }
     }
 }

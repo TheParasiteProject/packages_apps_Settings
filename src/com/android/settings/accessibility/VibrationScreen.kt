@@ -58,6 +58,14 @@ class VibrationScreen : PreferenceScreenCreator, PreferenceAvailabilityProvider 
             +CallVibrationPreferenceCategory() += {
                 +RingVibrationIntensitySwitchPreference()
             }
+            +NotificationAlarmVibrationPreferenceCategory() += {
+                +NotificationVibrationIntensitySwitchPreference()
+                +AlarmVibrationIntensitySwitchPreference()
+            }
+            +InteractiveHapticsPreferenceCategory() += {
+                +TouchVibrationIntensitySwitchPreference()
+                +MediaVibrationIntensitySwitchPreference()
+            }
         }
     }
 
@@ -67,18 +75,28 @@ class VibrationScreen : PreferenceScreenCreator, PreferenceAvailabilityProvider 
 }
 
 /** Call vibration preferences (e.g. ringtone, ramping ringer, etc). */
-private class CallVibrationPreferenceCategory :
+class CallVibrationPreferenceCategory :
     PreferenceCategory(
         "vibration_category_call",
         R.string.accessibility_call_vibration_category_title,
     )
 
+/** Notification and alarm vibration preferences. */
+class NotificationAlarmVibrationPreferenceCategory :
+    PreferenceCategory(
+        "vibration_category_notification_alarm",
+        R.string.accessibility_notification_alarm_vibration_category_title,
+    )
+
+/** Interactive haptics preferences (e.g. touch feedback, media, keyboard, etc). */
+class InteractiveHapticsPreferenceCategory :
+    PreferenceCategory(
+        "vibration_category_haptics",
+        R.string.accessibility_interactive_haptics_category_title,
+    )
+
 /** Returns true if the device has a system vibrator, false otherwise. */
 fun Context.isVibratorAvailable(): Boolean =
     getSystemService(Vibrator::class.java).hasVibrator()
-
-/** Returns the number of vibration intensity levels supported by this device. */
-fun Context.getSupportedVibrationIntensityLevels(): Int =
-    resources.getInteger(R.integer.config_vibration_supported_intensity_levels)
 
 // LINT.ThenChange(VibrationPreferenceController.java)

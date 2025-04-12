@@ -51,6 +51,7 @@ public class AccessibilityHearingAidsFragment extends AccessibilityShortcutPrefe
         super.onAttach(context);
         use(AvailableHearingDevicePreferenceController.class).init(this);
         use(SavedHearingDevicePreferenceController.class).init(this);
+        use(HearingAidCompatibilityPreferenceController.class).init(this);
     }
 
     @Override
@@ -118,11 +119,7 @@ public class AccessibilityHearingAidsFragment extends AccessibilityShortcutPrefe
             new BaseSearchIndexProvider(R.xml.accessibility_hearing_aids) {
                 @Override
                 protected boolean isPageSearchEnabled(Context context) {
-                    if (Flags.fixA11ySettingsSearch()) {
-                        return AccessibilityHearingAidsFragment.isPageSearchEnabled(context);
-                    } else {
-                        return super.isPageSearchEnabled(context);
-                    }
+                    return AccessibilityHearingAidsFragment.isPageSearchEnabled(context);
                 }
             };
 }

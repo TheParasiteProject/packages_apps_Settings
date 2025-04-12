@@ -15,11 +15,19 @@
  */
 package com.android.settings.supervision
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
+import androidx.annotation.VisibleForTesting
 import androidx.preference.Preference
 import com.android.settings.R
 import com.android.settingslib.datastore.Permissions
 import com.android.settingslib.metadata.BooleanValuePreference
+import com.android.settingslib.metadata.PreferenceLifecycleContext
+import com.android.settingslib.metadata.PreferenceLifecycleProvider
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.ReadWritePermit
 import com.android.settingslib.metadata.SensitivityLevel
@@ -30,7 +38,15 @@ import com.android.settingslib.widget.SelectorWithWidgetPreference
 /** Base class of web content filters Safe sites preferences. */
 sealed class SupervisionSafeSitesPreference(
     protected val dataStore: SupervisionSafeSitesDataStore
-) : BooleanValuePreference, SelectorWithWidgetPreference.OnClickListener, PreferenceBinding {
+) :
+    BooleanValuePreference,
+    SelectorWithWidgetPreference.OnClickListener,
+    PreferenceBinding,
+    PreferenceLifecycleProvider {
+    private lateinit var lifeCycleContext: PreferenceLifecycleContext
+
+    private lateinit var supervisionCredentialLauncher: ActivityResultLauncher<Intent>
+
     override fun storage(context: Context) = dataStore
 
     override fun getReadPermissions(context: Context) = Permissions.EMPTY
@@ -52,12 +68,15 @@ sealed class SupervisionSafeSitesPreference(
 
     override fun createWidget(context: Context) = SelectorWithWidgetPreference(context)
 
-    override fun onRadioButtonClicked(emiter: SelectorWithWidgetPreference) {
-        emiter.parent?.forEachRecursively {
-            if (it is SelectorWithWidgetPreference) {
-                it.isChecked = it == emiter
-            }
-        }
+    override fun onCreate(context: PreferenceLifecycleContext) {
+        lifeCycleContext = context
+        supervisionCredentialLauncher =
+            context.registerForActivityResult(StartActivityForResult(), ::onConfirmCredentials)
+    }
+
+    override fun onRadioButtonClicked(emitter: SelectorWithWidgetPreference) {
+        val intent = Intent(lifeCycleContext, ConfirmSupervisionCredentialsActivity::class.java)
+        supervisionCredentialLauncher.launch(intent)
     }
 
     override fun bind(preference: Preference, metadata: PreferenceMetadata) {
@@ -67,12 +86,23 @@ sealed class SupervisionSafeSitesPreference(
             it.setOnClickListener(this)
         }
     }
+
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    fun onConfirmCredentials(result: ActivityResult) {
+        if (result.resultCode == Activity.RESULT_OK) {
+            val preference = lifeCycleContext.findPreference<SelectorWithWidgetPreference>(key)
+            preference?.parent?.forEachRecursively {
+                if (it is SelectorWithWidgetPreference) {
+                    it.isChecked = it.key == key
+                }
+            }
+        }
+    }
 }
 
 /** The "Try to block explicit sites" preference. */
 class SupervisionBlockExplicitSitesPreference(dataStore: SupervisionSafeSitesDataStore) :
     SupervisionSafeSitesPreference(dataStore) {
-
     override val key
         get() = KEY
 
@@ -90,7 +120,6 @@ class SupervisionBlockExplicitSitesPreference(dataStore: SupervisionSafeSitesDat
 /** The "Allow all sites" preference. */
 class SupervisionAllowAllSitesPreference(dataStore: SupervisionSafeSitesDataStore) :
     SupervisionSafeSitesPreference(dataStore) {
-
     override val key
         get() = KEY
 

@@ -36,23 +36,24 @@
         android:layout="@layout/airplane_mode_message_preference"
         settings:allowDividerBelow="true"/>
 
-    <com.android.settingslib.widget.SettingsTitlelessPreferenceCategory>
-      <com.android.settingslib.RestrictedSwitchPreference
-          android:key="main_toggle_ethernet"
-          android:title="@string/ethernet"
-          settings:restrictedSwitchSummary="@string/not_allowed_by_ent"
-          settings:allowDividerAbove="true"/>
+    <com.android.settingslib.widget.SettingsTitlelessPreferenceCategory
+        android:key="ethernet_interfaces"
+        settings:isPreferenceVisible="false">
+        <com.android.settingslib.RestrictedSwitchPreference
+            android:key="main_toggle_ethernet"
+            android:title="@string/ethernet"
+            settings:restrictedSwitchSummary="@string/not_allowed_by_ent"
+            settings:allowDividerAbove="true"/>
     </com.android.settingslib.widget.SettingsTitlelessPreferenceCategory>
 
     <com.android.settingslib.widget.SettingsTitlelessPreferenceCategory
-        android:key="ethernet_interfaces"/>
-
-    <com.android.settingslib.widget.SettingsTitlelessPreferenceCategory>
-      <Preference
-          android:key="connected_ethernet_network"
-          android:title="@string/ethernet"
-          android:summary="@string/to_switch_networks_disconnect_ethernet"
-          android:icon="@drawable/ic_settings_ethernet"/>
+        android:key="connected_ethernet_category"
+        settings:isPreferenceVisible="false">
+        <Preference
+            android:key="connected_ethernet_network"
+            android:title="@string/ethernet"
+            android:summary="@string/to_switch_networks_disconnect_ethernet"
+            android:icon="@drawable/ic_settings_ethernet"/>
     </com.android.settingslib.widget.SettingsTitlelessPreferenceCategory>
 
     <PreferenceCategory
