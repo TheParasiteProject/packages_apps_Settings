@@ -1064,16 +1064,27 @@
                   android:theme="@style/Theme.LocalePickerWithRegionActivity">
         </activity>
 
+        <activity android:name="Settings$SystemLanguageSettingsActivity"
+                  android:label="@string/language_selection_title"
+                  android:excludeFromRecents="true"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:exported="false">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.localepicker.SystemLocalePickerFragment" />
+        </activity>
+
         <activity
-            android:name=".localepicker.AppLocalePickerActivity"
+            android:name="Settings$AppLanguageSettingsActivity"
             android:label="@string/app_locale_picker_title"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true" >
-            <intent-filter>
+            <intent-filter android:priority="1">
                 <action android:name="android.settings.APP_LOCALE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="package" />
+                <data android:scheme="package"/>
             </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.localepicker.AppLocalePickerFragment"/>
         </activity>
 
         <activity android:name=".localepicker.NotificationActionActivity"
