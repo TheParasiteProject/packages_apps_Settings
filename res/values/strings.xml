@@ -14452,8 +14452,10 @@ Data usage charges may apply.</string>
     <string name="keywords_supervision_settings">supervision, parental supervision, parental controls</string>
     <!-- Title for supervision PIN management settings entry [CHAR LIMIT=60] -->
     <string name="supervision_pin_management_preference_title">Manage PIN</string>
-    <!-- Description for supervision PIN management settings entry, in the case of adding a PIN [CHAR LIMIT=NONE] -->
-    <string name="supervision_pin_management_preference_summary_add">Add a PIN recovery method</string>
+    <!-- Description for supervision PIN management settings entry, in the case of adding a PIN recovery method[CHAR LIMIT=NONE] -->
+    <string name="supervision_pin_management_preference_summary_add">Add PIN recovery</string>
+    <!-- Description for supervision PIN management settings entry, in the case of verifying the PIN recovery method[CHAR LIMIT=NONE] -->
+    <string name="supervision_pin_management_preference_summary_verify_recovery">Verify PIN recovery</string>
     <!-- Title for supervision change PIN setting entry [CHAR LIMIT=60] -->
     <string name="supervision_change_pin_preference_title">Change PIN</string>
     <!-- Title for supervision forgot PIN setting entry [CHAR LIMIT=60] -->
