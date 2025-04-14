@@ -67,6 +67,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settings.R;
+import com.android.settings.connecteddevice.audiosharing.audiostreams.testshadows.ShadowAudioStreamScanHelper;
 import com.android.settings.connecteddevice.audiosharing.audiostreams.testshadows.ShadowAudioStreamsHelper;
 import com.android.settings.testutils.shadow.ShadowBluetoothAdapter;
 import com.android.settings.testutils.shadow.ShadowBluetoothUtils;
@@ -104,6 +105,7 @@ import java.util.Map;
         shadows = {
             ShadowBluetoothUtils.class,
             ShadowAudioStreamsHelper.class,
+            ShadowAudioStreamScanHelper.class,
             ShadowThreadUtils.class,
             ShadowAlertDialog.class,
             ShadowBluetoothAdapter.class,
@@ -129,6 +131,7 @@ public class AudioStreamsProgressCategoryControllerTest {
     private AccessibilityManager mAccessibilityManager;
     @Mock private PreferenceScreen mScreen;
     @Mock private AudioStreamsHelper mAudioStreamsHelper;
+    @Mock private AudioStreamScanHelper mAudioStreamScanHelper;
     @Mock private LocalBluetoothLeBroadcastAssistant mLeBroadcastAssistant;
     @Mock private BluetoothLeBroadcastMetadata mMetadata;
     @Mock private CachedBluetoothDevice mDevice;
@@ -149,13 +152,13 @@ public class AudioStreamsProgressCategoryControllerTest {
         shadowBluetoothAdapter.setIsLeAudioBroadcastAssistantSupported(
                 BluetoothStatusCodes.FEATURE_SUPPORTED);
         ShadowAudioStreamsHelper.setUseMock(mAudioStreamsHelper);
+        ShadowAudioStreamScanHelper.setUseMock(mAudioStreamScanHelper);
         when(mAudioStreamsHelper.getLeBroadcastAssistant()).thenReturn(mLeBroadcastAssistant);
         when(mAudioStreamsHelper.getAllSourcesByDevice()).thenReturn(emptyMap());
         mSetFlagsRule.disableFlags(FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX);
 
         ShadowBluetoothUtils.sLocalBluetoothManager = mLocalBtManager;
         when(mLocalBtManager.getEventManager()).thenReturn(mBluetoothEventManager);
-        when(mLeBroadcastAssistant.isSearchInProgress()).thenReturn(false);
         when(mContext.getSystemService(AccessibilityManager.class)).thenReturn(
                 mAccessibilityManager);
 
@@ -191,7 +194,7 @@ public class AudioStreamsProgressCategoryControllerTest {
     @Test
     public void testSetScanning() {
         mController.displayPreference(mScreen);
-        mController.setScanning(true);
+        mController.setScanningIconSpinning(true);
 
         verify(mPreference).setProgress(true);
     }
@@ -218,8 +221,6 @@ public class AudioStreamsProgressCategoryControllerTest {
 
     @Test
     public void testOnStart_initNoDevice_showDialog() {
-        when(mLeBroadcastAssistant.isSearchInProgress()).thenReturn(true);
-
         FragmentController.setupFragment(mFragment);
         mController.setFragment(mFragment);
         mController.displayPreference(mScreen);
@@ -229,7 +230,6 @@ public class AudioStreamsProgressCategoryControllerTest {
         // Called twice, once in displayPreference, the other in init()
         verify(mPreference, times(2)).setVisible(anyBoolean());
         verify(mPreference).removeAudioStreamPreferences();
-        verify(mLeBroadcastAssistant).stopSearchingForSources();
         verify(mLeBroadcastAssistant).unregisterServiceCallBack(any());
 
         var dialog = ShadowAlertDialog.getLatestAlertDialog();
@@ -265,7 +265,6 @@ public class AudioStreamsProgressCategoryControllerTest {
         ShadowAudioStreamsHelper.setCachedBluetoothDeviceInSharingOrLeConnected(mDevice);
         // Enable a screen reader service
         ShadowAudioStreamsHelper.setEnabledScreenReaderService(new ComponentName("pkg", "class"));
-        when(mLeBroadcastAssistant.isSearchInProgress()).thenReturn(true);
 
         FragmentController.setupFragment(mFragment);
         mController.setFragment(mFragment);
@@ -276,7 +275,7 @@ public class AudioStreamsProgressCategoryControllerTest {
         // Called twice, once in displayPreference, the other in init()
         verify(mPreference, times(2)).setVisible(anyBoolean());
         verify(mPreference).removeAudioStreamPreferences();
-        verify(mLeBroadcastAssistant).stopSearchingForSources();
+        verify(mAudioStreamScanHelper).stopScanning();
         verify(mLeBroadcastAssistant).unregisterServiceCallBack(any());
 
         var dialog = ShadowAlertDialog.getLatestAlertDialog();
@@ -335,26 +334,7 @@ public class AudioStreamsProgressCategoryControllerTest {
         shadowOf(Looper.getMainLooper()).idle();
 
         verify(mLeBroadcastAssistant).registerServiceCallBack(any(), any());
-        verify(mLeBroadcastAssistant).startSearchingForSources(any());
-
-        var dialog = ShadowAlertDialog.getLatestAlertDialog();
-        assertThat(dialog).isNull();
-
-        verify(mController, never()).moveToState(any(), any());
-    }
-
-    @Test
-    public void testOnStart_initHasDevice_scanningInProgress() {
-        // Setup a device
-        ShadowAudioStreamsHelper.setCachedBluetoothDeviceInSharingOrLeConnected(mDevice);
-        when(mLeBroadcastAssistant.isSearchInProgress()).thenReturn(true);
-
-        mController.onStart(mLifecycleOwner);
-        shadowOf(Looper.getMainLooper()).idle();
-
-        verify(mLeBroadcastAssistant).registerServiceCallBack(any(), any());
-        verify(mLeBroadcastAssistant).stopSearchingForSources();
-        verify(mLeBroadcastAssistant).startSearchingForSources(any());
+        verify(mAudioStreamScanHelper).startScanning();
 
         var dialog = ShadowAlertDialog.getLatestAlertDialog();
         assertThat(dialog).isNull();
@@ -376,7 +356,7 @@ public class AudioStreamsProgressCategoryControllerTest {
         mController.onStart(mLifecycleOwner);
         shadowOf(Looper.getMainLooper()).idle();
 
-        verify(mLeBroadcastAssistant).startSearchingForSources(any());
+        verify(mAudioStreamScanHelper).startScanning();
 
         var dialog = ShadowAlertDialog.getLatestAlertDialog();
         assertThat(dialog).isNull();
