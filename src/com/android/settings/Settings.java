@@ -98,8 +98,11 @@ public class Settings extends SettingsActivity {
     }
     public static class InputMethodAndSubtypeEnablerActivity extends SettingsActivity { /* empty */ }
     public static class SpellCheckersSettingsActivity extends SettingsActivity { /* empty */ }
+    /** Activity for the language settings. */
     public static class LocalePickerActivity extends SettingsActivity { /* empty */ }
     public static class LanguageSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class SystemLanguageSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class AppLanguageSettingsActivity extends SettingsActivity { /* empty */ }
     /** Activity for the regional preferences settings. */
     public static class RegionSettingsActivity extends SettingsActivity { /* empty */ }
     public static class RegionalPreferencesActivity extends SettingsActivity { /* empty */ }
