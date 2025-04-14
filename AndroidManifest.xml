@@ -1471,6 +1471,18 @@
         </activity>
 
         <activity
+            android:name="Settings$ModeDisplaySettingsActivity"
+            android:exported="true"
+            android:featureFlag="android.app.modes_ui">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.notification.modes.ZenModeDisplayFragment"/>
+            <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                android:value="@string/menu_key_priority_modes"/>
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
+        </activity>
+
+        <activity
             android:name=".notification.modes.SetupInterstitialActivity"
             android:exported="false"
             android:theme="@style/Theme.Settings.NoActionBar">

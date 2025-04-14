@@ -170,6 +170,7 @@ import com.android.settings.notification.app.AppNotificationSettings;
 import com.android.settings.notification.app.ChannelNotificationSettings;
 import com.android.settings.notification.app.ConversationListSettings;
 import com.android.settings.notification.history.NotificationStation;
+import com.android.settings.notification.modes.ZenModeDisplayFragment;
 import com.android.settings.notification.modes.ZenModeFragment;
 import com.android.settings.notification.modes.ZenModesListFragment;
 import com.android.settings.notification.zen.ZenAccessSettings;
@@ -421,6 +422,7 @@ public class SettingsGateway {
             HearingDevicePairingFragment.class.getName(),
             ZenModesListFragment.class.getName(),
             ZenModeFragment.class.getName(),
+            ZenModeDisplayFragment.class.getName(),
             ContactsStorageSettings.class.getName(),
             ContentProtectionPreferenceFragment.class.getName(),
             ToggleScreenMagnificationPreferenceFragment.class.getName(),
