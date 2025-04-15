@@ -181,6 +181,23 @@ public class AudioStreamStateHandlerTest {
     }
 
     @Test
+    public void testHandleStateChange_shouldRemovePreference() {
+        when(mHandler.getStateEnum())
+                .thenReturn(
+                        AudioStreamsProgressCategoryController.AudioStreamState
+                                .SOURCE_LOST);
+        when(mHandler.shouldRemovePreference()).thenReturn(true);
+        when(mPreference.getAudioStreamState())
+                .thenReturn(
+                        AudioStreamsProgressCategoryController.AudioStreamState
+                                .SYNCED);
+
+        mHandler.handleStateChange(mPreference, mController, mHelper);
+
+        verify(mController).removePreference(mPreference);
+    }
+
+    @Test
     public void testGetSummary() {
         int res = mHandler.getSummary();
         assertThat(res).isEqualTo(AudioStreamStateHandler.EMPTY_STRING_RES);

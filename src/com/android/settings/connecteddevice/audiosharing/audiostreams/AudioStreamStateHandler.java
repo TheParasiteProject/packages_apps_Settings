@@ -74,6 +74,10 @@ class AudioStreamStateHandler {
         // Update UI
         ThreadUtils.postOnMainThread(
                 () -> {
+                    if (shouldRemovePreference()) {
+                        controller.removePreference(preference);
+                        return;
+                    }
                     String summary =
                             getSummary() != EMPTY_STRING_RES
                                     ? preference.getContext().getString(getSummary())
@@ -132,6 +136,13 @@ class AudioStreamStateHandler {
     Preference.OnPreferenceClickListener getOnClickListener(
             AudioStreamsProgressCategoryController controller) {
         return null;
+    }
+
+    /**
+     * Indicates if the preference should be removed from the screen when the state is reached.
+     */
+    boolean shouldRemovePreference() {
+        return false;
     }
 
     /** Subclasses should always override. */

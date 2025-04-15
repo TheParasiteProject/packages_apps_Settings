@@ -140,6 +140,8 @@ public class AudioStreamsProgressCategoryController extends BasePreferenceContro
         SOURCE_PRESENT,
         // Source is added to active sink.
         SOURCE_ADDED,
+        // Source is no longer synced or wait for sync timed out
+        SOURCE_LOST,
     }
 
     @VisibleForTesting Executor mExecutor;
@@ -374,15 +376,14 @@ public class AudioStreamsProgressCategoryController extends BasePreferenceContro
                     "handleSourceLost() : keep this preference as the source is still connected.");
             return;
         }
-        var toRemove = mBroadcastIdToPreferenceMap.remove(broadcastId);
-        if (toRemove != null) {
-            ThreadUtils.postOnMainThread(
-                    () -> {
-                        if (mCategoryPreference != null) {
-                            mCategoryPreference.removePreference(toRemove);
-                        }
-                    });
-        }
+        mBroadcastIdToPreferenceMap.compute(
+                broadcastId,
+                (k, existingPreference) -> {
+                    if (existingPreference != null) {
+                        moveToState(existingPreference, AudioStreamState.SOURCE_LOST);
+                    }
+                    return null;
+                });
     }
 
     @Override
@@ -567,6 +568,19 @@ public class AudioStreamsProgressCategoryController extends BasePreferenceContro
                 });
     }
 
+    void removePreference(AudioStreamPreference preference) {
+        if (DEBUG) {
+            Log.d(TAG, "removePreference()");
+        }
+        mBroadcastIdToPreferenceMap.remove(preference.getAudioStreamBroadcastId());
+        ThreadUtils.postOnMainThread(
+                () -> {
+                    if (mCategoryPreference != null) {
+                        mCategoryPreference.removePreference(preference);
+                    }
+                });
+    }
+
     void showToast(String msg) {
         AudioSharingUtils.toastMessage(mContext, msg);
     }
@@ -730,6 +744,7 @@ public class AudioStreamsProgressCategoryController extends BasePreferenceContro
                     case ADD_SOURCE_FAILED -> AddSourceFailedState.getInstance();
                     case SOURCE_PRESENT -> SourcePresentState.getInstance();
                     case SOURCE_ADDED -> SourceAddedState.getInstance();
+                    case SOURCE_LOST -> SourceLostState.getInstance();
                     default -> throw new IllegalArgumentException("Unsupported state: " + state);
                 };
 

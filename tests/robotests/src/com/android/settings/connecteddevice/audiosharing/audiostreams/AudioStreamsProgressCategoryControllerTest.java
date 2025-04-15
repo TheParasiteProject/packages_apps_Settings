@@ -20,6 +20,7 @@ import static com.android.settings.connecteddevice.audiosharing.audiostreams.Aud
 import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamsProgressCategoryController.AudioStreamState.ADD_SOURCE_FAILED;
 import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamsProgressCategoryController.AudioStreamState.ADD_SOURCE_WAIT_FOR_RESPONSE;
 import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamsProgressCategoryController.AudioStreamState.SOURCE_ADDED;
+import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamsProgressCategoryController.AudioStreamState.SOURCE_LOST;
 import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamsProgressCategoryController.AudioStreamState.SOURCE_PRESENT;
 import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamsProgressCategoryController.AudioStreamState.SYNCED;
 import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamsProgressCategoryController.AudioStreamState.WAIT_FOR_SYNC;
@@ -652,7 +653,7 @@ public class AudioStreamsProgressCategoryControllerTest {
     }
 
     @Test
-    public void testHandleSourceLost_removed() {
+    public void testHandleSourceLost_updateMetadataAndState() {
         // Setup a device
         ShadowAudioStreamsHelper.setCachedBluetoothDeviceInSharingOrLeConnected(mDevice);
 
@@ -668,25 +669,27 @@ public class AudioStreamsProgressCategoryControllerTest {
         mController.handleSourceLost(NEWLY_FOUND_BROADCAST_ID);
         shadowOf(Looper.getMainLooper()).idle();
 
-        ArgumentCaptor<AudioStreamPreference> preferenceToAdd =
-                ArgumentCaptor.forClass(AudioStreamPreference.class);
-        ArgumentCaptor<AudioStreamPreference> preferenceToRemove =
+        ArgumentCaptor<AudioStreamPreference> preference =
                 ArgumentCaptor.forClass(AudioStreamPreference.class);
         ArgumentCaptor<AudioStreamsProgressCategoryController.AudioStreamState> state =
                 ArgumentCaptor.forClass(
                         AudioStreamsProgressCategoryController.AudioStreamState.class);
 
-        // Verify a new preference is created with state SYNCED.
-        verify(mController).moveToState(preferenceToAdd.capture(), state.capture());
-        assertThat(preferenceToAdd.getValue()).isNotNull();
-        assertThat(preferenceToAdd.getValue().getAudioStreamBroadcastId())
-                .isEqualTo(NEWLY_FOUND_BROADCAST_ID);
-        assertThat(state.getValue()).isEqualTo(SYNCED);
+        verify(mController, times(2)).moveToState(preference.capture(), state.capture());
+        List<AudioStreamPreference> preferences = preference.getAllValues();
+        assertThat(preferences.size()).isEqualTo(2);
+        List<AudioStreamsProgressCategoryController.AudioStreamState> states = state.getAllValues();
+        assertThat(states.size()).isEqualTo(2);
 
-        // Verify the preference with NEWLY_FOUND_BROADCAST_ID is removed.
-        verify(mPreference).removePreference(preferenceToRemove.capture());
-        assertThat(preferenceToRemove.getValue().getAudioStreamBroadcastId())
+        // Verify a new preference is created with state SYNCED.
+        assertThat(preferences.get(0).getAudioStreamBroadcastId())
                 .isEqualTo(NEWLY_FOUND_BROADCAST_ID);
+        assertThat(states.get(0)).isEqualTo(SYNCED);
+
+        // Verify the new source is updated to state SOURCE_LOST
+        assertThat(preferences.get(1).getAudioStreamBroadcastId())
+                .isEqualTo(NEWLY_FOUND_BROADCAST_ID);
+        assertThat(states.get(1)).isEqualTo(SOURCE_LOST);
     }
 
     @Test
@@ -746,25 +749,27 @@ public class AudioStreamsProgressCategoryControllerTest {
         mController.handleSourceRemoved();
         shadowOf(Looper.getMainLooper()).idle();
 
-        ArgumentCaptor<AudioStreamPreference> preferenceToAdd =
-                ArgumentCaptor.forClass(AudioStreamPreference.class);
-        ArgumentCaptor<AudioStreamPreference> preferenceToRemove =
+        ArgumentCaptor<AudioStreamPreference> preference =
                 ArgumentCaptor.forClass(AudioStreamPreference.class);
         ArgumentCaptor<AudioStreamsProgressCategoryController.AudioStreamState> state =
                 ArgumentCaptor.forClass(
                         AudioStreamsProgressCategoryController.AudioStreamState.class);
 
-        // Verify a new preference is created with state SOURCE_ADDED.
-        verify(mController).moveToState(preferenceToAdd.capture(), state.capture());
-        assertThat(preferenceToAdd.getValue()).isNotNull();
-        assertThat(preferenceToAdd.getValue().getAudioStreamBroadcastId())
-                .isEqualTo(ALREADY_CONNECTED_BROADCAST_ID);
-        assertThat(state.getValue()).isEqualTo(SOURCE_ADDED);
+        verify(mController, times(2)).moveToState(preference.capture(), state.capture());
+        List<AudioStreamPreference> preferences = preference.getAllValues();
+        assertThat(preferences.size()).isEqualTo(2);
+        List<AudioStreamsProgressCategoryController.AudioStreamState> states = state.getAllValues();
+        assertThat(states.size()).isEqualTo(2);
 
-        // Verify the preference with ALREADY_CONNECTED_BROADCAST_ID is removed.
-        verify(mPreference).removePreference(preferenceToRemove.capture());
-        assertThat(preferenceToRemove.getValue().getAudioStreamBroadcastId())
+        // Verify the connected preference is created with state SOURCE_ADDED.
+        assertThat(preferences.get(0).getAudioStreamBroadcastId())
                 .isEqualTo(ALREADY_CONNECTED_BROADCAST_ID);
+        assertThat(states.get(0)).isEqualTo(SOURCE_ADDED);
+
+        // Verify the connected preference is updated to state SOURCE_LOST
+        assertThat(preferences.get(1).getAudioStreamBroadcastId())
+                .isEqualTo(ALREADY_CONNECTED_BROADCAST_ID);
+        assertThat(states.get(1)).isEqualTo(SOURCE_LOST);
     }
 
     @Test
