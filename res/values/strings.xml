@@ -14385,6 +14385,8 @@ Data usage charges may apply.</string>
     <string name="audio_streams_main_page_password_dialog_cannot_edit">Can\u0027t edit password while sharing. To change the password, first turn off audio sharing.</string>
     <!-- Le audio streams password dialog password format alert [CHAR LIMIT=NONE] -->
     <string name="audio_streams_main_page_password_dialog_format_alert">Your password must contain 4-16 characters and use only letters, numbers and symbols</string>
+    <!-- Le audio streams name dialog password format alert [CHAR LIMIT=NONE] -->
+    <string name="audio_streams_main_page_name_dialog_format_alert">Your audio stream name must contain 4-32 characters and use only letters, numbers and symbols</string>
     <!-- Text for audio sharing qrcode scanner [CHAR LIMIT=none]-->
     <string name="audio_streams_qr_code_scanner_label">QR code scanner</string>
     <!-- Learn more link for audio sharing qrcode [CHAR LIMIT=none]-->
