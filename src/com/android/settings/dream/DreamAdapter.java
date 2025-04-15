@@ -16,6 +16,8 @@
 
 package com.android.settings.dream;
 
+import static android.service.dreams.Flags.dreamsV2;
+
 import android.annotation.LayoutRes;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -89,6 +91,11 @@ public class DreamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                     R.dimen.dream_item_icon_size);
             icon.setBounds(0, 0, iconSize, iconSize);
             mTitleView.setCompoundDrawablesRelative(icon, null, null, null);
+
+            if (dreamsV2()) {
+                mTitleView.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+                mTitleView.setSingleLine();
+            }
 
             itemView.setOnClickListener(v -> {
                 item.onItemClicked();
