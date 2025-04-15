@@ -283,7 +283,7 @@
 
     <!-- Accessibility Settings -->
     <dimen name="accessibility_layout_margin_start_end">16dp</dimen>
-    <dimen name="accessibility_imageview_size">176dp</dimen>
+    <dimen name="accessibility_imageview_size">160dp</dimen>
     <dimen name="accessibility_illustration_view_radius">28dp</dimen>
 
     <!-- Accessibility icon -->
