@@ -8307,6 +8307,7 @@ Data usage charges may apply.</string>
     <string name="keywords_wallet">wallet</string>
     <string name="keywords_payment_settings">pay, tap, payments</string>
     <string name="keywords_backup">backup, back up</string>
+    <string name="keywords_fingerprint_unlock">fingerprint, unlock, auth, sign in</string>
     <string name="keywords_face_unlock">face, unlock, auth, sign in</string>
     <string name="keywords_biometric_unlock">face, unlock, auth, sign in, fingerprint, biometric</string>
     <string name="keywords_imei_info">imei, meid, min, prl version, imei sv</string>
