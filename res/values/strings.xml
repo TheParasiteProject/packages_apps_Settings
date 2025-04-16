@@ -3314,7 +3314,7 @@
     <!-- Display settings screen, summary for screen saver options, screen saver is turned off [CHAR LIMIT=20] -->
     <string name="screensaver_settings_summary_off">Off</string>
     <!-- Dream settings screen, action label, when to dream [CHAR LIMIT=20] -->
-    <string name="screensaver_settings_when_to_dream">When to start</string>
+    <string name="screensaver_settings_when_to_dream">When to show</string>
     <!-- [CHAR LIMIT=40] Display settings screen, setting option name to change whether the device wakes up when a lift gesture is detected. -->
     <string name="lift_to_wake_title">Lift to wake</string>
     <!-- Title of toggle preference in screensaver "when to start" screen to restrict to starting only when charging wirelessly [CHAR LIMIT=NONE] -->
