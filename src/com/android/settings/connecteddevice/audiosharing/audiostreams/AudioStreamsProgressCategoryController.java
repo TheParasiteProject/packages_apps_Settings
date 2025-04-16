@@ -73,7 +73,7 @@ public class AudioStreamsProgressCategoryController extends BasePreferenceContro
         DefaultLifecycleObserver, AudioStreamsProgressCategoryCallback.SourceStateListener {
     private static final String TAG = "AudioStreamsProgressCategoryController";
     private static final boolean DEBUG = BluetoothUtils.D;
-    @VisibleForTesting static final int UNSET_BROADCAST_ID = -1;
+    static final int UNSET_BROADCAST_ID = -1;
 
     @VisibleForTesting
     final BluetoothCallback mBluetoothCallback =
@@ -734,21 +734,14 @@ public class AudioStreamsProgressCategoryController extends BasePreferenceContro
 
     @VisibleForTesting
     void moveToState(AudioStreamPreference preference, AudioStreamState state) {
-        AudioStreamStateHandler stateHandler =
-                switch (state) {
-                    case SYNCED -> SyncedState.getInstance();
-                    case WAIT_FOR_SYNC -> WaitForSyncState.getInstance();
-                    case ADD_SOURCE_WAIT_FOR_RESPONSE ->
-                            AddSourceWaitForResponseState.getInstance();
-                    case ADD_SOURCE_BAD_CODE -> AddSourceBadCodeState.getInstance();
-                    case ADD_SOURCE_FAILED -> AddSourceFailedState.getInstance();
-                    case SOURCE_PRESENT -> SourcePresentState.getInstance();
-                    case SOURCE_ADDED -> SourceAddedState.getInstance();
-                    case SOURCE_LOST -> SourceLostState.getInstance();
-                    default -> throw new IllegalArgumentException("Unsupported state: " + state);
-                };
+        AudioStreamStateHandler stateHandler = getStateHandler(state);
+        AudioStreamStateHandler prevStateHandler = getStateHandler(
+                preference.getAudioStreamState());
 
-        stateHandler.handleStateChange(preference, this, mAudioStreamsHelper);
+        if (stateHandler != null) {
+            stateHandler.handleStateChange(prevStateHandler, preference, this, mAudioStreamsHelper,
+                mScanHelper);
+        }
 
         // Update UI with the updated preference
         AudioSharingUtils.postOnMainThread(
@@ -758,6 +751,24 @@ public class AudioStreamsProgressCategoryController extends BasePreferenceContro
                         mCategoryPreference.addAudioStreamPreference(preference, mComparator);
                     }
                 });
+    }
+
+    private static @Nullable AudioStreamStateHandler getStateHandler(AudioStreamState stateEnum) {
+        var state = switch (stateEnum) {
+            case SYNCED -> SyncedState.getInstance();
+            case WAIT_FOR_SYNC -> WaitForSyncState.getInstance();
+            case ADD_SOURCE_WAIT_FOR_RESPONSE -> AddSourceWaitForResponseState.getInstance();
+            case ADD_SOURCE_BAD_CODE -> AddSourceBadCodeState.getInstance();
+            case ADD_SOURCE_FAILED -> AddSourceFailedState.getInstance();
+            case SOURCE_PRESENT -> SourcePresentState.getInstance();
+            case SOURCE_ADDED -> SourceAddedState.getInstance();
+            case SOURCE_LOST -> SourceLostState.getInstance();
+            default -> null;
+        };
+        if (state == null) {
+            Log.d(TAG, "Unsupported state:" + stateEnum);
+        }
+        return state;
     }
 
     private AudioStreamsDialogFragment.DialogBuilder getNoLeDeviceDialog() {
