@@ -22,14 +22,23 @@ import static com.android.settings.connecteddevice.audiosharing.audiostreams.Aud
 import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamScanHelper.State.STATE_ON;
 import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamScanHelper.State.STATE_TURNING_OFF;
 import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamScanHelper.State.STATE_TURNING_ON;
+import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamScanHelper.State.STATE_WAITING_TO_RESTART_WITH_NO_FILTER;
+import static com.android.settings.connecteddevice.audiosharing.audiostreams.AudioStreamsProgressCategoryController.UNSET_BROADCAST_ID;
 
 import static java.util.Collections.emptyList;
 
-import android.annotation.NonNull;
+import android.bluetooth.BluetoothLeBroadcastMetadata;
+import android.bluetooth.le.ScanFilter;
+import android.os.ParcelUuid;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import com.android.settingslib.bluetooth.LocalBluetoothLeBroadcastAssistant;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.Executor;
 import java.util.function.Consumer;
 
@@ -47,10 +56,14 @@ public class AudioStreamScanHelper implements
         STATE_OFF,
         STATE_TURNING_ON,
         STATE_ON,
-        STATE_TURNING_OFF
+        STATE_TURNING_OFF,
+        STATE_WAITING_TO_RESTART_WITH_NO_FILTER,
     }
 
     private static final String TAG = "AudioStreamScanHelper";
+    private static final ParcelUuid BAAS_UUID = ParcelUuid.fromString(
+            "00001852-0000-1000-8000-00805F9B34FB");
+    private static final String UNSET_DEVICE_ADDR = "FF:FF:FF:FF:FF:FF";
     private final @Nullable LocalBluetoothLeBroadcastAssistant mLeBroadcastAssistant;
     private final Consumer<Boolean> mScanStateChangedListener;
     private final @NonNull Executor mExecutor;
@@ -80,6 +93,68 @@ public class AudioStreamScanHelper implements
                 setState(STATE_TURNING_ON);
             }
         });
+    }
+
+    /**
+     * Starts the scanning process for one specific audio stream when info in metadata is available.
+     * This method will do nothing if scanning is already started or in the process of starting.
+     */
+    public void startScanningWithFilter(@NonNull BluetoothLeBroadcastMetadata metadata) {
+        mExecutor.execute(() -> {
+            if (mState == STATE_ON || mState == STATE_TURNING_ON) {
+                Log.d(TAG, "startScanningWithFilter() : do nothing, state = " + mState);
+                return;
+            }
+            boolean useFilter = false;
+            ScanFilter.Builder builder = new ScanFilter.Builder();
+            if (metadata.getBroadcastId() != UNSET_BROADCAST_ID) {
+                byte[] broadcastIdBytes = createBroadcastIdBytes(metadata.getBroadcastId());
+                byte[] serviceDataMask = new byte[broadcastIdBytes.length];
+                Arrays.fill(serviceDataMask, (byte) 0xFF);
+                builder.setServiceData(BAAS_UUID, broadcastIdBytes, serviceDataMask);
+                useFilter = true;
+            }
+            if (metadata.getSourceDevice() != null && !Objects.equals(
+                    metadata.getSourceDevice().getAddress(), UNSET_DEVICE_ADDR)) {
+                builder.setDeviceAddress(metadata.getSourceDevice().getAddress());
+                useFilter = true;
+            }
+            var filter = builder.build();
+            if (mLeBroadcastAssistant != null) {
+                Log.d(TAG, "startScanningWithFilter() : scanFilter applied : " + filter);
+                mLeBroadcastAssistant.startSearchingForSources(
+                        useFilter ? List.of(filter) : emptyList());
+                setState(STATE_TURNING_ON);
+            }
+        });
+    }
+
+    /**
+     * Restarts the scanning process without scan filter.
+     * This method will do nothing if scanning is not started or in the process of starting.
+     */
+    public void restartScanningWithoutFilter() {
+        mExecutor.execute(() -> {
+            if (mState != STATE_ON && mState != STATE_TURNING_ON) {
+                Log.d(TAG, "restartScanningWithoutFilter() : do nothing, state = " + mState);
+                return;
+            }
+            if (mLeBroadcastAssistant != null) {
+                Log.d(TAG, "restartScanningWithoutFilter() : stop scanning");
+                mLeBroadcastAssistant.stopSearchingForSources();
+                setState(STATE_WAITING_TO_RESTART_WITH_NO_FILTER);
+            }
+        });
+    }
+
+    private static byte[] createBroadcastIdBytes(int broadcastId) {
+        byte[] byteArray = new byte[3];
+
+        byteArray[0] = (byte) (broadcastId & 0xFF);
+        byteArray[1] = (byte) ((broadcastId >> 8) & 0xFF);
+        byteArray[2] = (byte) ((broadcastId >> 16) & 0xFF);
+
+        return byteArray;
     }
 
     /**
@@ -120,7 +195,11 @@ public class AudioStreamScanHelper implements
     public void scanningStopped() {
         mExecutor.execute(() -> {
             Log.d(TAG, "scanningStopped()");
-            setState(STATE_OFF);
+            if (mState == STATE_WAITING_TO_RESTART_WITH_NO_FILTER) {
+                startScanning();
+            } else {
+                setState(STATE_OFF);
+            }
         });
     }
 
