@@ -14423,7 +14423,7 @@ Data usage charges may apply.</string>
     <!-- Supervision settings -->
 
     <!-- Title for Supervision settings menu entry [CHAR LIMIT=60] -->
-    <string name="supervision_settings_title">Supervision</string>
+    <string name="supervision_settings_title">Parental controls</string>
     <!-- Description for Supervision settings menu entry [CHAR LIMIT=NONE] -->
     <string name="supervision_settings_summary">Content restrictions &amp; other limits</string>
     <!-- Title of toggle to enable or disable device supervision [CHAR LIMIT=60] -->
