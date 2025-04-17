@@ -41,6 +41,7 @@ import android.net.wifi.WifiEnterpriseConfig;
 import android.net.wifi.WifiEnterpriseConfig.Eap;
 import android.net.wifi.WifiEnterpriseConfig.Phase2;
 import android.net.wifi.WifiManager;
+import android.os.Looper;
 import android.platform.test.annotations.EnableFlags;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
@@ -233,6 +234,22 @@ public class WifiConfigController2Test {
         WifiConfiguration config = mController.getConfig();
 
         assertThat(config.shared).isTrue();
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_WIFI_MULTIUSER)
+    public void editConfigurationFieldState() {
+        createController(null, WifiConfigUiBase2.MODE_CONNECT, false);
+        final Switch editConfigurationSwitch =
+                mView.findViewById(R.id.edit_wifi_network_configuration);
+        final Switch sharedSwitch = mView.findViewById(R.id.share_wifi_network);
+
+        assertThat(editConfigurationSwitch).isNotNull();
+
+        sharedSwitch.setChecked(true);
+        shadowOf(Looper.getMainLooper()).idle();
+
+        assertThat(editConfigurationSwitch.isEnabled()).isTrue();
     }
 
     @Test

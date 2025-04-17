@@ -208,6 +208,7 @@ public class WifiConfigController2 implements TextWatcher,
     private TextView mDns2View;
 
     private Switch mSharedSwitch;
+    private Switch mEditConfigurationSwitch;
     private Spinner mProxySettingsSpinner;
     @Nullable
     private Spinner mMeteredSettingsSpinner;
@@ -338,12 +339,18 @@ public class WifiConfigController2 implements TextWatcher,
                         : View.VISIBLE);
         mSecurityInPosition = new Integer[WifiEntry.NUM_SECURITY_TYPES];
         mSharedSwitch = (Switch) mView.findViewById(R.id.share_wifi_network);
+        mEditConfigurationSwitch =
+            (Switch) mView.findViewById(R.id.edit_wifi_network_configuration);
 
         if (mWifiEntry == null) { // new network
             configureSecuritySpinner();
             mConfigUi.setSubmitButton(res.getString(R.string.wifi_save));
             if (com.android.settings.connectivity.Flags.wifiMultiuser()) {
+                mSharedSwitch.setOnCheckedChangeListener(this);
                 mView.findViewById(R.id.sharing_toggle_fields).setVisibility(View.VISIBLE);
+                mEditConfigurationSwitch.setEnabled(false);
+                mView.findViewById(R.id.edit_wifi_network_configuration_fields)
+                        .setVisibility(View.VISIBLE);
             }
         } else {
             mConfigUi.setTitle(mWifiEntry.getTitle());
@@ -1731,6 +1738,11 @@ public class WifiConfigController2 implements TextWatcher,
             hideSoftKeyboard(mView.getWindowToken());
             view.setVisibility(View.GONE);
             mView.findViewById(R.id.wifi_advanced_fields).setVisibility(View.VISIBLE);
+        } else if (view.getId() == R.id.share_wifi_network) {
+            mEditConfigurationSwitch.setEnabled(isChecked);
+            if (!isChecked) {
+                mEditConfigurationSwitch.setChecked(false);
+            }
         }
     }
 
