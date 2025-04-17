@@ -14450,6 +14450,8 @@ Data usage charges may apply.</string>
     <string name="supervision_delete_pin_preference_title">Delete PIN</string>
     <!-- Summary for supervision delete pin setting entry [CHAR LIMIT=NONE] -->
     <string name="supervision_delete_pin_preference_summary">This will reset all your supervision settings</string>
+    <!-- Title for adding supervision PIN recovery setting entry [CHAR LIMIT=NONE] -->
+    <string name="supervision_add_pin_recovery_title">Tap to add recovery</string>
     <!-- Title for web content filters entry [CHAR LIMIT=60] -->
     <string name="supervision_web_content_filters_title">Web content filters</string>
     <!-- Title for web content filters browser category [CHAR LIMIT=60] -->
