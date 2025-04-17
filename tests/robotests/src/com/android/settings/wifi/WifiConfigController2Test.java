@@ -41,6 +41,7 @@ import android.net.wifi.WifiEnterpriseConfig;
 import android.net.wifi.WifiEnterpriseConfig.Eap;
 import android.net.wifi.WifiEnterpriseConfig.Phase2;
 import android.net.wifi.WifiManager;
+import android.platform.test.annotations.EnableFlags;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
@@ -52,9 +53,11 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.android.settings.R;
+import com.android.settings.connectivity.Flags;
 import com.android.settings.network.SubscriptionUtil;
 import com.android.settings.utils.AndroidKeystoreAliasLoader;
 import com.android.settings.wifi.details2.WifiPrivacyPreferenceController;
@@ -216,6 +219,20 @@ public class WifiConfigController2Test {
         ssid.setText(GOOD_SSID);
 
         assertThat(mController.isSubmittable()).isTrue();
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_WIFI_MULTIUSER)
+    public void saveSharedField() {
+        createController(null, WifiConfigUiBase2.MODE_CONNECT, false);
+        final Switch sharedSwitch = mView.findViewById(R.id.share_wifi_network);
+        assertThat(sharedSwitch).isNotNull();
+        assertThat(sharedSwitch.getVisibility()).isEqualTo(View.VISIBLE);
+        sharedSwitch.setChecked(true);
+
+        WifiConfiguration config = mController.getConfig();
+
+        assertThat(config.shared).isTrue();
     }
 
     @Test
@@ -599,13 +616,13 @@ public class WifiConfigController2Test {
     }
 
     @Test
-    public void getHiddenSettingsPosition_whenAdvancedToggled_shouldBeFirst() {
+    public void getSharingSettingsPosition_whenAdvancedToggled_shouldBeFirst() {
         final LinearLayout advancedFieldsLayout = mView.findViewById(R.id.wifi_advanced_fields);
-        final LinearLayout hiddenSettingLayout = mView.findViewById(R.id.hidden_settings_field);
+        final LinearLayout shareSettingLayout = mView.findViewById(R.id.sharing_toggle_fields);
 
         final LinearLayout firstChild = (LinearLayout) advancedFieldsLayout.getChildAt(0);
 
-        assertThat(firstChild).isEqualTo(hiddenSettingLayout);
+        assertThat(firstChild).isEqualTo(shareSettingLayout);
     }
 
     @Test
