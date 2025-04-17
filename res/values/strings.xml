@@ -14470,6 +14470,14 @@ Data usage charges may apply.</string>
     <string name="supervision_add_pin_recovery_title">Tap to add recovery</string>
     <!-- Title for web content filters entry [CHAR LIMIT=60] -->
     <string name="supervision_web_content_filters_title">Web content filters</string>
+    <!-- Summary for web content filters entry both on case [CHAR LIMIT=60] -->
+    <string name="supervision_web_content_filters_summary_both_on">ON / Chrome &amp; Search filters set</string>
+    <!-- Summary for web content filters entry chrome on [CHAR LIMIT=60] -->
+    <string name="supervision_web_content_filters_summary_chrome_on">ON / Chrome filter set</string>
+    <!-- Summary for web content filters entry chrome on [CHAR LIMIT=60] -->
+    <string name="supervision_web_content_filters_summary_search_on">ON / Search filter set</string>
+    <!-- Summary for web content filters entry chrome on [CHAR LIMIT=60] -->
+    <string name="supervision_web_content_filters_summary_both_off">No filters set</string>
     <!-- Title for web content filters browser category [CHAR LIMIT=60] -->
     <string name="supervision_web_content_filters_browser_title">Google Chrome and Web</string>
     <!-- Title for web content filters browser category block explicit sites option [CHAR LIMIT=60] -->
