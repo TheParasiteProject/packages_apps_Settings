@@ -514,6 +514,11 @@ fun getDeviceStateItemList() =
         ),
         DeviceStateItemConfig(
             enabled = true,
+            settingKey = ZenModeButtonPreference.KEY,
+            settingScreenKey = ZenModeBedtimeScreen.KEY,
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
             settingKey = AppInfoStorageScreen.KEY,
             settingScreenKey = AppStorageAppListScreen.KEY,
             hintText = { context, metadata ->
