@@ -2558,11 +2558,15 @@
                        android:value="@string/menu_key_security"/>
         </activity>
 
-        <service
-            android:name=".accessibility.notification.SurveyNotificationService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="android.permission.POST_NOTIFICATIONS"/>
+        <receiver
+            android:name=".accessibility.notification.SurveyNotificationReceiver"
+            android:permission="android.permission.MANAGE_ACCESSIBILITY"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.ACCESSIBILITY_SURVEY_NOTIFICATION_SHOWN"/>
+                <action android:name="android.settings.ACCESSIBILITY_SURVEY_NOTIFICATION_DISMISSED"/>
+            </intent-filter>
+        </receiver>
 
         <activity
             android:name="Settings$AccessibilitySettingsActivity"
