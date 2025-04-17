@@ -104,7 +104,7 @@ class AppInfoAllFilesAccessScreen(context: Context, override val arguments: Bund
             }
         }
 
-        private fun ApplicationInfo.hasExternalStoragePermission(context: Context): Boolean =
+        fun ApplicationInfo.hasExternalStoragePermission(context: Context): Boolean =
             try {
                 val packageInfo: PackageInfo =
                     context.packageManager.getPackageInfo(

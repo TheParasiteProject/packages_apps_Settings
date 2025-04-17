@@ -105,7 +105,7 @@ class AppInfoDisplayOverOtherAppsScreen(context: Context, override val arguments
             }
         }
 
-        private fun ApplicationInfo.hasOverlayPermission(context: Context): Boolean =
+        fun ApplicationInfo.hasOverlayPermission(context: Context): Boolean =
             try {
                 val packageInfo: PackageInfo =
                     context.packageManager.getPackageInfo(
