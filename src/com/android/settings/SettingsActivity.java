@@ -518,7 +518,8 @@ public class SettingsActivity extends SettingsBaseActivity
     @Override
     public Theme getTheme() {
         Theme theme = super.getTheme();
-        if (SettingsThemeHelper.isExpressiveTheme(this)) {
+        if (!WizardManagerHelper.isAnySetupWizard(getIntent())
+                && SettingsThemeHelper.isExpressiveTheme(this)) {
             theme.applyStyle(R.style.Theme_SubSettings_Expressive, true);
         }
         return theme;
