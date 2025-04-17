@@ -4932,7 +4932,7 @@
     <!-- Summary text for 'Bottom-right click', a setting that allows the user to right-click by pressing in the bottom-right corner of a touchpad [CHAR LIMIT=60] -->
     <string name="trackpad_bottom_right_tap_summary">Click in the bottom right corner of the touchpad for more options</string>
     <!-- Title text for 'Pointer speed'. [CHAR LIMIT=35] -->
-    <string name="trackpad_pointer_speed">Cursor speed</string>
+    <string name="trackpad_pointer_speed">Pointer speed</string>
     <!-- Title text for 'Three finger tap' touchpad preference. This preference allows the user to select an action that will trigger when they tap three fingers on a touchpad. [CHAR LIMIT=60] -->
     <string name="three_finger_tap_preference_title">Use three-finger tap</string>
     <!-- Title for the 'Touchpad acceleration' preference switch, which dynamically adjusts cursor movement based on speed. [CHAR LIMIT=60] -->
