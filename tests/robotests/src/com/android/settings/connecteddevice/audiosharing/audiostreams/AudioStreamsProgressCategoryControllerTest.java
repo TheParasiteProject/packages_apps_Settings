@@ -449,19 +449,19 @@ public class AudioStreamsProgressCategoryControllerTest {
         mController.setSourceFromQrCode(
                 metadataWithNoIdAndSameName, SourceOriginForLogging.UNKNOWN);
 
+        // Handle both source from qr code and already connected source in onStart
+        mController.displayPreference(mScreen);
+        mController.onStart(mLifecycleOwner);
+        shadowOf(Looper.getMainLooper()).idle();
+
         // Setup a connected source with name BROADCAST_NAME_1 and id
         BluetoothLeBroadcastReceiveState connected =
                 createConnectedMock(ALREADY_CONNECTED_BROADCAST_ID);
         var data = mock(BluetoothLeAudioContentMetadata.class);
         when(connected.getSubgroupMetadata()).thenReturn(ImmutableList.of(data));
         when(data.getProgramInfo()).thenReturn(BROADCAST_NAME_1);
-        when(mAudioStreamsHelper.getAllSourcesByDevice())
-                .thenReturn(Map.of(mSourceDevice, ImmutableList.of(connected)));
-
-        // Handle both source from qr code and already connected source in onStart
-        mController.displayPreference(mScreen);
-        mController.onStart(mLifecycleOwner);
-        shadowOf(Looper.getMainLooper()).idle();
+        when(mDevice.getDevice()).thenReturn(mSourceDevice);
+        mController.handleSourceStreaming(mSourceDevice, connected);
 
         // Verify two preferences created, one moved to state WAIT_FOR_SYNC, one to SOURCE_ADDED.
         // Both has ALREADY_CONNECTED_BROADCAST_ID as the UNSET_ID is updated to match.

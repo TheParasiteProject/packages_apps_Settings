@@ -78,12 +78,19 @@ public class AudioStreamScanHelper implements
     }
 
     /**
+     * Returns if the scanning has already started or in the process of starting.
+     */
+    public boolean hasStartedScanning() {
+        return mState == STATE_ON || mState == STATE_TURNING_ON;
+    }
+
+    /**
      * Starts the scanning process for available audio stream sources.
      * This method will do nothing if scanning is already active or in the process of starting.
      */
     public void startScanning() {
         mExecutor.execute(() -> {
-            if (mState == STATE_ON || mState == STATE_TURNING_ON) {
+            if (hasStartedScanning()) {
                 Log.d(TAG, "startScanning() : do nothing, state = " + mState);
                 return;
             }
@@ -101,7 +108,7 @@ public class AudioStreamScanHelper implements
      */
     public void startScanningWithFilter(@NonNull BluetoothLeBroadcastMetadata metadata) {
         mExecutor.execute(() -> {
-            if (mState == STATE_ON || mState == STATE_TURNING_ON) {
+            if (hasStartedScanning()) {
                 Log.d(TAG, "startScanningWithFilter() : do nothing, state = " + mState);
                 return;
             }
@@ -212,8 +219,8 @@ public class AudioStreamScanHelper implements
     }
 
     private void setState(State newState) {
-        mScanStateChangedListener.accept(newState == STATE_ON || newState == STATE_TURNING_ON);
         Log.d(TAG, "setState: from " + mState + " to " + newState);
         mState = newState;
+        mScanStateChangedListener.accept(hasStartedScanning());
     }
 }

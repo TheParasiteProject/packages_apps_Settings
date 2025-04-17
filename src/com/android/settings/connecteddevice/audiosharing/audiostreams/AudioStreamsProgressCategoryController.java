@@ -631,28 +631,30 @@ public class AudioStreamsProgressCategoryController extends BasePreferenceContro
         mLeBroadcastAssistant.registerServiceCallBack(mExecutor, mBroadcastAssistantCallback);
         mBroadcastAssistantCallback.setSourceStateListener(this);
         mBroadcastAssistantCallback.setScanStateListener(mScanHelper);
-        mExecutor.execute(
-                () -> {
-                    // Handle QR code scan, display currently streaming or paused streams then start
-                    // scanning sequentially
-                    handleSourceFromQrCodeIfExists();
-                    Map<BluetoothDevice, List<BluetoothLeBroadcastReceiveState>> sources =
-                            mAudioStreamsHelper.getAllSourcesByDevice();
-                    if (mHysteresisModeFixAvailable) {
-                        getPausedSourcesByDevice(sources).forEach(
-                                (device, stateList) ->
-                                        stateList.forEach(
-                                                state -> handleSourcePaused(device, state)));
-                    }
-                    // If a source is streaming in one device and paused in another, we handle the
-                    // source as it's streaming
-                    getStreamSourcesByDevice(sources).forEach(
-                            (device, stateList) ->
-                                    stateList.forEach(
-                                            state -> handleSourceStreaming(device, state)));
-                    mScanHelper.startScanning();
-                    mMediaControlHelper.start();
-                });
+        Map<BluetoothDevice, List<BluetoothLeBroadcastReceiveState>> sources =
+                mAudioStreamsHelper.getAllSourcesByDevice();
+        // Handle currently paused sources on connected devices
+        if (mHysteresisModeFixAvailable) {
+            getPausedSourcesByDevice(sources).forEach(
+                    (device, stateList) ->
+                            stateList.forEach(
+                                    state -> handleSourcePaused(device, state)));
+        }
+        // Handle currently streaming sources on connected devices, if a source is streaming in one
+        // device and paused in another, we handle the source as it's streaming
+        getStreamSourcesByDevice(sources).forEach(
+                (device, stateList) ->
+                        stateList.forEach(
+                                state -> handleSourceStreaming(device, state)));
+        // In handleSourceFromQrCodeIfExists(), we might start scanning with scan filter targeting
+        // the specific source from the QR code. That's why we keep this function after the handling
+        // of existed paused and streaming sources, so that we can skip the targeted scanning if the
+        // source from the QR code is already present on the connected devices.
+        handleSourceFromQrCodeIfExists();
+        if (!mScanHelper.hasStartedScanning()) {
+            mScanHelper.startScanning();
+        }
+        mMediaControlHelper.start();
     }
 
     private Map<BluetoothDevice, List<BluetoothLeBroadcastReceiveState>> getStreamSourcesByDevice(
