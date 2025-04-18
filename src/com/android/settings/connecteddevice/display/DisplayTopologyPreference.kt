@@ -19,7 +19,6 @@ package com.android.settings.connecteddevice.display
 import com.android.settings.R
 import com.android.settingslib.widget.GroupSectionDividerMixin
 
-import android.app.WallpaperManager
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.PointF
@@ -219,22 +218,17 @@ class DisplayTopologyPreference(val injector: ConnectedDisplayInjector)
             }
         }
 
-        var wallpaperBitmap : Bitmap? = null
-
+        val idToNode = topology.allNodesIdMap()
         newBounds.forEach { (id, pos) ->
-            val block = recycleableBlocks.removeFirstOrNull() ?: DisplayBlock(context).apply {
-                if (wallpaperBitmap == null) {
-                    wallpaperBitmap = injector.wallpaper
-                }
-                // We need a separate wallpaper Drawable for each display block, since each needs to
-                // be drawn at a separate size.
-                setWallpaper(wallpaperBitmap)
-
+            val block = recycleableBlocks.removeFirstOrNull() ?: DisplayBlock(injector).apply {
                 mPaneContent.addView(this)
             }
-            block.setHighlighted(false)
 
-            block.placeAndSize(pos, scaling)
+            idToNode.get(id)?.let {
+                val topLeft = scaling.displayToPaneCoor(pos.left, pos.top)
+                val bottomRight = scaling.displayToPaneCoor(pos.right, pos.bottom)
+                block.reset(id, topLeft, bottomRight, (bottomRight.x - topLeft.x) / it.logicalWidth)
+            }
             block.setOnTouchListener { view, ev ->
                 when (ev.actionMasked) {
                     MotionEvent.ACTION_DOWN -> onBlockTouchDown(id, pos, block, ev)

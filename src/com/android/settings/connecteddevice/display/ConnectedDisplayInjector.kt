@@ -16,9 +16,7 @@
 
 package com.android.settings.connecteddevice.display
 
-import android.app.WallpaperManager
 import android.content.Context
-import android.graphics.Bitmap
 import android.hardware.display.DisplayManager
 import android.hardware.display.DisplayManager.DISPLAY_CATEGORY_ALL_INCLUDING_DISABLED
 import android.hardware.display.DisplayManager.EVENT_TYPE_DISPLAY_ADDED
@@ -37,6 +35,8 @@ import android.view.Display
 import android.view.Display.INVALID_DISPLAY
 import android.view.DisplayInfo
 import android.view.IWindowManager
+import android.view.SurfaceControl
+import android.view.SurfaceView
 import android.view.WindowManagerGlobal
 import com.android.server.display.feature.flags.Flags.enableModeLimitForExternalDisplay
 import com.android.settings.connecteddevice.display.ExternalDisplaySettingsConfiguration.VIRTUAL_DISPLAY_PACKAGE_NAME_SYSTEM_PROPERTY
@@ -74,6 +74,22 @@ open class ConnectedDisplayInjector(open val context: Context?) {
         val sysProp = getSystemProperty(VIRTUAL_DISPLAY_PACKAGE_NAME_SYSTEM_PROPERTY)
         return !sysProp.isEmpty() && display.type == Display.TYPE_VIRTUAL
                 && sysProp == display.ownerPackageName
+    }
+
+    /**
+     * Reparents surface to the SurfaceControl of wallpaperView, so that view will render `surface`.
+     * Any surfaces which may be parented to wallpaperView already should be passed in oldSurfaces
+     * and they will be removed from the wallpaperView's hierarchy and released.
+     */
+    open fun updateSurfaceView(oldSurfaces: List<SurfaceControl>, surface: SurfaceControl,
+            wallpaperView: SurfaceView, surfaceScale: Float) {
+        val t = SurfaceControl.Transaction()
+        t.reparent(surface, wallpaperView.surfaceControl)
+        t.setScale(surface, surfaceScale, surfaceScale)
+        oldSurfaces.forEach { t.remove(it) }
+        t.apply(true)
+
+        oldSurfaces.forEach { it.release() }
     }
 
     /**
@@ -195,8 +211,29 @@ open class ConnectedDisplayInjector(open val context: Context?) {
         get() = displayManager?.displayTopology
         set(value) { displayManager?.let { it.displayTopology = value } }
 
-    open val wallpaper: Bitmap?
-        get() = WallpaperManager.getInstance(context).bitmap
+    /**
+     * Mirrors the wallpaper of the given display.
+     *
+     * @return a SurfaceControl for the top of the new hierarchy, or null if an exception occurred.
+     */
+    open fun wallpaper(displayId: Int): SurfaceControl? {
+        try {
+            val surface = WindowManagerGlobal.getInstance().mirrorWallpaperSurface(displayId)
+            if (surface == null) {
+                Log.e(TAG, "mirrorWallpaperSurface returned null SurfaceControl")
+            }
+            return surface
+        } catch (e: RemoteException) {
+            Log.e(TAG, "Error while mirroring wallpaper of display $displayId", e)
+            return null
+        } catch (e: NullPointerException) {
+            // This can happen if the display has been detached (b/416291830). The caller should
+            // check if the display is still attached, but let's keep this here to prevent the app
+            // from crashing.
+            Log.e(TAG, "NPE while mirroring wallpaper of display $displayId - already detached?", e)
+            return null
+        }
+    }
 
     /**
      * This density is the density of the current display (showing the Settings app UI). It is
