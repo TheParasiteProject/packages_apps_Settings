@@ -268,9 +268,10 @@ class DisplayTopologyPreference(val injector: ConnectedDisplayInjector)
         // We have to use rawX and rawY for the coordinates since the view receiving the event is
         // also the view that is moving. We need coordinates relative to something that isn't
         // moving, and the raw coordinates are relative to the screen.
+        val initialTopLeft = block.positionInPane
         mDrag = BlockDrag(
                 stationaryDisps.toList(), block, displayId, displayPos.width(), displayPos.height(),
-                initialBlockX = block.x, initialBlockY = block.y,
+                initialBlockX = initialTopLeft.x, initialBlockY = initialTopLeft.y,
                 initialTouchX = ev.rawX, initialTouchY = ev.rawY,
                 startTimeMs = ev.eventTime,
         )
@@ -292,7 +293,7 @@ class DisplayTopologyPreference(val injector: ConnectedDisplayInjector)
                 dispDragCoor.x + drag.displayWidth, dispDragCoor.y + drag.displayHeight)
         val snapRect = clampPosition(drag.stationaryDisps.map { it.second }, dispDragRect)
 
-        drag.display.place(topology.scaling.displayToPaneCoor(snapRect.left, snapRect.top))
+        drag.display.positionInPane = topology.scaling.displayToPaneCoor(snapRect.left, snapRect.top)
 
         return true
     }
@@ -303,18 +304,17 @@ class DisplayTopologyPreference(val injector: ConnectedDisplayInjector)
         mPaneContent.requestDisallowInterceptTouchEvent(false)
         drag.display.setHighlighted(false)
 
+        val dropTopLeft = drag.display.positionInPane
         val netPxDragged = Math.hypot(
-                (drag.initialBlockX - drag.display.x).toDouble(),
-                (drag.initialBlockY - drag.display.y).toDouble())
+                (drag.initialBlockX - dropTopLeft.x).toDouble(),
+                (drag.initialBlockY - dropTopLeft.y).toDouble())
         val timeDownMs = ev.eventTime - drag.startTimeMs
         if (netPxDragged < accidentalDragDistancePx && timeDownMs < accidentalDragTimeLimitMs) {
-            drag.display.x = drag.initialBlockX
-            drag.display.y = drag.initialBlockY
+            drag.display.positionInPane = PointF(drag.initialBlockX, drag.initialBlockY)
             return true
         }
 
-        val newCoor = topology.scaling.paneToDisplayCoor(
-                drag.display.x, drag.display.y)
+        val newCoor = topology.scaling.paneToDisplayCoor(dropTopLeft.x, dropTopLeft.y)
         val newTopology = topology.topology.copy()
         val newPositions = drag.stationaryDisps.map { (id, pos) -> id to PointF(pos.left, pos.top) }
                 .plus(drag.displayId to newCoor)
