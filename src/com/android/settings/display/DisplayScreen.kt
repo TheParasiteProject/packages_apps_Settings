@@ -30,6 +30,7 @@ import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.preferenceHierarchy
 import com.android.settingslib.preference.PreferenceScreenCreator
 import com.android.settingslib.widget.SettingsThemeHelper.isExpressiveTheme
+import com.android.systemui.shared.Flags.ambientAod
 
 @ProvidePreferenceScreen(DisplayScreen.KEY)
 open class DisplayScreen :
@@ -58,6 +59,9 @@ open class DisplayScreen :
             +BrightnessLevelPreference()
             +AutoBrightnessScreen.KEY
             +LockScreenPreferenceScreen.KEY
+            if (ambientAod()) {
+                +AmbientDisplayAlwaysOnPreferenceScreen.KEY
+            }
             +DarkModeScreen.KEY
             +PeakRefreshRateSwitchPreference()
         }
