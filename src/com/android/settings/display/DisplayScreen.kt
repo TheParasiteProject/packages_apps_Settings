@@ -20,6 +20,7 @@ import com.android.settings.DisplaySettings
 import com.android.settings.R
 import com.android.settings.Settings.DisplaySettingsActivity
 import com.android.settings.display.darkmode.DarkModeScreen
+import com.android.settings.dream.ScreensaverScreen
 import com.android.settings.flags.Flags
 import com.android.settings.security.LockScreenPreferenceScreen
 import com.android.settings.utils.makeLaunchIntent
@@ -63,6 +64,9 @@ open class DisplayScreen :
                 +AmbientDisplayAlwaysOnPreferenceScreen.KEY
             }
             +DarkModeScreen.KEY
+            if (Flags.catalystScreensaver()) {
+                +ScreensaverScreen.KEY
+            }
             +PeakRefreshRateSwitchPreference()
         }
 
