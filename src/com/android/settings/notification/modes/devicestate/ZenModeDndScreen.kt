@@ -16,7 +16,6 @@
 
 package com.android.settings.notification.modes.devicestate
 
-import android.annotation.FlaggedApi
 import android.app.Flags as AppFlags
 import android.content.Context
 import android.content.Intent
@@ -60,7 +59,6 @@ class ZenModeDndScreen :
     override fun getSummary(context: Context): CharSequence? =
         context.getZenModeScreenSummary(context.getDndMode())
 
-    @FlaggedApi(AppFlags.FLAG_MODES_UI)
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?): Intent? =
         if (AppFlags.modesUi())
             Intent(context, ModeSettingsActivity::class.java)
@@ -68,7 +66,10 @@ class ZenModeDndScreen :
         else null
 
     override fun getPreferenceHierarchy(context: Context) =
-        preferenceHierarchy(context, this) { +ZenModeButtonPreference(context.getDndMode()!!) }
+        preferenceHierarchy(context, this) {
+            +ZenModeButtonPreference(context.getDndMode()!!)
+            +ZenModeDndDisplayScreen.KEY
+        }
 
     companion object {
         const val KEY = "device_state_dnd_mode_screen" // only for device state.

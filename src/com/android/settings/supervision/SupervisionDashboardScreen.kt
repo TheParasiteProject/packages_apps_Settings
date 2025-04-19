@@ -18,6 +18,7 @@ package com.android.settings.supervision
 import android.app.supervision.flags.Flags
 import android.content.Context
 import com.android.settings.R
+import com.android.settings.supervision.ipc.SupervisionMessengerClient
 import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.preferenceHierarchy
 import com.android.settingslib.preference.PreferenceScreenCreator
@@ -56,12 +57,13 @@ class SupervisionDashboardScreen : PreferenceScreenCreator {
 
     override fun getPreferenceHierarchy(context: Context) =
         preferenceHierarchy(context, this) {
-            +SupervisionMainSwitchPreference(context)
-            +TitlelessPreferenceGroup(SUPERVISION_DYNAMIC_GROUP_1) += {
-                +SupervisionWebContentFiltersScreen.KEY
+            +SupervisionMainSwitchPreference(context, SupervisionMessengerClient(context)) order
+                -200
+            +TitlelessPreferenceGroup(SUPERVISION_DYNAMIC_GROUP_1) order -100 += {
+                +SupervisionWebContentFiltersScreen.KEY order 100
             }
-            +SupervisionPinManagementScreen.KEY
-            // TODO(b/399497788) Add SupervisionPromoFooterPreference with messenger service tests
+            +SupervisionPinManagementScreen.KEY order 100
+            +SupervisionPromoFooterPreference(SupervisionMessengerClient(context)) order 300
         }
 
     companion object {
