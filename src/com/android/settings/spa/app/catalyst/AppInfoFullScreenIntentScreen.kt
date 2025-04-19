@@ -103,7 +103,7 @@ class AppInfoFullScreenIntentScreen(context: Context, override val arguments: Bu
             }
         }
 
-        private fun ApplicationInfo.hasFullScreenPermission(context: Context): Boolean {
+        fun ApplicationInfo.hasFullScreenPermission(context: Context): Boolean {
             return try {
                 val packageInfo: PackageInfo =
                     context.packageManager.getPackageInfo(
