@@ -1087,6 +1087,18 @@
                        android:value="com.android.settings.localepicker.AppLocalePickerFragment"/>
         </activity>
 
+        <activity
+            android:name=".localepicker.AppLocalePickerActivity"
+            android:label="@string/app_locale_picker_title"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.settings.APP_LOCALE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".localepicker.NotificationActionActivity"
             android:excludeFromRecents="true"
             android:theme="@android:style/Theme.NoDisplay">
