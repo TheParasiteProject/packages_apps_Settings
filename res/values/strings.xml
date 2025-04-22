@@ -9594,6 +9594,9 @@ Data usage charges may apply.</string>
     <string name="notification_bundle_excluded_description">Notifications from these apps won\’t be bundled</string>
     <string name="notification_bundle_manage_excluded_apps_title">Allow notification bundling for apps</string>
 
+    <!-- Label for switch enabling notification adjustments (notification organizer, summaries) for work profile -->
+    <string name="notification_adjustment_work_switch_title">Apply to work profile apps</string>
+
     <!-- Title for managing VR (virtual reality) helper services. [CHAR LIMIT=50] -->
     <string name="vr_listeners_title">VR helper services</string>
 
