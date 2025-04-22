@@ -74,6 +74,7 @@ import android.view.WindowManager;
 import android.view.accessibility.AccessibilityManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImeAwareEditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -96,8 +97,11 @@ import com.android.settings.SetupWizardUtils;
 import com.android.settings.Utils;
 import com.android.settings.core.InstrumentedFragment;
 import com.android.settings.notification.RedactionInterstitial;
+import com.android.settings.widget.ImeAwareTextInputEditText;
 import com.android.settingslib.utils.StringUtil;
+import com.android.settingslib.widget.SettingsThemeHelper;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.android.setupcompat.template.FooterBarMixin;
 import com.google.android.setupcompat.template.FooterButton;
 import com.google.android.setupdesign.GlifLayout;
@@ -119,6 +123,8 @@ public class ChooseLockPassword extends SettingsActivity {
     public Intent getIntent() {
         Intent modIntent = new Intent(super.getIntent());
         modIntent.putExtra(EXTRA_SHOW_FRAGMENT, getFragmentClass().getName());
+        modIntent.putExtra(ChooseLockSettingsHelper.EXTRA_KEY_USE_EXPRESSIVE_STYLE,
+                SettingsThemeHelper.isExpressiveDesignEnabled());
         return modIntent;
     }
 
@@ -129,6 +135,8 @@ public class ChooseLockPassword extends SettingsActivity {
         public IntentBuilder(Context context) {
             mIntent = new Intent(context, ChooseLockPassword.class);
             mIntent.putExtra(ChooseLockGeneric.CONFIRM_CREDENTIALS, false);
+            mIntent.putExtra(ChooseLockSettingsHelper.EXTRA_KEY_USE_EXPRESSIVE_STYLE,
+                    SettingsThemeHelper.isExpressiveDesignEnabled());
         }
 
         /**
@@ -244,7 +252,8 @@ public class ChooseLockPassword extends SettingsActivity {
         private LockscreenCredential mChosenPassword;
         private boolean mRequestGatekeeperPassword;
         private boolean mRequestWriteRepairModePassword;
-        private ImeAwareEditText mPasswordEntry;
+
+        private EditText mPasswordEntry;
         private TextViewInputDisabler mPasswordEntryInputDisabler;
 
         // Minimum password metrics enforced by admins.
@@ -281,6 +290,7 @@ public class ChooseLockPassword extends SettingsActivity {
         private static final int CONFIRM_EXISTING_REQUEST = 58;
         static final int RESULT_FINISHED = RESULT_FIRST_USER;
         private boolean mIsErrorTooShort = true;
+        private boolean mIsExpressiveStyle = false;
 
         /** Used to store the profile type for which pin/password is being set */
         protected enum ProfileType {
@@ -499,6 +509,8 @@ public class ChooseLockPassword extends SettingsActivity {
             mForFace = intent.getBooleanExtra(ChooseLockSettingsHelper.EXTRA_KEY_FOR_FACE, false);
             mForBiometrics = intent.getBooleanExtra(
                     ChooseLockSettingsHelper.EXTRA_KEY_FOR_BIOMETRICS, false);
+            mIsExpressiveStyle = intent.getBooleanExtra(
+                    ChooseLockSettingsHelper.EXTRA_KEY_USE_EXPRESSIVE_STYLE, false);
 
             mPasswordType = intent.getIntExtra(
                     LockPatternUtils.PASSWORD_TYPE_KEY, PASSWORD_QUALITY_NUMERIC);
@@ -515,7 +527,9 @@ public class ChooseLockPassword extends SettingsActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.choose_lock_password, container, false);
+            return mIsExpressiveStyle
+                    ? inflater.inflate(R.layout.choose_lock_password_expressive, container, false)
+                    : inflater.inflate(R.layout.choose_lock_password, container, false);
         }
 
         @Override
@@ -563,6 +577,15 @@ public class ChooseLockPassword extends SettingsActivity {
 
             mPasswordRestrictionView.setLayoutManager(new LinearLayoutManager(getActivity()));
             mPasswordRestrictionView.setAccessibilityLiveRegion(ACCESSIBILITY_LIVE_REGION_POLITE);
+            final TextInputLayout passwordEntryLayout = view.findViewById(
+                    R.id.password_entry_layout);
+            if (mIsExpressiveStyle && passwordEntryLayout != null) {
+                final int textEntryLayoutHintId = mIsAlphaMode
+                        ? R.string.unlock_set_unlock_mode_password
+                        : R.string.unlock_set_unlock_mode_pin;
+                passwordEntryLayout.setHint(textEntryLayoutHintId);
+                passwordEntryLayout.setHintEnabled(true);
+            }
             mPasswordEntry = view.findViewById(R.id.password_entry);
             mPasswordEntry.setOnEditorActionListener(this);
             mPasswordEntry.addTextChangedListener(this);
@@ -720,7 +743,15 @@ public class ChooseLockPassword extends SettingsActivity {
                 mSaveAndFinishWorker.setListener(this);
             } else {
                 mPasswordEntry.requestFocus();
-                mPasswordEntry.scheduleShowSoftInput();
+                if (mPasswordEntry instanceof ImeAwareEditText) {
+                    ((ImeAwareEditText) mPasswordEntry).scheduleShowSoftInput();
+                } else if (mPasswordEntry instanceof ImeAwareTextInputEditText) {
+                    ((ImeAwareTextInputEditText) mPasswordEntry).scheduleShowSoftInput();
+                } else {
+                    Log.w(TAG,
+                            "mPasswordEntry neither ImeAwareEditText nor "
+                                    + "ImeAwareTextInputEditText");
+                }
             }
         }
 
