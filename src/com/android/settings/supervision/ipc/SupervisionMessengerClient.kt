@@ -35,10 +35,9 @@ import com.android.settingslib.supervision.SupervisionLog
 class SupervisionMessengerClient(context: Context) :
     MessengerServiceClient(context), PreferenceDataProvider {
 
-    override val serviceIntentFactory: () -> Intent
-        get() = { Intent(SUPERVISION_MESSENGER_SERVICE_BIND_ACTION) }
+    override val serviceIntentFactory = { Intent(SUPERVISION_MESSENGER_SERVICE_BIND_ACTION) }
 
-    private val supervisionPackageName: String? by lazy {
+    override val packageName: String? by lazy {
         SupervisionHelper.getInstance(context).getSupervisionPackageName()
     }
 
@@ -55,7 +54,7 @@ class SupervisionMessengerClient(context: Context) :
      */
     override suspend fun getPreferenceData(keys: List<String>): Map<String, PreferenceData> =
         try {
-            val targetPackageName = supervisionPackageName ?: return mapOf()
+            val targetPackageName = packageName ?: return mapOf()
 
             invoke(targetPackageName, PreferenceDataApi(), PreferenceDataRequest(keys = keys))
                 .await()
