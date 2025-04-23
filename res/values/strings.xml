@@ -2143,6 +2143,10 @@
     <!-- Title of item to let user know the bluetooth key is missing [CHAR LIMIT=NONE]-->
     <string name="device_details_key_missing_title">Try restarting <xliff:g id="device_name">%1$s</xliff:g>. If that doesn’t work, forget the device. For your security, only pair it again when you aren’t in a public space.\n\nIf this device isn’t nearby, you don’t need to do anything.</string>
 
+    <!-- Title for a toggle that enables additional logs for printing [CHAR LIMIT=NONE]-->
+    <string name="verbose_printer_logging_title">Verbose print logging</string>
+    <!-- Summary for a toggle that enables additional logs for printing [CHAR LIMIT=NONE]-->
+    <string name="verbose_printer_logging_summary">Additional debug logs, including Internet Printing Protocol (IPP) that may contain private information.</string>
 
     <!--  Bluetooth device details. In the confirmation dialog for unpairing a paired device, this is the label on the button that will complete the unpairing action. -->
     <string name="bluetooth_unpair_dialog_forget_confirm_button">Forget device</string>
