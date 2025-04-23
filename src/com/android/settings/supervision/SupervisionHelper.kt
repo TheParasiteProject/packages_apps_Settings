@@ -30,17 +30,8 @@ open class SupervisionHelper private constructor(context: Context) {
     private val mUserManager = context.getSystemService(UserManager::class.java)
     private val mKeyguardManager = context.getSystemService(KeyguardManager::class.java)
 
-    fun getSupervisingUserHandle(): UserHandle? {
-        for (user in (mUserManager?.users ?: emptyList())) {
-            if (user.userType.equals(USER_TYPE_PROFILE_SUPERVISING)) {
-                return user.userHandle
-            }
-        }
-        return null
-    }
-
     fun isSupervisingCredentialSet(): Boolean {
-        val supervisingUserId = getSupervisingUserHandle()?.identifier ?: return false
+        val supervisingUserId = mUserManager.supervisingUserHandle?.identifier ?: return false
         return mKeyguardManager?.isDeviceSecure(supervisingUserId) == true
     }
 
@@ -55,6 +46,12 @@ open class SupervisionHelper private constructor(context: Context) {
         }
     }
 }
+
+val Context.supervisingUserHandle: UserHandle?
+    get() = getSystemService(UserManager::class.java).supervisingUserHandle
+
+val UserManager?.supervisingUserHandle: UserHandle?
+    get() = this?.users?.firstOrNull { it.userType == USER_TYPE_PROFILE_SUPERVISING }?.userHandle
 
 /** Returns the package name of the system supervision app, or null if not found. */
 val Context.supervisionPackageName: String?
