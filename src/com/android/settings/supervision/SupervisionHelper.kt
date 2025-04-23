@@ -22,30 +22,14 @@ import android.os.UserHandle
 import android.os.UserManager
 import android.os.UserManager.USER_TYPE_PROFILE_SUPERVISING
 import android.util.Log
-import androidx.annotation.VisibleForTesting
 import com.android.settingslib.supervision.SupervisionLog.TAG
 
-/** Convenience methods for interacting with the supervising user profile. */
-open class SupervisionHelper private constructor(context: Context) {
-    private val mUserManager = context.getSystemService(UserManager::class.java)
-    private val mKeyguardManager = context.getSystemService(KeyguardManager::class.java)
-
-    fun isSupervisingCredentialSet(): Boolean {
-        val supervisingUserId = mUserManager.supervisingUserHandle?.identifier ?: return false
-        return mKeyguardManager?.isDeviceSecure(supervisingUserId) == true
+val Context.isSupervisingCredentialSet: Boolean
+    get() {
+        val supervisingUserId = supervisingUserHandle?.identifier ?: return false
+        return getSystemService(KeyguardManager::class.java)?.isDeviceSecure(supervisingUserId) ==
+            true
     }
-
-    companion object {
-        @Volatile @VisibleForTesting var sInstance: SupervisionHelper? = null
-
-        fun getInstance(context: Context): SupervisionHelper {
-            return sInstance
-                ?: synchronized(this) {
-                    sInstance ?: SupervisionHelper(context).also { sInstance = it }
-                }
-        }
-    }
-}
 
 val Context.supervisingUserHandle: UserHandle?
     get() = getSystemService(UserManager::class.java).supervisingUserHandle
