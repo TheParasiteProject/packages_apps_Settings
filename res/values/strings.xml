@@ -76,16 +76,15 @@
     <!-- Used for diagnostic info screens, precise translation isn't needed -->
     <string name="radioInfo_unknown">Unknown</string>
 
-    <!-- Content description for preview pager. [CHAR LIMIT=NONE] -->
-    <string name="preview_pager_content_description">Preview</string>
-    <!-- Content description for home screen preview. [CHAR LIMIT=NONE] -->
-    <string name="preview_pager_home_content_description">Home screen preview</string>
-    <!-- Content description for message preview. [CHAR LIMIT=NONE] -->
-    <string name="preview_pager_message_content_description">Message preview</string>
-    <!-- Content description for email preview. [CHAR LIMIT=NONE] -->
-    <string name="preview_pager_email_content_description">Email preview</string>
     <!-- Content description for qrcode image. [CHAR LIMIT=none]-->
     <string name="qr_code_content_description">QR code</string>
+
+    <!-- Title for the accessibility Display size and text preview page showing the home screen (app grid) preview. [CHAR LIMIT=40] -->
+    <string name="preview_pager_home_title">Home screen</string>
+    <!-- Title for the accessibility Display size and text preview page showing the text message preview. [CHAR LIMIT=40] -->
+    <string name="preview_pager_message_title">Message</string>
+    <!-- Title for the accessibility Display size and text preview page showing the email preview. [CHAR LIMIT=40] -->
+    <string name="preview_pager_email_title">Email</string>
     <!-- Previous button for preview pager. [CHAR LIMIT=NONE] -->
     <string name="preview_pager_previous_button">Previous preview</string>
     <!-- Next button for preview pager. [CHAR LIMIT=NONE] -->
@@ -3361,6 +3360,10 @@
     <string name="title_font_size">Font size</string>
     <!-- Summary for Font size. Lets the user know that this will make text larger or smaller. Appears in the accessibility portion of setup wizard. [CHAR LIMIT=NONE] -->
     <string name="short_summary_font_size">Make text bigger or smaller</string>
+    <!-- [CHAR LIMIT=NONE] Title for the group of settings that change the system display size and font size. -->
+    <string name="category_title_display_text_size">Size options</string>
+    <!-- [CHAR LIMIT=NONE] Title for the group of font settings that apply different font styles. -->
+    <string name="category_title_text_style">Style options</string>
 
     <!-- SIM lock settings title  [CHAR LIMIT=40] -->
     <string name="sim_lock_settings">SIM lock settings</string>
