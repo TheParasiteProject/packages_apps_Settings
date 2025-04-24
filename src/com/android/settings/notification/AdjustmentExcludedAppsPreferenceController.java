@@ -157,6 +157,7 @@ public class AdjustmentExcludedAppsPreferenceController extends BasePreferenceCo
                     pref.setKey(key);
                     pref.setTitle(BidiFormatter.getInstance().unicodeWrap(app.label));
                     updateIcon(pref, app);
+                    pref.setSelectable(false);
                     mPreferenceCategory.addPreference(pref);
                 }
             } else if (!doesAppPassCriteria) {
