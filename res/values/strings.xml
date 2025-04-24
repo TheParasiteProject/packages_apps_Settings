@@ -11683,6 +11683,30 @@ Data usage charges may apply.</string>
     <!-- Summary text for swipe up to switch apps  [CHAR LIMIT=250] -->
     <string name="swipe_up_to_switch_apps_summary">To switch apps, swipe up on the Home button. To see all apps, swipe up again. To go back, tap the back button.</string>
 
+    <!-- Title text for system panels showing notifications and quick settings [CHAR LIMIT=60] -->
+    <string name="shade_panels_title">Notifications &amp; Quick Settings</string>
+
+    <!-- Search keywords for system panels settings. [CHAR_LIMIT=NONE]-->
+    <string name="keywords_shade_panels">shade, panels, notifications, quick settings, qs, separate, combined, dual, single</string>
+
+    <!-- Category for system panels showing notifications and Quick Settings. [CHAR LIMIT=NONE]-->
+    <string name="shade_panels_category">Panels</string>
+
+    <!-- Title text for the separate panels mode. In this mode, notifications and Quick Settings are shown in separate panels, each opened by swiping down on a different side of the top edge of the screen. [CHAR_LIMIT=60] -->
+    <string name="shade_panels_separate_title">Separate</string>
+
+    <!-- Summary text for the separate panels mode. In this mode, notifications and Quick Settings are shown in separate panels, each opened by swiping down on a different side of the top edge of the screen. [CHAR_LIMIT=250] -->
+    <string name="shade_panels_separate_summary">Swipe down from the top right to open Quick Settings. Swipe down from the top left to open notifications.</string>
+
+    <!-- Title text for the combined panels mode. In this mode, notifications and Quick Settings are shown a single panel, opened by swiping down from the top edge of the screen. In the past this used to be the only mode, so it is also referred to as "classic" mode. [CHAR_LIMIT=60] -->
+    <string name="shade_panels_combined_title">Combined (classic)</string>
+
+    <!-- Summary text for the combined panels mode. In this mode, notifications and Quick Settings are shown a single panel, opened by swiping down from the top edge of the screen. In the past this used to be the only mode, so it is also referred to as "classic" mode. [CHAR_LIMIT=NONE] -->
+    <string name="shade_panels_combined_summary">Swipe down from the top of your screen to access the classic panel that combines notifications and Quick Settings.</string>
+
+    <!-- Informational message shown to users of foldable devices, explaining that the combined shade view is only available on the outer (narrow) screen of their device. [CHAR LIMIT=200]-->
+    <string name="shade_panels_foldables_footer_message">Combined (classic) view is limited to the outer screen of your foldable device</string>
+
     <!-- Preference title for "Safety & emergency" settings page [CHAR LIMIT=60]-->
     <string name="emergency_settings_preference_title">Safety &amp; emergency</string>
 
