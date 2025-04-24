@@ -109,6 +109,12 @@ class DisplayTopologyPreference(val injector: ConnectedDisplayInjector)
 
     override fun onDetached() {
         super.onDetached()
+
+        // No longer need to reveal wallpapers since the blocks are not visible; these will be
+        // revealed again upon invocation of refreshPane.
+        mRevealedWallpapers.forEach { it.viewManager.removeView(it.revealer) }
+        mRevealedWallpapers = listOf()
+
         injector.unregisterTopologyListener(mTopologyListener)
     }
 
@@ -126,6 +132,8 @@ class DisplayTopologyPreference(val injector: ConnectedDisplayInjector)
     private data class TopologyInfo(
             val topology: DisplayTopology, val scaling: TopologyScale,
             val positions: List<Pair<Int, RectF>>)
+
+    private var mRevealedWallpapers: List<RevealedWallpaper> = emptyList()
 
     /**
      * Holds information about the current drag operation. The initial rawX, rawY values of the
@@ -242,6 +250,22 @@ class DisplayTopologyPreference(val injector: ConnectedDisplayInjector)
         mTimesRefreshedBlocks++
 
         mTopologyInfo = TopologyInfo(topology, scaling, newBounds)
+
+        // Construct a map containing revealers that we want to keep (keepRevealing). Then create a
+        // list comprised of the values of that map as well as new revealers (mRevealedWallpapers).
+        val keepRevealing = buildMap<Int, RevealedWallpaper> {
+            mRevealedWallpapers.forEach { r ->
+                if (idToNode.containsKey(r.displayId)) {
+                    put(r.displayId, r)
+                } else {
+                    r.viewManager.removeView(r.revealer)
+                }
+            }
+        }
+        mRevealedWallpapers = idToNode.keys
+            .map { keepRevealing.get(it) ?: injector.revealWallpaper(it) }
+            .filterNotNull()
+            .toList()
 
         // Cancel the drag if one is in progress.
         mDrag = null
