@@ -35,8 +35,7 @@ class SupervisionChangePinPreference : PreferenceMetadata {
         get() = R.string.supervision_change_pin_preference_title
 
     override fun intent(context: Context): Intent? {
-        val supervisionHelper = SupervisionHelper.getInstance(context)
-        if (!supervisionHelper.isSupervisingCredentialSet()) {
+        if (!context.isSupervisingCredentialSet) {
             Log.w(SupervisionLog.TAG, "Supervising credential not set")
             return null
         }
