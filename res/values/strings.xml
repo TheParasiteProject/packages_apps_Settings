@@ -719,6 +719,8 @@
     <string name="date_time_set_timezone_title">Time zone</string>
     <!-- Date & time setting screen setting option title -->
     <string name="date_time_set_timezone">Select time zone</string>
+    <!-- Text hint to search time zone in time zone setting screen -->
+    <string name="date_time_search_time_zone">Search time zone</string>
     <!-- Date & time setting screen setting option title [CHAR LIMIT=30] -->
     <string name="date_time_set_date_title">Date</string>
     <!-- Text hint to search region in time zone setting screen -->
@@ -726,7 +728,7 @@
     <!-- Setting option title to select region in time zone setting screen [CHAR LIMIT=30] -->
     <string name="date_time_select_region">Region</string>
     <!-- Setting option title in time zone setting screen [CHAR LIMIT=30] -->
-    <string name="date_time_select_fixed_offset_time_zones">Select UTC offset</string>
+    <string name="date_time_select_fixed_offset_time_zones">GMT offset</string>
     <!-- Label describing a exemplar location and time zone offset[CHAR LIMIT=NONE] -->
     <string name="zone_info_exemplar_location_and_offset"><xliff:g id="exemplar_location" example="Los Angeles">%1$s</xliff:g> (<xliff:g id="offset" example="GMT-08:00">%2$s</xliff:g>)</string>
     <!-- Label describing a time zone offset and name[CHAR LIMIT=NONE] -->
@@ -744,7 +746,7 @@
     <!-- The menu item to switch to selecting a time zone by region (default) [CHAR LIMIT=30] -->
     <string name="zone_menu_by_region">Select by region</string>
     <!-- The menu item to switch to selecting a time zone with a fixed offset (such as UTC or GMT+0200) [CHAR LIMIT=30] -->
-    <string name="zone_menu_by_offset">Select by UTC offset</string>
+    <string name="zone_menu_by_offset">Select by GMT offset</string>
 
     <!-- The settings category title containing the feedback button [CHAR LIMIT=30] -->
     <string name="time_feedback_category_title">Feedback</string>
