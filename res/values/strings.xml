@@ -7009,6 +7009,12 @@ Data usage charges may apply.</string>
     <string name="cellular_security_notifications_controller_title">Network notifications</string>
     <!-- Summary of Cellular security notifications toggle [CHAR LIMIT=NONE]-->
     <string name="cellular_security_notifications_controller_summary">Get notified when your device connects to an unencrypted network, or when a network records your unique device or SIM ID</string>
+    <!-- Header of Cellular security page 2G network protection [CHAR LIMIT=NONE]-->
+    <string name="cellular_security_2G_network_generation_header">Network generation</string>
+    <!-- Summary of Cellular security page 2G network protection [CHAR LIMIT=NONE]-->
+    <string name="cellular_security_2G_network_generation_summary">2G network protection avoids 2G networks, which are less secure. This may limit connectivity in some places. Emergency calling is always allowed.</string>
+    <!-- Title of Cellular security page 2G network protection [CHAR LIMIT=NONE]-->
+    <string name="cellular_security_2G_network_generation_title">2G network protection</string>
 
     <!--Cellular encryption -->
     <!--Cellular encryption title [CHAR LIMIT=60] -->
