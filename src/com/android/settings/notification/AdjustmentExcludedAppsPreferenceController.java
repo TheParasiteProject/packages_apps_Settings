@@ -139,7 +139,7 @@ public class AdjustmentExcludedAppsPreferenceController extends BasePreferenceCo
             return;
         }
 
-        List<String> excludedApps = List.of(mBackend.getAdjustmentDeniedPackages(mAdjustmentKey));
+        List<String> excludedApps = mBackend.getAdjustmentDeniedPackages(mAdjustmentKey);
 
         for (ApplicationsState.AppEntry app : apps) {
             String pkg = app.info.packageName;
