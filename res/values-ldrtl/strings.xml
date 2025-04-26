@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2023 The Android Open Source Project
+<!-- Copyright (C) 2025 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,9 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <item name="a11y_magnification_banner" type="raw" product="default">@raw/accessibility_magnification_banner</item>
-    <item name="a11y_extra_dim_banner" type="raw" product="default">@raw/extra_dim_banner</item>
-    <item name="a11y_extra_dim_banner" type="raw" product="tablet">@raw/extra_dim_banner_tablet</item>
+    <!-- Summary text for the separate panels mode. In this mode, notifications and Quick Settings are shown in separate panels, each opened by swiping down on a different side of the top edge of the screen. [CHAR_LIMIT=250] -->
+    <string name="shade_panels_separate_summary">Swipe down from the top left to open Quick Settings. Swipe down from the top right to open notifications.</string>
 </resources>

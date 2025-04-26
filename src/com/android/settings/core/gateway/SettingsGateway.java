@@ -158,11 +158,11 @@ import com.android.settings.network.telephony.NetworkSelectSettings;
 import com.android.settings.network.telephony.satellite.SatelliteSetting;
 import com.android.settings.network.tether.TetherSettings;
 import com.android.settings.nfc.PaymentSettings;
+import com.android.settings.notification.BundlePreferenceFragment;
 import com.android.settings.notification.ConfigureNotificationSettings;
 import com.android.settings.notification.LockScreenNotificationsPreferencePageFragment;
 import com.android.settings.notification.NotificationAccessSettings;
 import com.android.settings.notification.NotificationAssistantPicker;
-import com.android.settings.notification.BundlePreferenceFragment;
 import com.android.settings.notification.PoliteNotificationsPreferenceFragment;
 import com.android.settings.notification.SoundSettings;
 import com.android.settings.notification.app.AppBubbleNotificationSettings;
@@ -202,8 +202,10 @@ import com.android.settings.security.SecurityAdvancedSettings;
 import com.android.settings.security.SecuritySettings;
 import com.android.settings.shortcut.CreateShortcut;
 import com.android.settings.sound.MediaControlsSettings;
+import com.android.settings.supervision.SupervisionDashboardFragment;
 import com.android.settings.support.SupportDashboardActivity;
 import com.android.settings.system.ResetDashboardFragment;
+import com.android.settings.system.ShadePanelsFragment;
 import com.android.settings.system.SystemDashboardFragment;
 import com.android.settings.tts.TextToSpeechSettings;
 import com.android.settings.users.UserSettings;
@@ -305,6 +307,7 @@ public class SettingsGateway {
             PickupGestureSettings.class.getName(),
             DoubleTwistGestureSettings.class.getName(),
             SystemNavigationGestureSettings.class.getName(),
+            ShadePanelsFragment.class.getName(),
             DataUsageSummary.class.getName(),
             DreamSettings.class.getName(),
             CommunalDashboardFragment.class.getName(),
@@ -430,6 +433,7 @@ public class SettingsGateway {
             BundlePreferenceFragment.class.getName(),
             SystemLocalePickerFragment.class.getName(),
             AppLocalePickerFragment.class.getName(),
+            SupervisionDashboardFragment.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -476,5 +480,6 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.MemtagPageActivity.class.getName(),
             Settings.NavigationModeSettingsActivity.class.getName(),
+            Settings.ShadeSettingsActivity.class.getName(),
     };
 }

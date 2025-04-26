@@ -36,8 +36,7 @@ class SupervisionPinManagementScreen :
     override val key: String
         get() = KEY
 
-    override fun isAvailable(context: Context) =
-        SupervisionHelper.getInstance(context).isSupervisingCredentialSet()
+    override fun isAvailable(context: Context) = context.isSupervisingCredentialSet
 
     override val title: Int
         get() = R.string.supervision_pin_management_preference_title
@@ -83,7 +82,7 @@ class SupervisionPinManagementScreen :
 
     override fun getPreferenceHierarchy(context: Context) =
         preferenceHierarchy(context, this) {
-            +SupervisionAddRecoveryPreference()
+            +SupervisionSetupRecoveryPreference()
             +TitlelessPreferenceGroup(GROUP_KEY) += {
                 +SupervisionPinRecoveryPreference()
                 // TODO(b/391992481) implement the screen.

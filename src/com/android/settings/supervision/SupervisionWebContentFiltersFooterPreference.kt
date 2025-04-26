@@ -13,12 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.android.settings.supervision
 
-package com.android.settings.accessibility.notification;
+import com.android.settings.widget.FooterPreferenceMetadata
 
-public class NotificationConstants {
-    public static final String EXTRA_SOURCE = "source";
-    public static final String SOURCE_START_SURVEY = "startSurvey";
-    public static final String EXTRA_PAGE_ID = "pageId";
-    public static final String EXTRA_DISMISS_NOTIFICATION = "dismissNotification";
+class SupervisionWebContentFiltersFooterPreference : FooterPreferenceMetadata {
+    override val key: String
+        get() = KEY
+
+    // TODO(b/411104868): Add learn more link once help article link is retrieved.
+
+    companion object {
+        const val KEY = "web_content_filters_footer"
+    }
 }

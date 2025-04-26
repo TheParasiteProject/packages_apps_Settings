@@ -35,17 +35,15 @@ import com.android.settingslib.supervision.SupervisionLog
 class SupervisionPinRecoveryActivity : FragmentActivity() {
     // ActivityResultLaunchers
     private val contract = ActivityResultContracts.StartActivityForResult()
-    private val confirmPinLauncher: ActivityResultLauncher<Intent> by lazy {
+    private val confirmPinLauncher: ActivityResultLauncher<Intent> =
         registerForActivityResult(contract) { result -> onPinConfirmed(result.resultCode) }
-    }
-    private val verificationLauncher: ActivityResultLauncher<Intent> by lazy {
+
+    private val verificationLauncher: ActivityResultLauncher<Intent> =
         registerForActivityResult(contract) { result ->
             onVerification(result.resultCode, result.data)
         }
-    }
-    private val setPinLauncher: ActivityResultLauncher<Intent> by lazy {
+    private val setPinLauncher: ActivityResultLauncher<Intent> =
         registerForActivityResult(contract) { result -> onPinSet(result.resultCode) }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -142,7 +140,15 @@ class SupervisionPinRecoveryActivity : FragmentActivity() {
                             SupervisionIntentProvider.PinRecoveryAction.POST_SETUP_VERIFY,
                         )
                     if (postSetupVerifyIntent != null) {
-                        verificationLauncher.launch(postSetupVerifyIntent)
+                        val supervisionManager =
+                            applicationContext.getSystemService(SupervisionManager::class.java)
+                        val recoveryInfo = supervisionManager?.getSupervisionRecoveryInfo()
+                        postSetupVerifyIntent.apply {
+                            // TODO(b/409805806): will expose the parcelable as system API and pass
+                            // it instead.
+                            recoveryInfo?.email?.let { putExtra(EXTRA_RECOVERY_EMAIL, it) }
+                            verificationLauncher.launch(postSetupVerifyIntent)
+                        }
                     } else {
                         handleError("No activity found for post setup PIN recovery verify.")
                     }
