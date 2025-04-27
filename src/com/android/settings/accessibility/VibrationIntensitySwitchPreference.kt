@@ -20,7 +20,7 @@ import android.os.VibrationAttributes.Usage
 import androidx.annotation.CallSuper
 import androidx.annotation.StringRes
 import androidx.preference.Preference
-import androidx.preference.Preference.OnPreferenceChangeListener
+import androidx.preference.TwoStatePreference
 import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.SwitchPreference
@@ -44,9 +44,10 @@ open class VibrationIntensitySwitchPreference(
     @Usage val vibrationUsage: Int,
     @StringRes title: Int = 0,
     @StringRes summary: Int = 0,
-) : SwitchPreference(key, title, summary),
-    OnPreferenceChangeListener,
-    SwitchPreferenceBinding {
+) :
+    SwitchPreference(key, title, summary),
+    SwitchPreferenceBinding,
+    Preference.OnPreferenceChangeListener {
 
     private var storage: VibrationIntensitySettingsStore? = null
 
@@ -66,13 +67,15 @@ open class VibrationIntensitySwitchPreference(
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        if (newValue as Boolean) {
+        val isChecked = newValue as Boolean
+        // must make new value effective before preview
+        (preference as TwoStatePreference).setChecked(isChecked)
+        if (isChecked) {
             preference.context.playVibrationSettingsPreview(vibrationUsage)
         }
-        return true
+        return false // value has been updated
     }
 
-    @CallSuper
-    override fun isEnabled(context: Context) = storage?.isPreferenceEnabled() ?: true
+    @CallSuper override fun isEnabled(context: Context) = storage?.isPreferenceEnabled() != false
 }
 // LINT.ThenChange(VibrationTogglePreferenceController.java)

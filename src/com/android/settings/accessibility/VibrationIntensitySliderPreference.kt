@@ -65,7 +65,6 @@ open class VibrationIntensitySliderPreference(
         return storage!!
     }
 
-
     override fun dependencies(context: Context) = arrayOf(VibrationMainSwitchPreference.KEY)
 
     @CallSuper
@@ -80,13 +79,15 @@ open class VibrationIntensitySliderPreference(
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        if (newValue as Int != Vibrator.VIBRATION_INTENSITY_OFF) {
+        val intensity = newValue as Int
+        // must make new value effective before preview
+        (preference as SliderPreference).value = intensity
+        if (intensity != Vibrator.VIBRATION_INTENSITY_OFF) {
             preference.context.playVibrationSettingsPreview(vibrationUsage)
         }
-        return true
+        return false // value has been updated
     }
 
-    @CallSuper
-    override fun isEnabled(context: Context) = storage?.isPreferenceEnabled() ?: true
+    @CallSuper override fun isEnabled(context: Context) = storage?.isPreferenceEnabled() != false
 }
 // LINT.ThenChange(VibrationIntensityPreferenceController.java)

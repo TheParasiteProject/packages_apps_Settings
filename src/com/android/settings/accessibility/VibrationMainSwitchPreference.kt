@@ -22,6 +22,7 @@ import android.os.VibrationAttributes.Usage
 import android.os.Vibrator
 import android.provider.Settings
 import androidx.preference.Preference
+import androidx.preference.TwoStatePreference
 import com.android.settings.R
 import com.android.settings.contract.KEY_VIBRATION_HAPTICS
 import com.android.settings.metrics.PreferenceActionMetricsProvider
@@ -77,11 +78,14 @@ class VibrationMainSwitchPreference :
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        if (newValue as Boolean) {
+        val isChecked = newValue as Boolean
+        // must make new value effective before preview
+        (preference as TwoStatePreference).setChecked(isChecked)
+        if (isChecked) {
             // Play a haptic as preview for the main toggle only when touch feedback is enabled.
             preference.context.playVibrationSettingsPreview(VibrationAttributes.USAGE_TOUCH)
         }
-        return true
+        return false // value has been updated
     }
 
     companion object {
