@@ -18,7 +18,6 @@ package com.android.settings.accessibility
 import android.content.Context
 import android.os.VibrationAttributes.Usage
 import android.os.Vibrator
-import android.provider.Settings
 import com.android.settings.R
 import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.datastore.KeyValueStoreDelegate
@@ -36,7 +35,7 @@ class VibrationIntensitySettingsStore(
 
     /** Returns true if the settings key should be enabled, false otherwise. */
     fun isPreferenceEnabled() =
-        keyValueStoreDelegate.getBoolean(Settings.System.VIBRATE_ON) ?: true
+        keyValueStoreDelegate.getBoolean(VibrationMainSwitchPreference.KEY) != false // default true
 
     override fun <T : Any> getDefaultValue(key: String, valueType: Class<T>) =
         intensityToValue(valueType, defaultIntensity)
@@ -53,20 +52,20 @@ class VibrationIntensitySettingsStore(
         keyValueStoreDelegate.setInt(key, value?.let { valueToIntensity(valueType, it) })
 
     @Suppress("UNCHECKED_CAST")
-    private fun <T: Any> intensityToValue(valueType: Class<T>, intensity: Int): T? =
+    private fun <T : Any> intensityToValue(valueType: Class<T>, intensity: Int): T? =
         when (valueType) {
             Boolean::class.javaObjectType -> intensityToBooleanValue(intensity)
             Int::class.javaObjectType -> intensityToIntValue(intensity)
             else -> null
-        } as T?
+        }
+            as T?
 
     private fun intensityToBooleanValue(intensity: Int): Boolean? =
         intensity != Vibrator.VIBRATION_INTENSITY_OFF
 
-    private fun intensityToIntValue(intensity: Int): Int? =
-        min(intensity, supportedIntensityLevels)
+    private fun intensityToIntValue(intensity: Int): Int? = min(intensity, supportedIntensityLevels)
 
-    private fun <T: Any> valueToIntensity(valueType: Class<T>, value: T): Int? =
+    private fun <T : Any> valueToIntensity(valueType: Class<T>, value: T): Int? =
         when (valueType) {
             Boolean::class.javaObjectType -> booleanValueToIntensity(value as Boolean)
             Int::class.javaObjectType -> intValueToIntensity(value as Int)

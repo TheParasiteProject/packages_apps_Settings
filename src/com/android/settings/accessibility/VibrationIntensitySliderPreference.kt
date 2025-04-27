@@ -43,13 +43,14 @@ import kotlin.math.min
  */
 // LINT.IfChange
 open class VibrationIntensitySliderPreference(
+    context: Context,
     override val key: String,
     @Usage val vibrationUsage: Int,
     @StringRes override val title: Int = 0,
     @StringRes override val summary: Int = 0,
 ) : IntRangeValuePreference, SliderPreferenceBinding, OnPreferenceChangeListener {
 
-    private var storage: VibrationIntensitySettingsStore? = null
+    private val storage by lazy { VibrationIntensitySettingsStore(context, vibrationUsage) }
 
     override fun getMinValue(context: Context) = Vibrator.VIBRATION_INTENSITY_OFF
 
@@ -58,12 +59,7 @@ open class VibrationIntensitySliderPreference(
 
     override fun getIncrementStep(context: Context) = 1
 
-    override fun storage(context: Context): KeyValueStore {
-        if (storage == null) {
-            storage = VibrationIntensitySettingsStore(context, vibrationUsage)
-        }
-        return storage!!
-    }
+    override fun storage(context: Context): KeyValueStore = storage
 
     override fun dependencies(context: Context) = arrayOf(VibrationMainSwitchPreference.KEY)
 
@@ -88,6 +84,6 @@ open class VibrationIntensitySliderPreference(
         return false // value has been updated
     }
 
-    @CallSuper override fun isEnabled(context: Context) = storage?.isPreferenceEnabled() != false
+    @CallSuper override fun isEnabled(context: Context) = storage.isPreferenceEnabled()
 }
 // LINT.ThenChange(VibrationIntensityPreferenceController.java)
