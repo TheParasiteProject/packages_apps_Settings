@@ -27,8 +27,8 @@ import kotlin.math.min
 
 /** SettingsStore for vibration intensity preferences with custom default value. */
 class VibrationIntensitySettingsStore(
-    private val context: Context,
-    @Usage private val vibrationUsage: Int,
+    context: Context,
+    @Usage vibrationUsage: Int,
     override val keyValueStoreDelegate: KeyValueStore = SettingsSystemStore.get(context),
     private val defaultIntensity: Int = context.getDefaultVibrationIntensity(vibrationUsage),
     private val supportedIntensityLevels: Int = context.getSupportedVibrationIntensityLevels(),
@@ -49,17 +49,8 @@ class VibrationIntensitySettingsStore(
             intensityToValue(valueType, Vibrator.VIBRATION_INTENSITY_OFF)
         }
 
-    override fun <T : Any> setValue(key: String, valueType: Class<T>, value: T?) {
-        val intensityValue: Int? = value?.let { nonNullValue ->
-            valueToIntensity(valueType, nonNullValue)
-        }
-        keyValueStoreDelegate.setInt(key, intensityValue)
-        if (isPreferenceEnabled() &&
-                intensityValue != null &&
-                intensityValue != Vibrator.VIBRATION_INTENSITY_OFF) {
-            context.playVibrationSettingsPreview(vibrationUsage)
-        }
-    }
+    override fun <T : Any> setValue(key: String, valueType: Class<T>, value: T?) =
+        keyValueStoreDelegate.setInt(key, value?.let { valueToIntensity(valueType, it) })
 
     @Suppress("UNCHECKED_CAST")
     private fun <T: Any> intensityToValue(valueType: Class<T>, intensity: Int): T? =

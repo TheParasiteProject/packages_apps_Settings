@@ -20,6 +20,7 @@ import android.os.VibrationAttributes.Usage
 import androidx.annotation.CallSuper
 import androidx.annotation.StringRes
 import androidx.preference.Preference
+import androidx.preference.Preference.OnPreferenceChangeListener
 import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.SwitchPreference
@@ -44,6 +45,7 @@ open class VibrationIntensitySwitchPreference(
     @StringRes title: Int = 0,
     @StringRes summary: Int = 0,
 ) : SwitchPreference(key, title, summary),
+    OnPreferenceChangeListener,
     SwitchPreferenceBinding {
 
     private var storage: VibrationIntensitySettingsStore? = null
@@ -56,6 +58,19 @@ open class VibrationIntensitySwitchPreference(
     }
 
     override fun dependencies(context: Context) = arrayOf(VibrationMainSwitchPreference.KEY)
+
+    @CallSuper
+    override fun bind(preference: Preference, metadata: PreferenceMetadata) {
+        super.bind(preference, metadata)
+        preference.onPreferenceChangeListener = this
+    }
+
+    override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
+        if (newValue as Boolean) {
+            preference.context.playVibrationSettingsPreview(vibrationUsage)
+        }
+        return true
+    }
 
     @CallSuper
     override fun isEnabled(context: Context) = storage?.isPreferenceEnabled() ?: true
