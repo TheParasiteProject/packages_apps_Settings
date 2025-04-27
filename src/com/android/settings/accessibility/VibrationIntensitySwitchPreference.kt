@@ -40,6 +40,7 @@ import com.android.settingslib.preference.SwitchPreferenceBinding
  */
 // LINT.IfChange
 open class VibrationIntensitySwitchPreference(
+    context: Context,
     key: String,
     @Usage val vibrationUsage: Int,
     @StringRes title: Int = 0,
@@ -49,15 +50,9 @@ open class VibrationIntensitySwitchPreference(
     SwitchPreferenceBinding,
     Preference.OnPreferenceChangeListener {
 
-    private var storage: VibrationIntensitySettingsStore? = null
+    private val storage by lazy { VibrationIntensitySettingsStore(context, vibrationUsage) }
 
-    override fun storage(context: Context): KeyValueStore {
-        if (storage == null) {
-            storage = VibrationIntensitySettingsStore(context, vibrationUsage)
-        }
-        return storage!!
-    }
-
+    override fun storage(context: Context): KeyValueStore =storage
     override fun dependencies(context: Context) = arrayOf(VibrationMainSwitchPreference.KEY)
 
     @CallSuper
@@ -76,6 +71,6 @@ open class VibrationIntensitySwitchPreference(
         return false // value has been updated
     }
 
-    @CallSuper override fun isEnabled(context: Context) = storage?.isPreferenceEnabled() != false
+    @CallSuper override fun isEnabled(context: Context) = storage.isPreferenceEnabled()
 }
 // LINT.ThenChange(VibrationTogglePreferenceController.java)

@@ -44,7 +44,7 @@ class VibrationIntensityScreen : PreferenceScreenCreator, PreferenceAvailability
         get() = R.string.keywords_vibration
 
     override fun isAvailable(context: Context) =
-        context.isVibratorAvailable() && context.getSupportedVibrationIntensityLevels() > 1
+        context.hasVibrator && context.getSupportedVibrationIntensityLevels() > 1
 
     override fun isFlagEnabled(context: Context): Boolean = Flags.catalystVibrationIntensityScreen()
 
