@@ -1591,8 +1591,7 @@ public final class Utils extends com.android.settingslib.Utils {
             Log.e(TAG, "Biometric Manager is null.");
             return BiometricStatus.NOT_ACTIVE;
         }
-        if (android.hardware.biometrics.Flags.mandatoryBiometrics()
-                && !biometricsAuthenticationRequested) {
+        if (!biometricsAuthenticationRequested) {
             final UserManager userManager = context.getSystemService(
                     UserManager.class);
             final int status = biometricManager.canAuthenticate(getEffectiveUserId(
@@ -1682,10 +1681,8 @@ public final class Utils extends com.android.settingslib.Utils {
     private static Intent getIntentForBiometricAuthentication(Resources resources,
             int effectiveUserId, boolean hideBackground, @Nullable Intent data) {
         final Intent intent = new Intent();
-        if (android.hardware.biometrics.Flags.mandatoryBiometrics()) {
-            intent.putExtra(BIOMETRIC_PROMPT_AUTHENTICATORS,
-                    BiometricManager.Authenticators.IDENTITY_CHECK);
-        }
+        intent.putExtra(BIOMETRIC_PROMPT_AUTHENTICATORS,
+                BiometricManager.Authenticators.IDENTITY_CHECK);
         intent.putExtra(BIOMETRIC_PROMPT_NEGATIVE_BUTTON_TEXT,
                 resources.getString(R.string.cancel));
         intent.putExtra(KeyguardManager.EXTRA_DESCRIPTION,
