@@ -87,7 +87,7 @@ open class ConfirmSupervisionCredentialsActivity : FragmentActivity() {
             }
         }
 
-    private val supervisionPinRecoveryLauncher =
+    private val getResultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             setResult(result.resultCode)
             finish()
@@ -110,7 +110,9 @@ open class ConfirmSupervisionCredentialsActivity : FragmentActivity() {
         }
 
         if (!isSupervisingCredentialSet) {
-            errorHandler("No supervising credential set, cannot verify credentials.")
+            // Redirects to the setup supervision flow when credential is not set.
+            val setupIntent = Intent(this, SetupSupervisionActivity::class.java)
+            getResultLauncher.launch(setupIntent)
             return
         }
 
@@ -156,7 +158,7 @@ open class ConfirmSupervisionCredentialsActivity : FragmentActivity() {
             }
         val listener =
             DialogInterface.OnClickListener { _: DialogInterface?, _: Int ->
-                supervisionPinRecoveryLauncher.launch(intent)
+                getResultLauncher.launch(intent)
             }
         val moreOptionsButtonBuilder =
             PromptContentViewWithMoreOptionsButton.Builder()
