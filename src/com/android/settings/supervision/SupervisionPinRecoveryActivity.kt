@@ -16,7 +16,6 @@
 package com.android.settings.supervision
 
 import android.app.Activity
-import android.app.admin.DevicePolicyManager
 import android.app.supervision.SupervisionManager
 import android.app.supervision.SupervisionRecoveryInfo
 import android.app.supervision.SupervisionRecoveryInfo.STATE_PENDING
@@ -30,7 +29,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.FragmentActivity
 import com.android.settings.R
-import com.android.settings.password.ChooseLockSettingsHelper
+import com.android.settings.password.ChooseLockPassword
 import com.android.settingslib.supervision.SupervisionIntentProvider
 import com.android.settingslib.supervision.SupervisionLog
 
@@ -222,22 +221,7 @@ class SupervisionPinRecoveryActivity : FragmentActivity() {
     /** Starts the reset supervision PIN activity for the supervising user. */
     private fun startResetPinActivity() {
         // TODO(b/407064075): reset the user or use other activity to skip entering current PIN.
-        val intent =
-            Intent(DevicePolicyManager.ACTION_SET_NEW_PASSWORD).apply {
-                putExtra(
-                    DevicePolicyManager.EXTRA_PASSWORD_COMPLEXITY,
-                    DevicePolicyManager.PASSWORD_COMPLEXITY_LOW,
-                )
-                putExtra(ChooseLockSettingsHelper.EXTRA_KEY_FINGERPRINT_ENROLLMENT_ONLY, true)
-                putExtra(
-                    ChooseLockSettingsHelper.EXTRA_KEY_CHOOSE_LOCK_SCREEN_TITLE,
-                    getString(R.string.supervision_lock_setup_title),
-                )
-                putExtra(
-                    ChooseLockSettingsHelper.EXTRA_KEY_CHOOSE_LOCK_SCREEN_DESCRIPTION,
-                    getString(R.string.supervision_lock_setup_description),
-                )
-            }
+        val intent = Intent(this, ChooseLockPassword::class.java)
         setPinLauncher.launch(intent)
     }
 
