@@ -14475,8 +14475,21 @@ Data usage charges may apply.</string>
     <string name="supervision_full_screen_pin_verification_title">Enter supervision PIN</string>
     <!-- Title on activity to choose PIN for supervision setup [CHAR LIMIT=NONE] -->
     <string name="supervision_choose_your_pin_header">Set a parental controls PIN</string>
+    <!-- Title on activity to confirm PIN for supervision setup [CHAR LIMIT=NONE] -->
     <string name="supervision_confirm_your_pin_header">Confirm PIN</string>
     <string name="supervision_pin_reset_success_toast">PIN updated</string>
+    <!-- Title on dialog that confirms whether user wants to delete their supervision PIN [CHAR LIMIT=NONE] -->
+    <string name="supervision_delete_pin_confirm_header">Delete PIN?</string>
+    <!-- Message in dialog that confirms whether user wants to delete their supervision PIN [CHAR LIMIT=NONE] -->
+    <string name="supervision_delete_pin_confirm_message">This will delete your current PIN for all users on this device and disable controls you have set up. This action can\u2019t be undone.</string>
+    <!-- Title on dialog that informs the user that they need to disable supervision before deleting the PIN [CHAR LIMIT=NONE] -->
+    <string name="supervision_delete_pin_supervision_enabled_header">Pause controls on other profiles first</string>
+    <!-- Message in dialog that informs the user that they need to disable supervision before deleting the PIN [CHAR LIMIT=NONE] -->
+    <string name="supervision_delete_pin_supervision_enabled_message">To proceed with deleting this PIN and resetting supervision settings, please pause controls on all other profiles.</string>
+    <!-- Title on dialog that informs the user that an error occurred while trying to delete the PIN [CHAR LIMIT=NONE] -->
+    <string name="supervision_delete_pin_error_header">PIN can not be deleted</string>
+    <!-- Message in dialog that informs the user that an error occurred while trying to delete the PIN [CHAR LIMIT=NONE] -->
+    <string name="supervision_delete_pin_error_message">An error occurred while trying to delete the PIN.</string>
     <string name="accessibility_illustration_content_description"><xliff:g id="feature" example="Select to Speak">%1$s</xliff:g> animation</string>
 
     <!-- Light theme customization for lottie illustration. Not translatable. -->
