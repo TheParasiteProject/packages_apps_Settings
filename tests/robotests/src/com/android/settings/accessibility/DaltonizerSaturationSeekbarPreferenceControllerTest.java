@@ -55,6 +55,7 @@ import org.robolectric.RobolectricTestRunner;
 @RunWith(RobolectricTestRunner.class)
 public class DaltonizerSaturationSeekbarPreferenceControllerTest {
 
+    private static final String PREF_KEY = "testPrefKey";
     private ContentResolver mContentResolver;
     private DaltonizerSaturationSeekbarPreferenceController mController;
 
@@ -73,7 +74,7 @@ public class DaltonizerSaturationSeekbarPreferenceControllerTest {
         mContentResolver = context.getContentResolver();
 
         mPreference = new SeekBarPreference(context);
-        mPreference.setKey(ToggleDaltonizerPreferenceFragment.KEY_SATURATION);
+        mPreference.setKey(PREF_KEY);
         mScreen = new PreferenceManager(context).createPreferenceScreen(context);
         mScreen.addPreference(mPreference);
 
@@ -81,7 +82,7 @@ public class DaltonizerSaturationSeekbarPreferenceControllerTest {
         mLifecycle = new Lifecycle(mLifecycleOwner);
         mController = new DaltonizerSaturationSeekbarPreferenceController(
                 context,
-                ToggleDaltonizerPreferenceFragment.KEY_SATURATION);
+                PREF_KEY);
     }
 
     @After
