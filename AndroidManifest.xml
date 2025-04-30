@@ -3573,6 +3573,15 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name=".bluetooth.LeAudioProfileEnablementRequestReceiver"
+            android:exported="true"
+            android:permission="android.permission.BLUETOOTH_PRIVILEGED">
+            <intent-filter>
+                <action android:name="com.android.settings.bluetooth.UPDATE_LE_AUDIO_PROFILE" />
+            </intent-filter>
+        </receiver>
+
+
         <activity android:name="ActivityPicker"
                 android:label="@string/activity_picker_label"
                 android:theme="@*android:style/Theme.DeviceDefault.Dialog.Alert.DayNight"
