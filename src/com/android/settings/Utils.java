@@ -234,6 +234,15 @@ public final class Utils extends com.android.settingslib.Utils {
     }
 
     /**
+     * Returns whether the device is SMS capable.
+     */
+    public static boolean isSmsMessagingCapable(@NonNull Context context) {
+        if (isTelephonyDisabled(context)) return false;
+        final TelephonyManager telephony = context.getSystemService(TelephonyManager.class);
+        return telephony != null && telephony.isDeviceSmsCapable();
+    }
+
+    /**
      * Returns whether telephony features are completely disabled in the app, regardless
      * of the TelephonyManager reported capabilities or the PackageManager flags declared.
      */
