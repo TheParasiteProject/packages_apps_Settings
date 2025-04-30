@@ -58,6 +58,7 @@ public class ExternalDisplayTestBase {
     @Mock
     Resources mResources;
     FakeFeatureFlagsImpl mFlags = new FakeFeatureFlagsImpl();
+    DesktopExperienceFlags mInjectedFlags = new DesktopExperienceFlags(mFlags);
     Context mContext;
     DisplayListener mListener;
     TestHandler mHandler;
@@ -119,7 +120,7 @@ public class ExternalDisplayTestBase {
         for (var display : mDisplays) {
             doReturn(display).when(mMockedInjector).getDisplay(display.getId());
         }
-        doReturn(mFlags).when(mMockedInjector).getFlags();
+        doReturn(mInjectedFlags).when(mMockedInjector).getFlags();
         mHandler = new TestHandler(mContext.getMainThreadHandler());
         doReturn(mHandler).when(mMockedInjector).getHandler();
         doReturn("").when(mMockedInjector).getSystemProperty(
