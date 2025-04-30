@@ -7720,6 +7720,8 @@ Data usage charges may apply.</string>
     <string name="user_confirm_remove_message">All apps and data will be deleted.</string>
     <!-- Work profile removal confirmation message [CHAR LIMIT=none] -->
     <string name="work_profile_confirm_remove_message">All apps and data in this profile will be deleted if you continue.</string>
+    <!-- Work profile removal confirmation message mentioning eSIM [CHAR LIMIT=none] -->
+    <string name="work_profile_confirm_remove_message_with_esim">All apps and data in this profile, including work eSIMs, will be deleted if you continue.</string>
     <!-- User profile removal confirmation message [CHAR LIMIT=none] -->
     <string name="user_profile_confirm_remove_message">All apps and data will be deleted.</string>
     <!-- Setting label to show that a new user is being added [CHAR LIMIT=30] -->
