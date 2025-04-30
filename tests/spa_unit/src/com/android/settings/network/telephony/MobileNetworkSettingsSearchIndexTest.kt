@@ -27,11 +27,11 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.settings.R
 import com.android.settings.network.telephony.MobileNetworkSettingsSearchIndex.Companion.isMobileNetworkSettingsSearchable
 import com.android.settings.network.telephony.MobileNetworkSettingsSearchIndex.MobileNetworkSettingsSearchResult
-import com.android.settings.spa.SpaSearchLanding.BundleValue
-import com.android.settings.spa.SpaSearchLanding.SpaSearchLandingFragment
-import com.android.settings.spa.SpaSearchLanding.SpaSearchLandingKey
-import com.android.settings.spa.search.SpaSearchLandingActivity
-import com.android.settings.spa.search.decodeToSpaSearchLandingKey
+import com.android.settings.spa.search.SettingsSpaSearchLandingActivity
+import com.android.settingslib.spa.search.SpaSearchLanding.BundleValue
+import com.android.settingslib.spa.search.SpaSearchLanding.SpaSearchLandingFragment
+import com.android.settingslib.spa.search.SpaSearchLanding.SpaSearchLandingKey
+import com.android.settingslib.spa.search.decodeToSpaSearchLandingKey
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Test
@@ -139,7 +139,7 @@ class MobileNetworkSettingsSearchIndexTest {
         assertThat(rawData.title).isEqualTo(TITLE)
         assertThat(rawData.intentAction).isEqualTo("android.settings.SPA_SEARCH_LANDING")
         assertThat(rawData.intentTargetClass)
-            .isEqualTo(SpaSearchLandingActivity::class.qualifiedName)
+            .isEqualTo(SettingsSpaSearchLandingActivity::class.qualifiedName)
         assertThat(rawData.className).isEqualTo(MobileNetworkSettings::class.java.name)
         assertThat(rawData.screenTitle).isEqualTo("SIMs > $SUB_DISPLAY_NAME_1")
     }
