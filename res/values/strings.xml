@@ -2213,7 +2213,7 @@
     <string name="external_display_mirroring_title">Mirror built-in display</string>
 
     <!-- Wifi Display settings. The title of the screen. [CHAR LIMIT=40] -->
-    <string name="wifi_display_settings_title">Cast</string>
+    <string name="wifi_display_settings_title">Google Cast</string>
     <!-- Wifi Display settings. The keywords of the setting. [CHAR LIMIT=NONE] -->
     <string name="keywords_wifi_display_settings">mirror</string>
     <!-- Wifi Display settings. The title of a menu item to enable wireless display [CHAR LIMIT=40] -->
@@ -8492,7 +8492,7 @@ Data usage charges may apply.</string>
     <string name="media_volume_option_title">Media volume</string>
 
     <!-- Sound: Title for the option managing remote media volume. [CHAR LIMIT=30] -->
-    <string name="remote_media_volume_option_title">Cast volume</string>
+    <string name="remote_media_volume_option_title">Google Cast volume</string>
 
     <!-- Sound: Title for the option managing call volume. [CHAR LIMIT=30] -->
     <string name="call_volume_option_title">Call volume</string>
