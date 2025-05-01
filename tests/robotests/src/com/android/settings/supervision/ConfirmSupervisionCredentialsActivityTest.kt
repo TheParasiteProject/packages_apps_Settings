@@ -125,7 +125,9 @@ class ConfirmSupervisionCredentialsActivityTest {
     @Test
     @Config(sdk = [Build.VERSION_CODES.BAKLAVA])
     fun onCreate_callerIsSystemUid_doesNotFinish() {
-        ShadowBinder.setCallingUid(Process.SYSTEM_UID)
+        ShadowBinder.setCallingUid(
+            UserHandle.getUid(/* userId= */ 2, /* appId= */ Process.SYSTEM_UID)
+        )
         mockUserManager.stub { on { users } doReturn listOf(SUPERVISING_USER_INFO) }
         mockActivityManager.stub { on { startProfile(any()) } doReturn true }
         mockKeyguardManager.stub { on { isDeviceSecure(SUPERVISING_USER_ID) } doReturn true }
