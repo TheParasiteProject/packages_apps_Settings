@@ -18,7 +18,6 @@ package com.android.settings.accessibility
 import android.accessibilityservice.AccessibilityShortcutInfo
 import android.app.settings.SettingsEnums
 import android.content.ComponentName
-import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
 import android.content.IntentFilter
@@ -29,7 +28,6 @@ import android.os.Bundle
 import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
-import android.view.accessibility.AccessibilityManager
 import androidx.core.net.toUri
 import androidx.fragment.app.FragmentFactory
 import androidx.fragment.app.testing.FragmentScenario
@@ -37,12 +35,8 @@ import androidx.fragment.app.testing.FragmentScenario.FragmentAction
 import androidx.lifecycle.Lifecycle
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
-import androidx.test.core.app.ApplicationProvider
-import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType
 import com.android.settings.R
 import com.android.settings.accessibility.data.AccessibilityRepositoryProvider
-import com.android.settings.testutils.AccessibilityTestUtils
-import com.android.settings.testutils.shadow.ShadowAccessibilityManager
 import com.android.settingslib.widget.ButtonPreference
 import com.android.settingslib.widget.IllustrationPreference
 import com.android.settingslib.widget.TopIntroPreference
@@ -57,22 +51,16 @@ import org.mockito.kotlin.spy
 import org.mockito.kotlin.whenever
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.Shadows
-import org.robolectric.shadow.api.Shadow
-import org.robolectric.shadows.ShadowDialog
 import org.robolectric.shadows.ShadowLooper
 import org.robolectric.shadows.ShadowPackageManager
 
 /** Tests for [LaunchAccessibilityActivityPreferenceFragment] */
 @RunWith(RobolectricTestRunner::class)
-class LaunchAccessibilityActivityPreferenceFragmentTest {
-    private val context: Context = ApplicationProvider.getApplicationContext<Context>()
+class LaunchAccessibilityActivityPreferenceFragmentTest :
+    BaseShortcutFragmentTestCases<LaunchAccessibilityActivityPreferenceFragment>() {
     private var fragScenario: FragmentScenario<LaunchAccessibilityActivityPreferenceFragment>? =
         null
     private var fragment: LaunchAccessibilityActivityPreferenceFragment? = null
-    private val a11yManager: ShadowAccessibilityManager =
-        Shadow.extract<ShadowAccessibilityManager>(
-            context.getSystemService<AccessibilityManager?>(AccessibilityManager::class.java)
-        )
     private val packageManager: ShadowPackageManager = spy(Shadows.shadowOf(context.packageManager))
 
     @Before
@@ -156,71 +144,6 @@ class LaunchAccessibilityActivityPreferenceFragmentTest {
     }
 
     @Test
-    fun clickShortcutToggle_shortcutWasOff_turnOnShortcutAndShowShortcutTutorial() {
-        a11yManager.enableShortcutsForTargets(
-            /* enable= */ false,
-            UserShortcutType.ALL,
-            setOf(PLACEHOLDER_A11Y_ACTIVITY.flattenToString()),
-            context.userId,
-        )
-        launchFragment()
-
-        val pref: ShortcutPreference? = getShortcutToggle()
-        assertThat(pref).isNotNull()
-        assertThat(pref!!.isChecked).isFalse()
-        val viewHolder =
-            AccessibilityTestUtils.inflateShortcutPreferenceView(fragment!!.requireContext(), pref)
-
-        val widget = viewHolder.findViewById(pref.switchResId)
-        assertThat(widget).isNotNull()
-        widget!!.performClick()
-        ShadowLooper.idleMainLooper()
-
-        assertThat(pref.isChecked).isTrue()
-        AccessibilityTestUtils.assertShortcutsTutorialDialogShown(fragment)
-    }
-
-    @Test
-    fun clickShortcutToggle_shortcutWasOn_turnOffShortcutAndNoTutorialShown() {
-        a11yManager.enableShortcutsForTargets(
-            /* enable= */ true,
-            UserShortcutType.HARDWARE,
-            setOf(PLACEHOLDER_A11Y_ACTIVITY.flattenToString()),
-            context.userId,
-        )
-        launchFragment()
-
-        val pref: ShortcutPreference? = getShortcutToggle()
-        assertThat(pref).isNotNull()
-        assertThat(pref!!.isChecked).isTrue()
-        val viewHolder =
-            AccessibilityTestUtils.inflateShortcutPreferenceView(fragment!!.requireContext(), pref)
-
-        val widget = viewHolder.findViewById(pref.switchResId)
-        assertThat(widget).isNotNull()
-        widget!!.performClick()
-        ShadowLooper.idleMainLooper()
-
-        assertThat(pref.isChecked).isFalse()
-        assertThat(a11yManager.getAccessibilityShortcutTargets(UserShortcutType.HARDWARE)).isEmpty()
-        assertThat(ShadowDialog.getLatestDialog()).isNull()
-    }
-
-    @Test
-    fun clickShortcutSettings_showEditShortcutsScreenWithoutChangingShortcutToggleState() {
-        launchFragment()
-
-        val pref: ShortcutPreference? = getShortcutToggle()
-        assertThat(pref).isNotNull()
-        val shortcutToggleState = pref!!.isChecked
-        pref.performClick()
-        ShadowLooper.idleMainLooper()
-
-        AccessibilityTestUtils.assertEditShortcutsScreenShown(fragment)
-        assertThat(pref.isChecked).isEqualTo(shortcutToggleState)
-    }
-
-    @Test
     fun clickSettings_launchA11yActivitySettings() {
         launchFragment()
         val preference: Preference? = fragment!!.findPreference(A11Y_ACTIVITY_SETTINGS_PREF_KEY)
@@ -284,9 +207,7 @@ class LaunchAccessibilityActivityPreferenceFragmentTest {
         assertThat(fragment!!.feedbackCategory).isEqualTo(SettingsEnums.ACCESSIBILITY_SERVICE)
     }
 
-    private fun launchFragment(
-        a11yShortcutInfo: AccessibilityShortcutInfo = createMockAccessibilityShortcutInfo()
-    ) {
+    private fun launchFragment(a11yShortcutInfo: AccessibilityShortcutInfo) {
         a11yManager.setInstalledAccessibilityShortcutListAsUser(listOf(a11yShortcutInfo))
         val bundle = Bundle()
         bundle.putParcelable(AccessibilitySettings.EXTRA_COMPONENT_NAME, PLACEHOLDER_A11Y_ACTIVITY)
@@ -305,9 +226,16 @@ class LaunchAccessibilityActivityPreferenceFragmentTest {
         )
     }
 
-    private fun getShortcutToggle(): ShortcutPreference? {
+    override fun getShortcutToggle(): ShortcutPreference? {
         return fragment!!.findPreference<ShortcutPreference?>(SHORTCUT_PREF_KEY)
     }
+
+    override fun launchFragment(): LaunchAccessibilityActivityPreferenceFragment {
+        launchFragment(createMockAccessibilityShortcutInfo())
+        return fragment!!
+    }
+
+    override fun getFeatureComponent(): ComponentName = PLACEHOLDER_A11Y_ACTIVITY
 
     private fun createMockAccessibilityShortcutInfo(): AccessibilityShortcutInfo {
         val mockInfo = mock<AccessibilityShortcutInfo>()
