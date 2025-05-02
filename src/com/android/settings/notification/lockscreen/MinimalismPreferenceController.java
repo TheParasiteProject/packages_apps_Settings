@@ -51,7 +51,7 @@ public class MinimalismPreferenceController
     private static final int LS_SHOW_NOTIF_ON = 1;
     private static final int LS_SHOW_NOTIF_OFF = 0;
     private static final int LS_MINIMALISM_OFF = 0;
-    private static final int LS_MINIMALISM_ON = 1;
+    public static final int LS_MINIMALISM_ON = 1;
     private static final String KEY_MINIMALISM_PREFERENCE = "ls_minimalism";
     private static final String KEY_FULL_LIST_ILLUSTRATION = "full_list_illustration";
     private static final String KEY_COMPACT_ILLUSTRATION = "compact_illustration";
