@@ -11574,7 +11574,7 @@ Data usage charges may apply.</string>
     <string name="page_tab_title_support">Tips &amp; support</string>
 
     <!-- Summary of developer options to set the smallest width of the screen [CHAR LIMIT=60]-->
-    <string name="density_pixel_summary" translatable="false"><xliff:g name="count" example="320">%1$s</xliff:g> dp</string>
+    <string name="density_pixel_summary" translatable="false"><xliff:g name="count" example="320">\u200E%1$s</xliff:g> dp\u200E</string>
 
     <!-- Title of developer options to set the smallest width of the screen [CHAR LIMIT=60]-->
     <string name="developer_smallest_width">Smallest width</string>
