@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,19 +15,25 @@
  */
 package com.android.settings.supervision
 
+import android.Manifest
 import android.app.Activity
-import android.app.admin.DevicePolicyManager
 import android.app.supervision.SupervisionManager
 import android.app.supervision.SupervisionRecoveryInfo
+import android.app.supervision.SupervisionRecoveryInfo.STATE_PENDING
+import android.app.supervision.SupervisionRecoveryInfo.STATE_VERIFIED
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.os.UserManager
+import android.os.UserManager.USER_TYPE_PROFILE_SUPERVISING
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresPermission
+import androidx.annotation.VisibleForTesting
 import androidx.fragment.app.FragmentActivity
 import com.android.settings.R
-import com.android.settings.password.ChooseLockSettingsHelper
 import com.android.settingslib.supervision.SupervisionIntentProvider
 import com.android.settingslib.supervision.SupervisionLog
 
@@ -95,9 +101,9 @@ class SupervisionPinRecoveryActivity : FragmentActivity() {
 
             recoveryIntent.apply {
                 // Pass along any available recovery information.
-                // TODO(b/409805806): will expose the parcelable as system API and pass it instead.
-                recoveryInfo?.email?.let { putExtra(EXTRA_RECOVERY_EMAIL, it) }
-                recoveryInfo?.id?.let { putExtra(EXTRA_RECOVERY_ID, it) }
+                // TODO(b/409805806): will pass the parcelable once the system API is available.
+                recoveryInfo?.accountName?.let { putExtra(EXTRA_RECOVERY_EMAIL, it) }
+                recoveryInfo?.accountData?.getString("id")?.let { putExtra(EXTRA_RECOVERY_ID, it) }
                 verificationLauncher.launch(this)
             }
         } else {
@@ -144,9 +150,9 @@ class SupervisionPinRecoveryActivity : FragmentActivity() {
                             applicationContext.getSystemService(SupervisionManager::class.java)
                         val recoveryInfo = supervisionManager?.getSupervisionRecoveryInfo()
                         postSetupVerifyIntent.apply {
-                            // TODO(b/409805806): will expose the parcelable as system API and pass
-                            // it instead.
-                            recoveryInfo?.email?.let { putExtra(EXTRA_RECOVERY_EMAIL, it) }
+                            // TODO(b/409805806): will use the parcelable once the system API is
+                            // available.
+                            recoveryInfo?.accountName?.let { putExtra(EXTRA_RECOVERY_EMAIL, it) }
                             verificationLauncher.launch(postSetupVerifyIntent)
                         }
                     } else {
@@ -161,10 +167,10 @@ class SupervisionPinRecoveryActivity : FragmentActivity() {
     }
 
     private fun onVerification(resultCode: Int, data: Intent?) {
-        if (resultCode == Activity.RESULT_OK) {
+        if (resultCode == RESULT_OK) {
             val action = intent.action
             when (action) {
-                ACTION_RECOVERY -> startResetPinActivity() // Continue to set PIN after verification
+                ACTION_RECOVERY -> startResetPinActivity() // reset PIN after verification
                 ACTION_SETUP,
                 ACTION_UPDATE,
                 ACTION_SETUP_VERIFIED,
@@ -172,9 +178,20 @@ class SupervisionPinRecoveryActivity : FragmentActivity() {
                     if (data != null) {
                         val supervisionManager =
                             applicationContext.getSystemService(SupervisionManager::class.java)
-                        val recoveryInfo = SupervisionRecoveryInfo()
-                        recoveryInfo.email = data.getStringExtra(EXTRA_RECOVERY_EMAIL)
-                        recoveryInfo.id = data.getStringExtra(EXTRA_RECOVERY_ID)
+                        // TODO(b/409805806): will directly get the parcelable from intent once the
+                        // system API is available.
+                        val recoveryInfo =
+                            data.getStringExtra(EXTRA_RECOVERY_EMAIL)?.let {
+                                SupervisionRecoveryInfo(
+                                    /* accountName */ it,
+                                    /* accountType */ "default",
+                                    /* state */ if (action == ACTION_SETUP) STATE_PENDING
+                                    else STATE_VERIFIED,
+                                    /* accountData */ PersistableBundle().apply {
+                                        putString("id", data.getStringExtra(EXTRA_RECOVERY_ID))
+                                    },
+                                )
+                            }
                         supervisionManager?.setSupervisionRecoveryInfo(recoveryInfo)
                         handleSuccess()
                     } else {
@@ -206,24 +223,15 @@ class SupervisionPinRecoveryActivity : FragmentActivity() {
     }
 
     /** Starts the reset supervision PIN activity for the supervising user. */
+    @RequiresPermission(
+        anyOf = [Manifest.permission.CREATE_USERS, Manifest.permission.MANAGE_USERS]
+    )
     private fun startResetPinActivity() {
-        // TODO(b/407064075): reset the user or use other activity to skip entering current PIN.
-        val intent =
-            Intent(DevicePolicyManager.ACTION_SET_NEW_PASSWORD).apply {
-                putExtra(
-                    DevicePolicyManager.EXTRA_PASSWORD_COMPLEXITY,
-                    DevicePolicyManager.PASSWORD_COMPLEXITY_LOW,
-                )
-                putExtra(ChooseLockSettingsHelper.EXTRA_KEY_FINGERPRINT_ENROLLMENT_ONLY, true)
-                putExtra(
-                    ChooseLockSettingsHelper.EXTRA_KEY_CHOOSE_LOCK_SCREEN_TITLE,
-                    getString(R.string.supervision_lock_setup_title),
-                )
-                putExtra(
-                    ChooseLockSettingsHelper.EXTRA_KEY_CHOOSE_LOCK_SCREEN_DESCRIPTION,
-                    getString(R.string.supervision_lock_setup_description),
-                )
-            }
+        if (!resetSupervisionUser()) {
+            handleError("Failed to reset supervision user.")
+            return
+        }
+        val intent = Intent(this, SupervisionCredentialProxyActivity::class.java)
         setPinLauncher.launch(intent)
     }
 
@@ -240,6 +248,32 @@ class SupervisionPinRecoveryActivity : FragmentActivity() {
         finish()
     }
 
+    /**
+     * Resets the supervision user by removing the existing one and creating a new one.
+     *
+     * This method first retrieves the current supervising user handle. If it exists, the user is
+     * removed. Then, a new supervising user is created.
+     *
+     * @return True if the reset was successful, false otherwise.
+     *
+     * TODO(b/407064075): use better approach to reset the supervision user.
+     */
+    @RequiresPermission(
+        anyOf = [Manifest.permission.CREATE_USERS, Manifest.permission.MANAGE_USERS]
+    )
+    private fun resetSupervisionUser(): Boolean {
+        val userManager = getSystemService(UserManager::class.java)
+        supervisingUserHandle?.let { userManager.removeUser(it) }
+        val userInfo =
+            userManager.createUser("Supervising", USER_TYPE_PROFILE_SUPERVISING, /* flags= */ 0)
+        if (userInfo != null) {
+            return true
+        } else {
+            Log.e(SupervisionLog.TAG, "Unable to create supervising profile.")
+            return false
+        }
+    }
+
     companion object {
         // Action types for the PIN recovery activity.
         const val ACTION_SETUP = "android.app.supervision.action.SETUP_PIN_RECOVERY"
@@ -251,7 +285,7 @@ class SupervisionPinRecoveryActivity : FragmentActivity() {
             "android.app.supervision.action.POST_SETUP_VERIFY_PIN_RECOVERY"
 
         // Extra keys
-        private const val EXTRA_RECOVERY_EMAIL = "recoveryEmail"
-        private const val EXTRA_RECOVERY_ID = "recoveryId"
+        @VisibleForTesting const val EXTRA_RECOVERY_EMAIL = "recoveryEmail"
+        @VisibleForTesting const val EXTRA_RECOVERY_ID = "recoveryId"
     }
 }

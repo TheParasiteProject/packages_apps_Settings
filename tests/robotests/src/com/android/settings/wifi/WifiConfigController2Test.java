@@ -42,6 +42,7 @@ import android.net.wifi.WifiEnterpriseConfig.Eap;
 import android.net.wifi.WifiEnterpriseConfig.Phase2;
 import android.net.wifi.WifiManager;
 import android.os.Looper;
+import android.os.UserManager;
 import android.platform.test.annotations.EnableFlags;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
@@ -50,8 +51,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -61,6 +60,7 @@ import com.android.settings.R;
 import com.android.settings.connectivity.Flags;
 import com.android.settings.network.SubscriptionUtil;
 import com.android.settings.utils.AndroidKeystoreAliasLoader;
+import com.android.settings.widget.EnhancedSettingsSpinnerAdapter;
 import com.android.settings.wifi.details2.WifiPrivacyPreferenceController;
 import com.android.settings.wifi.details2.WifiPrivacyPreferenceController2;
 import com.android.wifitrackerlib.WifiEntry;
@@ -99,6 +99,8 @@ public class WifiConfigController2Test {
     private AndroidKeystoreAliasLoader mAndroidKeystoreAliasLoader;
     @Mock
     private WifiManager mWifiManager;
+    @Mock
+    private UserManager mUserManager;
     @Mock
     Spinner mEapMethodSimSpinner;
     private View mView;
@@ -143,6 +145,7 @@ public class WifiConfigController2Test {
         MockitoAnnotations.initMocks(this);
         mContext = spy(RuntimeEnvironment.application);
         when(mContext.getSystemService(eq(WifiManager.class))).thenReturn(mWifiManager);
+        when(mContext.getSystemService(eq(UserManager.class))).thenReturn(mUserManager);
         when(mWifiManager.isConnectedMacRandomizationSupported()).thenReturn(true);
         when(mConfigUiBase.getContext()).thenReturn(mContext);
         when(mWifiEntry.getSecurity()).thenReturn(WifiEntry.SECURITY_PSK);
@@ -250,6 +253,21 @@ public class WifiConfigController2Test {
         shadowOf(Looper.getMainLooper()).idle();
 
         assertThat(editConfigurationSwitch.isEnabled()).isTrue();
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_WIFI_MULTIUSER)
+    public void checkSharingFieldsVisibility() {
+        when(mUserManager.getUserCount()).thenReturn(1);
+        createController(null, WifiConfigUiBase2.MODE_CONNECT, false);
+        shadowOf(Looper.getMainLooper()).idle();
+
+        final View sharingFields = mView.findViewById(R.id.sharing_toggle_fields);
+        final View editConfigFields =
+                mView.findViewById(R.id.edit_wifi_network_configuration_fields);
+
+        assertThat(sharingFields.getVisibility()).isEqualTo(View.GONE);
+        assertThat(editConfigFields.getVisibility()).isEqualTo(View.GONE);
     }
 
     @Test
@@ -376,7 +394,8 @@ public class WifiConfigController2Test {
         createController(null, WifiConfigUiBase2.MODE_MODIFY, false);
 
         final Spinner securitySpinner = mView.findViewById(R.id.security);
-        final ArrayAdapter<String> adapter = (ArrayAdapter) securitySpinner.getAdapter();
+        EnhancedSettingsSpinnerAdapter<String> adapter =
+                (EnhancedSettingsSpinnerAdapter) securitySpinner.getAdapter();
         boolean saeFound = false;
         boolean suitebFound = false;
         boolean oweFound = false;
@@ -597,10 +616,10 @@ public class WifiConfigController2Test {
         final InputMethodManager inputMethodManager = mContext
                 .getSystemService(InputMethodManager.class);
         final ShadowInputMethodManager shadowImm = Shadows.shadowOf(inputMethodManager);
-        final CheckBox advButton = mView.findViewById(R.id.wifi_advanced_togglebox);
+        final LinearLayout advLayout = mView.findViewById(R.id.advanced_options_layout);
 
         inputMethodManager.showSoftInput(null /* view */, 0 /* flags */);
-        advButton.performClick();
+        advLayout.performClick();
 
         assertThat(shadowImm.isSoftInputVisible()).isFalse();
     }
@@ -644,9 +663,9 @@ public class WifiConfigController2Test {
 
     @Test
     public void getAdvancedOptionContentDescription_whenViewInitialed_shouldBeCorrect() {
-        final CheckBox advButton = mView.findViewById(R.id.wifi_advanced_togglebox);
+        final LinearLayout advLayout = mView.findViewById(R.id.advanced_options_layout);
 
-        assertThat(advButton.getContentDescription()).isEqualTo(
+        assertThat(advLayout.getContentDescription()).isEqualTo(
                 mContext.getString(R.string.wifi_advanced_toggle_description));
     }
 

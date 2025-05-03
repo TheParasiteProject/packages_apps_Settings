@@ -21,6 +21,7 @@ import android.app.KeyguardManager
 import android.app.role.RoleManager
 import android.app.supervision.SupervisionManager
 import android.app.supervision.SupervisionRecoveryInfo
+import android.app.supervision.SupervisionRecoveryInfo.STATE_PENDING
 import android.content.pm.UserInfo
 import android.hardware.biometrics.BiometricManager
 import android.hardware.biometrics.PromptContentViewWithMoreOptionsButton
@@ -46,6 +47,7 @@ import org.mockito.kotlin.verify
 import org.mockito.kotlin.whenever
 import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import org.robolectric.shadows.ShadowBinder
 
@@ -56,7 +58,6 @@ class ConfirmSupervisionCredentialsActivityTest {
     private val mockActivityManager = mock<ActivityManager>()
     private val mockKeyguardManager = mock<KeyguardManager>()
     private val mockSupervisionManager = mock<SupervisionManager>()
-
     private lateinit var mActivity: ConfirmSupervisionCredentialsActivity
 
     private val callingPackage = "com.example.caller"
@@ -124,7 +125,9 @@ class ConfirmSupervisionCredentialsActivityTest {
     @Test
     @Config(sdk = [Build.VERSION_CODES.BAKLAVA])
     fun onCreate_callerIsSystemUid_doesNotFinish() {
-        ShadowBinder.setCallingUid(Process.SYSTEM_UID)
+        ShadowBinder.setCallingUid(
+            UserHandle.getUid(/* userId= */ 2, /* appId= */ Process.SYSTEM_UID)
+        )
         mockUserManager.stub { on { users } doReturn listOf(SUPERVISING_USER_INFO) }
         mockActivityManager.stub { on { startProfile(any()) } doReturn true }
         mockKeyguardManager.stub { on { isDeviceSecure(SUPERVISING_USER_ID) } doReturn true }
@@ -149,21 +152,22 @@ class ConfirmSupervisionCredentialsActivityTest {
     }
 
     @Test
-    fun onCreate_noSupervisingCredential_finish() {
+    fun onCreate_noSupervisingCredential_startSetupActivity() {
         mockRoleManager.stub { on { getRoleHolders(any()) } doReturn listOf(callingPackage) }
-        mockUserManager.stub { on { users } doReturn listOf(TESTING_USER_INFO) }
+        mockUserManager.stub { on { users } doReturn listOf(SUPERVISING_USER_INFO) }
         mockActivityManager.stub { on { startProfile(any()) } doReturn true }
-        mockKeyguardManager.stub { on { isDeviceSecure(TESTING_USER_ID) } doReturn false }
+        mockKeyguardManager.stub { on { isDeviceSecure(SUPERVISING_USER_ID) } doReturn false }
 
         mActivity.onCreate(null)
+        val shadowActivity = shadowOf(mActivity)
+        val startedIntent = shadowActivity.nextStartedActivity
 
-        verify(mActivity).setResult(Activity.RESULT_CANCELED)
-        verify(mActivity).finish()
+        assert(startedIntent.component?.className == SetupSupervisionActivity::class.java.name)
     }
 
     @Test
     fun getBiometricPrompt_recoveryEmailExist_showMoreOptionsButton() {
-        val recoveryInfo = SupervisionRecoveryInfo().apply { email = "email" }
+        val recoveryInfo = SupervisionRecoveryInfo("email", "default", STATE_PENDING, null)
         whenever(mockSupervisionManager.supervisionRecoveryInfo).thenReturn(recoveryInfo)
 
         val biometricPrompt = mActivity.getBiometricPrompt()
@@ -178,8 +182,7 @@ class ConfirmSupervisionCredentialsActivityTest {
     }
 
     fun getBiometricPrompt_recoveryInfoEmpty_noMoreOptionsButton() {
-        whenever(mockSupervisionManager.supervisionRecoveryInfo)
-            .thenReturn(SupervisionRecoveryInfo())
+        whenever(mockSupervisionManager.supervisionRecoveryInfo).thenReturn(null)
 
         val biometricPrompt = mActivity.getBiometricPrompt()
 
