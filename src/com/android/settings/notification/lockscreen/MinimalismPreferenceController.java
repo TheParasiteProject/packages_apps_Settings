@@ -165,7 +165,12 @@ public class MinimalismPreferenceController
 
     private void refreshState(@Nullable Uri uri) {
         if (mPreference == null) return;
-        if (URI_LOCK_SCREEN_SHOW_NOTIFICATIONS.equals(uri) && !lockScreenShowNotification()) {
+        if (!Flags.notificationMinimalism()) {
+            // When minimalism flag is off, show the full list illustration
+            highlightIllustration(LS_MINIMALISM_OFF);
+            mPreference.setVisible(false);
+        } else if (URI_LOCK_SCREEN_SHOW_NOTIFICATIONS.equals(uri)
+                && !lockScreenShowNotification()) {
             // hide all preferences when showing notifications on lock screen is disabled
             mIllustrations.forEach((value, preference)
                     -> preference.setVisible(false));
