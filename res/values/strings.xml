@@ -9194,6 +9194,10 @@ Data usage charges may apply.</string>
     <!-- App Info > Notifications: Title for section where notifications bundles can be configured [CHAR LIMIT=80]-->
     <string name="notification_bundles">Notification organizer</string>
 
+
+    <!-- App Info > Notifications: Title for section where notifications AI features can be configured [CHAR LIMIT=80]-->
+    <string name="notification_ai_features_title">AI-powered notifications</string>
+
     <!-- App Info > Notifications: Title for section where notifications summaries can be configured [CHAR LIMIT=80]-->
     <string name="notification_summarization_title">Notification summaries</string>
     <string name="notification_summarization_summary">Get quick recaps of longer messages</string>
