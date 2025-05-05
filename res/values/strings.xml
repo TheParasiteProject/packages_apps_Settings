@@ -2605,6 +2605,8 @@
     <string name="wifi_scan_always_confirm_deny">Deny</string>
     <!-- Error message displayed below the Wi-Fi EditText when the filed is required. [CHAR LIMIT=NONE] -->
     <string name="wifi_field_required">*required</string>
+    <!-- Message to inform user, the network can only be configured at a shared network.  [CHAR LIMIT=250] -->
+    <string name="wifi_shared_network_login_screen_warning">This is a shared network. You can change this setting once logged in.</string>
     <!-- Label for the share wifi network toggle. [CHAR LIMIT=250] -->
     <string name="share_wifi_network">Share this network with other device users</string>
     <!-- Label for the share wifi network summary. [CHAR LIMIT=NONE] -->
