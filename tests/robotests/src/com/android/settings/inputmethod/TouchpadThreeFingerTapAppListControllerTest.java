@@ -71,7 +71,7 @@ import java.util.List;
 @Config(shadows = {
         ShadowSystemSettings.class,
 })
-public class TouchpadThreeFingerTapAppSelectionPreferenceControllerTest {
+public class TouchpadThreeFingerTapAppListControllerTest {
 
     private static final String PREF_KEY = "testScreen";
     private static final String TEST_TITLE_PREFIX = "testTitle";
@@ -103,14 +103,14 @@ public class TouchpadThreeFingerTapAppSelectionPreferenceControllerTest {
 
     private final Context mContext = RuntimeEnvironment.application;
     private ContentResolver mContentResolver;
-    private TouchpadThreeFingerTapAppSelectionPreferenceController mController;
+    private TouchpadThreeFingerTapAppListController mController;
     private InputGestureData mCustomInputGesture;
     private LauncherApps.Callback mLauncherAppsCallback;
 
     @Before
     public void setup() {
         mContentResolver = mContext.getContentResolver();
-        mController = new TouchpadThreeFingerTapAppSelectionPreferenceController(
+        mController = new TouchpadThreeFingerTapAppListController(
                 mContext, PREF_KEY, mMockLauncherApps, mMockInputManager, mMockContentObserver);
         setupMockLauncherApps();
         setupMockInputManager();

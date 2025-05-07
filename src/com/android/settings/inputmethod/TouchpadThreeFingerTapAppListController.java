@@ -53,11 +53,11 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Preference controller that updates a list of installed app Preferences.
+ * Controller that updates a list of installed app Preferences.
  * This screen is a sub-page of {@link TouchpadThreeFingerTapPreferenceController}) allowing three
  * finger tap gesture to open the selected app.
  */
-public class TouchpadThreeFingerTapAppSelectionPreferenceController extends BasePreferenceController
+public class TouchpadThreeFingerTapAppListController extends BasePreferenceController
         implements LifecycleEventObserver, SelectorWithWidgetPreference.OnClickListener {
 
     private final ContentResolver mContentResolver;
@@ -113,7 +113,7 @@ public class TouchpadThreeFingerTapAppSelectionPreferenceController extends Base
         }
     };
 
-    public TouchpadThreeFingerTapAppSelectionPreferenceController(@NonNull Context context,
+    public TouchpadThreeFingerTapAppListController(@NonNull Context context,
             @NonNull String key) {
         super(context, key);
         mLauncherApps = context.getSystemService(LauncherApps.class);
@@ -123,7 +123,7 @@ public class TouchpadThreeFingerTapAppSelectionPreferenceController extends Base
     }
 
     @VisibleForTesting
-    TouchpadThreeFingerTapAppSelectionPreferenceController(@NonNull Context context,
+    TouchpadThreeFingerTapAppListController(@NonNull Context context,
             @NonNull String key,
             @NonNull LauncherApps launcherApps,
             @NonNull InputManager inputManager,
