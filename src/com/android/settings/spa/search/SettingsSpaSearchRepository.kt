@@ -16,27 +16,42 @@
 
 package com.android.settings.spa.search
 
+import android.content.Context
 import com.android.settings.network.telephony.MobileNetworkSettingsSearchIndex
-import com.android.settingslib.search.SearchIndexableData
-import com.android.settingslib.spa.search.SearchIndexableDataConverter
+import com.android.settingslib.spa.framework.common.SpaEnvironment
+import com.android.settingslib.spa.framework.common.SpaEnvironmentFactory
+import com.android.settingslib.spa.search.SpaSearchLanding.SpaSearchLandingKey
 import com.android.settingslib.spa.search.SpaSearchRepository
 
-class SettingsSpaSearchRepository() {
-    private val spaSearchRepository = SpaSearchRepository()
-    private val searchIndexableDataConverter =
-        SearchIndexableDataConverter(
+class SettingsSpaSearchRepository(spaEnvironment: SpaEnvironment = SpaEnvironmentFactory.instance) {
+    private val spaSearchRepository = SpaSearchRepository(spaEnvironment)
+
+    fun getSearchIndexableDataList() =
+        spaSearchRepository.getSearchIndexableDataList(
             intentAction = SEARCH_LANDING_ACTION,
             intentTargetClass = SettingsSpaSearchLandingActivity::class.qualifiedName!!,
-        )
-
-    fun getSearchIndexableDataList(): List<SearchIndexableData> {
-        val pages =
-            spaSearchRepository.getSearchIndexablePageList() +
-                MobileNetworkSettingsSearchIndex().getSearchIndexablePage()
-        return pages.map(searchIndexableDataConverter::toSearchIndexableData)
-    }
+        ) + MobileNetworkSettingsSearchIndex().createSearchIndexableData()
 
     companion object {
+        fun createSearchIndexableRaw(
+            context: Context,
+            spaSearchLandingKey: SpaSearchLandingKey,
+            itemTitle: String,
+            indexableClass: Class<*>,
+            pageTitle: String,
+            keywords: String? = null,
+        ) =
+            SpaSearchRepository.createSearchIndexableRaw(
+                context = context,
+                spaSearchLandingKey = spaSearchLandingKey,
+                itemTitle = itemTitle,
+                indexableClass = indexableClass,
+                pageTitle = pageTitle,
+                intentAction = SEARCH_LANDING_ACTION,
+                intentTargetClass = SettingsSpaSearchLandingActivity::class.qualifiedName!!,
+                keywords = keywords,
+            )
+
         private const val SEARCH_LANDING_ACTION = "android.settings.SPA_SEARCH_LANDING"
     }
 }

@@ -16,10 +16,13 @@
 
 package com.android.settings.spa.search
 
+import android.content.Context
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.android.settings.network.telephony.MobileNetworkSettings
-import com.android.settings.spa.network.NetworkCellularGroupProvider
-import com.android.settingslib.search.SearchIndexableData
+import com.android.settingslib.spa.framework.common.SettingsPageProvider
+import com.android.settingslib.spa.search.SpaSearchLanding.SpaSearchLandingKey
+import com.android.settingslib.spa.search.SpaSearchLanding.SpaSearchLandingSpaPage
+import com.android.settingslib.spa.search.decodeToSpaSearchLandingKey
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -27,16 +30,41 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class SettingsSpaSearchRepositoryTest {
 
-    private val repository = SettingsSpaSearchRepository()
+    private val context: Context = ApplicationProvider.getApplicationContext()
 
     @Test
-    fun getSearchIndexableDataList_returnsCorrectList() {
-        val searchIndexableDataList = repository.getSearchIndexableDataList()
+    fun createSearchIndexableRaw() {
+        val spaSearchLandingKey =
+            SpaSearchLandingKey.newBuilder()
+                .setSpaPage(SpaSearchLandingSpaPage.newBuilder().setDestination(PAGE_NAME))
+                .build()
+        val pageProvider =
+            object : SettingsPageProvider {
+                override val name = PAGE_NAME
+            }
 
-        assertThat(searchIndexableDataList.map(SearchIndexableData::getTargetClass))
-            .containsExactly(
-                NetworkCellularGroupProvider::class.java,
-                MobileNetworkSettings::class.java,
+        val searchIndexableRaw =
+            SettingsSpaSearchRepository.createSearchIndexableRaw(
+                context = context,
+                spaSearchLandingKey = spaSearchLandingKey,
+                itemTitle = ITEM_TITLE,
+                indexableClass = pageProvider::class.java,
+                pageTitle = PAGE_TITLE,
             )
+
+        assertThat(decodeToSpaSearchLandingKey(searchIndexableRaw.key))
+            .isEqualTo(spaSearchLandingKey)
+        assertThat(searchIndexableRaw.title).isEqualTo(ITEM_TITLE)
+        assertThat(searchIndexableRaw.className).isEqualTo(pageProvider::class.java.name)
+        assertThat(searchIndexableRaw.screenTitle).isEqualTo(PAGE_TITLE)
+        assertThat(searchIndexableRaw.intentAction).isEqualTo("android.settings.SPA_SEARCH_LANDING")
+        assertThat(searchIndexableRaw.intentTargetClass)
+            .isEqualTo(SettingsSpaSearchLandingActivity::class.qualifiedName)
+    }
+
+    private companion object {
+        const val PAGE_NAME = "PageName"
+        const val PAGE_TITLE = "Page Title"
+        const val ITEM_TITLE = "Item Title"
     }
 }
