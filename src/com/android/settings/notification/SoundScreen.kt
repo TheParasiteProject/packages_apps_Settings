@@ -67,6 +67,7 @@ open class SoundScreen : PreferenceScreenCreator, PreferenceIconProvider {
             +DialPadTonePreference() order -50
             if (Flags.catalystSoundScreen25q4()) {
                 +ScreenLockSoundPreference() order -45
+                +ChargingSoundPreference() order -40
             }
         }
 
