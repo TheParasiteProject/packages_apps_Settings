@@ -28,13 +28,14 @@ import com.android.settings.network.telephony.NrAdvancedCallingPreferenceControl
 import com.android.settings.network.telephony.RoamingPreferenceController.Companion.RoamingSearchItem
 import com.android.settings.network.telephony.VideoCallingPreferenceController.Companion.VideoCallingSearchItem
 import com.android.settings.network.telephony.WifiCallingPreferenceController.Companion.WifiCallingSearchItem
-import com.android.settings.spa.search.SettingsSpaSearchRepository.Companion.createSearchIndexableRaw
-import com.android.settingslib.spa.search.SpaSearchLanding.BundleValue
-import com.android.settingslib.spa.search.SpaSearchLanding.SpaSearchLandingFragment
-import com.android.settingslib.spa.search.SpaSearchLanding.SpaSearchLandingKey
-import com.android.settingslib.spa.search.SpaSearchRepository.Companion.searchIndexProviderOf
+import com.android.settings.spa.SpaSearchLanding.BundleValue
+import com.android.settings.spa.SpaSearchLanding.SpaSearchLandingFragment
+import com.android.settings.spa.SpaSearchLanding.SpaSearchLandingKey
+import com.android.settings.spa.search.SpaSearchRepository.Companion.createSearchIndexableRaw
+import com.android.settings.spa.search.SpaSearchRepository.Companion.searchIndexProviderOf
 import com.android.settingslib.search.SearchIndexableData
 import com.android.settingslib.search.SearchIndexableRaw
+import com.android.settingslib.spaprivileged.settingsprovider.settingsGlobalBoolean
 
 class MobileNetworkSettingsSearchIndex(
     private val searchItemsFactory: (context: Context) -> List<MobileNetworkSettingsSearchItem> =
