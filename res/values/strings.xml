@@ -11086,6 +11086,11 @@ Data usage charges may apply.</string>
     <!-- Content description for condition footer button. In talkback mode, double tapping will cause condition list to collapse [CHAR LIMIT=NONE]-->
     <string name="homepage_condition_footer_content_description">Collapse</string>
 
+    <!-- Content description for alert indicator on the homepage. [CHAR LIMIT=NONE] -->
+    <string name="homepage_unnumbered_alert_description">This item has an alert</string>
+    <!-- Content description for alert indicator on the homepage when there is more than one alert. [CHAR LIMIT=NONE] -->
+    <string name="homepage_numbered_alert_description">This item has <xliff:g id="alert_count" example="2">%1$s</xliff:g> alerts</string>
+
     <!-- Name of the setting to change the display's color temperature -->
     <string name="color_temperature">Cool color temperature</string>
 
