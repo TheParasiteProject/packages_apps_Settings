@@ -38,6 +38,7 @@ import com.android.settings.fuelgauge.batterysaver.BatterySaverScreen
 import com.android.settings.fuelgauge.batteryusage.PowerUsageSummaryScreen
 import com.android.settings.language.LanguageSettingScreen
 import com.android.settings.location.LocationScreen
+import com.android.settings.location.RecentLocationAccessScreen
 import com.android.settings.network.AdaptiveConnectivityScreen
 import com.android.settings.network.MobileNetworkListScreen
 import com.android.settings.network.NetworkDashboardScreen
@@ -73,7 +74,6 @@ enum class DeviceStateCategory(val functionId: String) {
     UNCATEGORIZED("getUncategorizedDeviceState"),
     STORAGE("getStorageDeviceState"),
     BATTERY("getBatteryDeviceState"),
-    PERMISSION("getPermissionsDeviceState"),
     MOBILE_DATA("getMobileDataUsageDeviceState");
 
     companion object {
@@ -142,22 +142,26 @@ fun getScreenConfigs() =
         PerScreenConfig(
             enabled = true,
             screenKey = LocationScreen.KEY,
-            category = setOf(DeviceStateCategory.PERMISSION),
+            category = setOf(DeviceStateCategory.UNCATEGORIZED),
+        ),
+        PerScreenConfig(
+            enabled = true,
+            screenKey = RecentLocationAccessScreen.KEY,
         ),
         PerScreenConfig(
             enabled = true,
             screenKey = AppsAllFilesAccessAppListScreen.KEY,
-            category = setOf(DeviceStateCategory.PERMISSION),
+            category = setOf(DeviceStateCategory.UNCATEGORIZED),
         ),
         PerScreenConfig(
             enabled = true,
             screenKey = AppsDisplayOverOtherAppsAppListScreen.KEY,
-            category = setOf(DeviceStateCategory.PERMISSION),
+            category = setOf(DeviceStateCategory.UNCATEGORIZED),
         ),
         PerScreenConfig(
             enabled = true,
             screenKey = AppsFullScreenIntentAppListScreen.KEY,
-            category = setOf(DeviceStateCategory.PERMISSION),
+            category = setOf(DeviceStateCategory.UNCATEGORIZED),
         ),
         PerScreenConfig(
             enabled = true,
@@ -221,17 +225,17 @@ fun getScreenConfigs() =
         PerScreenConfig(
             enabled = true,
             screenKey = AppPictureInPictureAppListScreen.KEY,
-            category = setOf(DeviceStateCategory.PERMISSION),
+            category = setOf(DeviceStateCategory.UNCATEGORIZED),
         ),
         PerScreenConfig(
             enabled = true,
             screenKey = AppInteractAcrossProfilesAppListScreen.KEY,
-            category = setOf(DeviceStateCategory.PERMISSION),
+            category = setOf(DeviceStateCategory.UNCATEGORIZED),
         ),
         PerScreenConfig(
             enabled = true,
             screenKey = AppsNotificationAccessScreen.KEY,
-            category = setOf(DeviceStateCategory.PERMISSION),
+            category = setOf(DeviceStateCategory.UNCATEGORIZED),
         ),
     )
 

@@ -93,6 +93,10 @@ public class DreamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             if (dreamsV2()) {
                 mTitleView.setEllipsize(TextUtils.TruncateAt.MARQUEE);
                 mTitleView.setSingleLine();
+
+                final int drawablePadding = mContext.getResources().getDimensionPixelSize(
+                        R.dimen.dream_item_icon_padding_new);
+                mTitleView.setCompoundDrawablePadding(drawablePadding);
             }
 
             itemView.setOnClickListener(v -> {
@@ -161,11 +165,17 @@ public class DreamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 return;
             }
 
+            if (dreamsV2()) {
+                customizeButton.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+                customizeButton.setSingleLine();
+                customizeButton.setSelected(true);
+            } else {
+                customizeButton.setSelected(false);
+            }
             customizeButton.setVisibility(
                     item.allowCustomization() && mEnabled ? View.VISIBLE : View.GONE);
 
             customizeButton.setOnClickListener(v -> item.onCustomizeClicked());
-            customizeButton.setSelected(false);
             customizeButton.setContentDescription(
                     mContext.getResources().getString(R.string.customize_button_description,
                             item.getTitle()));
