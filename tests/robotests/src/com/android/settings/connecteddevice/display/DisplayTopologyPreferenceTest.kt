@@ -21,7 +21,6 @@ import android.hardware.display.DisplayTopology.TreeNode.POSITION_LEFT
 import android.hardware.display.DisplayTopology.TreeNode.POSITION_TOP
 
 import android.content.Context
-import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.RectF
 import android.hardware.display.DisplayTopology
@@ -51,25 +50,19 @@ class DisplayTopologyPreferenceTest {
     val preference = DisplayTopologyPreference(injector)
     val rootView = View.inflate(context, preference.layoutResource, /*parent=*/ null)
     val holder = PreferenceViewHolder.createInstanceForTests(rootView)
-    val wallpaper = Bitmap.createBitmap(
-            intArrayOf(Color.MAGENTA), /*width=*/ 1, /*height=*/ 1, Bitmap.Config.RGB_565)
 
     init {
-        injector.systemWallpaper = wallpaper
         preference.onBindViewHolder(holder)
     }
 
     class TestInjector(context : Context) : ConnectedDisplayInjector(context) {
         var topology: DisplayTopology? = null
-        var systemWallpaper: Bitmap? = null
+
         var topologyListener: Consumer<DisplayTopology>? = null
 
         override var displayTopology : DisplayTopology?
             get() = topology
             set(value) { topology = value }
-
-        override val wallpaper: Bitmap?
-            get() = systemWallpaper!!
 
         override val densityDpi = DisplayMetrics.DENSITY_DEFAULT
 
