@@ -16,7 +16,7 @@
 package com.android.settings.supervision
 
 import android.content.Context
-import com.android.settingslib.preference.PreferenceFragment
+import com.android.settings.CatalystFragment
 
 /**
  * Fragment to display the Supervision web content filters page (Settings > Supervision> Web content
@@ -24,7 +24,7 @@ import com.android.settingslib.preference.PreferenceFragment
  *
  * See [SupervisionWebContentFiltersScreen] for details on the page contents.
  */
-class SupervisionWebContentFiltersFragment : PreferenceFragment() {
+class SupervisionWebContentFiltersFragment : CatalystFragment() {
     override fun getPreferenceScreenBindingKey(context: Context) =
         SupervisionWebContentFiltersScreen.KEY
 }
