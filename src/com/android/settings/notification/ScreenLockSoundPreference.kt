@@ -18,10 +18,10 @@ package com.android.settings.notification
 import android.app.settings.SettingsEnums.ACTION_SCREEN_LOCKING_SOUND
 import android.content.Context
 import android.provider.Settings.System.LOCKSCREEN_SOUNDS_ENABLED
-import com.android.settings.DefaultValueStoreDelegate
 import com.android.settings.R
 import com.android.settings.contract.KEY_SCREEN_LOCKING_SOUND
 import com.android.settings.metrics.PreferenceActionMetricsProvider
+import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.datastore.SettingsSystemStore
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.ReadWritePermit
@@ -30,7 +30,7 @@ import com.android.settingslib.metadata.SwitchPreference
 
 // LINT.IfChange
 class ScreenLockSoundPreference :
-    SwitchPreference(LOCKSCREEN_SOUNDS_ENABLED, R.string.screen_locking_sounds_title),
+    SwitchPreference(KEY, R.string.screen_locking_sounds_title),
     PreferenceActionMetricsProvider,
     PreferenceAvailabilityProvider {
     override val preferenceActionMetrics: Int
@@ -38,8 +38,7 @@ class ScreenLockSoundPreference :
 
     override fun tags(context: Context) = arrayOf(KEY_SCREEN_LOCKING_SOUND)
 
-    override fun storage(context: Context) =
-        DefaultValueStoreDelegate(SettingsSystemStore.get(context), true)
+    override fun storage(context: Context) = context.dataStore
 
     override fun isAvailable(context: Context) =
         context.resources.getBoolean(R.bool.config_show_screen_locking_sounds)
@@ -56,5 +55,12 @@ class ScreenLockSoundPreference :
 
     override val sensitivityLevel
         get() = SensitivityLevel.NO_SENSITIVITY
+
+    companion object {
+        const val KEY = LOCKSCREEN_SOUNDS_ENABLED
+
+        private val Context.dataStore: KeyValueStore
+            get() = SettingsSystemStore.get(this).apply { setDefaultValue(KEY, true) }
+    }
 }
 // LINT.ThenChange(ScreenLockSoundPreferenceController.java)

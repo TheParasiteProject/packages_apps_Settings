@@ -18,10 +18,10 @@ package com.android.settings.notification
 import android.app.settings.SettingsEnums.ACTION_CHARGING_SOUND
 import android.content.Context
 import android.provider.Settings.Secure.CHARGING_SOUNDS_ENABLED
-import com.android.settings.DefaultValueStoreDelegate
 import com.android.settings.R
 import com.android.settings.contract.KEY_CHARGING_SOUNDS
 import com.android.settings.metrics.PreferenceActionMetricsProvider
+import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.datastore.SettingsSecureStore
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.ReadWritePermit
@@ -30,7 +30,7 @@ import com.android.settingslib.metadata.SwitchPreference
 
 // LINT.IfChange
 class ChargingSoundPreference :
-    SwitchPreference(CHARGING_SOUNDS_ENABLED, R.string.charging_sounds_title),
+    SwitchPreference(KEY, R.string.charging_sounds_title),
     PreferenceActionMetricsProvider,
     PreferenceAvailabilityProvider {
     override val preferenceActionMetrics: Int
@@ -38,8 +38,7 @@ class ChargingSoundPreference :
 
     override fun tags(context: Context) = arrayOf(KEY_CHARGING_SOUNDS)
 
-    override fun storage(context: Context) =
-        DefaultValueStoreDelegate(SettingsSecureStore.get(context), true)
+    override fun storage(context: Context) = context.dataStore
 
     override fun isAvailable(context: Context) =
         context.resources.getBoolean(R.bool.config_show_charging_sounds)
@@ -56,5 +55,12 @@ class ChargingSoundPreference :
 
     override val sensitivityLevel
         get() = SensitivityLevel.NO_SENSITIVITY
+
+    companion object {
+        const val KEY = CHARGING_SOUNDS_ENABLED
+
+        private val Context.dataStore: KeyValueStore
+            get() = SettingsSecureStore.get(this).apply { setDefaultValue(KEY, true) }
+    }
 }
 // LINT.ThenChange(ChargingSoundPreferenceController.java)
