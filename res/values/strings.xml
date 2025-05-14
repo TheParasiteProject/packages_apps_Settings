@@ -8641,6 +8641,18 @@ Data usage charges may apply.</string>
     <!-- Sound: Other sounds: Title for the option enabling boot sounds. [CHAR LIMIT=30] -->
     <string name="boot_sounds_title">Power on sounds</string>
 
+    <!-- Sound: Title for the sound patterns category. [CHAR LIMIT=60] -->
+    <string name="sound_patterns_category_title">Sound patterns</string>
+
+    <!-- Sound: Title for the audio category. [CHAR LIMIT=60] -->
+    <string name="sound_audio_category_title">Audio</string>
+
+    <!-- Sound: Title for the system sounds & vibrations category. [CHAR LIMIT=60] -->
+    <string name="system_sounds_and_vibrations_category_title">System sounds &amp; vibrations</string>
+
+    <!-- Sound: Title for the work profile sound category. [CHAR LIMIT=60] -->
+    <string name="work_profile_sound_category_title">Work profile sound</string>
+
     <!-- Setting title for controlling how caption text display in real time [CHAR LIMIT=40]-->
     <string name="live_caption_title">Live Caption</string>
 
