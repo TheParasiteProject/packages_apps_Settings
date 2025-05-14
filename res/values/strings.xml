@@ -9065,6 +9065,14 @@ Data usage charges may apply.</string>
 
     <!-- App Info > Notifications: Title for section where notifications bundles can be configured [CHAR LIMIT=80]-->
     <string name="notification_bundles">Notification organizer</string>
+    <!-- [CHAR LIMIT=100] Notification bundle type summary: promotions -->
+    <string name="notification_bundle_promotions_summary">Sales, new features, and more</string>
+    <!-- [CHAR LIMIT=100] Notification bundle type summary: news -->
+    <string name="notification_bundle_news_summary">Top stories, editorials, and more</string>
+    <!-- [CHAR LIMIT=100] Notification bundle type summary: social -->
+    <string name="notification_bundle_social_summary">Likes, posts, and more</string>
+    <!-- [CHAR LIMIT=100] Notification bundle type summary: content recommendations -->
+    <string name="notification_bundle_recs_summary">Newsletters, recommended media, and more</string>
 
 
     <!-- App Info > Notifications: Title for section where notifications AI features can be configured [CHAR LIMIT=80]-->
@@ -9078,7 +9086,7 @@ Data usage charges may apply.</string>
     <string name="notification_summarization_excluded_description">Notifications from these apps will not be summarized</string>
     <string name="notification_summarization_manage_excluded_apps">Manage apps</string>
     <string name="notification_summarization_manage_excluded_apps_title">Allow notification summaries for apps</string>
-    <string name="notification_excluded_apps">App exceptions</string>
+    <string name="notification_excluded_apps">Don\'t include these apps</string>
     <string name="notification_app_level_summarize_title">Summarize notifications</string>
     <string name="notification_app_level_summarize_subtext">Summarize conversation notifications from this app</string>
 
@@ -9504,7 +9512,6 @@ Data usage charges may apply.</string>
 
     <string name="notification_app_level_bundle_title">Bundle notifications</string>
     <string name="notification_app_level_bundle_subtext">Notifications with similar themes will be silenced and grouped together for a quieter experience</string>
-    <string name="notification_bundle_excluded_description">Notifications from these apps won\’t be bundled</string>
     <string name="notification_bundle_manage_excluded_apps_title">Allow notification bundling for apps</string>
 
     <!-- Label for switch enabling notification adjustments (notification organizer, summaries) for work profile -->
