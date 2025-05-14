@@ -69,6 +69,7 @@ open class SoundScreen : PreferenceScreenCreator, PreferenceIconProvider {
                 +ScreenLockSoundPreference() order -45
                 +ChargingSoundPreference() order -40
                 +DockingSoundPreference() order -35
+                +TouchSoundPreference() order -30
             }
         }
 
