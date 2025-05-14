@@ -155,6 +155,11 @@ public class MouseKeysMainPageFragment extends ShortcutFragment
         int column = isPortrait && !isTwoPaneState ? 1 : 2;
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), column));
         recyclerView.setAdapter(new MouseKeysImageListAdapter(getActivity(), mCurrentInputDevice));
+
+        if (com.android.server.accessibility.Flags.enableMouseKeyEnhancement()) {
+            // Update paddings to match the latest UI.
+            recyclerView.setPadding(0, 0, 0, 0);
+        }
     }
 
     /**
