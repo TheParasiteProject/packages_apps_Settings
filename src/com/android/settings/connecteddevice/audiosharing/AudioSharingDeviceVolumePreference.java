@@ -55,7 +55,7 @@ public class AudioSharingDeviceVolumePreference extends SeekBarPreference {
     public AudioSharingDeviceVolumePreference(
             Context context, @NonNull CachedBluetoothDevice device) {
         super(context);
-        setLayoutResource(R.layout.preference_volume_slider);
+        setLayoutResource(R.layout.preference_volume_seekbar);
         mContext = context;
         mCachedDevice = device;
         mBtManager = Utils.getLocalBtManager(mContext);
