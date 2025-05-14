@@ -37,6 +37,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.android.settings.R
 import com.android.settings.supervision.ipc.SupervisionMessengerClient
+import com.android.settings.testutils.SettingsStoreRule
 import com.android.settingslib.ipc.MessengerServiceRule
 import com.android.settingslib.widget.FooterPreference
 import com.android.settingslib.widget.SelectorWithWidgetPreference
@@ -47,6 +48,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.LooperMode
+import org.robolectric.shadows.ShadowLooper
 import org.robolectric.shadows.ShadowPackageManager
 
 @RunWith(AndroidJUnit4::class)
@@ -56,9 +58,9 @@ class SupervisionWebContentFiltersScreenTest {
     private val supervisionWebContentFiltersScreen = SupervisionWebContentFiltersScreen()
     private lateinit var shadowPackageManager: ShadowPackageManager
 
-    @get:Rule val setFlagsRule = SetFlagsRule()
-
-    @get:Rule
+    @get:Rule(order = 0) val setFlagsRule = SetFlagsRule()
+    @get:Rule(order = 1) val settingsStoreRule = SettingsStoreRule()
+    @get:Rule(order = 2)
     val serviceRule =
         MessengerServiceRule<SupervisionMessengerClient>(
             TestSupervisionMessengerService::class.java
@@ -192,6 +194,7 @@ class SupervisionWebContentFiltersScreenTest {
                     Activity.RESULT_OK,
                     null,
                 )
+                ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
                 assertThat(searchFilterOnWidget.isChecked).isTrue()
                 assertThat(searchFilterOffWidget.isChecked).isFalse()
@@ -224,6 +227,7 @@ class SupervisionWebContentFiltersScreenTest {
                     Activity.RESULT_CANCELED,
                     null,
                 )
+                ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
                 assertThat(searchFilterOnPreference.isChecked).isFalse()
                 assertThat(searchFilterOffPreference.isChecked).isTrue()
