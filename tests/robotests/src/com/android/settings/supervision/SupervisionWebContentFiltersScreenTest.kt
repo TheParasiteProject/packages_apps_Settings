@@ -31,6 +31,7 @@ import android.text.Spanned
 import android.text.style.ClickableSpan
 import android.view.View
 import android.widget.TextView
+import androidx.fragment.app.testing.FragmentScenario
 import androidx.preference.PreferenceGroupAdapter
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -137,6 +138,7 @@ class SupervisionWebContentFiltersScreenTest {
                 Activity.RESULT_OK,
                 null,
             )
+            ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
             assertThat(blockExplicitSitesPreference.isChecked).isTrue()
             assertThat(allowAllSitesPreference.isChecked).isFalse()
@@ -168,6 +170,7 @@ class SupervisionWebContentFiltersScreenTest {
                 Activity.RESULT_CANCELED,
                 null,
             )
+            ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
             assertThat(blockExplicitSitesPreference.isChecked).isFalse()
             assertThat(allowAllSitesPreference.isChecked).isTrue()
