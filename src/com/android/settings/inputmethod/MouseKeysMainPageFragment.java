@@ -159,6 +159,11 @@ public class MouseKeysMainPageFragment extends ShortcutFragment
         if (com.android.server.accessibility.Flags.enableMouseKeyEnhancement()) {
             // Update paddings to match the latest UI.
             recyclerView.setPadding(0, 0, 0, 0);
+            final RecyclerView numKeyboardRecyclerView = mMouseKeyImagesPreference
+                    .findViewById(R.id.mouse_keys_numpad_image_recycler_list);
+            numKeyboardRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), column));
+            numKeyboardRecyclerView.setAdapter(
+                    new MouseKeysNumKeyboardImageListAdapter(getActivity(), mCurrentInputDevice));
         }
     }
 
