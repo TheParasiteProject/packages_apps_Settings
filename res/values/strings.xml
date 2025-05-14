@@ -11938,6 +11938,16 @@
     <!-- Title for the screen to show all the 2- and 3-button navigation settings. [CHAR LIMIT=80] -->
     <string name="button_navigation_settings_activity_title">Button navigation</string>
 
+    <!-- Title text for changing the order of the navbar buttons -->
+    <string name="button_navigation_settings_order_title">Button order</string>
+
+    <!-- Text describing the back button on the navigation bar -->
+    <string name="navbar_back_button">Back</string>
+    <!-- Text describing the home button on the navigation bar -->
+    <string name="navbar_home_button">Home</string>
+    <!-- Text describing the recent button on the navigation bar -->
+    <string name="navbar_recent_button">Recents</string>
+
     <!-- Keywords for the gesture navigation settings. [CHAR LIMIT=NONE] -->
     <string name="keywords_gesture_navigation_settings">gesture navigation, back sensitivity, back gesture</string>
 
