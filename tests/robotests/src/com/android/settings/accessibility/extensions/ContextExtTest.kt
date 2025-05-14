@@ -14,27 +14,31 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.shared
+package com.android.settings.accessibility.extensions
 
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
+import androidx.activity.ComponentActivity
 import androidx.test.core.app.ApplicationProvider
 import com.android.settings.testutils.shadow.SettingsShadowResources
+import com.google.android.setupcompat.util.WizardManagerHelper.EXTRA_IS_SETUP_FLOW
 import com.google.common.truth.Truth.assertThat
 import com.google.testing.junit.testparameterinjector.TestParameters
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestParameterInjector
 import org.robolectric.Shadows.shadowOf
+import org.robolectric.android.controller.ActivityController
 import org.robolectric.annotation.Config
 import org.robolectric.shadows.ShadowPackageManager
 
+/** Tests for Context extension functions */
 @Config(shadows = [SettingsShadowResources::class])
 @RunWith(RobolectricTestParameterInjector::class)
-class WindowMagnificationDependentTest {
-    private val context: Context = ApplicationProvider.getApplicationContext()
-    private val shadowPackageManager: ShadowPackageManager = shadowOf(context.packageManager)
-    private val sut = object : WindowMagnificationDependent {}
+class ContextExtTest {
+    private val appContext: Context = ApplicationProvider.getApplicationContext()
+    private val shadowPackageManager: ShadowPackageManager = shadowOf(appContext.packageManager)
 
     @Test
     @TestParameters(
@@ -57,6 +61,32 @@ class WindowMagnificationDependentTest {
             hasWindowMagnificationFeature,
         )
 
-        assertThat(sut.isWindowMagnificationSupported(context)).isEqualTo(expectSupported)
+        assertThat(appContext.isWindowMagnificationSupported()).isEqualTo(expectSupported)
+    }
+
+    @Test
+    @TestParameters(
+        "{inSetupWizard: false, expectedReturnValue: false}",
+        "{inSetupWizard: true, expectedReturnValue: true}",
+    )
+    fun isInSetupWizard_contextIsActivity(inSetupWizard: Boolean, expectedReturnValue: Boolean) {
+        var activityController: ActivityController<ComponentActivity>? = null
+        try {
+            activityController =
+                ActivityController.of(
+                        ComponentActivity(),
+                        Intent().apply { putExtra(EXTRA_IS_SETUP_FLOW, inSetupWizard) },
+                    )
+                    .create()
+
+            assertThat(activityController.get().isInSetupWizard()).isEqualTo(expectedReturnValue)
+        } finally {
+            activityController?.destroy()
+        }
+    }
+
+    @Test
+    fun isInSetupWizard_contextIsNotActivity_returnFalse() {
+        assertThat(appContext.isInSetupWizard()).isFalse()
     }
 }

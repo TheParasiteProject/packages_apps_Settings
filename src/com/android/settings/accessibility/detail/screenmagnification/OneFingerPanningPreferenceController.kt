@@ -35,15 +35,12 @@ import com.android.settings.accessibility.MagnificationCapabilities
 import com.android.settings.accessibility.MagnificationCapabilities.MagnificationMode
 import com.android.settings.accessibility.MagnificationCapabilities.MagnificationMode.ALL
 import com.android.settings.accessibility.MagnificationCapabilities.MagnificationMode.FULLSCREEN
-import com.android.settings.accessibility.shared.SetupWizardDependent
-import com.android.settings.accessibility.shared.WindowMagnificationDependent
+import com.android.settings.accessibility.extensions.isInSetupWizard
+import com.android.settings.accessibility.extensions.isWindowMagnificationSupported
 import com.android.settings.core.TogglePreferenceController
 
 class OneFingerPanningPreferenceController(context: Context, prefKey: String) :
-    TogglePreferenceController(context, prefKey),
-    DefaultLifecycleObserver,
-    SetupWizardDependent,
-    WindowMagnificationDependent {
+    TogglePreferenceController(context, prefKey), DefaultLifecycleObserver {
     private var switchPreference: TwoStatePreference? = null
 
     private val contentObserver: ContentObserver =
@@ -64,8 +61,8 @@ class OneFingerPanningPreferenceController(context: Context, prefKey: String) :
     override fun getAvailabilityStatus(): Int {
         return if (
             Flags.enableMagnificationOneFingerPanningGesture() &&
-            !isInSetupWizard(mContext) &&
-            isWindowMagnificationSupported(mContext)
+                !mContext.isInSetupWizard() &&
+                mContext.isWindowMagnificationSupported()
         ) {
             AVAILABLE
         } else {

@@ -14,18 +14,22 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.shared
+package com.android.settings.accessibility.extensions
 
+import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import com.android.internal.R
+import com.android.settingslib.widget.SetupWizardHelper
 
-interface WindowMagnificationDependent {
+fun Context.isWindowMagnificationSupported(): Boolean {
+    return resources.getBoolean(R.bool.config_magnification_area) &&
+            packageManager.hasSystemFeature(PackageManager.FEATURE_WINDOW_MAGNIFICATION)
+}
 
-    fun isWindowMagnificationSupported(context: Context): Boolean {
-        return context.resources.getBoolean(R.bool.config_magnification_area) &&
-                context
-                    .packageManager
-                    .hasSystemFeature(PackageManager.FEATURE_WINDOW_MAGNIFICATION)
+fun Context.isInSetupWizard(): Boolean {
+    if (this is Activity) {
+        return SetupWizardHelper.isAnySetupWizard(intent)
     }
+    return false
 }
