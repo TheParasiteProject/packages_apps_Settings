@@ -86,7 +86,6 @@
     <com.android.settingslib.widget.FooterPreference
         android:key="satellite_setting_extra_info_footer_pref"
         android:layout="@layout/satellite_setting_more_information_layout"
-        android:selectable="false"
         settings:searchable="false"
         settings:controller="com.android.settings.network.telephony.satellite.SatelliteSettingFooterController"/>
 
