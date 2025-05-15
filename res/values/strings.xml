@@ -5479,11 +5479,11 @@
     <string name="accessibility_screen_magnification_follow_keyboard_title">Magnify keyboard focus</string>
     <!-- Title for focus following keyboard focus preference for magnification. [CHAR LIMIT=none] -->
     <string name="accessibility_screen_magnification_follow_keyboard_summary">Magnifier follows keyboard focus</string>
-    <!-- Title for accessibility magnifier preference allowing the magnification of navigation bar and IME. [CHAR LIMIT=35] -->
+    <!-- Title for accessibility magnifier preference allowing the magnification of the keyboard. [CHAR LIMIT=60] -->
     <string name="accessibility_screen_magnification_nav_ime_title">Magnify keyboard</string>
-    <!-- Summary for accessibility magnifier preference allowing the magnification of navigation bar and IME. [CHAR LIMIT=35] -->
+    <!-- Summary for accessibility magnifier preference allowing the magnification of the keyboard. [CHAR LIMIT=none] -->
     <string name="accessibility_screen_magnification_nav_ime_summary">Zoom into the keyboard to see emojis and letters when using full-screen magnification</string>
-    <!-- Summary for accessibility magnifier preference allowing the magnification of navigation bar and IME. [CHAR LIMIT=35] -->
+    <!-- Summary for accessibility magnifier preference allowing the magnification of the keyboard. [CHAR LIMIT=none] -->
     <string name="accessibility_screen_magnification_nav_ime_unavailable_summary">Unavailable while only magnifying part of the screen</string>
     <!-- Title for accessibility magnifier preference where the magnifier never turns off while switching apps. [CHAR LIMIT=60] -->
     <string name="accessibility_screen_magnification_always_on_title">Keep on while switching apps</string>
