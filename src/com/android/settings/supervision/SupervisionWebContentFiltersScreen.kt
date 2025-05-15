@@ -65,6 +65,7 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
 
     override fun getPreferenceHierarchy(context: Context) =
         preferenceHierarchy(context, this) {
+            +SupervisionWebContentFiltersTopIntroPreference()
             +PreferenceCategory(
                 BROWSER_RADIO_BUTTON_GROUP,
                 R.string.supervision_web_content_filters_browser_title,
