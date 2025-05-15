@@ -62,7 +62,7 @@
         <Preference
             android:key="key_supported_service"
             android:title="@string/title_supported_service"
-            android:summary="@string/summary_supported_service"
+            android:summary="@string/summary_supported_service_without_data_supported"
             android:icon="@drawable/ic_android_satellite_24px"/>
     </PreferenceCategory>
 
