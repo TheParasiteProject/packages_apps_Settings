@@ -89,6 +89,7 @@ public class SatelliteSettingPreferenceController extends
         }
         mCarrierConfigs = mCarrierConfigCache.getSpecificConfigsForSubId(
                 subId, KEY_SATELLITE_ATTACH_SUPPORTED_BOOL,
+                KEY_SATELLITE_ENTITLEMENT_SUPPORTED_BOOL,
                 KEY_CARRIER_ROAMING_NTN_CONNECT_TYPE_INT);
     }
 
