@@ -17,36 +17,53 @@ package com.android.settings.location;
 
 import android.content.Context;
 
-import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import com.android.settings.core.SubSettingLauncher;
+import com.android.settingslib.widget.SectionButtonPreference;
 import com.android.settingslib.widget.SettingsThemeHelper;
+
+import kotlin.Unit;
+
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Preference controller that handles the "See All" button for recent location access.
  */
-public class RecentLocationAccessSeeAllButtonPreferenceController extends
+public class RecentLocationAccessSeeAllExpressiveButtonPreferenceController extends
         LocationBasePreferenceController {
 
-    private Preference mPreference;
+    private @Nullable SectionButtonPreference mPreference;
 
     /**
-     * Constructor of {@link RecentLocationAccessSeeAllButtonPreferenceController}.
+     * Constructor of {@link RecentLocationAccessSeeAllExpressiveButtonPreferenceController}.
      */
-    public RecentLocationAccessSeeAllButtonPreferenceController(Context context, String key) {
+    public RecentLocationAccessSeeAllExpressiveButtonPreferenceController(
+            Context context, String key) {
         super(context, key);
     }
 
     @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
-        mPreference = screen.findPreference(getPreferenceKey());
+        mPreference = (SectionButtonPreference) screen.findPreference(getPreferenceKey());
+        if (mPreference != null) {
+            mPreference.setOnClickListener(v -> {
+                SubSettingLauncher launcher = new SubSettingLauncher(mFragment.getContext())
+                        .setDestination(RecentLocationAccessSeeAllFragment.class.getName())
+                        .setSourceMetricsCategory(mFragment.getMetricsCategory());
+                launcher.launch();
+                return Unit.INSTANCE;
+            });
+        }
         mLocationEnabler.refreshLocationMode();
     }
 
     @Override
     public void onLocationModeChanged(int mode, boolean restricted) {
         boolean enabled = mLocationEnabler.isEnabled(mode);
-        mPreference.setVisible(enabled && !SettingsThemeHelper.isExpressiveTheme(mContext));
+        if (mPreference != null) {
+            mPreference.setVisible(enabled && SettingsThemeHelper.isExpressiveTheme(mContext));
+        }
     }
 }
