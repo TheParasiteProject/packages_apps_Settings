@@ -49,8 +49,6 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
     override val icon: Int
         get() = R.drawable.ic_globe
 
-    override fun fragmentClass() = SupervisionWebContentFiltersFragment::class.java
-
     override fun getMetricsCategory() = SettingsEnums.SUPERVISION_WEB_CONTENT_FILTERS
 
     override val highlightMenuKey: Int
