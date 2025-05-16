@@ -13488,6 +13488,10 @@ Data usage charges may apply.</string>
     <string name="media_controls_hide_player">Hide player</string>
     <!-- Subtext for media settings when the player will be shown [CHAR LIMIT=50] -->
     <string name="media_controls_show_player">Show player</string>
+    <!-- Title of setting for device suggestions in the media player [CHAR LIMIT=50]-->
+    <string name="media_controls_suggestions_title">Media suggestions</string>
+    <!-- Description of setting for device suggestions in the media player [CHAR LIMIT=NONE]-->
+    <string name="media_controls_suggestions_description">Provide media suggestions from media apps based on your activity and location.</string>
     <!-- Keywords for the media controls setting [CHAR LIMIT=NONE]-->
     <string name="keywords_media_controls">media</string>
 
