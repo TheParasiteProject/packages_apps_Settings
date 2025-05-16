@@ -16,6 +16,7 @@
 package com.android.settings.supervision
 
 import android.app.Activity
+import android.app.settings.SettingsEnums
 import android.app.supervision.flags.Flags
 import android.content.ComponentName
 import android.content.Context
@@ -102,6 +103,13 @@ class SupervisionWebContentFiltersScreenTest {
     @DisableFlags(Flags.FLAG_ENABLE_WEB_CONTENT_FILTERS_SCREEN)
     fun flagDisabled() {
         assertThat(supervisionWebContentFiltersScreen.isFlagEnabled(context)).isFalse()
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_ENABLE_WEB_CONTENT_FILTERS_SCREEN)
+    fun getMetricsCategory() {
+        assertThat(supervisionWebContentFiltersScreen.getMetricsCategory())
+            .isEqualTo(SettingsEnums.SUPERVISION_WEB_CONTENT_FILTERS)
     }
 
     @Test
