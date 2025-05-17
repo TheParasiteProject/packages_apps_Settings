@@ -456,6 +456,9 @@ public class ChooseLockGeneric extends SettingsActivity {
                 }
             } else {
                 textView.setText("");
+                if (BiometricUtils.useExpressiveStyle(getContext(), getIntent())) {
+                    textView.setVisibility(View.GONE);
+                }
             }
         }
 
