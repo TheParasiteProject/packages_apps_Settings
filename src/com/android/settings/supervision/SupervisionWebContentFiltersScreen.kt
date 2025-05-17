@@ -80,8 +80,7 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
             ) +=
                 {
                     val dataStore = SupervisionSafeSearchDataStore(context)
-                    +SupervisionSearchFilterOnPreference(dataStore)
-                    +SupervisionSearchFilterOffPreference(dataStore)
+                    +SupervisionSafeSearchSwitchPreference(dataStore)
                 }
             +SupervisionWebContentFiltersFooterPreference()
         }
