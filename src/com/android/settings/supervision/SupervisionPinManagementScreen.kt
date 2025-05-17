@@ -15,11 +15,13 @@
  */
 package com.android.settings.supervision
 
+import android.app.settings.SettingsEnums.ACTION_SUPERVISION_MANAGE_PIN
 import android.app.supervision.SupervisionManager
 import android.app.supervision.SupervisionRecoveryInfo.STATE_PENDING
 import android.app.supervision.flags.Flags
 import android.content.Context
 import com.android.settings.R
+import com.android.settings.metrics.PreferenceActionMetricsProvider
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.PreferenceIconProvider
 import com.android.settingslib.metadata.PreferenceSummaryProvider
@@ -34,14 +36,23 @@ class SupervisionPinManagementScreen :
     PreferenceScreenCreator,
     PreferenceAvailabilityProvider,
     PreferenceSummaryProvider,
+    PreferenceActionMetricsProvider,
     PreferenceIconProvider {
     override val key: String
         get() = KEY
 
-    override fun isAvailable(context: Context) = context.isSupervisingCredentialSet
+    override val preferenceActionMetrics: Int
+        get() = ACTION_SUPERVISION_MANAGE_PIN
 
     override val title: Int
         get() = R.string.supervision_pin_management_preference_title
+
+    // There is an implicit dependency on SupervisionSetupRecoveryPreference due to `getSummary`,
+    // which can be removed if `SupervisionManager.supervisionRecoveryInfo` supports
+    // observer/listener mechanism on change.
+    override fun dependencies(context: Context) = arrayOf(SupervisionSetupRecoveryPreference.KEY)
+
+    override fun isAvailable(context: Context) = context.isSupervisingCredentialSet
 
     override fun getSummary(context: Context): CharSequence? {
         if (!Flags.enableSupervisionPinRecoveryScreen()) {
@@ -82,11 +93,12 @@ class SupervisionPinManagementScreen :
             +SupervisionSetupRecoveryPreference()
             +UntitledPreferenceCategoryMetadata(GROUP_KEY) += {
                 +SupervisionPinRecoveryPreference()
-                // TODO(b/391992481) implement the screen.
                 +SupervisionChangePinPreference()
                 +SupervisionUpdateRecoveryEmailPreference()
             }
-            +SupervisionDeletePinPreference()
+            +UntitledPreferenceCategoryMetadata("delete_pin_group") += {
+                +SupervisionDeletePinPreference()
+            }
         }
 
     companion object {

@@ -23,7 +23,6 @@ import android.app.ComponentCaller
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.annotation.OpenForTesting
 import androidx.annotation.VisibleForTesting
 import androidx.fragment.app.FragmentActivity
 import com.android.settings.password.ChooseLockGeneric
@@ -40,11 +39,9 @@ import com.android.settingslib.supervision.SupervisionLog.TAG
  * It requires either [android.Manifest.permission.INTERACT_ACROSS_USERS_FULL] or
  * [android.Manifest.permission.MANAGE_USERS] permissions to interact with other users.
  */
-@OpenForTesting
-open class SupervisionCredentialProxyActivity : FragmentActivity() {
+class SupervisionCredentialProxyActivity : FragmentActivity() {
     @RequiresPermission(anyOf = [INTERACT_ACROSS_USERS_FULL, MANAGE_USERS])
-    @VisibleForTesting
-    public override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val supervisingUser = supervisingUserHandle
         if (supervisingUser == null) {
@@ -97,6 +94,7 @@ open class SupervisionCredentialProxyActivity : FragmentActivity() {
     }
 
     companion object {
-        @VisibleForTesting const val REQUEST_CODE_SUPERVISION_CREDENTIALS_PROXY = 10
+        @VisibleForTesting
+        const val REQUEST_CODE_SUPERVISION_CREDENTIALS_PROXY = 10
     }
 }

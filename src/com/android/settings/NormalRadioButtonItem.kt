@@ -11,20 +11,23 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License.
+ * limitations under the License
  */
-package com.android.settings.supervision
+
+package com.android.settings
 
 import android.content.Context
-import com.android.settingslib.preference.PreferenceFragment
+import android.util.AttributeSet
+import android.widget.CompoundButton
+import com.google.android.setupdesign.items.RadioButtonItem
 
-/**
- * Fragment to display the Supervision web content filters page (Settings > Supervision> Web content
- * filters).
- *
- * See [SupervisionWebContentFiltersScreen] for details on the page contents.
- */
-class SupervisionWebContentFiltersFragment : PreferenceFragment() {
-    override fun getPreferenceScreenBindingKey(context: Context) =
-        SupervisionWebContentFiltersScreen.KEY
+class NormalRadioButtonItem : RadioButtonItem {
+
+    constructor() : super()
+
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
+
+    override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
+        // do nothing, avoid the listener being triggered twice.
+    }
 }

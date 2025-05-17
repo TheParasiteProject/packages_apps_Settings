@@ -17,6 +17,8 @@ package com.android.settings.supervision
 
 import android.annotation.DrawableRes
 import android.app.Activity
+import android.app.settings.SettingsEnums.ACTION_SUPERVISION_ADD_RECOVERY
+import android.app.settings.SettingsEnums.ACTION_SUPERVISION_VERIFY_RECOVERY
 import android.app.supervision.SupervisionManager
 import android.app.supervision.SupervisionRecoveryInfo.STATE_PENDING
 import android.app.supervision.flags.Flags
@@ -27,6 +29,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.preference.Preference
 import com.android.settings.R
+import com.android.settings.overlay.FeatureFactory
 import com.android.settings.supervision.SupervisionUpdateRecoveryEmailPreference.Companion.asMaskedEmail
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.PreferenceLifecycleContext
@@ -51,6 +54,7 @@ class SupervisionSetupRecoveryPreference :
 
     private lateinit var lifeCycleContext: PreferenceLifecycleContext
     private lateinit var setUpRecoveryLauncher: ActivityResultLauncher<Intent>
+
     override val key: String
         get() = KEY
 
@@ -96,20 +100,19 @@ class SupervisionSetupRecoveryPreference :
 
     fun updateRecoveryInfo(result: ActivityResult) {
         if (result.resultCode == Activity.RESULT_OK) {
-            lifeCycleContext.apply {
-                notifyPreferenceChange(KEY)
-                notifyPreferenceChange(SupervisionPinRecoveryPreference.KEY)
-                notifyPreferenceChange(SupervisionUpdateRecoveryEmailPreference.KEY)
-            }
+            lifeCycleContext.notifyPreferenceChange(KEY)
         }
     }
 
     override fun onPreferenceClick(preference: Preference): Boolean {
         val intent = Intent(lifeCycleContext, SupervisionPinRecoveryActivity::class.java)
+        val metricsFeatureProvider = FeatureFactory.featureFactory.metricsFeatureProvider
         if (hasAccountNameToVerify(lifeCycleContext)) {
             intent.action = SupervisionPinRecoveryActivity.ACTION_POST_SETUP_VERIFY
+            metricsFeatureProvider.action(preference.context, ACTION_SUPERVISION_VERIFY_RECOVERY)
         } else {
             intent.action = SupervisionPinRecoveryActivity.ACTION_SETUP_VERIFIED
+            metricsFeatureProvider.action(preference.context, ACTION_SUPERVISION_ADD_RECOVERY)
         }
         setUpRecoveryLauncher.launch(intent)
         return true
