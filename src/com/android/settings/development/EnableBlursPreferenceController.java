@@ -67,8 +67,9 @@ public final class EnableBlursPreferenceController extends DeveloperOptionsPrefe
 
     @Override
     public void updateState(Preference preference) {
+        boolean blurEnabledByDefault = android.os.SystemProperties.getBoolean("ro.custom.blur.enable", false);
         boolean isEnabled = Settings.Global.getInt(mContext.getContentResolver(),
-                    Settings.Global.DISABLE_WINDOW_BLURS, 0) == 0;
+                    Settings.Global.DISABLE_WINDOW_BLURS, blurEnabledByDefault ? 0 : 1) == 0;
         ((TwoStatePreference) mPreference).setChecked(isEnabled);
     }
 
