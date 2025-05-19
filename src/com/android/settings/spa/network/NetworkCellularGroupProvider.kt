@@ -197,10 +197,11 @@ open class NetworkCellularGroupProvider : SettingsPageProvider, SearchablePage {
 
     override fun getSearchItems(context: Context): List<SearchItem> {
         if (!isPageSearchable(context)) return emptyList()
+        val activeSubscriptionCount =
+            context.requireSubscriptionManager().activeSubscriptionInfoCount
         return buildList {
-            if (context.requireSubscriptionManager().activeSubscriptionInfoCount > 0) {
-                add(getMobileDataSearchItem(context))
-            }
+            if (activeSubscriptionCount > 0) add(getMobileDataSearchItem(context))
+            if (activeSubscriptionCount >= 2) add(getAutomaticDataSwitchingSearchItem(context))
         }
     }
 

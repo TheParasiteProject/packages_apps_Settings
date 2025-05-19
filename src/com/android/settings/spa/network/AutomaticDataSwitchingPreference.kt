@@ -16,6 +16,7 @@
 
 package com.android.settings.spa.network
 
+import android.content.Context
 import android.telephony.SubscriptionManager
 import android.telephony.TelephonyManager
 import androidx.compose.runtime.Composable
@@ -30,6 +31,7 @@ import com.android.settings.network.telephony.MobileDataRepository
 import com.android.settings.network.telephony.wificalling.CrossSimCallingViewModel
 import com.android.settingslib.spa.framework.compose.HighlightBox
 import com.android.settingslib.spa.framework.compose.rememberContext
+import com.android.settingslib.spa.search.SearchablePage.SearchItem
 import com.android.settingslib.spa.widget.preference.SwitchPreference
 import com.android.settingslib.spa.widget.preference.SwitchPreferenceModel
 import kotlinx.coroutines.Dispatchers
@@ -43,6 +45,12 @@ import kotlinx.coroutines.launch
  * - frameworks/base/packages/SystemUI
  */
 private const val AUTO_DATA_SWITCH_SETTING_R_ID = "auto_data_switch"
+
+fun getAutomaticDataSwitchingSearchItem(context: Context) =
+    SearchItem(
+        highlightItemKey = AUTO_DATA_SWITCH_SETTING_R_ID,
+        itemTitle = context.getString(R.string.primary_sim_automatic_data_title),
+    )
 
 @Composable
 fun AutomaticDataSwitchingPreference(nonDds: Int) {
