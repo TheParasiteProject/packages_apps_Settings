@@ -43,7 +43,6 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.core.PreferenceXmlParserUtils;
 import com.android.settings.core.PreferenceXmlParserUtils.MetadataFlag;
-import com.android.settingslib.RestrictedSelectorWithWidgetPreference;
 import com.android.settingslib.widget.CandidateInfo;
 import com.android.settingslib.widget.IllustrationPreference;
 import com.android.settingslib.widget.SelectorWithWidgetPreference;
@@ -179,7 +178,7 @@ public abstract class RadioButtonPickerFragment extends SettingsPreferenceFragme
      * A chance for subclasses to create a custom preference instance.
      */
     protected SelectorWithWidgetPreference createPreference() {
-        return new RestrictedSelectorWithWidgetPreference(getPrefContext());
+        return new SelectorWithWidgetPreference(getPrefContext());
     }
 
     public void updateCandidates() {
