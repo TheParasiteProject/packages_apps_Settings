@@ -59,7 +59,7 @@ class SupervisionPinManagementScreen :
             return null
         }
         val recoveryInfo =
-            context.getSystemService(SupervisionManager::class.java)?.supervisionRecoveryInfo
+            context.getSystemService(SupervisionManager::class.java)?.getSupervisionRecoveryInfo()
         return when {
             recoveryInfo == null -> {
                 context.getString(R.string.supervision_pin_management_preference_summary_add)
@@ -77,7 +77,9 @@ class SupervisionPinManagementScreen :
     override fun getIcon(context: Context): Int {
         if (Flags.enableSupervisionPinRecoveryScreen()) {
             val recoveryInfo =
-                context.getSystemService(SupervisionManager::class.java)?.supervisionRecoveryInfo
+                context
+                    .getSystemService(SupervisionManager::class.java)
+                    ?.getSupervisionRecoveryInfo()
             if (recoveryInfo == null || recoveryInfo.state == STATE_PENDING) {
                 // if recovery is not fully setup.
                 return R.drawable.exclamation_icon
