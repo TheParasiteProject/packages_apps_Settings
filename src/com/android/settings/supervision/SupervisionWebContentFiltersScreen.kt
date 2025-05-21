@@ -71,8 +71,7 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
             ) +=
                 {
                     val dataStore = SupervisionSafeSitesDataStore(context)
-                    +SupervisionBlockExplicitSitesPreference(dataStore)
-                    +SupervisionAllowAllSitesPreference(dataStore)
+                    +SupervisionSafeSitesSwitchPreference(dataStore)
                 }
             +PreferenceCategory(
                 SEARCH_RADIO_BUTTON_GROUP,

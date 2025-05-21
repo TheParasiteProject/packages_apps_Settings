@@ -117,19 +117,14 @@ class SupervisionWebContentFiltersScreenTest {
     @EnableFlags(Flags.FLAG_ENABLE_WEB_CONTENT_FILTERS_SCREEN)
     fun switchSafeSitesPreferences_succeedWithParentPin() {
         supervisionWebContentFiltersScreen.launchFragmentScenario().onFragment { fragment ->
-            val allowAllSitesPreference =
-                fragment.findPreference<SelectorWithWidgetPreference>(
-                    SupervisionAllowAllSitesPreference.KEY
-                )!!
-            val blockExplicitSitesPreference =
-                fragment.findPreference<SelectorWithWidgetPreference>(
-                    SupervisionBlockExplicitSitesPreference.KEY
+            val browserSwitchPreference =
+                fragment.findPreference<SwitchPreferenceCompat>(
+                    SupervisionSafeSitesSwitchPreference.KEY
                 )!!
 
-            assertThat(allowAllSitesPreference.isChecked).isTrue()
-            assertThat(blockExplicitSitesPreference.isChecked).isFalse()
+            assertThat(browserSwitchPreference.isChecked).isFalse()
 
-            blockExplicitSitesPreference.performClick()
+            browserSwitchPreference.performClick()
 
             // Pretend the PIN verification succeeded.
             val activity = shadowOf(fragment.activity)
@@ -140,8 +135,7 @@ class SupervisionWebContentFiltersScreenTest {
             )
             ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
-            assertThat(blockExplicitSitesPreference.isChecked).isTrue()
-            assertThat(allowAllSitesPreference.isChecked).isFalse()
+            assertThat(browserSwitchPreference.isChecked).isTrue()
         }
     }
 
@@ -149,19 +143,14 @@ class SupervisionWebContentFiltersScreenTest {
     @EnableFlags(Flags.FLAG_ENABLE_WEB_CONTENT_FILTERS_SCREEN)
     fun switchSafeSitesPreferences_failWithoutParentPin() {
         supervisionWebContentFiltersScreen.launchFragmentScenario().onFragment { fragment ->
-            val allowAllSitesPreference =
-                fragment.findPreference<SelectorWithWidgetPreference>(
-                    SupervisionAllowAllSitesPreference.KEY
-                )!!
-            val blockExplicitSitesPreference =
-                fragment.findPreference<SelectorWithWidgetPreference>(
-                    SupervisionBlockExplicitSitesPreference.KEY
+            val browserSwitchPreference =
+                fragment.findPreference<SwitchPreferenceCompat>(
+                    SupervisionSafeSitesSwitchPreference.KEY
                 )!!
 
-            assertThat(allowAllSitesPreference.isChecked).isTrue()
-            assertThat(blockExplicitSitesPreference.isChecked).isFalse()
+            assertThat(browserSwitchPreference.isChecked).isFalse()
 
-            blockExplicitSitesPreference.performClick()
+            browserSwitchPreference.performClick()
 
             // Pretend the PIN verification succeeded.
             val activity = shadowOf(fragment.activity)
@@ -172,8 +161,7 @@ class SupervisionWebContentFiltersScreenTest {
             )
             ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
-            assertThat(blockExplicitSitesPreference.isChecked).isFalse()
-            assertThat(allowAllSitesPreference.isChecked).isTrue()
+            assertThat(browserSwitchPreference.isChecked).isFalse()
         }
     }
 
