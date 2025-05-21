@@ -31,8 +31,8 @@ import android.text.Spanned
 import android.text.style.ClickableSpan
 import android.view.View
 import android.widget.TextView
-import androidx.fragment.app.testing.FragmentScenario
 import androidx.preference.PreferenceGroupAdapter
+import androidx.preference.SwitchPreferenceCompat
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -181,19 +181,14 @@ class SupervisionWebContentFiltersScreenTest {
     @EnableFlags(Flags.FLAG_ENABLE_WEB_CONTENT_FILTERS_SCREEN)
     fun switchSafeSearchPreferences_succeedWithParentPin() {
         supervisionWebContentFiltersScreen.launchFragmentScenario().onFragment { fragment ->
-            val searchFilterOffWidget =
-                fragment.findPreference<SelectorWithWidgetPreference>(
-                    SupervisionSearchFilterOffPreference.KEY
-                )!!
-            val searchFilterOnWidget =
-                fragment.findPreference<SelectorWithWidgetPreference>(
-                    SupervisionSearchFilterOnPreference.KEY
+            val searchSwitchWidget =
+                fragment.findPreference<SwitchPreferenceCompat>(
+                    SupervisionSafeSearchSwitchPreference.KEY
                 )!!
 
-            assertThat(searchFilterOffWidget.isChecked).isTrue()
-            assertThat(searchFilterOnWidget.isChecked).isFalse()
+            assertThat(searchSwitchWidget.isChecked).isFalse()
 
-            searchFilterOnWidget.performClick()
+            searchSwitchWidget.performClick()
 
             // Pretend the PIN verification succeeded.
             val activity = shadowOf(fragment.activity)
@@ -204,8 +199,7 @@ class SupervisionWebContentFiltersScreenTest {
             )
             ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
-            assertThat(searchFilterOnWidget.isChecked).isTrue()
-            assertThat(searchFilterOffWidget.isChecked).isFalse()
+            assertThat(searchSwitchWidget.isChecked).isTrue()
         }
     }
 
@@ -213,19 +207,14 @@ class SupervisionWebContentFiltersScreenTest {
     @EnableFlags(Flags.FLAG_ENABLE_WEB_CONTENT_FILTERS_SCREEN)
     fun switchSafeSearchPreferences_failedWithParentPin() {
         supervisionWebContentFiltersScreen.launchFragmentScenario().onFragment { fragment ->
-            val searchFilterOffPreference =
-                fragment.findPreference<SelectorWithWidgetPreference>(
-                    SupervisionSearchFilterOffPreference.KEY
-                )!!
-            val searchFilterOnPreference =
-                fragment.findPreference<SelectorWithWidgetPreference>(
-                    SupervisionSearchFilterOnPreference.KEY
+            val searchSwitchWidget =
+                fragment.findPreference<SwitchPreferenceCompat>(
+                    SupervisionSafeSearchSwitchPreference.KEY
                 )!!
 
-            assertThat(searchFilterOffPreference.isChecked).isTrue()
-            assertThat(searchFilterOnPreference.isChecked).isFalse()
+            assertThat(searchSwitchWidget.isChecked).isFalse()
 
-            searchFilterOnPreference.performClick()
+            searchSwitchWidget.performClick()
 
             // Pretend the PIN verification failed.
             val activity = shadowOf(fragment.activity)
@@ -236,8 +225,7 @@ class SupervisionWebContentFiltersScreenTest {
             )
             ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
-            assertThat(searchFilterOnPreference.isChecked).isFalse()
-            assertThat(searchFilterOffPreference.isChecked).isTrue()
+            assertThat(searchSwitchWidget.isChecked).isFalse()
         }
     }
 
