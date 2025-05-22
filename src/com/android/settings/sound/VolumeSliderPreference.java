@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2025 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.notification;
+package com.android.settings.sound;
 
 import static com.android.internal.jank.InteractionJankMonitor.CUJ_SETTINGS_SLIDER;
 
@@ -22,35 +22,37 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.media.AudioManager;
 import android.net.Uri;
-import android.preference.SeekBarVolumizer;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.SeekBar;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.internal.jank.InteractionJankMonitor;
 import com.android.settings.R;
-import com.android.settings.widget.SeekBarPreference;
+import com.android.settingslib.RestrictedSliderPreference;
+
+import com.google.android.material.slider.Slider;
 
 import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Objects;
 
 /** A slider preference that directly controls an audio stream volume (no dialog) **/
-public class VolumeSeekBarPreference extends SeekBarPreference {
-    private static final String TAG = "VolumeSeekBarPreference";
+public class VolumeSliderPreference extends RestrictedSliderPreference {
+    private static final String TAG = "VolumeSliderPreference";
 
     private final InteractionJankMonitor mJankMonitor = InteractionJankMonitor.getInstance();
 
     private int mStream;
-    private SeekBarVolumizer mVolumizer;
+    @Nullable
+    private SliderVolumizer mVolumizer;
     @VisibleForTesting
-    SeekBarVolumizerFactory mSeekBarVolumizerFactory;
+    SliderVolumizerFactory mSliderVolumizerFactory;
     private Callback mCallback;
     private Listener mListener;
     private ImageView mIconView;
@@ -66,33 +68,33 @@ public class VolumeSeekBarPreference extends SeekBarPreference {
     private Locale mLocale;
     private NumberFormat mNumberFormat;
 
-    public VolumeSeekBarPreference(Context context, AttributeSet attrs, int defStyleAttr,
-            int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        setLayoutResource(R.layout.preference_volume_seekbar);
+    public VolumeSliderPreference(Context context, AttributeSet attrs, int defStyleAttr,
+            String packageName, int uid) {
+        super(context, attrs, defStyleAttr, packageName, uid);
+        setLayoutResource(R.layout.preference_volume_slider);
         mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-        mSeekBarVolumizerFactory = new SeekBarVolumizerFactory(context);
+        mSliderVolumizerFactory = new SliderVolumizerFactory(context);
     }
 
-    public VolumeSeekBarPreference(Context context, AttributeSet attrs, int defStyleAttr) {
+    public VolumeSliderPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        setLayoutResource(R.layout.preference_volume_seekbar);
+        setLayoutResource(R.layout.preference_volume_slider);
         mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-        mSeekBarVolumizerFactory = new SeekBarVolumizerFactory(context);
+        mSliderVolumizerFactory = new SliderVolumizerFactory(context);
     }
 
-    public VolumeSeekBarPreference(Context context, AttributeSet attrs) {
+    public VolumeSliderPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setLayoutResource(R.layout.preference_volume_seekbar);
+        setLayoutResource(R.layout.preference_volume_slider);
         mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-        mSeekBarVolumizerFactory = new SeekBarVolumizerFactory(context);
+        mSliderVolumizerFactory = new SliderVolumizerFactory(context);
     }
 
-    public VolumeSeekBarPreference(Context context) {
+    public VolumeSliderPreference(Context context) {
         super(context);
-        setLayoutResource(R.layout.preference_volume_seekbar);
+        setLayoutResource(R.layout.preference_volume_slider);
         mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-        mSeekBarVolumizerFactory = new SeekBarVolumizerFactory(context);
+        mSliderVolumizerFactory = new SliderVolumizerFactory(context);
     }
 
     public void setStream(int stream) {
@@ -101,7 +103,7 @@ public class VolumeSeekBarPreference extends SeekBarPreference {
         // Use getStreamMinVolumeInt for non-public stream type
         // eg: AudioManager.STREAM_BLUETOOTH_SCO
         setMin(mAudioManager.getStreamMinVolumeInt(mStream));
-        setProgress(mAudioManager.getStreamVolume(mStream));
+        setValue(mAudioManager.getStreamVolume(mStream));
     }
 
     public void setCallback(Callback callback) {
@@ -131,20 +133,21 @@ public class VolumeSeekBarPreference extends SeekBarPreference {
         mIconView = (ImageView) view.findViewById(com.android.internal.R.id.icon);
         mSuppressionTextView = (TextView) view.findViewById(R.id.suppression_text);
         mTitle = (TextView) view.findViewById(com.android.internal.R.id.title);
+        getSlider().setTickInactiveTintList(getSlider().getTickActiveTintList());
         onBindViewHolder();
     }
 
     protected void onBindViewHolder() {
         if (isEnabled()) {
             if (mVolumizer == null) {
-                createSeekBarVolumizer();
+                createSliderVolumizer();
             }
-            // note that setSeekBar will update enabled state!
-            mVolumizer.setSeekBar(mSeekBar);
+            // note that setSlider will update enabled state!
+            mVolumizer.setSlider(getSlider());
         } else {
-            // destroy volumizer to avoid updateSeekBar reset enabled state
+            // destroy volumizer to avoid updateSlider reset enabled state
             destroyVolumizer();
-            mSeekBar.setEnabled(false);
+            getSlider().setEnabled(false);
         }
         updateIconView();
         updateSuppressionText();
@@ -154,21 +157,22 @@ public class VolumeSeekBarPreference extends SeekBarPreference {
     }
 
     @SuppressWarnings("NullAway")
-    protected void createSeekBarVolumizer() {
-        final SeekBarVolumizer.Callback sbvc = new SeekBarVolumizer.Callback() {
+    protected void createSliderVolumizer() {
+        final SliderVolumizer.Callback sbvc = new SliderVolumizer.Callback() {
             @Override
-            public void onSampleStarting(SeekBarVolumizer sbv) {
+            public void onSampleStarting(SliderVolumizer silderVolumizer) {
                 if (mCallback != null) {
-                    mCallback.onSampleStarting(sbv);
+                    mCallback.onSampleStarting(silderVolumizer);
                 }
             }
+
             @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromTouch) {
+            public void onProgressChanged(Slider slider, int progress, boolean fromTouch) {
                 if (mCallback != null) {
                     mCallback.onStreamValueChanged(mStream, progress);
                 }
-                overrideSeekBarStateDescription(formatStateDescription(progress));
             }
+
             @Override
             public void onMuted(boolean muted, boolean zenMuted) {
                 if (mMuted == muted && mZenMuted == zenMuted) return;
@@ -179,22 +183,24 @@ public class VolumeSeekBarPreference extends SeekBarPreference {
                     mListener.onUpdateMuteState();
                 }
             }
+
             @Override
-            public void onStartTrackingTouch(SeekBarVolumizer sbv) {
+            public void onStartTrackingTouch(SliderVolumizer sliderVolumizer) {
                 if (mCallback != null) {
-                    mCallback.onStartTrackingTouch(sbv);
+                    mCallback.onStartTrackingTouch(sliderVolumizer);
                 }
                 mJankMonitor.begin(InteractionJankMonitor.Configuration.Builder
-                        .withView(CUJ_SETTINGS_SLIDER, mSeekBar)
+                        .withView(CUJ_SETTINGS_SLIDER, getSlider())
                         .setTag(getKey()));
             }
+
             @Override
-            public void onStopTrackingTouch(SeekBarVolumizer sbv) {
+            public void onStopTrackingTouch(SliderVolumizer sbv) {
                 mJankMonitor.end(CUJ_SETTINGS_SLIDER);
             }
         };
         final Uri sampleUri = mStream == AudioManager.STREAM_MUSIC ? getMediaVolumeUri() : null;
-        mVolumizer = mSeekBarVolumizerFactory.create(mStream, sampleUri, sbvc);
+        mVolumizer = mSliderVolumizerFactory.create(mStream, sampleUri, sbvc);
         mVolumizer.start();
     }
 
@@ -262,12 +268,12 @@ public class VolumeSeekBarPreference extends SeekBarPreference {
         updateSuppressionText();
     }
 
-    protected boolean isMuted() {
+    public boolean isMuted() {
         return mMuted && !mZenMuted;
     }
 
     protected void updateSuppressionText() {
-        if (mSuppressionTextView != null && mSeekBar != null) {
+        if (mSuppressionTextView != null && getSlider() != null) {
             mSuppressionTextView.setText(mSuppressionText);
             final boolean showSuppression = !TextUtils.isEmpty(mSuppressionText);
             mSuppressionTextView.setVisibility(showSuppression ? View.VISIBLE : View.GONE);
@@ -277,28 +283,29 @@ public class VolumeSeekBarPreference extends SeekBarPreference {
     /**
      * Update content description of title to improve talkback announcements.
      */
-    protected void updateContentDescription(CharSequence contentDescription) {
+    public void updateContentDescription(CharSequence contentDescription) {
         if (mTitle == null) return;
         mTitle.setContentDescription(contentDescription);
     }
 
-    protected void setAccessibilityLiveRegion(int mode) {
+    public void setAccessibilityLiveRegion(int mode) {
         if (mTitle == null) return;
         mTitle.setAccessibilityLiveRegion(mode);
     }
 
     public interface Callback {
-        void onSampleStarting(SeekBarVolumizer sbv);
+        void onSampleStarting(SliderVolumizer sliderVolumizer);
+
         void onStreamValueChanged(int stream, int progress);
 
         /**
          * Callback reporting that the seek bar is start tracking.
          */
-        void onStartTrackingTouch(SeekBarVolumizer sbv);
+        void onStartTrackingTouch(SliderVolumizer sliderVolumizer);
     }
 
     /**
-     * Listener to view updates in volumeSeekbarPreference.
+     * Listener to view updates in volumeSliderPreference.
      */
     public interface Listener {
 
