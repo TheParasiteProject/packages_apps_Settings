@@ -14477,8 +14477,6 @@ Data usage charges may apply.</string>
     <string name="supervision_settings_title">Parental controls</string>
     <!-- Description for Supervision settings menu entry [CHAR LIMIT=NONE] -->
     <string name="supervision_settings_summary">Content restrictions &amp; other limits</string>
-    <!-- Title of toggle to enable or disable device supervision [CHAR LIMIT=60] -->
-    <string name="device_supervision_switch_title">Use device supervision</string>
     <!-- Description of device supervision toggle when PIN has never been set up [CHAR LIMIT=NONE] -->
     <string name="device_supervision_switch_no_pin_summary">Set up PIN</string>
     <!-- Description of device supervision toggle when PIN is set up but supervision is not enabled [CHAR LIMIT=NONE] -->
