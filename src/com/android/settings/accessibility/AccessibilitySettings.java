@@ -189,8 +189,9 @@ public class AccessibilitySettings extends BaseSupportFragment implements
 
     @Override
     protected String getDisabilitySupportUrl() {
-        // TODO(b/419387108): Use FeatureProvider to give URI customization
-        return "https://support.google.com/accessibility?p=android-A11Y_setting";
+        return FeatureFactory.getFeatureFactory()
+                .getAccessibilityDisabilitySupportFeatureProvider()
+                .getUrl();
     }
 
     @Override
