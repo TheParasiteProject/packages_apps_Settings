@@ -15,11 +15,18 @@
  */
 package com.android.settings.supervision
 
+import android.app.role.RoleManager
+import android.app.role.RoleManager.ROLE_SUPERVISION
 import android.app.supervision.SupervisionManager
 import android.os.Bundle
+import android.os.UserHandle
 import android.util.Log
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.lifecycleScope
 import com.android.settingslib.supervision.SupervisionLog.TAG
+import kotlin.coroutines.suspendCoroutine
+import kotlinx.coroutines.launch
 
 /**
  * Activity for enabling device supervision.
@@ -31,30 +38,49 @@ class EnableSupervisionActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO(b/418754198): Check allowlist of packages that can call this activity.
-        if (!isCallerSystemSupervisionRoleHolder()) {
-            Log.w(TAG, "Caller is not the system supervision role holder. Finishing activity.")
+        val packageName = callingPackage
+        val userHandle = supervisingUserHandle
+        if (packageName == null || userHandle == null) {
+            Log.w(TAG, "Calling package or user handle are null. Finishing activity.")
             setResult(RESULT_CANCELED)
             finish()
             return
         }
 
-        val supervisionManager = getSystemService(SupervisionManager::class.java)
-        if (supervisionManager == null) {
-            Log.e(TAG, "SupervisionManager is null. Finishing activity.")
-            setResult(RESULT_CANCELED)
+        lifecycleScope.launch {
+            if (grantSupervisionRole(packageName, userHandle)) {
+                val supervisionManager = getSystemService(SupervisionManager::class.java)
+                if (supervisionManager == null) {
+                    Log.w(TAG, "SupervisionManager is null. Finishing activity.")
+                    setResult(RESULT_CANCELED)
+                }
+                supervisionManager.isSupervisionEnabled = true
+                setResult(RESULT_OK)
+            } else {
+                Log.w(TAG, "Caller cannot enable supervision. Finishing activity.")
+                setResult(RESULT_CANCELED)
+            }
             finish()
-            return
         }
-
-        // TODO(b/418754390): Grant the regular SUPERVISION role to the requester.
-
-        supervisionManager.setSupervisionEnabled(true)
-        setResult(RESULT_OK)
-        finish()
     }
 
-    private fun isCallerSystemSupervisionRoleHolder(): Boolean {
-        return callingPackage == supervisionPackageName
+    suspend fun grantSupervisionRole(packageName: String, userHandle: UserHandle): Boolean {
+        val executor = ContextCompat.getMainExecutor(this)
+        val roleManager = getSystemService(RoleManager::class.java)
+        if (roleManager == null) {
+          Log.w(TAG, "RoleManager is null. Finishing activity.")
+          return false
+        }
+        return suspendCoroutine  { continuation ->
+            roleManager.addRoleHolderAsUser(
+                ROLE_SUPERVISION,
+                packageName,
+                RoleManager.MANAGE_HOLDERS_FLAG_DONT_KILL_APP,
+                userHandle,
+                executor
+            ) { isSuccessful ->
+                continuation.resumeWith(Result.success(isSuccessful))
+            }
+        }
     }
 }

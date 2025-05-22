@@ -16,31 +16,38 @@
 package com.android.settings.supervision
 
 import android.app.Activity
-import android.app.role.RoleManager.ROLE_SYSTEM_SUPERVISION
+import android.app.role.RoleManager
 import android.app.supervision.SupervisionManager
 import android.content.Context
-import androidx.test.core.app.ApplicationProvider
+import android.content.pm.UserInfo
+import android.os.UserManager
+import android.os.UserManager.USER_TYPE_PROFILE_SUPERVISING
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
+import java.util.function.Consumer
+import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.kotlin.any
+import org.mockito.kotlin.argumentCaptor
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.verify
 import org.mockito.kotlin.verifyNoInteractions
+import org.mockito.kotlin.whenever
 import org.robolectric.Robolectric
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.android.controller.ActivityController
 import org.robolectric.shadow.api.Shadow
 import org.robolectric.shadows.ShadowActivity
 import org.robolectric.shadows.ShadowContextImpl
-import org.robolectric.shadows.ShadowRoleManager
+
 
 @RunWith(AndroidJUnit4::class)
 class EnableSupervisionActivityTest {
     private val mockSupervisionManager = mock<SupervisionManager>()
-    private val context = ApplicationProvider.getApplicationContext<Context>()
-    private val currentUser = context.user
+    private val mockRoleManager = mock<RoleManager>()
+    private val mockUserManager = mock<UserManager>()
 
     private lateinit var mActivity: EnableSupervisionActivity
     private lateinit var mActivityController: ActivityController<EnableSupervisionActivity>
@@ -50,8 +57,6 @@ class EnableSupervisionActivityTest {
 
     @Before
     fun setUp() {
-        ShadowRoleManager.reset()
-
         // Note, we have to use ActivityController (instead of ActivityScenario) in order to access
         // the activity before it is created, so we can set up various mocked responses before they
         // are referenced in onCreate.
@@ -62,28 +67,54 @@ class EnableSupervisionActivityTest {
         shadowActivity.setCallingPackage(callingPackage)
         Shadow.extract<ShadowContextImpl>(mActivity.baseContext).apply {
             setSystemService(Context.SUPERVISION_SERVICE, mockSupervisionManager)
+            setSystemService(Context.ROLE_SERVICE, mockRoleManager)
+            setSystemService(Context.USER_SERVICE,  mockUserManager)
         }
     }
 
     @Test
-    fun onCreate_callerHasSupervisionRole_EnablesSupervision() {
-        ShadowRoleManager.addRoleHolder(ROLE_SYSTEM_SUPERVISION, callingPackage, currentUser)
+    fun onCreate_callerAcquiredSupervisionRole_EnablesSupervision() = runBlocking {
+        whenever(mockUserManager.users).thenReturn(listOf(SUPERVISING_USER_INFO))
 
         mActivityController.setup()
 
+        val captor = argumentCaptor<Consumer<Boolean>>()
+        verify(mockRoleManager).addRoleHolderAsUser(
+            any(), any(), any(), any(), any(), captor.capture())
+        captor.firstValue.accept(true)
+
         verify(mockSupervisionManager).setSupervisionEnabled(true)
+
         assertThat(shadowActivity.resultCode).isEqualTo(Activity.RESULT_OK)
         assertThat(mActivity.isFinishing).isTrue()
     }
 
     @Test
-    fun onCreate_callerWithoutSupervisionRole_doesNotEnableSupervision() {
-        ShadowRoleManager.addRoleHolder(ROLE_SYSTEM_SUPERVISION, "com.other.package", currentUser)
+    fun onCreate_callerDoesNotAcquireSupervisionRole_DoesNotEnableSupervision()
+            = runBlocking {
+        whenever(mockUserManager.users).thenReturn(listOf(SUPERVISING_USER_INFO))
 
         mActivityController.setup()
 
+        val captor = argumentCaptor<Consumer<Boolean>>()
+        verify(mockRoleManager).addRoleHolderAsUser(
+            any(), any(), any(), any(), any(), captor.capture())
+        captor.firstValue.accept(false)
         verifyNoInteractions(mockSupervisionManager)
+
         assertThat(shadowActivity.resultCode).isEqualTo(Activity.RESULT_CANCELED)
         assertThat(mActivity.isFinishing).isTrue()
+    }
+
+    private companion object {
+        const val SUPERVISING_USER_ID = 5
+        val SUPERVISING_USER_INFO =
+            UserInfo(
+                SUPERVISING_USER_ID,
+                /* name */ "supervising",
+                /* iconPath */ "",
+                /* flags */ 0,
+                USER_TYPE_PROFILE_SUPERVISING,
+            )
     }
 }
