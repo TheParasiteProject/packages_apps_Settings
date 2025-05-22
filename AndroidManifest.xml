@@ -2832,6 +2832,17 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".supervision.EnableSupervisionActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Transparent"
+            android:exported="true"
+            android:featureFlag="android.app.supervision.flags.supervision_manager_apis">
+            <intent-filter>
+                <action android:name="android.app.supervision.action.ENABLE_SUPERVISION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".supervision.SetupSupervisionActivity"
             android:excludeFromRecents="true"
             android:exported="false" />
