@@ -542,6 +542,14 @@
                 android:value="@string/menu_key_display"/>
         </activity>
 
+        <activity
+            android:name=".display.AmbientDisplayAlwaysOnActivity"
+            android:exported="true">
+            <meta-data
+                android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                android:value="@string/menu_key_display" />
+        </activity>
+
         <activity android:name=".Settings$ScreenTimeoutActivity"
                   android:label="@string/screen_timeout"
                   android:exported="true">

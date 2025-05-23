@@ -23,6 +23,7 @@ import android.os.SystemProperties
 import android.os.UserHandle
 import android.os.UserManager
 import com.android.settings.CatalystFragment
+import com.android.settings.CatalystSettingsActivity
 import com.android.settings.R
 import com.android.settings.contract.KEY_AMBIENT_DISPLAY_ALWAYS_ON
 import com.android.settings.core.PreferenceScreenMixin
@@ -34,6 +35,7 @@ import com.android.settings.display.ambient.AmbientWallpaperOptionsCategory
 import com.android.settings.display.ambient.AmbientWallpaperPreference
 import com.android.settings.metrics.PreferenceActionMetricsProvider
 import com.android.settings.restriction.PreferenceRestrictionMixin
+import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.PrimarySwitchPreferenceBinding
 import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.datastore.SettingsSecureStore
@@ -41,6 +43,7 @@ import com.android.settingslib.metadata.BooleanValuePreference
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.metadata.PreferenceLifecycleProvider
+import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.PreferenceSummaryProvider
 import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.ReadWritePermit
@@ -55,10 +58,10 @@ import com.android.systemui.shared.Flags.ambientAod
  */
 @ProvidePreferenceScreen(AmbientDisplayAlwaysOnPreferenceScreen.KEY)
 open class AmbientDisplayAlwaysOnPreferenceScreen :
-    BooleanValuePreference,
-    PreferenceActionMetricsProvider,
     PreferenceScreenMixin,
+    BooleanValuePreference,
     PrimarySwitchPreferenceBinding,
+    PreferenceActionMetricsProvider,
     PreferenceAvailabilityProvider,
     PreferenceRestrictionMixin,
     PreferenceLifecycleProvider,
@@ -119,6 +122,13 @@ open class AmbientDisplayAlwaysOnPreferenceScreen :
 
     override fun fragmentClass() = AmbientPreferenceFragment::class.java
 
+    override fun isIndexable(context: Context) = true
+
+    override fun hasCompleteHierarchy() = true
+
+    override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?) =
+        makeLaunchIntent(context, AmbientDisplayAlwaysOnActivity::class.java, metadata?.key)
+
     override fun getPreferenceHierarchy(context: Context) =
         preferenceHierarchy(context, this) {
             +AmbientDisplayTopIntroPreference()
@@ -148,6 +158,12 @@ open class AmbientDisplayAlwaysOnPreferenceScreen :
 }
 
 // LINT.ThenChange(AmbientDisplayAlwaysOnPreferenceController.java)
+
+class AmbientDisplayAlwaysOnActivity :
+    CatalystSettingsActivity(
+        AmbientDisplayAlwaysOnPreferenceScreen.KEY,
+        AmbientPreferenceFragment::class.java,
+    )
 
 class AmbientPreferenceFragment : CatalystFragment() {
     override fun getPreferenceScreenBindingKey(context: Context): String {
