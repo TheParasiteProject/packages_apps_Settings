@@ -324,7 +324,12 @@ class DisplayTopologyPreference(val injector: ConnectedDisplayInjector) :
     private fun processDisplayBoundsMirroringMode(
         logicalDisplaySizeFetcher: LogicalDisplaySizeFetcher
     ): List<Pair<Int, RectF>> {
-        val displayIds = injector.getAllDisplayIds().sortedBy { it }
+        val displayIds =
+            injector
+                .getDisplays()
+                .filter { it.isEnabled == DisplayIsEnabled.YES }
+                .map { it.id }
+                .sortedBy { it }
 
         val bounds = mutableListOf<Pair<Int, RectF>>()
         val mirroringDiagonalStackOffsetPx =

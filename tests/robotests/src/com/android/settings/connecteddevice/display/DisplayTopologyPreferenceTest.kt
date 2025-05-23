@@ -27,6 +27,7 @@ import android.provider.Settings
 import android.util.DisplayMetrics
 import android.util.Size
 import android.view.Display.DEFAULT_DISPLAY
+import android.view.Display.Mode
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -85,8 +86,20 @@ class DisplayTopologyPreferenceTest {
             return displaysSize[displayId]
         }
 
-        override fun getAllDisplayIds(): List<Int> {
-            return displaysSize.keys.toList()
+        override fun getDisplays(): List<DisplayDevice> {
+            return displaysSize
+                .map { it ->
+                    val mode = Mode(it.value.width, it.value.height, 60f)
+                    DisplayDevice(
+                        it.key,
+                        "HDMI",
+                        mode,
+                        listOf(mode),
+                        /* isEnabled= */ DisplayIsEnabled.YES,
+                        /* isConnectedDisplay= */ true,
+                    )
+                }
+                .toList()
         }
 
         override fun registerTopologyListener(listener: Consumer<DisplayTopology>) {
