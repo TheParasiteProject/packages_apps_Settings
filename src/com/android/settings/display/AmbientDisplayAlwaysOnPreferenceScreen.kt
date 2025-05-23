@@ -22,6 +22,7 @@ import android.hardware.display.AmbientDisplayConfiguration
 import android.os.SystemProperties
 import android.os.UserHandle
 import android.os.UserManager
+import com.android.internal.R.bool.config_dozeSupportsAodWallpaper
 import com.android.settings.CatalystFragment
 import com.android.settings.CatalystSettingsActivity
 import com.android.settings.R
@@ -31,7 +32,6 @@ import com.android.settings.display.AmbientDisplayAlwaysOnPreferenceController.i
 import com.android.settings.display.ambient.AmbientDisplayMainSwitchPreference
 import com.android.settings.display.ambient.AmbientDisplayStorage
 import com.android.settings.display.ambient.AmbientDisplayTopIntroPreference
-import com.android.settings.display.ambient.AmbientWallpaperOptionsCategory
 import com.android.settings.display.ambient.AmbientWallpaperPreference
 import com.android.settings.metrics.PreferenceActionMetricsProvider
 import com.android.settings.restriction.PreferenceRestrictionMixin
@@ -41,6 +41,7 @@ import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.datastore.SettingsSecureStore
 import com.android.settingslib.metadata.BooleanValuePreference
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
+import com.android.settingslib.metadata.PreferenceCategory as Category
 import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.metadata.PreferenceLifecycleProvider
 import com.android.settingslib.metadata.PreferenceMetadata
@@ -57,7 +58,7 @@ import com.android.systemui.shared.Flags.ambientAod
  * subpage for additional related settings.
  */
 @ProvidePreferenceScreen(AmbientDisplayAlwaysOnPreferenceScreen.KEY)
-open class AmbientDisplayAlwaysOnPreferenceScreen :
+open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
     PreferenceScreenMixin,
     BooleanValuePreference,
     PrimarySwitchPreferenceBinding,
@@ -67,7 +68,7 @@ open class AmbientDisplayAlwaysOnPreferenceScreen :
     PreferenceLifecycleProvider,
     PreferenceSummaryProvider {
 
-    private val ambientWallpaperPreference = AmbientWallpaperPreference()
+    private val ambientWallpaperPreference = AmbientWallpaperPreference(context)
 
     override val title: Int
         get() = if (ambientAod()) R.string.doze_always_on_title2 else R.string.doze_always_on_title
@@ -105,8 +106,8 @@ open class AmbientDisplayAlwaysOnPreferenceScreen :
         context.getText(
             if (isAodSuppressedByBedtime(context)) {
                 R.string.aware_summary_when_bedtime_on
-            } else if (ambientWallpaperPreference.isAvailable(context)) {
-                if (ambientWallpaperPreference.isChecked(context)) {
+            } else if (context.isAmbientWallpaperOptionsAvailable) {
+                if (ambientWallpaperPreference.isChecked()) {
                     R.string.doze_always_on_summary_with_wallpaper
                 } else {
                     R.string.doze_always_on_summary_without_wallpaper
@@ -133,7 +134,11 @@ open class AmbientDisplayAlwaysOnPreferenceScreen :
         preferenceHierarchy(context, this) {
             +AmbientDisplayTopIntroPreference()
             +AmbientDisplayMainSwitchPreference()
-            +AmbientWallpaperOptionsCategory() += { +ambientWallpaperPreference }
+            if (context.isAmbientWallpaperOptionsAvailable) {
+                +Category("ambient_wallpaperGroup", R.string.doze_always_on_wallpaper_options) += {
+                    +ambientWallpaperPreference
+                }
+            }
         }
 
     override fun storage(context: Context): KeyValueStore = AmbientDisplayStorage(context)
@@ -154,6 +159,9 @@ open class AmbientDisplayAlwaysOnPreferenceScreen :
     companion object {
         const val KEY = "ambient_display_always_on_screen"
         const val PROP_AWARE_AVAILABLE = "ro.vendor.aware_available"
+
+        private val Context.isAmbientWallpaperOptionsAvailable: Boolean
+            get() = ambientAod() && resources.getBoolean(config_dozeSupportsAodWallpaper)
     }
 }
 
