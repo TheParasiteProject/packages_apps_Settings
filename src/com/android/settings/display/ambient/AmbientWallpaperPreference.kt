@@ -18,49 +18,27 @@ package com.android.settings.display.ambient
 import android.content.Context
 import android.provider.Settings.Secure.DOZE_ALWAYS_ON_WALLPAPER_ENABLED
 import com.android.settings.R
-import com.android.settings.display.AmbientDisplayAlwaysOnPreference
 import com.android.settingslib.datastore.KeyValueStore
-import com.android.settingslib.datastore.KeyValueStoreDelegate
-import com.android.settingslib.datastore.KeyedObserver
 import com.android.settingslib.datastore.SettingsSecureStore
 import com.android.settingslib.metadata.SwitchPreference
 
-class AmbientWallpaperPreference :
+class AmbientWallpaperPreference(context: Context) :
     SwitchPreference(
         KEY,
         R.string.doze_always_on_wallpaper_title,
         R.string.doze_always_on_wallpaper_description,
     ) {
 
-    override fun storage(context: Context): KeyValueStore =
-        Storage(SettingsSecureStore.get(context))
+    private val dataStore = context.dataStore
 
-    fun isChecked(context: Context) = storage(context).getBoolean(KEY)!!
+    override fun storage(context: Context) = dataStore
 
-    @Suppress("UNCHECKED_CAST")
-    private class Storage(private val settingsStore: KeyValueStore) :
-        KeyValueStoreDelegate, KeyedObserver<String> {
-
-        override val keyValueStoreDelegate
-            get() = settingsStore
-
-        override fun contains(key: String) = settingsStore.contains(key)
-
-        override fun <T : Any> getDefaultValue(key: String, valueType: Class<T>) = true as T
-
-        override fun <T : Any> getValue(key: String, valueType: Class<T>) =
-            settingsStore.getValue(key, valueType) ?: getDefaultValue(key, valueType)
-
-        override fun <T : Any> setValue(key: String, valueType: Class<T>, value: T?) =
-            settingsStore.setValue(key, valueType, value)
-
-        override fun onKeyChanged(key: String, reason: Int) {
-            notifyChange(AmbientDisplayAlwaysOnPreference.KEY, reason)
-            notifyChange(AmbientDisplayMainSwitchPreference.KEY, reason)
-        }
-    }
+    fun isChecked() = dataStore.getBoolean(KEY)!!
 
     companion object {
-        val KEY = DOZE_ALWAYS_ON_WALLPAPER_ENABLED
+        const val KEY = DOZE_ALWAYS_ON_WALLPAPER_ENABLED
+
+        private val Context.dataStore: KeyValueStore
+            get() = SettingsSecureStore.get(this).apply { setDefaultValue(KEY, true) }
     }
 }

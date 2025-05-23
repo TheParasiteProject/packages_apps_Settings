@@ -58,7 +58,7 @@ import com.android.systemui.shared.Flags.ambientAod
  * subpage for additional related settings.
  */
 @ProvidePreferenceScreen(AmbientDisplayAlwaysOnPreferenceScreen.KEY)
-open class AmbientDisplayAlwaysOnPreferenceScreen :
+open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
     PreferenceScreenMixin,
     BooleanValuePreference,
     PrimarySwitchPreferenceBinding,
@@ -68,7 +68,7 @@ open class AmbientDisplayAlwaysOnPreferenceScreen :
     PreferenceLifecycleProvider,
     PreferenceSummaryProvider {
 
-    private val ambientWallpaperPreference = AmbientWallpaperPreference()
+    private val ambientWallpaperPreference = AmbientWallpaperPreference(context)
 
     override val title: Int
         get() = if (ambientAod()) R.string.doze_always_on_title2 else R.string.doze_always_on_title
@@ -107,7 +107,7 @@ open class AmbientDisplayAlwaysOnPreferenceScreen :
             if (isAodSuppressedByBedtime(context)) {
                 R.string.aware_summary_when_bedtime_on
             } else if (context.isAmbientWallpaperOptionsAvailable) {
-                if (ambientWallpaperPreference.isChecked(context)) {
+                if (ambientWallpaperPreference.isChecked()) {
                     R.string.doze_always_on_summary_with_wallpaper
                 } else {
                     R.string.doze_always_on_summary_without_wallpaper
