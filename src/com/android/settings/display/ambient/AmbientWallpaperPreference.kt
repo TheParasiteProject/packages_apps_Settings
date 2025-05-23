@@ -17,32 +17,25 @@ package com.android.settings.display.ambient
 
 import android.content.Context
 import android.provider.Settings.Secure.DOZE_ALWAYS_ON_WALLPAPER_ENABLED
-import com.android.internal.R as InternalR
 import com.android.settings.R
 import com.android.settings.display.AmbientDisplayAlwaysOnPreference
 import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.datastore.KeyValueStoreDelegate
 import com.android.settingslib.datastore.KeyedObserver
 import com.android.settingslib.datastore.SettingsSecureStore
-import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.SwitchPreference
-import com.android.systemui.shared.Flags.ambientAod
 
 class AmbientWallpaperPreference :
     SwitchPreference(
         KEY,
         R.string.doze_always_on_wallpaper_title,
         R.string.doze_always_on_wallpaper_description,
-    ),
-    PreferenceAvailabilityProvider {
-
-    override fun isAvailable(context: Context): Boolean =
-        ambientAod() && context.resources.getBoolean(InternalR.bool.config_dozeSupportsAodWallpaper)
+    ) {
 
     override fun storage(context: Context): KeyValueStore =
         Storage(SettingsSecureStore.get(context))
 
-    fun isChecked(context: Context) = isAvailable(context) && storage(context).getBoolean(KEY)!!
+    fun isChecked(context: Context) = storage(context).getBoolean(KEY)!!
 
     @Suppress("UNCHECKED_CAST")
     private class Storage(private val settingsStore: KeyValueStore) :
