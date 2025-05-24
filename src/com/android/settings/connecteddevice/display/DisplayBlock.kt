@@ -16,84 +16,96 @@
 
 package com.android.settings.connecteddevice.display
 
-import com.android.settings.R
-
-import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.Color
+import android.graphics.Outline
 import android.graphics.PointF
 import android.util.Log
 import android.view.SurfaceControl
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.view.View
+import android.view.ViewOutlineProvider
 import android.widget.FrameLayout
-
 import androidx.annotation.VisibleForTesting
+import com.android.settings.R
 
 /** Represents a draggable block in the topology pane. */
 class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injector.context!!) {
     @VisibleForTesting
-    val mHighlightPx = context.resources.getDimensionPixelSize(
-            R.dimen.display_block_highlight_width)
+    val highlightPx = context.resources.getDimensionPixelSize(R.dimen.display_block_highlight_width)
+    private val cornerRadiusPx =
+        context.resources.getDimensionPixelSize(R.dimen.display_block_corner_radius)
+    private val displayBlockPaddingPx =
+        context.resources.getDimensionPixelSize(R.dimen.display_block_padding)
+    private val paneBgColor = context.resources.getColor(R.color.display_topology_background_color)
 
-    private var mDisplayId: Int? = null
+    // This doesn't necessarily refer to the actual display this block represents. In case of
+    // mirroring, it will be the id of the mirrored display
+    private var displayIdToShowWallpaper: Int? = null
 
     /** Scale of the mirrored wallpaper to the actual wallpaper size. */
-    private var mSurfaceScale: Float? = null
-
-    val displayId: Int?
-        get() = mDisplayId
+    private var surfaceScale: Float? = null
 
     // These are surfaces which must be removed from the display block hierarchy and released once
     // the new surface is put in place. This list can have more than one item because we may get
     // two reset calls before we get a single surfaceChange callback.
-    private val mOldSurfaces = mutableListOf<SurfaceControl>()
-    private var mWallpaperSurface: SurfaceControl? = null
+    private val oldSurfaces = mutableListOf<SurfaceControl>()
+    private var wallpaperSurface: SurfaceControl? = null
 
-    private val mUpdateSurfaceView = Runnable { updateSurfaceView() }
+    private val updateSurfaceView = Runnable { updateSurfaceView() }
 
-    @VisibleForTesting fun updateSurfaceView() {
-        val displayId = mDisplayId ?: return
+    @VisibleForTesting
+    fun updateSurfaceView() {
+        val displayId = displayIdToShowWallpaper ?: return
 
         if (parent == null) {
             Log.i(TAG, "View for display $displayId has no parent - cancelling update")
             return
         }
 
-        var surface = mWallpaperSurface
+        var surface = wallpaperSurface
         if (surface == null) {
             surface = injector.wallpaper(displayId)
             if (surface == null) {
-                injector.handler.postDelayed(mUpdateSurfaceView, /* delayMillis= */ 500)
+                injector.handler.postDelayed(updateSurfaceView, /* delayMillis= */ 500)
                 return
             }
-            mWallpaperSurface = surface
+            wallpaperSurface = surface
         }
 
-        val surfaceScale = mSurfaceScale ?: return
-        injector.updateSurfaceView(mOldSurfaces, surface, mWallpaperView, surfaceScale)
-        mOldSurfaces.clear()
+        val surfaceScale = surfaceScale ?: return
+        injector.updateSurfaceView(oldSurfaces, surface, wallpaperView, surfaceScale)
+        oldSurfaces.clear()
     }
 
-    private val mHolderCallback = object : SurfaceHolder.Callback {
-        override fun surfaceCreated(h: SurfaceHolder) {}
+    private val holderCallback =
+        object : SurfaceHolder.Callback {
+            override fun surfaceCreated(h: SurfaceHolder) {}
 
-        override fun surfaceChanged(h: SurfaceHolder, format: Int, newWidth: Int, newHeight: Int) {
-            updateSurfaceView()
+            override fun surfaceChanged(
+                h: SurfaceHolder,
+                format: Int,
+                newWidth: Int,
+                newHeight: Int,
+            ) {
+                updateSurfaceView()
+            }
+
+            override fun surfaceDestroyed(h: SurfaceHolder) {}
         }
 
-        override fun surfaceDestroyed(h: SurfaceHolder) {}
-    }
-
-    val mWallpaperView = SurfaceView(context)
-    private val mBackgroundView = View(context).apply {
-        background = context.getDrawable(R.drawable.display_block_background)
-    }
+    val wallpaperView = SurfaceView(context)
     @VisibleForTesting
-    val mSelectionMarkerView = View(context).apply {
-        background = context.getDrawable(R.drawable.display_block_selection_marker_background)
-    }
+    val selectionMarkerView =
+        View(context).apply {
+            background = context.getDrawable(R.drawable.display_block_selection_marker_background)
+        }
+
+    val roundedCornerOutline =
+        object : ViewOutlineProvider() {
+            override fun getOutline(view: View, outline: Outline) {
+                outline.setRoundRect(0, 0, view.width, view.height, cornerRadiusPx.toFloat())
+            }
+        }
 
     init {
         isScrollContainer = false
@@ -103,11 +115,14 @@ class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injecto
         // Prevents shadow from appearing around edge of button.
         stateListAnimator = null
 
-        addView(mWallpaperView)
-        addView(mBackgroundView)
-        addView(mSelectionMarkerView)
+        addView(wallpaperView)
+        addView(selectionMarkerView)
 
-        mWallpaperView.holder.addCallback(mHolderCallback)
+        wallpaperView.holder.addCallback(holderCallback)
+
+        setBackgroundColor(paneBgColor)
+        outlineProvider = roundedCornerOutline
+        clipToOutline = true
     }
 
     /**
@@ -115,14 +130,14 @@ class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injecto
      * highlight border.
      */
     var positionInPane: PointF
-        get() = PointF(x + mHighlightPx, y + mHighlightPx)
+        get() = PointF(x + highlightPx, y + highlightPx)
         set(value: PointF) {
-            x = value.x - mHighlightPx
-            y = value.y - mHighlightPx
+            x = value.x - highlightPx
+            y = value.y - highlightPx
         }
 
     fun setHighlighted(value: Boolean) {
-        mSelectionMarkerView.visibility = if (value) View.VISIBLE else View.INVISIBLE
+        selectionMarkerView.visibility = if (value) VISIBLE else INVISIBLE
 
         // The highlighted block must be draw last so that its highlight shows over the borders of
         // other displays.
@@ -132,29 +147,34 @@ class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injecto
     /**
      * Sets position and size of the block given coordinates in pane space.
      *
-     * @param displayId ID of display this block represents, needed for fetching wallpaper
+     * @param displayIdToShowWallpaper ID of the display whose wallpaper would be projected on this
+     *  display block.
      * @param topLeft coordinates of top left corner of the block, not including highlight border
      * @param bottomRight coordinates of bottom right corner of the block, not including highlight
-     *                    border
+     *   border
      * @param surfaceScale scale in pixels of the size of the wallpaper mirror to the actual
-     *                     wallpaper on the screen - should be less than one to indicate scaling to
-     *                     smaller size
+     *   wallpaper on the screen - should be less than one to indicate scaling to smaller size
      */
-    fun reset(displayId: Int, topLeft: PointF, bottomRight: PointF, surfaceScale: Float) {
-        mWallpaperSurface?.let { mOldSurfaces.add(it) }
-        injector.handler.removeCallbacks(mUpdateSurfaceView)
-        mWallpaperSurface = null
+    fun reset(
+        displayIdToShowWallpaper: Int,
+        topLeft: PointF,
+        bottomRight: PointF,
+        surfaceScale: Float,
+    ) {
+        wallpaperSurface?.let { oldSurfaces.add(it) }
+        injector.handler.removeCallbacks(updateSurfaceView)
+        wallpaperSurface = null
         setHighlighted(false)
         positionInPane = topLeft
 
-        mDisplayId = displayId
-        mSurfaceScale = surfaceScale
+        this.displayIdToShowWallpaper = displayIdToShowWallpaper
+        this.surfaceScale = surfaceScale
 
         val newWidth = (bottomRight.x - topLeft.x).toInt()
         val newHeight = (bottomRight.y - topLeft.y).toInt()
 
-        val paddedWidth = newWidth + 2*mHighlightPx
-        val paddedHeight = newHeight + 2*mHighlightPx
+        val paddedWidth = newWidth + 2 * highlightPx
+        val paddedHeight = newHeight + 2 * highlightPx
 
         if (width == paddedWidth && height == paddedHeight) {
             // Will not receive a surfaceChanged callback, so in case the wallpaper is different,
@@ -171,17 +191,21 @@ class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injecto
 
         // The highlight is the outermost border. The highlight is shown outside of the parent
         // FrameLayout so that it consumes the padding between the blocks.
-        mWallpaperView.layoutParams.let {
-            it.width = newWidth
-            it.height = newHeight
+        wallpaperView.layoutParams.let {
+            it.width = newWidth - 2 * displayBlockPaddingPx
+            it.height = newHeight - 2 * displayBlockPaddingPx
             if (it is MarginLayoutParams) {
-                it.leftMargin = mHighlightPx
-                it.topMargin = mHighlightPx
-                it.bottomMargin = mHighlightPx
-                it.topMargin = mHighlightPx
+                val totalPaddingPx = highlightPx + displayBlockPaddingPx
+                it.leftMargin = totalPaddingPx
+                it.topMargin = totalPaddingPx
+                it.bottomMargin = totalPaddingPx
+                it.topMargin = totalPaddingPx
             }
-            mWallpaperView.layoutParams = it
+            wallpaperView.layoutParams = it
         }
+
+        wallpaperView.outlineProvider = roundedCornerOutline
+        wallpaperView.clipToOutline = true
 
         // The other two child views are MATCH_PARENT by default so will resize to fill up the
         // FrameLayout.

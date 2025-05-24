@@ -25,11 +25,13 @@ import static android.telephony.NetworkRegistrationInfo.SERVICE_TYPE_SMS;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.OutcomeReceiver;
 import android.os.PersistableBundle;
 import android.provider.Settings;
 import android.telephony.TelephonyCallback;
 import android.telephony.TelephonyManager;
 import android.telephony.satellite.NtnSignalStrength;
+import android.telephony.satellite.SatelliteAccessConfiguration;
 import android.telephony.satellite.SatelliteManager;
 import android.util.Log;
 
@@ -65,12 +67,28 @@ public class SatelliteSettingPreferenceController extends
     private Boolean mIsSatelliteEligible = null;
     private PersistableBundle mCarrierConfigs = new PersistableBundle();
     private PreferenceScreen mPreferenceScreen;
+    @VisibleForTesting
+    @Nullable
+    List<Integer> mTagIds = null;
 
     public SatelliteSettingPreferenceController(@NonNull Context context, @NonNull String key) {
         super(context, key);
         mCarrierConfigCache = CarrierConfigCache.getInstance(mContext);
         mSatelliteManager = mContext.getSystemService(SatelliteManager.class);
         mTelephonyManager = mContext.getSystemService(TelephonyManager.class);
+        if (mSatelliteManager != null) {
+            mSatelliteManager.requestSatelliteAccessConfigurationForCurrentLocation(
+                    context.getMainExecutor(),
+                    new OutcomeReceiver<>() {
+                        @Override
+                        public void onResult(@Nullable SatelliteAccessConfiguration result) {
+                            if (result == null) {
+                                return;
+                            }
+                            mTagIds = result.getTagIds();
+                        }
+                    });
+        }
     }
 
     /**
@@ -122,20 +140,16 @@ public class SatelliteSettingPreferenceController extends
 
     @Override
     public void onResume(@NonNull LifecycleOwner owner) {
-        if (com.android.settings.flags.Flags.satelliteOemSettingsUxMigration()) {
-            if (mTelephonyManager != null) {
-                mTelephonyManager.registerTelephonyCallback(mContext.getMainExecutor(),
-                        mCarrierRoamingNtnModeCallback);
-            }
+        if (mTelephonyManager != null) {
+            mTelephonyManager.registerTelephonyCallback(mContext.getMainExecutor(),
+                    mCarrierRoamingNtnModeCallback);
         }
     }
 
     @Override
     public void onPause(@NonNull LifecycleOwner owner) {
-        if (com.android.settings.flags.Flags.satelliteOemSettingsUxMigration()) {
-            if (mTelephonyManager != null) {
-                mTelephonyManager.unregisterTelephonyCallback(mCarrierRoamingNtnModeCallback);
-            }
+        if (mTelephonyManager != null) {
+            mTelephonyManager.unregisterTelephonyCallback(mCarrierRoamingNtnModeCallback);
         }
     }
 
@@ -159,7 +173,11 @@ public class SatelliteSettingPreferenceController extends
         super.updateState(preference);
         if (preference != null && preference.getKey().equals(getPreferenceKey())) {
             updateSummary(preference);
+            preference.setEnabled(
+                    SatelliteCarrierSettingUtils.isCarrierSatelliteRegionSupported(mContext,
+                            mTagIds, mTelephonyManager.getSimSpecificCarrierId()));
         }
+
     }
 
     @Override

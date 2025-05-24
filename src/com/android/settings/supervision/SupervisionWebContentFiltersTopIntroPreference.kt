@@ -16,14 +16,23 @@
 package com.android.settings.supervision
 
 import android.content.Context
-import com.android.settingslib.preference.PreferenceFragment
+import com.android.settings.R
+import com.android.settingslib.metadata.PreferenceMetadata
+import com.android.settingslib.preference.PreferenceBinding
+import com.android.settingslib.widget.TopIntroPreference
 
-/**
- * Fragment to display the Supervision PIN management page (Settings > Supervision > Manage PIN).
- *
- * See [SupervisionPinManagementScreen] for details on the page contents.
- */
-class SupervisionPinManagementFragment : PreferenceFragment() {
-    override fun getPreferenceScreenBindingKey(context: Context) =
-        SupervisionPinManagementScreen.KEY
+class SupervisionWebContentFiltersTopIntroPreference : PreferenceMetadata, PreferenceBinding {
+    override val key: String
+        get() = KEY
+
+    override val title: Int
+        get() = R.string.supervision_web_content_filters_top_intro
+
+    override fun createWidget(context: Context) = TopIntroPreference(context)
+
+    override fun isIndexable(context: Context) = false
+
+    companion object {
+        const val KEY = "supervision_web_content_filters_intro"
+    }
 }

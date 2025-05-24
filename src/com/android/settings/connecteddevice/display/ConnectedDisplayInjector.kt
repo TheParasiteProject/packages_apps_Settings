@@ -32,6 +32,7 @@ import android.os.RemoteException
 import android.os.SystemProperties
 import android.util.DisplayMetrics
 import android.util.Log
+import android.util.Size
 import android.view.Display
 import android.view.Display.INVALID_DISPLAY
 import android.view.DisplayInfo
@@ -132,6 +133,7 @@ open class ConnectedDisplayInjector(open val context: Context?) {
     }
 
     /**
+     * TODO(b/419742776): Unify this with #getAllDisplayIds
      * @return all displays including disabled.
      */
     open fun getConnectedDisplays(): List<DisplayDevice> {
@@ -149,6 +151,17 @@ open class ConnectedDisplayInjector(open val context: Context?) {
                 wrapDmDisplay(it, isEnabled)
             }
             .toList()
+    }
+
+    /**
+     * This method return all enabled display ids without further filtering
+     * TODO(b/419742776): Unify this with #getConnectedDisplays
+     *
+     * @see getConnectedDisplays to specifically fetch all connected displays
+     */
+    open fun getAllDisplayIds(): List<Int> {
+        val dm = displayManager ?: return emptyList()
+        return dm.getDisplays().map { it.displayId }.toList()
     }
 
     /**
@@ -288,6 +301,13 @@ open class ConnectedDisplayInjector(open val context: Context?) {
         } else {
             DisplayMetrics.DENSITY_DEFAULT
         }
+    }
+
+    open fun getLogicalSize(displayId: Int): Size? {
+        val display =  displayManager?.getDisplay(displayId)?: return null
+        val displayInfo = DisplayInfo()
+        display.getDisplayInfo(displayInfo)
+        return Size(displayInfo.logicalWidth, displayInfo.logicalHeight)
     }
 
     open fun registerTopologyListener(listener: Consumer<DisplayTopology>) {
