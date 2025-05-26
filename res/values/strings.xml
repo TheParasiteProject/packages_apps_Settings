@@ -5428,6 +5428,8 @@
     <string name="accessibility_send_feedback_title">Send feedback</string>
     <!-- The menu item to start the survey process for the accessibility [CHAR LIMIT=30] -->
     <string name="accessibility_send_survey_title">Rate us</string>
+    <!-- The menu item to start the disability support for the accessibility [CHAR LIMIT=30] -->
+    <string name="accessibility_disability_support_title">Contact Google Disability Support</string>
     <!-- Channel name for the accessibility survey notification. [CHAR LIMIT=50] -->
     <string name="accessibility_send_survey_notification_channel">Accessibility Survey</string>
     <!-- Title of a survey notification about dark theme. [CHAR LIMIT=50] -->
