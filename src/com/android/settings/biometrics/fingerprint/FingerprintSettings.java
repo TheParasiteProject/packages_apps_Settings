@@ -478,8 +478,27 @@ public class FingerprintSettings extends SubSettings {
                 if (preference == null || findPreference(preference.getKey()) != null) {
                     continue;
                 }
-                if (preference instanceof PrimarySwitchIntentPreference) {
-                    preference.setOnPreferenceClickListener(this::onExtIntentPreferenceClick);
+                if (preference instanceof PrimarySwitchIntentPreference intentPref) {
+                    intentPref.setOnPreferenceClickListener(this::onExtIntentPreferenceClick);
+
+                    String resultKey = intentPref.getConfirmDialogFragmentResultKey();
+                    if (!TextUtils.isEmpty(resultKey)) {
+                        getChildFragmentManager().setFragmentResultListener(resultKey, this,
+                                (requestKey, result) ->
+                                        intentPref.processConfirmationDialogResult(result));
+                        intentPref.setOnPreferenceChangeListener((pref, newValue) -> {
+                            PrimarySwitchIntentPreference.ConfirmationDialogDetails details =
+                                    intentPref.getConfirmationDialogBeforeStateChange(newValue);
+                            if (details != null) {
+                                details.getFragment().show(getChildFragmentManager(),
+                                        details.getTag());
+                                return false;
+                            } else {
+                                // Change it directly
+                                return true;
+                            }
+                        });
+                    }
                 }
                 mExtPrefKeys.add(preference.getKey());
                 mFingerprintUnlockCategory.addPreference(preference);
