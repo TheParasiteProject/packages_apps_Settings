@@ -25,6 +25,7 @@ import android.hardware.display.DisplayTopology.TreeNode.POSITION_TOP
 import android.provider.Settings
 import android.util.DisplayMetrics
 import android.util.Size
+import android.view.Display.DEFAULT_DISPLAY
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -49,7 +50,7 @@ class DisplayTopologyPreferenceTest {
     val featureFlags = FakeFeatureFlagsImpl()
     val injector = TestInjector(context, featureFlags)
     val preference = DisplayTopologyPreference(injector)
-    val rootView = View.inflate(context, preference.layoutResource, /* parent= */ null)
+    val rootView = View.inflate(context, preference.layoutResource, /* root= */ null)
     val holder = PreferenceViewHolder.createInstanceForTests(rootView)
 
     init {
@@ -79,7 +80,7 @@ class DisplayTopologyPreferenceTest {
         override val densityDpi = DisplayMetrics.DENSITY_DEFAULT
 
         override fun getLogicalSize(displayId: Int): Size? {
-            return displaysSize.get(displayId)
+            return displaysSize[displayId]
         }
 
         override fun getAllDisplayIds(): List<Int> {
@@ -88,21 +89,19 @@ class DisplayTopologyPreferenceTest {
 
         override fun registerTopologyListener(listener: Consumer<DisplayTopology>) {
             if (topologyListener != null) {
-                throw IllegalStateException(
-                    "already have a listener registered: ${topologyListener}"
-                )
+                throw IllegalStateException("already have a listener registered: $topologyListener")
             }
             topologyListener = listener
         }
 
         override fun unregisterTopologyListener(listener: Consumer<DisplayTopology>) {
             if (topologyListener != listener) {
-                throw IllegalStateException("no such listener registered: ${listener}")
+                throw IllegalStateException("no such listener registered: $listener")
             }
             topologyListener = null
         }
 
-        override fun revealWallpaper(displayId: Int): RevealedWallpaper? {
+        override fun revealWallpaper(displayId: Int): RevealedWallpaper {
             val childView = View(context)
             val viewManager =
                 object : ViewManager {
@@ -129,17 +128,6 @@ class DisplayTopologyPreferenceTest {
         }
     }
 
-    @Test
-    fun disabledTopology() {
-        preference.onAttached()
-        preference.refreshPane()
-
-        assertThat(preference.paneContent.childCount).isEqualTo(0)
-        // TODO(b/352648432): update test when we show the main display even when
-        // a topology is not active.
-        assertThat(preference.topologyHint.text).isEqualTo("")
-    }
-
     /** Returns the bounds of the non-highlighting part of the block relative to the parent. */
     private fun virtualBounds(block: DisplayBlock): RectF {
         val d = block.highlightPx.toFloat()
@@ -153,57 +141,53 @@ class DisplayTopologyPreferenceTest {
     }
 
     private fun getPaneChildren(): List<DisplayBlock> =
-        (0..preference.paneContent.childCount - 1)
+        (0..<preference.paneContent.childCount)
             .map { preference.paneContent.getChildAt(it) as DisplayBlock }
             .toList()
 
-    fun setupSingleDisplay() {
-        val primaryId = 22
-
+    private fun setupSingleDisplay() {
         val root =
             DisplayTopology.TreeNode(
-                primaryId,
+                DISPLAY_ID_1,
                 DISPLAY_SIZE_1.width,
                 DISPLAY_SIZE_1.height,
-                /* logicalDensity= */ 160,
+                DISPLAY_DENSITY,
                 POSITION_LEFT,
                 /* offset= */ 0f,
             )
 
-        injector.topology = DisplayTopology(root, primaryId)
-        injector.displaysSize = mutableMapOf(Pair(primaryId, DISPLAY_SIZE_1))
+        injector.topology = DisplayTopology(root, DISPLAY_ID_1)
+        injector.displaysSize = mutableMapOf(Pair(DISPLAY_ID_1, DISPLAY_SIZE_1))
     }
 
-    fun setupTwoDisplays(childPosition: Int, childOffset: Float) {
-        val primaryId = 1
-
+    private fun setupTwoDisplays(childPosition: Int, childOffset: Float) {
         val child =
             DisplayTopology.TreeNode(
-                /* displayId= */ 42,
+                DISPLAY_ID_2,
                 DISPLAY_SIZE_2.width,
                 DISPLAY_SIZE_2.height,
-                /* logicalDensity= */ 160,
+                DISPLAY_DENSITY,
                 childPosition,
                 childOffset,
             )
         val root =
             DisplayTopology.TreeNode(
-                primaryId,
+                DISPLAY_ID_1,
                 DISPLAY_SIZE_1.width,
                 DISPLAY_SIZE_1.height,
-                /* logicalDensity= */ 160,
+                DISPLAY_DENSITY,
                 POSITION_LEFT,
                 /* offset= */ 0f,
             )
         root.addChild(child)
 
-        injector.topology = DisplayTopology(root, primaryId)
+        injector.topology = DisplayTopology(root, DISPLAY_ID_1)
         injector.displaysSize =
-            mutableMapOf(Pair(primaryId, DISPLAY_SIZE_1), Pair(42, DISPLAY_SIZE_2))
+            mutableMapOf(Pair(DISPLAY_ID_1, DISPLAY_SIZE_1), Pair(DISPLAY_ID_2, DISPLAY_SIZE_2))
     }
 
     /** Uses the topology in the injector to populate and prepare the pane for interaction. */
-    fun preparePane() {
+    private fun preparePane() {
         // This layoutParams needs to be non-null for the global layout handler.
         preference.paneHolder.layoutParams =
             FrameLayout.LayoutParams(/* width= */ 640, /* height= */ 480)
@@ -221,7 +205,7 @@ class DisplayTopologyPreferenceTest {
      * Sets up a simple topology in the pane with two displays. Returns the left-hand display and
      * right-hand display in order in a list. The right-hand display is the root.
      */
-    fun setupPaneWithTwoDisplays(
+    private fun setupPaneWithTwoDisplays(
         childPosition: Int = POSITION_LEFT,
         childOffset: Float = 42f,
     ): List<DisplayBlock> {
@@ -236,17 +220,58 @@ class DisplayTopologyPreferenceTest {
         return if (paneChildren[0].x < paneChildren[1].x) paneChildren else paneChildren.reversed()
     }
 
-    fun assertSelected(block: DisplayBlock, expected: Boolean) {
+    private fun assertSelected(block: DisplayBlock, expected: Boolean) {
         val vis = if (expected) View.VISIBLE else View.INVISIBLE
         assertThat(block.selectionMarkerView.visibility).isEqualTo(vis)
     }
 
-    fun setMirroringMode(enable: Boolean) {
+    private fun setMirroringMode(enable: Boolean) {
         Settings.Secure.putInt(
             context.contentResolver,
             Settings.Secure.MIRROR_BUILT_IN_DISPLAY,
             if (enable) 1 else 0,
         )
+    }
+
+    private fun dragBlockWithOneMoveEvent(
+        block: DisplayBlock,
+        startTimeMs: Long,
+        endTimeMs: Long,
+        xDiff: Float,
+        yDiff: Float,
+    ) {
+        block.dispatchTouchEvent(
+            MotionEventBuilder.newBuilder()
+                .setAction(MotionEvent.ACTION_DOWN)
+                .setPointer(0f, 0f)
+                .setEventTime(startTimeMs)
+                .build()
+        )
+        block.dispatchTouchEvent(
+            MotionEventBuilder.newBuilder()
+                .setAction(MotionEvent.ACTION_MOVE)
+                .setPointer(xDiff, yDiff)
+                .setEventTime((startTimeMs + endTimeMs) / 2)
+                .build()
+        )
+        block.dispatchTouchEvent(
+            MotionEventBuilder.newBuilder()
+                .setAction(MotionEvent.ACTION_UP)
+                .setPointer(xDiff, yDiff)
+                .setEventTime(endTimeMs)
+                .build()
+        )
+    }
+
+    @Test
+    fun disabledTopology() {
+        preference.onAttached()
+        preference.refreshPane()
+
+        assertThat(preference.paneContent.childCount).isEqualTo(0)
+        // TODO(b/352648432): update test when we show the main display even when
+        // a topology is not active.
+        assertThat(preference.topologyHint.text).isEqualTo("")
     }
 
     @Test
@@ -268,23 +293,23 @@ class DisplayTopologyPreferenceTest {
     }
 
     @Test
-    fun twoDisplaysMirroringGenerateBlocks() {
+    fun threeDisplaysMirroringGenerateBlocks() {
         setMirroringMode(true)
         setupPaneWithTwoDisplays()
-        val newDisplayId = 123
         val newDisplaySize = Size(500, 500)
         injector.topology!!.addDisplay(
-            newDisplayId,
+            DISPLAY_ID_3,
             newDisplaySize.width,
             newDisplaySize.height,
-            /* logicalDensity= */ 160,
+            DISPLAY_DENSITY,
         )
-        injector.displaysSize.put(newDisplayId, newDisplaySize)
+        injector.displaysSize[DISPLAY_ID_3] = newDisplaySize
+        preference.refreshPane()
 
         val paneChildren = getPaneChildren()
-        assertThat(paneChildren).hasSize(2)
+        assertThat(paneChildren).hasSize(3)
 
-        for (i in 1..paneChildren.size - 1) {
+        for (i in 1..<paneChildren.size) {
             // Bounds are arranged 45 degrees diagonally from the top left corner, in a decreasing
             // X and increasing Y, since the backmost display will be the first on the list.
             val bounds = virtualBounds(paneChildren[i])
@@ -339,8 +364,8 @@ class DisplayTopologyPreferenceTest {
 
         assertThat(injector.revealLog)
             .containsExactly(
-                "revealWallpaper invoked for display 1",
-                "revealWallpaper invoked for display 42",
+                "revealWallpaper invoked for display $DISPLAY_ID_1",
+                "revealWallpaper invoked for display $DISPLAY_ID_2",
             )
 
         injector.revealLog.clear()
@@ -418,22 +443,22 @@ class DisplayTopologyPreferenceTest {
         setupPaneWithTwoDisplays()
         assertThat(injector.revealLog)
             .containsExactly(
-                "revealWallpaper invoked for display 1",
-                "revealWallpaper invoked for display 42",
+                "revealWallpaper invoked for display $DISPLAY_ID_1",
+                "revealWallpaper invoked for display $DISPLAY_ID_2",
             )
         injector.revealLog.clear()
         val childrenBefore = getPaneChildren()
-        val newDisplayId = 101
         val newDisplaySize = Size(320, 240)
         injector.topology!!.addDisplay(
-            newDisplayId,
+            DISPLAY_ID_3,
             newDisplaySize.width,
             newDisplaySize.height,
-            /* logicalDensity= */ 160,
+            DISPLAY_DENSITY,
         )
-        injector.displaysSize.put(newDisplayId, newDisplaySize)
+        injector.displaysSize[DISPLAY_ID_3] = newDisplaySize
         preference.refreshPane()
-        assertThat(injector.revealLog).containsExactly("revealWallpaper invoked for display 101")
+        assertThat(injector.revealLog)
+            .containsExactly("revealWallpaper invoked for display $DISPLAY_ID_3")
         injector.revealLog.clear()
         val childrenAfter = getPaneChildren()
 
@@ -441,13 +466,13 @@ class DisplayTopologyPreferenceTest {
         assertThat(childrenAfter).hasSize(3)
         assertThat(childrenAfter.subList(0, 2)).isEqualTo(childrenBefore)
 
-        assertThat(injector.topology!!.removeDisplay(42)).isTrue()
-        assertThat(injector.topology!!.removeDisplay(newDisplayId)).isTrue()
+        assertThat(injector.topology!!.removeDisplay(DISPLAY_ID_2)).isTrue()
+        assertThat(injector.topology!!.removeDisplay(DISPLAY_ID_3)).isTrue()
         preference.refreshPane()
         assertThat(injector.revealLog)
             .containsExactly(
-                "removed wallpaper revealer for display 42",
-                "removed wallpaper revealer for display 101",
+                "removed wallpaper revealer for display $DISPLAY_ID_2",
+                "removed wallpaper revealer for display $DISPLAY_ID_3",
             )
     }
 
@@ -456,16 +481,15 @@ class DisplayTopologyPreferenceTest {
         setupPaneWithTwoDisplays()
 
         preference.timesRefreshedBlocks = 0
-        val newDisplayId = 8008
         val newDisplaySize = Size(300, 320)
         val newTopology = injector.topology!!.copy()
         newTopology.addDisplay(
-            newDisplayId,
+            DISPLAY_ID_3,
             newDisplaySize.width,
             newDisplaySize.height,
-            /* logicalDensity= */ 160,
+            DISPLAY_DENSITY,
         )
-        injector.displaysSize.put(newDisplayId, newDisplaySize)
+        injector.displaysSize[DISPLAY_ID_3] = newDisplaySize
 
         injector.topology = newTopology
         injector.topologyListener!!.accept(newTopology)
@@ -630,36 +654,6 @@ class DisplayTopologyPreferenceTest {
         assertSelected(leftBlock, false)
     }
 
-    fun dragBlockWithOneMoveEvent(
-        block: DisplayBlock,
-        startTimeMs: Long,
-        endTimeMs: Long,
-        xDiff: Float,
-        yDiff: Float,
-    ) {
-        block.dispatchTouchEvent(
-            MotionEventBuilder.newBuilder()
-                .setAction(MotionEvent.ACTION_DOWN)
-                .setPointer(0f, 0f)
-                .setEventTime(startTimeMs)
-                .build()
-        )
-        block.dispatchTouchEvent(
-            MotionEventBuilder.newBuilder()
-                .setAction(MotionEvent.ACTION_MOVE)
-                .setPointer(xDiff, yDiff)
-                .setEventTime((startTimeMs + endTimeMs) / 2)
-                .build()
-        )
-        block.dispatchTouchEvent(
-            MotionEventBuilder.newBuilder()
-                .setAction(MotionEvent.ACTION_UP)
-                .setPointer(xDiff, yDiff)
-                .setEventTime(endTimeMs)
-                .build()
-        )
-    }
-
     @Test
     fun accidentalDrag_LittleAndBriefEnoughToBeAccidental() {
         val (leftBlock, _) = setupPaneWithTwoDisplays(POSITION_LEFT, childOffset = 42f)
@@ -744,7 +738,11 @@ class DisplayTopologyPreferenceTest {
     }
 
     private companion object {
+        private const val DISPLAY_ID_1 = DEFAULT_DISPLAY
+        private const val DISPLAY_ID_2 = 123
+        private const val DISPLAY_ID_3 = 456
         private val DISPLAY_SIZE_1 = Size(200, 160)
         private val DISPLAY_SIZE_2 = Size(100, 80)
+        private const val DISPLAY_DENSITY = 160
     }
 }
