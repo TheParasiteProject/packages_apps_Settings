@@ -10504,6 +10504,12 @@ Data usage charges may apply.</string>
     <!-- Summary for the entrypoint that navigates to the App Data Sharing Updates page. [CHAR LIMIT=130]-->
     <string name="app_data_sharing_updates_summary">Review apps that changed the way they may share your location data</string>
 
+    <!-- Title for the entrypoint that navigates to the App Function Access Settings page. [CHAR LIMIT=70]-->
+    <string name="app_function_access_settings_title">Agent control of other apps</string>
+
+    <!-- Summary for the entrypoint that navigates to the App Function Access Settings page. [CHAR LIMIT=130]-->
+    <string name="app_function_access_settings_summary">Perform actions on your device and in other apps</string>
+
     <!-- Label for tap to wake setting [CHAR LIMIT=30] -->
     <string name="tap_to_wake">Tap to wake</string>
 
