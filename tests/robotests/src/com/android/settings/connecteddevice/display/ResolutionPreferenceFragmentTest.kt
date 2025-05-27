@@ -20,10 +20,12 @@ import android.content.Context
 import android.content.res.Resources
 import android.view.View
 import android.widget.TextView
+import androidx.fragment.app.testing.EmptyFragmentActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceScreen
 import androidx.test.annotation.UiThreadTest
+import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.settings.connecteddevice.display.ResolutionPreferenceFragment.DISPLAY_MODE_LIMIT_OVERRIDE_PROP
 import com.android.settings.connecteddevice.display.ResolutionPreferenceFragment.EXTERNAL_DISPLAY_RESOLUTION_SETTINGS_RESOURCE
@@ -31,15 +33,21 @@ import com.android.settings.connecteddevice.display.ResolutionPreferenceFragment
 import com.android.settings.connecteddevice.display.ResolutionPreferenceFragment.TOP_OPTIONS_KEY
 import com.android.settingslib.widget.SelectorWithWidgetPreference
 import com.google.common.truth.Truth.assertThat
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mockito.doReturn
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
+import org.mockito.Mockito.`when`
 
 /** Unit tests for [ResolutionPreferenceFragment]. */
 @RunWith(AndroidJUnit4::class)
 class ResolutionPreferenceFragmentTest : ExternalDisplayTestBase() {
+
+    @get:Rule
+    val activityScenario: ActivityScenarioRule<EmptyFragmentActivity> =
+        ActivityScenarioRule(EmptyFragmentActivity::class.java)
 
     private lateinit var fragment: TestableResolutionPreferenceFragment
     private val metricsLogger: MetricsLogger = mock(MetricsLogger::class.java)
@@ -114,6 +122,22 @@ class ResolutionPreferenceFragmentTest : ExternalDisplayTestBase() {
         verify(mMockedInjector).setUserPreferredDisplayMode(displayId, mode)
     }
 
+    @Test
+    @UiThreadTest
+    fun testDisplayRemoved_activityIsFinishing() {
+        val displayId = mDisplays[0].id
+        initFragment(displayId)
+        mHandler.flush()
+
+        `when`(mMockedInjector.getDisplay(displayId)).thenReturn(null)
+        mListener.update(displayId)
+        mHandler.flush()
+
+        activityScenario.scenario.onActivity { activity: EmptyFragmentActivity ->
+            assertThat(activity.isFinishing).isTrue()
+        }
+    }
+
     private fun runTestModePreferences(): Pair<PreferenceCategory, PreferenceCategory> {
         initFragment(mDisplays[0].id)
         mHandler.flush()
@@ -136,12 +160,15 @@ class ResolutionPreferenceFragmentTest : ExternalDisplayTestBase() {
                 mMockedInjector,
                 metricsLogger,
             )
+        activityScenario.scenario.onActivity { activity: EmptyFragmentActivity ->
+            activity.supportFragmentManager.beginTransaction().add(fragment, "tag").commitNow()
+        }
         fragment.onCreateCallback(null)
         fragment.onActivityCreatedCallback(null)
         fragment.onStartCallback()
     }
 
-    private class TestableResolutionPreferenceFragment(
+    class TestableResolutionPreferenceFragment(
         private val displayId: Int,
         private val preferenceScreen: PreferenceScreen,
         context: Context,
