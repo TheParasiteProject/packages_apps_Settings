@@ -43,6 +43,7 @@ import java.util.function.Consumer;
 /** A dialog fragment for constructing and showing audio stream dialogs. */
 public class AudioStreamsDialogFragment extends InstrumentedDialogFragment {
     private static final String TAG = "AudioStreamsDialogFragment";
+    @Nullable
     private DialogBuilder mDialogBuilder;
     private int mDialogId = SettingsEnums.PAGE_UNKNOWN;
 
@@ -61,7 +62,7 @@ public class AudioStreamsDialogFragment extends InstrumentedDialogFragment {
         if (mDialogBuilder == null) {
             // Will not show the dialog if mDialogBuilder is null.
             setShowsDialog(false);
-            return null;
+            return new AlertDialog.Builder(requireActivity()).create();
         }
         return mDialogBuilder.build();
     }
