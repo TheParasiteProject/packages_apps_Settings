@@ -12283,11 +12283,6 @@ Data usage charges may apply.</string>
     <!-- Developer options location category strings -->
     <!-- Title for privacy category [CHAR LIMIT=30]-->
     <string name="location_category">Location</string>
-    <!-- [CHAR LIMIT=130] Title for location indicator settings -->
-    <string name="location_indicator_settings_title">Status bar location indicator</string>
-    <!-- [CHAR LIMIT=130] Description for location indicator settings -->
-    <string name="location_indicator_settings_description">Show for all locations, including network and connectivity</string>
-
     <!-- Location setting: preference title - enforce full raw GNSS satellite measurements [CHAR LIMIT=60] -->
     <string name="enable_gnss_raw_meas_full_tracking">Force full GNSS measurements</string>
     <!-- Location setting: preference summary - describes the behavior of forcing full raw GNSS satellite measurements [CHAR LIMIT=NONE] -->
