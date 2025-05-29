@@ -84,6 +84,7 @@ public class ToggleScreenMagnificationPreferenceFragment extends
     private static final String TAG =
             ToggleScreenMagnificationPreferenceFragment.class.getSimpleName();
     static final String KEY_MAGNIFICATION_SHORTCUT_PREFERENCE = "magnification_shortcut_preference";
+    public static final String MAGNIFICATION_SURVEY_KEY = "A11yMagnificationUser";
     private static final char COMPONENT_NAME_SEPARATOR = ':';
     private static final TextUtils.SimpleStringSplitter sStringColonSplitter =
             new TextUtils.SimpleStringSplitter(COMPONENT_NAME_SEPARATOR);
@@ -591,6 +592,12 @@ public class ToggleScreenMagnificationPreferenceFragment extends
             default:
                 return super.getDialogMetricsCategory(dialogId);
         }
+    }
+
+    @Override
+    @NonNull
+    public String getSurveyKey() {
+        return MAGNIFICATION_SURVEY_KEY;
     }
 
     @Override
