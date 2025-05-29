@@ -5862,10 +5862,14 @@
     <string name="dark_theme_version_category">Mode</string>
     <!-- Title for the accessibility preference for applying the original dark theme. [CHAR LIMIT=35] -->
     <string name="accessibility_standard_dark_theme_title">Standard</string>
+    <!-- Title in the search result for standard dark theme mode. -->
+    <string name="accessibility_standard_dark_theme_title_in_search">Standard Dark Theme</string>
     <!-- Summary for the accessibility preference for applying the original dark theme. [CHAR LIMIT=100] -->
     <string name="accessibility_standard_dark_theme_summary">Applies Dark theme across your device and supported apps</string>
     <!-- Title for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=35] -->
     <string name="accessibility_expanded_dark_theme_title">Expanded</string>
+    <!-- Title in the search result for expanded dark theme mode. -->
+    <string name="accessibility_expanded_dark_theme_title_in_search">Expanded Dark Theme</string>
     <!-- Summary for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=100] -->
     <string name="accessibility_expanded_dark_theme_summary">Automatically applies Dark theme to more apps for improved accessibility</string>
     <!-- Title for the accessibility preference for disabling animations. [CHAR LIMIT=35] -->

@@ -31,7 +31,10 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
+import com.android.settingslib.search.SearchIndexableRaw;
 import com.android.settingslib.widget.SelectorWithWidgetPreference;
+
+import java.util.List;
 
 /** A toggle preference controller for force invert (force dark). */
 public class ForceInvertPreferenceController extends BasePreferenceController
@@ -86,6 +89,11 @@ public class ForceInvertPreferenceController extends BasePreferenceController
                 preferenceCategory.findPreference(STANDARD_DARK_THEME_KEY);
         mExpandedDarkThemePreference =
                 preferenceCategory.findPreference(EXPANDED_DARK_THEME_KEY);
+
+        // We want to support search with different title on the preference. To prevent search
+        // indexes on the title in xml, we set the title in PreferenceController.
+        mStandardDarkThemePreference.setTitle(R.string.accessibility_standard_dark_theme_title);
+        mExpandedDarkThemePreference.setTitle(R.string.accessibility_expanded_dark_theme_title);
         mStandardDarkThemePreference.setOnClickListener(this);
         mExpandedDarkThemePreference.setOnClickListener(this);
         boolean isForceInvertEnabled = Settings.Secure.getInt(mContext.getContentResolver(),
@@ -99,5 +107,30 @@ public class ForceInvertPreferenceController extends BasePreferenceController
         }
         mStandardDarkThemePreference.setChecked(!isForceInvertEnabled);
         mExpandedDarkThemePreference.setChecked(isForceInvertEnabled);
+    }
+
+    @Override
+    public void updateRawDataToIndex(@NonNull List<SearchIndexableRaw> rawData) {
+        super.updateRawDataToIndex(rawData);
+        SearchIndexableRaw standard = new SearchIndexableRaw(mContext);
+        standard.key = STANDARD_DARK_THEME_KEY;
+        standard.title = mContext.getString(
+                R.string.accessibility_standard_dark_theme_title_in_search);
+        rawData.add(standard);
+
+        SearchIndexableRaw expanded = new SearchIndexableRaw(mContext);
+        expanded.key = EXPANDED_DARK_THEME_KEY;
+        expanded.title = mContext.getString(
+                R.string.accessibility_expanded_dark_theme_title_in_search);
+        rawData.add(expanded);
+    }
+
+    @Override
+    public void updateNonIndexableKeys(@NonNull List<String> keys) {
+        super.updateNonIndexableKeys(keys);
+        if (!Flags.forceInvertColor()) {
+            keys.add(STANDARD_DARK_THEME_KEY);
+            keys.add(EXPANDED_DARK_THEME_KEY);
+        }
     }
 }
