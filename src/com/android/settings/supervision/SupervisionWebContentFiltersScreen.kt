@@ -55,6 +55,9 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
     override val title: Int
         get() = R.string.supervision_web_content_filters_title
 
+    override val keywords: Int
+        get() = R.string.supervision_web_content_filters_keywords
+
     override val icon: Int
         get() = R.drawable.ic_globe
 
