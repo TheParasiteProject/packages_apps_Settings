@@ -5482,6 +5482,8 @@
     <string name="accessibility_magnification_cursor_following_title">Cursor following</string>
     <!-- Header message of cursor following mode dialog for magnification. [CHAR LIMIT=none] -->
     <string name="accessibility_magnification_cursor_following_header">Choose how Magnification follows your cursor.</string>
+    <!-- Summary for cursor following preference where cursor following setting is unavailable while partial-only capability. [CHAR LIMIT=none] -->
+    <string name="accessibility_magnification_cursor_following_unavailable_summary">Unavailable while only magnifying part of the screen</string>
     <!-- Option title of cursor following continuous mode in the mode selection dialog. [CHAR LIMIT=none] -->
     <string name="accessibility_magnification_cursor_following_continuous">Move screen continuously as mouse moves</string>
     <!-- Option title of cursor following center mode in the mode selection dialog. [CHAR LIMIT=none] -->
