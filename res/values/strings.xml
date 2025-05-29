@@ -4384,7 +4384,7 @@
     <!-- Header shown when the password needs to be solved because the device was factory reset. [CHAR LIMIT=100] -->
     <string name="lockpassword_confirm_your_password_header_frp">Verify password</string>
 
-    <!-- Header shown when prompted for remote device credential validation. [CHAR LIMIT=17] -->
+    <!-- Header shown when prompted for remote device credential validation. [CHAR LIMIT=NONE] -->
     <string name="lockpassword_remote_validation_header">Verify it\u0027s you</string>
 
     <!-- Details shown when pattern is prompted for remote device credential validation. [CHAR LIMIT=160] -->
