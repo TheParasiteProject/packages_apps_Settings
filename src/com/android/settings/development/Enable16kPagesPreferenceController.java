@@ -68,8 +68,7 @@ import java.util.zip.ZipFile;
 public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferenceController
         implements Preference.OnPreferenceChangeListener,
                 PreferenceControllerMixin,
-                Enable16kbPagesDialogHost,
-                EnableExt4DialogHost {
+                Enable16kbPagesDialogHost {
 
     private static final String TAG = "Enable16kPages";
     private static final String REBOOT_REASON = "toggle16k";
@@ -324,27 +323,6 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
         Toast.makeText(mContext, message, Toast.LENGTH_LONG).show();
     }
 
-    @Override
-    public void onExt4DialogConfirmed() {
-        // user has confirmed to wipe the device
-        ListenableFuture future = mExecutorService.submit(() -> wipeData());
-        Futures.addCallback(
-                future,
-                new FutureCallback<>() {
-                    @Override
-                    public void onSuccess(@NonNull Object result) {
-                        Log.i(TAG, "Wiping /data  with recovery system.");
-                    }
-
-                    @Override
-                    public void onFailure(@NonNull Throwable t) {
-                        Log.e(TAG, "Failed to change the /data partition to ext4");
-                        displayToast(mContext.getString(R.string.format_ext4_failure_toast));
-                    }
-                },
-                ContextCompat.getMainExecutor(mContext));
-    }
-
     private void wipeData() {
         RecoverySystem recoveryService = mContext.getSystemService(RecoverySystem.class);
         try {
@@ -352,11 +330,6 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Override
-    public void onExt4DialogDismissed() {
-        // Do nothing
     }
 
     private class OtaUpdateCallback extends UpdateEngineStableCallback {
