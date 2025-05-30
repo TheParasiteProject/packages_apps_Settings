@@ -8717,7 +8717,7 @@ Data usage charges may apply.</string>
     <string name="zen_modes_list_title">Modes</string>
 
     <!-- Zen Modes: Intro text describing the feature. [CHAR LIMIT=NONE]-->
-    <string name="zen_modes_list_intro">Minimize distractions and take control of your attention with modes for sleep, work, driving, and everything in between.</string>
+    <string name="zen_modes_list_intro">Minimize distractions and take control of your attention with modes for sleep, work, driving, and everything in between</string>
 
     <!-- Zen Modes: Caption of the "add a mode" item in the modes list -->
     <string name="zen_modes_add_mode">Create your own mode</string>
