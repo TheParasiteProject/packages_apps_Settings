@@ -356,6 +356,7 @@ public class ToggleScreenMagnificationPreferenceFragment extends
                         MagnificationCursorFollowingModePreferenceController.PREF_KEY);
         controller.setDialogHelper(/* dialogHelper= */this);
         mMagnificationCursorFollowingModeDialogDelegate = controller;
+        getSettingsLifecycle().addObserver(controller);
         controller.setInSetupWizard(mInSetupWizard);
         controller.displayPreference(getPreferenceScreen());
         addPreferenceController(controller);
