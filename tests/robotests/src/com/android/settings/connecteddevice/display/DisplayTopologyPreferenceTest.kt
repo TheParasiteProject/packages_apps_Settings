@@ -18,6 +18,7 @@ package com.android.settings.connecteddevice.display
 
 import android.content.Context
 import android.graphics.RectF
+import android.hardware.display.DisplayManager
 import android.hardware.display.DisplayTopology
 import android.hardware.display.DisplayTopology.TreeNode.POSITION_BOTTOM
 import android.hardware.display.DisplayTopology.TreeNode.POSITION_LEFT
@@ -26,6 +27,7 @@ import android.provider.Settings
 import android.util.DisplayMetrics
 import android.util.Size
 import android.view.Display.DEFAULT_DISPLAY
+import android.view.Display.Mode
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -65,6 +67,7 @@ class DisplayTopologyPreferenceTest {
         var topology: DisplayTopology? = null
 
         var topologyListener: Consumer<DisplayTopology>? = null
+        var displayListener: DisplayManager.DisplayListener? = null
 
         override var displayTopology: DisplayTopology?
             get() = topology
@@ -83,8 +86,20 @@ class DisplayTopologyPreferenceTest {
             return displaysSize[displayId]
         }
 
-        override fun getAllDisplayIds(): List<Int> {
-            return displaysSize.keys.toList()
+        override fun getDisplays(): List<DisplayDevice> {
+            return displaysSize
+                .map { it ->
+                    val mode = Mode(it.value.width, it.value.height, 60f)
+                    DisplayDevice(
+                        it.key,
+                        "HDMI",
+                        mode,
+                        listOf(mode),
+                        /* isEnabled= */ DisplayIsEnabled.YES,
+                        /* isConnectedDisplay= */ true,
+                    )
+                }
+                .toList()
         }
 
         override fun registerTopologyListener(listener: Consumer<DisplayTopology>) {
@@ -99,6 +114,22 @@ class DisplayTopologyPreferenceTest {
                 throw IllegalStateException("no such listener registered: $listener")
             }
             topologyListener = null
+        }
+
+        override fun registerDisplayListener(listener: DisplayManager.DisplayListener) {
+            if (displayListener != null) {
+                throw IllegalStateException(
+                    "already have a listener registered: ${displayListener}"
+                )
+            }
+            displayListener = listener
+        }
+
+        override fun unregisterDisplayListener(listener: DisplayManager.DisplayListener) {
+            if (displayListener != listener) {
+                throw IllegalStateException("no such listener registered: ${listener}")
+            }
+            displayListener = null
         }
 
         override fun revealWallpaper(displayId: Int): RevealedWallpaper {
@@ -477,6 +508,39 @@ class DisplayTopologyPreferenceTest {
     }
 
     @Test
+    fun changeToMirroringModeRemoveExistingRevealedWallpapersExceptDefault() {
+        setupPaneWithTwoDisplays()
+        assertThat(injector.revealLog)
+            .containsExactly(
+                "revealWallpaper invoked for display $DISPLAY_ID_1",
+                "revealWallpaper invoked for display $DISPLAY_ID_2",
+            )
+        injector.revealLog.clear()
+
+        setMirroringMode(true)
+        preference.refreshPane()
+        assertThat(injector.revealLog)
+            .containsExactly("removed wallpaper revealer for display $DISPLAY_ID_2")
+        injector.revealLog.clear()
+    }
+
+    @Test
+    fun stopMirroringModeRevealWallpapers() {
+        setMirroringMode(true)
+        setupPaneWithTwoDisplays()
+        preference.refreshPane()
+        assertThat(injector.revealLog)
+            .containsExactly("revealWallpaper invoked for display $DISPLAY_ID_1")
+        injector.revealLog.clear()
+
+        setMirroringMode(false)
+        preference.refreshPane()
+        assertThat(injector.revealLog)
+            .containsExactly("revealWallpaper invoked for display $DISPLAY_ID_2")
+        injector.revealLog.clear()
+    }
+
+    @Test
     fun applyNewTopologyViaListenerUpdate() {
         setupPaneWithTwoDisplays()
 
@@ -735,6 +799,55 @@ class DisplayTopologyPreferenceTest {
         )
         assertThat(topBlock.x).isNotEqualTo(startX)
         assertThat(preference.timesRefreshedBlocks).isEqualTo(1)
+    }
+
+    @Test
+    fun nonMirroringMode_updateOnlyFromDisplayTopologyUpdate() {
+        setupPaneWithTwoDisplays()
+        assertThat(getPaneChildren()).hasSize(2)
+
+        val newDisplaySize = Size(500, 500)
+        injector.topology!!.addDisplay(
+            DISPLAY_ID_3,
+            newDisplaySize.width,
+            newDisplaySize.height,
+            DISPLAY_DENSITY,
+        )
+        injector.displaysSize.put(DISPLAY_ID_3, newDisplaySize)
+
+        injector.displayListener!!.onDisplayAdded(DISPLAY_ID_3)
+        // In non-mirroring mode display listener update should be ignored, update will come from
+        // DisplayTopologyListener update
+        assertThat(getPaneChildren()).hasSize(2)
+
+        injector.topologyListener!!.accept(injector.topology!!)
+        // Pane updated
+        assertThat(getPaneChildren()).hasSize(3)
+    }
+
+    @Test
+    fun mirroringMode_noUpdateFromDisplayListenerUpdate() {
+        setMirroringMode(true)
+        setupPaneWithTwoDisplays()
+        assertThat(getPaneChildren()).hasSize(2)
+
+        val newDisplaySize = Size(500, 500)
+        injector.topology!!.addDisplay(
+            DISPLAY_ID_3,
+            newDisplaySize.width,
+            newDisplaySize.height,
+            DISPLAY_DENSITY,
+        )
+        injector.displaysSize.put(DISPLAY_ID_3, newDisplaySize)
+
+        injector.topologyListener!!.accept(injector.topology!!)
+        // In mirroring mode display topology update should be ignored, update will come from
+        // DisplayListener update
+        assertThat(getPaneChildren()).hasSize(2)
+
+        injector.displayListener!!.onDisplayAdded(DISPLAY_ID_3)
+        // Pane updated
+        assertThat(getPaneChildren()).hasSize(3)
     }
 
     private companion object {
