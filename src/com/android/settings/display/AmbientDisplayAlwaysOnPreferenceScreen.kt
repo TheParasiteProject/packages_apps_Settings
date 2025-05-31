@@ -22,6 +22,7 @@ import android.hardware.display.AmbientDisplayConfiguration
 import android.os.SystemProperties
 import android.os.UserHandle
 import android.os.UserManager
+import androidx.fragment.app.Fragment
 import com.android.internal.R.bool.config_dozeSupportsAodWallpaper
 import com.android.settings.CatalystFragment
 import com.android.settings.CatalystSettingsActivity
@@ -37,7 +38,9 @@ import com.android.settings.metrics.PreferenceActionMetricsProvider
 import com.android.settings.restriction.PreferenceRestrictionMixin
 import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.PrimarySwitchPreferenceBinding
+import com.android.settingslib.datastore.HandlerExecutor
 import com.android.settingslib.datastore.KeyValueStore
+import com.android.settingslib.datastore.KeyedObserver
 import com.android.settingslib.datastore.SettingsSecureStore
 import com.android.settingslib.metadata.BooleanValuePreference
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
@@ -69,6 +72,7 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
     PreferenceSummaryProvider {
 
     private val ambientWallpaperPreference = AmbientWallpaperPreference(context)
+    private lateinit var keyedObserver: KeyedObserver<String>
 
     override val title: Int
         get() = if (ambientAod()) R.string.doze_always_on_title2 else R.string.doze_always_on_title
@@ -100,8 +104,6 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
             AmbientDisplayConfiguration(context).alwaysOnAvailableForUser(UserHandle.myUserId())
     }
 
-    override fun dependencies(context: Context) = arrayOf(AmbientWallpaperPreference.KEY)
-
     override fun getSummary(context: Context): CharSequence? =
         context.getText(
             if (isAodSuppressedByBedtime(context)) {
@@ -117,11 +119,20 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
             }
         )
 
-    override fun onStart(context: PreferenceLifecycleContext) {
-        context.notifyPreferenceChange(KEY)
+    override fun onCreate(context: PreferenceLifecycleContext) {
+        keyedObserver = KeyedObserver { _, _ -> context.notifyPreferenceChange(KEY) }
+        ambientWallpaperPreference
+            .storage(context)
+            .addObserver(AmbientWallpaperPreference.KEY, keyedObserver, HandlerExecutor.main)
     }
 
-    override fun fragmentClass() = AmbientPreferenceFragment::class.java
+    override fun onDestroy(context: PreferenceLifecycleContext) {
+        ambientWallpaperPreference
+            .storage(context)
+            .removeObserver(AmbientWallpaperPreference.KEY, keyedObserver)
+    }
+
+    override fun fragmentClass(): Class<out Fragment>? = AmbientPreferenceFragment::class.java
 
     override fun isIndexable(context: Context) = true
 
