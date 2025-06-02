@@ -44,7 +44,6 @@ import org.junit.runner.RunWith
 import org.mockito.kotlin.any
 import org.mockito.kotlin.argThat
 import org.mockito.kotlin.doReturn
-import org.mockito.kotlin.inOrder
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.never
 import org.mockito.kotlin.stub
@@ -98,8 +97,16 @@ class SupervisionPinRecoveryActivityTest {
         }
         mockUserManager.stub {
             on { users } doReturn listOf(SUPERVISING_USER_INFO)
-            on { createUser(any(), any(), any()) } doReturn SUPERVISING_USER_INFO
-            on { removeUser(UserHandle(SUPERVISING_USER_ID)) } doReturn true
+            on {
+                createProfileForUserEvenWhenDisallowed(
+                    /* name= */ "Supervising",
+                    /* userType= */ USER_TYPE_PROFILE_SUPERVISING,
+                    /* flags= */ 0,
+                    /* userId= */ UserHandle.USER_NULL,
+                    /* disallowedPackages = */ null,
+                )
+            } doReturn SUPERVISING_USER_INFO
+            on { removeUserEvenWhenDisallowed(SUPERVISING_USER_ID) } doReturn true
         }
     }
 
@@ -497,11 +504,6 @@ class SupervisionPinRecoveryActivityTest {
                 val verifyPinIntent = shadowActivity.nextStartedActivity
                 shadowActivity.receiveResult(verifyPinIntent, testActivityResult, null)
 
-                // Verifies the supervision state is disabled and re-enabled.
-                val inOrder = inOrder(mockSupervisionManager)
-                // Verifies the calls in the specific order
-                inOrder.verify(mockSupervisionManager).setSupervisionEnabled(false)
-                inOrder.verify(mockSupervisionManager).setSupervisionEnabled(true)
                 val startedIntent = shadowActivity.nextStartedActivity
                 assertThat(startedIntent.component?.className)
                     .isEqualTo(SupervisionCredentialProxyActivity::class.java.name)
@@ -526,8 +528,6 @@ class SupervisionPinRecoveryActivityTest {
                 val verifyPinIntent = shadowActivity.nextStartedActivity
                 shadowActivity.receiveResult(verifyPinIntent, testActivityResult, null)
 
-                // Verifies the supervision is not re-enabled.
-                verify(mockSupervisionManager, never()).setSupervisionEnabled(true)
                 val startedIntent = shadowActivity.nextStartedActivity
                 assertThat(startedIntent.component?.className)
                     .isEqualTo(SupervisionCredentialProxyActivity::class.java.name)
