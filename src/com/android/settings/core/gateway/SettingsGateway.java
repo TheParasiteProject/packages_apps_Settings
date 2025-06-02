@@ -165,6 +165,7 @@ import com.android.settings.notification.NotificationAccessSettings;
 import com.android.settings.notification.NotificationAssistantPicker;
 import com.android.settings.notification.PoliteNotificationsPreferenceFragment;
 import com.android.settings.notification.SoundSettings;
+import com.android.settings.notification.SummarizationPreferenceFragment;
 import com.android.settings.notification.app.AppBubbleNotificationSettings;
 import com.android.settings.notification.app.AppNotificationSettings;
 import com.android.settings.notification.app.ChannelNotificationSettings;
@@ -424,6 +425,7 @@ public class SettingsGateway {
             SystemLocalePickerFragment.class.getName(),
             AppLocalePickerFragment.class.getName(),
             SupervisionDashboardFragment.class.getName(),
+            SummarizationPreferenceFragment.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
