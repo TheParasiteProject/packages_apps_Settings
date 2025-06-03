@@ -23,12 +23,11 @@ import androidx.fragment.app.Fragment
 import com.android.settings.R
 import com.android.settings.Settings.TetherSettingsActivity
 import com.android.settings.core.PreferenceScreenMixin
-import com.android.settings.datausage.DataSaverMainSwitchPreference
 import com.android.settings.flags.Flags
 import com.android.settings.network.TetherPreferenceController
 import com.android.settings.restriction.PreferenceRestrictionMixin
 import com.android.settings.utils.makeLaunchIntent
-import com.android.settings.wifi.tether.WifiHotspotSwitchPreference
+import com.android.settings.wifi.tether.WifiHotspotScreen
 import com.android.settingslib.TetherUtil
 import com.android.settingslib.Utils
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
@@ -84,10 +83,7 @@ open class TetherScreen :
         makeLaunchIntent(context, TetherSettingsActivity::class.java, metadata?.key)
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
-        preferenceHierarchy(context) {
-            val dataSaverStore = DataSaverMainSwitchPreference.createDataStore(context)
-            +WifiHotspotSwitchPreference(context, dataSaverStore)
-        }
+        preferenceHierarchy(context) { +WifiHotspotScreen.KEY }
 
     companion object {
         const val KEY = "tether_settings"
