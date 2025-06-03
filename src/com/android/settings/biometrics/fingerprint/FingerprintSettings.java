@@ -2147,7 +2147,7 @@ public class FingerprintSettings extends SubSettings {
                                     R.string.security_settings_fingerprint_rename_description));
                 }
                 mDeleteView.setContentDescription(
-                        mDeleteView.getContentDescription()
+                        getContext().getString(R.string.delete)
                                 + " " + mFingerprint.getName().toString());
             }
             mDeleteView.setOnClickListener(v -> {
