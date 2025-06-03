@@ -49,9 +49,6 @@ class SupervisionDeletePinPreference() :
     override val title: Int
         get() = R.string.supervision_delete_pin_preference_title
 
-    override val summary: Int
-        get() = R.string.supervision_delete_pin_preference_summary
-
     override fun onCreate(context: PreferenceLifecycleContext) {
         lifeCycleContext = context
     }
