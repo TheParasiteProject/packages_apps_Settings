@@ -14562,6 +14562,8 @@ Data usage charges may apply.</string>
     <string name="supervision_change_pin_preference_title">Change PIN</string>
     <!-- Title for supervision forgot PIN setting entry [CHAR LIMIT=60] -->
     <string name="supervision_add_forgot_pin_preference_title">Forgot PIN</string>
+    <!-- Label for the fallback option button "Forgot PIN?" on the authentication prompt [CHAR LIMIT=60] -->
+    <string name="supervision_auth_prompt_forgot_pin_button_label">Forgot PIN?</string>
     <!-- Title for supervision update PIN recovery email setting entry [CHAR LIMIT=60] -->
     <string name="supervision_update_recovery_email_preference_title">Update recovery email</string>
     <!-- Title for supervision delete pin setting entry [CHAR LIMIT=60] -->
