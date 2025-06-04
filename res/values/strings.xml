@@ -5557,9 +5557,9 @@
     <!-- Summary for accessibility follow typing preference for magnification. [CHAR LIMIT=none] -->
     <string name="accessibility_screen_magnification_follow_typing_summary">The magnifier follows text as you type</string>
     <!-- Title for focus following keyboard focus preference for magnification. [CHAR LIMIT=none] -->
-    <string name="accessibility_screen_magnification_follow_keyboard_title">Magnify keyboard focus</string>
+    <string name="accessibility_screen_magnification_follow_keyboard_title">Follow keyboard focus</string>
     <!-- Title for focus following keyboard focus preference for magnification. [CHAR LIMIT=none] -->
-    <string name="accessibility_screen_magnification_follow_keyboard_summary">Magnifier follows keyboard focus</string>
+    <string name="accessibility_screen_magnification_follow_keyboard_summary">The magnifier follows the focused item as you navigate with your keyboard</string>
     <!-- Title for accessibility magnifier preference allowing the magnification of the keyboard. [CHAR LIMIT=60] -->
     <string name="accessibility_screen_magnification_nav_ime_title">Magnify keyboard</string>
     <!-- Summary for accessibility magnifier preference allowing the magnification of the keyboard. [CHAR LIMIT=none] -->
