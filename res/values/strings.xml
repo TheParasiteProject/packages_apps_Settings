@@ -14545,11 +14545,9 @@ Data usage charges may apply.</string>
     <!-- Title for Supervision settings menu entry [CHAR LIMIT=60] -->
     <string name="supervision_settings_title">Parental controls</string>
     <!-- Description for Supervision settings menu entry [CHAR LIMIT=NONE] -->
-    <string name="supervision_settings_summary">Content restrictions &amp; other limits</string>
+    <string name="supervision_settings_summary">Digital ground rules &amp; screen time limits</string>
     <!-- Description of device supervision toggle when PIN has never been set up [CHAR LIMIT=NONE] -->
     <string name="device_supervision_switch_no_pin_summary">Set up PIN</string>
-    <!-- Description of device supervision toggle when PIN is set up but supervision is not enabled [CHAR LIMIT=NONE] -->
-    <string name="device_supervision_switch_paused_summary">Paused</string>
     <!-- Search keywords for supervision settings [CHAR LIMIT=NONE] -->
     <string name="keywords_supervision_settings">supervision, parental supervision, parental controls</string>
     <!-- Title for supervision PIN management settings entry [CHAR LIMIT=60] -->
@@ -14566,8 +14564,6 @@ Data usage charges may apply.</string>
     <string name="supervision_update_recovery_email_preference_title">Update recovery email</string>
     <!-- Title for supervision delete pin setting entry [CHAR LIMIT=60] -->
     <string name="supervision_delete_pin_preference_title">Delete PIN</string>
-    <!-- Summary for supervision delete pin setting entry [CHAR LIMIT=NONE] -->
-    <string name="supervision_delete_pin_preference_summary">This will reset all your supervision settings</string>
     <!-- Title for adding supervision PIN recovery setting entry [CHAR LIMIT=NONE] -->
     <string name="supervision_add_pin_recovery_title">Add recovery email</string>
     <!-- Title for adding supervision PIN recovery setting entry [CHAR LIMIT=NONE] -->
