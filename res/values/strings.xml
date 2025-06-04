@@ -520,7 +520,11 @@
     <string name="desc_system_locale_addition">This lets apps and websites know you also prefer this language.</string>
 
     <!-- The text of the confirmation dialog showing the system locale will be changed. [CHAR LIMIT=NONE]-->
-    <string name="desc_notice_device_locale_settings_change">Your device settings and regional preferences will change.</string>
+    <string name="desc_notice_device_locale_and_region_settings_change">Your device will use <xliff:g id="language" example="English">%1$s</xliff:g> and your region will be changed to <xliff:g id="region" example="United States">%2$s</xliff:g>.</string>
+    <!-- The text of the confirmation dialog showing the system locale which have no region will be changed. [CHAR LIMIT=NONE]-->
+    <string name="desc_notice_device_locale_settings_change">Your device will use <xliff:g id="language" example="English">%s</xliff:g>.</string>
+    <!-- The text of the removing dialog showing the default locale will be removed from the list. [CHAR LIMIT=NONE]-->
+    <string name="dlg_desc_delete_preferred_default_locale"><xliff:g id="removed_language" example="Français (France)">%s</xliff:g> will be removed from your preferred languages</string>
 
     <!-- A dialog button for confirmation of system locale change. [CHAR LIMIT=25]-->
     <string name="button_label_confirmation_of_system_locale_change">Change</string>
