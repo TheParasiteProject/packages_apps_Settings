@@ -194,7 +194,7 @@ class DeviceStateAppFunctionService : AppFunctionService() {
     ) =
         when (this) {
             is PreferenceHierarchyGenerator<*> ->
-                generatePreferenceHierarchy(applicationContext, defaultType)
+                generatePreferenceHierarchy(applicationContext, coroutineScope, defaultType)
             else -> getPreferenceHierarchy(applicationContext, coroutineScope)
         }
 
