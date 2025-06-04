@@ -23,6 +23,7 @@ import android.os.UserHandle;
 import android.provider.Settings
 import android.telephony.SubscriptionManager
 import android.util.Log
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -54,11 +55,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.lifecycle.LifecycleRegistry
 import com.android.settings.R
 import com.android.settings.SidecarFragment
+import com.android.settings.network.SimOnboardingViewModel.SwitchingState
 import com.android.settings.network.telephony.SimRepository
 import com.android.settings.network.telephony.SubscriptionActionDialogActivity
 import com.android.settings.network.telephony.SubscriptionRepository
 import com.android.settings.network.telephony.ToggleSubscriptionDialogActivity
-import com.android.settings.network.telephony.requireSubscriptionManager
 import com.android.settings.spa.SpaActivity.Companion.startSpaActivity
 import com.android.settings.spa.network.SimOnboardingPageProvider.getRoute
 import com.android.settings.wifi.WifiPickerTrackerHelper
@@ -71,8 +72,6 @@ import com.android.settingslib.spa.widget.dialog.getDialogWidth
 import com.android.settingslib.spa.widget.dialog.rememberAlertDialogPresenter
 import com.android.settingslib.spa.widget.ui.SettingsTitle
 import com.android.settingslib.spaprivileged.framework.common.userManager
-import java.util.concurrent.CountDownLatch
-import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.awaitClose
@@ -95,8 +94,8 @@ class SimOnboardingActivity : SpaBaseDialogActivity() {
     lateinit var showDsdsProgressDialog: MutableState<Boolean>
     lateinit var showRestartDialog: MutableState<Boolean>
 
-    private var switchToEuiccSubscriptionSidecar: SwitchToEuiccSubscriptionSidecar? = null
-    private var switchToRemovableSlotSidecar: SwitchToRemovableSlotSidecar? = null
+    private val viewModel: SimOnboardingViewModel by viewModels()
+
     private var enableMultiSimSidecar: EnableMultiSimSidecar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -133,9 +132,8 @@ class SimOnboardingActivity : SpaBaseDialogActivity() {
             return
         }
 
-        switchToEuiccSubscriptionSidecar = SwitchToEuiccSubscriptionSidecar.get(fragmentManager)
-        switchToRemovableSlotSidecar = SwitchToRemovableSlotSidecar.get(fragmentManager)
         enableMultiSimSidecar = EnableMultiSimSidecar.get(fragmentManager)
+
     }
 
     override fun finish() {
@@ -218,10 +216,11 @@ class SimOnboardingActivity : SpaBaseDialogActivity() {
         )
 
         registerSidecarReceiverFlow()
-
         ErrorDialogImpl()
         RestartDialogImpl()
         LaunchedEffect(Unit) {
+            viewModelUiStateFlow()
+
             if (showError.value != ErrorType.ERROR_NONE
                 || showProgressDialog.value
                 || showDsdsProgressDialog.value
@@ -373,16 +372,31 @@ class SimOnboardingActivity : SpaBaseDialogActivity() {
         }
     }
 
+    fun viewModelUiStateFlow() {
+        scope.launch {
+            viewModel.uiState.collect {
+                when (it) {
+                    SwitchingState.COMPLETED -> {
+                        Log.d(TAG, "Successfully enable the SIM profile.")
+                        checkSimIsReadyAndGoNext()
+                    }
+
+                    SwitchingState.FAILED -> {
+                        Log.e(TAG, "Failed switching sim")
+                        showError.value = ErrorType.ERROR_SIM_SWITCHING
+                        callbackListener(CallbackType.CALLBACK_ERROR)
+                    }
+
+                    else -> {
+                        Log.d(TAG, "uiState: $it")
+                    }
+                }
+            }
+        }
+    }
+
     @Composable
     fun registerSidecarReceiverFlow(){
-        switchToEuiccSubscriptionSidecar?.sidecarReceiverFlow()
-            ?.collectLatestWithLifecycle(LocalLifecycleOwner.current) {
-                onStateChange(it)
-            }
-        switchToRemovableSlotSidecar?.sidecarReceiverFlow()
-            ?.collectLatestWithLifecycle(LocalLifecycleOwner.current) {
-                onStateChange(it)
-            }
         enableMultiSimSidecar?.sidecarReceiverFlow()
             ?.collectLatestWithLifecycle(LocalLifecycleOwner.current) {
                 onStateChange(it)
@@ -412,18 +426,8 @@ class SimOnboardingActivity : SpaBaseDialogActivity() {
         }
         targetSubInfo?.let {
             var removedSubInfo = onboardingService.getRemovedSim()
-            if (targetSubInfo.isEmbedded) {
-                switchToEuiccSubscriptionSidecar!!.run(
-                    targetSubInfo.subscriptionId,
-                    UiccSlotUtil.INVALID_PORT_ID,
-                    removedSubInfo
-                )
-                return@let
-            }
-            switchToRemovableSlotSidecar!!.run(
-                UiccSlotUtil.INVALID_PHYSICAL_SLOT_ID,
-                removedSubInfo
-            )
+            viewModel.startSimSwitching(targetSubInfo,removedSubInfo)
+
         } ?: run {
             Log.e(TAG, "no target subInfo in onboardingService")
             finish()
@@ -431,51 +435,8 @@ class SimOnboardingActivity : SpaBaseDialogActivity() {
     }
 
     fun onStateChange(fragment: SidecarFragment?) {
-        if (fragment === switchToEuiccSubscriptionSidecar) {
-            handleSwitchToEuiccSubscriptionSidecarStateChange()
-        } else if (fragment === switchToRemovableSlotSidecar) {
-            handleSwitchToRemovableSlotSidecarStateChange()
-        } else if (fragment === enableMultiSimSidecar) {
+        if (fragment === enableMultiSimSidecar) {
             handleEnableMultiSimSidecarStateChange()
-        }
-    }
-
-    fun handleSwitchToEuiccSubscriptionSidecarStateChange() {
-        when (switchToEuiccSubscriptionSidecar!!.state) {
-            SidecarFragment.State.SUCCESS -> {
-                Log.i(TAG, "Successfully enable the eSIM profile.")
-                switchToEuiccSubscriptionSidecar!!.reset()
-                scope.launch {
-                    checkSimIsReadyAndGoNext()
-                }
-            }
-
-            SidecarFragment.State.ERROR -> {
-                Log.i(TAG, "Failed to enable the eSIM profile.")
-                switchToEuiccSubscriptionSidecar!!.reset()
-                showError.value = ErrorType.ERROR_SIM_SWITCHING
-                callbackListener(CallbackType.CALLBACK_ERROR)
-            }
-        }
-    }
-
-    fun handleSwitchToRemovableSlotSidecarStateChange() {
-        when (switchToRemovableSlotSidecar!!.state) {
-            SidecarFragment.State.SUCCESS -> {
-                Log.i(TAG, "Successfully switched to removable slot.")
-                switchToRemovableSlotSidecar!!.reset()
-                onboardingService.handleTogglePsimAction()
-                scope.launch {
-                    checkSimIsReadyAndGoNext()
-                }
-            }
-
-            SidecarFragment.State.ERROR -> {
-                Log.e(TAG, "Failed switching to removable slot.")
-                switchToRemovableSlotSidecar!!.reset()
-                showError.value = ErrorType.ERROR_SIM_SWITCHING
-                callbackListener(CallbackType.CALLBACK_ERROR)
-            }
         }
     }
 
