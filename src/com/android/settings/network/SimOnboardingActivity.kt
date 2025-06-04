@@ -19,7 +19,7 @@ package com.android.settings.network
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.UserHandle;
+import android.os.UserHandle
 import android.provider.Settings
 import android.telephony.SubscriptionManager
 import android.util.Log
@@ -27,7 +27,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.SignalCellularAlt
@@ -35,8 +34,6 @@ import androidx.compose.material3.AlertDialogDefaults
 import androidx.compose.material3.BasicAlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -50,7 +47,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.lifecycle.LifecycleRegistry
 import com.android.settings.R
 import com.android.settings.SidecarFragment
@@ -58,7 +54,6 @@ import com.android.settings.network.telephony.SimRepository
 import com.android.settings.network.telephony.SubscriptionActionDialogActivity
 import com.android.settings.network.telephony.SubscriptionRepository
 import com.android.settings.network.telephony.ToggleSubscriptionDialogActivity
-import com.android.settings.network.telephony.requireSubscriptionManager
 import com.android.settings.spa.SpaActivity.Companion.startSpaActivity
 import com.android.settings.spa.network.SimOnboardingPageProvider.getRoute
 import com.android.settings.wifi.WifiPickerTrackerHelper
@@ -71,8 +66,6 @@ import com.android.settingslib.spa.widget.dialog.getDialogWidth
 import com.android.settingslib.spa.widget.dialog.rememberAlertDialogPresenter
 import com.android.settingslib.spa.widget.ui.SettingsTitle
 import com.android.settingslib.spaprivileged.framework.common.userManager
-import java.util.concurrent.CountDownLatch
-import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.awaitClose
@@ -539,21 +532,9 @@ class SimOnboardingActivity : SpaBaseDialogActivity() {
                 onClick = cancelAction,
             ),
             title = stringResource(R.string.sim_onboarding_dialog_starting_title),
-            icon = {
-                Icon(
-                    imageVector = Icons.Outlined.SignalCellularAlt,
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(SettingsDimension.iconLarge),
-                    tint = MaterialTheme.colorScheme.primary,
-                )
-            },
+            icon = Icons.Outlined.SignalCellularAlt,
             text = {
-                Text(
-                    stringResource(R.string.sim_onboarding_dialog_starting_msg),
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = TextAlign.Center
-                )
+                Text(stringResource(R.string.sim_onboarding_dialog_starting_msg))
             })
 
     }
