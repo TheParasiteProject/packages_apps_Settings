@@ -5149,12 +5149,12 @@
     <!-- Text for 'Done' button in gesture education [CHAR LIMIT=10] -->
     <string name="gesture_button_done">Done</string>
 
-    <!-- Title text for 'Customize action corners' preference. This preference allows the user to select actions to be triggered when moving the cursor to a corner. [CHAR LIMIT=60] -->
-    <string name="action_corner_title">Customize action corners</string>
-    <!-- Summary text for 'Customize action corners' preference. [CHAR LIMIT=NONE] -->
+    <!-- Title text for 'Customize corner shortcuts' preference. This preference allows the user to select actions to be triggered when moving the cursor to a corner. [CHAR LIMIT=60] -->
+    <string name="action_corner_title">Customize corner shortcuts</string>
+    <!-- Summary text for 'Customize corner shortcuts' preference. [CHAR LIMIT=NONE] -->
     <string name="action_corner_summary">Use cursors to navigate the system</string>
-    <!-- Intro text for 'Customize action corners'. [CHAR LIMIT=NONE] -->
-    <string name="action_corner_intro">Choose the following areas to customize action corners</string>
+    <!-- Intro text for 'Customize corner shortcuts'. [CHAR LIMIT=NONE] -->
+    <string name="action_corner_intro">Choose the following areas to customize corner shortcuts</string>
     <!-- Preference title for 'Bottom-left corner'. [CHAR LIMIT=60] -->
     <string name="action_corner_bottom_left_title">Bottom-left corner</string>
     <!-- Preference title for 'Bottom-right corner'. [CHAR LIMIT=60] -->
