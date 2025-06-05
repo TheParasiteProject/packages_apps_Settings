@@ -21,6 +21,13 @@ flag {
 }
 
 flag {
+  name: "catalyst_flash_notifications"
+  namespace: "accessibility"
+  description: "Migrate flash notification screen to the Catalyst infrastructure"
+  bug: "337243568"
+}
+
+flag {
   name: "check_prebundled_is_preinstalled"
   namespace: "accessibility"
   description: "Checks that all 'prebundled' components, used for grouping, are also preinstalled"
