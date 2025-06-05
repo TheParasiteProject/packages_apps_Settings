@@ -20,6 +20,7 @@ import android.app.role.RoleManager
 import android.app.supervision.SupervisionManager
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager.MATCH_ALL
 import android.os.UserHandle
 import android.os.UserManager
 import android.os.UserManager.USER_TYPE_PROFILE_SUPERVISING
@@ -57,13 +58,15 @@ val Context.systemSupervisionPackageName: String?
         return roleHolders.firstOrNull()
     }
 
-fun Context.hasNecessarySupervisionComponent() =
-    hasNecessarySupervisionComponent(systemSupervisionPackageName)
-
-fun Context.hasNecessarySupervisionComponent(packageName: String?): Boolean {
+fun Context.hasNecessarySupervisionComponent(
+    packageName: String? = systemSupervisionPackageName,
+    matchAll: Boolean = false,
+): Boolean {
     if (packageName == null) return false
+
     val intent = Intent(SUPERVISION_MESSENGER_SERVICE_BIND_ACTION).setPackage(packageName)
-    return packageManager?.queryIntentServices(intent, 0)?.isNotEmpty() == true
+    val resolveInfoFlag = if (matchAll) MATCH_ALL else 0
+    return packageManager?.queryIntentServices(intent, resolveInfoFlag)?.isNotEmpty() == true
 }
 
 /**
