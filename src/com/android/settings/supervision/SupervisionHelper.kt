@@ -17,6 +17,7 @@ package com.android.settings.supervision
 
 import android.app.KeyguardManager
 import android.app.role.RoleManager
+import android.app.supervision.SupervisionManager
 import android.content.Context
 import android.content.Intent
 import android.os.UserHandle
@@ -79,3 +80,41 @@ val Context.supervisionRoleHolders: List<String>
         }
         return roleManager.getRoleHolders(RoleManager.ROLE_SUPERVISION) ?: emptyList()
     }
+
+/** Returns whether any users except the current user are supervised on this device. */
+fun Context.areAnyUsersExceptCurrentSupervised(
+    supervisionManager: SupervisionManager,
+    userManager: UserManager,
+): Boolean {
+    return userManager.users.any {
+        userId != it.id && supervisionManager.isSupervisionEnabledForUser(it.id)
+    }
+}
+
+/**
+ * Disables supervision, deletes the supervising profile and recovery info. Returns whether all
+ * supervision data was deleted.
+ */
+fun Context.deleteSupervisionData(): Boolean {
+    val userManager = getSystemService(UserManager::class.java)
+    val supervisionManager = getSystemService(SupervisionManager::class.java)
+    if (userManager == null || supervisionManager == null) {
+        Log.e(TAG, "Can't delete supervision data; system services cannot be found.")
+        return false
+    }
+
+    if (areAnyUsersExceptCurrentSupervised(supervisionManager, userManager)) {
+        Log.e(TAG, "Can't delete supervision data; one or more users on the device are supervised.")
+        return false
+    }
+
+    val supervisingUser = supervisingUserHandle
+    if (supervisingUser == null) {
+        Log.e(TAG, "Can't delete supervision data; supervising user does not exist.")
+        return false
+    }
+
+    supervisionManager.setSupervisionEnabled(false)
+    supervisionManager.setSupervisionRecoveryInfo(null)
+    return userManager.removeUser(supervisingUser)
+}
