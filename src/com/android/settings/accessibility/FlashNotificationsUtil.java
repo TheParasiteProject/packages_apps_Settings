@@ -30,7 +30,10 @@ import androidx.annotation.NonNull;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-class FlashNotificationsUtil {
+/**
+ * This class provides utilities for flash notifications.
+ */
+public class FlashNotificationsUtil {
     static final String LOG_TAG = "FlashNotificationsUtil";
     static final String ACTION_FLASH_NOTIFICATION_START_PREVIEW =
             "com.android.internal.intent.action.FLASH_NOTIFICATION_START_PREVIEW";
@@ -60,7 +63,17 @@ class FlashNotificationsUtil {
         int CAMERA_SCREEN = 3;
     }
 
-    static boolean isTorchAvailable(@NonNull Context context) {
+    /**
+     * Checks if a back-facing camera with a flash (torch) is available on the device.
+     * <p>
+     * Returns false if no such camera is found, if the CameraManager service is unavailable,
+     * or if a CameraAccessException occurs.
+     *
+     * @param context The context used to access the CameraManager system service.
+     * @return {@code true} if a back-facing camera with a flash is present, {@code false}
+     * otherwise.
+     */
+    public static boolean isTorchAvailable(@NonNull Context context) {
         // TODO This is duplicated logic of FlashNotificationsController.getCameraId.
         final CameraManager cameraManager = context.getSystemService(CameraManager.class);
         if (cameraManager == null) return false;

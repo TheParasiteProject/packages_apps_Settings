@@ -55,7 +55,10 @@ class FlashNotificationsScreen : PreferenceScreenMixin, PreferenceAvailabilityPr
         makeLaunchIntent(context, FlashNotificationsActivity::class.java, metadata?.key)
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
-        preferenceHierarchy(context) {}
+        preferenceHierarchy(context) {
+            +FlashNotificationsTopIntroPreference()
+            +FlashNotificationsIllustrationPreference()
+        }
 
     override fun isAvailable(context: Context): Boolean =
         FeatureFlagUtils.isEnabled(context, FeatureFlagUtils.SETTINGS_FLASH_NOTIFICATIONS)
