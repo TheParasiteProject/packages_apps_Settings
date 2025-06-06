@@ -6090,6 +6090,12 @@
     <string name="accessibility_color_inversion_about_title">About color inversion</string>
     <!-- Color correction footer link content description [CHAR LIMIT=NONE] -->
     <string name="accessibility_color_inversion_footer_learn_more_content_description">Learn more about color inversion</string>
+    <!-- Dark theme footer link text [CHAR LIMIT=NONE] -->
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link">Learn more about Dark theme</string>
+    <!-- Footer Content for the expanded dark theme. [CHAR LIMIT=NONE] -->
+    <string name="accessibility_dark_theme_preference_footer_content">
+        Some apps may not support Dark theme in the expanded setting. If you experience appearance issues, use the standard setting.
+    </string>
     <!-- Title for captioning settings screen to control turning on/off the feature entirely [CHAR LIMIT=60] -->
     <string name="accessibility_captioning_primary_switch_title">Show captions</string>
     <!-- Summary for captioning settings screen to control turning on/off the feature entirely [CHAR LIMIT=NONE] -->
@@ -8128,6 +8134,8 @@ Data usage charges may apply.</string>
     <string name="help_url_apps_and_notifications" translatable="false"></string>
     <string name="help_url_night_display" translatable="false"></string>
     <string name="help_url_dark_theme" translatable="false"></string>
+    <!-- Help URL, Expanded Dark Theme [DO NOT TRANSLATE] -->
+    <string name="help_url_dark_theme_link" translatable="false"></string>
     <string name="help_url_screen_saver" translatable="false"></string>
     <string name="help_url_pickup_gesture" translatable="false"></string>
     <string name="help_url_storage_dashboard" translatable="false"></string>
