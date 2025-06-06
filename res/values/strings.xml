@@ -11412,7 +11412,7 @@ Data usage charges may apply.</string>
     <string name="battery_tips_card_feedback_info">Is this message helpful?</string>
 
     <!-- Content description for battery hints warning icon of app anomaly [CHAR LIMIT=NONE] -->
-    <string name="battery_hints_warning_icon_a11y">Battery tips warning icon</string>
+    <string name="battery_hints_warning_icon_a11y">Battery warning tips</string>
 
     <!-- Summary of settings anomaly for adaptive brightness [CHAR LIMIT=NONE] -->
     <string name="battery_tips_settings_summary_brightness">Turn on adaptive brightness to extend battery life</string>
