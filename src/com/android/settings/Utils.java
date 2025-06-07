@@ -456,10 +456,6 @@ public final class Utils extends com.android.settingslib.Utils {
         final List<UserHandle> userProfiles = userManager.getUserProfiles();
         String umUserType = getUmUserType(userType);
         for (UserHandle profile : userProfiles) {
-            if (!com.android.settings.flags.Flags.utilsReturnUserHandleForCurrentUserId()
-                    && profile.getIdentifier() == UserHandle.myUserId()) {
-                continue;
-            }
             final UserInfo userInfo = userManager.getUserInfo(profile.getIdentifier());
             if (Objects.equals(umUserType, userInfo.userType)) {
                 return profile;
