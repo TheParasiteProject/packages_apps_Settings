@@ -34,12 +34,11 @@ import com.android.settings.flags.Flags
 import com.android.settingslib.applications.StorageStatsSource
 import com.android.settingslib.deviceinfo.PrivateStorageInfo
 import com.android.settingslib.deviceinfo.StorageManagerVolumeProvider
-import com.android.settingslib.metadata.PreferenceHierarchy
 import com.android.settingslib.metadata.PreferenceHierarchyGenerator
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.ProvidePreferenceScreen
-import com.android.settingslib.metadata.asyncPreferenceHierarchy
 import com.android.settingslib.metadata.preferenceHierarchy
+import kotlinx.coroutines.CoroutineScope
 
 @ProvidePreferenceScreen(StoragePreferenceScreen.KEY)
 open class StoragePreferenceScreen(private val context: Context) :
@@ -64,17 +63,18 @@ open class StoragePreferenceScreen(private val context: Context) :
             .setPackage(context.packageName)
     }
 
-    override fun isFlagEnabled(context: Context) =
-        Flags.catalystSystemStorage() || Flags.deviceState()
+    override fun isFlagEnabled(context: Context) = Flags.catalystSystemStorage()
 
     override fun hasCompleteHierarchy() = false
 
-    override fun getPreferenceHierarchy(context: Context) = preferenceHierarchy(context, this) {}
+    override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
+        preferenceHierarchy(context) {}
 
     override suspend fun generatePreferenceHierarchy(
         context: Context,
+        coroutineScope: CoroutineScope,
         type: Int // userId
-    ): PreferenceHierarchy = asyncPreferenceHierarchy(context, this) {
+    ) = preferenceHierarchy(context) {
         val cache = getStorageCache(context, type)
 
         // Storage Used

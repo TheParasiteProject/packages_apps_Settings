@@ -824,6 +824,18 @@
                        android:value="com.android.settings.privatespace.onelock.PrivateSpaceBiometricSettings" />
         </activity>
 
+        <activity android:name="com.android.settings.password.SetScreenLockDialogActivity"
+            android:theme="@style/Transparent"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.android.settings.set_screen_lock_dialog_task"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="com.android.internal.app.ScreenLockDialogContract.SET_SCREEN_LOCK_PROMPT_ACTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".bluetooth.DevicePickerActivity"
                 android:label="@string/device_picker"
                 android:configChanges="orientation|keyboardHidden|screenSize"
@@ -2498,6 +2510,9 @@
                        android:value="@string/menu_key_security"/>
         </activity>
 
+        <service android:name=".accessibility.AccessibilitySurveyNotificationJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
         <receiver
             android:name=".accessibility.notification.SurveyNotificationReceiver"
             android:permission="android.permission.MANAGE_ACCESSIBILITY"
@@ -2840,6 +2855,15 @@
                 android:value="@string/menu_key_supervision" />
         </activity>
 
+        <activity
+            android:name=".supervision.SupervisionPinManagementActivity"
+            android:label="@string/supervision_pin_management_preference_title"
+            android:exported="true">
+            <meta-data
+                android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                android:value="@string/menu_key_supervision" />
+        </activity>
+
         <activity android:name=".supervision.ConfirmSupervisionCredentialsActivity"
             android:exported="true"
             android:excludeFromRecents="true"
@@ -2896,8 +2920,6 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.android.settings.suggested.category.LOCK_SCREEN_REDACTION" />
             </intent-filter>
-            <meta-data android:name="com.android.settings.require_user_type"
-                       android:value="primary" />
             <meta-data android:name="com.android.settings.title"
                        android:resource="@string/notification_suggestion_title" />
             <meta-data android:name="com.android.settings.summary"

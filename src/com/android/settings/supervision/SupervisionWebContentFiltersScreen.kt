@@ -19,11 +19,13 @@ import android.app.settings.SettingsEnums
 import android.app.supervision.flags.Flags
 import android.content.Context
 import androidx.preference.Preference
+import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceScreen
 import com.android.settings.CatalystSettingsActivity
 import com.android.settings.R
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.supervision.ipc.SupervisionMessengerClient
+import com.android.settings.supervision.ipc.SupportedApp
 import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.metadata.PreferenceCategory
 import com.android.settingslib.metadata.PreferenceLifecycleContext
@@ -32,6 +34,8 @@ import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.preferenceHierarchy
 import com.android.settingslib.preference.forEachRecursively
+import kotlin.text.get
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -53,6 +57,9 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
     override val title: Int
         get() = R.string.supervision_web_content_filters_title
 
+    override val keywords: Int
+        get() = R.string.supervision_web_content_filters_keywords
+
     override val icon: Int
         get() = R.drawable.ic_globe
 
@@ -64,6 +71,7 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
     override fun onCreate(context: PreferenceLifecycleContext) {
         supervisionClient = getSupervisionClient(context)
         updatePreferenceData(context)
+        addSupportedApps(context)
     }
 
     override fun onDestroy(context: PreferenceLifecycleContext) {
@@ -74,11 +82,11 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
 
     override fun hasCompleteHierarchy() = true
 
-    override fun getPreferenceHierarchy(context: Context) =
-        preferenceHierarchy(context, this) {
+    override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
+        preferenceHierarchy(context) {
             +SupervisionWebContentFiltersTopIntroPreference()
             +PreferenceCategory(
-                BROWSER_RADIO_BUTTON_GROUP,
+                BROWSER_FILTERS_GROUP,
                 R.string.supervision_web_content_filters_browser_title,
             ) +=
                 {
@@ -86,7 +94,7 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
                     +SupervisionSafeSitesSwitchPreference(dataStore)
                 }
             +PreferenceCategory(
-                SEARCH_RADIO_BUTTON_GROUP,
+                SEARCH_FILTERS_GROUP,
                 R.string.supervision_web_content_filters_search_title,
             ) +=
                 {
@@ -95,6 +103,9 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
                 }
             +SupervisionWebContentFiltersFooterPreference()
         }
+
+    override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?) =
+        makeLaunchIntent(context, SupervisionWebContentFiltersActivity::class.java, metadata?.key)
 
     private fun updatePreferenceData(context: PreferenceLifecycleContext) {
         val preferenceScreen = context.findPreference<Preference>(key)
@@ -121,15 +132,61 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
         }
     }
 
-    override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?) =
-        makeLaunchIntent(context, SupervisionWebContentFiltersActivity::class.java, metadata?.key)
+    private fun addSupportedApps(context: PreferenceLifecycleContext) {
+        context.lifecycleScope.launch {
+            val supportedAppsMap =
+                withContext(Dispatchers.IO) {
+                    supervisionClient?.getSupportedApps(
+                        listOf(BROWSER_FILTERS_SUPPORTED_APPS, SEARCH_FILTERS_SUPPORTED_APPS)
+                    )
+                }
+
+            createSupportedAppPreference(
+                context,
+                BROWSER_FILTERS_GROUP,
+                BROWSER_FILTERS_SUPPORTED_APPS,
+                supportedAppsMap,
+            )
+            createSupportedAppPreference(
+                context,
+                SEARCH_FILTERS_GROUP,
+                SEARCH_FILTERS_SUPPORTED_APPS,
+                supportedAppsMap,
+            )
+        }
+    }
+
+    private fun createSupportedAppPreference(
+        context: PreferenceLifecycleContext,
+        filterGroup: String,
+        filterType: String,
+        supportedAppsMap: Map<String, List<SupportedApp>>?,
+    ) {
+        val supportedApps = supportedAppsMap?.get(filterType) ?: emptyList()
+        context.findPreference<PreferenceGroup>(filterGroup)?.apply {
+            for (supportedApp in supportedApps) {
+                val packageName = supportedApp.packageName
+                if (packageName != null) {
+                    SupervisionSupportedAppPreference(
+                            supportedApp.title,
+                            supportedApp.summary,
+                            packageName,
+                        )
+                        .createWidget(context)
+                        .let { addPreference(it) }
+                }
+            }
+        }
+    }
 
     private fun getSupervisionClient(context: Context) =
         supervisionClient ?: SupervisionMessengerClient(context).also { supervisionClient = it }
 
     companion object {
         const val KEY = "supervision_web_content_filters"
-        internal const val BROWSER_RADIO_BUTTON_GROUP = "browser_radio_button_group"
-        internal const val SEARCH_RADIO_BUTTON_GROUP = "search_radio_button_group"
+        internal const val BROWSER_FILTERS_GROUP = "browser_filters_group"
+        internal const val BROWSER_FILTERS_SUPPORTED_APPS = "browser_filters_supported_apps"
+        internal const val SEARCH_FILTERS_GROUP = "search_filters_group"
+        internal const val SEARCH_FILTERS_SUPPORTED_APPS = "search_filters_supported_apps"
     }
 }

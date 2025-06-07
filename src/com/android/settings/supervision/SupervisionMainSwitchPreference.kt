@@ -16,12 +16,15 @@
 package com.android.settings.supervision
 
 import android.app.Activity
+import android.app.settings.SettingsEnums.ACTION_SUPERVISION_MAIN_TOGGLE_OFF
+import android.app.settings.SettingsEnums.ACTION_SUPERVISION_MAIN_TOGGLE_ON
 import android.app.supervision.SupervisionManager
 import android.content.Context
 import android.content.Intent
 import androidx.annotation.VisibleForTesting
 import androidx.preference.Preference
 import com.android.settings.R
+import com.android.settings.overlay.FeatureFactory
 import com.android.settings.supervision.ipc.PreferenceData
 import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.datastore.NoOpKeyedObservable
@@ -65,10 +68,8 @@ class SupervisionMainSwitchPreference(
     override fun getSummary(context: Context): CharSequence? =
         if (!context.isSupervisingCredentialSet) {
             context.getString(R.string.device_supervision_switch_no_pin_summary)
-        } else if (supervisionMainSwitchStorage.getBoolean(KEY)!!) {
-            context.getString(R.string.switch_on_text)
         } else {
-            context.getString(R.string.device_supervision_switch_paused_summary)
+            null
         }
 
     override fun storage(context: Context): KeyValueStore = supervisionMainSwitchStorage
@@ -139,6 +140,12 @@ class SupervisionMainSwitchPreference(
             updateDependentPreferencesEnabledState(mainSwitchPreference, newValue)
             updateDependentPreferenceSummary(mainSwitchPreference)
             lifeCycleContext.notifyPreferenceChange(SupervisionPinManagementScreen.KEY)
+
+            FeatureFactory.featureFactory.metricsFeatureProvider.action(
+                lifeCycleContext,
+                if (newValue) ACTION_SUPERVISION_MAIN_TOGGLE_ON
+                else ACTION_SUPERVISION_MAIN_TOGGLE_OFF,
+            )
         }
 
         return true

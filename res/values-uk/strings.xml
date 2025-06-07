@@ -47,10 +47,8 @@
     <string name="preview_pager_email_title" msgid="8767864657910457562">"Електронна пошта"</string>
     <string name="preview_pager_previous_button" msgid="607771113300838313">"Назад"</string>
     <string name="preview_pager_next_button" msgid="8700907912508927271">"Далі"</string>
-    <!-- no translation found for font_size_make_smaller_desc (319927200356692406) -->
-    <skip />
-    <!-- no translation found for font_size_make_larger_desc (6739310980713118605) -->
-    <skip />
+    <string name="font_size_make_smaller_desc" msgid="319927200356692406">"Зменшити шрифт"</string>
+    <string name="font_size_make_larger_desc" msgid="6739310980713118605">"Збільшити шрифт"</string>
     <string name="stay_awake_on_fold_title" msgid="6590454679898134221">"Завжди"</string>
     <string name="stay_awake_on_fold_summary" msgid="1939963751585954262">"Передній екран вмикається, коли ви складаєте пристрій"</string>
     <string name="stay_awake_on_lockscreen_title" msgid="8088456642083051068">"Якщо провести пальцем угору"</string>
@@ -200,7 +198,8 @@
     <string name="locale_remove_menu" msgid="3521546263421387474">"Видалити"</string>
     <string name="add_a_language" msgid="2126220398077503271">"Додати мову"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"Мова"</string>
-    <string name="locale_picker_category_title" msgid="6212064706962721255">"Бажана мова"</string>
+    <!-- no translation found for locale_picker_category_title (296835514014453679) -->
+    <skip />
     <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"Мови додатків"</string>
     <string name="app_locale_picker_summary" msgid="616928580653613998">"Виберіть мову для кожного додатка"</string>
     <string name="app_locale_picker_title" msgid="2431448962911301366">"Мова додатка"</string>
@@ -226,10 +225,17 @@
     <string name="title_change_system_locale" msgid="4102991236063984803">"Змінити мову системи на таку: %s?"</string>
     <string name="title_system_locale_addition" msgid="8218683660751479466">"Додати мову (%s) до списку бажаних?"</string>
     <string name="desc_system_locale_addition" msgid="3409917362651596070">"Додатки й веб-сайти знатимуть, що ви віддаєте перевагу також і цій мові."</string>
-    <string name="desc_notice_device_locale_settings_change" msgid="8311132485850714160">"Регіональні та інші налаштування вашого пристрою буде змінено."</string>
+    <!-- no translation found for desc_notice_device_locale_and_region_settings_change (909261686577914396) -->
+    <skip />
+    <!-- no translation found for desc_notice_device_locale_settings_change (5012353615235634881) -->
+    <skip />
+    <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
+    <skip />
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"Змінити"</string>
-    <string name="title_unavailable_locale" msgid="2628898110416542386">"Вибрана мова (%s) недоступна"</string>
-    <string name="desc_unavailable_locale" msgid="2201756477400935896">"Цю мову не можна використовувати як мову системи, однак додатки й веб-сайти знатимуть, що ви надаєте їй перевагу."</string>
+    <!-- no translation found for title_unavailable_locale (5382411204559213983) -->
+    <skip />
+    <!-- no translation found for desc_unavailable_locale (7223655766703116782) -->
+    <skip />
     <string name="locale_search_menu" msgid="297782694044826686">"Пошук"</string>
     <string name="language_and_region_title" msgid="8374151891112162767">"Мова й регіон"</string>
     <string name="language_selection_title" msgid="968179636453982415">"Додайте мову"</string>
@@ -243,6 +249,12 @@
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"Змінити регіон на \"<xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g>\"?"</string>
     <string name="body_change_system_locale_region" msgid="9064318449821043189">"<xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g> збережеться на пристрої як мова системи"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"Виберіть, як на пристрої, вебсайтах і в додатках відображатимуться числа"</string>
+    <!-- no translation found for preferred_locale_menu_up (4009560552099567485) -->
+    <skip />
+    <!-- no translation found for preferred_locale_menu_down (1033373887552535585) -->
+    <skip />
+    <!-- no translation found for preferred_locale_menu_remove (8547483341987864590) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"Регіональні налаштування"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Установіть параметри одиниць і чисел"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Укажіть регіональні налаштування, щоб додатки могли персоналізувати для вас свій інтерфейс."</string>
@@ -281,6 +293,10 @@
     <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"Не можна видалити всі мови"</string>
     <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"Залиште принаймні одну вибрану мову"</string>
     <string name="locale_not_translated" msgid="3071618135527110152">"Недоступно як мова системи"</string>
+    <!-- no translation found for dlg_title_delete_preferred_locale (4167214348946940002) -->
+    <skip />
+    <!-- no translation found for dlg_desc_delete_preferred_locale (4658301652628456858) -->
+    <skip />
     <string name="action_drag_label_move_up" msgid="3392196942330705015">"Перемістити вгору"</string>
     <string name="action_drag_label_move_down" msgid="9069518740553953426">"Перемістити вниз"</string>
     <string name="action_drag_label_move_top" msgid="2430471023612171619">"На початок"</string>
@@ -460,6 +476,8 @@
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks" msgid="1663906389456119842">"Не зараз"</string>
     <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"Прийняти"</string>
     <string name="security_settings_fingerprint_rename_description" msgid="6301505700382531086">"Двічі торкніться, щоб перейменувати"</string>
+    <!-- no translation found for security_settings_fingerprint_recognition_description (1805171116182647136) -->
+    <skip />
     <string name="setup_fingerprint_enroll_skip_title" msgid="2473807887676247264">"Пропустити?"</string>
     <string name="setup_fingerprint_enroll_skip_after_adding_lock_text" msgid="2412645723804450304">"Налаштування відбитка пальця триває кілька хвилин. Якщо ви пропустите цей крок, відбиток пальця можна додати пізніше в налаштуваннях."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_setup" msgid="6255210343107484206">"Цей значок свідчить про те, що ви можете пройти автентифікацію за відбитком пальця, наприклад, щоб увійти в обліковий запис у додатку або схвалити покупку"</string>
@@ -942,10 +960,8 @@
     <string name="bluetooth_device_context_connect" msgid="4913860372216815855">"Підключити"</string>
     <string name="bluetooth_device_context_disconnect" msgid="4464167389972513232">"Відключити"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="2406032703622371826">"Створ. пару та підкл."</string>
-    <!-- no translation found for bluetooth_connecting (5315496594905010438) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnecting (1643422701532873735) -->
-    <skip />
+    <string name="bluetooth_connecting" msgid="5315496594905010438">"Під’єднання"</string>
+    <string name="bluetooth_disconnecting" msgid="1643422701532873735">"Від’єднання"</string>
     <string name="bluetooth_empty_list_bluetooth_off" msgid="7326727272747345476">"Коли ввімкнено Bluetooth, ваш пристрій може обмінюватися даними з іншими пристроями з цією технологією поблизу"</string>
     <string name="bluetooth_empty_list_bluetooth_off_auto_on_available" msgid="3430864468105204282">"Коли Bluetooth увімкнено, ваш пристрій може обмінюватися даними з пристроями з Bluetooth поблизу. Такі функції, як \"Швидкий обмін\" і \"Знайти пристрій\", використовують Bluetooth."</string>
     <string name="bluetooth_scanning_on_info_message" msgid="786648535600075223">"Коли ви вмикаєте Bluetooth, ваш пристрій може обмінюватися даними з іншими пристроями з цією технологією поблизу.\n\nДодатки й сервіси можуть шукати пристрої поруч, навіть якщо Bluetooth вимкнено. Завдяки цьому покращується робота пристрою, зокрема його функцій і сервісів, які використовують геодані. Таке налаштування можна змінити в параметрах пошуку пристроїв із Bluetooth."</string>
@@ -1184,6 +1200,8 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"Надати доступ до цієї мережі іншим користувачам пристрою"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"Усі користувачі цього пристрою зможуть бачити спільну мережу й підключатися до неї. Адміністратори зможуть видалити спільну мережу. Докладніше"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"Дозвольте іншим користувачам змінювати конфігурацію мережі"</string>
+    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
+    <skip />
     <string name="no_internet_access_text" msgid="3611993143350310936">"Ця мережа не має доступу до Інтернету. Не від’єднуватись?"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"Деякі додатки й сервіси можуть не працювати через обмежене з’єднання. Усе одно використати?"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"Не запитувати знову для цієї мережі"</string>
@@ -2175,8 +2193,7 @@
     <string name="trackpad_settings" msgid="2071131324087677005">"Сенсорна панель"</string>
     <string name="trackpad_mouse_settings" msgid="136226693583218429">"Сенсорна панель і миша"</string>
     <string name="mouse_settings" msgid="7301671756721327122">"Миша"</string>
-    <!-- no translation found for mouse_settings_summary (1308610072914620926) -->
-    <skip />
+    <string name="mouse_settings_summary" msgid="1308610072914620926">"Швидкість курсора, налаштування кнопок"</string>
     <string name="trackpad_settings_summary" msgid="3369855644136760402">"Швидкість курсора, жести"</string>
     <string name="trackpad_tap_to_click" msgid="1938230946542070746">"Натискання дотиком"</string>
     <string name="trackpad_tap_dragging_title" msgid="4198317837427535015">"Натискати й перетягувати об’єкти"</string>
@@ -2230,13 +2247,25 @@
     <string name="gesture_button_next" msgid="695288092704187356">"Далі"</string>
     <string name="gesture_button_restart" msgid="1895850891992530133">"Оновити"</string>
     <string name="gesture_button_done" msgid="6387900351203032188">"Готово"</string>
-    <string name="action_corners_title" msgid="8971354126563421646">"Налаштуйте активні кути"</string>
-    <string name="action_corners_summary" msgid="4245089615854251124">"Для переходу між об’єктами системи використовувати курсор"</string>
-    <string name="action_corners_intro" msgid="4384209411870086502">"Виберіть відповідні області, щоб налаштувати активні кути"</string>
-    <string name="action_corners_bottom_left_title" msgid="8677233546610832717">"Лівий нижній кут"</string>
-    <string name="action_corners_bottom_right_title" msgid="2155948558861306738">"Правий нижній кут"</string>
-    <string name="action_corners_top_left_title" msgid="6604149810499060560">"Лівий верхній кут"</string>
-    <string name="action_corners_top_right_title" msgid="583996793984142329">"Правий верхній кут"</string>
+    <!-- no translation found for action_corner_title (7411160165577367757) -->
+    <skip />
+    <string name="action_corner_summary" msgid="695618538930535335">"Для переходу між об’єктами системи використовувати курсор"</string>
+    <!-- no translation found for action_corner_intro (2170609118659718140) -->
+    <skip />
+    <string name="action_corner_bottom_left_title" msgid="2857258272736432174">"Лівий нижній кут"</string>
+    <string name="action_corner_bottom_right_title" msgid="7222233500548465684">"Правий нижній кут"</string>
+    <string name="action_corner_top_left_title" msgid="4633975226092344210">"Лівий верхній кут"</string>
+    <string name="action_corner_top_right_title" msgid="4995999693840776032">"Правий верхній кут"</string>
+    <string name="action_corner_action_none" msgid="5203163099950649999">"Немає"</string>
+    <string name="action_corner_action_home" msgid="6779642573582379579">"Головна"</string>
+    <string name="action_corner_action_recent_apps" msgid="7450480676812648813">"Нещодавні додатки"</string>
+    <string name="action_corner_action_notifications" msgid="3779353356349774469">"Сповіщення"</string>
+    <string name="action_corner_action_quick_settings" msgid="4660901117283653069">"Швидкі налаштування"</string>
+    <string name="action_corner_action_dialog_title" msgid="8253240813317885237">"Виберіть комбінацію клавіш: <xliff:g id="CORNER">%1$s</xliff:g>"</string>
+    <string name="action_corner_bottom_left_name" msgid="9193788067022476544">"лівий нижній кут"</string>
+    <string name="action_corner_bottom_right_name" msgid="1031603363418505375">"правий нижній кут"</string>
+    <string name="action_corner_top_left_name" msgid="8077670910600032291">"лівий верхній кут"</string>
+    <string name="action_corner_top_right_name" msgid="6307321595919080297">"правий верхній кут"</string>
     <string name="modifier_keys_settings" msgid="2537108435032034683">"Клавіші-модифікатори"</string>
     <string name="modifier_keys_settings_summary" msgid="6933143361657444436">"Змінити функції клавіш"</string>
     <string name="modifier_keys_reset_title" msgid="948294258402761066">"Скинути для всіх"</string>
@@ -2315,8 +2344,7 @@
     <string name="last_time_used_label" msgid="7589377271406011659">"Останнє використання"</string>
     <string name="last_time_used_never" msgid="2936073559267990034">"ніколи"</string>
     <string name="usage_time_label" msgid="9105343335151559883">"Час використ."</string>
-    <!-- no translation found for phone_information_v2_title (3373745314543222111) -->
-    <skip />
+    <string name="phone_information_v2_title" msgid="3373745314543222111">"Інформація про телефон (версія 2)"</string>
     <string name="accessibility_settings" msgid="4713215774904704682">"Доступність"</string>
     <string name="accessibility_settings_title" msgid="6739115703615065716">"Налаштування доступності"</string>
     <string name="accessibility_settings_summary" msgid="2366627644570558503">"Дисплей, взаємодія, аудіо"</string>
@@ -2355,8 +2383,7 @@
     <string name="accessibility_system_controls_title" msgid="6403287349518987624">"Елементи керування системою"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Надіслати відгук"</string>
     <string name="accessibility_send_survey_title" msgid="7899716184811587023">"Оцініть нас"</string>
-    <!-- no translation found for accessibility_disability_support_title (7934160403456751664) -->
-    <skip />
+    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Зв’язатися зі службою підтримки Google із питань доступності"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Опитування щодо доступності"</string>
     <string name="dark_theme_survey_notification_title" msgid="4035183263314404750">"Чи використовуєте Ви темну тему в інших додатках?"</string>
     <string name="dark_theme_survey_notification_summary" msgid="801472177955048195">"Залиште відгук"</string>
@@ -2383,6 +2410,7 @@
     <string name="accessibility_screen_magnification_shortcut_title" msgid="2387963646377987780">"Швидкий запуск збільшення"</string>
     <string name="accessibility_magnification_cursor_following_title" msgid="29531257984012743">"Слідування за курсором"</string>
     <string name="accessibility_magnification_cursor_following_header" msgid="7283095798622223509">"Виберіть, як лупа слідує за курсором."</string>
+    <string name="accessibility_magnification_cursor_following_unavailable_summary" msgid="1683880243856242269">"Недоступно, коли збільшено лише частину екрана"</string>
     <string name="accessibility_magnification_cursor_following_continuous" msgid="1119319218662522794">"Переміщати екран синхронно з рухом курсора"</string>
     <string name="accessibility_magnification_cursor_following_center" msgid="3504798009192014460">"Зафіксувати курсор по центру рухомого екрана"</string>
     <string name="accessibility_magnification_cursor_following_edge" msgid="8675207762416655758">"Переміщати екран, коли курсор торкається його країв"</string>
@@ -2523,10 +2551,32 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"Автоматично оновлювати збільшення"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Оновлювати збільшення екрана в інших програмах"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Кнопка живлення закінчує виклик"</string>
-    <string name="accessibility_force_invert_title" msgid="5248504501753732051">"Зробити темними більше додатків"</string>
-    <string name="accessibility_force_invert_summary" msgid="257503086198180749">"Темна тема стане доступною для більшої кількості додатків. Це може працювати не з усіма додатками."</string>
+    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
+    <skip />
+    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
+    <skip />
+    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
+    <skip />
+    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
+    <skip />
+    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
+    <skip />
+    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
+    <skip />
+    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
+    <skip />
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Вимкнути анімацію"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Кількість рухомих об’єктів на екрані зменшиться"</string>
+    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
+    <skip />
+    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
+    <skip />
+    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
+    <skip />
+    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
+    <skip />
+    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
+    <skip />
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"Монофонічне аудіо"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"Об\'єднувати канали під час відтворення аудіо"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"Баланс аудіо"</string>
@@ -2562,7 +2612,7 @@
     <string name="accessibility_autoclick_medium_summary" msgid="1343390686514222871">"0,6 секунди"</string>
     <string name="accessibility_autoclick_long_title" msgid="6799311820641687735">"Довге"</string>
     <string name="accessibility_autoclick_long_summary" msgid="3747153151313563637">"1 секунда"</string>
-    <string name="accessibility_autoclick_custom_title" msgid="4597792235546232038">"Інше"</string>
+    <string name="accessibility_autoclick_custom_title" msgid="4597792235546232038">"Інша"</string>
     <string name="accessibility_autoclick_shorter_desc" msgid="7631013255724544348">"Коротше"</string>
     <string name="accessibility_autoclick_longer_desc" msgid="2566025502981487443">"Довше"</string>
     <string name="accessibility_autoclick_seekbar_desc" msgid="8363959277814621118">"Час автоматичного натискання"</string>
@@ -2574,7 +2624,7 @@
     <string name="autoclick_cursor_area_size_summary" msgid="6993249143332791469">"Якщо курсор виходить за межі області натискання, автоматичне натискання скасовується"</string>
     <string name="autoclick_cursor_area_size_dialog_option_extra_large" msgid="3802014133363801617">"Дуже велика"</string>
     <string name="autoclick_cursor_area_size_dialog_option_large" msgid="1115930762484519488">"Велика"</string>
-    <string name="autoclick_cursor_area_size_dialog_option_default" msgid="4934363711068310028">"За умовчанням"</string>
+    <string name="autoclick_cursor_area_size_dialog_option_default" msgid="4934363711068310028">"Стандартна"</string>
     <string name="autoclick_cursor_area_size_dialog_option_small" msgid="3987901922883658043">"Мала"</string>
     <string name="autoclick_cursor_area_size_dialog_option_extra_small" msgid="6056674574040448864">"Дуже мала"</string>
     <string name="autoclick_ignore_minor_cursor_movement_title" msgid="5038721995720529808">"Ігнорувати незначні рухи курсора"</string>
@@ -2616,6 +2666,10 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"Докладніше про корекцію кольору"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"Про інверсію кольорів"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"Докладніше про інверсію кольорів"</string>
+    <!-- no translation found for accessibility_dark_theme_footer_learn_more_helper_link (7084955775821075280) -->
+    <skip />
+    <!-- no translation found for accessibility_dark_theme_preference_footer_content (4431044600779983609) -->
+    <skip />
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Показувати субтитри"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"Лише для підтримуваних додатків"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Розмір і стиль субтитрів"</string>
@@ -3682,7 +3736,8 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{Немає}=1{Налаштовано 1 розклад}one{Налаштовано # розклад}few{Налаштовано # розклади}many{Налаштовано # розкладів}other{Налаштовано # розкладу}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"Не турбувати"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"Режими"</string>
-    <string name="zen_modes_list_intro" msgid="1795379595115088972">"Менше відволікайтеся й зберігайте концентрацію уваги завдяки режимам для сну, роботи, керування автомобілем тощо."</string>
+    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
+    <skip />
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"Створити власний режим"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"Отримуйте сповіщення лише від важливих людей і додатків"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"Налаштувати розклад"</string>
@@ -4304,10 +4359,8 @@
     <string name="app_permissions" msgid="8666537659217653626">"Менеджер дозволів"</string>
     <string name="app_data_sharing_updates_title" msgid="1694297952320402788">"Зміни в передаванні геоданих"</string>
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Перегляньте додатки, які змінили спосіб передавання ваших геоданих"</string>
-    <!-- no translation found for app_function_access_settings_title (1474765429611652468) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (6465715820745848068) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="1474765429611652468">"Керування іншими додатками за допомогою агента"</string>
+    <string name="app_function_access_settings_summary" msgid="6465715820745848068">"Виконуйте дії на пристрої і в інших додатках"</string>
     <string name="tap_to_wake" msgid="3313433536261440068">"Торкніться, щоб активувати"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Двічі торкніться екрана, щоб активувати пристрій"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Відкривання посилань"</string>
@@ -4467,10 +4520,8 @@
     <string name="screen_zoom_short_summary" msgid="756254364808639194">"Збільшуйте або зменшуйте масштаб"</string>
     <string name="screen_zoom_keywords" msgid="5964023524422386592">"щільність дисплея, масштаб екрана, масштабувати, масштабування"</string>
     <string name="screen_zoom_preview_title" msgid="5288355628444562735">"Попередній перегляд"</string>
-    <!-- no translation found for screen_zoom_make_smaller_desc (1450649885198381123) -->
-    <skip />
-    <!-- no translation found for screen_zoom_make_larger_desc (7125594310562596457) -->
-    <skip />
+    <string name="screen_zoom_make_smaller_desc" msgid="1450649885198381123">"Зменшити масштаб"</string>
+    <string name="screen_zoom_make_larger_desc" msgid="7125594310562596457">"Збільшити масштаб"</string>
     <string name="disconnected" msgid="3469373726996129247">"Не під’єднано"</string>
     <string name="keyboard_disconnected" msgid="796053864561894531">"Не під’єднано"</string>
     <string name="apps_summary" msgid="4007416751775414252">"Установлено додатків: <xliff:g id="COUNT">%1$d</xliff:g>"</string>
@@ -4490,6 +4541,10 @@
     <string name="disabled_by_policy_title_financed_device" msgid="2328740314082888228">"Налаштування заблокував кредитор"</string>
     <string name="disabled_by_policy_title_biometric_parental_consent" msgid="2463673997797134678">"Потрібна згода батьків"</string>
     <string name="disabled_by_policy_content_biometric_parental_consent" msgid="7124116806784305206">"Щоб розпочати налаштування, передай телефон комусь із батьків"</string>
+    <!-- no translation found for disabled_by_policy_title_parental_controls (8875976588644052371) -->
+    <skip />
+    <!-- no translation found for disabled_by_policy_content_parental_controls (4648160125103768738) -->
+    <skip />
     <string name="disabled_by_policy_parental_consent" msgid="9166060049019018978">"Передай телефон комусь із батьків, щоб він дозволив зміну цього налаштування."</string>
     <string name="default_admin_support_msg" msgid="8816296554831532033">"Щоб дізнатися більше, зверніться до системного адміністратора"</string>
     <string name="admin_support_more_info" msgid="8407433155725898290">"Докладніше"</string>
@@ -4605,7 +4660,8 @@
     <string name="battery_tips_card_action_button_check" msgid="1535140204105479318">"Перевірити"</string>
     <string name="battery_tips_card_dismiss_button" msgid="1885756985544936618">"OK"</string>
     <string name="battery_tips_card_feedback_info" msgid="767117835675157298">"Чи корисне це повідомлення?"</string>
-    <string name="battery_hints_warning_icon_a11y" msgid="5312542323401447620">"Поради для економії заряду: значок застереження"</string>
+    <!-- no translation found for battery_hints_warning_icon_a11y (709629805028175434) -->
+    <skip />
     <string name="battery_tips_settings_summary_brightness" msgid="546145032616077783">"Увімкніть адаптивну яскравість, щоб збільшити час роботи акумулятора"</string>
     <string name="battery_tips_settings_summary_screen_timeout" msgid="556801426050962077">"Зменште час вимкнення екрана, щоб збільшити час роботи акумулятора"</string>
     <string name="battery_tips_apps_summary_always_high" msgid="6334519477067044920">"Додаток <xliff:g id="APP_LABEL">%1$s</xliff:g> використав більше заряду акумулятора"</string>
@@ -5325,14 +5381,13 @@
     <string name="enable_16k_pages" msgid="1758111531461408337">"Запустити з розміром сторінки 16 КБ"</string>
     <string name="enable_16k_pages_summary" msgid="1937836453571509085">"Запустити пристрій із ядром для сторінок 16 КБ"</string>
     <string name="confirm_enable_16k_pages_title" msgid="5477376227161609124">"Перейти з режиму 4 КБ в режим 16 KБ"</string>
+    <string name="confirm_enable_16k_pages_update_wipe" msgid="4760548401414644138">"Щоб використовувати опцію 16 КБ для розробників, розділ даних на цьому пристрої потрібно конвертувати в ext4. Після підтвердження на пристрої буде очищено всі дані, а файлову систему буде змінено на ext4. Ви працюєте у виробничому режимі з ядром для сторінок розміром 4 КБ і переходите в режим із ядром для сторінок розміром 16 KБ. Коли ви перейдете в цей режим, то зможете переходити між режимами 4 КБ й 16 КБ, лише раз перезапускаючи пристрій. У цьому режимі цілісність програмного забезпечення не гарантується, і будь-які дані, що зберігаються на телефоні, поки завантажувач операційної системи розблоковано, можуть бути під загрозою. Деякі функції в цих режимах буде вимкнено, тому зможуть працювати не всі додатки. Щоб повернути пристрій у виробничий режим, вам буде потрібно повернутися в режим 4 КБ й заблокувати завантажувач операційної системи. Налаштування пристрою буде скинуто. Коли ОС Android завантажиться на пристрій, вимкніть розблокування завантажувача в параметрах розробника. Щоб продовжити, натисніть \"Видалити всі дані й оновити\". Пристрій перезапуститься."</string>
     <string name="confirm_enable_16k_pages_text" msgid="6211693250692246982">"Ви працюєте в режимі, що не залежить від розміру сторінки, з ядром для сторінок розміром 4 КБ, і переходите в режим із ядром для сторінок розміром 16 KБ. У цьому режимі цілісність програмного забезпечення не гарантується, і будь-які дані, що зберігаються на телефоні, поки завантажувач операційної системи розблоковано, можуть бути під загрозою. Пристрій перезапуститься. Деякі функції в цих режимах буде вимкнено, тому зможуть працювати не всі додатки. Щоб повернути пристрій у виробничий режим, вам буде потрібно повернутися в режим 4 КБ й заблокувати завантажувач операційної системи. Налаштування пристрою буде скинуто. Коли ОС Android завантажиться на пристрій, вимкніть розблокування завантажувача в параметрах розробника."</string>
     <string name="confirm_enable_4k_pages_title" msgid="3001009010581393119">"Перейти з режиму 16 КБ в режим 4 KБ"</string>
     <string name="confirm_enable_4k_pages_text" msgid="3398001587586470689">"Ви працюєте в режимі, що не залежить від розміру сторінки, з ядром для сторінок розміром 16 КБ, і переходите в режим із ядром для сторінок розміром 4 KБ. У цьому режимі цілісність програмного забезпечення не гарантується, і будь-які дані, що зберігаються на телефоні, поки завантажувач операційної системи розблоковано, можуть бути під загрозою. Пристрій перезапуститься. Деякі функції в цих режимах буде вимкнено, тому зможуть працювати не всі додатки. Щоб повернути пристрій у виробничий режим, вам буде потрібно заблокувати завантажувач операційної системи. Налаштування пристрою буде скинуто. Коли ОС Android завантажиться на пристрій, вимкніть розблокування завантажувача в параметрах розробника."</string>
     <string name="toast_16k_update_failed_text" msgid="7848383020572918850">"Не вдалося оновити ядро до сумісного зі сторінками розміром 16 КБ."</string>
     <string name="progress_16k_ota_title" msgid="2117218313875523741">"Застосування змін"</string>
-    <string name="confirm_format_ext4_title" msgid="4754057414728537125">"Переформатувати пристрій на ext4? (Обов’язково для режиму 16 КБ)"</string>
-    <string name="confirm_format_ext4_text" msgid="432847493298532536">"Щоб використовувати опцію 16 КБ для розробників, розділ даних на цьому пристрої потрібно конвертувати в ext4. У цьому режимі цілісність програмного забезпечення не гарантується, і будь-які дані, що зберігаються на телефоні, поки завантажувач операційної системи розблоковано, можуть бути під загрозою. Після цього для активації опції 16 КБ потрібно буде ще раз перезапустити пристрій. Коли ви перейдете в цей режим, то зможете переходити між режимами 4 КБ й 16 КБ, лише раз перезапускаючи пристрій. Деякі функції в цих режимах буде вимкнено, тому зможуть працювати не всі додатки. Щоб повернути пристрій у виробничий режим, вам буде потрібно повернутися в режим 4 КБ й заблокувати завантажувач операційної системи. Налаштування пристрою буде скинуто. Коли ОС Android завантажиться на пристрій, вимкніть розблокування завантажувача в параметрах розробника. Після підтвердження на пристрої буде очищено всі дані, а файлову систему буде змінено на ext4. Коли цей процес завершиться, знову ввімкніть опцію 16 КБ."</string>
-    <string name="confirm_ext4_button_text" msgid="6045501984773738407">"Видалити всі дані"</string>
+    <string name="confirm_ext4_button_text" msgid="697563319110759422">"Видалити всі дані й оновити"</string>
     <string name="format_ext4_failure_toast" msgid="8059453995800471549">"Не вдалося очистити розділ даних і переформатувати на ext4."</string>
     <string name="confirm_oem_unlock_for_16k_title" msgid="6062041826568112078">"Потрібне розблокування завантажувача операційної системи"</string>
     <string name="confirm_oem_unlock_for_16k_text" msgid="8089310116854544106">"Щоб використовувати опцію 16 КБ для розробників, на цьому пристрої має бути розблоковано завантажувач операційної системи. У цьому режимі цілісність програмного забезпечення не гарантується, і будь-які дані, що зберігаються на телефоні, поки завантажувач операційної системи розблоковано, можуть бути під загрозою. Під час активації режиму 16 КБ усі дані й налаштування користувача буде очищено. Коли завантажувач операційної системи буде розблоковано, для активації режиму 16 КБ потрібно буде перезапустити пристрій двічі. Коли ви перейдете в цей режим, то зможете переходити між режимами 4 КБ й 16 КБ, лише раз перезапускаючи пристрій. Деякі функції в цих режимах буде вимкнено, тому зможуть працювати не всі додатки. Щоб повернути пристрій у виробничий режим, вам буде потрібно повернутися в режим 4 КБ й заблокувати завантажувач операційної системи. Налаштування пристрою буде скинуто. Розблокуйте завантажувач операційної системи й повторіть спробу. Дізнатися, як це зробити, можна на сторінці &lt;a href=\"https://source.android.com/docs/core/architecture/bootloader/locking_unlocking\"&gt;https://source.android.com/docs/core/architecture/bootloader/locking_unlocking&lt;/a&gt;"</string>
@@ -5830,21 +5885,28 @@
     <string name="search_gesture_feature_summary" msgid="1793056495030564014">"Натисніть і втримуйте кнопку головного екрана або маркер навігації, щоб здійснити пошук за вмістом на екрані."</string>
     <string name="device_detail_icon_content_description" msgid="6699151424374841937">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>. Змінити налаштування пристрою."</string>
     <string name="supervision_settings_title" msgid="8507163323870367711">"Батьківський контроль"</string>
-    <string name="supervision_settings_summary" msgid="5020634300370322741">"Обмеження на контент і інші обмеження"</string>
+    <!-- no translation found for supervision_settings_summary (6304257872307136073) -->
+    <skip />
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"Установити PIN-код"</string>
-    <string name="device_supervision_switch_paused_summary" msgid="1014381188739295656">"Призупинено"</string>
-    <string name="keywords_supervision_settings" msgid="2580555201483955376">"контроль, батьківський контроль"</string>
+    <!-- no translation found for keywords_supervision_settings (43064288661561602) -->
+    <skip />
     <string name="supervision_pin_management_preference_title" msgid="7721501202320841845">"Керування PIN-кодом"</string>
+    <!-- no translation found for supervision_pin_management_preference_keywords (5034450635706621750) -->
+    <skip />
     <string name="supervision_pin_management_preference_summary_add" msgid="2247921267270577374">"Додайте резервну електронну адресу"</string>
     <string name="supervision_pin_management_preference_summary_verify_recovery" msgid="5072554239108915119">"Підтвердьте резервну електронну адресу"</string>
     <string name="supervision_change_pin_preference_title" msgid="2288584039438231801">"Змінити PIN-код"</string>
     <string name="supervision_add_forgot_pin_preference_title" msgid="8939945404255748516">"Не пам’ятаю PIN-код"</string>
+    <!-- no translation found for supervision_auth_prompt_forgot_pin_button_label (1019337828884793557) -->
+    <skip />
     <string name="supervision_update_recovery_email_preference_title" msgid="2057393838251915087">"Оновити резервну електронну адресу"</string>
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Видалити PIN-код"</string>
-    <string name="supervision_delete_pin_preference_summary" msgid="4865713157106413979">"Усі налаштування батьківського контролю буде скинуто"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Додайте резервну електронну адресу"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Підтвердьте електронну адресу"</string>
-    <string name="supervision_web_content_filters_title" msgid="3653430162065686156">"Фільтри вебконтенту"</string>
+    <!-- no translation found for supervision_web_content_filters_title (2412562442507104921) -->
+    <skip />
+    <!-- no translation found for supervision_web_content_filters_keywords (8469519676189544447) -->
+    <skip />
     <string name="supervision_web_content_filters_top_intro" msgid="5264773769840566499">"Блокуйте контент для повнолітніх на вебсайтах і в результатах пошуку в підтримуваних додатках на цьому пристрої. Однак у непідтримуваних додатках відвертий контент може відображатися."</string>
     <string name="supervision_web_content_filters_browser_title" msgid="8737341514264129889">"Вебсайти"</string>
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Блокувати сайти для дорослих"</string>
@@ -5854,8 +5916,7 @@
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Установіть PIN-код батьківського контролю"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Підтвердьте PIN-код"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN-код змінено"</string>
-    <!-- no translation found for supervision_promo_footer_action_button_description (7617359721703338141) -->
-    <skip />
+    <string name="supervision_promo_footer_action_button_description" msgid="7617359721703338141">"Відкрити додаток"</string>
     <string name="supervision_delete_pin_confirm_header" msgid="8499276643990949268">"Видалити PIN-код?"</string>
     <string name="supervision_delete_pin_confirm_message" msgid="5482080400973042178">"Поточний PIN-код буде видалено для всіх користувачів цього пристрою, а налаштовані елементи керування – вимкнено. Цю дію неможливо відмінити."</string>
     <string name="supervision_delete_pin_supervision_enabled_header" msgid="2072311894107038402">"Спершу призупиніть батьківський контроль в інших профілях"</string>

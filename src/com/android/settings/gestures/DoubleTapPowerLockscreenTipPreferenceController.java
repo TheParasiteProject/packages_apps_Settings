@@ -26,6 +26,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Pair;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,6 +37,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
 import com.android.settingslib.core.lifecycle.LifecycleObserver;
+import com.android.settingslib.core.lifecycle.events.OnResume;
 import com.android.settingslib.core.lifecycle.events.OnStart;
 import com.android.settingslib.core.lifecycle.events.OnStop;
 import com.android.settingslib.widget.CardPreference;
@@ -43,7 +45,7 @@ import com.android.settingslib.widget.CardPreference;
 import kotlin.Unit;
 
 public class DoubleTapPowerLockscreenTipPreferenceController extends BasePreferenceController
-        implements LifecycleObserver, OnStart, OnStop {
+        implements LifecycleObserver, OnStart, OnStop, OnResume {
 
     private static final String TAG = "DoubleTapPowerLockscreenTip";
 
@@ -59,6 +61,7 @@ public class DoubleTapPowerLockscreenTipPreferenceController extends BasePrefere
     static final String AFFORDANCE_NAME_COLUMN = "affordance_name";
     static final String CAMERA_KEYGUARD_QUICK_AFFORDANCE_NAME = "Camera";
     static final String WALLET_KEYGUARD_QUICK_AFFORDANCE_NAME = "Wallet";
+    static final String SLOT_ID_COLUMN = "slot_id";
 
     @Nullable private CardPreference mPreference;
     private boolean mHasBeenDismissed = false;
@@ -106,6 +109,13 @@ public class DoubleTapPowerLockscreenTipPreferenceController extends BasePrefere
         DoubleTapPowerSettingsUtils.unregisterObserver(mContext, mSettingsObserver);
     }
 
+    @Override
+    public void onResume() {
+        if (mPreference != null) {
+            updateState(mPreference);
+        }
+    }
+
 
     @Override
     public int getAvailabilityStatus() {
@@ -119,7 +129,52 @@ public class DoubleTapPowerLockscreenTipPreferenceController extends BasePrefere
     public void displayPreference(@NonNull PreferenceScreen screen) {
         super.displayPreference(screen);
         mPreference = screen.findPreference(getPreferenceKey());
+        updatePreference();
+    }
+
+    @Override
+    public void updateState(@NonNull Preference preference) {
+        super.updateState(preference);
+
+        if (!DoubleTapPowerSettingsUtils.isDoubleTapPowerButtonGestureEnabled(mContext)
+                || mHasBeenDismissed) {
+            preference.setVisible(false);
+            return;
+        }
+
+        Pair<String, String> targetActionInLockscreenShortcutPair =
+                getTargetActionIfLockScreenShortcut(mContext);
+        if (targetActionInLockscreenShortcutPair == null) {
+            preference.setVisible(false);
+            return;
+        }
+        String targetActionInLockscreenShortcut = targetActionInLockscreenShortcutPair.first;
+        if (preference instanceof CardPreference) {
+            Log.i(TAG, "Target action is also lockscreen shorcut. Showing suggestion card.");
+            preference.setSummary(mContext.getString(
+                            R.string.double_tap_power_lockscreen_shortcut_tip_description,
+                            targetActionInLockscreenShortcut
+                    ));
+            preference.setVisible(true);
+        }
+        updatePreference();
+    }
+
+    /**
+     * Dismisses the Preference
+     *
+     * @param preference Preference
+     */
+    @VisibleForTesting
+    public void onDismiss(@NonNull Preference preference) {
+        preference.setVisible(false);
+        mHasBeenDismissed = true;
+    }
+
+    private void updatePreference() {
         if (mPreference != null) {
+            Pair<String, String> targetActionInLockscreenShortcutPair =
+                    getTargetActionIfLockScreenShortcut(mContext);
             mPreference.setAdditionalAction(
                     com.android.settingslib.widget
                             .theme.R.drawable.settingslib_expressive_icon_close,
@@ -139,6 +194,12 @@ public class DoubleTapPowerLockscreenTipPreferenceController extends BasePrefere
                         "com.android.wallpaper.LAUNCH_SOURCE",
                         "app_launched_settings"
                 );
+                if (targetActionInLockscreenShortcutPair != null) {
+                    @Nullable String slotId = targetActionInLockscreenShortcutPair.second;
+                    if (slotId != null) {
+                        intent.putExtra(SLOT_ID_COLUMN, slotId);
+                    }
+                }
                 final String packageName =
                         mContext.getString(R.string.config_wallpaper_picker_package);
                 if (!TextUtils.isEmpty(packageName)) {
@@ -150,44 +211,9 @@ public class DoubleTapPowerLockscreenTipPreferenceController extends BasePrefere
         }
     }
 
-    @Override
-    public void updateState(@NonNull Preference preference) {
-        super.updateState(preference);
-
-        if (!DoubleTapPowerSettingsUtils.isDoubleTapPowerButtonGestureEnabled(mContext)
-                || mHasBeenDismissed) {
-            preference.setVisible(false);
-            return;
-        }
-
-        String targetActionInLockscreenShortcut = getTargetActionIfLockScreenShortcut(mContext);
-        if (targetActionInLockscreenShortcut == null) {
-            preference.setVisible(false);
-            return;
-        }
-        if (preference instanceof CardPreference) {
-            Log.i(TAG, "Target action is also lockscreen shorcut. Showing suggestion card.");
-            preference.setSummary(mContext.getString(
-                            R.string.double_tap_power_lockscreen_shortcut_tip_description,
-                            targetActionInLockscreenShortcut
-                    ));
-            preference.setVisible(true);
-        }
-    }
-
-    /**
-     * Dismisses the Preference
-     *
-     * @param preference Preference
-     */
-    @VisibleForTesting
-    public void onDismiss(@NonNull Preference preference) {
-        preference.setVisible(false);
-        mHasBeenDismissed = true;
-    }
-
     @Nullable
-    private static String getTargetActionIfLockScreenShortcut(@NonNull Context context) {
+    private static Pair<String, String> getTargetActionIfLockScreenShortcut(
+            @NonNull Context context) {
         String currentTargetActionName =
                 DoubleTapPowerSettingsUtils
                         .isDoubleTapPowerButtonGestureForCameraLaunchEnabled(context)
@@ -204,7 +230,8 @@ public class DoubleTapPowerLockscreenTipPreferenceController extends BasePrefere
             }
 
             final int columnIndex = cursor.getColumnIndex(AFFORDANCE_NAME_COLUMN);
-            if (columnIndex == -1) {
+            final int slotIdColumnIndex = cursor.getColumnIndex(SLOT_ID_COLUMN);
+            if (columnIndex == -1 || slotIdColumnIndex == -1) {
                 Log.w(TAG, "Keyguard Quick Affordance Cursor doesn't contain \""
                         + AFFORDANCE_NAME_COLUMN + "\" column!");
                 return null;
@@ -213,7 +240,8 @@ public class DoubleTapPowerLockscreenTipPreferenceController extends BasePrefere
             while (cursor.moveToNext()) {
                 final String affordanceName = cursor.getString(columnIndex);
                 if (TextUtils.equals(affordanceName, currentTargetActionName)) {
-                    return affordanceName;
+                    final String slotId = cursor.getString(slotIdColumnIndex);
+                    return Pair.create(affordanceName, slotId);
                 }
             }
             return null;

@@ -25,6 +25,7 @@ import androidx.fragment.app.Fragment
 import androidx.preference.Preference
 import androidx.preference.Preference.OnPreferenceClickListener
 import com.android.settings.R
+import com.android.settings.Settings
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.flags.Flags
 import com.android.settings.network.AirplaneModePreference.Companion.isAirplaneModeOn
@@ -37,6 +38,7 @@ import com.android.settings.restriction.PreferenceRestrictionMixin
 import com.android.settings.spa.network.getAddSimIntent
 import com.android.settings.spa.network.startAddSimFlow
 import com.android.settings.spa.network.startSatelliteWarningDialogFlow
+import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.RestrictedPreference
 import com.android.settingslib.datastore.HandlerExecutor
 import com.android.settingslib.datastore.KeyedObserver
@@ -49,6 +51,7 @@ import com.android.settingslib.metadata.PreferenceSummaryProvider
 import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.preferenceHierarchy
 import com.android.settingslib.preference.PreferenceBinding
+import kotlinx.coroutines.CoroutineScope
 
 @ProvidePreferenceScreen(MobileNetworkListScreen.KEY)
 open class MobileNetworkListScreen :
@@ -93,6 +96,9 @@ open class MobileNetworkListScreen :
             else -> null
         }
     }
+
+    override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?) =
+        makeLaunchIntent(context, Settings.MobileNetworkListActivity::class.java, metadata?.key)
 
     override fun isAvailable(context: Context) =
         SimRepository(context).showMobileNetworkPageEntrance()
@@ -172,8 +178,8 @@ open class MobileNetworkListScreen :
 
     override fun fragmentClass(): Class<out Fragment>? = MobileNetworkListFragment::class.java
 
-    override fun getPreferenceHierarchy(context: Context) =
-        preferenceHierarchy(context, this) { +MobileDataPreference() }
+    override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
+        preferenceHierarchy(context) { +MobileDataPreference() }
 
     companion object {
         const val KEY = "mobile_network_list"

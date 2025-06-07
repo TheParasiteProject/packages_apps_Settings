@@ -36,15 +36,23 @@
         settings:controller="com.android.settings.display.TwilightLocationPreferenceController"/>
 
     <PreferenceCategory
+        android:key="dark_theme_group"
+        android:title="@string/dark_theme_version_category"
+        settings:controller="com.android.settings.accessibility.ForceInvertPreferenceController">
+        <com.android.settingslib.widget.SelectorWithWidgetPreference
+            android:key="standard_dark_theme"
+            android:summary="@string/accessibility_standard_dark_theme_summary"
+            settings:searchable="true"/>
+
+        <com.android.settingslib.widget.SelectorWithWidgetPreference
+            android:key="expanded_dark_theme"
+            android:summary="@string/accessibility_expanded_dark_theme_summary"
+            settings:searchable="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="display_category"
         android:title="@string/accessibility_screen_option">
-
-        <SwitchPreferenceCompat
-            android:key="toggle_force_invert"
-            android:summary="@string/accessibility_force_invert_summary"
-            android:title="@string/accessibility_force_invert_title"
-            settings:controller="com.android.settings.accessibility.ToggleForceInvertPreferenceController"/>
-
         <DropDownPreference
             android:key="dark_ui_auto_mode"
             android:title="@string/dark_ui_auto_mode_title"
@@ -70,6 +78,12 @@
         android:title= "@string/twilight_mode_pending_location"
         settings:searchable="false"
         settings:controller="com.android.settings.display.darkmode.DarkModePendingLocationPreferenceController" />
+
+    <com.android.settingslib.widget.FooterPreference
+        android:key="dark_theme_expanded_footer"
+        android:title="@string/accessibility_dark_theme_preference_footer_content"
+        settings:searchable="false"
+        settings:controller="com.android.settings.display.darkmode.DarkModeExpandedFooterPreferenceController" />
 
     <com.android.settingslib.widget.FooterPreference
         android:key="dark_theme_custom_bedtime_footer"

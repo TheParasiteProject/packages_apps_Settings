@@ -47,10 +47,8 @@
     <string name="preview_pager_email_title" msgid="8767864657910457562">"ای میل کریں"</string>
     <string name="preview_pager_previous_button" msgid="607771113300838313">"پچھلا پیش منظر"</string>
     <string name="preview_pager_next_button" msgid="8700907912508927271">"اگلا پیش منظر"</string>
-    <!-- no translation found for font_size_make_smaller_desc (319927200356692406) -->
-    <skip />
-    <!-- no translation found for font_size_make_larger_desc (6739310980713118605) -->
-    <skip />
+    <string name="font_size_make_smaller_desc" msgid="319927200356692406">"فونٹ کا سائز چھوٹا کریں"</string>
+    <string name="font_size_make_larger_desc" msgid="6739310980713118605">"فونٹ کا سائز بڑا کریں"</string>
     <string name="stay_awake_on_fold_title" msgid="6590454679898134221">"ہمیشہ"</string>
     <string name="stay_awake_on_fold_summary" msgid="1939963751585954262">"جب آپ اپنا آلہ فولڈ کرتے ہیں تو فرنٹ ڈسپلے آن ہو جاتا ہے"</string>
     <string name="stay_awake_on_lockscreen_title" msgid="8088456642083051068">"جاری رکھنے کیلئے اوپر سوائپ کریں"</string>
@@ -200,7 +198,7 @@
     <string name="locale_remove_menu" msgid="3521546263421387474">"ہٹائیں"</string>
     <string name="add_a_language" msgid="2126220398077503271">"ایک زبان شامل کریں"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"زبان"</string>
-    <string name="locale_picker_category_title" msgid="6212064706962721255">"ترجیحی زبان"</string>
+    <string name="locale_picker_category_title" msgid="296835514014453679">"ترجیحی زبانیں"</string>
     <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"ایپ کی زبانیں"</string>
     <string name="app_locale_picker_summary" msgid="616928580653613998">"ہر ایپ کے لیے زبان کا انتخاب کریں"</string>
     <string name="app_locale_picker_title" msgid="2431448962911301366">"ایپ کی زبان"</string>
@@ -226,10 +224,15 @@
     <string name="title_change_system_locale" msgid="4102991236063984803">"‏سسٹم کی زبان کو %s پر تبدیل کریں؟"</string>
     <string name="title_system_locale_addition" msgid="8218683660751479466">"‏‎%s کو ترجیحی زبانوں میں شامل کریں؟"</string>
     <string name="desc_system_locale_addition" msgid="3409917362651596070">"اس سے ایپس اور ویب سائٹس کو معلوم ہوتا ہے کہ آپ بھی اس زبان کو ترجیح دیتے ہیں۔"</string>
-    <string name="desc_notice_device_locale_settings_change" msgid="8311132485850714160">"آپ کے آلہ کی ترتیبات اور علاقائی ترجیحات تبدیل ہو جائیں گی۔"</string>
+    <!-- no translation found for desc_notice_device_locale_and_region_settings_change (909261686577914396) -->
+    <skip />
+    <!-- no translation found for desc_notice_device_locale_settings_change (5012353615235634881) -->
+    <skip />
+    <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
+    <skip />
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"تبدیل کریں"</string>
-    <string name="title_unavailable_locale" msgid="2628898110416542386">"‏%s دستیاب نہیں ہے"</string>
-    <string name="desc_unavailable_locale" msgid="2201756477400935896">"اس زبان کو سسٹم کی زبان کے طور پر استعمال نہیں کیا جا سکتا ہے، لیکن آپ نے ایپس اور ویب سائٹ کو بتایا ہوا ہے کہ آپ اس زبان کو ترجیح دیتے ہیں۔"</string>
+    <string name="title_unavailable_locale" msgid="5382411204559213983">"سسٹم کی زبان کے طور پر <xliff:g id="SELECTED_LANGUAGE">%s</xliff:g> کو سیٹ نہیں کیا جا سکتا"</string>
+    <string name="desc_unavailable_locale" msgid="7223655766703116782">"آپ کا آلہ اس زبان کو سپورٹ نہیں کرتا، لیکن ایپس کو معلوم ہو جائے گا کہ آپ اس زبان کو ترجیح دیتے ہیں"</string>
     <string name="locale_search_menu" msgid="297782694044826686">"تلاش"</string>
     <string name="language_and_region_title" msgid="8374151891112162767">"زبان اور علاقہ"</string>
     <string name="language_selection_title" msgid="968179636453982415">"ایک زبان شامل کریں"</string>
@@ -243,6 +246,9 @@
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"علاقے کو <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g> پر تبدیل کریں؟"</string>
     <string name="body_change_system_locale_region" msgid="9064318449821043189">"آپ کا آلہ <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g> کو سسٹم کی زبان کے طور پر رکھے گا"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"منتخب کریں کہ آپ کا آلہ، ویب سائٹس اور ایپس نمبرز کیسے ڈسپلے کریں"</string>
+    <string name="preferred_locale_menu_up" msgid="4009560552099567485">"اوپر منتقل کریں"</string>
+    <string name="preferred_locale_menu_down" msgid="1033373887552535585">"نیچے منتقل کریں"</string>
+    <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"ہٹائیں"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"علاقائی ترجیحات"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"یونٹس اور نمبر کی ترجیحات سیٹ کریں"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"ایپس کو اپنی علاقائی ترجیحات کو جاننے کی اجازت دیں تاکہ وہ آپ کے تجربے کو ذاتی نوعیت کا بنا سکیں۔"</string>
@@ -283,6 +289,8 @@
     <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"ساری زبانیں نہیں ہٹا سکتا"</string>
     <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"کم از کم ایک ترجیحی زبان رکھیں"</string>
     <string name="locale_not_translated" msgid="3071618135527110152">"سسٹم کی زبان کے طور پر دستیاب نہیں ہے"</string>
+    <string name="dlg_title_delete_preferred_locale" msgid="4167214348946940002">"‫<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> کو ہٹائیں؟"</string>
+    <string name="dlg_desc_delete_preferred_locale" msgid="4658301652628456858">"‫<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> کو آپ کی ترجیحی زبانوں سے ہٹا دیا جائے گا۔ آپ اسے بعد میں دوبارہ شامل کر سکتے ہیں۔"</string>
     <string name="action_drag_label_move_up" msgid="3392196942330705015">"اوپر منتقل کریں"</string>
     <string name="action_drag_label_move_down" msgid="9069518740553953426">"نیچے منتقل کریں"</string>
     <string name="action_drag_label_move_top" msgid="2430471023612171619">"اوپر منتقل کریں"</string>
@@ -462,6 +470,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks" msgid="1663906389456119842">"ابھی نہیں"</string>
     <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"میں متفق ہوں"</string>
     <string name="security_settings_fingerprint_rename_description" msgid="6301505700382531086">"نام تبدیل کرنے کے لیے دو بار تھپتھپائیں"</string>
+    <string name="security_settings_fingerprint_recognition_description" msgid="1805171116182647136">"‫<xliff:g id="FP_NAME">%1$s</xliff:g> شناخت کردہ"</string>
     <string name="setup_fingerprint_enroll_skip_title" msgid="2473807887676247264">"فنگر پرنٹ کو نظر انداز کریں؟"</string>
     <string name="setup_fingerprint_enroll_skip_after_adding_lock_text" msgid="2412645723804450304">"فنگر پرنٹ سیٹ اپ میں صرف ایک یا دو منٹ لگتے ہیں۔ اگر آپ اسے نظر انداز کرتے ہیں، تو آپ بعد میں ترتیبات میں اپنا فنگر پرنٹ شامل کرسکتے ہیں۔"</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_setup" msgid="6255210343107484206">"یہ آئیکن دیکھنے پر ایپس میں سائن ان کرنے یا خریداری کو منظوری دینے کی خاطر تصدیق کیلئے فنگر پرنٹ کا استعمال کریں"</string>
@@ -944,10 +953,8 @@
     <string name="bluetooth_device_context_connect" msgid="4913860372216815855">"منسلک کریں"</string>
     <string name="bluetooth_device_context_disconnect" msgid="4464167389972513232">"غیر منسلک کریں"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="2406032703622371826">"جوڑا بنائیں اور مربوط کریں"</string>
-    <!-- no translation found for bluetooth_connecting (5315496594905010438) -->
-    <skip />
-    <!-- no translation found for bluetooth_disconnecting (1643422701532873735) -->
-    <skip />
+    <string name="bluetooth_connecting" msgid="5315496594905010438">"منسلک ہو رہا ہے"</string>
+    <string name="bluetooth_disconnecting" msgid="1643422701532873735">"غیر منسلک ہو رہی ہے"</string>
     <string name="bluetooth_empty_list_bluetooth_off" msgid="7326727272747345476">"بلوٹوتھ آن ہونے پر، آپ کا آلہ دیگر قریبی بلوٹوتھ آلات سے مواصلت کر سکتا ہے"</string>
     <string name="bluetooth_empty_list_bluetooth_off_auto_on_available" msgid="3430864468105204282">"بلوٹوتھ آن ہونے پر، آپ کا آلہ دیگر قریبی بلوٹوتھ آلات کے ساتھ مواصلت کر سکتا ہے۔ فوری اشتراک اور \'میرا آلہ ڈھونڈیں\' جیسی خصوصیات بلوٹوتھ کا استعمال کرتی ہیں۔"</string>
     <string name="bluetooth_scanning_on_info_message" msgid="786648535600075223">"بلوٹوتھ آن ہونے پر آپ کا آلہ دیگر قریبی بلوٹوتھ آلات کے ساتھ مواصلت کر سکتا ہے۔\n\nآلے کے تجربے کو بہتر بنانے کے لیے، ایپس اور سروسز بلوٹوتھ کے آف ہونے پر بھی کسی بھی وقت قریبی آلات کو اسکین کر سکتی ہیں۔ مثال کے طور، مقام پر مبنی خصوصیات اور سروسز کو بہتر بنانے کے لیے اس کا استعمال کیا جا سکتا ہے۔ آپ بلوٹوتھ اسکیننگ کی ترتیبات میں اسے تبدیل کر سکتے ہیں۔"</string>
@@ -1186,6 +1193,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"دیگر آلہ صارفین کے ساتھ اس نیٹ ورک کا اشتراک کریں"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"اس آلے پر موجود تمام صارفین اشتراک کردہ نیٹ ورک کو دیکھ سکتے ہیں اور اس سے منسلک ہو سکتے ہیں۔ منتظمین اشتراک کردہ نیٹ ورک کو حذف کر سکتے ہیں۔ مزید جانیں"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"دیگر صارفین کو نیٹ ورک کنفیگریشن میں ترمیم کرنے کی اجازت دیں"</string>
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"اس نیٹ ورک میں تبدیلیاں کرنے کے لیے اس آلہ کے منتظم سے رابطہ کریں۔"</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"اس نیٹ ورک کو انٹرنیٹ تک رسائی نہیں ہے۔ منسلک رہیں؟"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"ہو سکتا ہے محدود کنیکٹوٹی کی وجہ سے کچھ ایپس اور سروسز کام نہ کریں۔ بہر حال استعمال کریں؟"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"اس نیٹ ورک کیلئے دوبارہ نہ پوچھیں"</string>
@@ -2177,8 +2185,7 @@
     <string name="trackpad_settings" msgid="2071131324087677005">"ٹچ پیڈ"</string>
     <string name="trackpad_mouse_settings" msgid="136226693583218429">"ٹچ پیڈ اور ماؤس"</string>
     <string name="mouse_settings" msgid="7301671756721327122">"ماؤس"</string>
-    <!-- no translation found for mouse_settings_summary (1308610072914620926) -->
-    <skip />
+    <string name="mouse_settings_summary" msgid="1308610072914620926">"پوائنٹر اسپیڈ، بٹن حسب ضرورت بنانا"</string>
     <string name="trackpad_settings_summary" msgid="3369855644136760402">"پوائنٹر، رفتار، اشارے"</string>
     <string name="trackpad_tap_to_click" msgid="1938230946542070746">"کلک کرنے کیلئے تھپتھپائیں"</string>
     <string name="trackpad_tap_dragging_title" msgid="4198317837427535015">"آئٹمز کو منتقل کرنے کیلئے تھپتھپائیں اور گھسیٹیں"</string>
@@ -2232,13 +2239,25 @@
     <string name="gesture_button_next" msgid="695288092704187356">"آگے جائیں"</string>
     <string name="gesture_button_restart" msgid="1895850891992530133">"ری اسٹارٹ کریں"</string>
     <string name="gesture_button_done" msgid="6387900351203032188">"ہو گیا"</string>
-    <string name="action_corners_title" msgid="8971354126563421646">"ایکشن کارنرز کو حسب ضرورت بنائیں"</string>
-    <string name="action_corners_summary" msgid="4245089615854251124">"سسٹم میں نیویگیٹ کرنے کے لیے کرسرز کا استعمال کریں"</string>
-    <string name="action_corners_intro" msgid="4384209411870086502">"ایکشن کارنرز کو حسب ضرورت بنانے کے لیے درج ذیل علاقوں کا انتخاب کریں"</string>
-    <string name="action_corners_bottom_left_title" msgid="8677233546610832717">"نیچے بایاں کونا"</string>
-    <string name="action_corners_bottom_right_title" msgid="2155948558861306738">"نیچے دایاں کونا"</string>
-    <string name="action_corners_top_left_title" msgid="6604149810499060560">"سب سے اوپر بایاں کونا"</string>
-    <string name="action_corners_top_right_title" msgid="583996793984142329">"سب سے اوپر دایاں کونا"</string>
+    <!-- no translation found for action_corner_title (7411160165577367757) -->
+    <skip />
+    <string name="action_corner_summary" msgid="695618538930535335">"سسٹم میں نیویگیٹ کرنے کے لیے کرسرز کا استعمال کریں"</string>
+    <!-- no translation found for action_corner_intro (2170609118659718140) -->
+    <skip />
+    <string name="action_corner_bottom_left_title" msgid="2857258272736432174">"نیچے دایاں کونا"</string>
+    <string name="action_corner_bottom_right_title" msgid="7222233500548465684">"نیچے بایاں کونا"</string>
+    <string name="action_corner_top_left_title" msgid="4633975226092344210">"سب سے اوپر دایاں کونا"</string>
+    <string name="action_corner_top_right_title" msgid="4995999693840776032">"سب سے اوپر بایاں کونا"</string>
+    <string name="action_corner_action_none" msgid="5203163099950649999">"کوئی نہیں"</string>
+    <string name="action_corner_action_home" msgid="6779642573582379579">"ہوم"</string>
+    <string name="action_corner_action_recent_apps" msgid="7450480676812648813">"حالیہ ایپس"</string>
+    <string name="action_corner_action_notifications" msgid="3779353356349774469">"اطلاعات"</string>
+    <string name="action_corner_action_quick_settings" msgid="4660901117283653069">"فوری ترتیبات"</string>
+    <string name="action_corner_action_dialog_title" msgid="8253240813317885237">"‫<xliff:g id="CORNER">%1$s</xliff:g> کے لیے ایک شارٹ کٹ منتخب کریں"</string>
+    <string name="action_corner_bottom_left_name" msgid="9193788067022476544">"نیچے دایاں کونا"</string>
+    <string name="action_corner_bottom_right_name" msgid="1031603363418505375">"نیچے بایاں کونا"</string>
+    <string name="action_corner_top_left_name" msgid="8077670910600032291">"سب سے اوپر دایاں کونا"</string>
+    <string name="action_corner_top_right_name" msgid="6307321595919080297">"سب سے اوپر بایاں کونا"</string>
     <string name="modifier_keys_settings" msgid="2537108435032034683">"موڈیفائر کلیدیں"</string>
     <string name="modifier_keys_settings_summary" msgid="6933143361657444436">"کلیدوں کا برتاؤ تبدیل کریں"</string>
     <string name="modifier_keys_reset_title" msgid="948294258402761066">"تمام ری سیٹ کریں"</string>
@@ -2317,8 +2336,7 @@
     <string name="last_time_used_label" msgid="7589377271406011659">"آخری بار استعمال کردہ"</string>
     <string name="last_time_used_never" msgid="2936073559267990034">"کبھی نہیں"</string>
     <string name="usage_time_label" msgid="9105343335151559883">"استعمال کا وقت"</string>
-    <!-- no translation found for phone_information_v2_title (3373745314543222111) -->
-    <skip />
+    <string name="phone_information_v2_title" msgid="3373745314543222111">"‏فون کی معلومات V2"</string>
     <string name="accessibility_settings" msgid="4713215774904704682">"ایکسیسبیلٹی"</string>
     <string name="accessibility_settings_title" msgid="6739115703615065716">"ایکسیسبیلٹی ترتیبات"</string>
     <string name="accessibility_settings_summary" msgid="2366627644570558503">"ڈسپلے، انٹرایکشن، آڈیو"</string>
@@ -2357,8 +2375,7 @@
     <string name="accessibility_system_controls_title" msgid="6403287349518987624">"سسٹم کنٹرولز"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"تاثرات بھیجیں"</string>
     <string name="accessibility_send_survey_title" msgid="7899716184811587023">"ہماری درجہ بندی کریں"</string>
-    <!-- no translation found for accessibility_disability_support_title (7934160403456751664) -->
-    <skip />
+    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"‏‫Google Disability سپورٹ سے رابطہ کریں"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"ایکسیسبیلٹی سروے"</string>
     <string name="dark_theme_survey_notification_title" msgid="4035183263314404750">"مزید ایپس میں گہری تھیم کا لطف اٹھا رہے ہیں؟"</string>
     <string name="dark_theme_survey_notification_summary" msgid="801472177955048195">"اپنے تاثرات کا اشتراک کریں"</string>
@@ -2385,6 +2402,7 @@
     <string name="accessibility_screen_magnification_shortcut_title" msgid="2387963646377987780">"میگنیفکیشن شارٹ کٹ"</string>
     <string name="accessibility_magnification_cursor_following_title" msgid="29531257984012743">"کرسر فالوؤنگ"</string>
     <string name="accessibility_magnification_cursor_following_header" msgid="7283095798622223509">"منتخب کریں کہ میگنیفکیشن کو آپ کے کرسر کو کس طرح فالو کرنا چاہیے۔"</string>
+    <string name="accessibility_magnification_cursor_following_unavailable_summary" msgid="1683880243856242269">"اسکرین کے صرف میگنفائی کرنے والے حصے کے دوران دستیاب نہیں ہے"</string>
     <string name="accessibility_magnification_cursor_following_continuous" msgid="1119319218662522794">"جیسے ماؤس حرکت کرے ویسے اسکرین کو مستقل حرکت دیں"</string>
     <string name="accessibility_magnification_cursor_following_center" msgid="3504798009192014460">"ماؤس کو اسکرین کے مرکز میں رکھ کر اسکرین کو حرکت دیں"</string>
     <string name="accessibility_magnification_cursor_following_edge" msgid="8675207762416655758">"ماؤس کے اسکرین کے کناروں کو ٹچ کرنے پر اسکرین کو حرکت دیں"</string>
@@ -2525,10 +2543,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"سکرین میگنیفکیشن از خود اپ ڈیٹ کریں"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"ایپ تبدیلیوں پر سکرین میگنیفکیشن کو اپ ڈیٹ کریں"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"پاور بٹن سے کال ختم ہو جاتی ہے"</string>
-    <string name="accessibility_force_invert_title" msgid="5248504501753732051">"مزید ایپس کو گہری بنائیں"</string>
-    <string name="accessibility_force_invert_summary" msgid="257503086198180749">"گہری تھیم کو زیادہ ایپس پر لاگو کرتا ہے۔ ممکن ہے کہ تمام ایپس کے ساتھ کام نہ کرے۔"</string>
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"وضع"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"معیاری"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"معیاری گہری تھیم"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"آپ کے آلے اور تعاون یافتہ ایپس پر گہری تھیم لاگو ہوتی ہے"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"پھیلا دیا گیا"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"پھیلائی ہوئی گہری تھیم"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"بہتر ایکسیسبیلٹی کے لیے گہری تھیم کو خودکار طور پر مزید ایپس پر لاگو کرتا ہے"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"اینیمیشنز ہٹائیں"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"اسکرین پر حرکت کو کم کریں"</string>
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"ٹیکسٹ کرسر بلنکنگ"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"ٹیکسٹ کرسر کے بلنکنگ کی رفتار کو ایڈجسٹ کریں یا بلنکنگ بند کریں۔ ہو سکتا ہے تمام ایپس یا ویب سائٹس پر تعاون یافتہ نہ ہو۔"</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"بلنک کی رفتار کم کریں"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"بلنک کی رفتار میں اضافہ کریں"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"ری سیٹ کریں"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"مونو آڈیو"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"آڈیو چلاتے وقت چینلز یکجا کریں"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"آڈیو بیلنس"</string>
@@ -2553,7 +2581,7 @@
     <string name="accessibility_display_inversion_preference_subtitle" msgid="4494767676482389509">"‏&lt;b&gt;یاد رکھیں&lt;/b&gt;&lt;br/&gt; &lt;ol&gt; &lt;li&gt; میڈیا اور تصاویر میں رنگ تبدیل ہو جائیں گے&lt;/li&gt; &lt;li&gt; رنگوں کی تقلیب تمام ایپس پر کام کرتی ہے&lt;/li&gt; &lt;li&gt; گہرے پس منظر کو ڈسپلے کرنے کے لیے، اس کی بجائے گہری تھیم کا استعمال کیا جا سکتا ہے&lt;/li&gt; &lt;/ol&gt;"</string>
     <string name="accessibility_action_label_panel_slice" msgid="1313725957071602932">"ترتیبات درج کریں"</string>
     <string name="accessibility_autoclick_preference_title" msgid="6755104969672994014">"خودکار کلک (ہولڈ کا وقت)"</string>
-    <string name="accessibility_autoclick_about_title" msgid="152923024405552594">"خودکار کلک کے بارے میں (پسنے کا وقت)"</string>
+    <string name="accessibility_autoclick_about_title" msgid="152923024405552594">"خودکار کلک کے بارے میں (ہولڈ کا وقت)"</string>
     <string name="accessibility_autoclick_footer_learn_more_content_description" msgid="7056189627042350691">"خود کار کلک کے بارے میں مزید جانیں (ہولڈ کا وقت)"</string>
     <string name="accessibility_autoclick_intro_text" msgid="8959680635470639347">"کرسر کے ایک خاص وقت تک حرکت کرنا بند کر دینے پر آپ خودکار طور پر کلک کرنے کے لیے ایک منسلک ماؤس سیٹ کر سکتے ہیں"</string>
     <string name="accessibility_autoclick_description" msgid="6695732131412361101">"ماؤس پر کلک کرنا مشکل ہونے پر خودکار کلک مددگار ثابت ہو سکتا ہے"</string>
@@ -2568,11 +2596,11 @@
     <string name="accessibility_autoclick_shorter_desc" msgid="7631013255724544348">"خودکار کلک کا محتصر تر وقت"</string>
     <string name="accessibility_autoclick_longer_desc" msgid="2566025502981487443">"خودکار کلک کا طویل تر وقت"</string>
     <string name="accessibility_autoclick_seekbar_desc" msgid="8363959277814621118">"خودکار کلک کا وقت"</string>
-    <string name="accessibility_autoclick_main_switch_title" msgid="1968409462935503999">"خودکار کلک کا استعمال کریں (پوائنٹر حرکت کے بعد کلک کا وقت)"</string>
+    <string name="accessibility_autoclick_main_switch_title" msgid="1968409462935503999">"خودکار کلک کا استعمال کریں (ہولڈ کا وقت)"</string>
     <string name="accessibility_autoclick_shortcut_title" msgid="5337438503429302081">"خودکار کلک شارٹ کٹ"</string>
     <string name="autoclick_delay_before_click_title" msgid="4625722241966706931">"کلک سے قبل توقف"</string>
     <string name="autoclick_delay_before_click_summary" msgid="3685183305849901339">"کرسر کی حرکت بند ہونے کے بعد کلک کرنے میں لگنے والا وقت سیٹ کریں"</string>
-    <string name="autoclick_cursor_area_size_title" msgid="8988239939645854279">"ایریا پر کلک کریں"</string>
+    <string name="autoclick_cursor_area_size_title" msgid="8988239939645854279">"کلک کا ایریا"</string>
     <string name="autoclick_cursor_area_size_summary" msgid="6993249143332791469">"اگر کرسر کلک ایریا سے باہر جاتا ہے تو خودکار کلک منسوخ ہو جاتی ہے"</string>
     <string name="autoclick_cursor_area_size_dialog_option_extra_large" msgid="3802014133363801617">"مزید بڑا"</string>
     <string name="autoclick_cursor_area_size_dialog_option_large" msgid="1115930762484519488">"بڑا"</string>
@@ -2618,6 +2646,10 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"رنگ کی اصلاح کے بارے میں مزید جانیں"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"رنگوں کی تقلیب کے بارے میں"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"رنگوں کی تقلیب کے بارے میں مزید جانیں"</string>
+    <!-- no translation found for accessibility_dark_theme_footer_learn_more_helper_link (7084955775821075280) -->
+    <skip />
+    <!-- no translation found for accessibility_dark_theme_preference_footer_content (4431044600779983609) -->
+    <skip />
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"کیپشنز دکھائیں"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"صرف تعاون یافتہ ایپ کے لیے"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"کیپشن کا سائز اور طرز"</string>
@@ -3684,7 +3716,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{کوئی نہیں}=1{1 شیڈول سیٹ ہے}other{# شیڈول سیٹ ہیں}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"ڈسٹرب نہ کریں"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"موڈز"</string>
-    <string name="zen_modes_list_intro" msgid="1795379595115088972">"انتشارات کو کم کریں اور نیند، کام، ڈرائیونگ اور اس کے درمیان ہر چیز کے طریقوں کے ساتھ اپنی توجہ پر قابو رکھیں۔"</string>
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"انتشارات کو کم کریں اور نیند، کام، ڈرائیونگ اور اس کے درمیان ہر چیز کے طریقوں کے ساتھ اپنی توجہ پر قابو رکھیں"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"اپنا خود کا موڈ تخلیق کریں"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"صرف اہم لوگوں اور ایپس کی جانب سے اطلاعات حاصل کریں"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"شیڈول سیٹ کریں"</string>
@@ -4306,10 +4338,8 @@
     <string name="app_permissions" msgid="8666537659217653626">"اجازتوں کا مینیجر"</string>
     <string name="app_data_sharing_updates_title" msgid="1694297952320402788">"مقام کیلئے ڈیٹا کے اشتراک کی اپ ڈیٹس"</string>
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"ان ایپس کا جائزہ لیں جنہوں نے آپ کے مقام کے ڈیٹا کے اشتراک کے اپنے ممکنہ طریقے کو تبدیل کر دیا"</string>
-    <!-- no translation found for app_function_access_settings_title (1474765429611652468) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (6465715820745848068) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="1474765429611652468">"دیگر ایپس کا ایجنٹ کنٹرول"</string>
+    <string name="app_function_access_settings_summary" msgid="6465715820745848068">"اپنے آلے پر اور دیگر ایپس میں کارروائیاں کریں"</string>
     <string name="tap_to_wake" msgid="3313433536261440068">"فعال کرنے کیلئے تھپتھپائیں"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"آلہ کو فعال کرنے کیلئے اسکرین پر کہیں بھی دو بار تھپتھپائیں"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"شروعاتی لنکس"</string>
@@ -4469,10 +4499,8 @@
     <string name="screen_zoom_short_summary" msgid="756254364808639194">"ہر چیز کو بڑا یا چھوٹا بنائیں"</string>
     <string name="screen_zoom_keywords" msgid="5964023524422386592">"ڈسپلے کثافت، اسکرین زوم، اسکیل، اسکیل کرنا"</string>
     <string name="screen_zoom_preview_title" msgid="5288355628444562735">"پیش منظر"</string>
-    <!-- no translation found for screen_zoom_make_smaller_desc (1450649885198381123) -->
-    <skip />
-    <!-- no translation found for screen_zoom_make_larger_desc (7125594310562596457) -->
-    <skip />
+    <string name="screen_zoom_make_smaller_desc" msgid="1450649885198381123">"ڈسپلے کا سائز چھوٹا کریں"</string>
+    <string name="screen_zoom_make_larger_desc" msgid="7125594310562596457">"ڈسپلے کا سائز بڑا کریں"</string>
     <string name="disconnected" msgid="3469373726996129247">"منسلک نہیں ہے"</string>
     <string name="keyboard_disconnected" msgid="796053864561894531">"منسلک نہیں ہے"</string>
     <string name="apps_summary" msgid="4007416751775414252">"<xliff:g id="COUNT">%1$d</xliff:g> ایپس انسٹال ہیں"</string>
@@ -4492,6 +4520,10 @@
     <string name="disabled_by_policy_title_financed_device" msgid="2328740314082888228">"آپ کے کریڈٹ فراہم کنندہ نے مسدود کیا ہے"</string>
     <string name="disabled_by_policy_title_biometric_parental_consent" msgid="2463673997797134678">"والد/والدہ درکار ہیں"</string>
     <string name="disabled_by_policy_content_biometric_parental_consent" msgid="7124116806784305206">"اس کا سیٹ اپ شروع کرنے کیلئے فون کو اپنے والدین کے حوالے کریں"</string>
+    <!-- no translation found for disabled_by_policy_title_parental_controls (8875976588644052371) -->
+    <skip />
+    <!-- no translation found for disabled_by_policy_content_parental_controls (4648160125103768738) -->
+    <skip />
     <string name="disabled_by_policy_parental_consent" msgid="9166060049019018978">"اس ترتیب کو تبدیل کرنے کی اجازت دینے کے لیے فون اپنے والد/والدہ کے ہاتھ میں دیں۔"</string>
     <string name="default_admin_support_msg" msgid="8816296554831532033">"‏مزید معلومات کے لیے، اپنے IT منتظم سے رابطہ کریں"</string>
     <string name="admin_support_more_info" msgid="8407433155725898290">"مزید تفصیلات"</string>
@@ -4607,7 +4639,8 @@
     <string name="battery_tips_card_action_button_check" msgid="1535140204105479318">"نشان زد کریں"</string>
     <string name="battery_tips_card_dismiss_button" msgid="1885756985544936618">"سمجھ آ گئی"</string>
     <string name="battery_tips_card_feedback_info" msgid="767117835675157298">"کیا یہ پیغام مددگار ہے؟"</string>
-    <string name="battery_hints_warning_icon_a11y" msgid="5312542323401447620">"بیٹری کی تجاویز کی وارننگ کا آئیکن"</string>
+    <!-- no translation found for battery_hints_warning_icon_a11y (709629805028175434) -->
+    <skip />
     <string name="battery_tips_settings_summary_brightness" msgid="546145032616077783">"بیٹری لائف کو بڑھانے کے لیے تغیر پذیر چمک کو آن کریں"</string>
     <string name="battery_tips_settings_summary_screen_timeout" msgid="556801426050962077">"بیٹری لائف کو بڑھانے کے لیے اسکرین ٹائم آؤٹ کو کم کریں"</string>
     <string name="battery_tips_apps_summary_always_high" msgid="6334519477067044920">"<xliff:g id="APP_LABEL">%1$s</xliff:g> نے زیادہ بیٹری استعمال کی"</string>
@@ -5327,14 +5360,13 @@
     <string name="enable_16k_pages" msgid="1758111531461408337">"‏‫16‎ KB صفحہ سائز کے ساتھ بوٹ کریں"</string>
     <string name="enable_16k_pages_summary" msgid="1937836453571509085">"‏‫16‎ KB صفحہ سائز والے کرنل سے آلہ بوٹ کریں"</string>
     <string name="confirm_enable_16k_pages_title" msgid="5477376227161609124">"‏‫‎4 KB موڈ سے ‎16 KB موڈ پر سوئچ کریں"</string>
+    <string name="confirm_enable_16k_pages_update_wipe" msgid="4760548401414644138">"‏‫16‎ KB ڈویلپر اختیار استعمال کرنے سے پہلے اس آلہ کے ڈیٹا پارٹیشن کو ext4 میں تبدیل کرنے کی ضرورت ہے۔ آلہ کو صاف کر دیا جائے گا اور تصدیق کے بعد فائل سسٹم کو ext4 میں تبدیل کر دیا جائے گا۔ آپ پروڈکشن موڈ میں ہیں جو 4‎ KB کرنل چلا رہا ہے، اور آپ 16‎ KB موڈ پر سوئچ کر رہے ہیں۔ اس موڈ میں آنے کے بعد آپ ایک ہی ریبوٹ میں 4‎ KB اور 16‎ KB موڈ کے درمیان سوئچ کر سکتے ہیں۔ اس موڈ میں سافٹ ویئر کی درستگی کی ضمانت نہیں دی جا سکتی ہے، اور بوٹ لوڈر کے غیر مقفل ہونے کے دوران فون پر اسٹور کردہ کوئی بھی ڈیٹا خطرے میں ہو سکتا ہے۔ ان موڈز میں کچھ خصوصیات غیر فعال ہو جائیں گی، اس لیے ہو سکتا ہے کچھ ایپلیکیشنز کام نہ کریں۔ آلے کو پروڈکشن موڈ میں واپس لے جانے کیلئے، آپ کو پھر ‎4 KB موڈ پر واپس سوئچ کرنا اور بوٹ لوڈر کو مقفل کرنا ہوگا، جو کہ آلے کو فیکٹری ری سیٹ کرتا ہے۔ آلہ کے Android میں کامیابی کے ساتھ بوٹ ہونے کے بعد، ڈیولپر کے اختیارات میں OEM انلاکنگ کو غیر فعال کریں۔ آگے بڑھنے کے لیے، \'تمام ڈیٹا مٹائیں اور اپ ڈیٹ کریں\' پر کلک کریں۔ اس سے آلہ ریبوٹ ہو جائے گا۔"</string>
     <string name="confirm_enable_16k_pages_text" msgid="6211693250692246982">"‏آپ صفحہ ایگنوسٹک موڈ میں ہیں جو 4‎ KB کرنل چلا رہا ہے، اور آپ 16‎ KB موڈ پر سوئچ کر رہے ہیں۔ اس موڈ میں سافٹ ویئر کی درستگی کی ضمانت نہیں دی جا سکتی ہے، اور بوٹ لوڈر کے غیر مقفل ہونے کے دوران فون پر اسٹور کردہ کوئی بھی ڈیٹا خطرے میں ہو سکتا ہے۔ اس سے آلہ ریبوٹ ہو جائے گا۔ ان موڈز میں کچھ خصوصیات غیر فعال ہو جائیں گی، اس لیے ہو سکتا ہے کچھ ایپلیکیشنز کام نہ کریں۔ آلے کو پروڈکشن موڈ میں واپس لے جانے کیلئے، آپ کو پھر ‎4 KB موڈ پر واپس سوئچ کرنا اور بوٹ لوڈر کو مقفل کرنا ہوگا، جو کہ آلے کو فیکٹری ری سیٹ کرتا ہے۔ آلہ کے Android میں کامیابی کے ساتھ بوٹ ہونے کے بعد، ڈیولپر کے اختیارات میں OEM انلاکنگ کو غیر فعال کریں۔"</string>
     <string name="confirm_enable_4k_pages_title" msgid="3001009010581393119">"‏‫16‎ KB موڈ سے 4‎ KB موڈ پر سوئچ کریں"</string>
     <string name="confirm_enable_4k_pages_text" msgid="3398001587586470689">"‏آپ صفحہ ایگنوسٹک موڈ میں ہیں جو ‎16 KB کرنل چلا رہا ہے، اور آپ ‎4 KB موڈ پر سوئچ کر رہے ہیں۔ اس موڈ میں سافٹ ویئر کی درستگی کی ضمانت نہیں دی جا سکتی ہے، اور بوٹ لوڈر کے غیر مقفل ہونے کے دوران فون پر اسٹور کردہ کوئی بھی ڈیٹا خطرے میں ہو سکتا ہے۔ اس سے آلہ ریبوٹ ہو جائے گا۔ ان موڈز میں کچھ خصوصیات غیر فعال ہو جائیں گی، اس لیے ہو سکتا ہے کچھ ایپلیکیشنز کام نہ کریں۔ آلہ کو پروڈکشن موڈ میں واپس کرنے کے لیے، آپ کو پھر بوٹ لوڈر کو مقفل کرنا ہوگا، جو آلہ کو فیکٹری ری سیٹ کرتا ہے۔ آلہ کے Android میں کامیابی کے ساتھ بوٹ ہونے کے بعد، ڈیولپر کے اختیارات میں OEM انلاکنگ کو غیر فعال کریں۔"</string>
     <string name="toast_16k_update_failed_text" msgid="7848383020572918850">"‏کرنل کو ‎16 KB صفحات کے موافق کرنل میں اپ ڈیٹ کرنے میں ناکام۔"</string>
     <string name="progress_16k_ota_title" msgid="2117218313875523741">"تبدیلی کا اطلاق کرنا"</string>
-    <string name="confirm_format_ext4_title" msgid="4754057414728537125">"‏آلہ کو ext4 میں دوبارہ فارمیٹ کریں؟ ‫(16‎ KB موڈ کے لیے درکار ہے)"</string>
-    <string name="confirm_format_ext4_text" msgid="432847493298532536">"‏‫16‎ KB ڈویلپر اختیار استعمال کرنے سے پہلے اس آلہ کے ڈیٹا پارٹیشن کو ext4 میں تبدیل کرنے کی ضرورت ہے۔ اس موڈ میں سافٹ ویئر کی درستگی کی ضمانت نہیں دی جا سکتی ہے، اور بوٹ لوڈر کے غیر مقفل ہونے کے دوران فون پر اسٹور کردہ کوئی بھی ڈیٹا خطرے میں ہو سکتا ہے۔ ‫16‎ KB اختیار کو فعال کرنے کے لیے اس کے بعد ایک اور ریبوٹ کی ضرورت ہوگی۔ اس موڈ میں آنے کے بعد آپ ایک ہی ریبوٹ میں 4‎ KB اور 16‎ KB موڈ کے درمیان سوئچ کر سکتے ہیں۔ ان موڈز میں کچھ خصوصیات غیر فعال ہو جائیں گی، اس لیے ہو سکتا ہے کچھ ایپلیکیشنز کام نہ کریں۔ آلہ کو پروڈکشن موڈ میں واپس کرنے کے لیے، آپ کو 4‎ KB موڈ پر واپس جانا ہوگا اور پھر بوٹ لوڈر کو لاک کرنا ہوگا، جو فیکٹری آلہ کو ری سیٹ کرتا ہے۔ آلہ کے Android میں کامیابی کے ساتھ بوٹ ہونے کے بعد، ڈیولپر کے اختیارات میں OEM انلاکنگ کو غیر فعال کریں۔ آلہ کو صاف کر دیا جائے گا اور تصدیق کے بعد فائل سسٹم کو ext4 میں تبدیل کر دیا جائے گا۔ اس کے مکمل ہونے کے بعد، براہ کرم 16‎ KB کو دوبارہ فعال کرنے کے لیے واپس آئیں۔"</string>
-    <string name="confirm_ext4_button_text" msgid="6045501984773738407">"سبھی ڈیٹا مٹائیں"</string>
+    <string name="confirm_ext4_button_text" msgid="697563319110759422">"تمام ڈیٹا مٹائیں اور اپ ڈیٹ کریں"</string>
     <string name="format_ext4_failure_toast" msgid="8059453995800471549">"‏ڈیٹا پارٹیشن کو ext4 پر دوبارہ فارمیٹ کرنے اور صاف کرنے میں ناکام۔"</string>
     <string name="confirm_oem_unlock_for_16k_title" msgid="6062041826568112078">"بوٹ لوڈر ان لاک درکار ہے"</string>
     <string name="confirm_oem_unlock_for_16k_text" msgid="8089310116854544106">"‏اس آلہ کو 16‎ KB ڈویلپر اختیار استعمال کرنے سے پہلے بوٹ لوڈر کو غیر مقفل کرنے کی ضرورت ہے۔ اس موڈ میں سافٹ ویئر کی درستگی کی ضمانت نہیں دی جا سکتی ہے، اور بوٹ لوڈر کے غیر مقفل ہونے کے دوران فون پر اسٹور کردہ کوئی بھی ڈیٹا خطرے میں ہو سکتا ہے۔ ‫16‎ KB موڈ کو فعال کرنے پر صارف کا تمام ڈیٹا اور ترتیبات صاف کر دی جائیں گی۔ بوٹ لوڈر غیر مقفل ہونے کے بعد 16‎ KB اختیار کو چالو کرنے کے لیے دو بار ریبوٹس کی ضرورت ہوگی۔ اس موڈ میں آنے کے بعد آپ ایک ہی ریبوٹ میں 4‎ KB اور 16‎ KB موڈ کے درمیان سوئچ کر سکتے ہیں۔ ان موڈز میں کچھ خصوصیات غیر فعال ہو جائیں گی، اس لیے ہو سکتا ہے کچھ ایپلیکیشنز کام نہ کریں۔ آلہ کو پروڈکشن موڈ میں واپس کرنے کے لیے، آپ کو 4‎ KB موڈ پر واپس جانا ہوگا اور پھر OEM/بوٹ لوڈر کو لاک کرنا ہوگا (جو آلہ کو فیکٹری ری سیٹ کرتا ہے)۔ براہ کرم بوٹ لوڈر کو غیر مقفل کریں اور دوبارہ کوشش کریں۔ آپ اسے کرنے کے طریقے سے متعلق ہدایات یہاں دیکھ سکتے ہیں: &lt;a href=\"https://source.android.com/docs/core/architecture/bootloader/locking_unlocking\"&gt;https://source.android.com/docs/core/architecture/bootloader/locking_unlocking&lt;/a&gt;"</string>
@@ -5830,21 +5862,28 @@
     <string name="search_gesture_feature_summary" msgid="1793056495030564014">"اپنی اسکرین پر موجود مواد کو استعمال کر کے تلاش کرنے کے لیے ہوم بٹن یا نیویگیشن ہینڈل کو ٹچ کریں اور دبائے رکھیں۔"</string>
     <string name="device_detail_icon_content_description" msgid="6699151424374841937">"‫<xliff:g id="DEVICE_NAME">%1$s</xliff:g>۔ آلہ کی تفصیل کنفیگر کریں۔"</string>
     <string name="supervision_settings_title" msgid="8507163323870367711">"پیرنٹل کنٹرولز"</string>
-    <string name="supervision_settings_summary" msgid="5020634300370322741">"مواد کی پابندیاں اور دیگر حدود"</string>
+    <!-- no translation found for supervision_settings_summary (6304257872307136073) -->
+    <skip />
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"‏‫PIN سیٹ اپ کریں"</string>
-    <string name="device_supervision_switch_paused_summary" msgid="1014381188739295656">"موقوف ہے"</string>
-    <string name="keywords_supervision_settings" msgid="2580555201483955376">"نگرانی، والدین کی نگرانی، پیرنٹل کنٹرولز"</string>
+    <!-- no translation found for keywords_supervision_settings (43064288661561602) -->
+    <skip />
     <string name="supervision_pin_management_preference_title" msgid="7721501202320841845">"‏اپنے PIN کا نظم کریں"</string>
+    <!-- no translation found for supervision_pin_management_preference_keywords (5034450635706621750) -->
+    <skip />
     <string name="supervision_pin_management_preference_summary_add" msgid="2247921267270577374">"بازیابی ای میل شامل کریں"</string>
     <string name="supervision_pin_management_preference_summary_verify_recovery" msgid="5072554239108915119">"بازیابی ای میل کی توثیق کریں"</string>
     <string name="supervision_change_pin_preference_title" msgid="2288584039438231801">"‏‫PIN تبدیل کریں"</string>
     <string name="supervision_add_forgot_pin_preference_title" msgid="8939945404255748516">"‏‫PIN بھول گئے"</string>
+    <!-- no translation found for supervision_auth_prompt_forgot_pin_button_label (1019337828884793557) -->
+    <skip />
     <string name="supervision_update_recovery_email_preference_title" msgid="2057393838251915087">"بازیابی ای میل اپ ڈیٹ کریں"</string>
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"‏‫PIN حذف کریں"</string>
-    <string name="supervision_delete_pin_preference_summary" msgid="4865713157106413979">"اس سے آپ کی نگرانی کی تمام ترتیبات ری سیٹ ہو جائیں گی"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"بازیابی ای میل شامل کریں"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"اپنے ای میل کی توثیق کریں"</string>
-    <string name="supervision_web_content_filters_title" msgid="3653430162065686156">"ویب مواد فلٹرز"</string>
+    <!-- no translation found for supervision_web_content_filters_title (2412562442507104921) -->
+    <skip />
+    <!-- no translation found for supervision_web_content_filters_keywords (8469519676189544447) -->
+    <skip />
     <string name="supervision_web_content_filters_top_intro" msgid="5264773769840566499">"ویب سائٹس پر بالغانہ مواد کو مسدود کریں اور اس آلہ پر تعاون یافتہ ایپس پر تلاش کے نتائج کو مسدود کریں۔ غیر تعاون یافتہ ایپس اب بھی فُحش مواد دکھا سکتی ہیں۔"</string>
     <string name="supervision_web_content_filters_browser_title" msgid="8737341514264129889">"ویب سائٹس"</string>
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"فُحش سائٹس کو مسدود کریں"</string>
@@ -5854,8 +5893,7 @@
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"‏پیرنٹل کنٹرولز PIN سیٹ کریں"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"‏‫PIN کی توثیق کریں"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"‏‫PIN کو اپ ڈیٹ کر دیا گیا"</string>
-    <!-- no translation found for supervision_promo_footer_action_button_description (7617359721703338141) -->
-    <skip />
+    <string name="supervision_promo_footer_action_button_description" msgid="7617359721703338141">"ایپ کھولیں"</string>
     <string name="supervision_delete_pin_confirm_header" msgid="8499276643990949268">"‏‫PIN حذف کریں؟"</string>
     <string name="supervision_delete_pin_confirm_message" msgid="5482080400973042178">"‏یہ اس آلے پر موجود تمام صارفین کے لیے آپ کا موجودہ PIN حذف کر دے گا اور آپ کا سیٹ اپ کردہ کنٹرولز غیر فعال کر دے گا۔ اس کارروائی کو کالعدم نہیں کیا جا سکتا۔"</string>
     <string name="supervision_delete_pin_supervision_enabled_header" msgid="2072311894107038402">"پہلے دوسری پروفائلز پر کنٹرولز کو موقوف کریں"</string>
