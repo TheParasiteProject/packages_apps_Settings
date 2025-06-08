@@ -5887,7 +5887,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Ачык-айкын сексуалдык мүнөздөгү сайттарды бөгөттөө"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Табылган нерселер"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Ачык-айкын сексуалдык мүнөздөгү табылган нерселерди чыпкалоо"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Көзөмөлдөө PIN кодун киргизүү"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Ата-эненин көзөмөлүнүн PIN кодун коюңуз"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"PIN кодду ырастаңыз"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN код жаңырды"</string>

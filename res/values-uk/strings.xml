@@ -1200,8 +1200,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"Надати доступ до цієї мережі іншим користувачам пристрою"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"Усі користувачі цього пристрою зможуть бачити спільну мережу й підключатися до неї. Адміністратори зможуть видалити спільну мережу. Докладніше"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"Дозвольте іншим користувачам змінювати конфігурацію мережі"</string>
-    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
-    <skip />
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"Щоб внести зміни в цю мережу, зверніться до адміністратора пристрою."</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"Ця мережа не має доступу до Інтернету. Не від’єднуватись?"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"Деякі додатки й сервіси можуть не працювати через обмежене з’єднання. Усе одно використати?"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"Не запитувати знову для цієї мережі"</string>
@@ -2551,32 +2550,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"Автоматично оновлювати збільшення"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Оновлювати збільшення екрана в інших програмах"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Кнопка живлення закінчує виклик"</string>
-    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
-    <skip />
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"Режим"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Стандартний режим"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"Стандартне застосування темної теми"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Темна тема застосовується на пристрої і в підтримуваних додатках"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Розширений режим"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"Розширене застосування темної теми"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Автоматично застосовувати темну тему до більшої кількості додатків, щоб покращити доступність"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Вимкнути анімацію"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Кількість рухомих об’єктів на екрані зменшиться"</string>
-    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
-    <skip />
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"Блимання текстового курсора"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"Налаштуйте швидкість або вимкніть блимання текстового курсора. Цей параметр можуть підтримувати не всі додатки й вебсайти."</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"Зменшити швидкість блимання"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"Збільшити швидкість блимання"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"Скинути"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"Монофонічне аудіо"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"Об\'єднувати канали під час відтворення аудіо"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"Баланс аудіо"</string>
@@ -3736,8 +3723,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{Немає}=1{Налаштовано 1 розклад}one{Налаштовано # розклад}few{Налаштовано # розклади}many{Налаштовано # розкладів}other{Налаштовано # розкладу}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"Не турбувати"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"Режими"</string>
-    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
-    <skip />
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"Менше відволікайтеся й зберігайте концентрацію уваги завдяки режимам для сну, роботи, керування автомобілем тощо"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"Створити власний режим"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"Отримуйте сповіщення лише від важливих людей і додатків"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"Налаштувати розклад"</string>
@@ -5912,7 +5898,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Блокувати сайти для дорослих"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Результати пошуку"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Відфільтровувати результати відвертого характеру"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Введіть PIN-код для батьківського контролю"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Установіть PIN-код батьківського контролю"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Підтвердьте PIN-код"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN-код змінено"</string>

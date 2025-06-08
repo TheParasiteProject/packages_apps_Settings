@@ -5896,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"અયોગ્ય સાઇટ બ્લૉક કરો"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"શોધ પરિણામો"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"અયોગ્ય શોધ પરિણામોને ફિલ્ટર કરો"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"નિરીક્ષણ પિન દાખલ કરો"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"માતાપિતાના યોગ્ય નિયંત્રણોનો પિન સેટ કરો"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"પિન કન્ફર્મ કરો"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"પિન અપડેટ કર્યો"</string>

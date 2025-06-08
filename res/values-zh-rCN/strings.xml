@@ -2413,7 +2413,7 @@
     <string name="accessibility_magnification_cursor_following_continuous" msgid="1119319218662522794">"屏幕随着鼠标指针的移动而持续移动"</string>
     <string name="accessibility_magnification_cursor_following_center" msgid="3504798009192014460">"屏幕跟随移动并保持鼠标指针位于屏幕中央"</string>
     <string name="accessibility_magnification_cursor_following_edge" msgid="8675207762416655758">"鼠标指针触及屏幕边缘时才移动屏幕"</string>
-    <string name="accessibility_screen_magnification_follow_typing_title" msgid="494025442124701045">"跟随输入移动"</string>
+    <string name="accessibility_screen_magnification_follow_typing_title" msgid="494025442124701045">"跟随输入文字"</string>
     <string name="accessibility_screen_magnification_follow_typing_summary" msgid="2678347754211619662">"输入时放大镜跟随文字移动"</string>
     <string name="accessibility_screen_magnification_follow_keyboard_title" msgid="7342198645736402048">"放大键盘焦点"</string>
     <string name="accessibility_screen_magnification_follow_keyboard_summary" msgid="9091733229413835358">"放大镜跟随键盘焦点"</string>
@@ -5896,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"屏蔽含露骨内容的网站"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"搜索结果"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"滤除含露骨内容的搜索结果"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"输入监督 PIN 码"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"设置家长控制 PIN 码"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"确认 PIN 码"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN 码已更新"</string>

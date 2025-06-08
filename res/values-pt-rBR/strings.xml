@@ -224,12 +224,9 @@
     <string name="title_change_system_locale" msgid="4102991236063984803">"Mudar idioma do sistema para o %s?"</string>
     <string name="title_system_locale_addition" msgid="8218683660751479466">"Adicionar o %s aos idiomas favoritos?"</string>
     <string name="desc_system_locale_addition" msgid="3409917362651596070">"Isso permite que os apps e sites saibam que você prefere esse idioma."</string>
-    <!-- no translation found for desc_notice_device_locale_and_region_settings_change (909261686577914396) -->
-    <skip />
-    <!-- no translation found for desc_notice_device_locale_settings_change (5012353615235634881) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
-    <skip />
+    <string name="desc_notice_device_locale_and_region_settings_change" msgid="909261686577914396">"O dispositivo vai usar o <xliff:g id="LANGUAGE">%1$s</xliff:g>, e a região mudará para <xliff:g id="REGION">%2$s</xliff:g>."</string>
+    <string name="desc_notice_device_locale_settings_change" msgid="5012353615235634881">"O dispositivo vai usar o <xliff:g id="LANGUAGE">%s</xliff:g>."</string>
+    <string name="dlg_desc_delete_preferred_default_locale" msgid="690828405078078513">"O <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> será removido dos seus idiomas preferidos."</string>
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"Mudar"</string>
     <string name="title_unavailable_locale" msgid="5382411204559213983">"Não é possível definir o <xliff:g id="SELECTED_LANGUAGE">%s</xliff:g> como idioma do sistema"</string>
     <string name="desc_unavailable_locale" msgid="7223655766703116782">"Esse idioma não está disponível no seu dispositivo, mas os apps vão saber que ele é o seu preferido"</string>
@@ -2237,11 +2234,9 @@
     <string name="gesture_button_next" msgid="695288092704187356">"Avançar"</string>
     <string name="gesture_button_restart" msgid="1895850891992530133">"Reiniciar"</string>
     <string name="gesture_button_done" msgid="6387900351203032188">"Concluído"</string>
-    <!-- no translation found for action_corner_title (7411160165577367757) -->
-    <skip />
+    <string name="action_corner_title" msgid="7411160165577367757">"Personalize os atalhos de canto"</string>
     <string name="action_corner_summary" msgid="695618538930535335">"Use cursores para navegar pelo sistema"</string>
-    <!-- no translation found for action_corner_intro (2170609118659718140) -->
-    <skip />
+    <string name="action_corner_intro" msgid="2170609118659718140">"Escolha a seguir as áreas para personalizar os atalhos de canto"</string>
     <string name="action_corner_bottom_left_title" msgid="2857258272736432174">"Canto inferior esquerdo"</string>
     <string name="action_corner_bottom_right_title" msgid="7222233500548465684">"Canto inferior direito"</string>
     <string name="action_corner_top_left_title" msgid="4633975226092344210">"Canto superior esquerdo"</string>
@@ -5860,8 +5855,7 @@
     <string name="search_gesture_feature_summary" msgid="1793056495030564014">"Toque e segure o botão home ou a barra de navegação para usar o conteúdo da tela para fazer pesquisas."</string>
     <string name="device_detail_icon_content_description" msgid="6699151424374841937">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>. Configure os detalhes do dispositivo."</string>
     <string name="supervision_settings_title" msgid="8507163323870367711">"Controles da família"</string>
-    <!-- no translation found for supervision_settings_summary (6304257872307136073) -->
-    <skip />
+    <string name="supervision_settings_summary" msgid="6304257872307136073">"Regras digitais e limites de tempo de tela"</string>
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"Definir o PIN"</string>
     <!-- no translation found for keywords_supervision_settings (43064288661561602) -->
     <skip />
@@ -5887,7 +5881,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Bloquear sites explícitos"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Resultados da pesquisa"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Filtrar resultados da pesquisa com conteúdo explícito"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Digite o PIN de supervisão"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Definir um PIN dos controles da família"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Confirmar PIN"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN atualizado"</string>

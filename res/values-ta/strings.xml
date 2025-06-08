@@ -5896,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"வெளிப்படையான தளங்களைத் தடுத்தல்"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"தேடல் முடிவுகள்"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"வெளிப்படையான தேடல் முடிவுகளை ஃபில்டர் செய்தல்"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"கண்காணிப்புப் பின்னை (PIN) உள்ளிடுங்கள்"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"பெற்றோர் கட்டுப்பாடுகளுக்கான பின்னை அமைத்தல்"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"பின்னை உறுதிப்படுத்துதல்"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"பின் மாற்றப்பட்டது"</string>

@@ -2407,7 +2407,7 @@
     <string name="accessibility_captioning_footer_learn_more_content_description" msgid="5730040700677017706">"Få flere oplysninger om præferencer for undertekster"</string>
     <string name="accessibility_screen_magnification_title" msgid="1211169976144629087">"Forstørrelse"</string>
     <string name="accessibility_screen_magnification_shortcut_title" msgid="2387963646377987780">"Genvej til forstørrelse"</string>
-    <string name="accessibility_magnification_cursor_following_title" msgid="29531257984012743">"Tilstand for at følge markøren"</string>
+    <string name="accessibility_magnification_cursor_following_title" msgid="29531257984012743">"Følg markøren"</string>
     <string name="accessibility_magnification_cursor_following_header" msgid="7283095798622223509">"Vælg, hvordan forstørrelsen følger din markør."</string>
     <string name="accessibility_magnification_cursor_following_unavailable_summary" msgid="1683880243856242269">"Utilgængelig, når kun en del af skærmen forstørres"</string>
     <string name="accessibility_magnification_cursor_following_continuous" msgid="1119319218662522794">"Flyt skærmen kontinuerligt, i takt med at markøren flyttes"</string>
@@ -5896,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Bloker eksplicitte websites"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Søgeresultater"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Bortfiltrér eksplicitte søgeresultater"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Angiv pinkode til forældrestyring"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Angiv en pinkode til børnesikring"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Bekræft pinkode"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"Pinkoden er opdateret"</string>

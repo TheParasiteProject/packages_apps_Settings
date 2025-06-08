@@ -198,8 +198,7 @@
     <string name="locale_remove_menu" msgid="3521546263421387474">"Выдаліць"</string>
     <string name="add_a_language" msgid="2126220398077503271">"Дадаць мову"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"Мова"</string>
-    <!-- no translation found for locale_picker_category_title (296835514014453679) -->
-    <skip />
+    <string name="locale_picker_category_title" msgid="296835514014453679">"Прыярытэтныя мовы"</string>
     <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"Мовы праграм"</string>
     <string name="app_locale_picker_summary" msgid="616928580653613998">"Выбіраць мову для кожнай праграмы"</string>
     <string name="app_locale_picker_title" msgid="2431448962911301366">"Мова праграмы"</string>
@@ -232,10 +231,8 @@
     <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
     <skip />
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"Змяніць"</string>
-    <!-- no translation found for title_unavailable_locale (5382411204559213983) -->
-    <skip />
-    <!-- no translation found for desc_unavailable_locale (7223655766703116782) -->
-    <skip />
+    <string name="title_unavailable_locale" msgid="5382411204559213983">"Не ўдаецца задаць гэту мову (<xliff:g id="SELECTED_LANGUAGE">%s</xliff:g>) у якасці сістэмнай"</string>
+    <string name="desc_unavailable_locale" msgid="7223655766703116782">"Гэта мова не падтрымліваецца на вашай прыладзе, але праграмы будуць ведаць, што яна прыярытэтная для вас"</string>
     <string name="locale_search_menu" msgid="297782694044826686">"Шукаць"</string>
     <string name="language_and_region_title" msgid="8374151891112162767">"Мова і рэгіён"</string>
     <string name="language_selection_title" msgid="968179636453982415">"Дадаць мову"</string>
@@ -249,12 +246,9 @@
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"Змяніць рэгіён на наступны: <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g>?"</string>
     <string name="body_change_system_locale_region" msgid="9064318449821043189">"У якасці мовы сістэмы прылада захавае наступную: <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g>"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"Выберыце, як ваша прылада, сайты і праграмы будуць паказваць лічбы"</string>
-    <!-- no translation found for preferred_locale_menu_up (4009560552099567485) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_down (1033373887552535585) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_remove (8547483341987864590) -->
-    <skip />
+    <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Перамясціць уверх"</string>
+    <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Перамясціць уніз"</string>
+    <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Выдаліць"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Рэгіянальныя налады"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Задаць налады адзінак вымярэння і лічбаў"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"З мэтай персаналізацыі задайце для праграм рэгіянальныя налады."</string>
@@ -293,10 +287,8 @@
     <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"Не атрымалася выдаліць усе мовы"</string>
     <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"Пакіньце па меншай меры адну прыярытэтную мову"</string>
     <string name="locale_not_translated" msgid="3071618135527110152">"Недаступна ў якасці мовы сістэмы"</string>
-    <!-- no translation found for dlg_title_delete_preferred_locale (4167214348946940002) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_locale (4658301652628456858) -->
-    <skip />
+    <string name="dlg_title_delete_preferred_locale" msgid="4167214348946940002">"Выдаліць наступную мову: <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g>?"</string>
+    <string name="dlg_desc_delete_preferred_locale" msgid="4658301652628456858">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> будзе выдалена з вашых прыярытэтных моў. Пазней вы можаце дадаць яе зноў."</string>
     <string name="action_drag_label_move_up" msgid="3392196942330705015">"Перамясціць вышэй"</string>
     <string name="action_drag_label_move_down" msgid="9069518740553953426">"Перамясціць ніжэй"</string>
     <string name="action_drag_label_move_top" msgid="2430471023612171619">"Перамясціць уверх"</string>
@@ -476,8 +468,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks" msgid="1663906389456119842">"Не зараз"</string>
     <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"Я згаджаюся"</string>
     <string name="security_settings_fingerprint_rename_description" msgid="6301505700382531086">"Каб перайменаваць, націсніце двойчы"</string>
-    <!-- no translation found for security_settings_fingerprint_recognition_description (1805171116182647136) -->
-    <skip />
+    <string name="security_settings_fingerprint_recognition_description" msgid="1805171116182647136">"<xliff:g id="FP_NAME">%1$s</xliff:g>: распазнаны"</string>
     <string name="setup_fingerprint_enroll_skip_title" msgid="2473807887676247264">"Не наладжваць адбітак?"</string>
     <string name="setup_fingerprint_enroll_skip_after_adding_lock_text" msgid="2412645723804450304">"Для наладжвання адбітка пальца спатрэбіцца пара хвілін. Вы можаце прапусціць гэты крок і дадаць адбітак пальца пазней у наладах."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_setup" msgid="6255210343107484206">"Аўтэнтыфікацыя адбіткам пальца"</string>
@@ -5898,7 +5889,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Блакіраваць сайты з непрыстойным змесцівам"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Вынікі пошуку"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Адфільтроўваць непрыстойныя вынікі пошуку"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Увядзіце PIN-код бацькоўскага кантролю"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Наладзіць PIN-код для функцый бацькоўскага кантролю"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Пацвердзіце PIN-код"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN-код абноўлены"</string>

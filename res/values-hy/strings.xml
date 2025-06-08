@@ -1200,8 +1200,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"Կիսվել այս ցանցով սարքի այլ օգտատերերի հետ"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"Այս սարքի բոլոր օգտատերերը կարող են տեսնել ընդհանուր ցանցը և միանալ դրան։ Ադմինիստատորները կարող են ջնջել ընդհանուր ցանցը։ Իմանալ ավելին"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"Թույլատրել այլ օգտատերերի փոփոխել ցանցի կազմաձևը"</string>
-    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
-    <skip />
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"Ցանցում փոփոխություններ կատարելու համար դիմեք սարքի ադմինիստրատորին։"</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"Այս ցանցը չունի կապ համացանցին: Մնա՞լ միացված:"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"Որոշ հավելվածներ և ծառայություններ կարող են չաշխատել սահմանափակ կապի պատճառով։ Շարունակե՞լ։"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"Չհարցնել այլևս այս ցանցի համար"</string>
@@ -2551,32 +2550,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"Ավտոմատ թարմացնել էկրանի խոշորությունը"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Թարմացնել էկրանի խոշորությունը ծրագրի տարանցումների վրա"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Սնուցման կոճակը ավարտում է զանգը"</string>
-    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
-    <skip />
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"Ռեժիմ"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Ստանդարտ"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"Ստանդարտ մուգ թեմա"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Կիրառում է մուգ թեման համակարգում և աջակցվող հավելվածներում"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Ծավալված է"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"Ծավալված մուգ թեմա"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Ավտոմատ կերպով միացնում է մուգ թեման բոլոր հավելվածներում՝ հատուկ գործառույթները բարելավելու համար"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Հեռացնել անիմացիաները"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Նվազեցնել շարժումն էկրանին"</string>
-    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
-    <skip />
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"Նշորդի թարթման ինտենսիվությունը"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"Կարգավորեք նշորդի թարթման ինտենսիվությունը կամ անջատեք թարթումը։ Կարող է ոչ բոլոր հավելվածներում կամ կայքերում աջակցվել։"</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"Իջեցնել թարթման ինտենսիվությունը"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"Բարձրացնել թարթման ինտենսիվությունը"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"Զրոյացնել"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"Մոնո"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"Աուդիո նվագարկելիս միավորել ալիքները"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"Աուդիո բալանս"</string>
@@ -3736,8 +3723,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{Ոչ մի ժամանակացույց}=1{Սահմանված է 1 ժամանակացույց}one{Սահմանված է # ժամանակացույց}other{Սահմանված է # ժամանակացույց}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"Չանհանգստացնել"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"Ռեժիմներ"</string>
-    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
-    <skip />
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"Կարգավորեք քնի, աշխատանքի, մեքենա վարելու և այլ հատուկ ռեժիմներ, որպեսզի հեռախոսը հնարավորինս քիչ խանգարի ձեզ սահմանված ժամերին"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"Ստեղծեք ձեր սեփական ռեժիմը"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"Ծանուցում ստանալ միայն կարևոր մարդկանցից և հավելվածներից"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"Ստեղծել ժամանակացույց"</string>
@@ -5910,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Արգելափակել մեծահասակների համար նախատեսված կայքերը"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Որոնման արդյունքներ"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Զտել մեծահասակների համար նախատեսված որոնման արդյունքները"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Մուտքագրել ծնողական վերահսկողության PIN կոդ"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Սահմանեք ծնողական վերահսկողության PIN կոդ"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Հաստատեք PIN կոդը"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN կոդը թարմացվեց"</string>

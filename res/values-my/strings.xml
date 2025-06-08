@@ -5896,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"ညစ်ညမ်းသော ဝဘ်ဆိုက်များကို ပိတ်ထားခြင်း"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"ရှာဖွေမှုရလဒ်"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"ညစ်ညမ်းသော ရှာဖွေမှုရလဒ်များ စစ်ထုတ်ခြင်း"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"ကြီးကြပ်မှုပင်နံပါတ် ထည့်ပါ"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"မိဘအထိန်းအချုပ် ပင်နံပါတ် သတ်မှတ်ပါ"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"ပင်နံပါတ်ကို အတည်ပြုပါ"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"ပင်နံပါတ် အပ်ဒိတ်လုပ်ပြီးပြီ"</string>

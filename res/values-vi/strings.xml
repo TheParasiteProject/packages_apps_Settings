@@ -1200,8 +1200,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"Chia sẻ mạng này với những người dùng khác trên thiết bị"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"Mọi người dùng trên thiết bị này có thể xem và kết nối với mạng dùng chung. Quản trị viên có thể xoá mạng dùng chung. Tìm hiểu thêm"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"Cho phép người dùng khác chỉnh sửa cấu hình mạng"</string>
-    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
-    <skip />
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"Hãy liên hệ với quản trị viên của thiết bị này để thay đổi mạng này."</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"Mạng này không có quyền truy cập Internet. Giữ kết nối?"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"Một số ứng dụng và dịch vụ có thể không hoạt động do khả năng kết nối giới hạn. Vẫn sử dụng?"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"Không hỏi lại cho mạng này"</string>
@@ -2408,8 +2407,8 @@
     <string name="accessibility_captioning_footer_learn_more_content_description" msgid="5730040700677017706">"Tìm hiểu thêm các tuỳ chọn phụ đề"</string>
     <string name="accessibility_screen_magnification_title" msgid="1211169976144629087">"Phóng to"</string>
     <string name="accessibility_screen_magnification_shortcut_title" msgid="2387963646377987780">"Lối tắt cho tính năng phóng to"</string>
-    <string name="accessibility_magnification_cursor_following_title" msgid="29531257984012743">"Theo dõi con trỏ"</string>
-    <string name="accessibility_magnification_cursor_following_header" msgid="7283095798622223509">"Chọn cách tính năng Phóng to theo dõi con trỏ."</string>
+    <string name="accessibility_magnification_cursor_following_title" msgid="29531257984012743">"Di chuyển theo con trỏ"</string>
+    <string name="accessibility_magnification_cursor_following_header" msgid="7283095798622223509">"Chọn cách tính năng Phóng to di chuyển theo con trỏ."</string>
     <string name="accessibility_magnification_cursor_following_unavailable_summary" msgid="1683880243856242269">"Không dùng được khi chỉ phóng to một phần màn hình"</string>
     <string name="accessibility_magnification_cursor_following_continuous" msgid="1119319218662522794">"Di chuyển màn hình liên tục khi chuột di chuyển"</string>
     <string name="accessibility_magnification_cursor_following_center" msgid="3504798009192014460">"Di chuyển màn hình trong khi giữ chuột ở giữa màn hình"</string>
@@ -2467,7 +2466,7 @@
     <string name="accessibility_screen_magnification_short_summary" msgid="2207048420669939150">"Nhấn 3 lần để thu phóng"</string>
     <string name="accessibility_screen_magnification_navbar_short_summary" msgid="4885018322430052037">"Nhấn vào nút để thu phóng"</string>
     <string name="accessibility_screen_magnification_intro_text" msgid="3856180549393526339">"Nhanh chóng phóng to màn hình để hiển thị nội dung lớn hơn"</string>
-    <string name="accessibility_screen_magnification_summary" msgid="8267672508057326959">"&lt;b&gt;Cách phóng to:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Dùng phím tắt để bắt đầu phóng to&lt;br/&gt; {1,number,integer}. Nhấn vào màn hình&lt;br/&gt; {2,number,integer}. Kéo 2 ngón tay để di chuyển xung quanh màn hình&lt;br/&gt; {3,number,integer}. Chụm 2 ngón tay để điều chỉnh mức thu phóng&lt;br/&gt; {4,number,integer}. Dùng phím tắt để dừng phóng to&lt;br/&gt;&lt;br/&gt; &lt;b&gt;Cách phóng to tạm thời:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Hãy nhớ đặt kiểu phóng to thành toàn màn hình&lt;br/&gt; {1,number,integer}. Dùng phím tắt để bắt đầu phóng to&lt;br/&gt; {2,number,integer}. Chạm và giữ một vị trí bất kỳ trên màn hình&lt;br/&gt; {3,number,integer}. Kéo ngón tay để di chuyển xung quanh màn hình&lt;br/&gt; {4,number,integer}. Nhấc ngón tay lên để dừng phóng to"</string>
+    <string name="accessibility_screen_magnification_summary" msgid="8267672508057326959">"&lt;b&gt;Cách phóng to:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Dùng lối tắt để bắt đầu phóng to&lt;br/&gt; {1,number,integer}. Nhấn vào màn hình&lt;br/&gt; {2,number,integer}. Kéo 2 ngón tay để di chuyển xung quanh màn hình&lt;br/&gt; {3,number,integer}. Chụm 2 ngón tay để điều chỉnh mức thu phóng&lt;br/&gt; {4,number,integer}. Dùng lối tắt để dừng phóng to&lt;br/&gt;&lt;br/&gt; &lt;b&gt;Cách phóng to tạm thời:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Đảm bảo bạn đã đặt kiểu phóng to thành toàn màn hình&lt;br/&gt; {1,number,integer}. Dùng lối tắt để bắt đầu phóng to&lt;br/&gt; {2,number,integer}. Chạm và giữ một vị trí bất kỳ trên màn hình&lt;br/&gt; {3,number,integer}. Kéo ngón tay để di chuyển xung quanh màn hình&lt;br/&gt; {4,number,integer}. Nhấc ngón tay lên để dừng phóng to"</string>
     <string name="accessibility_screen_magnification_keyboard_summary" msgid="2504303274186294767">"&lt;b&gt;Cách thu phóng bằng bàn phím:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Dùng phím tắt để bắt đầu phóng to&lt;br/&gt; {1,number,integer}. Nhấn và giữ &lt;xliff:g id=meta1&gt;%1$s&lt;/xliff:g&gt; và &lt;xliff:g id=alt1&gt;%2$s&lt;/xliff:g&gt; rồi nhấn dấu + hoặc - để phóng to hoặc thu nhỏ&lt;br/&gt; {2,number,integer}. Nhấn và giữ &lt;xliff:g id=meta2&gt;%3$s&lt;/xliff:g&gt; và &lt;xliff:g id=alt2&gt;%4$s&lt;/xliff:g&gt; rồi nhấn các phím mũi tên để di chuyển xung quanh màn hình&lt;br/&gt; {3,number,integer}. Dùng phím tắt để dừng phóng to"</string>
     <string name="accessibility_screen_magnification_summary_one_finger_panning_off" msgid="1779959623535122324">"&lt;b&gt;Cách phóng to:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Dùng lối tắt để bắt đầu phóng to&lt;br/&gt; {1,number,integer}. Nhấn vào màn hình&lt;br/&gt; {2,number,integer}. Kéo 2 ngón tay để di chuyển xung quanh màn hình&lt;br/&gt; {3,number,integer}. Chụm 2 ngón tay để điều chỉnh mức thu phóng&lt;br/&gt; {4,number,integer}. Dùng lối tắt để dừng phóng to&lt;br/&gt;&lt;br/&gt; Bạn có thể dùng tính năng phóng to tạm thời cùng nhiều tính năng khác."</string>
     <string name="accessibility_screen_magnification_summary_one_finger_panning_on" msgid="7323930759240678965">"&lt;b&gt;Cách phóng to:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. Dùng lối tắt để bắt đầu phóng to&lt;br/&gt; {1,number,integer}. Nhấn vào màn hình&lt;br/&gt; {2,number,integer}. Kéo 1 hoặc 2 ngón tay để di chuyển xung quanh màn hình&lt;br/&gt; {3,number,integer}. Chụm 2 ngón tay để điều chỉnh mức thu phóng&lt;br/&gt; {4,number,integer}. Dùng lối tắt để dừng phóng to&lt;br/&gt;&lt;br/&gt; Bạn có thể dùng tính năng phóng to tạm thời cùng nhiều tính năng khác."</string>
@@ -2551,32 +2550,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"Tự động cập nhật phóng đại màn hình"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Cập nhật phóng đại màn hình khi chuyển ứng dụng"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Kết thúc cuộc gọi bằng nút nguồn"</string>
-    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
-    <skip />
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"Chế độ"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Tiêu chuẩn"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"Giao diện tối tiêu chuẩn"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Áp dụng Giao diện tối trên thiết bị và các ứng dụng được hỗ trợ"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Đã mở rộng"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"Giao diện tối mở rộng"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Tự động áp dụng Giao diện tối cho nhiều ứng dụng hơn để cải thiện khả năng hỗ trợ tiếp cận"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Xóa hiệu ứng động"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Giảm chuyển động trên màn hình"</string>
-    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
-    <skip />
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"Tốc độ nhấp nháy con trỏ văn bản"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"Điều chỉnh tốc độ nhấp nháy của con trỏ văn bản hoặc tắt chế độ nhấp nháy. Có thể chỉ được hỗ trợ trên một số ứng dụng/trang web."</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"Giảm tốc độ nhấp nháy"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"Tăng tốc độ nhấp nháy"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"Đặt lại"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"Âm thanh đơn âm"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"Kết hợp các kênh khi phát âm thanh"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"Cân bằng âm thanh"</string>
@@ -3736,8 +3723,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{Không có}=1{Đã đặt 1 lịch biểu}other{Đã đặt # lịch biểu}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"Không làm phiền"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"Chế độ"</string>
-    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
-    <skip />
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"Bớt phân tâm và tập trung hơn nhờ các chế độ khi ngủ, làm việc, lái xe và nhiều hoạt động khác"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"Tạo chế độ của riêng bạn"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"Chỉ nhận thông báo của những người và ứng dụng quan trọng"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"Đặt một lịch biểu"</string>
@@ -5910,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Chặn các trang web có nội dung phản cảm"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Kết quả tìm kiếm"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Lọc ra kết quả tìm kiếm có nội dung phản cảm"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Nhập mã PIN giám sát"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Đặt mã PIN cho chế độ kiểm soát của cha mẹ"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Xác nhận mã PIN"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"Đã cập nhật mã PIN"</string>
