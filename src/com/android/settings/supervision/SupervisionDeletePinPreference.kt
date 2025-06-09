@@ -29,6 +29,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.preference.Preference
 import com.android.settings.R
 import com.android.settings.core.SubSettingLauncher
+import com.android.settingslib.HelpUtils
 import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.metadata.PreferenceLifecycleProvider
 import com.android.settingslib.metadata.PreferenceMetadata
@@ -92,6 +93,7 @@ class SupervisionDeletePinPreference() :
                 .setTitle(R.string.supervision_delete_pin_supervision_enabled_header)
                 .setMessage(R.string.supervision_delete_pin_supervision_enabled_message)
                 .setPositiveButton(R.string.okay, null)
+                .setNegativeButton(R.string.learn_more, { _, _ -> onLearnMore() })
         } else {
             builder
                 .setTitle(R.string.supervision_delete_pin_confirm_header)
@@ -102,6 +104,21 @@ class SupervisionDeletePinPreference() :
         val dialog = builder.create()
         dialog.setCanceledOnTouchOutside(false)
         dialog.show()
+    }
+
+    @VisibleForTesting
+    fun onLearnMore() {
+        val intent =
+            HelpUtils.getHelpIntent(
+                lifeCycleContext,
+                lifeCycleContext.getString(R.string.supervision_pin_learn_more_link),
+                lifeCycleContext::class.java.name,
+            )
+        if (intent != null) {
+            lifeCycleContext.startActivity(intent)
+        } else {
+            Log.w(TAG, "HelpIntent is null")
+        }
     }
 
     private fun showErrorDialog(context: Context) {
