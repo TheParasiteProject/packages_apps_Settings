@@ -4978,9 +4978,9 @@
     <!-- Title for the toggle button that turns on/off the mouse keys shortcut. [CHAR_LIMIT=NONE] -->
     <string name="accessibility_mouse_keys_shortcut_title">Mouse keys shortcut</string>
     <!-- Summary text for the accessibility setting 'Mouse keys' preference sub-screen. [CHAR LIMIT=100] -->
-    <string name="mouse_keys_summary">Use your keyboard to control the pointer</string>
+    <string name="mouse_keys_summary">Use your keyboard to control the cursor</string>
     <!-- Title for the mouse keys max speed slider preference under mouse key main page, an accessibility mouse keys setting that controls how fast the mouse key can move. [CHAR LIMIT=35] -->
-    <string name="mouse_keys_max_speed_title">Maximum speed</string>
+    <string name="mouse_keys_max_speed_title">Speed</string>
     <!-- Description for the button that decreases the seekbar in mouse keys settings page. [CHAR_LIMIT=NONE] -->
     <string name="mouse_keys_seek_bar_decrease_button_description">Decrease</string>
     <!-- Description for the button that increases the seekbar in mouse keys settings page. [CHAR_LIMIT=NONE] -->
@@ -5032,11 +5032,10 @@
     <!-- Summary text for Mouse keys click secondary button image. [CHAR LIMIT=NONE] -->
     <string name="mouse_keys_release2_summary">Use the \"<xliff:g id="release_2_label" example="/">%s</xliff:g>\" key to click the secondary mouse button</string>
 
-    <!-- TODO(b/411206889): finalize this string and mark it translatable. -->
     <!-- Title for the mouse keys acceleration seekbar -->
-    <string name="mouse_keys_acceleration_seekbar_title" translatable="false">Acceleration</string>
-    <string name="mouse_keys_acceleration_fast_icon_desc" translatable="false">Fast</string>
-    <string name="mouse_keys_acceleration_slow_icon_desc" translatable="false">Slow</string>
+    <string name="mouse_keys_acceleration_seekbar_title">Acceleration</string>
+    <string name="mouse_keys_acceleration_fast_icon_desc">Fast</string>
+    <string name="mouse_keys_acceleration_slow_icon_desc">Slow</string>
 
     <!-- Title for the button to trigger the 'keyboard shortcuts helper' dialog. [CHAR LIMIT=35] -->
     <string name="keyboard_shortcuts_helper">View keyboard shortcuts</string>
