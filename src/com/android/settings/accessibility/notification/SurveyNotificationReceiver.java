@@ -16,8 +16,8 @@
 
 package com.android.settings.accessibility.notification;
 
-import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SURVEY_NOTIFICATION_DISMISSED;
-import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SURVEY_NOTIFICATION_SHOWN;
+import static com.android.internal.accessibility.common.NotificationConstants.ACTION_CANCEL_SURVEY_NOTIFICATION;
+import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SCHEDULE_SURVEY_NOTIFICATION;
 import static com.android.internal.accessibility.common.NotificationConstants.EXTRA_PAGE_ID;
 
 import android.app.settings.SettingsEnums;
@@ -81,9 +81,9 @@ public class SurveyNotificationReceiver extends BroadcastReceiver {
             return;
         }
 
-        if (ACTION_SURVEY_NOTIFICATION_SHOWN.equals(intent.getAction())) {
+        if (ACTION_SCHEDULE_SURVEY_NOTIFICATION.equals(intent.getAction())) {
             mJobService.scheduleJob(context, pageId, SCHEDULE_TIME);
-        } else if (ACTION_SURVEY_NOTIFICATION_DISMISSED.equals(intent.getAction())) {
+        } else if (ACTION_CANCEL_SURVEY_NOTIFICATION.equals(intent.getAction())) {
             mJobService.cancelJob(context, pageId);
             Objects.requireNonNullElseGet(mNotificationHelper,
                     () -> new NotificationHelper(context)).cancelNotification(pageId);

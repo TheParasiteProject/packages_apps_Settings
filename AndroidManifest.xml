@@ -2518,8 +2518,8 @@
             android:permission="android.permission.MANAGE_ACCESSIBILITY"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.settings.ACCESSIBILITY_SURVEY_NOTIFICATION_SHOWN"/>
-                <action android:name="android.settings.ACCESSIBILITY_SURVEY_NOTIFICATION_DISMISSED"/>
+                <action android:name="android.settings.ACCESSIBILITY_CANCEL_SURVEY_NOTIFICATION"/>
+                <action android:name="android.settings.ACCESSIBILITY_SCHEDULE_SURVEY_NOTIFICATION"/>
             </intent-filter>
         </receiver>
 

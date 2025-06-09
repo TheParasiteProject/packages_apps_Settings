@@ -16,8 +16,8 @@
 
 package com.android.settings.accessibility;
 
-import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SURVEY_NOTIFICATION_DISMISSED;
-import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SURVEY_NOTIFICATION_SHOWN;
+import static com.android.internal.accessibility.common.NotificationConstants.ACTION_CANCEL_SURVEY_NOTIFICATION;
+import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SCHEDULE_SURVEY_NOTIFICATION;
 import static com.android.settings.accessibility.AccessibilityUtil.State.OFF;
 import static com.android.settings.accessibility.AccessibilityUtil.State.ON;
 
@@ -122,12 +122,12 @@ public class ForceInvertPreferenceController extends BaseSurveyPreferenceControl
                 mSurveyFeatureProvider.checkSurveyAvailable(mFragment, mSurveyKey,
                         available -> {
                             if (available && isNightMode()) {
-                                sendSurveyBroadcast(ACTION_SURVEY_NOTIFICATION_SHOWN);
+                                sendSurveyBroadcast(ACTION_SCHEDULE_SURVEY_NOTIFICATION);
                             }
                         });
             }
         } else {
-            sendSurveyBroadcast(ACTION_SURVEY_NOTIFICATION_DISMISSED);
+            sendSurveyBroadcast(ACTION_CANCEL_SURVEY_NOTIFICATION);
         }
     }
 
