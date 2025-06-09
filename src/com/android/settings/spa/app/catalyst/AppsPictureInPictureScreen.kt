@@ -24,17 +24,15 @@ import android.provider.Settings.ACTION_PICTURE_IN_PICTURE_SETTINGS
 import com.android.settings.R
 import com.android.settings.contract.TAG_DEVICE_STATE_SCREEN
 import com.android.settings.core.PreferenceScreenMixin
-import com.android.settings.flags.Flags
 import com.android.settings.spa.app.catalyst.AppInfoPictureInPictureScreen.Companion.supportsPictureInPicture
 import com.android.settingslib.metadata.PreferenceHierarchyGenerator
 import com.android.settingslib.metadata.PreferenceMetadata
-import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.preferenceHierarchy
 import com.android.settingslib.spaprivileged.model.app.AppListRepositoryImpl
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 
-@ProvidePreferenceScreen(AppPictureInPictureAppListScreen.KEY)
+//@ProvidePreferenceScreen(AppPictureInPictureAppListScreen.KEY)
 open class AppPictureInPictureAppListScreen :
     PreferenceScreenMixin, PreferenceHierarchyGenerator<Boolean> {
 
@@ -51,7 +49,7 @@ open class AppPictureInPictureAppListScreen :
 
     override fun tags(context: Context) = arrayOf(TAG_DEVICE_STATE_SCREEN)
 
-    override fun isFlagEnabled(context: Context) = Flags.deviceState()
+    override fun isFlagEnabled(context: Context) = false
 
     override fun hasCompleteHierarchy() = false
 
