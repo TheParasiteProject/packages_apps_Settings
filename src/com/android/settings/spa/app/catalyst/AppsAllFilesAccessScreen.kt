@@ -59,12 +59,9 @@ open class AppsAllFilesAccessAppListScreen :
         Intent(context, ManageExternalStorageActivity::class.java)
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
-        preferenceHierarchy(context) {}
+        generatePreferenceHierarchy(context, coroutineScope, true)
 
-    override val defaultType: Boolean
-        get() = true // include system apps
-
-    override suspend fun generatePreferenceHierarchy(
+    override fun generatePreferenceHierarchy(
         context: Context,
         coroutineScope: CoroutineScope,
         type: Boolean, // whether to include system apps

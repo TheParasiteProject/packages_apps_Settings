@@ -61,12 +61,9 @@ open class AppPictureInPictureAppListScreen :
         Intent(ACTION_PICTURE_IN_PICTURE_SETTINGS)
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
-        preferenceHierarchy(context) {}
+        generatePreferenceHierarchy(context, coroutineScope, false)
 
-    override val defaultType: Boolean
-        get() = false // do not include system apps
-
-    override suspend fun generatePreferenceHierarchy(
+    override fun generatePreferenceHierarchy(
         context: Context,
         coroutineScope: CoroutineScope,
         type: Boolean, // whether to include system apps
