@@ -165,17 +165,19 @@ class DeviceStateAppFunctionService : AppFunctionService() {
                             .toString()
                     else -> metadata.getPreferenceSummary(applicationContext)?.toString()
                 }
-            deviceStateItemList.add(
-                DeviceStateItem(
-                    key = metadata.key,
-                    name = LocalizedString(
-                        english = metadata.getPreferenceTitle(englishContext).toString(),
-                        localized = metadata.getPreferenceTitle(applicationContext).toString()
-                    ),
-                    jsonValue = jsonValue,
-                    hintText = config?.hintText(englishContext, metadata)
+            jsonValue?.let {
+                deviceStateItemList.add(
+                    DeviceStateItem(
+                        key = metadata.key,
+                        name = LocalizedString(
+                            english = metadata.getPreferenceTitle(englishContext).toString(),
+                            localized = metadata.getPreferenceTitle(applicationContext).toString()
+                        ),
+                        jsonValue = it,
+                        hintText = config?.hintText(englishContext, metadata)
+                    )
                 )
-            )
+            }
         }
 
         val launchingIntent = screenMetaData.getLaunchIntent(applicationContext, null)
