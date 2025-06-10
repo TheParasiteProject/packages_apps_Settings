@@ -224,12 +224,9 @@
     <string name="title_change_system_locale" msgid="4102991236063984803">"ಸಿಸ್ಟಂ ಭಾಷೆಯನ್ನು %s ಗೆ ಬದಲಾಯಿಸಬೇಕೇ?"</string>
     <string name="title_system_locale_addition" msgid="8218683660751479466">"ಆದ್ಯತೆಯ ಭಾಷೆಗಳಿಗೆ %s ಅನ್ನು ಸೇರಿಸಬೇಕೆ?"</string>
     <string name="desc_system_locale_addition" msgid="3409917362651596070">"ನೀವು ಈ ಭಾಷೆಗೆ ಆದ್ಯತೆ ನೀಡುತ್ತೀರಿ ಎಂಬುದನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಇದು ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ವೆಬ್‌ಸೈಟ್‌ಗಳಿಗೆ ಅನುಮತಿಸುತ್ತದೆ."</string>
-    <!-- no translation found for desc_notice_device_locale_and_region_settings_change (909261686577914396) -->
-    <skip />
-    <!-- no translation found for desc_notice_device_locale_settings_change (5012353615235634881) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
-    <skip />
+    <string name="desc_notice_device_locale_and_region_settings_change" msgid="909261686577914396">"ನಿಮ್ಮ ಸಾಧನವು <xliff:g id="LANGUAGE">%1$s</xliff:g> ಭಾಷೆಯನ್ನು ಬಳಸುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ ಪ್ರದೇಶವನ್ನು <xliff:g id="REGION">%2$s</xliff:g> ಗೆ ಬದಲಾಯಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="desc_notice_device_locale_settings_change" msgid="5012353615235634881">"ನಿಮ್ಮ ಸಾಧನವು <xliff:g id="LANGUAGE">%s</xliff:g> ಭಾಷೆಯನ್ನು ಬಳಸುತ್ತದೆ."</string>
+    <string name="dlg_desc_delete_preferred_default_locale" msgid="690828405078078513">"ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆಗಳಿಂದ <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> ಅನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ"</string>
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"ಬದಲಾಯಿಸಿ"</string>
     <string name="title_unavailable_locale" msgid="5382411204559213983">"<xliff:g id="SELECTED_LANGUAGE">%s</xliff:g> ಅನ್ನು ಸಿಸ್ಟಂ ಭಾಷೆಯಾಗಿ ಸೆಟ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
     <string name="desc_unavailable_locale" msgid="7223655766703116782">"ನಿಮ್ಮ ಸಾಧನವು ಈ ಭಾಷೆಯನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ, ಆದರೆ ನೀವು ಈ ಭಾಷೆಯನ್ನು ಬಯಸುತ್ತೀರಿ ಎಂಬುದು ಆ್ಯಪ್‌ಗಳಿಗೆ ತಿಳಿಯುತ್ತದೆ"</string>
@@ -2237,11 +2234,9 @@
     <string name="gesture_button_next" msgid="695288092704187356">"ಮುಂದಿನದು"</string>
     <string name="gesture_button_restart" msgid="1895850891992530133">"ಮರುಪ್ರಾರಂಭ"</string>
     <string name="gesture_button_done" msgid="6387900351203032188">"ಮುಗಿದಿದೆ"</string>
-    <!-- no translation found for action_corner_title (7411160165577367757) -->
-    <skip />
+    <string name="action_corner_title" msgid="7411160165577367757">"ಕಾರ್ನರ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ"</string>
     <string name="action_corner_summary" msgid="695618538930535335">"ವ್ಯವಸ್ಥೆಯನ್ನು ನ್ಯಾವಿಗೇಟ್ ಮಾಡಲು ಕರ್ಸರ್‌ಗಳನ್ನು ಬಳಸಿ"</string>
-    <!-- no translation found for action_corner_intro (2170609118659718140) -->
-    <skip />
+    <string name="action_corner_intro" msgid="2170609118659718140">"ಕಾರ್ನರ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಲು ಈ ಕೆಳಗಿನವುಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ."</string>
     <string name="action_corner_bottom_left_title" msgid="2857258272736432174">"ಕೆಳಗಿನ-ಎಡ ಮೂಲೆ"</string>
     <string name="action_corner_bottom_right_title" msgid="7222233500548465684">"ಕೆಳಗಿನ-ಬಲ ಮೂಲೆ"</string>
     <string name="action_corner_top_left_title" msgid="4633975226092344210">"ಮೇಲಿನ-ಎಡ ಮೂಲೆ"</string>
@@ -5860,8 +5855,7 @@
     <string name="search_gesture_feature_summary" msgid="1793056495030564014">"ನಿಮ್ಮ ಸ್ಕ್ರೀನ್ ಮೇಲಿನ ಕಂಟೆಂಟ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು ಹುಡುಕಲು ಹೋಮ್ ಬಟನ್ ಅಥವಾ ನ್ಯಾವಿಗೇಶನ್ ಹ್ಯಾಂಡಲ್ ಅನ್ನು ಸ್ಪರ್ಶಿಸಿ ಮತ್ತು ಒತ್ತಿ ಹಿಡಿಯಿರಿ."</string>
     <string name="device_detail_icon_content_description" msgid="6699151424374841937">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>. ಸಾಧನದ ವಿವರಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ."</string>
     <string name="supervision_settings_title" msgid="8507163323870367711">"ಪೋಷಕ ನಿಯಂತ್ರಣಗಳು"</string>
-    <!-- no translation found for supervision_settings_summary (6304257872307136073) -->
-    <skip />
+    <string name="supervision_settings_summary" msgid="6304257872307136073">"ಡಿಜಿಟಲ್ ಗ್ರೌಂಡ್ ನಿಯಮಗಳು ಮತ್ತು ವೀಕ್ಷಣಾ ಅವಧಿಯ ಮಿತಿಗಳು"</string>
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"ಪಿನ್ ಸೆಟಪ್"</string>
     <!-- no translation found for keywords_supervision_settings (43064288661561602) -->
     <skip />
@@ -5887,7 +5881,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"ಅಶ್ಲೀಲ ಸೈಟ್‌ಗಳನ್ನು ನಿರ್ಬಂಧಿಸಿ"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳು"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"ಅಶ್ಲೀಲ ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಿ"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"ಮೇಲ್ವಿಚಾರಣೆಯ ಪಿನ್ ನಮೂದಿಸಿ"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"ಪೋಷಕ ನಿಯಂತ್ರಣಗಳ ಪಿನ್ ಅನ್ನು ಸೆಟ್ ಮಾಡಿ"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"ಪಿನ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"ಪಿನ್ ಅನ್ನು ಅಪ್‌ಡೇಟ್‌ ಮಾಡಲಾಗಿದೆ"</string>

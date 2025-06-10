@@ -1191,8 +1191,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"ਇਸ ਨੈੱਟਵਰਕ ਨੂੰ ਹੋਰ ਡੀਵਾਈਸ ਵਰਤੋਂਕਾਰਾਂ ਨਾਲ ਸਾਂਝਾ ਕਰੋ"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"ਇਸ ਡੀਵਾਈਸ ਦੇ ਸਾਰੇ ਵਰਤੋਂਕਾਰ ਸਾਂਝੇ ਕੀਤੇ ਨੈੱਟਵਰਕ ਦੀ ਜਾਣਕਾਰੀ ਨੂੰ ਦੇਖ ਸਕਦੇ ਹਨ ਅਤੇ ਉਸ ਨਾਲ ਕਨੈਕਟ ਕਰ ਸਕਦੇ ਹਨ। ਪ੍ਰਸ਼ਾਸਕ ਸਾਂਝੇ ਕੀਤੇ ਨੈੱਟਵਰਕ ਨੂੰ ਮਿਟਾ ਸਕਦੇ ਹਨ। ਹੋਰ ਜਾਣੋ"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"ਦੂਜੇ ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਨੈੱਟਵਰਕ ਸੰਰੂਪਣ ਦਾ ਸੰਪਾਦਨ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
-    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
-    <skip />
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"ਇਸ ਨੈੱਟਵਰਕ \'ਤੇ ਤਬਦੀਲੀਆਂ ਕਰਨ ਲਈ ਇਸ ਡੀਵਾਈਸ ਦੇ ਪ੍ਰਸ਼ਾਸਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।"</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"ਇਸ ਨੈੱਟਵਰਕ ਕੋਲ ਕੋਈ ਇੰਟਰਨੈਟ ਪਹੁੰਚ ਨਹੀਂ ਹੈ। ਕੀ ਕਨੈਕਟ ਰਹਿਣਾ ਹੈ?"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"ਸ਼ਾਇਦ ਕੁਝ ਐਪਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਸੀਮਤ ਕਨੈਕਟੀਵਿਟੀ ਹੋਣ ਕਰਕੇ ਕੰਮ ਨਾ ਕਰਨ। ਕੀ ਫਿਰ ਵੀ ਵਰਤਣਾ ਹੈ?"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"ਇਸ ਨੈੱਟਵਰਕ ਲਈ ਦੁਬਾਰਾ ਨਾ ਆਖੋ"</string>
@@ -2542,32 +2541,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"ਸਕ੍ਰੀਨ ਵਿਸਤਰੀਕਰਨ ਸਵੈ-ਅੱਪਡੇਟ ਕਰੋ"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"ਐਪ ਟ੍ਰਾਂਜਿਸ਼ਨਾਂ ਤੇ ਸਕ੍ਰੀਨ ਵਿਸਤਰੀਕਰਨ ਅੱਪਡੇਟ ਕਰੋ"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"ਪਾਵਰ ਬਟਨ ਨਾਲ ਕਾਲ ਕੱਟਣਾ"</string>
-    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
-    <skip />
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"ਮੋਡ"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"ਮਿਆਰੀ"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"ਮਿਆਰੀ ਗੂੜ੍ਹਾ ਥੀਮ"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਅਤੇ ਸਮਰਥਿਤ ਐਪਾਂ \'ਤੇ ਗੂੜ੍ਹਾ ਥੀਮ ਲਾਗੂ ਹੋ ਜਾਂਦਾ ਹੈ"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"ਵਿਸਤਾਰ ਕੀਤਾ ਗਿਆ"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"ਗੂੜ੍ਹੇ ਥੀਮ ਦਾ ਵਿਸਤਾਰ ਕੀਤਾ ਗਿਆ"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"ਬਿਹਤਰ ਪਹੁੰਚਯੋਗਤਾ ਲਈ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ ਜ਼ਿਆਦਾ ਐਪਾਂ \'ਤੇ ਗੂੜ੍ਹਾ ਥੀਮ ਲਾਗੂ ਹੋ ਜਾਂਦਾ ਹੈ"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"ਐਨੀਮੇਸ਼ਨਾਂ ਹਟਾਓ"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"ਸਕ੍ਰੀਨ \'ਤੇ ਹਿਲਜੁਲ ਨੂੰ ਘਟਾਓ"</string>
-    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
-    <skip />
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"ਲਿਖਤ ਕਰਸਰ ਦੀ ਬਲਿੰਕਿੰਗ"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"ਲਿਖਤ ਦੇ ਕਰਸਰ ਦੇ ਬਲਿੰਕ ਕਰਨ ਦੀ ਗਤੀ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ ਜਾਂ ਬਲਿੰਕਿੰਗ ਨੂੰ ਬੰਦ ਕਰੋ। ਸ਼ਾਇਦ ਇਹ ਸਾਰੀਆਂ ਐਪਾਂ ਜਾਂ ਵੈੱਬਸਾਈਟਾਂ \'ਤੇ ਕੰਮ ਨਾ ਕਰੇ।"</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"ਬਲਿੰਕ ਕਰਨ ਦੀ ਗਤੀ ਘਟਾਓ"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"ਬਲਿੰਕ ਕਰਨ ਦੀ ਗਤੀ ਵਧਾਓ"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"ਰੀਸੈੱਟ ਕਰੋ"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"ਮੋਨੋ ਆਡੀਓ"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"ਆਡੀਓ ਚਲਾਉਣ ਦੌਰਾਨ ਚੈਨਲਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰੋ"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"ਆਡੀਓ ਬੈਲੈਂਸ"</string>
@@ -3727,8 +3714,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{ਕੋਈ ਨਹੀਂ}=1{1 ਸਮਾਂ-ਸੂਚੀ ਸੈੱਟ ਹੈ}other{# ਸਮਾਂ-ਸੂਚੀਆਂ ਸੈੱਟ ਹਨ}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"ਮੋਡ"</string>
-    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
-    <skip />
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"ਧਿਆਨ ਭਟਕਾਉਣ ਵਾਲੀਆਂ ਚੀਜ਼ਾਂ ਨੂੰ ਘਟਾਓ ਅਤੇ ਸੌਣ, ਕੰਮ ਕਰਨ, ਡਰਾਈਵ ਕਰਨ ਅਤੇ ਇਨ੍ਹਾਂ ਦੌਰਾਨ ਕੁਝ ਵੀ ਕਰਨ ਸੰਬੰਧੀ ਮੋਡਾਂ ਦੀ ਮਦਦ ਨਾਲ ਆਪਣਾ ਧਿਆਨ ਫੋਕਸ ਕਰੋ"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"ਆਪਣਾ ਖੁਦ ਦਾ ਮੋਡ ਬਣਾਓ"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"ਸਿਰਫ਼ ਮਹੱਤਵਪੂਰਨ ਲੋਕਾਂ ਅਤੇ ਐਪਾਂ ਵੱਲੋਂ ਸੂਚਨਾ ਪ੍ਰਾਪਤ ਕਰੋ"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"ਕੋਈ ਸਮਾਂ-ਸੂਚੀ ਸੈੱਟ ਕਰੋ"</string>
@@ -5901,7 +5887,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"ਅਸ਼ਲੀਲ ਸਾਈਟਾਂ ਨੂੰ ਬਲਾਕ ਕਰੋ"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"ਖੋਜ ਨਤੀਜੇ"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"ਅਸ਼ਲੀਲ ਖੋਜ ਨਤੀਜਿਆਂ ਨੂੰ ਫਿਲਟਰ ਕਰੋ"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"ਨਿਗਰਾਨੀ ਪਿੰਨ ਦਾਖਲ ਕਰੋ"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"ਮਾਪਿਆਂ ਦੇ ਕੰਟਰੋਲਾਂ ਲਈ ਪਿੰਨ ਸੈੱਟ ਕਰੋ"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"ਪਿੰਨ ਦੀ ਤਸਦੀਕ ਕਰੋ"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"ਪਿੰਨ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ"</string>

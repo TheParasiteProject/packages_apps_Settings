@@ -1200,8 +1200,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"Ndaje këtë rrjet me përdoruesit e tjerë të pajisjeve"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"Të gjithë përdoruesit në këtë pajisje mund të shikojnë dhe të lidhen me një rrjet të ndarë. Administratorët mund ta fshijnë një rrjet të ndarë. Mëso më shumë"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"Lejo që përdoruesit e tjerët të modifikojnë konfigurimin e rrjetit"</string>
-    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
-    <skip />
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"Kontakto me administratorin e kësaj pajisjeje për të bërë ndryshime në këtë rrjet."</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"Ky rrjet nuk ka qasje në internet. Dëshiron të qëndrosh i lidhur?"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"Disa aplikacione dhe shërbime mund të mos funksionojnë për shkak të lidhshmërisë së kufizuar. Do ta përdorësh gjithsesi?"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"Mos pyet përsëri për këtë rrjet"</string>
@@ -2551,32 +2550,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"Përditëso auto. zmadhimin e ekranit"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Përditëso zmadhimin e ekranit në kalimet e apl."</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Butoni i energjisë mbyll telefonatën"</string>
-    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
-    <skip />
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"Modaliteti"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Standarde"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"\"Tema e errët\" standarde"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Zbaton \"Temën e errët\" në të gjithë pajisjen dhe aplikacionet e mbështetura"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Zgjeruar"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"\"Tema e errët\" e zgjeruar"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Zbaton automatikisht \"Temën e errët\" në më shumë aplikacione për qasshmëri të përmirësuar"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Hiq animacionet"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Redukto lëvizjen në ekran"</string>
-    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
-    <skip />
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"Pulsimi i kursorit të tekstit"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"Rregullo shpejtësinë e pulsimit ose çaktivizoje. Mund të mos mbështetet në të gjitha apl. ose uebsajtet."</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"Zvogëlo shpejtësinë e pulsimit"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"Rrit shpejtësinë e pulsimit"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"Rivendos"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"Audioja mono"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"Ndërthur kanalet kur luan audion"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"Balanca e audios"</string>
@@ -3736,8 +3723,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{Asnjë}=1{1 orar i caktuar}other{# orare të caktuara}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"Mos shqetëso"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"Modalitetet"</string>
-    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
-    <skip />
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"Minimizo shpërqendrimet dhe kontrollo vëmendjen tënde me modalitetet për gjumin, punën, drejtimin e makinës dhe çdo gjë tjetër"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"Krijo modalitetin tënd"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"Merr njoftime vetëm nga aplikacionet dhe personat e rëndësishëm"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"Cakto një orar"</string>
@@ -5876,7 +5862,7 @@
     <string name="contacts_storage_set_default_account_error_message" msgid="849847649756411393">"Gabim gjatë caktimit të llogarisë së parazgjedhur"</string>
     <string name="contacts_storage_no_account_set_summary" msgid="7454973781666475276">"Nuk është caktuar asnjë e parazgjedhur"</string>
     <string name="contacts_storage_local_account_summary" msgid="5034805108128685712">"Vetëm në pajisje"</string>
-    <string name="contacts_storage_account_title" msgid="7334522539665856395">"Pajisja &amp; %1$s"</string>
+    <string name="contacts_storage_account_title" msgid="7334522539665856395">"Pajisja dhe %1$s"</string>
     <string name="contacts_storage_first_time_add_account_message" msgid="5161093169928132323">"Shto një llogari për të filluar"</string>
     <string name="contacts_storage_account_category_title" msgid="6427149157377815586">"Ku të ruhen kontaktet"</string>
     <string name="search_gesture_feature_title" msgid="7037117019612710960">"Qarko për të kërkuar"</string>
@@ -5910,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Blloko sajtet e papërshtatshme"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Rezultatet e kërkimit"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Filtro rezultatet e papërshtatshme të kërkimit"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Fut kodin PIN të mbikëqyrjes"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Cakto kodin PIN për kontrollet prindërore"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Konfirmo kodin PIN"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"Kodi PIN u pëditësua"</string>

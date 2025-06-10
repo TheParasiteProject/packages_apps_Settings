@@ -5887,7 +5887,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"പ്രായപൂർത്തിയായവർക്കുള്ള സൈറ്റുകൾ ബ്ലോക്ക് ചെയ്യുക"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"തിരയൽ ഫലങ്ങൾ"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"പ്രായപൂർത്തിയായവർക്കുള്ള തിരയൽ ഫലങ്ങൾ ഫിൽട്ടർ ചെയ്യുക"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"മേൽനോട്ടവുമായി ബന്ധപ്പെട്ട പിൻ നൽകുക"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"ഒരു രക്ഷാകർതൃ നിയന്ത്രണ പിൻ സജ്ജീകരിക്കുക"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"പിൻ സ്ഥിരീകരിക്കുക"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"പിൻ അപ്ഡേറ്റ് ചെയ്‌തു"</string>

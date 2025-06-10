@@ -1200,8 +1200,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"Deila þessu netkerfi með öðrum tækjanotendum"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"Allir notendur þessa tækis geta skoðað og tengst sameiginlegu netkerfi. Kerfisstjórar geta eytt sameiginlegu netkerfi. Frekari upplýsingar"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"Heimila öðrum notendum að breyta netkerfisstillingu"</string>
-    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
-    <skip />
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"Hafðu samband við stjórnanda þessa tækis til að gera breytingar á netkerfinu."</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"Enginn internetaðgangur er á þessu neti. Viltu halda tengingu?"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"Sum forrit og þjónusta virkar hugsanlega ekki vegna takmarkaðrar tengingar. Nota samt?"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"Ekki spyrja aftur fyrir þetta net"</string>
@@ -2551,32 +2550,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"Uppfæra skjástækkun sjálfkrafa"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Uppfæra skjástækkun þegar skipt er milli forrita"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Aflrofi lýkur símtali"</string>
-    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
-    <skip />
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"Stilling"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Staðlað"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"Staðlað dökkt þema"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Virkjar dökkt þema í tækinu þínu og studdum forritum"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Framlengt"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"Framlengt dökkt þema"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Virkjar dökkt þema sjálfkrafa í fleiri forritum til að auka aðgengi"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Fjarlægja hreyfimyndir"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Draga úr hreyfingu á skjánum"</string>
-    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
-    <skip />
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"Blikk textabendils"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"Breyttu blikkhraða textabendils eða slökktu á blikki. Hugsanlega ekki stutt í öllum forritum eða á öllum vefsvæðum."</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"Hægja á blikkhraða"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"Auka blikkhraða"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"Endurstilla"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"Einóma hljóð"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"Sameina rásir þegar hljóð er spilað"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"Hljóðjöfnun"</string>
@@ -3736,8 +3723,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{Engin}=1{1 áætlun stillt}one{# áætlun stillt}other{# áætlanir stilltar}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"Ónáðið ekki"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"Stillingar"</string>
-    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
-    <skip />
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"Lágmarkaðu truflanir og auktu einbeitingargetu þína með stillingum fyrir svefn, vinnu, akstur og allt þar á milli"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"Búðu til þína eigin stillingu"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"Fáðu aðeins tilkynningar frá mikilvægum einstaklingum og forritum"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"Stilla áætlun"</string>
@@ -5910,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Loka á vefsvæði með grófu efni"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Leitarniðurstöður"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Sía burt leitarniðurstöður sem innihalda gróft efni"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Sláðu inn PIN-númer eftirlits"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Veldu PIN-númer fyrir barnalæsingu"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Staðfesta PIN-númer"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN-númer uppfært"</string>

@@ -1200,8 +1200,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"Bu ağı diğer cihaz kullanıcılarıyla paylaşın"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"Bu cihazdaki tüm kullanıcılar ortak bir ağı görüntüleyebilir ve bağlanabilir. Yöneticiler, ortak bir ağı silebilir. Daha fazla bilgi"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"Diğer kullanıcıların ağ yapılandırmasını düzenlemesine izin ver"</string>
-    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
-    <skip />
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"Bu ağda değişiklik yapmak için bu cihazın yöneticisiyle iletişime geçin."</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"Bu ağda internet erişimi yok. Bağlı kalınsın mı?"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"Bazı uygulamalar ve hizmetler, sınırlı bağlantı nedeniyle çalışmayabilir. Yine de kullanılsın mı?"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"Bu ağ için bir daha sorma"</string>
@@ -2551,32 +2550,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"Ekran büyütmeyi otomatik güncelle"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Uygulama geçişlerinde ekran büyütmeyi güncelle"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Güç düğmesi çağrıyı sonlandırır"</string>
-    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
-    <skip />
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"Mod"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Standart"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"Standart Koyu Tema"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Koyu temayı cihazınıza ve desteklenen uygulamalara uygular"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Genişletildi"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"Genişletilmiş Koyu Tema"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Erişilebilirliği artırmak için Koyu tema daha fazla uygulamaya otomatik olarak uygulanır."</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Animasyonları kaldır"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Ekrandaki hareketliliği azaltır"</string>
-    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
-    <skip />
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"Metin imlecinin yanıp sönmesi"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"Metin imlecinin yanıp sönme hızını ayarlayın veya yanıp sönme özelliğini devre dışı bırakın. Tüm uygulamalarda veya web sitelerinde desteklenmeyebilir."</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"Yanıp sönme hızını azalt"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"Yanıp sönme hızını artır"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"Sıfırla"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"Mono ses"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"Ses çalınırken kanalları birleştir"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"Ses dengesi"</string>
@@ -3737,8 +3724,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{Yok}=1{1 program ayarlandı}other{# program ayarlandı}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"Rahatsız Etmeyin"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"Modlar"</string>
-    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
-    <skip />
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"Uyku, çalışma, sürüş gibi çeşitli modlarla dikkat dağıtan unsurları azaltıp istediğiniz şeye odaklanın"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"Kendi modunuzu oluşturun"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"Yalnızca önemli kişiler ve uygulamalardan gelen bildirimleri alın"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"Program ayarla"</string>
@@ -5911,7 +5897,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Uygunsuz siteleri engelle"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Arama sonuçları"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Uygunsuz arama sonuçlarını filtrele"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Gözetim PIN\'ini girin"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Ebeveyn denetimleri PIN\'i ayarlayın"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"PIN\'i doğrulayın"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN güncellendi"</string>

@@ -198,8 +198,7 @@
     <string name="locale_remove_menu" msgid="3521546263421387474">"తీసివేయండి"</string>
     <string name="add_a_language" msgid="2126220398077503271">"భాషను జోడించండి"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"భాష"</string>
-    <!-- no translation found for locale_picker_category_title (296835514014453679) -->
-    <skip />
+    <string name="locale_picker_category_title" msgid="296835514014453679">"ప్రాధాన్య భాషలు"</string>
     <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"యాప్ భాషలు"</string>
     <string name="app_locale_picker_summary" msgid="616928580653613998">"ప్రతి యాప్ కోసం ఏదైనా భాషను ఎంచుకోండి"</string>
     <string name="app_locale_picker_title" msgid="2431448962911301366">"యాప్ భాష"</string>
@@ -232,10 +231,8 @@
     <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
     <skip />
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"మార్చండి"</string>
-    <!-- no translation found for title_unavailable_locale (5382411204559213983) -->
-    <skip />
-    <!-- no translation found for desc_unavailable_locale (7223655766703116782) -->
-    <skip />
+    <string name="title_unavailable_locale" msgid="5382411204559213983">"<xliff:g id="SELECTED_LANGUAGE">%s</xliff:g>‌ను సిస్టమ్ భాషగా సెట్ చేయడం సాధ్యం కాలేదు"</string>
+    <string name="desc_unavailable_locale" msgid="7223655766703116782">"మీ డివైజ్ ఈ భాషను సపోర్ట్ చేయదు, కానీ మీరు ఈ భాషను ఇష్టపడతారని యాప్‌లకు తెలుస్తుంది"</string>
     <string name="locale_search_menu" msgid="297782694044826686">"సెర్చ్"</string>
     <string name="language_and_region_title" msgid="8374151891112162767">"భాష &amp; ప్రాంతం"</string>
     <string name="language_selection_title" msgid="968179636453982415">"భాషను జోడించండి"</string>
@@ -249,12 +246,9 @@
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"ప్రాంతాన్ని <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g>‌కు మార్చాలా?"</string>
     <string name="body_change_system_locale_region" msgid="9064318449821043189">"మీ డివైజ్ <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g>‌ను సిస్టమ్ భాషగా ఉంచుతుంది"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"మీ డివైజ్, వెబ్‌సైట్‌లు, యాప్స్ నంబర్‌లను ఎలా డిస్‌ప్లే చేయాలో ఎంచుకోండి"</string>
-    <!-- no translation found for preferred_locale_menu_up (4009560552099567485) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_down (1033373887552535585) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_remove (8547483341987864590) -->
-    <skip />
+    <string name="preferred_locale_menu_up" msgid="4009560552099567485">"పైకి జరపండి"</string>
+    <string name="preferred_locale_menu_down" msgid="1033373887552535585">"కిందికి జరపండి"</string>
+    <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"తీసివేయండి"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"ప్రాంతీయ ప్రాధాన్యతలు"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"యానిట్‌లు, నంబర్ ప్రాధాన్యతలను సెట్ చేయండి"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"యాప్‌లకు మీ ప్రాంతీయ ప్రాధాన్యతలను తెలియజేయండి, తద్వారా అవి మీ అనుభవాన్ని వ్యక్తిగతీకరించగలుగుతాయి."</string>
@@ -293,10 +287,8 @@
     <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"అన్ని భాషలను తీసివేయలేరు"</string>
     <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"కనీసం ఒక ప్రాధాన్య భాషను ఉంచండి"</string>
     <string name="locale_not_translated" msgid="3071618135527110152">"సిస్టమ్ భాషగా అందుబాటులో లేదు"</string>
-    <!-- no translation found for dlg_title_delete_preferred_locale (4167214348946940002) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_locale (4658301652628456858) -->
-    <skip />
+    <string name="dlg_title_delete_preferred_locale" msgid="4167214348946940002">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g>‌ను తీసివేయాలా?"</string>
+    <string name="dlg_desc_delete_preferred_locale" msgid="4658301652628456858">"మీ ప్రాధాన్య భాషల నుండి <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> తీసివేయబడుతుంది. మీరు దీన్ని తర్వాత మళ్లీ జోడించవచ్చు."</string>
     <string name="action_drag_label_move_up" msgid="3392196942330705015">"పైకి తరలించు"</string>
     <string name="action_drag_label_move_down" msgid="9069518740553953426">"క్రిందికి తరలించు"</string>
     <string name="action_drag_label_move_top" msgid="2430471023612171619">"ఎగువకు తరలించు"</string>
@@ -476,8 +468,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks" msgid="1663906389456119842">"ఇప్పుడు కాదు"</string>
     <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"నేను అంగీకరిస్తున్నాను"</string>
     <string name="security_settings_fingerprint_rename_description" msgid="6301505700382531086">"పేరు మార్చడానికి డబుల్ ట్యాప్ చేయండి"</string>
-    <!-- no translation found for security_settings_fingerprint_recognition_description (1805171116182647136) -->
-    <skip />
+    <string name="security_settings_fingerprint_recognition_description" msgid="1805171116182647136">"<xliff:g id="FP_NAME">%1$s</xliff:g> గుర్తించింది"</string>
     <string name="setup_fingerprint_enroll_skip_title" msgid="2473807887676247264">"వేలిముద్రను స్కిప్ చేయాలా?"</string>
     <string name="setup_fingerprint_enroll_skip_after_adding_lock_text" msgid="2412645723804450304">"కేవలం ఒకటి రెండు నిమిషాల్లో, వేలిముద్రను సెటప్ చేయవచ్చు. మీరు ఇప్పుడు స్కిప్ చేస్తే, తర్వాత సెట్టింగ్స్‌లో వేలిముద్రను జోడించవచ్చు."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_setup" msgid="6255210343107484206">"మీకు ఈ చిహ్నం కనిపిస్తే, యాప్‌ల సైన్ ఇన్ లేదా కొనుగోలును ఆమోదించడం వంటి ప్రామాణీకరణ కోసం మీ వేలిముద్రను వాడండి"</string>
@@ -5896,7 +5887,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"అందరికీ తగని సైట్‌లను బ్లాక్ చేయండి"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"సెర్చ్ ఫలితాలు"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"అందరికీ తగని సెర్చ్ ఫలితాలను ఫిల్టర్ చేయండి"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"పర్యవేక్షణ PINను ఎంటర్ చేయండి"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"తల్లిదండ్రుల కంట్రోల్స్ PINను సెట్ చేయండి"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"PINను నిర్ధారించండి"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN అప్‌డేట్ చేయబడింది"</string>

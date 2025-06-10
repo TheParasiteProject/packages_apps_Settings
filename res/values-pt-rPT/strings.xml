@@ -474,7 +474,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_message_unlock_disabled" msgid="8957789840251747092">"Utilize a sua impressão digital para desbloquear o telemóvel ou para autorizar compras.\n\nNota: não pode utilizar a sua impressão digital para desbloquear este dispositivo. Para mais informações, contacte o gestor da sua entidade."</string>
     <string name="security_settings_fingerprint_enroll_introduction_cancel" msgid="6086532316718920562">"Cancelar"</string>
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks" msgid="1663906389456119842">"Agora não"</string>
-    <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"Aceito"</string>
+    <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"Aceitar"</string>
     <string name="security_settings_fingerprint_rename_description" msgid="6301505700382531086">"Toque duas vezes para mudar o nome"</string>
     <!-- no translation found for security_settings_fingerprint_recognition_description (1805171116182647136) -->
     <skip />
@@ -5896,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Bloqueie sites explícitos"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Resultados da pesquisa"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Filtrar resultados da pesquisa explícitos"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Introduza o PIN de supervisão"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Defina um PIN de controlos parentais"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Confirme o PIN"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN atualizado"</string>

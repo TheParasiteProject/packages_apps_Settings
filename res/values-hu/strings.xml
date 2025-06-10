@@ -224,12 +224,9 @@
     <string name="title_change_system_locale" msgid="4102991236063984803">"Módosítja a rendszer nyelvét a következőre: %s?"</string>
     <string name="title_system_locale_addition" msgid="8218683660751479466">"%s felvétele az előnyben részesített nyelvek közé?"</string>
     <string name="desc_system_locale_addition" msgid="3409917362651596070">"Így az appok és webhelyek tudni fogják, hogy Ön előnyben részesíti ezt a nyelvet is."</string>
-    <!-- no translation found for desc_notice_device_locale_and_region_settings_change (909261686577914396) -->
-    <skip />
-    <!-- no translation found for desc_notice_device_locale_settings_change (5012353615235634881) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
-    <skip />
+    <string name="desc_notice_device_locale_and_region_settings_change" msgid="909261686577914396">"Az eszköz a(z) <xliff:g id="LANGUAGE">%1$s</xliff:g> nyelvet fogja használni, a régió pedig a következőre módosul: <xliff:g id="REGION">%2$s</xliff:g>."</string>
+    <string name="desc_notice_device_locale_settings_change" msgid="5012353615235634881">"Az eszköz a(z) <xliff:g id="LANGUAGE">%s</xliff:g> nyelvet fogja használni."</string>
+    <string name="dlg_desc_delete_preferred_default_locale" msgid="690828405078078513">"A(z) <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> nyelv el lesz távolítva az előnyben részesített nyelvek közül."</string>
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"Módosítás"</string>
     <string name="title_unavailable_locale" msgid="5382411204559213983">"A(z) <xliff:g id="SELECTED_LANGUAGE">%s</xliff:g> nem állítható be rendszernyelvként"</string>
     <string name="desc_unavailable_locale" msgid="7223655766703116782">"Eszköze nem támogatja ezt a nyelvet, de az alkalmazások tudni fogják, hogy Ön ezt a nyelvet részesíti előnyben."</string>
@@ -2237,11 +2234,9 @@
     <string name="gesture_button_next" msgid="695288092704187356">"Következő"</string>
     <string name="gesture_button_restart" msgid="1895850891992530133">"Újraindítás"</string>
     <string name="gesture_button_done" msgid="6387900351203032188">"Kész"</string>
-    <!-- no translation found for action_corner_title (7411160165577367757) -->
-    <skip />
+    <string name="action_corner_title" msgid="7411160165577367757">"Sarokgyorsparancsok személyre szabása"</string>
     <string name="action_corner_summary" msgid="695618538930535335">"Kurzorok használata a rendszerben való navigációhoz"</string>
-    <!-- no translation found for action_corner_intro (2170609118659718140) -->
-    <skip />
+    <string name="action_corner_intro" msgid="2170609118659718140">"A sarkok gyorsparancsainak személyre szabásához válassza ki a következő területeket"</string>
     <string name="action_corner_bottom_left_title" msgid="2857258272736432174">"Bal alsó sarok"</string>
     <string name="action_corner_bottom_right_title" msgid="7222233500548465684">"Jobb alsó sarok"</string>
     <string name="action_corner_top_left_title" msgid="4633975226092344210">"Bal felső sarok"</string>
@@ -5860,8 +5855,7 @@
     <string name="search_gesture_feature_summary" msgid="1793056495030564014">"Tartsa lenyomva a Kezdőképernyő gombot vagy a navigációs fogópontot a képernyőn lévő tartalommal való kereséshez."</string>
     <string name="device_detail_icon_content_description" msgid="6699151424374841937">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>. Eszközadatok konfigurálása."</string>
     <string name="supervision_settings_title" msgid="8507163323870367711">"Szülői felügyelet"</string>
-    <!-- no translation found for supervision_settings_summary (6304257872307136073) -->
-    <skip />
+    <string name="supervision_settings_summary" msgid="6304257872307136073">"Digitális alapszabályok és képernyőidő-korlátok"</string>
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"PIN-kód beállítása"</string>
     <!-- no translation found for keywords_supervision_settings (43064288661561602) -->
     <skip />
@@ -5887,7 +5881,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Vulgáris tartalmú webhelyek letiltása"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Keresési találatok"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"A vulgáris tartalmú keresési találatok kiszűrése"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Felügyeleti PIN-kód megadása"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Szülői felügyeleti PIN-kód beállítása"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"PIN-kód megerősítése"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN-kód frissítve"</string>

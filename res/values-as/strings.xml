@@ -198,8 +198,7 @@
     <string name="locale_remove_menu" msgid="3521546263421387474">"আঁতৰাওক"</string>
     <string name="add_a_language" msgid="2126220398077503271">"ভাষা যোগ দিয়ক"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"ভাষা"</string>
-    <!-- no translation found for locale_picker_category_title (296835514014453679) -->
-    <skip />
+    <string name="locale_picker_category_title" msgid="296835514014453679">"অগ্ৰাধিকাৰ দিয়া ভাষা"</string>
     <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"এপৰ ভাষাসমূহ"</string>
     <string name="app_locale_picker_summary" msgid="616928580653613998">"প্ৰতিটো এপৰ বাবে ভাষা বাছনি কৰক"</string>
     <string name="app_locale_picker_title" msgid="2431448962911301366">"এপৰ ভাষা"</string>
@@ -232,10 +231,8 @@
     <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
     <skip />
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"সলনি কৰক"</string>
-    <!-- no translation found for title_unavailable_locale (5382411204559213983) -->
-    <skip />
-    <!-- no translation found for desc_unavailable_locale (7223655766703116782) -->
-    <skip />
+    <string name="title_unavailable_locale" msgid="5382411204559213983">"ছিষ্টেমৰ ভাষা হিচাপে <xliff:g id="SELECTED_LANGUAGE">%s</xliff:g> ছেট কৰিব নোৱাৰি"</string>
+    <string name="desc_unavailable_locale" msgid="7223655766703116782">"আপোনাৰ ডিভাইচটোৱে এই ভাষাটো সমৰ্থন নকৰে, কিন্তু আপুনি এই ভাষাটো অগ্ৰাধিকাৰ দিয়ে বুলি এপ্‌সমূহে জানিব"</string>
     <string name="locale_search_menu" msgid="297782694044826686">"সন্ধান কৰক"</string>
     <string name="language_and_region_title" msgid="8374151891112162767">"ভাষা আৰু অঞ্চল"</string>
     <string name="language_selection_title" msgid="968179636453982415">"এটা ভাষা যোগ দিয়ক"</string>
@@ -249,12 +246,9 @@
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"অঞ্চলটো <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g>লৈ সলনি কৰিবনে?"</string>
     <string name="body_change_system_locale_region" msgid="9064318449821043189">"আপোনাৰ ডিভাইচটোৱে <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g>ক ছিষ্টেমৰ ভাষা হিচাপে ৰাখিব"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"আপোনাৰ ডিভাইচ, ৱেবছাইট, আৰু এপ্‌সমূহে সংখ্যাসমূহ কেনেকৈ প্ৰদৰ্শন কৰে বাছনি কৰক"</string>
-    <!-- no translation found for preferred_locale_menu_up (4009560552099567485) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_down (1033373887552535585) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_remove (8547483341987864590) -->
-    <skip />
+    <string name="preferred_locale_menu_up" msgid="4009560552099567485">"ওপৰলৈ নিয়ক"</string>
+    <string name="preferred_locale_menu_down" msgid="1033373887552535585">"তললৈ নিয়ক"</string>
+    <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"আঁতৰাওক"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"আঞ্চলিক অগ্ৰাধিকাৰ"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"একক আৰু সংখ্যাৰ অগ্ৰাধিকাৰ ছেট কৰক"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"এপ্‌সমূহক আপোনাৰ আঞ্চলিক অগ্ৰাধিকাৰসমূহ জানিবলৈ দিয়ক যাতে সেইবোৰে আপোনাৰ অভিজ্ঞতা ব্যক্তিগতকৰণ কৰিব পাৰে।"</string>
@@ -293,10 +287,8 @@
     <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"আটাইবোৰ ভাষা আঁতৰাব নোৱাৰি"</string>
     <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"কমেও এটা পচন্দৰ ভাষা ৰাখক"</string>
     <string name="locale_not_translated" msgid="3071618135527110152">"ছিষ্টেমৰ ভাষা হিচাপে উপলব্ধ নহয়"</string>
-    <!-- no translation found for dlg_title_delete_preferred_locale (4167214348946940002) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_locale (4658301652628456858) -->
-    <skip />
+    <string name="dlg_title_delete_preferred_locale" msgid="4167214348946940002">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g>ক আঁতৰাবনে?"</string>
+    <string name="dlg_desc_delete_preferred_locale" msgid="4658301652628456858">"আপোনাৰ অগ্ৰাধিকাৰপ্ৰাপ্ত ভাষাসমূহৰ পৰা <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> আঁতৰোৱা হ’ব। আপুনি এইটো পুনৰ পাছত যোগ দিব পাৰে।"</string>
     <string name="action_drag_label_move_up" msgid="3392196942330705015">"ওপৰলৈ নিয়ক"</string>
     <string name="action_drag_label_move_down" msgid="9069518740553953426">"তললৈ নিয়ক"</string>
     <string name="action_drag_label_move_top" msgid="2430471023612171619">"ওপৰলৈ নিয়ক"</string>
@@ -476,8 +468,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks" msgid="1663906389456119842">"এতিয়া নহয়"</string>
     <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"মই সন্মত"</string>
     <string name="security_settings_fingerprint_rename_description" msgid="6301505700382531086">"নতুন নাম দিবলৈ দুবাৰ টিপক"</string>
-    <!-- no translation found for security_settings_fingerprint_recognition_description (1805171116182647136) -->
-    <skip />
+    <string name="security_settings_fingerprint_recognition_description" msgid="1805171116182647136">"<xliff:g id="FP_NAME">%1$s</xliff:g> চিনাক্ত কৰিছে"</string>
     <string name="setup_fingerprint_enroll_skip_title" msgid="2473807887676247264">"ফিংগাৰপ্ৰিণ্ট ছেট আপ নকৰাকৈ এৰি যাব নেকি?"</string>
     <string name="setup_fingerprint_enroll_skip_after_adding_lock_text" msgid="2412645723804450304">"ফিংগাৰপ্ৰিণ্ট ছেট আপ কৰোঁতে মাত্ৰ এক বা দুই মিনিট সময়হে লাগে। আপুনি যদি এতিয়া এৰি যায়, তেন্তে পাছত ছেটিঙলৈ গৈ আপোনাৰ ফিংগাৰপ্ৰিণ্ট যোগ কৰিব পাৰে।"</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_setup" msgid="6255210343107484206">"আপুনি এপত ছাইন ইন কৰা অথবা কোনো ক্ৰয়ৰ অনুমোদন জনোৱা আদিৰ দৰে কাৰ্য কৰোঁতে বিশ্বাসযোগ্যতা প্ৰমাণীকৰণৰ বাবে এই চিহ্নটো দেখিলে নিজৰ ফিংগাৰপ্ৰিণ্ট ব্যৱহাৰ কৰক"</string>
@@ -5896,7 +5887,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"অশালীন ছাইটসমূহ অৱৰোধ কৰক"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"সন্ধানৰ ফলাফল"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"সন্ধানৰ অশালীন ফলাফলসমূহ ফিল্টাৰ কৰি উলিয়াওক"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"তদাৰকৰ পিন দিয়ক"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"অভিভাৱকীয় নিয়ন্ত্ৰণৰ পিন এটা ছেট কৰক"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"পিন নিশ্চিত কৰক"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"পিন আপডে’ট কৰা হ’ল"</string>

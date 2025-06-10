@@ -1191,8 +1191,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"Condividi questa rete con altri utenti del dispositivo"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"Tutti gli utenti di questo dispositivo possono visualizzare e connettersi a una rete condivisa. Gli amministratori possono eliminare una rete condivisa. Scopri di più"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"Consenti ad altri utenti di modificare la configurazione di rete"</string>
-    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
-    <skip />
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"Contatta l\'amministratore di questo dispositivo per apportare modifiche a questa rete."</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"Questa rete non ha accesso a internet. Vuoi restare connesso?"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"Alcuni servizi e app potrebbero non funzionare a causa della connettività limitata. Usarli comunque?"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"Non chiedermelo più per questa rete"</string>
@@ -2542,32 +2541,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"Aggiorn. autom. ingrandim. schermo"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Aggiorna ingrandimento schermo per transizioni app"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Chiudi chiamata con tasto accensione"</string>
-    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
-    <skip />
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"Modalità"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Standard"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"Tema scuro standard"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Applica il tema scuro sul dispositivo e nelle app supportate"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Esteso"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"Tema scuro esteso"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Applica automaticamente il tema scuro a più app per migliorare l\'accessibilità"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Rimuovi le animazioni"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Riduci il movimento sullo schermo"</string>
-    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
-    <skip />
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"Lampeggiamento del cursore di testo"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"Regola velocità di lampeggiamento del cursore di testo o spegnilo. Non supportata su tutti i siti e le app."</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"Diminuisci la velocità di lampeggiamento"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"Aumenta la velocità di lampeggiamento"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"Reimposta"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"Audio in formato mono"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"Unisci i canali durante la riproduzione dell\'audio"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"Bilanciamento audio"</string>
@@ -3727,8 +3714,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{Nessuna}=1{1 pianificazione impostata}other{# pianificazioni impostate}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"Non disturbare"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"Modalità"</string>
-    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
-    <skip />
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"Riduci al minimo le distrazioni e tieni sotto controllo il tuo livello di attenzione con le modalità per dormire, lavorare, guidare e molto altro"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"Crea la tua modalità"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"Ricevi soltanto le notifiche di app e persone importanti"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"Imposta una programmazione"</string>
@@ -5899,7 +5885,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Blocca i siti con contenuti espliciti"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Risultati di ricerca"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Filtra i risultati di ricerca espliciti"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Inserisci il PIN di supervisione"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Imposta un PIN del Controllo genitori"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Conferma PIN"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN aggiornato"</string>

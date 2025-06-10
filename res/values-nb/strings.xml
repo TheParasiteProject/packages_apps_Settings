@@ -2407,7 +2407,7 @@
     <string name="accessibility_captioning_footer_learn_more_content_description" msgid="5730040700677017706">"Finn ut mer om innstillinger for teksting"</string>
     <string name="accessibility_screen_magnification_title" msgid="1211169976144629087">"Forstørring"</string>
     <string name="accessibility_screen_magnification_shortcut_title" msgid="2387963646377987780">"Forstørring-snarvei"</string>
-    <string name="accessibility_magnification_cursor_following_title" msgid="29531257984012743">"Markøren følger"</string>
+    <string name="accessibility_magnification_cursor_following_title" msgid="29531257984012743">"Følger markøren"</string>
     <string name="accessibility_magnification_cursor_following_header" msgid="7283095798622223509">"Velg hvordan forstørringen følger markøren."</string>
     <string name="accessibility_magnification_cursor_following_unavailable_summary" msgid="1683880243856242269">"Ikke tilgjengelig ved forstørring av bare en del av skjermen"</string>
     <string name="accessibility_magnification_cursor_following_continuous" msgid="1119319218662522794">"Beveg skjermen kontinuerlig når musen beveger seg"</string>
@@ -5896,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Blokker ikke-barnevennlige nettsteder"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Søkeresultater"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Filtrer bort ikke-barnevennlige søkeresultater"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Legg inn PIN-koden for tilsyn"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Angi en PIN-kode for foreldrekontroll"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Bekreft PIN-koden"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN-koden er oppdatert"</string>

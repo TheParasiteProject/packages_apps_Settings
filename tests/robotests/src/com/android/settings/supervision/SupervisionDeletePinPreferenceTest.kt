@@ -17,15 +17,19 @@ package com.android.settings.supervision
 
 import android.app.Activity
 import android.app.supervision.SupervisionManager
+import android.content.ComponentName
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.pm.UserInfo
+import android.net.Uri
 import android.os.UserHandle
 import android.os.UserManager
 import android.os.UserManager.USER_TYPE_FULL_SECONDARY
 import android.os.UserManager.USER_TYPE_FULL_SYSTEM
 import android.os.UserManager.USER_TYPE_PROFILE_SUPERVISING
+import android.provider.Settings.Global
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
@@ -49,6 +53,7 @@ import org.mockito.kotlin.stub
 import org.mockito.kotlin.verify
 import org.mockito.kotlin.withSettings
 import org.robolectric.annotation.Config
+import org.robolectric.Shadows.shadowOf
 
 @RunWith(AndroidJUnit4::class)
 @Config(shadows = [ShadowAlertDialogCompat::class])
@@ -125,6 +130,36 @@ class SupervisionDeletePinPreferenceTest {
 
         preference.showDeletionDialog(context)
         assertAlertDialogHasMessage(R.string.supervision_delete_pin_supervision_enabled_message)
+    }
+
+    @Test
+    fun showDeletionDialog_secondaryUserSupervised_showsSupervisionEnabledWarning_clicksLearnMore() {
+        mockUserManager.stub {
+            on { users } doReturn listOf(MAIN_USER, SECONDARY_USER, SUPERVISING_PROFILE)
+        }
+        mockSupervisionManager.stub {
+            on { isSupervisionEnabledForUser(MAIN_USER_ID) } doReturn true
+            on { isSupervisionEnabledForUser(SECONDARY_USER_ID) } doReturn true
+            on { isSupervisionEnabledForUser(SUPERVISING_USER_ID) } doReturn false
+        }
+        val learnMoreLink = context.getString(R.string.supervision_pin_learn_more_link)
+        Global.putInt(context.contentResolver, Global.DEVICE_PROVISIONED, 1)
+        shadowOf(context.packageManager).apply {
+            val componentName = ComponentName(context, "browser")
+            val intentFilter =
+                IntentFilter(Intent.ACTION_VIEW).apply {
+                    addCategory(Intent.CATEGORY_DEFAULT)
+                    addDataScheme(Uri.parse(learnMoreLink).scheme)
+                }
+            addActivityIfNotPresent(componentName)
+            addIntentFilterForActivity(componentName, intentFilter)
+        }
+
+        preference.showDeletionDialog(context)
+        preference.onLearnMore()
+
+        assertThat(startedIntent?.dataString).isEqualTo(learnMoreLink)
+        assertThat(startedIntent?.action).isEqualTo(Intent.ACTION_VIEW)
     }
 
     @Test

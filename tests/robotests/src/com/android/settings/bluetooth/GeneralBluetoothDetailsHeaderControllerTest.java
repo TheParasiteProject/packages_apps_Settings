@@ -148,17 +148,4 @@ public class GeneralBluetoothDetailsHeaderControllerTest
 
         assertThat(mController.isAvailable()).isFalse();
     }
-
-    @Test
-    public void isAvailable_flagEnabled_returnTrue() {
-        when(mBluetoothDevice.getMetadata(BluetoothDevice.METADATA_IS_UNTETHERED_HEADSET))
-                .thenReturn("false".getBytes());
-
-        assertThat(mController.isAvailable()).isTrue();
-    }
-
-    @Test
-    public void iaAvailable_flagDisabled_returnFalse() {
-        assertThat(mController.isAvailable()).isFalse();
-    }
 }

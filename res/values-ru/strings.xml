@@ -5898,7 +5898,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Блокировать сайты для взрослых"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Результаты поиска"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Отфильтровывать результаты для взрослых"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Ввести PIN-код родительского контроля"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Установите PIN-код для родительского контроля"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Подтвердите PIN-код"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN-код обновлен."</string>
