@@ -30,6 +30,8 @@ import android.os.UserManager.USER_TYPE_FULL_SECONDARY
 import android.os.UserManager.USER_TYPE_FULL_SYSTEM
 import android.os.UserManager.USER_TYPE_PROFILE_SUPERVISING
 import android.provider.Settings.Global
+import androidx.activity.ComponentActivity
+import androidx.activity.addCallback
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
@@ -52,8 +54,9 @@ import org.mockito.kotlin.never
 import org.mockito.kotlin.stub
 import org.mockito.kotlin.verify
 import org.mockito.kotlin.withSettings
-import org.robolectric.annotation.Config
+import org.robolectric.Robolectric
 import org.robolectric.Shadows.shadowOf
+import org.robolectric.annotation.Config
 
 @RunWith(AndroidJUnit4::class)
 @Config(shadows = [ShadowAlertDialogCompat::class])
@@ -84,13 +87,22 @@ class SupervisionDeletePinPreferenceTest {
             PreferenceLifecycleContext::class.java,
             withSettings().useConstructor(context).defaultAnswer(Mockito.CALLS_REAL_METHODS),
         )
+    private lateinit var activity: ComponentActivity
+    private var backPressedCalled = false
 
     @Before
     fun setUp() {
+        backPressedCalled = false
+        val activityController = Robolectric.buildActivity(ComponentActivity::class.java)
+        activity = activityController.create().start().resume().get()
+        activity.setTheme(R.style.Theme_AppCompat)
+        activity.onBackPressedDispatcher.addCallback(activity) { backPressedCalled = true }
+
         lifeCycleContext.stub {
             on { findPreference<Any>(SupervisionDeletePinPreference.KEY) } doReturn widget
             on { registerForActivityResult<Intent, ActivityResult>(any(), any()) } doReturn
                 mockActivityResultLauncher
+            on { baseContext } doReturn activity
         }
         preference.onCreate(lifeCycleContext)
         context.setTheme(R.style.Theme_AppCompat) // Needed for AlertDialog creation
@@ -176,16 +188,14 @@ class SupervisionDeletePinPreferenceTest {
 
         preference.onConfirmDeleteClick()
         verifyConfirmPinActivityStarted()
-
         onActivityResult(ActivityResult(Activity.RESULT_OK, null))
+
         verify(mockSupervisionManager).supervisionRecoveryInfo = null
         verify(mockSupervisionManager).isSupervisionEnabled = false
         verify(mockUserManager).removeUser(eq(UserHandle(SUPERVISING_USER_ID)))
-        assertThat(startedIntent).isNotNull()
 
-        val notifiedKey = argumentCaptor<String>()
-        verify(lifeCycleContext).notifyPreferenceChange(notifiedKey.capture())
-        assertThat(notifiedKey.allValues.single()).isEqualTo(SupervisionDeletePinPreference.KEY)
+        assertThat(backPressedCalled).isTrue()
+        assertThat(startedIntent).isNull()
     }
 
     @Test
