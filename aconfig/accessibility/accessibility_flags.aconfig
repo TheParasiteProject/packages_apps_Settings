@@ -74,13 +74,3 @@ flag {
   description: "Don't show quick settings tooltip in SUW, since the user can't use quick settings there."
   bug: "294560581"
 }
-
-flag {
-  name: "toggle_feature_fragment_collection_info"
-  namespace: "accessibility"
-  description: "Provides custom CollectionInfo for ToggleFeaturePreferenceFragment"
-  bug: "318607873"
-  metadata {
-    purpose: PURPOSE_BUGFIX
-  }
-}
