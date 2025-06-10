@@ -1200,8 +1200,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"مشاركة هذه الشبكة مع مستخدمي الجهاز الآخرين"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"يمكن لجميع المستخدمين على هذا الجهاز الاطّلاع على الشبكات المشترَكة والاتصال بها. يمكن للمشرفين حذف الشبكات المشترَكة. مزيد من المعلومات"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"السماح للمستخدمين الآخرين بتعديل إعدادات الشبكة"</string>
-    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
-    <skip />
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"يُرجى التواصل مع مشرف هذا الجهاز لإجراء تغييرات على هذه الشبكة."</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"لا توفِّر هذه الشبكة اتصالاً بالإنترنت. هل تريد متابعة الاتصال؟"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"قد لا تعمل بعض التطبيقات والخدمات بسبب قيود على إمكانية الاتصال. هل تريد استخدامها على أي حال؟"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"عدم السؤال مرة أخرى لهذه الشبكة"</string>
@@ -2551,32 +2550,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"التحديث التلقائي لتكبير الشاشة"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"تحديث تكبير الشاشة أثناء تنقلات التطبيق"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"إنهاء الاتصال عبر زر التشغيل"</string>
-    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
-    <skip />
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"الوضع"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"العادي"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"المظهر الداكن العادي"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"يطبِّق هذا الإعداد تلقائيًا \"المظهر الداكن\" على جهازك والتطبيقات المتوافقة"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"الموسَّع"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"المظهر الداكن الموسَّع"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"يطبّق هذا الإعداد تلقائيًا \"المظهر الداكن\" على مزيد من التطبيقات لتسهيل الاستخدام"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"إزالة الصور المتحركة"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"تقليل الحركة على الشاشة"</string>
-    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
-    <skip />
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"وميض مؤشر النص"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"يضبط هذا الإعداد سرعة وميض مؤشر النص أو إيقافه. وقد لا يكون متوافقًا مع جميع التطبيقات أو المواقع الإلكترونية."</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"خفض سرعة الوميض"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"زيادة سرعة الوميض"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"إعادة الضبط"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"صوت أحادي"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"الجمع بين القنوات عند تشغيل الصوت"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"توازن الصوت"</string>
@@ -3736,8 +3723,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{ما من جداول زمنية}=1{تم ضبط جدول زمني واحد}two{تم ضبط جدولين زمنيين}few{تم ضبط # جداول زمنية}many{تم ضبط # جدولاً زمنيًا}other{تم ضبط # جدول زمني}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"وضع \"عدم الإزعاج\""</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"الأوضاع"</string>
-    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
-    <skip />
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"يمكنك تقليل مصادر التشتيت والحفاظ على انتباهك باستخدام أوضاع مخصّصة للنوم والعمل والقيادة وغير ذلك"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"إنشاء الوضع الخاص بك"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"ستصلك الإشعارات من الأشخاص المهمّين والتطبيقات المهمّة فقط"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"ضبط جدول زمني"</string>
@@ -5914,7 +5900,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"حظر المواقع الإلكترونية التي تتضمن محتوى فاضحًا"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"نتائج البحث"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"فلترة نتائج البحث الفاضحة"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"إدخال رقم التعريف الشخصي للمشرف"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"ضبط رقم تعريف شخصي لأدوات رقابة الأهل"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"تأكيد رقم التعريف الشخصي"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"تم تعديل رقم التعريف الشخصي"</string>

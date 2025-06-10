@@ -198,8 +198,7 @@
     <string name="locale_remove_menu" msgid="3521546263421387474">"हटाउनुहोस्"</string>
     <string name="add_a_language" msgid="2126220398077503271">"भाषा हाल्नुहोस्"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"भाषा"</string>
-    <!-- no translation found for locale_picker_category_title (296835514014453679) -->
-    <skip />
+    <string name="locale_picker_category_title" msgid="296835514014453679">"रुचाइएका भाषाहरू"</string>
     <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"एपका भाषा"</string>
     <string name="app_locale_picker_summary" msgid="616928580653613998">"हरेक एपको भाषा छनौट गर्नुहोस्"</string>
     <string name="app_locale_picker_title" msgid="2431448962911301366">"एपको भाषा"</string>
@@ -232,10 +231,8 @@
     <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
     <skip />
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"परिवर्तन गर्नुहोस्"</string>
-    <!-- no translation found for title_unavailable_locale (5382411204559213983) -->
-    <skip />
-    <!-- no translation found for desc_unavailable_locale (7223655766703116782) -->
-    <skip />
+    <string name="title_unavailable_locale" msgid="5382411204559213983">"<xliff:g id="SELECTED_LANGUAGE">%s</xliff:g> लाई सिस्टमको भाषाका रूपमा सेट गर्न मिल्दैन"</string>
+    <string name="desc_unavailable_locale" msgid="7223655766703116782">"तपाईंको डिभाइसमा यो भाषा प्रयोग गर्न मिल्दैन तर एपहरूलाई तपाईं यो भाषा रुचाउनुहुन्छ भन्ने कुराको जानकारी हुने छ"</string>
     <string name="locale_search_menu" msgid="297782694044826686">"खोज"</string>
     <string name="language_and_region_title" msgid="8374151891112162767">"भाषा तथा क्षेत्र"</string>
     <string name="language_selection_title" msgid="968179636453982415">"भाषा हाल्नुहोस्"</string>
@@ -249,12 +246,9 @@
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"क्षेत्र परिवर्तन गरी <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g> बनाउने हो?"</string>
     <string name="body_change_system_locale_region" msgid="9064318449821043189">"तपाईंको डिभाइसले सिस्टमको भाषाका रूपमा <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g> नै प्रयोग गरिराख्ने छ"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"तपाईंका डिभाइस, वेबसाइट र एपहरूले नम्बरहरू देखाउने तरिका छनौट गर्नुहोस्"</string>
-    <!-- no translation found for preferred_locale_menu_up (4009560552099567485) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_down (1033373887552535585) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_remove (8547483341987864590) -->
-    <skip />
+    <string name="preferred_locale_menu_up" msgid="4009560552099567485">"माथि सार्नुहोस्"</string>
+    <string name="preferred_locale_menu_down" msgid="1033373887552535585">"तल सार्नुहोस्"</string>
+    <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"हटाउनुहोस्"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"क्षेत्रीय प्राथमिकताहरू"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"एकाइ तथा सङ्ख्यासम्बन्धी प्राथमिकताहरू तोक्नुहोस्"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"एपहरूले तपाईंलाई पर्सनलाइज गरिएका सुविधा प्रदान गर्न सकुन् भन्नाका लागि ती एपहरूलाई तपाईंका क्षेत्रीय प्राथमिकताहरू बारेमा जानकारी दिनुहोस्।"</string>
@@ -293,10 +287,8 @@
     <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"सबै भाषाहरूलाई हटाउन सक्दैन"</string>
     <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"कम्तीमा एउटा रुचाइएको भाषालाई राख्नुहोस्"</string>
     <string name="locale_not_translated" msgid="3071618135527110152">"यो भाषा सिस्टमको भाषाका रूपमा उपलब्ध छैन"</string>
-    <!-- no translation found for dlg_title_delete_preferred_locale (4167214348946940002) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_locale (4658301652628456858) -->
-    <skip />
+    <string name="dlg_title_delete_preferred_locale" msgid="4167214348946940002">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> हटाउने हो?"</string>
+    <string name="dlg_desc_delete_preferred_locale" msgid="4658301652628456858">"तपाईंको रुचाइएका भाषाहरूको सूचीबाट <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> हटाइने छ। तपाईं पछि फेरि उक्त भाषा हाल्न सक्नुहुन्छ।"</string>
     <string name="action_drag_label_move_up" msgid="3392196942330705015">"माथि सार्नुहोस्"</string>
     <string name="action_drag_label_move_down" msgid="9069518740553953426">"तल सार्नुहोस्"</string>
     <string name="action_drag_label_move_top" msgid="2430471023612171619">"माथिल्लो भागमा सार्नुहोस्"</string>
@@ -476,8 +468,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks" msgid="1663906389456119842">"अहिले होइन"</string>
     <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"म सहमत छु"</string>
     <string name="security_settings_fingerprint_rename_description" msgid="6301505700382531086">"नाम बदल्न डबल ट्याप गर्नुहोस्"</string>
-    <!-- no translation found for security_settings_fingerprint_recognition_description (1805171116182647136) -->
-    <skip />
+    <string name="security_settings_fingerprint_recognition_description" msgid="1805171116182647136">"<xliff:g id="FP_NAME">%1$s</xliff:g> पहिचान गरियो"</string>
     <string name="setup_fingerprint_enroll_skip_title" msgid="2473807887676247264">"फिंगरप्रिन्ट सेटअप स्किप गर्ने हो?"</string>
     <string name="setup_fingerprint_enroll_skip_after_adding_lock_text" msgid="2412645723804450304">"फिंगरप्रिन्ट सेटअप गर्न केवल एक वा दुई मिनेट लाग्छ। स्किप गर्नुभएको खण्डमा, तपाईं सेटिङहरूमा गएर पछि आफ्नो फिंगरप्रिन्ट हाल्न सक्नुहुन्छ।"</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_setup" msgid="6255210343107484206">"तपाईंले यो आइकन देखेपछि एपहरूमा साइन इन गर्ने वा खरिद अनुमोदन गर्ने जस्ता कार्य गर्दा प्रमाणीकरण गर्नका निम्ति आफ्नो फिंगरप्रिन्ट प्रयोग गर्नुहोस्"</string>
@@ -5896,7 +5887,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"अश्लील साइटहरू ब्लक गर्नुहोस्"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"खोज परिणामहरू"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"अश्लील खोज परिणामहरू फिल्टर गर्नुहोस्"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"सुपरिवेक्षण सुविधाको PIN हाल्नुहोस्"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"अभिभावकीय नियन्त्रणहरूको PIN सेट गर्नुहोस्"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"PIN पुष्टि गर्नुहोस्"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN परिवर्तन गरिएको छ"</string>

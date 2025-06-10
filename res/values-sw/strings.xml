@@ -198,8 +198,7 @@
     <string name="locale_remove_menu" msgid="3521546263421387474">"Ondoa"</string>
     <string name="add_a_language" msgid="2126220398077503271">"Ongeza lugha"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"Lugha"</string>
-    <!-- no translation found for locale_picker_category_title (296835514014453679) -->
-    <skip />
+    <string name="locale_picker_category_title" msgid="296835514014453679">"Lugha Unazopendelea"</string>
     <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"Lugha za programu"</string>
     <string name="app_locale_picker_summary" msgid="616928580653613998">"Chagua lugha ya kila programu"</string>
     <string name="app_locale_picker_title" msgid="2431448962911301366">"Lugha ya programu"</string>
@@ -232,10 +231,8 @@
     <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
     <skip />
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"Badilisha"</string>
-    <!-- no translation found for title_unavailable_locale (5382411204559213983) -->
-    <skip />
-    <!-- no translation found for desc_unavailable_locale (7223655766703116782) -->
-    <skip />
+    <string name="title_unavailable_locale" msgid="5382411204559213983">"Imeshindwa kuweka <xliff:g id="SELECTED_LANGUAGE">%s</xliff:g> kuwa lugha ya mfumo"</string>
+    <string name="desc_unavailable_locale" msgid="7223655766703116782">"Lugha hii haitumiki kwenye kifaa chako, lakini programu zitatambua kuwa unapendelea lugha hii"</string>
     <string name="locale_search_menu" msgid="297782694044826686">"Tafuta"</string>
     <string name="language_and_region_title" msgid="8374151891112162767">"Lugha na eneo"</string>
     <string name="language_selection_title" msgid="968179636453982415">"Weka lugha"</string>
@@ -249,12 +246,9 @@
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"Ungependa kubadilisha eneo liwe <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g>?"</string>
     <string name="body_change_system_locale_region" msgid="9064318449821043189">"Kifaa chako kitatumia <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g> kama lugha ya mfumo"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"Chagua jinsi kifaa, tovuti na programu zako zinaonyesha namba"</string>
-    <!-- no translation found for preferred_locale_menu_up (4009560552099567485) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_down (1033373887552535585) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_remove (8547483341987864590) -->
-    <skip />
+    <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Sogeza juu"</string>
+    <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Sogeza chini"</string>
+    <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Ondoa"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Mapendeleo ya kimaeneo"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Weka mapendeleo ya vipimo na namba"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Ruhusu programu zifahamu mapendeleo yako ya kimaeneo ili ziweze kuwekea hali yako ya utumiaji mapendeleo."</string>
@@ -293,10 +287,8 @@
     <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"Haiwezi kuondoa lugha zote"</string>
     <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"Hifadhi angalau lugha moja unayopendelea"</string>
     <string name="locale_not_translated" msgid="3071618135527110152">"Haipatikani kama lugha ya mfumo"</string>
-    <!-- no translation found for dlg_title_delete_preferred_locale (4167214348946940002) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_locale (4658301652628456858) -->
-    <skip />
+    <string name="dlg_title_delete_preferred_locale" msgid="4167214348946940002">"Ungependa kuondoa <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g>?"</string>
+    <string name="dlg_desc_delete_preferred_locale" msgid="4658301652628456858">"Lugha ya <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> itaondolewa kwenye orodha ya lugha unazopendelea. Unaweza kuiweka tena baadaye."</string>
     <string name="action_drag_label_move_up" msgid="3392196942330705015">"Sogeza juu"</string>
     <string name="action_drag_label_move_down" msgid="9069518740553953426">"Sogeza chini"</string>
     <string name="action_drag_label_move_top" msgid="2430471023612171619">"Hamishia juu"</string>
@@ -476,8 +468,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks" msgid="1663906389456119842">"Si sasa"</string>
     <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"Ninakubali"</string>
     <string name="security_settings_fingerprint_rename_description" msgid="6301505700382531086">"Gusa mara mbili ili ubadilishe jina"</string>
-    <!-- no translation found for security_settings_fingerprint_recognition_description (1805171116182647136) -->
-    <skip />
+    <string name="security_settings_fingerprint_recognition_description" msgid="1805171116182647136">"Imetambua <xliff:g id="FP_NAME">%1$s</xliff:g>"</string>
     <string name="setup_fingerprint_enroll_skip_title" msgid="2473807887676247264">"Ungependa kuruka alama ya kidole?"</string>
     <string name="setup_fingerprint_enroll_skip_after_adding_lock_text" msgid="2412645723804450304">"Itachukua dakika moja au mbili kuweka mipangilio ya alama ya kidole. Kama utaruka hatua hii, unaweza kuongeza alama ya kidole baadaye katika mipangilio."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_setup" msgid="6255210343107484206">"Ukiona aikoni hii, tumia alama ya kidole chako kwa uthibitishaji, kama vile unapoingia katika akaunti ya programu au unapoidhinisha ununuzi"</string>
@@ -5896,7 +5887,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Zuia tovuti zenye lugha chafu"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Matokeo ya utafutaji"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Chuja matokeo ya utafutaji yenye lugha chafu"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Weka PIN ya usimamizi"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Weka PIN ya vidhibiti vya wazazi"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"Thibitisha PIN"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN imesasishwa"</string>

@@ -224,12 +224,9 @@
     <string name="title_change_system_locale" msgid="4102991236063984803">"გსურთ სისტემური ენის შეცვლა %s-ით?"</string>
     <string name="title_system_locale_addition" msgid="8218683660751479466">"დაემატოს %s პრიორიტეტულ ენებს?"</string>
     <string name="desc_system_locale_addition" msgid="3409917362651596070">"ეს საშუალებას აძლევს აპებსა და ვებსაიტებს, გაიგონ, რომ თქვენც ამ ენას ანიჭებთ უპირატესობას."</string>
-    <!-- no translation found for desc_notice_device_locale_and_region_settings_change (909261686577914396) -->
-    <skip />
-    <!-- no translation found for desc_notice_device_locale_settings_change (5012353615235634881) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
-    <skip />
+    <string name="desc_notice_device_locale_and_region_settings_change" msgid="909261686577914396">"თქვენი მოწყობილობა გამოიყენებს <xliff:g id="LANGUAGE">%1$s</xliff:g>-ს და თქვენი რეგიონი გახდება <xliff:g id="REGION">%2$s</xliff:g>."</string>
+    <string name="desc_notice_device_locale_settings_change" msgid="5012353615235634881">"თქვენი მოწყობილობა გამოიყენებს <xliff:g id="LANGUAGE">%s</xliff:g>-ს."</string>
+    <string name="dlg_desc_delete_preferred_default_locale" msgid="690828405078078513">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> ამოიშლება თქვენი სასურველი ენებიდან"</string>
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"შეცვლა"</string>
     <string name="title_unavailable_locale" msgid="5382411204559213983">"<xliff:g id="SELECTED_LANGUAGE">%s</xliff:g>-ის სისტემის ენად დაყენება შეუძლებელია"</string>
     <string name="desc_unavailable_locale" msgid="7223655766703116782">"ეს ენა არ არის მხარდაჭერილი თქვენი მოწყობილობის მიერ, მაგრამ აპებს ეცოდინება, რომ ამ ენას ანიჭებთ უპირატესობას."</string>
@@ -2237,11 +2234,9 @@
     <string name="gesture_button_next" msgid="695288092704187356">"შემდეგი"</string>
     <string name="gesture_button_restart" msgid="1895850891992530133">"გადატვირთვა"</string>
     <string name="gesture_button_done" msgid="6387900351203032188">"მზადაა"</string>
-    <!-- no translation found for action_corner_title (7411160165577367757) -->
-    <skip />
+    <string name="action_corner_title" msgid="7411160165577367757">"კუთხის მალსახმობების მორგება"</string>
     <string name="action_corner_summary" msgid="695618538930535335">"სისტემაში ნავიგაციისთვის გამოიყენეთ კურსორები"</string>
-    <!-- no translation found for action_corner_intro (2170609118659718140) -->
-    <skip />
+    <string name="action_corner_intro" msgid="2170609118659718140">"კუთხის მალსახმობების მორგებისათვის აირჩიეთ შემდეგი არეები"</string>
     <string name="action_corner_bottom_left_title" msgid="2857258272736432174">"ქვედა მარცხენა კუთხე"</string>
     <string name="action_corner_bottom_right_title" msgid="7222233500548465684">"ქვედა მარჯვენა კუთხე"</string>
     <string name="action_corner_top_left_title" msgid="4633975226092344210">"ზედა მარცხენა კუთხე"</string>
@@ -5860,8 +5855,7 @@
     <string name="search_gesture_feature_summary" msgid="1793056495030564014">"ეკრანზე არსებული კონტენტის გამოყენებით ძიებისთვის ხანგრძლივად შეეხეთ მთავარი ეკრანის ღილაკს ან ნავიგაციის ზოლს."</string>
     <string name="device_detail_icon_content_description" msgid="6699151424374841937">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>. მოწყობილობის დეტალის კონფიგურაცია."</string>
     <string name="supervision_settings_title" msgid="8507163323870367711">"მშობელთა კონტროლი"</string>
-    <!-- no translation found for supervision_settings_summary (6304257872307136073) -->
-    <skip />
+    <string name="supervision_settings_summary" msgid="6304257872307136073">"ძირითადი ციფრული წესები და ეკრანთან გატარებული დროის შეზღუდვები"</string>
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"PIN-კოდის დაყენება"</string>
     <!-- no translation found for keywords_supervision_settings (43064288661561602) -->
     <skip />
@@ -5887,7 +5881,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"სექსუალური ხასიათის საიტების დაბლოკვა"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"ძიების შედეგები"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"სექსუალური ხასიათის ძიების შედეგების გაფილტვრა"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"შეიყვანეთ ზედამხედველობის PIN-კოდი"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"მშობელთა კონტროლის PIN-კოდის დაყენება"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"დაადასტურეთ PIN-კოდი"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN-კოდი განახლებულია"</string>

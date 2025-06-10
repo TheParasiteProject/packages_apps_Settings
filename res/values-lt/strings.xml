@@ -225,12 +225,9 @@
     <string name="title_change_system_locale" msgid="4102991236063984803">"Pakeisti sistemos kalbą į %s?"</string>
     <string name="title_system_locale_addition" msgid="8218683660751479466">"Pridėti %s prie pageidaujamų kalbų?"</string>
     <string name="desc_system_locale_addition" msgid="3409917362651596070">"Tai nurodo programoms ir svetainėms, kad jūs taip pat teikiate pirmenybę šiai kalbai."</string>
-    <!-- no translation found for desc_notice_device_locale_and_region_settings_change (909261686577914396) -->
-    <skip />
-    <!-- no translation found for desc_notice_device_locale_settings_change (5012353615235634881) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
-    <skip />
+    <string name="desc_notice_device_locale_and_region_settings_change" msgid="909261686577914396">"Įrenginyje bus naudojama <xliff:g id="LANGUAGE">%1$s</xliff:g>, o regionas bus pakeistas į: <xliff:g id="REGION">%2$s</xliff:g>."</string>
+    <string name="desc_notice_device_locale_settings_change" msgid="5012353615235634881">"Įrenginyje bus naudojama <xliff:g id="LANGUAGE">%s</xliff:g>."</string>
+    <string name="dlg_desc_delete_preferred_default_locale" msgid="690828405078078513">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> bus pašalinta iš jūsų pageidaujamų kalbų"</string>
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"Keisti"</string>
     <!-- no translation found for title_unavailable_locale (5382411204559213983) -->
     <skip />
@@ -1200,8 +1197,7 @@
     <string name="share_wifi_network" msgid="4064997404339571584">"Bendrinkite šį tinklą su kitais įrenginio naudotojais"</string>
     <string name="share_wifi_network_summary" msgid="4316236421149769333">"Visi šio įrenginio naudotojai gali peržiūrėti bendrinamą tinklą ir prie jo prisijungti. Administratoriai gali ištrinti bendrinamą tinklą. Sužinokite daugiau"</string>
     <string name="edit_wifi_network_configuration" msgid="5712989655083072417">"Leisti kitiems naudotojams redaguoti tinklo konfigūraciją"</string>
-    <!-- no translation found for edit_wifi_network_non_owner_message (4291718452228643581) -->
-    <skip />
+    <string name="edit_wifi_network_non_owner_message" msgid="4291718452228643581">"Jei norite atlikti pakeitimus šiame tinkle, susisiekite su šio įrenginio administratoriumi."</string>
     <string name="no_internet_access_text" msgid="3611993143350310936">"Šiame tinkle nėra interneto ryšio. Likti prisijungus?"</string>
     <string name="partial_connectivity_text" msgid="8874614799723694554">"Kai kurios programos ir paslaugos gali neveikti dėl riboto ryšio. Vis tiek naudoti?"</string>
     <string name="no_internet_access_remember" msgid="5113610157731269258">"Daugiau neklausti šiame tinkle"</string>
@@ -2247,11 +2243,9 @@
     <string name="gesture_button_next" msgid="695288092704187356">"Kitas"</string>
     <string name="gesture_button_restart" msgid="1895850891992530133">"Paleisti"</string>
     <string name="gesture_button_done" msgid="6387900351203032188">"Atlikta"</string>
-    <!-- no translation found for action_corner_title (7411160165577367757) -->
-    <skip />
+    <string name="action_corner_title" msgid="7411160165577367757">"Kampinių šaukinių tinkinimas"</string>
     <string name="action_corner_summary" msgid="695618538930535335">"Naršykite sistemoje naudodami žymeklius"</string>
-    <!-- no translation found for action_corner_intro (2170609118659718140) -->
-    <skip />
+    <string name="action_corner_intro" msgid="2170609118659718140">"Pasirinkite toliau nurodytas sritis, kad tinkintumėte kampinius šaukinius"</string>
     <string name="action_corner_bottom_left_title" msgid="2857258272736432174">"Apatinis kairysis kampas"</string>
     <string name="action_corner_bottom_right_title" msgid="7222233500548465684">"Apatinis dešinysis kampas"</string>
     <string name="action_corner_top_left_title" msgid="4633975226092344210">"Viršutinis kairysis kampas"</string>
@@ -2551,32 +2545,20 @@
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"Automat. atnaujinti ekrano didinimą"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Atnaujinti ekrano didinimą perkeliant programas"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Maitinimo mygt. baig. skamb."</string>
-    <!-- no translation found for dark_theme_version_category (8563711427335567656) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title (7755139172613415921) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_title_in_search (6182199392044601252) -->
-    <skip />
-    <!-- no translation found for accessibility_standard_dark_theme_summary (5462837198570089294) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title (9221540446783335817) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_title_in_search (6003085770489582863) -->
-    <skip />
-    <!-- no translation found for accessibility_expanded_dark_theme_summary (7600947929245673753) -->
-    <skip />
+    <string name="dark_theme_version_category" msgid="8563711427335567656">"Režimas"</string>
+    <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Įprasta"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="6182199392044601252">"Standartinė tamsioji tema"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Tamsioji tema taikoma įrenginyje ir palaikomose programose"</string>
+    <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Išskleista"</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search" msgid="6003085770489582863">"Išplėstinė tamsioji tema"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Automatiškai taiko tamsiąją temą daugiau programų, kad pasiekiamumas būtų patobulintas"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Pašalinti animacijas"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Sumažinkite judėjimą ekrane"</string>
-    <!-- no translation found for accessibility_text_cursor_blink_rate_title (2560387611012958520) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_summary (6629885087638846245) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_slower_desc (5255697869959801747) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_faster_desc (5236406089575390876) -->
-    <skip />
-    <!-- no translation found for accessibility_text_cursor_blink_rate_reset_button_label (393679766407314372) -->
-    <skip />
+    <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"Teksto žymeklio mirksėjimas"</string>
+    <string name="accessibility_text_cursor_blink_rate_summary" msgid="6629885087638846245">"Koreguokite teksto žymeklio mirksėjimo greitį arba išjunkite mirksėjimą. Tai gali būti palaikoma ne visose programose ar svetainėse."</string>
+    <string name="accessibility_text_cursor_blink_rate_slower_desc" msgid="5255697869959801747">"Sumažinti mirksėjimo greitį"</string>
+    <string name="accessibility_text_cursor_blink_rate_faster_desc" msgid="5236406089575390876">"Padidinti mirksėjimo greitį"</string>
+    <string name="accessibility_text_cursor_blink_rate_reset_button_label" msgid="393679766407314372">"Nustatyti iš naujo"</string>
     <string name="accessibility_toggle_primary_mono_title" msgid="7587152099472946571">"Monofoninis garsas"</string>
     <string name="accessibility_toggle_primary_mono_summary" msgid="1935283927319407303">"Sujungti kanalus leidžiant garsą"</string>
     <string name="accessibility_toggle_primary_balance_title" msgid="7332275200153366714">"Garso balansas"</string>
@@ -3736,8 +3718,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{Nė vieno}=1{Nustatytas 1 tvarkaraštis}one{Nustatytas # tvarkaraštis}few{Nustatyti # tvarkaraščiai}many{Nustatyta # tvarkaraščio}other{Nustatyta # tvarkaraščių}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"Netrukdymo režimas"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"Režimai"</string>
-    <!-- no translation found for zen_modes_list_intro (1879511587535247228) -->
-    <skip />
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"Sumažinkite blaškančius veiksnius ir valdykite savo dėmesį naudodami miego, darbo, vairavimo ir įvairius kitus režimus"</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"Sukurkite savo režimą"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"Gauti pranešimus tik iš svarbių žmonių ar programų"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"Nustatyti tvarkaraštį"</string>
@@ -5885,8 +5866,7 @@
     <string name="search_gesture_feature_summary" msgid="1793056495030564014">"Jei norite ieškoti naudodami turinį ekrane, palieskite ir palaikykite pagrindinio puslapio mygtuką arba naršymo rankenėlę."</string>
     <string name="device_detail_icon_content_description" msgid="6699151424374841937">"„<xliff:g id="DEVICE_NAME">%1$s</xliff:g>“. Konfigūruoti išsamią įrenginio informaciją."</string>
     <string name="supervision_settings_title" msgid="8507163323870367711">"Tėvų kontrolė"</string>
-    <!-- no translation found for supervision_settings_summary (6304257872307136073) -->
-    <skip />
+    <string name="supervision_settings_summary" msgid="6304257872307136073">"Pagrindinės skaitmeninės taisyklės ir įrenginio naudojimo laiko apribojimai"</string>
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"Nustatyti PIN kodą"</string>
     <!-- no translation found for keywords_supervision_settings (43064288661561602) -->
     <skip />
@@ -5912,7 +5892,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Blokuoti nepadoraus turinio svetaines"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Paieškos rezultatai"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Filtruoti nepadorius paieškos rezultatus"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"Įveskite priežiūros PIN kodą"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Tėvų kontrolės PIN kodo nustatymas"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"PIN kodo patvirtinimas"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN kodas atnaujintas"</string>

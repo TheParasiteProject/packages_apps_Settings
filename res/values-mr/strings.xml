@@ -2206,7 +2206,7 @@
     <string name="trackpad_pointer_speed" msgid="7786579408631352625">"पॉइंटर वेग"</string>
     <string name="trackpad_pointer_speed_make_faster_desc" msgid="2855950278314583596">"पॉइंटर अधिक जलद करा"</string>
     <string name="trackpad_pointer_speed_make_slower_desc" msgid="6577850228762978827">"पॉइंटर अधिक हळू करा"</string>
-    <string name="three_finger_tap_preference_title" msgid="1836080810837854140">"तीन बोट वापरून टॅप करा"</string>
+    <string name="three_finger_tap_preference_title" msgid="1836080810837854140">"तीन बोटांनी टॅप करा वापरा"</string>
     <string name="touchpad_acceleration_title" msgid="176627555191021888">"टचपॅड अ‍ॅक्सिलरेशन"</string>
     <string name="touchpad_acceleration_summary" msgid="8057075483967535793">"तुमच्या टचपॅडवरील अधिक जलद हालचालींमुळे कर्सर आणखी दूर जाईल"</string>
     <string name="pointer_fill_style" msgid="8794616790175016092">"पॉइंटरचा रंग"</string>
@@ -5896,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"लैंगिकदृष्ट्या भडक असलेल्या साइट ब्लॉक करणे"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"शोध परिणाम"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"लैंगिकदृष्ट्या भडक असलेले शोध परिणाम फिल्टर करा"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"पर्यवेक्षण पिन एंटर करा"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"पालक नियंत्रणे पिन सेट करा"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"पिन कन्फर्म करा"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"पिन अपडेट केला"</string>

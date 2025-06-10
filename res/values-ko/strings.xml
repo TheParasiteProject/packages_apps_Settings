@@ -5836,11 +5836,11 @@
     <string name="audio_streams_detail_page_title" msgid="7884132061275273766">"오디오 스트림 세부정보"</string>
     <string name="audio_streams_qr_code_page_title" msgid="9169570362469544641">"오디오 스트림 QR 코드"</string>
     <string name="audio_streams_qr_code_page_password" msgid="7268475614131297060">"비밀번호: <xliff:g id="PASSWORD">%1$s</xliff:g>"</string>
-    <string name="audio_streams_qr_code_page_description" msgid="1317961663706630428">"다른 사용자가 <xliff:g id="STREAM_NAME">%1$s</xliff:g> 스트림을 들으려면 사용 중인 Android 기기에 호환되는 헤드폰을 연결합니다. 그런 다음 이 QR 코드를 스캔합니다."</string>
+    <string name="audio_streams_qr_code_page_description" msgid="1317961663706630428">"자신의 Android 기기에 호환되는 헤드폰을 연결하고 이 QR 코드를 스캔하면 누구나 <xliff:g id="STREAM_NAME">%1$s</xliff:g> 스트림을 들을 수 있습니다."</string>
     <string name="audio_streams_preference_subtitle" msgid="4098552511880220046">"Auracast 브로드캐스트 듣기"</string>
     <string name="audio_streams_preference_subtitle_audio_sharing_on" msgid="2382924714414148028">"오디오 스트림을 찾으려면 오디오 공유를 사용 중지하세요"</string>
     <string name="audio_streams_main_page_title" msgid="1838380471076527639">"오디오 스트림 찾기"</string>
-    <string name="audio_streams_main_page_subtitle" msgid="3251995732921981539">"오디오를 공유 중인 기기 또는 주변 Auracast 방송을 들으세요."</string>
+    <string name="audio_streams_main_page_subtitle" msgid="3251995732921981539">"기기에서 공유하는 오디오 및 주변 Auracast 방송을 들을 수 있습니다."</string>
     <string name="audio_streams_main_page_device_title" msgid="2635744035523908253">"내 오디오 기기"</string>
     <string name="audio_streams_main_page_no_device_summary" msgid="2936000845397406389">"호환되는 헤드폰 연결"</string>
     <string name="audio_streams_main_page_scan_section_title" msgid="2778235929304061163">"주변 오디오 스트림"</string>
@@ -5896,7 +5896,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"선정적인 사이트 차단"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"검색 결과"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"선정적인 검색 결과 필터링"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"감독 PIN 입력"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"자녀 보호 기능 PIN 설정"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"PIN 확인"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN 업데이트됨"</string>

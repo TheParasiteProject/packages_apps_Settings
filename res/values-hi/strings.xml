@@ -5910,7 +5910,8 @@
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"अश्लील कॉन्टेंट वाली साइटों को ब्लॉक करें"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"खोज के नतीजे"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"अश्लील कॉन्टेंट वाले खोज नतीजों को फ़िल्टर करें"</string>
-    <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"निगरानी वाला पिन डालें"</string>
+    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"माता-पिता के कंट्रोल की सुविधा के लिए पिन सेट करें"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"पिन की पुष्टि करें"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"पिन अपडेट किया गया"</string>
