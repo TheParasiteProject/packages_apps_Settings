@@ -18,8 +18,8 @@ package com.android.settings.accessibility;
 
 import static android.view.accessibility.Flags.FLAG_FORCE_INVERT_COLOR;
 
-import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SURVEY_NOTIFICATION_DISMISSED;
-import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SURVEY_NOTIFICATION_SHOWN;
+import static com.android.internal.accessibility.common.NotificationConstants.ACTION_CANCEL_SURVEY_NOTIFICATION;
+import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SCHEDULE_SURVEY_NOTIFICATION;
 import static com.android.internal.accessibility.common.NotificationConstants.EXTRA_PAGE_ID;
 import static com.android.settings.Utils.SETTINGS_PACKAGE_NAME;
 import static com.android.settings.accessibility.AccessibilityUtil.State.OFF;
@@ -206,7 +206,7 @@ public class ForceInvertPreferenceControllerTest {
     }
 
     @Test
-    public void clickExpandedPreference_darkThemeAndSurveyAvailable_sendShowBroadcast() {
+    public void clickExpandedPreference_darkThemeAndSurveyAvailable_sendScheduleBroadcast() {
         setForceInvertEnabled(false);
         setDarkTheme();
         setupSurveyAvailability(true);
@@ -220,7 +220,7 @@ public class ForceInvertPreferenceControllerTest {
         verify(mContext).sendBroadcastAsUser(intentCaptor.capture(),
                 any(), eq(android.Manifest.permission.MANAGE_ACCESSIBILITY));
         assertThat(intentCaptor.getValue().getAction()).isEqualTo(
-                ACTION_SURVEY_NOTIFICATION_SHOWN);
+                ACTION_SCHEDULE_SURVEY_NOTIFICATION);
         assertThat(intentCaptor.getValue().getPackage()).isEqualTo(SETTINGS_PACKAGE_NAME);
         assertThat(intentCaptor.getValue().getIntExtra(EXTRA_PAGE_ID, /* def= */ -1))
                 .isEqualTo(TEST_PAGE_ID);
@@ -252,7 +252,7 @@ public class ForceInvertPreferenceControllerTest {
     }
 
     @Test
-    public void clickStandardPreference_sendDismissBroadcast() {
+    public void clickStandardPreference_sendCancelBroadcast() {
         setForceInvertEnabled(true);
         mController.displayPreference(mScreen);
 
@@ -262,7 +262,7 @@ public class ForceInvertPreferenceControllerTest {
         verify(mContext).sendBroadcastAsUser(intentCaptor.capture(),
                 any(), eq(android.Manifest.permission.MANAGE_ACCESSIBILITY));
         assertThat(intentCaptor.getValue().getAction()).isEqualTo(
-                ACTION_SURVEY_NOTIFICATION_DISMISSED);
+                ACTION_CANCEL_SURVEY_NOTIFICATION);
         assertThat(intentCaptor.getValue().getPackage()).isEqualTo(SETTINGS_PACKAGE_NAME);
         assertThat(intentCaptor.getValue().getIntExtra(EXTRA_PAGE_ID, /* def= */ -1))
                 .isEqualTo(TEST_PAGE_ID);
