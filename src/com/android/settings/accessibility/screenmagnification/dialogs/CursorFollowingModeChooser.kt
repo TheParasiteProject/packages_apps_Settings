@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.detail.screenmagnification.dialogs
+package com.android.settings.accessibility.screenmagnification.dialogs
 
 import android.app.Dialog
 import android.app.settings.SettingsEnums
