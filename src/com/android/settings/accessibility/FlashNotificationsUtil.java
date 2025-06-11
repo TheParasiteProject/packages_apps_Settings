@@ -47,7 +47,8 @@ public class FlashNotificationsUtil {
     static final int TYPE_SHORT_PREVIEW = 0;
     static final int TYPE_LONG_PREVIEW = 1;
 
-    static final int DEFAULT_SCREEN_FLASH_COLOR = ScreenFlashNotificationColor.YELLOW.mColorInt;
+    public static final int DEFAULT_SCREEN_FLASH_COLOR =
+            ScreenFlashNotificationColor.YELLOW.mColorInt;
 
     @Retention(RetentionPolicy.SOURCE)
     @IntDef({
@@ -114,7 +115,7 @@ public class FlashNotificationsUtil {
     }
 
     @NonNull
-    static String getColorDescriptionText(@NonNull Context context, @ColorInt int color) {
+    public static String getColorDescriptionText(@NonNull Context context, @ColorInt int color) {
         try {
             return context.getString(getScreenColor(color).mStringRes);
         } catch (ScreenColorNotFoundException e) {

@@ -31,6 +31,7 @@ import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.preferenceHierarchy
+import com.android.settingslib.widget.UntitledPreferenceCategoryMetadata
 import kotlinx.coroutines.CoroutineScope
 
 @ProvidePreferenceScreen(FlashNotificationsScreen.KEY)
@@ -58,6 +59,10 @@ class FlashNotificationsScreen : PreferenceScreenMixin, PreferenceAvailabilityPr
         preferenceHierarchy(context) {
             +FlashNotificationsTopIntroPreference()
             +FlashNotificationsIllustrationPreference()
+            +UntitledPreferenceCategoryMetadata(CATEGORY_KEY) += {
+                +CameraFlashSwitchPreference()
+                +ScreenFlashSwitchPreference()
+            }
         }
 
     override fun isAvailable(context: Context): Boolean =
@@ -65,5 +70,6 @@ class FlashNotificationsScreen : PreferenceScreenMixin, PreferenceAvailabilityPr
 
     companion object {
         const val KEY = "flash_notifications"
+        const val CATEGORY_KEY = "flash_notifications_category"
     }
 }
