@@ -131,6 +131,7 @@ class FooterPreferenceControllerTest {
     @After
     fun cleanUp() {
         lifeCycleOwner.lifecycle.removeObserver(controller)
+        ShadowInputDevice.reset()
     }
 
     @Test
