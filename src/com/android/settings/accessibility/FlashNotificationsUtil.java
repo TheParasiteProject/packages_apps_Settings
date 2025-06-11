@@ -35,17 +35,17 @@ import java.lang.annotation.RetentionPolicy;
  */
 public class FlashNotificationsUtil {
     static final String LOG_TAG = "FlashNotificationsUtil";
-    static final String ACTION_FLASH_NOTIFICATION_START_PREVIEW =
+    public static final String ACTION_FLASH_NOTIFICATION_START_PREVIEW =
             "com.android.internal.intent.action.FLASH_NOTIFICATION_START_PREVIEW";
     static final String ACTION_FLASH_NOTIFICATION_STOP_PREVIEW =
             "com.android.internal.intent.action.FLASH_NOTIFICATION_STOP_PREVIEW";
     static final String EXTRA_FLASH_NOTIFICATION_PREVIEW_COLOR =
             "com.android.internal.intent.extra.FLASH_NOTIFICATION_PREVIEW_COLOR";
-    static final String EXTRA_FLASH_NOTIFICATION_PREVIEW_TYPE =
+    public static final String EXTRA_FLASH_NOTIFICATION_PREVIEW_TYPE =
             "com.android.internal.intent.extra.FLASH_NOTIFICATION_PREVIEW_TYPE";
 
-    static final int TYPE_SHORT_PREVIEW = 0;
-    static final int TYPE_LONG_PREVIEW = 1;
+    public static final int TYPE_SHORT_PREVIEW = 0;
+    public static final int TYPE_LONG_PREVIEW = 1;
 
     public static final int DEFAULT_SCREEN_FLASH_COLOR =
             ScreenFlashNotificationColor.YELLOW.mColorInt;
@@ -57,7 +57,7 @@ public class FlashNotificationsUtil {
             FlashNotificationsUtil.State.SCREEN,
             FlashNotificationsUtil.State.CAMERA_SCREEN,
     })
-    @interface State {
+    public @interface State {
         int OFF = 0;
         int CAMERA = 1;
         int SCREEN = 2;
@@ -124,7 +124,7 @@ public class FlashNotificationsUtil {
     }
 
     @State
-    static int getFlashNotificationsState(Context context) {
+    public static int getFlashNotificationsState(Context context) {
         if (context == null) {
             return State.OFF;
         }

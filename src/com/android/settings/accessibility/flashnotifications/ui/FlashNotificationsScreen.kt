@@ -63,6 +63,7 @@ class FlashNotificationsScreen : PreferenceScreenMixin, PreferenceAvailabilityPr
                 +CameraFlashSwitchPreference()
                 +ScreenFlashSwitchPreference()
             }
+            +FlashNotificationsPreviewPreference()
         }
 
     override fun isAvailable(context: Context): Boolean =
