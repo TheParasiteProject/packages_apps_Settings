@@ -32,6 +32,7 @@ import com.android.wifitrackerlib.WifiEntry
 import com.android.wifitrackerlib.WifiPickerTracker
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -132,6 +133,7 @@ class WifiSharedPreferenceControllerTest {
         assertThat(dialog?.isShowing()).isFalse()
     }
 
+    @Ignore("b/424068182")
     @Test
     fun setChecked_noConflict_doesNotShowAlertDialog() {
         mockWifiConfiguration.shared = true

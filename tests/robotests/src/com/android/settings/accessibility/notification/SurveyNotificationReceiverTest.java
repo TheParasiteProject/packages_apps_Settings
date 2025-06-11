@@ -16,8 +16,8 @@
 
 package com.android.settings.accessibility.notification;
 
-import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SURVEY_NOTIFICATION_DISMISSED;
-import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SURVEY_NOTIFICATION_SHOWN;
+import static com.android.internal.accessibility.common.NotificationConstants.ACTION_CANCEL_SURVEY_NOTIFICATION;
+import static com.android.internal.accessibility.common.NotificationConstants.ACTION_SCHEDULE_SURVEY_NOTIFICATION;
 import static com.android.internal.accessibility.common.NotificationConstants.EXTRA_PAGE_ID;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -72,7 +72,7 @@ public class SurveyNotificationReceiverTest {
     @Test
     @DisableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     public void onReceiveNotificationShown_disableHaTS_notScheduleJob() {
-        final Intent intent = new Intent(ACTION_SURVEY_NOTIFICATION_SHOWN)
+        final Intent intent = new Intent(ACTION_SCHEDULE_SURVEY_NOTIFICATION)
                 .setPackage(mContext.getPackageName());
 
         mReceiver.onReceive(mContext, intent);
@@ -84,7 +84,7 @@ public class SurveyNotificationReceiverTest {
     @EnableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     public void onReceiveNotificationShown_withDarkUiSettingsPageId_scheduleJob() {
         int pageId = SettingsEnums.DARK_UI_SETTINGS;
-        final Intent intent = new Intent(ACTION_SURVEY_NOTIFICATION_SHOWN)
+        final Intent intent = new Intent(ACTION_SCHEDULE_SURVEY_NOTIFICATION)
                 .setPackage(mContext.getPackageName())
                 .putExtra(EXTRA_PAGE_ID, SettingsEnums.DARK_UI_SETTINGS);
 
@@ -96,7 +96,7 @@ public class SurveyNotificationReceiverTest {
     @Test
     @EnableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     public void onReceiveNotificationShown_withoutPageId_notScheduleJob() {
-        final Intent intent = new Intent(ACTION_SURVEY_NOTIFICATION_SHOWN)
+        final Intent intent = new Intent(ACTION_SCHEDULE_SURVEY_NOTIFICATION)
                 .setPackage(mContext.getPackageName());
 
         mReceiver.onReceive(mContext, intent);
@@ -107,7 +107,7 @@ public class SurveyNotificationReceiverTest {
     @Test
     @EnableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     public void onReceiveNotificationShown_withUnknownPageId_notScheduleJob() {
-        final Intent intent = new Intent(ACTION_SURVEY_NOTIFICATION_SHOWN)
+        final Intent intent = new Intent(ACTION_SCHEDULE_SURVEY_NOTIFICATION)
                 .setPackage(mContext.getPackageName())
                 .putExtra(EXTRA_PAGE_ID, SettingsEnums.PAGE_UNKNOWN);
 
@@ -120,15 +120,15 @@ public class SurveyNotificationReceiverTest {
     @EnableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     public void onReceiveNotificationDismiss_withDarkUiSettingsPageId_cancelJobAndNotification() {
         int pageId = SettingsEnums.DARK_UI_SETTINGS;
-        final Intent showIntent = new Intent(ACTION_SURVEY_NOTIFICATION_SHOWN)
+        final Intent scheduleIntent = new Intent(ACTION_SCHEDULE_SURVEY_NOTIFICATION)
                 .setPackage(mContext.getPackageName())
                 .putExtra(EXTRA_PAGE_ID, pageId);
-        mReceiver.onReceive(mContext, showIntent);
+        mReceiver.onReceive(mContext, scheduleIntent);
 
-        final Intent dismissIntent = new Intent(ACTION_SURVEY_NOTIFICATION_DISMISSED)
+        final Intent cancelIntent = new Intent(ACTION_CANCEL_SURVEY_NOTIFICATION)
                 .setPackage(mContext.getPackageName())
                 .putExtra(EXTRA_PAGE_ID, pageId);
-        mReceiver.onReceive(mContext, dismissIntent);
+        mReceiver.onReceive(mContext, cancelIntent);
 
         verify(mJobService).cancelJob(any(Context.class), eq(pageId));
         verify(mNotificationHelper).cancelNotification(eq(pageId));

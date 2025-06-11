@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.detail.screenmagnification.dialogs
+package com.android.settings.accessibility.screenmagnification.dialogs
 
 import android.app.Dialog
 import android.content.Context
@@ -31,7 +31,7 @@ import androidx.test.core.app.ApplicationProvider
 import com.android.settings.R
 import com.android.settings.accessibility.MagnificationCapabilities
 import com.android.settings.accessibility.MagnificationCapabilities.MagnificationMode
-import com.android.settings.accessibility.detail.screenmagnification.dialogs.MagnificationModeChooser.Companion.getCheckedModeFromResult
+import com.android.settings.accessibility.screenmagnification.dialogs.MagnificationModeChooser.Companion.getCheckedModeFromResult
 import com.android.settings.testutils.AccessibilityTestUtils
 import com.android.settings.utils.AnnotationSpan
 import com.google.common.truth.Truth.assertThat

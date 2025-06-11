@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.detail.screenmagnification
+package com.android.settings.accessibility.screenmagnification
 
 import android.content.Context
 import android.content.res.Resources

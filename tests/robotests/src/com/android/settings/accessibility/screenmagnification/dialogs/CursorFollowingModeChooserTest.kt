@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.detail.screenmagnification.dialogs
+package com.android.settings.accessibility.screenmagnification.dialogs
 
 import android.app.Dialog
 import android.app.settings.SettingsEnums
@@ -22,6 +22,10 @@ import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
 import android.provider.Settings
+import android.provider.Settings.Secure.ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CENTER
+import android.provider.Settings.Secure.ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CONTINUOUS
+import android.provider.Settings.Secure.ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_EDGE
+import android.provider.Settings.Secure.AccessibilityMagnificationCursorFollowingMode
 import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.TextView
@@ -33,10 +37,7 @@ import androidx.fragment.app.testing.launchFragment
 import androidx.lifecycle.Lifecycle
 import androidx.test.core.app.ApplicationProvider
 import com.android.settings.R
-import com.android.settings.accessibility.AccessibilityUtil
-import com.android.settings.accessibility.MagnificationCapabilities
-import com.android.settings.accessibility.MagnificationCapabilities.MagnificationMode
-import com.android.settings.accessibility.detail.screenmagnification.dialogs.MagnificationModeChooser.Companion.getCheckedModeFromResult
+import com.android.settings.accessibility.screenmagnification.dialogs.CursorFollowingModeChooser.Companion.getCheckedModeFromResult
 import com.google.common.truth.Truth.assertThat
 import com.google.testing.junit.testparameterinjector.TestParameters
 import org.junit.After
@@ -58,9 +59,11 @@ import org.robolectric.shadows.ShadowDialog
 import org.robolectric.shadows.ShadowListView
 import org.robolectric.shadows.ShadowLooper
 
-/** Tests for Magnification mode chooser dialog */
+private const val SETTING_KEY = Settings.Secure.ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE
+
+/** Tests for [CursorFollowingModeChooser] */
 @RunWith(RobolectricTestParameterInjector::class)
-class MagnificationModeChooserTest {
+class CursorFollowingModeChooserTest {
     @get:Rule val mockito = MockitoJUnit.rule()
     private val requestKey = "requestFromTest"
     private val context: Context = ApplicationProvider.getApplicationContext()
@@ -92,7 +95,9 @@ class MagnificationModeChooserTest {
         val alertDialog = shadowOf(launchDialog())
 
         assertThat(alertDialog.title.toString())
-            .isEqualTo(context.getString(R.string.accessibility_magnification_mode_dialog_title))
+            .isEqualTo(
+                context.getString(R.string.accessibility_magnification_cursor_following_title)
+            )
     }
 
     @Test
@@ -105,7 +110,7 @@ class MagnificationModeChooserTest {
             listView.headerViews[0].requireViewById(R.id.accessibility_dialog_header_text_view)
         assertThat(summaryView.text.toString())
             .isEqualTo(
-                context.getString(R.string.accessibility_magnification_area_settings_message)
+                context.getString(R.string.accessibility_magnification_cursor_following_header)
             )
     }
 
@@ -120,51 +125,38 @@ class MagnificationModeChooserTest {
 
         assertThat(adapter.count).isEqualTo(headerCounts + optionsCount)
 
-        val modeFullScreen = adapter.getItem(headerCounts) as MagnificationModeInfo
-        val modeWindow = adapter.getItem(headerCounts + 1) as MagnificationModeInfo
-        val modeAll = adapter.getItem(headerCounts + 2) as MagnificationModeInfo
+        val modeContinuous = adapter.getItem(headerCounts) as CursorFollowingModeInfo
+        val modeCenter = adapter.getItem(headerCounts + 1) as CursorFollowingModeInfo
+        val modeEdge = adapter.getItem(headerCounts + 2) as CursorFollowingModeInfo
 
-        assertFullScreenModeInfo(modeFullScreen)
-        assertWindowModeInfo(modeWindow)
-        assertAllModeInfo(modeAll)
+        assertContinuousModeInfo(modeContinuous)
+        assertCenterModeInfo(modeCenter)
+        assertEdgeModeInfo(modeEdge)
     }
 
-    private fun assertAllModeInfo(info: MagnificationModeInfo) {
+    private fun assertContinuousModeInfo(info: CursorFollowingModeInfo) {
         assertThat(info.mTitle.toString())
             .isEqualTo(
-                context.getString(R.string.accessibility_magnification_mode_dialog_option_switch)
+                context.getString(R.string.accessibility_magnification_cursor_following_continuous)
             )
-        assertThat(info.mSummary.toString())
-            .isEqualTo(
-                context.getString(
-                    R.string.accessibility_magnification_area_settings_mode_switch_summary
-                )
-            )
-        assertThat(info.mDrawableId).isEqualTo(R.drawable.accessibility_magnification_mode_switch)
-        assertThat(info.mode).isEqualTo(MagnificationMode.ALL)
+        assertThat(info.mode)
+            .isEqualTo(ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CONTINUOUS)
     }
 
-    private fun assertWindowModeInfo(info: MagnificationModeInfo) {
+    private fun assertCenterModeInfo(info: CursorFollowingModeInfo) {
         assertThat(info.mTitle.toString())
             .isEqualTo(
-                context.getString(R.string.accessibility_magnification_mode_dialog_option_window)
+                context.getString(R.string.accessibility_magnification_cursor_following_center)
             )
-        assertThat(info.mSummary).isNull()
-        assertThat(info.mDrawableId).isEqualTo(R.drawable.accessibility_magnification_mode_window)
-        assertThat(info.mode).isEqualTo(MagnificationMode.WINDOW)
+        assertThat(info.mode).isEqualTo(ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CENTER)
     }
 
-    private fun assertFullScreenModeInfo(info: MagnificationModeInfo) {
+    private fun assertEdgeModeInfo(info: CursorFollowingModeInfo) {
         assertThat(info.mTitle.toString())
             .isEqualTo(
-                context.getString(
-                    R.string.accessibility_magnification_mode_dialog_option_full_screen
-                )
+                context.getString(R.string.accessibility_magnification_cursor_following_edge)
             )
-        assertThat(info.mSummary).isNull()
-        assertThat(info.mDrawableId)
-            .isEqualTo(R.drawable.accessibility_magnification_mode_fullscreen)
-        assertThat(info.mode).isEqualTo(MagnificationMode.FULLSCREEN)
+        assertThat(info.mode).isEqualTo(ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_EDGE)
     }
 
     @Test
@@ -179,15 +171,24 @@ class MagnificationModeChooserTest {
 
     @Test
     @TestParameters(
-        customName = "fullScreen",
-        value = ["{initialMode: ${MagnificationMode.FULLSCREEN}}"],
+        customName = "continuous",
+        value = ["{initialMode: ${ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CONTINUOUS}}"],
     )
-    @TestParameters(customName = "window", value = ["{initialMode: ${MagnificationMode.WINDOW}}"])
-    @TestParameters(customName = "all", value = ["{initialMode: ${MagnificationMode.ALL}}"])
-    fun launchDialog_verifyInitialModeSetCorrectly(@MagnificationMode initialMode: Int) {
-        MagnificationCapabilities.setCapabilities(context, initialMode)
-
-        val dialog = launchDialog()
+    @TestParameters(
+        customName = "center",
+        value = ["{initialMode: ${ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CENTER}}"],
+    )
+    @TestParameters(
+        customName = "edge",
+        value = ["{initialMode: ${ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_EDGE}}"],
+    )
+    fun launchDialog_verifyInitialModeSetCorrectly(
+        @AccessibilityMagnificationCursorFollowingMode initialMode: Int
+    ) {
+        val dialog = launchDialogAndChecked(
+            initialMode = initialMode,
+            checkedMode = null,
+        )
         val listView = getListViewInDialog(dialog)
 
         assertThat(getCheckedMode(listView)).isEqualTo(initialMode)
@@ -196,8 +197,8 @@ class MagnificationModeChooserTest {
     @Test
     fun configurationChange_checkedItemUiPersists() {
         launchDialogAndChecked(
-            initialMode = MagnificationMode.WINDOW,
-            checkedMode = MagnificationMode.ALL,
+            initialMode = ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CENTER,
+            checkedMode = ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_EDGE,
         )
         ShadowDialog.reset()
 
@@ -206,153 +207,109 @@ class MagnificationModeChooserTest {
         val dialog = ShadowDialog.getLatestDialog()
         val listView = getListViewInDialog(dialog)
 
-        assertThat(getCheckedMode(listView)).isEqualTo(MagnificationMode.ALL)
+        assertThat(getCheckedMode(listView))
+            .isEqualTo(ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_EDGE)
     }
 
     @Test
     fun configurationChange_magnificationModeSettingUnchanged() {
         launchDialogAndChecked(
-            initialMode = MagnificationMode.WINDOW,
-            checkedMode = MagnificationMode.ALL,
+            initialMode = ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CENTER,
+            checkedMode = ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_EDGE,
         )
 
         // configuration change
         fragmentScenario.recreate().moveToState(Lifecycle.State.RESUMED)
 
-        assertThat(MagnificationCapabilities.getCapabilities(context))
-            .isEqualTo(MagnificationMode.WINDOW)
+        assertThat(Settings.Secure.getInt(context.contentResolver, SETTING_KEY))
+            .isEqualTo(ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CENTER)
     }
 
     @Test
     fun checkModeAndSave_modeSettingUpdates() {
         launchDialogAndChecked(
-            initialMode = MagnificationMode.WINDOW,
-            checkedMode = MagnificationMode.ALL,
+            initialMode = ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CENTER,
+            checkedMode = ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_EDGE,
         )
 
         val alertDialog = ShadowDialog.getLatestDialog() as AlertDialog
         alertDialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick()
         ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
-        assertThat(MagnificationCapabilities.getCapabilities(context))
-            .isEqualTo(MagnificationMode.ALL)
+        assertThat(Settings.Secure.getInt(context.contentResolver, SETTING_KEY))
+            .isEqualTo(ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_EDGE)
         verify(mockFragResultListener).onFragmentResult(eq(requestKey), responseCaptor.capture())
         val response = responseCaptor.value
-        assertThat(getCheckedModeFromResult(response)).isEqualTo(MagnificationMode.ALL)
+        assertThat(getCheckedModeFromResult(response))
+            .isEqualTo(ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_EDGE)
     }
 
     @Test
     fun checkModeAndCancel_modeSettingUnchanged() {
         launchDialogAndChecked(
-            initialMode = MagnificationMode.WINDOW,
-            checkedMode = MagnificationMode.ALL,
+            initialMode = ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CENTER,
+            checkedMode = ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_EDGE,
         )
 
         val alertDialog = ShadowDialog.getLatestDialog() as AlertDialog
         alertDialog.getButton(DialogInterface.BUTTON_NEGATIVE).performClick()
         ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
-        assertThat(MagnificationCapabilities.getCapabilities(context))
-            .isEqualTo(MagnificationMode.WINDOW)
+        assertThat(Settings.Secure.getInt(context.contentResolver, SETTING_KEY))
+            .isEqualTo(ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CENTER)
         verify(mockFragResultListener, never()).onFragmentResult(eq(requestKey), any())
     }
 
     @Test
-    fun tripleTapShortcutEnabled_checkWindowModeAndSave_showWarningDialog() {
-        Settings.Secure.putInt(
-            context.contentResolver,
-            Settings.Secure.ACCESSIBILITY_DISPLAY_MAGNIFICATION_ENABLED,
-            AccessibilityUtil.State.ON,
-        )
-
-        launchDialogAndChecked(
-            initialMode = MagnificationMode.FULLSCREEN,
-            checkedMode = MagnificationMode.WINDOW,
-        )
-        val alertDialog = ShadowDialog.getLatestDialog() as AlertDialog
-        alertDialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick()
-        ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
-
-        assertThat(isTripleTapWarningDialogShown()).isTrue()
-    }
-
-    @Test
-    fun tripleTapShortcutDisabled_checkWindowModeAndSave_doNotShowWarningDialog() {
-        Settings.Secure.putInt(
-            context.contentResolver,
-            Settings.Secure.ACCESSIBILITY_DISPLAY_MAGNIFICATION_ENABLED,
-            AccessibilityUtil.State.OFF,
-        )
-
-        launchDialogAndChecked(
-            initialMode = MagnificationMode.FULLSCREEN,
-            checkedMode = MagnificationMode.WINDOW,
-        )
-        val alertDialog = ShadowDialog.getLatestDialog() as AlertDialog
-        alertDialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick()
-        ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
-
-        assertThat(isTripleTapWarningDialogShown()).isFalse()
-    }
-
-    @Test
     fun getMetricsCategory() {
-        assertThat(MagnificationModeChooser().metricsCategory)
-            .isEqualTo(SettingsEnums.DIALOG_MAGNIFICATION_CAPABILITY)
+        assertThat(CursorFollowingModeChooser().metricsCategory)
+            .isEqualTo(SettingsEnums.DIALOG_MAGNIFICATION_CURSOR_FOLLOWING)
     }
 
     private fun launchDialog(): Dialog {
-        MagnificationModeChooser.showDialog(
+        return launchDialogAndChecked(
+            initialMode = ACCESSIBILITY_MAGNIFICATION_CURSOR_FOLLOWING_MODE_CONTINUOUS,
+            checkedMode = null,
+        )
+    }
+
+    private fun launchDialogAndChecked(
+        @AccessibilityMagnificationCursorFollowingMode initialMode: Int,
+        @AccessibilityMagnificationCursorFollowingMode checkedMode: Int?,
+    ): Dialog {
+        Settings.Secure.putInt(context.contentResolver, SETTING_KEY, initialMode)
+        CursorFollowingModeChooser.showDialog(
             fragmentManager = fragment.childFragmentManager,
             requestKey = requestKey,
         )
         ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
-
-        return ShadowDialog.getLatestDialog()
-    }
-
-    private fun launchDialogAndChecked(
-        @MagnificationMode initialMode: Int,
-        @MagnificationMode checkedMode: Int,
-    ) {
-        MagnificationCapabilities.setCapabilities(context, initialMode)
-        var dialog = launchDialog()
+        var dialog = ShadowDialog.getLatestDialog()
         var listView = getListViewInDialog(dialog)
         val adapter = listView.adapter
 
-        for (i in 0 until listView.count) {
-            (adapter.getItem(i) as? MagnificationModeInfo)?.run {
-                if (this.mode == checkedMode) {
+        if (checkedMode != null) {
+            for (i in 0 until listView.count) {
+                if ((adapter.getItem(i) as? CursorFollowingModeInfo)?.mode == checkedMode) {
                     listView.setItemChecked(i, true)
-                    return
+                    break
                 }
             }
         }
+
+        return dialog
     }
 
     private fun getListViewInDialog(dialog: Dialog): ListView {
         return dialog.requireViewById<ListView>(android.R.id.list)
     }
 
-    @MagnificationMode
-    private fun getCheckedMode(listView: ListView): Int {
-        return listView.checkedItemPosition.let {
-            if (it == AdapterView.INVALID_POSITION) {
-                    null
-                } else {
-                    listView.adapter.getItem(it) as? MagnificationModeInfo
-                }
-                ?.mode ?: MagnificationMode.NONE
+    @AccessibilityMagnificationCursorFollowingMode
+    private fun getCheckedMode(listView: ListView): Int? {
+        val checkedPosition = listView.checkedItemPosition
+        return if (checkedPosition != AdapterView.INVALID_POSITION) {
+            (listView.adapter.getItem(checkedPosition) as? CursorFollowingModeInfo)?.mode
+        } else {
+            null
         }
-    }
-
-    private fun isTripleTapWarningDialogShown(): Boolean {
-        val tripleTapDialogTitle =
-            context.getString(R.string.accessibility_magnification_triple_tap_warning_title)
-        val dialog = ShadowDialog.getLatestDialog()
-        if (dialog != null) {
-            return shadowOf(dialog).title == tripleTapDialogTitle
-        }
-        return false
     }
 }

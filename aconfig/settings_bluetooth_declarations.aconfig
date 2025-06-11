@@ -29,16 +29,6 @@ flag {
 }
 
 flag {
-  name: "enable_battery_level_display"
-  namespace: "cross_device_experiences"
-  description: "Show battery level when available"
-  bug: "380790573"
-  metadata {
-      purpose: PURPOSE_BUGFIX
-  }
-}
-
-flag {
   name: "enable_nearby_share_entrypoint"
   namespace: "cross_device_experiences"
   description: "Show Nearby Share entrypoint in Bluetooth Sharing page"
