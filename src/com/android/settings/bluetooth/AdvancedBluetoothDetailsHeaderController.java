@@ -319,22 +319,18 @@ public class AdvancedBluetoothDetailsHeaderController extends BasePreferenceCont
 
                         final boolean isBatteryLevelAvailable;
                         if (refactorBatteryLevelDisplay()) {
-                            isBatteryLevelAvailable =
-                                    Flags.enableBatteryLevelDisplay()
-                                            && isBattEnabled.get()
-                                            && battery.get() != null
-                                            && battery.get().getOverallBatteryLevel()
-                                                    > BluetoothDevice.BATTERY_LEVEL_UNKNOWN;
+                            isBatteryLevelAvailable = isBattEnabled.get()
+                                    && battery.get() != null
+                                    && battery.get().getOverallBatteryLevel()
+                                    > BluetoothDevice.BATTERY_LEVEL_UNKNOWN;
                         } else {
-                            isBatteryLevelAvailable =
-                                    Flags.enableBatteryLevelDisplay()
-                                            && isBattEnabled.get()
-                                            && (leftBatteryLevel.get()
-                                                            > BluetoothUtils.META_INT_ERROR
-                                                    || rightBatteryLevel.get()
-                                                            > BluetoothUtils.META_INT_ERROR
-                                                    || caseBatteryLevel.get()
-                                                            > BluetoothUtils.META_INT_ERROR);
+                            isBatteryLevelAvailable = isBattEnabled.get()
+                                    && (leftBatteryLevel.get()
+                                    > BluetoothUtils.META_INT_ERROR
+                                    || rightBatteryLevel.get()
+                                    > BluetoothUtils.META_INT_ERROR
+                                    || caseBatteryLevel.get()
+                                    > BluetoothUtils.META_INT_ERROR);
                         }
 
                         if (disconnected.get() && !isBatteryLevelAvailable) {
