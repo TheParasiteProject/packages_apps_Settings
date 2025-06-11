@@ -13210,6 +13210,20 @@ Data usage charges may apply.</string>
     <string name="bluetooth_right_name">Right</string>
     <!-- Title for middle bluetooth device. [CHAR LIMIT=NONE] -->
     <string name="bluetooth_middle_name">Case</string>
+    <!-- Title for left bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_left_name_expressive">Left: <xliff:g id="battery_percentage" example="15">%1$s</xliff:g></string>
+    <!-- Title for right bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_right_name_expressive">Right: <xliff:g id="battery_percentage" example="15">%1$s</xliff:g></string>
+    <!-- Title for middle bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_middle_name_expressive">Case: <xliff:g id="battery_percentage" example="15">%1$s</xliff:g></string>
+    <!-- Content description for left bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_left_content_description_expressive">Left, battery: <xliff:g id="battery_percentage" example="15">%1$s</xliff:g></string>
+    <!-- Content description for right bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_right_content_description_expressive">Right, battery: <xliff:g id="battery_percentage" example="15">%1$s</xliff:g></string>
+    <!-- Content description for middle bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_middle_content_description_expressive">Case, battery: <xliff:g id="battery_percentage" example="15">%1$s</xliff:g></string>
+    <!-- Content description for main bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_main_content_description_expressive">Battery: <xliff:g id="battery_percentage" example="15">%1$s</xliff:g></string>
     <!-- Content description for battery icon in bluetooth header. [CHAR LIMIT=NONE] -->
     <string name="bluetooth_header_battery_content_description">Battery</string>
 
