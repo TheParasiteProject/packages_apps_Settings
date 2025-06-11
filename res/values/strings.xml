@@ -93,9 +93,9 @@
     <string name="preview_pager_next_button">Next preview</string>
 
     <!-- Description for the button that makes interface elements smaller. [CHAR_LIMIT=NONE] -->
-    <string name="font_size_make_smaller_desc">Make font size smaller</string>
+    <string name="font_size_make_smaller_desc">Decrease font size</string>
     <!-- Description for the button that makes interface elements larger. [CHAR_LIMIT=NONE] -->
-    <string name="font_size_make_larger_desc">Make font size bigger</string>
+    <string name="font_size_make_larger_desc">Increase font size</string>
 
     <!-- Title for stay awake on fold radio button. [CHAR_LIMIT=NONE] -->
     <string name="stay_awake_on_fold_title">Always</string>
@@ -11053,9 +11053,9 @@ Data usage charges may apply.</string>
     <!-- Title of the screen zoom preview activity. -->
     <string name="screen_zoom_preview_title">Preview</string>
     <!-- Description for the button that makes interface elements smaller. [CHAR_LIMIT=NONE] -->
-    <string name="screen_zoom_make_smaller_desc">Make display size smaller</string>
+    <string name="screen_zoom_make_smaller_desc">Decrease display size</string>
     <!-- Description for the button that makes interface elements larger. [CHAR_LIMIT=NONE] -->
-    <string name="screen_zoom_make_larger_desc">Make display size bigger</string>
+    <string name="screen_zoom_make_larger_desc">Increase display size</string>
 
     <!-- Wi-Fi state - Disconnected [CHAR LIMIT=NONE] -->
     <string name="disconnected">Not connected</string>
