@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.detail.screenmagnification.dialogs
+package com.android.settings.accessibility.screenmagnification.dialogs
 
 import android.app.Dialog
 import android.app.settings.SettingsEnums
@@ -31,8 +31,8 @@ import com.android.settings.R
 import com.android.settings.accessibility.AccessibilityDialogUtils
 import com.android.settings.accessibility.MagnificationCapabilities
 import com.android.settings.accessibility.MagnificationCapabilities.MagnificationMode
-import com.android.settings.accessibility.detail.screenmagnification.dialogs.MagnificationModeChooser.Companion.ARG_REQUEST_KEY
-import com.android.settings.accessibility.detail.screenmagnification.dialogs.MagnificationModeChooser.Companion.RESULT
+import com.android.settings.accessibility.screenmagnification.dialogs.MagnificationModeChooser.Companion.ARG_REQUEST_KEY
+import com.android.settings.accessibility.screenmagnification.dialogs.MagnificationModeChooser.Companion.RESULT
 import com.android.settings.accessibility.shortcuts.EditShortcutsPreferenceFragment
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment
 import com.android.settings.utils.AnnotationSpan

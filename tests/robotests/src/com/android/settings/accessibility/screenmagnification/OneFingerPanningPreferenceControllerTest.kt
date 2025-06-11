@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.detail.screenmagnification
+package com.android.settings.accessibility.screenmagnification
 
 import android.content.Context
 import android.content.Intent
@@ -34,7 +34,7 @@ import com.android.settings.accessibility.AccessibilityUtil.State.OFF
 import com.android.settings.accessibility.AccessibilityUtil.State.ON
 import com.android.settings.accessibility.MagnificationCapabilities
 import com.android.settings.accessibility.MagnificationCapabilities.MagnificationMode
-import com.android.settings.accessibility.detail.screenmagnification.OneFingerPanningPreferenceController.Companion.SETTING_KEY
+import com.android.settings.accessibility.screenmagnification.OneFingerPanningPreferenceController.Companion.SETTING_KEY
 import com.android.settings.core.BasePreferenceController.AVAILABLE
 import com.android.settings.core.BasePreferenceController.CONDITIONALLY_UNAVAILABLE
 import com.android.settings.testutils.AccessibilityTestUtils.setWindowMagnificationSupported
