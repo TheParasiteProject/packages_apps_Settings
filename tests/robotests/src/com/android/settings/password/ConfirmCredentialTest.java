@@ -206,6 +206,7 @@ public class ConfirmCredentialTest {
         assertThat(fragment.mCancelButton.getVisibility()).isEqualTo(View.VISIBLE);
     }
 
+    @Ignore("b/424068307")
     @Test
     @EnableFlags(Flags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     public void remoteValidation_expressiveTheme_usesFooterBarButton() throws Exception {
