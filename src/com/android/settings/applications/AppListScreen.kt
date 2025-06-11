@@ -16,8 +16,34 @@
 
 package com.android.settings.applications
 
+import com.android.settings.R
 import com.android.settings.core.PreferenceScreenMixin
+import com.android.settingslib.datastore.HandlerExecutor
+import com.android.settingslib.datastore.KeyedObserver
 import com.android.settingslib.metadata.PreferenceHierarchyGenerator
+import com.android.settingslib.metadata.PreferenceLifecycleContext
+import com.android.settingslib.metadata.PreferenceLifecycleProvider
+import com.android.settingslib.utils.applications.PackageObservable
 
 /** Interface for all Catalyst screens showing an app list. */
-interface AppListScreen : PreferenceScreenMixin, PreferenceHierarchyGenerator<Boolean> {}
+abstract class AppListScreen :
+    PreferenceScreenMixin, PreferenceHierarchyGenerator<Boolean>, PreferenceLifecycleProvider {
+
+    private lateinit var observer: KeyedObserver<String?>
+
+    override val highlightMenuKey
+        get() = R.string.menu_key_apps
+
+    override fun onCreate(context: PreferenceLifecycleContext) {
+        if (context.preferenceScreenKey == bindingKey) {
+            observer = KeyedObserver<String?> { _, _ -> context.regeneratePreferenceHierarchy() }
+            PackageObservable.get(context).addObserver(observer, HandlerExecutor.main)
+        }
+    }
+
+    override fun onDestroy(context: PreferenceLifecycleContext) {
+        if (context.preferenceScreenKey == bindingKey) {
+            PackageObservable.get(context).removeObserver(observer)
+        }
+    }
+}

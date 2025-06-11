@@ -17,12 +17,19 @@
 package com.android.settings.applications.specialaccess
 
 import android.content.Context
-import android.content.pm.ApplicationInfo
+import androidx.fragment.app.Fragment
 import com.android.settings.applications.AppListScreen
+import com.android.settings.applications.CatalystAppListFragment
+import com.android.settings.applications.CatalystAppListFragment.Companion.DEFAULT_SHOW_SYSTEM
+import kotlinx.coroutines.CoroutineScope
 
 /** Interface for Catalyst screens that display a list of apps with specific permission. */
-interface SpecialAccessAppListScreen : AppListScreen {
+abstract class SpecialAccessAppListScreen : AppListScreen() {
 
-    /** Returns whether the given application has requested certain permission. */
-    fun hasRequestedPermission(context: Context, appInfo: ApplicationInfo): Boolean
+    override fun fragmentClass(): Class<out Fragment>? = CatalystAppListFragment::class.java
+
+    override fun hasCompleteHierarchy() = true
+
+    override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
+        generatePreferenceHierarchy(context, coroutineScope, DEFAULT_SHOW_SYSTEM)
 }
