@@ -27,9 +27,6 @@ import com.android.settings.applications.specialaccess.SpecialAccessAppListScree
 import com.android.settings.contract.TAG_DEVICE_STATE_SCREEN
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.ProvidePreferenceScreen
-import com.android.settingslib.metadata.preferenceHierarchy
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 
 @ProvidePreferenceScreen(PictureInPictureAppListScreen.KEY)
 open class PictureInPictureAppListScreen : SpecialAccessAppListScreen() {
@@ -49,18 +46,11 @@ open class PictureInPictureAppListScreen : SpecialAccessAppListScreen() {
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?) =
         if (metadata == null) Intent(ACTION_PICTURE_IN_PICTURE_SETTINGS) else null
 
-    override fun generatePreferenceHierarchy(
-        context: Context,
-        coroutineScope: CoroutineScope,
-        hierarchyType: Boolean,
-    ) =
-        preferenceHierarchy(context) {
-            addAsync(coroutineScope, Dispatchers.Default) {
-                PictureInPictureAppDetailScreen.parameters(context, hierarchyType).collect {
-                    +(PictureInPictureAppDetailScreen.KEY args it)
-                }
-            }
-        }
+    override val appDetailScreenKey
+        get() = PictureInPictureAppDetailScreen.KEY
+
+    override fun appDetailParameters(context: Context, hierarchyType: Boolean) =
+        PictureInPictureAppDetailScreen.parameters(context, hierarchyType)
 
     companion object {
         const val KEY = "sa_pip_app_list"

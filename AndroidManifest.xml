@@ -2176,6 +2176,18 @@
                        android:value="com.android.settings.notification.BundlePreferenceFragment" />
         </activity>
 
+
+        <activity
+            android:name="Settings$NotificationSummarizationActivity"
+            android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.NOTIFICATION_SUMMARIZATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.notification.SummarizationPreferenceFragment" />
+        </activity>
+
         <activity android:name=".notification.zen.ZenModeVoiceActivity"
                 android:theme="@*android:style/Theme.DeviceDefault.Settings.Dialog.NoActionBar"
                 android:exported="true"
@@ -4966,6 +4978,9 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_DISPLAY" />
+
         </service>
         <service
             android:name=".development.qstile.DevelopmentTiles$GPUProfiling"
@@ -4979,6 +4994,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_UTILITIES" />
         </service>
         <service
             android:name=".development.qstile.DevelopmentTiles$ForceRTL"
@@ -4992,6 +5009,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_DISPLAY" />
         </service>
         <service
             android:name=".development.qstile.DevelopmentTiles$AnimationSpeed"
@@ -5005,6 +5024,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_UTILITIES" />
         </service>
 
         <service
@@ -5019,6 +5040,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_UTILITIES" />
         </service>
 
         <service
@@ -5033,6 +5056,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_CONNECTIVITY" />
         </service>
 
         <service
@@ -5047,6 +5072,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_DISPLAY" />
         </service>
 
         <activity
