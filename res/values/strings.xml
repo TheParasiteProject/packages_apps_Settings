@@ -14611,7 +14611,7 @@ Data usage charges may apply.</string>
     <!-- Title for web content filters browser category [CHAR LIMIT=60] -->
     <string name="supervision_web_content_filters_browser_title">Websites</string>
     <!-- Title for web content filters browser filters [CHAR LIMIT=60] -->
-    <string name="supervision_web_content_filters_browser_filter_title">Filter out explicit sites</string>
+    <string name="supervision_web_content_filters_browser_filter_title">Block explicit sites</string>
     <!-- Title for web content filters search category [CHAR LIMIT=60] -->
     <string name="supervision_web_content_filters_search_title">Search results</string>
     <!-- Title for web content filters search filters switch [CHAR LIMIT=60] -->
