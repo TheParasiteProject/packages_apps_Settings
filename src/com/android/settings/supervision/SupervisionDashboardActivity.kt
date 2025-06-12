@@ -33,10 +33,30 @@ class SupervisionDashboardActivity :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // If the supervision package doesn't have the necessary components, the dashboard can't be
+        // directly loaded.
+        if (!hasNecessarySupervisionComponent(matchAll = true)) {
+            // Check if the app provides any mitigating actions and trigger them if so.
+            if (systemSupervisionPackageName != null) {
+                val installIntent =
+                    Intent(INSTALL_SUPERVISION_APP_ACTION).setPackage(systemSupervisionPackageName)
+                if (packageManager.queryIntentActivitiesAsUser(installIntent, 0, userId)
+                        .isNotEmpty()
+                ) {
+                    startActivity(installIntent)
+                }
+            }
+            finish()
+            return
+        }
+
+        // If the supervision package has the necessary component but not in the enabled state,
+        // launch a loading screen while trying to enable it.
         if (!hasNecessarySupervisionComponent()) {
             val loadingActivity = Intent(this, SupervisionDashboardLoadingActivity::class.java)
             startActivity(loadingActivity)
             finish()
+            return
         }
 
         if (shouldRedirectToFullSupervision()) {
@@ -60,5 +80,7 @@ class SupervisionDashboardActivity :
 
     companion object {
         const val FULL_SUPERVISION_REDIRECT_ACTION = "android.app.supervision.action.VIEW_SETTINGS"
+        const val INSTALL_SUPERVISION_APP_ACTION =
+            "android.app.supervision.action.INSTALL_SUPERVISION_APP"
     }
 }
