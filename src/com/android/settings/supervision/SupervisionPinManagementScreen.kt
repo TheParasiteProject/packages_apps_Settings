@@ -116,6 +116,7 @@ class SupervisionPinManagementScreen :
             +UntitledPreferenceCategoryMetadata("delete_pin_group") += {
                 +SupervisionDeletePinPreference()
             }
+            +SupervisionPinManagementFooterPreference()
         }
 
     override fun isIndexable(context: Context) = true
