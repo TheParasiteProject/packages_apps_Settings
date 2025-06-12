@@ -168,7 +168,10 @@ class SupervisionMainSwitchPreference(
         }
 
         // If supervision is already set up, confirm credentials before any change.
-        val intent = Intent(lifeCycleContext, ConfirmSupervisionCredentialsActivity::class.java)
+        val intent =
+            Intent(lifeCycleContext, ConfirmSupervisionCredentialsActivity::class.java).apply {
+                putExtra(ConfirmSupervisionCredentialsActivity.EXTRA_FORCE_CONFIRMATION, true)
+            }
         lifeCycleContext.startActivityForResult(
             intent,
             REQUEST_CODE_CONFIRM_SUPERVISION_CREDENTIALS,
