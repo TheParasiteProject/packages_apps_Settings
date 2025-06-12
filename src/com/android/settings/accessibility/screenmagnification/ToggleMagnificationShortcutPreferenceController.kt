@@ -17,14 +17,19 @@
 package com.android.settings.accessibility
 
 import android.content.Context
+import com.android.internal.accessibility.AccessibilityShortcutController
 import com.android.internal.accessibility.common.ShortcutConstants
 
 /**
- * The preference controller for the ShortcutPreference on the Magnification screen.
- * The only difference is that we allow more shortcut options for Magnifications.
+ * The preference controller for the ShortcutPreference on the Magnification screen. The only
+ * difference is that we allow more shortcut options for Magnifications.
  */
 class ToggleMagnificationShortcutPreferenceController(context: Context, key: String) :
     ToggleShortcutPreferenceController(context, key) {
 
     override val shortcutSettingsKey = ShortcutConstants.MAGNIFICATION_SHORTCUT_SETTINGS.toList()
+
+    override fun getComponentNameAsString(): String {
+        return AccessibilityShortcutController.MAGNIFICATION_CONTROLLER_NAME
+    }
 }
