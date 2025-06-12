@@ -4978,6 +4978,9 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_DISPLAY" />
+
         </service>
         <service
             android:name=".development.qstile.DevelopmentTiles$GPUProfiling"
@@ -4991,6 +4994,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_UTILITIES" />
         </service>
         <service
             android:name=".development.qstile.DevelopmentTiles$ForceRTL"
@@ -5004,6 +5009,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_DISPLAY" />
         </service>
         <service
             android:name=".development.qstile.DevelopmentTiles$AnimationSpeed"
@@ -5017,6 +5024,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_UTILITIES" />
         </service>
 
         <service
@@ -5031,6 +5040,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_UTILITIES" />
         </service>
 
         <service
@@ -5045,6 +5056,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_CONNECTIVITY" />
         </service>
 
         <service
@@ -5059,6 +5072,8 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                        android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TILE_CATEGORY"
+                       android:value="android.service.quicksettings.CATEGORY_DISPLAY" />
         </service>
 
         <activity
