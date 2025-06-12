@@ -16,6 +16,7 @@
 
 package com.android.settings.applications
 
+import android.content.Context
 import com.android.settings.R
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settingslib.datastore.HandlerExecutor
@@ -23,7 +24,10 @@ import com.android.settingslib.datastore.KeyedObserver
 import com.android.settingslib.metadata.PreferenceHierarchyGenerator
 import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.metadata.PreferenceLifecycleProvider
+import com.android.settingslib.metadata.PreferenceMetadata
+import com.android.settingslib.preference.PreferenceBinding
 import com.android.settingslib.utils.applications.PackageObservable
+import com.android.settingslib.widget.ZeroStatePreference
 
 /** Interface for all Catalyst screens showing an app list. */
 abstract class AppListScreen :
@@ -45,5 +49,18 @@ abstract class AppListScreen :
         if (context.preferenceScreenKey == bindingKey) {
             PackageObservable.get(context).removeObserver(observer)
         }
+    }
+
+    class NoAppPreference : PreferenceMetadata, PreferenceBinding {
+        override val key
+            get() = "no_app"
+
+        override val title
+            get() = R.string.no_applications
+
+        override val icon
+            get() = R.drawable.ic_apps_alt
+
+        override fun createWidget(context: Context) = ZeroStatePreference(context)
     }
 }

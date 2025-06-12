@@ -25,9 +25,6 @@ import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.flags.Flags
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.ProvidePreferenceScreen
-import com.android.settingslib.metadata.preferenceHierarchy
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 
 @ProvidePreferenceScreen(WriteSystemPreferencesAppListScreen.KEY)
 open class WriteSystemPreferencesAppListScreen : SpecialAccessAppListScreen() {
@@ -49,18 +46,11 @@ open class WriteSystemPreferencesAppListScreen : SpecialAccessAppListScreen() {
             null
         }
 
-    override fun generatePreferenceHierarchy(
-        context: Context,
-        coroutineScope: CoroutineScope,
-        hierarchyType: Boolean,
-    ) =
-        preferenceHierarchy(context) {
-            addAsync(coroutineScope, Dispatchers.Default) {
-                WriteSystemPreferencesAppDetailScreen.parameters(context, hierarchyType).collect {
-                    +(WriteSystemPreferencesAppDetailScreen.KEY args it)
-                }
-            }
-        }
+    override val appDetailScreenKey: String
+        get() = WriteSystemPreferencesAppDetailScreen.KEY
+
+    override fun appDetailParameters(context: Context, hierarchyType: Boolean) =
+        WriteSystemPreferencesAppDetailScreen.parameters(context, hierarchyType)
 
     companion object {
         const val KEY = "sa_wsp_app_list"
