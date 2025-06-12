@@ -2232,7 +2232,7 @@
     <!-- External Display settings. Footer title -->
     <string name="external_display_change_resolution_footer_title">Changing rotation or resolution may stop any apps that are currently running</string>
     <!-- External Display settings. No Displays footer title -->
-    <string name="external_display_not_found_footer_title">Your device must be connected to an external display to mirror your screen</string>
+    <string name="external_display_not_found_footer_title">No display connected\n\nConnect an external display to get started, or try using a different cable</string>
     <!-- External Display settings. More resolution options -->
     <string name="external_display_more_options_title">More options</string>
     <!-- External Display settings. -->
