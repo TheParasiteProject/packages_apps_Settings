@@ -221,7 +221,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
                         EntityHeaderController.ActionType.ACTION_NONE);
 
         // TODO: There may be an avatar setting action we can use here.
-        final int iconId = bundle.getInt("icon_id", 0);
+        final int iconId = bundle != null ? bundle.getInt("icon_id", 0) : 0;
         if (iconId == 0) {
             final UserManager userManager = (UserManager) getActivity().getSystemService(
                     Context.USER_SERVICE);
