@@ -196,7 +196,9 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
         super.onAttach(context);
         mTetherChangeReceiver = new TetherChangeReceiver();
 
-        mSSIDPreferenceController = use(WifiTetherSSIDPreferenceController.class);
+        if (!isCatalystEnabled()) {
+            mSSIDPreferenceController = use(WifiTetherSSIDPreferenceController.class);
+        }
         mSecurityPreferenceController = use(WifiTetherSecurityPreferenceController.class);
         mPasswordPreferenceController = use(WifiTetherPasswordPreferenceController.class);
         mMaxCompatibilityPrefController =
@@ -317,7 +319,9 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
     SoftApConfiguration buildNewConfig() {
         SoftApConfiguration currentConfig = mWifiTetherViewModel.getSoftApConfiguration();
         SoftApConfiguration.Builder configBuilder = new SoftApConfiguration.Builder(currentConfig);
-        configBuilder.setSsid(mSSIDPreferenceController.getSSID());
+        if (!isCatalystEnabled()) {
+            configBuilder.setSsid(mSSIDPreferenceController.getSSID());
+        }
         int securityType =
                 mWifiTetherViewModel.isSpeedFeatureAvailable()
                         ? currentConfig.getSecurityType()
@@ -336,7 +340,9 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
     }
 
     private void updateDisplayWithNewConfig() {
-        use(WifiTetherSSIDPreferenceController.class).updateDisplay();
+        if (!isCatalystEnabled()) {
+            use(WifiTetherSSIDPreferenceController.class).updateDisplay();
+        }
         use(WifiTetherSecurityPreferenceController.class).updateDisplay();
         use(WifiTetherPasswordPreferenceController.class).updateDisplay();
         use(WifiTetherMaximizeCompatibilityPreferenceController.class).updateDisplay();
