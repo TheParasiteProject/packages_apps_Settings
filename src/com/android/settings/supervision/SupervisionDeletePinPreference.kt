@@ -16,7 +16,6 @@
 package com.android.settings.supervision
 
 import android.app.Activity
-import android.app.settings.SettingsEnums
 import android.app.supervision.SupervisionManager
 import android.content.Context
 import android.content.Intent
@@ -28,7 +27,7 @@ import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AlertDialog
 import androidx.preference.Preference
 import com.android.settings.R
-import com.android.settings.core.SubSettingLauncher
+import com.android.settings.spa.network.getActivity
 import com.android.settingslib.HelpUtils
 import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.metadata.PreferenceLifecycleProvider
@@ -144,10 +143,12 @@ class SupervisionDeletePinPreference() :
         if (resultCode == Activity.RESULT_OK) {
             if (lifeCycleContext.deleteSupervisionData()) {
                 lifeCycleContext.notifyPreferenceChange(KEY)
-                SubSettingLauncher(lifeCycleContext)
-                    .setDestination(SupervisionDashboardFragment::class.java.name)
-                    .setSourceMetricsCategory(SettingsEnums.SUPERVISION_DASHBOARD)
-                    .launch()
+                // Programmatically trigger back press to properly return to the supervision
+                // dashboard with a correct back stack.
+                val activity =
+                    (lifeCycleContext.baseContext.getActivity()
+                        as? androidx.activity.ComponentActivity)
+                activity?.onBackPressedDispatcher?.onBackPressed()
             } else {
                 Log.e(TAG, "Can't delete supervision data; unable to delete supervising profile.")
                 showErrorDialog(lifeCycleContext)

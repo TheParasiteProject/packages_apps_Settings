@@ -16,6 +16,7 @@
 package com.android.settings.supervision
 
 import android.app.Activity
+import android.app.supervision.SupervisionManager
 import android.app.supervision.flags.Flags
 import android.content.Context
 import android.platform.test.annotations.DisableFlags
@@ -28,12 +29,20 @@ import com.android.settings.R
 import com.android.settings.supervision.SupervisionMainSwitchPreference.Companion.REQUEST_CODE_CONFIRM_SUPERVISION_CREDENTIALS
 import com.android.settings.supervision.ipc.SupervisionMessengerClient
 import com.android.settingslib.ipc.MessengerServiceRule
+import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.preference.launchFragmentScenario
 import com.android.settingslib.widget.MainSwitchPreference
 import com.google.common.truth.Truth.assertThat
+import org.junit.Before
+import org.mockito.kotlin.any
+import org.mockito.kotlin.doReturn
+import org.mockito.kotlin.mock
+import org.mockito.kotlin.stub
+import org.mockito.kotlin.verify
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.kotlin.argumentCaptor
 import org.robolectric.annotation.LooperMode
 
 @RunWith(AndroidJUnit4::class)
@@ -43,6 +52,9 @@ class SupervisionDashboardScreenTest {
 
     private val context: Context = ApplicationProvider.getApplicationContext()
 
+    private val mockLifeCycleContext = mock<PreferenceLifecycleContext>()
+    private val mockSupervisionManager = mock<SupervisionManager>()
+
     @get:Rule val setFlagsRule = SetFlagsRule()
 
     @get:Rule
@@ -50,6 +62,13 @@ class SupervisionDashboardScreenTest {
         MessengerServiceRule<SupervisionMessengerClient>(
             TestSupervisionMessengerService::class.java
         )
+
+    @Before
+    fun setUp() {
+        mockLifeCycleContext.stub {
+            on { getSystemService(SupervisionManager::class.java) } doReturn mockSupervisionManager
+        }
+    }
 
     @Test
     fun key() {
@@ -129,5 +148,50 @@ class SupervisionDashboardScreenTest {
     @Test
     fun isIndexable() {
         assertThat(preferenceScreenCreator.isIndexable(context)).isTrue()
+    }
+
+    @Test
+    fun onCreate_registersListener() {
+        preferenceScreenCreator.onCreate(mockLifeCycleContext)
+        verify(mockSupervisionManager).registerSupervisionListener(any())
+    }
+
+    @Test
+    fun onDestroy_unregistersListener() {
+        val listenerCaptor = argumentCaptor<SupervisionManager.SupervisionListener>()
+
+        preferenceScreenCreator.onCreate(mockLifeCycleContext)
+        verify(mockSupervisionManager).registerSupervisionListener(listenerCaptor.capture())
+
+        preferenceScreenCreator.onDestroy(mockLifeCycleContext)
+        verify(mockSupervisionManager).unregisterSupervisionListener(listenerCaptor.firstValue)
+    }
+
+    @Test
+    fun listener_onSupervisionDisabled_refreshesPreferences() {
+        val listenerCaptor = argumentCaptor<SupervisionManager.SupervisionListener>()
+
+        preferenceScreenCreator.onCreate(mockLifeCycleContext)
+        verify(mockSupervisionManager).registerSupervisionListener(listenerCaptor.capture())
+
+        listenerCaptor.firstValue.onSupervisionDisabled(0 /* userId */)
+
+        verify(mockLifeCycleContext).notifyPreferenceChange(SupervisionDashboardScreen.KEY)
+        verify(mockLifeCycleContext).notifyPreferenceChange(SupervisionMainSwitchPreference.KEY)
+        verify(mockLifeCycleContext).notifyPreferenceChange(SupervisionPinManagementScreen.KEY)
+    }
+
+    @Test
+    fun listener_onSupervisionEnabled_refreshesPreferences() {
+        val listenerCaptor = argumentCaptor<SupervisionManager.SupervisionListener>()
+
+        preferenceScreenCreator.onCreate(mockLifeCycleContext)
+        verify(mockSupervisionManager).registerSupervisionListener(listenerCaptor.capture())
+
+        listenerCaptor.firstValue.onSupervisionEnabled(0 /* userId */)
+
+        verify(mockLifeCycleContext).notifyPreferenceChange(SupervisionDashboardScreen.KEY)
+        verify(mockLifeCycleContext).notifyPreferenceChange(SupervisionMainSwitchPreference.KEY)
+        verify(mockLifeCycleContext).notifyPreferenceChange(SupervisionPinManagementScreen.KEY)
     }
 }
