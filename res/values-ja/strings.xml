@@ -47,8 +47,10 @@
     <string name="preview_pager_email_title" msgid="8767864657910457562">"メール"</string>
     <string name="preview_pager_previous_button" msgid="607771113300838313">"前のプレビュー"</string>
     <string name="preview_pager_next_button" msgid="8700907912508927271">"次のプレビュー"</string>
-    <string name="font_size_make_smaller_desc" msgid="319927200356692406">"フォントサイズを小さくする"</string>
-    <string name="font_size_make_larger_desc" msgid="6739310980713118605">"フォントサイズを大きくする"</string>
+    <!-- no translation found for font_size_make_smaller_desc (9149663537989624487) -->
+    <skip />
+    <!-- no translation found for font_size_make_larger_desc (5774611876657293550) -->
+    <skip />
     <string name="stay_awake_on_fold_title" msgid="6590454679898134221">"常時"</string>
     <string name="stay_awake_on_fold_summary" msgid="1939963751585954262">"デバイスを折りたたむとフロント ディスプレイが ON になります"</string>
     <string name="stay_awake_on_lockscreen_title" msgid="8088456642083051068">"上にスワイプして継続"</string>
@@ -225,7 +227,6 @@
     <string name="title_system_locale_addition" msgid="8218683660751479466">"%sを使用言語に追加しますか？"</string>
     <string name="desc_system_locale_addition" msgid="3409917362651596070">"これにより、この言語もアプリやウェブサイトで使用言語として認識されるようになります。"</string>
     <string name="desc_notice_device_locale_and_region_settings_change" msgid="909261686577914396">"このデバイスでは<xliff:g id="LANGUAGE">%1$s</xliff:g>が使用され、地域が<xliff:g id="REGION">%2$s</xliff:g>に変更されます。"</string>
-    <string name="desc_notice_device_locale_settings_change" msgid="5012353615235634881">"このデバイスでは<xliff:g id="LANGUAGE">%s</xliff:g>が使用されます。"</string>
     <string name="dlg_desc_delete_preferred_default_locale" msgid="690828405078078513">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g>は優先言語から削除されます"</string>
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"変更"</string>
     <string name="title_unavailable_locale" msgid="5382411204559213983">"<xliff:g id="SELECTED_LANGUAGE">%s</xliff:g>をシステム言語として設定できません"</string>
@@ -1170,7 +1171,16 @@
     <string name="wifi_dpp_qr_code_is_not_valid_format" msgid="5190689503019328279">"QR コードの形式が無効です"</string>
     <string name="retry" msgid="7542103800274026915">"再試行"</string>
     <string name="wifi_shared" msgid="8850748923537589782">"他のデバイスユーザーと共有する"</string>
+    <string name="shared_message" msgid="2104244057926025072">"共有"</string>
+    <string name="private_message" msgid="5897966950396765392">"非公開"</string>
+    <string name="wifi_conflict_dialog_confirm" msgid="4577313983128123779">"確認"</string>
+    <string name="wifi_conflict_dialog_cancel" msgid="5200571850377525343">"キャンセル"</string>
+    <string name="wifi_share_preference_title" msgid="6346200020322308703">"これは共有ネットワークです"</string>
+    <string name="wifi_share_preference_summary" msgid="4356010425167713046">"ゲストユーザーを除くすべてのユーザーが、このネットワークの表示、編集、削除を行えるようになります"</string>
+    <string name="wifi_conflict_dialog_title" msgid="1127530499054245755">"「<xliff:g id="NETWORK_NAME">%2$s</xliff:g>」の<xliff:g id="SHARED">%1$s</xliff:g>ネットワークに切り替えますか？"</string>
+    <string name="wifi_conflict_dialog_message" msgid="3192435395074097168">"現在、同じ名前の <xliff:g id="SHARED_0">%1$s</xliff:g> ネットワークに接続しています。ネットワークを切り替えると、<xliff:g id="SHARED_1">%2$s</xliff:g> ネットワークとの接続が解除され、<xliff:g id="PRIVATE">%3$s</xliff:g> ネットワークに再接続されます。インターネットが一時的に利用できなくなる可能性があります。"</string>
     <string name="wifi_unchanged" msgid="8026045290856150191">"（変更なし）"</string>
+    <string name="wifi_allow_edit_configuration_title" msgid="3928254385019370063">"他のユーザーにネットワーク構成の編集を許可する"</string>
     <string name="wifi_unspecified" msgid="4561964943472312208">"選択してください"</string>
     <string name="wifi_multiple_cert_added" msgid="2151019652853383776">"（複数の証明書が追加されています）"</string>
     <string name="wifi_use_system_certs" msgid="5587866698144996931">"システム証明書を使用"</string>
@@ -2145,16 +2155,19 @@
     <string name="mouse_keys" msgid="6237254627808525540">"マウスキー"</string>
     <string name="mouse_keys_main_title" msgid="3570638931365221460">"マウスキーを使用する"</string>
     <string name="accessibility_mouse_keys_shortcut_title" msgid="7621635104533584115">"マウスキーのショートカット"</string>
-    <string name="mouse_keys_summary" msgid="7030731235143286467">"キーボードを使用してポインタを操作します"</string>
-    <string name="mouse_keys_max_speed_title" msgid="1788751803245422659">"最大速度"</string>
+    <string name="mouse_keys_summary" msgid="6512910710030108693">"キーボードを使用してカーソルを操作します"</string>
+    <string name="mouse_keys_max_speed_title" msgid="2651688711606971145">"速度"</string>
     <string name="mouse_keys_seek_bar_decrease_button_description" msgid="9077624857206032509">"小さくする"</string>
     <string name="mouse_keys_seek_bar_increase_button_description" msgid="2721662400858172203">"大きくする"</string>
     <string name="mouse_reverse_vertical_scrolling" msgid="4067297170762853966">"逆スクロール"</string>
     <string name="mouse_keys_use_primary_keys_title" msgid="525897583406210252">"メインキーを使用する"</string>
+    <!-- no translation found for mouse_keys_use_primary_keys_summary (5057949666957911577) -->
+    <skip />
     <string name="mouse_keys_reset_button_label" msgid="513004295662247230">"設定をリセット"</string>
     <string name="mouse_keys_primary_keys_image_list_title" msgid="7470827693078490251">"メインキーの使い方"</string>
     <string name="mouse_keys_numpad_keys_image_list_title" msgid="6682341389811538017">"テンキーの使い方"</string>
-    <string name="mouse_keys_numpad_keys_image_list_summary" msgid="2728318055237217919">"NumLock が ON の場合、テンキーが常に使用されます"</string>
+    <!-- no translation found for mouse_keys_numpad_keys_image_list_summary (2186017679302722178) -->
+    <skip />
     <string name="mouse_reverse_vertical_scrolling_summary" msgid="3386655598642587942">"上にスクロールすると、ページ下部に移動します"</string>
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"スクロール"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"制御付きスクロール"</string>
@@ -2172,6 +2185,9 @@
     <string name="mouse_keys_release_summary" msgid="7209370896835993434">"「<xliff:g id="RELEASE_LABEL">%s</xliff:g>」キーを使用してマウスのメインボタンを離します"</string>
     <string name="mouse_keys_toggle_scroll_summary" msgid="7492663135290108272">"「<xliff:g id="RELEASE_LABEL_1">%1$s</xliff:g>」キーを使用してスクロール モードを切り替えます。「<xliff:g id="RELEASE_LABEL_2">%2$s</xliff:g>」キーでビューを上、下、左、右にスクロールします"</string>
     <string name="mouse_keys_release2_summary" msgid="5504548339731577210">"「<xliff:g id="RELEASE_2_LABEL">%s</xliff:g>」キーを使用してマウスの 2 番目のボタンをクリックします"</string>
+    <string name="mouse_keys_acceleration_seekbar_title" msgid="2329098889930361504">"移動速度"</string>
+    <string name="mouse_keys_acceleration_fast_icon_desc" msgid="4426188473271579794">"速い"</string>
+    <string name="mouse_keys_acceleration_slow_icon_desc" msgid="8370777074987200135">"遅い"</string>
     <string name="keyboard_shortcuts_helper" msgid="6934420811737731188">"キーボード ショートカットを表示"</string>
     <string name="keyboard_shortcuts_helper_summary" msgid="5979507677602559203">"ショートカットのリストを表示"</string>
     <string name="language_and_input_for_work_category_title" msgid="2546950919124199743">"仕事用プロファイルのキーボードとツール"</string>
@@ -2639,10 +2655,8 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"色補正の詳細"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"色反転について"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"色反転の詳細"</string>
-    <!-- no translation found for accessibility_dark_theme_footer_learn_more_helper_link (7084955775821075280) -->
-    <skip />
-    <!-- no translation found for accessibility_dark_theme_preference_footer_content (4431044600779983609) -->
-    <skip />
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"ダークモードの詳細"</string>
+    <string name="accessibility_dark_theme_preference_footer_content" msgid="4431044600779983609">"一部のアプリは、拡張設定のダークモードに対応していません。表示に問題がある場合は、標準設定を使用してください。"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"字幕を表示"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"対応アプリでのみ利用可能です"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"字幕のサイズとスタイル"</string>
@@ -4492,8 +4506,10 @@
     <string name="screen_zoom_short_summary" msgid="756254364808639194">"全てのサイズを変更します"</string>
     <string name="screen_zoom_keywords" msgid="5964023524422386592">"表示間隔、画面のズーム、スケール、拡大縮小"</string>
     <string name="screen_zoom_preview_title" msgid="5288355628444562735">"プレビュー"</string>
-    <string name="screen_zoom_make_smaller_desc" msgid="1450649885198381123">"表示サイズを小さくする"</string>
-    <string name="screen_zoom_make_larger_desc" msgid="7125594310562596457">"表示サイズを大きくする"</string>
+    <!-- no translation found for screen_zoom_make_smaller_desc (6268455784510593120) -->
+    <skip />
+    <!-- no translation found for screen_zoom_make_larger_desc (3458295276713085365) -->
+    <skip />
     <string name="disconnected" msgid="3469373726996129247">"接続されていません"</string>
     <string name="keyboard_disconnected" msgid="796053864561894531">"未接続"</string>
     <string name="apps_summary" msgid="4007416751775414252">"<xliff:g id="COUNT">%1$d</xliff:g> 個のアプリがインストールされています"</string>
@@ -4513,10 +4529,8 @@
     <string name="disabled_by_policy_title_financed_device" msgid="2328740314082888228">"クレジット プロバイダによりブロックされています"</string>
     <string name="disabled_by_policy_title_biometric_parental_consent" msgid="2463673997797134678">"保護者の同意が必要です"</string>
     <string name="disabled_by_policy_content_biometric_parental_consent" msgid="7124116806784305206">"スマートフォンを保護者に渡し、設定してもらってください"</string>
-    <!-- no translation found for disabled_by_policy_title_parental_controls (8875976588644052371) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_content_parental_controls (4648160125103768738) -->
-    <skip />
+    <string name="disabled_by_policy_title_parental_controls" msgid="8875976588644052371">"保護者による使用制限によって制限されています"</string>
+    <string name="disabled_by_policy_content_parental_controls" msgid="4648160125103768738">"この設定を変更できるのは、保護者による使用制限を管理しているユーザーのみです"</string>
     <string name="disabled_by_policy_parental_consent" msgid="9166060049019018978">"スマートフォンを保護者に渡し、この設定を変更してもらってください。"</string>
     <string name="default_admin_support_msg" msgid="8816296554831532033">"詳しくは、IT 管理者にお問い合わせください"</string>
     <string name="admin_support_more_info" msgid="8407433155725898290">"詳細"</string>
@@ -4632,8 +4646,7 @@
     <string name="battery_tips_card_action_button_check" msgid="1535140204105479318">"確認"</string>
     <string name="battery_tips_card_dismiss_button" msgid="1885756985544936618">"OK"</string>
     <string name="battery_tips_card_feedback_info" msgid="767117835675157298">"このメッセージは役に立ちましたか？"</string>
-    <!-- no translation found for battery_hints_warning_icon_a11y (709629805028175434) -->
-    <skip />
+    <string name="battery_hints_warning_icon_a11y" msgid="709629805028175434">"バッテリーに関する警告のヒント"</string>
     <string name="battery_tips_settings_summary_brightness" msgid="546145032616077783">"「明るさの自動調節」機能を ON にするとバッテリーを長持ちさせることができます"</string>
     <string name="battery_tips_settings_summary_screen_timeout" msgid="556801426050962077">"画面自動消灯までの時間を短くするとバッテリーを長持ちさせることができます"</string>
     <string name="battery_tips_apps_summary_always_high" msgid="6334519477067044920">"<xliff:g id="APP_LABEL">%1$s</xliff:g>: バッテリー使用量が増えました"</string>
@@ -4961,8 +4974,6 @@
     <string name="autofill_reset_developer_options" msgid="6425613608979498608">"デフォルト値にリセット"</string>
     <string name="autofill_reset_developer_options_complete" msgid="1276741935956594965">"自動入力の開発者向けオプションをリセットしました"</string>
     <string name="location_category" msgid="3496759112306219062">"場所"</string>
-    <string name="location_indicator_settings_title" msgid="6655916258720093451">"ステータスバーの場所インジケーター"</string>
-    <string name="location_indicator_settings_description" msgid="2888022085372804021">"ネットワークや接続を含め、すべての場所で表示されます"</string>
     <string name="enable_gnss_raw_meas_full_tracking" msgid="1206679951510243341">"GNSS 計測の完全実行を強制"</string>
     <string name="enable_gnss_raw_meas_full_tracking_summary" msgid="3841463141138247167">"デューティ サイクリングを無効にした状態で、すべての GNSS コンステレーションと頻度をトラッキングします"</string>
     <string name="input_method_category" msgid="2252659253631639005">"入力方法"</string>
@@ -5177,7 +5188,8 @@
     <string name="title_satellite_setting_connectivity" msgid="488626710934668313">"衛星接続"</string>
     <string name="description_satellite_setting_connectivity" msgid="7337311015334186655">"衛星接続"</string>
     <string name="description_satellite_setting_messaging" msgid="4367494645429198805">"衛星通信メッセージ"</string>
-    <string name="title_have_satellite_data_plan" msgid="5614932315409789011">"お客様のアカウントはデータの送信が可能です"</string>
+    <!-- no translation found for title_have_satellite_data_plan (1101741256080690699) -->
+    <skip />
     <string name="category_title_satellite_supported_apps" msgid="8445659428502119518">"スマートフォンでサポートされているアプリ"</string>
     <string name="title_satellite_supported_app_list_entry" msgid="891155574898209245">"衛星通信を利用できるアプリをすべて表示する"</string>
     <string name="title_satellite_supported_app_list_page" msgid="318806852682483512">"スマートフォンでサポートされているアプリ"</string>
@@ -5809,6 +5821,8 @@
     <string name="audio_streams_no_password_summary" msgid="8976357323034830144">"パスワードなし"</string>
     <string name="audio_streams_dialog_learn_more" msgid="6711241053442211345">"詳細"</string>
     <string name="audio_streams_dialog_cannot_play" msgid="1358828316927479091">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ではこの音声ストリームを再生できません。"</string>
+    <!-- no translation found for audio_streams_dialog_cannot_play_with_link (3433981166714801237) -->
+    <skip />
     <string name="audio_streams_listening_now" msgid="4205614429222949176">"現在再生しています"</string>
     <string name="audio_streams_present_now" msgid="7519818719382756366">"ストリームを一時停止"</string>
     <string name="audio_streams_media_service_notification_leave_broadcast_text" msgid="4938656134300913647">"受信を停止"</string>
@@ -5857,40 +5871,38 @@
     <string name="supervision_settings_title" msgid="8507163323870367711">"保護者による使用制限"</string>
     <string name="supervision_settings_summary" msgid="6304257872307136073">"デバイス利用に関する基本ルールと利用時間の上限"</string>
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"PIN を設定"</string>
-    <!-- no translation found for keywords_supervision_settings (43064288661561602) -->
-    <skip />
+    <string name="keywords_supervision_settings" msgid="43064288661561602">"管理機能, 保護者による使用制限, 保護者, 管理機能用の PIN, PIN"</string>
     <string name="supervision_pin_management_preference_title" msgid="7721501202320841845">"PIN の管理"</string>
-    <!-- no translation found for supervision_pin_management_preference_keywords (5034450635706621750) -->
-    <skip />
+    <string name="supervision_pin_management_preference_keywords" msgid="5034450635706621750">"保護者用 PIN, 保護者による使用制限の PIN"</string>
     <string name="supervision_pin_management_preference_summary_add" msgid="2247921267270577374">"再設定用のメールアドレスの追加"</string>
     <string name="supervision_pin_management_preference_summary_verify_recovery" msgid="5072554239108915119">"再設定用のメールアドレスの検証"</string>
     <string name="supervision_change_pin_preference_title" msgid="2288584039438231801">"PIN を変更する"</string>
     <string name="supervision_add_forgot_pin_preference_title" msgid="8939945404255748516">"PIN を忘れた場合"</string>
-    <!-- no translation found for supervision_auth_prompt_forgot_pin_button_label (1019337828884793557) -->
-    <skip />
+    <string name="supervision_auth_prompt_forgot_pin_button_label" msgid="1019337828884793557">"PIN をお忘れの場合"</string>
     <string name="supervision_update_recovery_email_preference_title" msgid="2057393838251915087">"再設定用のメールアドレスを更新する"</string>
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"PIN を削除する"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"再設定用のメールアドレスの追加"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"メールアドレスの確認"</string>
-    <!-- no translation found for supervision_web_content_filters_title (2412562442507104921) -->
+    <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"ウェブサイトのコンテンツ フィルタ"</string>
+    <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"ウェブサイト フィルタ, サイトのブロック, ブラウザ フィルタ, 露骨な表現を含むサイトのブロック, サイトのフィルタ, 検索結果のブロック, 露骨な表現を含む検索結果のフィルタ, コンテンツの制限"</string>
+    <!-- no translation found for supervision_web_content_filters_top_intro (8056274290725144441) -->
     <skip />
-    <!-- no translation found for supervision_web_content_filters_keywords (8469519676189544447) -->
-    <skip />
-    <string name="supervision_web_content_filters_top_intro" msgid="5264773769840566499">"このデバイス上の対応アプリにおいて、アクセスしたウェブサイトと検索結果で成人向けコンテンツをブロックします。対応していないアプリでは、露骨な表現を含むコンテンツが引き続き表示される場合があります。"</string>
     <string name="supervision_web_content_filters_browser_title" msgid="8737341514264129889">"ウェブサイト"</string>
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"露骨な表現を含むサイトをブロックする"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"検索結果"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"露骨な表現を含む検索結果を除外する"</string>
-    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <!-- no translation found for supervision_web_content_filters_switch_summary (2095166099345288321) -->
     <skip />
+    <!-- no translation found for supervision_web_content_filters_footer_title (1741897040916039165) -->
+    <skip />
+    <string name="supervision_full_screen_pin_verification_title" msgid="7685279446792771815">"保護者による使用制限の PIN を入力"</string>
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"保護者による使用制限の PIN を設定する"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"PIN の確認"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN を更新しました"</string>
     <string name="supervision_promo_footer_action_button_description" msgid="7617359721703338141">"アプリを開く"</string>
     <string name="supervision_delete_pin_confirm_header" msgid="8499276643990949268">"PIN を削除しますか？"</string>
-    <string name="supervision_delete_pin_confirm_message" msgid="5482080400973042178">"このデバイスのすべてのユーザーに現在設定されている PIN が削除され、あなたが設定した管理機能も無効になります。この操作は元に戻せません。"</string>
-    <string name="supervision_delete_pin_supervision_enabled_header" msgid="2072311894107038402">"他のプロフィールの管理機能を先に一時停止してください"</string>
-    <string name="supervision_delete_pin_supervision_enabled_message" msgid="5643922966568203196">"この PIN の削除と管理機能のリセットを続行するには、他のプロフィールすべての管理機能を一時停止してください。"</string>
+    <!-- no translation found for supervision_delete_pin_supervision_enabled_header (8999197100719062891) -->
+    <skip />
     <string name="supervision_delete_pin_error_header" msgid="1271034883245391839">"PIN を削除できません"</string>
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"PIN の削除中にエラーが発生しました。"</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> のアニメーション"</string>
