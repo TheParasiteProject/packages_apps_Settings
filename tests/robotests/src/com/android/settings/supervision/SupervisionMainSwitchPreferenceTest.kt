@@ -129,10 +129,7 @@ class SupervisionMainSwitchPreferenceTest {
 
         widget.performClick()
 
-        verifyActivityStarted(
-            REQUEST_CODE_CONFIRM_SUPERVISION_CREDENTIALS,
-            ConfirmSupervisionCredentialsActivity::class.java.name,
-        )
+        verifyConfirmPinActivityStarted()
         assertThat(widget.isChecked).isFalse()
         verify(mockSupervisionManager, never()).setSupervisionEnabled(false)
     }
@@ -147,10 +144,7 @@ class SupervisionMainSwitchPreferenceTest {
 
         widget.performClick()
 
-        verifyActivityStarted(
-            REQUEST_CODE_CONFIRM_SUPERVISION_CREDENTIALS,
-            ConfirmSupervisionCredentialsActivity::class.java.name,
-        )
+        verifyConfirmPinActivityStarted()
         assertThat(widget.isChecked).isTrue()
         verify(mockSupervisionManager, never()).setSupervisionEnabled(false)
     }
@@ -309,6 +303,26 @@ class SupervisionMainSwitchPreferenceTest {
             .startActivityForResult(intentCaptor.capture(), eq(requestCode), eq(null))
         assertThat(intentCaptor.allValues.size).isEqualTo(1)
         assertThat(intentCaptor.firstValue.component?.className).isEqualTo(className)
+    }
+
+    private fun verifyConfirmPinActivityStarted() {
+        val intentCaptor = argumentCaptor<Intent>()
+        verify(mockLifeCycleContext)
+            .startActivityForResult(
+                intentCaptor.capture(),
+                eq(REQUEST_CODE_CONFIRM_SUPERVISION_CREDENTIALS),
+                eq(null),
+            )
+        assertThat(intentCaptor.allValues.size).isEqualTo(1)
+        val intent = intentCaptor.firstValue
+        assertThat(intent.component?.className)
+            .isEqualTo(ConfirmSupervisionCredentialsActivity::class.java.name)
+        val extras = intent.extras
+        assertThat(extras).isNotNull()
+        assertThat(
+                extras!!.getBoolean(ConfirmSupervisionCredentialsActivity.EXTRA_FORCE_CONFIRMATION)
+            )
+            .isTrue()
     }
 
     companion object {
