@@ -2743,8 +2743,8 @@
     <string name="reduce_bright_colors_about_title" msgid="503655452544934393">"關於超暗功能"</string>
     <string name="reduce_bright_colors_preference_intro_text" msgid="3502290826747650566">"調暗螢幕，閱讀時更舒適"</string>
     <string name="reduce_bright_colors_intensity_preference_title" msgid="7455443033955118267">"亮度"</string>
-    <string name="reduce_bright_colors_intensity_start_label" msgid="930387498396426039">"較暗"</string>
-    <string name="reduce_bright_colors_intensity_end_label" msgid="1422600205484299860">"較亮"</string>
+    <string name="brightness_intensity_start_label" msgid="930387498396426039">"較暗"</string>
+    <string name="brightness_intensity_end_label" msgid="1422600205484299860">"較亮"</string>
     <string name="reduce_bright_colors_persist_preference_title" msgid="4368829654993343354">"裝置重新啟動後保持啟用狀態"</string>
     <string name="accessibilty_autoclick_preference_subtitle_short_delay" msgid="2981206111858937724">"{count,plural, =1{短 ({time} 秒)}other{短 ({time} 秒)}}"</string>
     <string name="accessibilty_autoclick_preference_subtitle_medium_delay" msgid="6867395206533459204">"{count,plural, =1{中 ({time} 秒)}other{中 ({time} 秒)}}"</string>

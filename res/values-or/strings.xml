@@ -2746,8 +2746,8 @@
     <string name="reduce_bright_colors_about_title" msgid="503655452544934393">"ଅତିରିକ୍ତ ଡିମ୍ ବିଷୟରେ"</string>
     <string name="reduce_bright_colors_preference_intro_text" msgid="3502290826747650566">"ଆପଣଙ୍କ ସ୍କ୍ରିନକୁ ଆହୁରି ଡିମ କରନ୍ତୁ ଯାହା ଫଳରେ ପଢ଼ିବା ଅଧିକ ଆରାମଦାୟକ ହେବ"</string>
     <string name="reduce_bright_colors_intensity_preference_title" msgid="7455443033955118267">"ତୀବ୍ରତା"</string>
-    <string name="reduce_bright_colors_intensity_start_label" msgid="930387498396426039">"ହାଲକା ଆଲୋକ"</string>
-    <string name="reduce_bright_colors_intensity_end_label" msgid="1422600205484299860">"ଉଜ୍ଜ୍ୱଳତର"</string>
+    <string name="brightness_intensity_start_label" msgid="930387498396426039">"ହାଲକା ଆଲୋକ"</string>
+    <string name="brightness_intensity_end_label" msgid="1422600205484299860">"ଉଜ୍ଜ୍ୱଳତର"</string>
     <string name="reduce_bright_colors_persist_preference_title" msgid="4368829654993343354">"ଡିଭାଇସ ରିଷ୍ଟାର୍ଟ ହେବା ପରେ ଚାଲୁ ରଖନ୍ତୁ"</string>
     <string name="accessibilty_autoclick_preference_subtitle_short_delay" msgid="2981206111858937724">"{count,plural, =1{କମ ({time} ସେକେଣ୍ଡ)}other{କମ ({time} ସେକେଣ୍ଡ)}}"</string>
     <string name="accessibilty_autoclick_preference_subtitle_medium_delay" msgid="6867395206533459204">"{count,plural, =1{ମଧ୍ୟମ ({time} ସେକେଣ୍ଡ)}other{ମଧ୍ୟମ ({time} ସେକେଣ୍ଡ)}}"</string>

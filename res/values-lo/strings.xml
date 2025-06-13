@@ -2739,8 +2739,8 @@
     <string name="reduce_bright_colors_about_title" msgid="503655452544934393">"ກ່ຽວກັບການຫຼຸດແສງເປັນພິເສດ"</string>
     <string name="reduce_bright_colors_preference_intro_text" msgid="3502290826747650566">"ກວດສອບວ່າທ່ານຫຼຸດແສງໜ້າຈໍຂອງທ່ານເພື່ອໃຫ້ອ່ານໄດ້ສະດວກສະບາຍຂຶ້ນ"</string>
     <string name="reduce_bright_colors_intensity_preference_title" msgid="7455443033955118267">"ຄວາມເຂັ້ມ"</string>
-    <string name="reduce_bright_colors_intensity_start_label" msgid="930387498396426039">"ມືດລົງ"</string>
-    <string name="reduce_bright_colors_intensity_end_label" msgid="1422600205484299860">"ແຈ້ງຂຶ້ນ"</string>
+    <string name="brightness_intensity_start_label" msgid="930387498396426039">"ມືດລົງ"</string>
+    <string name="brightness_intensity_end_label" msgid="1422600205484299860">"ແຈ້ງຂຶ້ນ"</string>
     <string name="reduce_bright_colors_persist_preference_title" msgid="4368829654993343354">"ເປີດໄວ້ຫຼັງຈາກຣີສະຕາດອຸປະກອນ"</string>
     <string name="accessibilty_autoclick_preference_subtitle_short_delay" msgid="2981206111858937724">"{count,plural, =1{ສັ້ນ ({time} ວິນາທີ)}other{ສັ້ນ ({time} ວິນາທີ)}}"</string>
     <string name="accessibilty_autoclick_preference_subtitle_medium_delay" msgid="6867395206533459204">"{count,plural, =1{ປານກາງ ({time} ວິນາທີ)}other{ປານກາງ ({time} ວິນາທີ)}}"</string>

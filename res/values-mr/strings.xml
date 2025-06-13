@@ -2743,8 +2743,8 @@
     <string name="reduce_bright_colors_about_title" msgid="503655452544934393">"आणखी डिमबद्दल"</string>
     <string name="reduce_bright_colors_preference_intro_text" msgid="3502290826747650566">"वाचण्यासाठी आणखी सुलभ होण्याकरिता तुमची स्क्रीन आणखी डिम करा"</string>
     <string name="reduce_bright_colors_intensity_preference_title" msgid="7455443033955118267">"तीव्रता"</string>
-    <string name="reduce_bright_colors_intensity_start_label" msgid="930387498396426039">"अधिक मंद"</string>
-    <string name="reduce_bright_colors_intensity_end_label" msgid="1422600205484299860">"अधिक ब्राइट"</string>
+    <string name="brightness_intensity_start_label" msgid="930387498396426039">"अधिक मंद"</string>
+    <string name="brightness_intensity_end_label" msgid="1422600205484299860">"अधिक ब्राइट"</string>
     <string name="reduce_bright_colors_persist_preference_title" msgid="4368829654993343354">"डिव्हाइस रीस्टार्ट झाल्यावर सुरू ठेवा"</string>
     <string name="accessibilty_autoclick_preference_subtitle_short_delay" msgid="2981206111858937724">"{count,plural, =1{लहान ({time} सेकंद)}other{लहान ({time} सेकंद)}}"</string>
     <string name="accessibilty_autoclick_preference_subtitle_medium_delay" msgid="6867395206533459204">"{count,plural, =1{मध्यम ({time} सेकंद)}other{मध्यम ({time} सेकंद)}}"</string>
