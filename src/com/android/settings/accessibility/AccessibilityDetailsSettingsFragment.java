@@ -41,6 +41,7 @@ import androidx.annotation.Nullable;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settings.R;
 import com.android.settings.accessibility.detail.a11yservice.A11yServicePreferenceFragment;
+import com.android.settings.accessibility.screenmagnification.ui.MagnificationPreferenceFragment;
 import com.android.settings.core.InstrumentedFragment;
 import com.android.settings.core.SubSettingLauncher;
 import com.android.settings.overlay.FeatureFactory;
@@ -104,7 +105,7 @@ public class AccessibilityDetailsSettingsFragment extends InstrumentedFragment {
     private LaunchFragmentArguments getSystemAccessibilitySettingsLaunchArguments(
             @Nullable ComponentName componentName) {
         if (MAGNIFICATION_COMPONENT_NAME.equals(componentName)) {
-            final String destination = ToggleScreenMagnificationPreferenceFragment.class.getName();
+            final String destination = MagnificationPreferenceFragment.class.getName();
             return new LaunchFragmentArguments(destination, /* arguments= */ null);
         }
 
