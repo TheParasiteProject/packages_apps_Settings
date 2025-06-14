@@ -47,8 +47,10 @@
     <string name="preview_pager_email_title" msgid="8767864657910457562">"El. paštas"</string>
     <string name="preview_pager_previous_button" msgid="607771113300838313">"Ankstesnė peržiūra"</string>
     <string name="preview_pager_next_button" msgid="8700907912508927271">"Kita peržiūra"</string>
-    <string name="font_size_make_smaller_desc" msgid="319927200356692406">"Sumažinti šrifto dydį"</string>
-    <string name="font_size_make_larger_desc" msgid="6739310980713118605">"Padidinti šrifto dydį"</string>
+    <!-- no translation found for font_size_make_smaller_desc (9149663537989624487) -->
+    <skip />
+    <!-- no translation found for font_size_make_larger_desc (5774611876657293550) -->
+    <skip />
     <string name="stay_awake_on_fold_title" msgid="6590454679898134221">"Visada"</string>
     <string name="stay_awake_on_fold_summary" msgid="1939963751585954262">"Priekinis rodinys įjungiamas sulenkus įrenginį"</string>
     <string name="stay_awake_on_lockscreen_title" msgid="8088456642083051068">"Perbraukite aukštyn ir tęskite"</string>
@@ -198,8 +200,7 @@
     <string name="locale_remove_menu" msgid="3521546263421387474">"Pašalinti"</string>
     <string name="add_a_language" msgid="2126220398077503271">"Pridėti kalbą"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"Kalba"</string>
-    <!-- no translation found for locale_picker_category_title (296835514014453679) -->
-    <skip />
+    <string name="locale_picker_category_title" msgid="296835514014453679">"Pageidaujamos kalbos"</string>
     <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"Programų kalbos"</string>
     <string name="app_locale_picker_summary" msgid="616928580653613998">"Pasirinkite kiekvienos programos kalbą"</string>
     <string name="app_locale_picker_title" msgid="2431448962911301366">"Programos kalba"</string>
@@ -226,13 +227,10 @@
     <string name="title_system_locale_addition" msgid="8218683660751479466">"Pridėti %s prie pageidaujamų kalbų?"</string>
     <string name="desc_system_locale_addition" msgid="3409917362651596070">"Tai nurodo programoms ir svetainėms, kad jūs taip pat teikiate pirmenybę šiai kalbai."</string>
     <string name="desc_notice_device_locale_and_region_settings_change" msgid="909261686577914396">"Įrenginyje bus naudojama <xliff:g id="LANGUAGE">%1$s</xliff:g>, o regionas bus pakeistas į: <xliff:g id="REGION">%2$s</xliff:g>."</string>
-    <string name="desc_notice_device_locale_settings_change" msgid="5012353615235634881">"Įrenginyje bus naudojama <xliff:g id="LANGUAGE">%s</xliff:g>."</string>
     <string name="dlg_desc_delete_preferred_default_locale" msgid="690828405078078513">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> bus pašalinta iš jūsų pageidaujamų kalbų"</string>
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"Keisti"</string>
-    <!-- no translation found for title_unavailable_locale (5382411204559213983) -->
-    <skip />
-    <!-- no translation found for desc_unavailable_locale (7223655766703116782) -->
-    <skip />
+    <string name="title_unavailable_locale" msgid="5382411204559213983">"Negalima nustatyti <xliff:g id="SELECTED_LANGUAGE">%s</xliff:g> kaip sistemos kalbos"</string>
+    <string name="desc_unavailable_locale" msgid="7223655766703116782">"Jūsų įrenginys nepalaiko šios kalbos, bet programos žinos, kad teikiate pirmenybę šiai kalbai"</string>
     <string name="locale_search_menu" msgid="297782694044826686">"Paieška"</string>
     <string name="language_and_region_title" msgid="8374151891112162767">"Kalba ir regionas"</string>
     <string name="language_selection_title" msgid="968179636453982415">"Pridėti kalbą"</string>
@@ -246,12 +244,9 @@
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"Pakeisti regioną į: <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g>?"</string>
     <string name="body_change_system_locale_region" msgid="9064318449821043189">"Jūsų įrenginyje <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g> bus išsaugota kaip sistemos kalba"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"Pasirinkite, kaip įrenginyje, svetainėse ir programose bus rodomi skaičiai"</string>
-    <!-- no translation found for preferred_locale_menu_up (4009560552099567485) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_down (1033373887552535585) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_remove (8547483341987864590) -->
-    <skip />
+    <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Perkelti aukštyn"</string>
+    <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Perkelti žemyn"</string>
+    <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Pašalinti"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Tinkamumo nustatymai pagal regioną"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Nustatyti vienetus ir numerių nuostatas"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Leiskite programoms žinoti jūsų tinkamumo nustatymus pagal regioną, kad galėtų suasmeninti funkcijas."</string>
@@ -290,10 +285,8 @@
     <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"Negalima pašalinti visų kalbų"</string>
     <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"Palikite bent vieną pageidaujamą kalbą"</string>
     <string name="locale_not_translated" msgid="3071618135527110152">"Nepasiekiama kaip sistemos kalba"</string>
-    <!-- no translation found for dlg_title_delete_preferred_locale (4167214348946940002) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_locale (4658301652628456858) -->
-    <skip />
+    <string name="dlg_title_delete_preferred_locale" msgid="4167214348946940002">"Pašalinti <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g>?"</string>
+    <string name="dlg_desc_delete_preferred_locale" msgid="4658301652628456858">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> bus pašalinta iš jūsų pageidaujamų kalbų. Vėliau galėsite vėl pridėti."</string>
     <string name="action_drag_label_move_up" msgid="3392196942330705015">"Perkelti aukštyn"</string>
     <string name="action_drag_label_move_down" msgid="9069518740553953426">"Perkelti žemyn"</string>
     <string name="action_drag_label_move_top" msgid="2430471023612171619">"Perkelti į viršų"</string>
@@ -473,8 +466,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks" msgid="1663906389456119842">"Ne dabar"</string>
     <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"Sutinku"</string>
     <string name="security_settings_fingerprint_rename_description" msgid="6301505700382531086">"Dukart palieskite, kad pervardytumėte"</string>
-    <!-- no translation found for security_settings_fingerprint_recognition_description (1805171116182647136) -->
-    <skip />
+    <string name="security_settings_fingerprint_recognition_description" msgid="1805171116182647136">"<xliff:g id="FP_NAME">%1$s</xliff:g> atpažintas"</string>
     <string name="setup_fingerprint_enroll_skip_title" msgid="2473807887676247264">"Praleisti piršto atspaudą?"</string>
     <string name="setup_fingerprint_enroll_skip_after_adding_lock_text" msgid="2412645723804450304">"Piršto atspaudo sąranka užtrunka tik minutę ar dvi. Jei praleisite šį veiksmą, vėliau piršto atspaudą galėsite pridėti nustatymuose."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_setup" msgid="6255210343107484206">"Kai rodoma ši piktograma, tapatybei nustatyti naudokite kontrolinį kodą, kaip prisijungdami prie programų ar patvirtindami pirkinį"</string>
@@ -1179,7 +1171,16 @@
     <string name="wifi_dpp_qr_code_is_not_valid_format" msgid="5190689503019328279">"QR kodas netinkamo formato"</string>
     <string name="retry" msgid="7542103800274026915">"Bandyti dar kartą"</string>
     <string name="wifi_shared" msgid="8850748923537589782">"Bendrinti su kitais įrenginio naudotojais"</string>
+    <string name="shared_message" msgid="2104244057926025072">"bendrinama"</string>
+    <string name="private_message" msgid="5897966950396765392">"privatu"</string>
+    <string name="wifi_conflict_dialog_confirm" msgid="4577313983128123779">"Patvirtinti"</string>
+    <string name="wifi_conflict_dialog_cancel" msgid="5200571850377525343">"Atšaukti"</string>
+    <string name="wifi_share_preference_title" msgid="6346200020322308703">"Tai yra bendrinamas tinklas"</string>
+    <string name="wifi_share_preference_summary" msgid="4356010425167713046">"Visi naudotojai, išskyrus naudotojus svečius, galės peržiūrėti, redaguoti ir ištrinti šį tinklą"</string>
+    <string name="wifi_conflict_dialog_title" msgid="1127530499054245755">"Perjungti į <xliff:g id="SHARED">%1$s</xliff:g> tinklą „<xliff:g id="NETWORK_NAME">%2$s</xliff:g>“?"</string>
+    <string name="wifi_conflict_dialog_message" msgid="3192435395074097168">"Šiuo metu esate prisijungę prie „<xliff:g id="SHARED_0">%1$s</xliff:g>“ tinklo tokiu pat pavadinimu. Perjungę atsijungsite nuo tinklo „<xliff:g id="SHARED_1">%2$s</xliff:g>“ ir vėl prisijungsite prie tinklo „<xliff:g id="PRIVATE">%3$s</xliff:g>“. Gali būti, kad laikinai neturėsite interneto."</string>
     <string name="wifi_unchanged" msgid="8026045290856150191">"(nepakeista)"</string>
+    <string name="wifi_allow_edit_configuration_title" msgid="3928254385019370063">"Leisti kitiems naudotojams redaguoti tinklo konfigūraciją"</string>
     <string name="wifi_unspecified" msgid="4561964943472312208">"Pasirinkite"</string>
     <string name="wifi_multiple_cert_added" msgid="2151019652853383776">"(Pridėti keli sertifikatai)"</string>
     <string name="wifi_use_system_certs" msgid="5587866698144996931">"Naudoti sistemos sertifikatus"</string>
@@ -2154,16 +2155,19 @@
     <string name="mouse_keys" msgid="6237254627808525540">"Pelės klavišai"</string>
     <string name="mouse_keys_main_title" msgid="3570638931365221460">"Naudoti pelės klavišus"</string>
     <string name="accessibility_mouse_keys_shortcut_title" msgid="7621635104533584115">"Pelės spartieji klavišai"</string>
-    <string name="mouse_keys_summary" msgid="7030731235143286467">"Naudodami klaviatūrą valdykite žymeklį"</string>
-    <string name="mouse_keys_max_speed_title" msgid="1788751803245422659">"Didžiausias greitis"</string>
+    <string name="mouse_keys_summary" msgid="6512910710030108693">"Naudodami klaviatūrą valdykite žymeklį"</string>
+    <string name="mouse_keys_max_speed_title" msgid="2651688711606971145">"Greitis"</string>
     <string name="mouse_keys_seek_bar_decrease_button_description" msgid="9077624857206032509">"Sumažinti"</string>
     <string name="mouse_keys_seek_bar_increase_button_description" msgid="2721662400858172203">"Padidinti"</string>
     <string name="mouse_reverse_vertical_scrolling" msgid="4067297170762853966">"Atvirkštinis slinkimas"</string>
     <string name="mouse_keys_use_primary_keys_title" msgid="525897583406210252">"Pagrindinių klavišų naudojimas"</string>
+    <!-- no translation found for mouse_keys_use_primary_keys_summary (5057949666957911577) -->
+    <skip />
     <string name="mouse_keys_reset_button_label" msgid="513004295662247230">"Nustatyti iš naujo"</string>
     <string name="mouse_keys_primary_keys_image_list_title" msgid="7470827693078490251">"Kaip naudoti pagrindinius klavišus"</string>
     <string name="mouse_keys_numpad_keys_image_list_title" msgid="6682341389811538017">"Kaip naudoti skaitmenų klaviatūrą"</string>
-    <string name="mouse_keys_numpad_keys_image_list_summary" msgid="2728318055237217919">"Skaitm. klav. visada bus naud., kai skaičių rež. įj."</string>
+    <!-- no translation found for mouse_keys_numpad_keys_image_list_summary (2186017679302722178) -->
+    <skip />
     <string name="mouse_reverse_vertical_scrolling_summary" msgid="3386655598642587942">"Slinkite aukštyn, kad pereitumėte puslapiu žemyn"</string>
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Slinkimas"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Kontroliuojamas slinkimas"</string>
@@ -2181,6 +2185,9 @@
     <string name="mouse_keys_release_summary" msgid="7209370896835993434">"Atleiskite pagrindinį pelės mygtuką klavišu „<xliff:g id="RELEASE_LABEL">%s</xliff:g>“"</string>
     <string name="mouse_keys_toggle_scroll_summary" msgid="7492663135290108272">"Perjunkite slinkimo režimą klavišu „<xliff:g id="RELEASE_LABEL_1">%1$s</xliff:g>“. Tai atlikus bus galima slinkti vaizdu aukštyn, žemyn, kairėn arba dešinėn klavišais „<xliff:g id="RELEASE_LABEL_2">%2$s</xliff:g>“"</string>
     <string name="mouse_keys_release2_summary" msgid="5504548339731577210">"Spustelėkite antrinį pelės mygtuką klavišu „<xliff:g id="RELEASE_2_LABEL">%s</xliff:g>“"</string>
+    <string name="mouse_keys_acceleration_seekbar_title" msgid="2329098889930361504">"Spartinimas"</string>
+    <string name="mouse_keys_acceleration_fast_icon_desc" msgid="4426188473271579794">"Spartus"</string>
+    <string name="mouse_keys_acceleration_slow_icon_desc" msgid="8370777074987200135">"Lėtas"</string>
     <string name="keyboard_shortcuts_helper" msgid="6934420811737731188">"Peržiūrėti sparčiuosius klavišus"</string>
     <string name="keyboard_shortcuts_helper_summary" msgid="5979507677602559203">"Rodyti sparčiųjų klavišų sąrašą"</string>
     <string name="language_and_input_for_work_category_title" msgid="2546950919124199743">"Darbo profilio klaviatūros ir įrankiai"</string>
@@ -2648,10 +2655,8 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"Sužinokite daugiau apie spalvų taisymą"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"Apie spalvų inversiją"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"Sužinokite daugiau apie spalvų inversiją"</string>
-    <!-- no translation found for accessibility_dark_theme_footer_learn_more_helper_link (7084955775821075280) -->
-    <skip />
-    <!-- no translation found for accessibility_dark_theme_preference_footer_content (4431044600779983609) -->
-    <skip />
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"Sužinokite daugiau apie tamsiąją temą"</string>
+    <string name="accessibility_dark_theme_preference_footer_content" msgid="4431044600779983609">"Kai kuriose programose gali būti nepalaikoma tamsioji tema išplėstame nustatyme. Jei kyla išvaizdos problemų, naudokite standartinį nustatymą."</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Rodyti subtitrus"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"Tik palaikomai programai"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Subtitrų dydis ir stilius"</string>
@@ -4501,8 +4506,10 @@
     <string name="screen_zoom_short_summary" msgid="756254364808639194">"Visų elementų padidinimas arba sumažinimas"</string>
     <string name="screen_zoom_keywords" msgid="5964023524422386592">"ekrano tankis, ekrano mastelio keitimas, mastelis, mastelio nustatymas"</string>
     <string name="screen_zoom_preview_title" msgid="5288355628444562735">"Peržiūra"</string>
-    <string name="screen_zoom_make_smaller_desc" msgid="1450649885198381123">"Sumažinti pateikties dydį"</string>
-    <string name="screen_zoom_make_larger_desc" msgid="7125594310562596457">"Padidinti pateikties dydį"</string>
+    <!-- no translation found for screen_zoom_make_smaller_desc (6268455784510593120) -->
+    <skip />
+    <!-- no translation found for screen_zoom_make_larger_desc (3458295276713085365) -->
+    <skip />
     <string name="disconnected" msgid="3469373726996129247">"Neprisijungta"</string>
     <string name="keyboard_disconnected" msgid="796053864561894531">"Neprijungta"</string>
     <string name="apps_summary" msgid="4007416751775414252">"Įdiegtų programų: <xliff:g id="COUNT">%1$d</xliff:g>"</string>
@@ -4522,10 +4529,8 @@
     <string name="disabled_by_policy_title_financed_device" msgid="2328740314082888228">"Užblokavo kredito kortelės teikėjas"</string>
     <string name="disabled_by_policy_title_biometric_parental_consent" msgid="2463673997797134678">"Reikalingas vienas iš tėvų"</string>
     <string name="disabled_by_policy_content_biometric_parental_consent" msgid="7124116806784305206">"Perduokite telefoną vienam iš tėvų, kad būtų pradėta sąranka"</string>
-    <!-- no translation found for disabled_by_policy_title_parental_controls (8875976588644052371) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_content_parental_controls (4648160125103768738) -->
-    <skip />
+    <string name="disabled_by_policy_title_parental_controls" msgid="8875976588644052371">"Apribota naudojant tėvų kontrolę"</string>
+    <string name="disabled_by_policy_content_parental_controls" msgid="4648160125103768738">"Šį nustatymą gali pakeisti tik asmuo, kuris tvarko tėvų kontrolę"</string>
     <string name="disabled_by_policy_parental_consent" msgid="9166060049019018978">"Perduokite telefoną vienam iš tėvų, kad būtų galima pakeisti šį nustatymą."</string>
     <string name="default_admin_support_msg" msgid="8816296554831532033">"Jei reikia daugiau informacijos, susisiekite su IT administratoriumi"</string>
     <string name="admin_support_more_info" msgid="8407433155725898290">"Daugiau išsamios informacijos"</string>
@@ -4641,8 +4646,7 @@
     <string name="battery_tips_card_action_button_check" msgid="1535140204105479318">"Tikrinti"</string>
     <string name="battery_tips_card_dismiss_button" msgid="1885756985544936618">"Supratau"</string>
     <string name="battery_tips_card_feedback_info" msgid="767117835675157298">"Ar šis pranešimas naudingas?"</string>
-    <!-- no translation found for battery_hints_warning_icon_a11y (709629805028175434) -->
-    <skip />
+    <string name="battery_hints_warning_icon_a11y" msgid="709629805028175434">"Akumuliatoriaus perspėjimo patarimai"</string>
     <string name="battery_tips_settings_summary_brightness" msgid="546145032616077783">"Įjunkite prisitaikantį šviesumą, kad pailgintumėte akumuliatoriaus veikimo laiką"</string>
     <string name="battery_tips_settings_summary_screen_timeout" msgid="556801426050962077">"Sumažinkite ekrano skirtąjį laiką, kad pailgintumėte akumuliatoriaus veikimo laiką"</string>
     <string name="battery_tips_apps_summary_always_high" msgid="6334519477067044920">"Programa „<xliff:g id="APP_LABEL">%1$s</xliff:g>“ naudojo daugiau akumuliatoriaus energijos"</string>
@@ -4970,8 +4974,6 @@
     <string name="autofill_reset_developer_options" msgid="6425613608979498608">"Nustatyti numatytąsias vertes iš naujo"</string>
     <string name="autofill_reset_developer_options_complete" msgid="1276741935956594965">"Automatinio pildymo kūrėjo parinktys nustatytos iš naujo"</string>
     <string name="location_category" msgid="3496759112306219062">"Vieta"</string>
-    <string name="location_indicator_settings_title" msgid="6655916258720093451">"Būsenos juostos vietos indikatorius"</string>
-    <string name="location_indicator_settings_description" msgid="2888022085372804021">"Rodyti visoms vietoms, įskaitant tinklą ir ryšį"</string>
     <string name="enable_gnss_raw_meas_full_tracking" msgid="1206679951510243341">"Priversti vykdyti visus GNSS matavimus"</string>
     <string name="enable_gnss_raw_meas_full_tracking_summary" msgid="3841463141138247167">"Stebėti visas GNSS konferencijas ir visus dažnius netaikant darbo ciklų"</string>
     <string name="input_method_category" msgid="2252659253631639005">"Įvesties metodas"</string>
@@ -5186,7 +5188,8 @@
     <string name="title_satellite_setting_connectivity" msgid="488626710934668313">"Palydovinis ryšys"</string>
     <string name="description_satellite_setting_connectivity" msgid="7337311015334186655">"palydovinis ryšys"</string>
     <string name="description_satellite_setting_messaging" msgid="4367494645429198805">"susirašinėjimas palydoviniais pranešimais"</string>
-    <string name="title_have_satellite_data_plan" msgid="5614932315409789011">"Duomenų naudojimas įtrauktas į jūsų paskyrą"</string>
+    <!-- no translation found for title_have_satellite_data_plan (1101741256080690699) -->
+    <skip />
     <string name="category_title_satellite_supported_apps" msgid="8445659428502119518">"Telefone palaikomos programos"</string>
     <string name="title_satellite_supported_app_list_entry" msgid="891155574898209245">"Žr. visas palydovo palaikomas programas"</string>
     <string name="title_satellite_supported_app_list_page" msgid="318806852682483512">"Telefone palaikomos programos"</string>
@@ -5820,6 +5823,8 @@
     <string name="audio_streams_no_password_summary" msgid="8976357323034830144">"Slaptažodis nereikalingas"</string>
     <string name="audio_streams_dialog_learn_more" msgid="6711241053442211345">"Sužinokite daugiau"</string>
     <string name="audio_streams_dialog_cannot_play" msgid="1358828316927479091">"Nepavyksta paleisti šio garso srauto „<xliff:g id="DEVICE_NAME">%1$s</xliff:g>“."</string>
+    <!-- no translation found for audio_streams_dialog_cannot_play_with_link (3433981166714801237) -->
+    <skip />
     <string name="audio_streams_listening_now" msgid="4205614429222949176">"Klausoma dabar"</string>
     <string name="audio_streams_present_now" msgid="7519818719382756366">"Srautas pristabdytas"</string>
     <string name="audio_streams_media_service_notification_leave_broadcast_text" msgid="4938656134300913647">"Sustabdyti klausymą"</string>
@@ -5859,7 +5864,7 @@
     <string name="contacts_storage_set_default_account_error_message" msgid="849847649756411393">"Nustatant numatytąją paskyrą įvyko klaida"</string>
     <string name="contacts_storage_no_account_set_summary" msgid="7454973781666475276">"Numatytoji paskyra nenustatyta"</string>
     <string name="contacts_storage_local_account_summary" msgid="5034805108128685712">"Tik įrenginys"</string>
-    <string name="contacts_storage_account_title" msgid="7334522539665856395">"Įrenginys ir %1$s"</string>
+    <string name="contacts_storage_account_title" msgid="7334522539665856395">"Įrenginys ir „%1$s“"</string>
     <string name="contacts_storage_first_time_add_account_message" msgid="5161093169928132323">"Jei norite pradėti, pridėkite paskyrą"</string>
     <string name="contacts_storage_account_category_title" msgid="6427149157377815586">"Kur išsaugoti kontaktus"</string>
     <string name="search_gesture_feature_title" msgid="7037117019612710960">"Paieška apibrėžiant"</string>
@@ -5868,40 +5873,38 @@
     <string name="supervision_settings_title" msgid="8507163323870367711">"Tėvų kontrolė"</string>
     <string name="supervision_settings_summary" msgid="6304257872307136073">"Pagrindinės skaitmeninės taisyklės ir įrenginio naudojimo laiko apribojimai"</string>
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"Nustatyti PIN kodą"</string>
-    <!-- no translation found for keywords_supervision_settings (43064288661561602) -->
-    <skip />
+    <string name="keywords_supervision_settings" msgid="43064288661561602">"priežiūra, tėvų kontrolė, tėvai, priežiūros PIN kodas, PIN kodas"</string>
     <string name="supervision_pin_management_preference_title" msgid="7721501202320841845">"PIN kodo tvarkymas"</string>
-    <!-- no translation found for supervision_pin_management_preference_keywords (5034450635706621750) -->
-    <skip />
+    <string name="supervision_pin_management_preference_keywords" msgid="5034450635706621750">"Tėvų PIN kodas, tėvų kontrolės PIN kodas"</string>
     <string name="supervision_pin_management_preference_summary_add" msgid="2247921267270577374">"Pridėkite atkūrimo el. pašto adresą"</string>
     <string name="supervision_pin_management_preference_summary_verify_recovery" msgid="5072554239108915119">"Patvirtinkite atkūrimo el. pašto adresą"</string>
     <string name="supervision_change_pin_preference_title" msgid="2288584039438231801">"Keisti PIN kodą"</string>
     <string name="supervision_add_forgot_pin_preference_title" msgid="8939945404255748516">"Pamiršau PIN kodą"</string>
-    <!-- no translation found for supervision_auth_prompt_forgot_pin_button_label (1019337828884793557) -->
-    <skip />
+    <string name="supervision_auth_prompt_forgot_pin_button_label" msgid="1019337828884793557">"Pamiršote PIN kodą?"</string>
     <string name="supervision_update_recovery_email_preference_title" msgid="2057393838251915087">"Atnaujinti atkūrimo el. pašto adresą"</string>
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Ištrinti PIN"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Atkūrimo el. pašto adreso pridėjimas"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"El. pašto adreso patvirtinimas"</string>
-    <!-- no translation found for supervision_web_content_filters_title (2412562442507104921) -->
+    <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Svetainės turinio filtrai"</string>
+    <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Svetainių filtrai, blokuojamos svetainės, naršyklės filtrai, blokuoti nepadoraus turinio svetaines, filtruoti svetaines, blokuoti paieškos rezultatus, filtruoti nepadoraus turinio paieškos rezultatus, turinio apribojimai"</string>
+    <!-- no translation found for supervision_web_content_filters_top_intro (8056274290725144441) -->
     <skip />
-    <!-- no translation found for supervision_web_content_filters_keywords (8469519676189544447) -->
-    <skip />
-    <string name="supervision_web_content_filters_top_intro" msgid="5264773769840566499">"Blokuokite suaugusiesiems skirtą turinį svetainėse ir paieškos rezultatuose palaikomose programose šiame įrenginyje. Nepalaikomose programose vis tiek gali būti rodomas nepadorus turinys."</string>
     <string name="supervision_web_content_filters_browser_title" msgid="8737341514264129889">"Svetainės"</string>
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Blokuoti nepadoraus turinio svetaines"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Paieškos rezultatai"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Filtruoti nepadorius paieškos rezultatus"</string>
-    <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
+    <!-- no translation found for supervision_web_content_filters_switch_summary (2095166099345288321) -->
     <skip />
+    <!-- no translation found for supervision_web_content_filters_footer_title (1741897040916039165) -->
+    <skip />
+    <string name="supervision_full_screen_pin_verification_title" msgid="7685279446792771815">"Įveskite tėvų kontrolės PIN kodą"</string>
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Tėvų kontrolės PIN kodo nustatymas"</string>
     <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"PIN kodo patvirtinimas"</string>
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN kodas atnaujintas"</string>
     <string name="supervision_promo_footer_action_button_description" msgid="7617359721703338141">"Atidaryti programą"</string>
     <string name="supervision_delete_pin_confirm_header" msgid="8499276643990949268">"Ištrinti PIN?"</string>
-    <string name="supervision_delete_pin_confirm_message" msgid="5482080400973042178">"Tai atlikus bus ištrintas dabartinis PIN kodas visiems šio įrenginio naudotojams ir išjungti jūsų nustatyti valdikliai. Šio veiksmo anuliuoti negalima."</string>
-    <string name="supervision_delete_pin_supervision_enabled_header" msgid="2072311894107038402">"Pirmiausia pristabdykite valdiklius kituose profiliuose"</string>
-    <string name="supervision_delete_pin_supervision_enabled_message" msgid="5643922966568203196">"Jei norite tęsti šio PIN kodo ištrynimą ir iš naujo nustatyti priežiūros nustatymus, pristabdykite valdiklius visuose kituose profiliuose."</string>
+    <!-- no translation found for supervision_delete_pin_supervision_enabled_header (8999197100719062891) -->
+    <skip />
     <string name="supervision_delete_pin_error_header" msgid="1271034883245391839">"PIN kodo ištrinti negalima"</string>
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Bandant ištrinti PIN kodą įvyko klaida."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"„<xliff:g id="FEATURE">%1$s</xliff:g>“ animacija"</string>

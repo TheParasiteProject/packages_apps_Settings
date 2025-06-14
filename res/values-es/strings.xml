@@ -47,8 +47,10 @@
     <string name="preview_pager_email_title" msgid="8767864657910457562">"Correo"</string>
     <string name="preview_pager_previous_button" msgid="607771113300838313">"Vista previa anterior"</string>
     <string name="preview_pager_next_button" msgid="8700907912508927271">"Vista previa siguiente"</string>
-    <string name="font_size_make_smaller_desc" msgid="319927200356692406">"Reducir tamaño de fuente"</string>
-    <string name="font_size_make_larger_desc" msgid="6739310980713118605">"Aumentar tamaño de fuente"</string>
+    <!-- no translation found for font_size_make_smaller_desc (9149663537989624487) -->
+    <skip />
+    <!-- no translation found for font_size_make_larger_desc (5774611876657293550) -->
+    <skip />
     <string name="stay_awake_on_fold_title" msgid="6590454679898134221">"Siempre"</string>
     <string name="stay_awake_on_fold_summary" msgid="1939963751585954262">"La pantalla frontal se enciende cuando pliegas el dispositivo"</string>
     <string name="stay_awake_on_lockscreen_title" msgid="8088456642083051068">"Deslizar hacia arriba para continuar"</string>
@@ -198,8 +200,7 @@
     <string name="locale_remove_menu" msgid="3521546263421387474">"Quitar"</string>
     <string name="add_a_language" msgid="2126220398077503271">"Añadir un idioma"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"Idioma"</string>
-    <!-- no translation found for locale_picker_category_title (296835514014453679) -->
-    <skip />
+    <string name="locale_picker_category_title" msgid="296835514014453679">"Idiomas preferidos"</string>
     <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"Idiomas de las aplicaciones"</string>
     <string name="app_locale_picker_summary" msgid="616928580653613998">"Selecciona el idioma de cada aplicación"</string>
     <string name="app_locale_picker_title" msgid="2431448962911301366">"Idioma de la aplicación"</string>
@@ -225,17 +226,11 @@
     <string name="title_change_system_locale" msgid="4102991236063984803">"¿Cambiar el idioma del sistema a %s?"</string>
     <string name="title_system_locale_addition" msgid="8218683660751479466">"¿Añadir %s a los idiomas preferidos?"</string>
     <string name="desc_system_locale_addition" msgid="3409917362651596070">"Esto permite que los sitios web y apps sepan que también prefieres este idioma."</string>
-    <!-- no translation found for desc_notice_device_locale_and_region_settings_change (909261686577914396) -->
-    <skip />
-    <!-- no translation found for desc_notice_device_locale_settings_change (5012353615235634881) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_default_locale (690828405078078513) -->
-    <skip />
+    <string name="desc_notice_device_locale_and_region_settings_change" msgid="909261686577914396">"Tu dispositivo usará <xliff:g id="LANGUAGE">%1$s</xliff:g> y tu región cambiará a <xliff:g id="REGION">%2$s</xliff:g>."</string>
+    <string name="dlg_desc_delete_preferred_default_locale" msgid="690828405078078513">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> se quitará de tus idiomas preferidos"</string>
     <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"Cambiar"</string>
-    <!-- no translation found for title_unavailable_locale (5382411204559213983) -->
-    <skip />
-    <!-- no translation found for desc_unavailable_locale (7223655766703116782) -->
-    <skip />
+    <string name="title_unavailable_locale" msgid="5382411204559213983">"No se puede configurar <xliff:g id="SELECTED_LANGUAGE">%s</xliff:g> como idioma del sistema"</string>
+    <string name="desc_unavailable_locale" msgid="7223655766703116782">"Tu dispositivo no admite este idioma, pero las aplicaciones sabrán que lo prefieres"</string>
     <string name="locale_search_menu" msgid="297782694044826686">"Buscar"</string>
     <string name="language_and_region_title" msgid="8374151891112162767">"Idioma y región"</string>
     <string name="language_selection_title" msgid="968179636453982415">"Añadir un idioma"</string>
@@ -249,12 +244,9 @@
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"¿Cambiar región a <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g>?"</string>
     <string name="body_change_system_locale_region" msgid="9064318449821043189">"El idioma del dispositivo seguirá siendo el <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g>"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"Elige cómo se muestran los números en tu dispositivo, sitios web y aplicaciones"</string>
-    <!-- no translation found for preferred_locale_menu_up (4009560552099567485) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_down (1033373887552535585) -->
-    <skip />
-    <!-- no translation found for preferred_locale_menu_remove (8547483341987864590) -->
-    <skip />
+    <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Mover hacia arriba"</string>
+    <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Mover hacia abajo"</string>
+    <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Quitar"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Preferencias regionales"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Define preferencias de unidades y números"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Permite que las aplicaciones sepan tus preferencias regionales para que puedan personalizar tu experiencia."</string>
@@ -293,10 +285,8 @@
     <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"No puedes quitar todos los idiomas"</string>
     <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"Guarda al menos un idioma preferido"</string>
     <string name="locale_not_translated" msgid="3071618135527110152">"No está disponible como idioma del sistema"</string>
-    <!-- no translation found for dlg_title_delete_preferred_locale (4167214348946940002) -->
-    <skip />
-    <!-- no translation found for dlg_desc_delete_preferred_locale (4658301652628456858) -->
-    <skip />
+    <string name="dlg_title_delete_preferred_locale" msgid="4167214348946940002">"¿Quitar <xliff:g id="REMOVED_LANGUAGE">%s</xliff:g>?"</string>
+    <string name="dlg_desc_delete_preferred_locale" msgid="4658301652628456858">"<xliff:g id="REMOVED_LANGUAGE">%s</xliff:g> se quitará de tus idiomas preferidos. Podrás volver a añadirlo más adelante."</string>
     <string name="action_drag_label_move_up" msgid="3392196942330705015">"Mover hacia arriba"</string>
     <string name="action_drag_label_move_down" msgid="9069518740553953426">"Mover hacia abajo"</string>
     <string name="action_drag_label_move_top" msgid="2430471023612171619">"Mover al principio"</string>
@@ -476,8 +466,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_no_thanks" msgid="1663906389456119842">"Ahora no"</string>
     <string name="security_settings_fingerprint_enroll_introduction_agree" msgid="4068276083536421828">"Acepto"</string>
     <string name="security_settings_fingerprint_rename_description" msgid="6301505700382531086">"Toca dos veces para cambiar el nombre"</string>
-    <!-- no translation found for security_settings_fingerprint_recognition_description (1805171116182647136) -->
-    <skip />
+    <string name="security_settings_fingerprint_recognition_description" msgid="1805171116182647136">"<xliff:g id="FP_NAME">%1$s</xliff:g> reconocida"</string>
     <string name="setup_fingerprint_enroll_skip_title" msgid="2473807887676247264">"¿Saltar la configuración de huella digital?"</string>
     <string name="setup_fingerprint_enroll_skip_after_adding_lock_text" msgid="2412645723804450304">"Solo tardarás un par de minutos en configurar la huella digital. Si te saltas este paso, puedes añadir tu huella digital en otro momento desde los ajustes."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_setup" msgid="6255210343107484206">"Cuando veas este icono, usa tu huella para autenticarte, como al iniciar sesión en aplicaciones o aprobar compras"</string>
@@ -1182,7 +1171,25 @@
     <string name="wifi_dpp_qr_code_is_not_valid_format" msgid="5190689503019328279">"El formato del código QR no es válido"</string>
     <string name="retry" msgid="7542103800274026915">"Reintentar"</string>
     <string name="wifi_shared" msgid="8850748923537589782">"Compartir con otros usuarios del dispositivo"</string>
+    <!-- no translation found for shared_message (2104244057926025072) -->
+    <skip />
+    <!-- no translation found for private_message (5897966950396765392) -->
+    <skip />
+    <!-- no translation found for wifi_conflict_dialog_confirm (4577313983128123779) -->
+    <skip />
+    <!-- no translation found for wifi_conflict_dialog_cancel (5200571850377525343) -->
+    <skip />
+    <!-- no translation found for wifi_share_preference_title (6346200020322308703) -->
+    <skip />
+    <!-- no translation found for wifi_share_preference_summary (4356010425167713046) -->
+    <skip />
+    <!-- no translation found for wifi_conflict_dialog_title (1127530499054245755) -->
+    <skip />
+    <!-- no translation found for wifi_conflict_dialog_message (3192435395074097168) -->
+    <skip />
     <string name="wifi_unchanged" msgid="8026045290856150191">"(no modificada)"</string>
+    <!-- no translation found for wifi_allow_edit_configuration_title (3928254385019370063) -->
+    <skip />
     <string name="wifi_unspecified" msgid="4561964943472312208">"Selecciona una opción"</string>
     <string name="wifi_multiple_cert_added" msgid="2151019652853383776">"(Se han añadido varios certificados)"</string>
     <string name="wifi_use_system_certs" msgid="5587866698144996931">"Usar certificados del sistema"</string>
@@ -2157,16 +2164,21 @@
     <string name="mouse_keys" msgid="6237254627808525540">"Teclas de ratón"</string>
     <string name="mouse_keys_main_title" msgid="3570638931365221460">"Usar Teclas de ratón"</string>
     <string name="accessibility_mouse_keys_shortcut_title" msgid="7621635104533584115">"Combinación de teclas del ratón"</string>
-    <string name="mouse_keys_summary" msgid="7030731235143286467">"Usa el teclado para controlar el puntero"</string>
-    <string name="mouse_keys_max_speed_title" msgid="1788751803245422659">"Velocidad máxima"</string>
+    <!-- no translation found for mouse_keys_summary (6512910710030108693) -->
+    <skip />
+    <!-- no translation found for mouse_keys_max_speed_title (2651688711606971145) -->
+    <skip />
     <string name="mouse_keys_seek_bar_decrease_button_description" msgid="9077624857206032509">"Bajar"</string>
     <string name="mouse_keys_seek_bar_increase_button_description" msgid="2721662400858172203">"Subir"</string>
     <string name="mouse_reverse_vertical_scrolling" msgid="4067297170762853966">"Desplazamiento invertido"</string>
     <string name="mouse_keys_use_primary_keys_title" msgid="525897583406210252">"Usar teclas principales"</string>
+    <!-- no translation found for mouse_keys_use_primary_keys_summary (5057949666957911577) -->
+    <skip />
     <string name="mouse_keys_reset_button_label" msgid="513004295662247230">"Restablecer ajustes"</string>
     <string name="mouse_keys_primary_keys_image_list_title" msgid="7470827693078490251">"Cómo usar las teclas principales"</string>
     <string name="mouse_keys_numpad_keys_image_list_title" msgid="6682341389811538017">"Cómo usar un teclado numérico"</string>
-    <string name="mouse_keys_numpad_keys_image_list_summary" msgid="2728318055237217919">"El teclado numérico se usa siempre que se active Bloq Num"</string>
+    <!-- no translation found for mouse_keys_numpad_keys_image_list_summary (2186017679302722178) -->
+    <skip />
     <string name="mouse_reverse_vertical_scrolling_summary" msgid="3386655598642587942">"Desplázate hacia arriba para mover la página hacia abajo"</string>
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Desplazamiento"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Desplazamiento controlado"</string>
@@ -2184,6 +2196,12 @@
     <string name="mouse_keys_release_summary" msgid="7209370896835993434">"Usa la tecla <xliff:g id="RELEASE_LABEL">%s</xliff:g> para soltar el botón principal del ratón"</string>
     <string name="mouse_keys_toggle_scroll_summary" msgid="7492663135290108272">"Usa la tecla <xliff:g id="RELEASE_LABEL_1">%1$s</xliff:g> para activar o desactivar el modo de desplazamiento. Con esta opción, las teclas <xliff:g id="RELEASE_LABEL_2">%2$s</xliff:g> permiten desplazar la vista hacia arriba, abajo, izquierda o derecha."</string>
     <string name="mouse_keys_release2_summary" msgid="5504548339731577210">"Usa la tecla <xliff:g id="RELEASE_2_LABEL">%s</xliff:g> para pulsar el botón secundario del ratón"</string>
+    <!-- no translation found for mouse_keys_acceleration_seekbar_title (2329098889930361504) -->
+    <skip />
+    <!-- no translation found for mouse_keys_acceleration_fast_icon_desc (4426188473271579794) -->
+    <skip />
+    <!-- no translation found for mouse_keys_acceleration_slow_icon_desc (8370777074987200135) -->
+    <skip />
     <string name="keyboard_shortcuts_helper" msgid="6934420811737731188">"Ver combinaciones de teclas"</string>
     <string name="keyboard_shortcuts_helper_summary" msgid="5979507677602559203">"Muestra la lista de combinaciones de teclas"</string>
     <string name="language_and_input_for_work_category_title" msgid="2546950919124199743">"Perfiles de trabajo y herramientas"</string>
@@ -2246,11 +2264,9 @@
     <string name="gesture_button_next" msgid="695288092704187356">"Siguiente"</string>
     <string name="gesture_button_restart" msgid="1895850891992530133">"Reiniciar"</string>
     <string name="gesture_button_done" msgid="6387900351203032188">"Hecho"</string>
-    <!-- no translation found for action_corner_title (7411160165577367757) -->
-    <skip />
+    <string name="action_corner_title" msgid="7411160165577367757">"Personalizar accesos directos de esquina"</string>
     <string name="action_corner_summary" msgid="695618538930535335">"Usa los cursores para desplazarte por el sistema"</string>
-    <!-- no translation found for action_corner_intro (2170609118659718140) -->
-    <skip />
+    <string name="action_corner_intro" msgid="2170609118659718140">"Elige las siguientes áreas para personalizar los accesos directos de esquina"</string>
     <string name="action_corner_bottom_left_title" msgid="2857258272736432174">"Esquina inferior izquierda"</string>
     <string name="action_corner_bottom_right_title" msgid="7222233500548465684">"Esquina inferior derecha"</string>
     <string name="action_corner_top_left_title" msgid="4633975226092344210">"Esquina superior izquierda"</string>
@@ -2410,7 +2426,7 @@
     <string name="accessibility_magnification_cursor_following_title" msgid="29531257984012743">"Seguimiento del cursor"</string>
     <string name="accessibility_magnification_cursor_following_header" msgid="7283095798622223509">"Elige cómo sigue el cursor la función de ampliación."</string>
     <string name="accessibility_magnification_cursor_following_unavailable_summary" msgid="1683880243856242269">"No disponible cuando se amplía solo parte de la pantalla"</string>
-    <string name="accessibility_magnification_cursor_following_continuous" msgid="1119319218662522794">"Mover la pantalla continuamente mientras se mueve el cursor"</string>
+    <string name="accessibility_magnification_cursor_following_continuous" msgid="1119319218662522794">"Mueve la pantalla continuamente mientras se mueve el cursor"</string>
     <string name="accessibility_magnification_cursor_following_center" msgid="3504798009192014460">"Mover la pantalla manteniendo el cursor en el centro"</string>
     <string name="accessibility_magnification_cursor_following_edge" msgid="8675207762416655758">"Mover la pantalla cuando el cursor toque los bordes"</string>
     <string name="accessibility_screen_magnification_follow_typing_title" msgid="494025442124701045">"Seguir escritura"</string>
@@ -4506,8 +4522,10 @@
     <string name="screen_zoom_short_summary" msgid="756254364808639194">"Amplía o reduce todo"</string>
     <string name="screen_zoom_keywords" msgid="5964023524422386592">"densidad de pantalla, zoom, escala"</string>
     <string name="screen_zoom_preview_title" msgid="5288355628444562735">"Vista previa"</string>
-    <string name="screen_zoom_make_smaller_desc" msgid="1450649885198381123">"Reducir tamaño de visualización"</string>
-    <string name="screen_zoom_make_larger_desc" msgid="7125594310562596457">"Aumentar tamaño de visualización"</string>
+    <!-- no translation found for screen_zoom_make_smaller_desc (6268455784510593120) -->
+    <skip />
+    <!-- no translation found for screen_zoom_make_larger_desc (3458295276713085365) -->
+    <skip />
     <string name="disconnected" msgid="3469373726996129247">"No conectado"</string>
     <string name="keyboard_disconnected" msgid="796053864561894531">"No conectado"</string>
     <string name="apps_summary" msgid="4007416751775414252">"<xliff:g id="COUNT">%1$d</xliff:g> aplicaciones instaladas"</string>
@@ -4527,10 +4545,8 @@
     <string name="disabled_by_policy_title_financed_device" msgid="2328740314082888228">"Bloqueado por tu entidad de crédito"</string>
     <string name="disabled_by_policy_title_biometric_parental_consent" msgid="2463673997797134678">"Necesitas a tu padre o madre"</string>
     <string name="disabled_by_policy_content_biometric_parental_consent" msgid="7124116806784305206">"Pásale el teléfono a tu padre o a tu madre para empezar la configuración"</string>
-    <!-- no translation found for disabled_by_policy_title_parental_controls (8875976588644052371) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_content_parental_controls (4648160125103768738) -->
-    <skip />
+    <string name="disabled_by_policy_title_parental_controls" msgid="8875976588644052371">"Restringido por controles parentales"</string>
+    <string name="disabled_by_policy_content_parental_controls" msgid="4648160125103768738">"Solo la persona que gestiona tus controles parentales puede cambiar este ajuste"</string>
     <string name="disabled_by_policy_parental_consent" msgid="9166060049019018978">"Pásale el teléfono a tu padre o a tu madre para que permitan cambiar este ajuste."</string>
     <string name="default_admin_support_msg" msgid="8816296554831532033">"Para obtener más información, ponte en contacto con tu administrador de TI"</string>
     <string name="admin_support_more_info" msgid="8407433155725898290">"Más información"</string>
@@ -4975,8 +4991,6 @@
     <string name="autofill_reset_developer_options" msgid="6425613608979498608">"Restablecer valores predeterminados"</string>
     <string name="autofill_reset_developer_options_complete" msgid="1276741935956594965">"Se ha restablecido la opción de autocompletar las opciones del desarrollador"</string>
     <string name="location_category" msgid="3496759112306219062">"Ubicación"</string>
-    <string name="location_indicator_settings_title" msgid="6655916258720093451">"Indicador de ubicación en la barra de estado"</string>
-    <string name="location_indicator_settings_description" msgid="2888022085372804021">"Mostrar con todas las ubicaciones, incluidas la red y la conectividad"</string>
     <string name="enable_gnss_raw_meas_full_tracking" msgid="1206679951510243341">"Forzar mediciones de GNSS completas"</string>
     <string name="enable_gnss_raw_meas_full_tracking_summary" msgid="3841463141138247167">"Registra todas las frecuencias y constelaciones de GNSS sin ciclo de servicio"</string>
     <string name="input_method_category" msgid="2252659253631639005">"Método de entrada"</string>
@@ -5191,7 +5205,8 @@
     <string name="title_satellite_setting_connectivity" msgid="488626710934668313">"Conectividad por satélite"</string>
     <string name="description_satellite_setting_connectivity" msgid="7337311015334186655">"conectividad por satélite"</string>
     <string name="description_satellite_setting_messaging" msgid="4367494645429198805">"mensajes por satélite"</string>
-    <string name="title_have_satellite_data_plan" msgid="5614932315409789011">"El uso de datos está incluido en tu cuenta"</string>
+    <!-- no translation found for title_have_satellite_data_plan (1101741256080690699) -->
+    <skip />
     <string name="category_title_satellite_supported_apps" msgid="8445659428502119518">"Aplicaciones compatibles en tu teléfono"</string>
     <string name="title_satellite_supported_app_list_entry" msgid="891155574898209245">"Ver todas las aplicaciones compatibles con el satélite"</string>
     <string name="title_satellite_supported_app_list_page" msgid="318806852682483512">"Aplicaciones compatibles en tu teléfono"</string>
@@ -5823,6 +5838,8 @@
     <string name="audio_streams_no_password_summary" msgid="8976357323034830144">"Sin contraseña"</string>
     <string name="audio_streams_dialog_learn_more" msgid="6711241053442211345">"Más información"</string>
     <string name="audio_streams_dialog_cannot_play" msgid="1358828316927479091">"No se puede reproducir esta emisión de audio en <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <!-- no translation found for audio_streams_dialog_cannot_play_with_link (3433981166714801237) -->
+    <skip />
     <string name="audio_streams_listening_now" msgid="4205614429222949176">"Escuchando ahora"</string>
     <string name="audio_streams_present_now" msgid="7519818719382756366">"Emisión en pausa"</string>
     <string name="audio_streams_media_service_notification_leave_broadcast_text" msgid="4938656134300913647">"Dejar de escuchar"</string>
@@ -5869,8 +5886,7 @@
     <string name="search_gesture_feature_summary" msgid="1793056495030564014">"Mantén pulsado el botón de inicio o la barra de navegación para buscar usando el contenido de tu pantalla."</string>
     <string name="device_detail_icon_content_description" msgid="6699151424374841937">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>. Configura los detalles del dispositivo."</string>
     <string name="supervision_settings_title" msgid="8507163323870367711">"Controles parentales"</string>
-    <!-- no translation found for supervision_settings_summary (6304257872307136073) -->
-    <skip />
+    <string name="supervision_settings_summary" msgid="6304257872307136073">"Reglas digitales básicas y límites de tiempo de pantalla"</string>
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"Configurar PIN"</string>
     <!-- no translation found for keywords_supervision_settings (43064288661561602) -->
     <skip />
@@ -5891,11 +5907,16 @@
     <skip />
     <!-- no translation found for supervision_web_content_filters_keywords (8469519676189544447) -->
     <skip />
-    <string name="supervision_web_content_filters_top_intro" msgid="5264773769840566499">"Bloquea el contenido no apto para menores en sitios web y en los resultados de búsqueda de las aplicaciones compatibles de este dispositivo. Las aplicaciones no compatibles pueden seguir mostrando contenido explícito."</string>
+    <!-- no translation found for supervision_web_content_filters_top_intro (8056274290725144441) -->
+    <skip />
     <string name="supervision_web_content_filters_browser_title" msgid="8737341514264129889">"Sitios web"</string>
     <string name="supervision_web_content_filters_browser_filter_title" msgid="7957976669412075070">"Bloquear sitios con contenido explícito"</string>
     <string name="supervision_web_content_filters_search_title" msgid="8608480392956106029">"Resultados de búsqueda"</string>
     <string name="supervision_web_content_filters_search_filter_title" msgid="4212134055017429017">"Excluir resultados de búsqueda con contenido explícito"</string>
+    <!-- no translation found for supervision_web_content_filters_switch_summary (2095166099345288321) -->
+    <skip />
+    <!-- no translation found for supervision_web_content_filters_footer_title (1741897040916039165) -->
+    <skip />
     <!-- no translation found for supervision_full_screen_pin_verification_title (7685279446792771815) -->
     <skip />
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"Configurar un PIN de controles parentales"</string>
@@ -5903,9 +5924,8 @@
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"PIN actualizado"</string>
     <string name="supervision_promo_footer_action_button_description" msgid="7617359721703338141">"Abrir aplicación"</string>
     <string name="supervision_delete_pin_confirm_header" msgid="8499276643990949268">"¿Eliminar PIN?"</string>
-    <string name="supervision_delete_pin_confirm_message" msgid="5482080400973042178">"Se eliminará tu PIN para todos los usuarios de este dispositivo y se inhabilitarán los controles que hayas configurado. Esta acción no se puede deshacer."</string>
-    <string name="supervision_delete_pin_supervision_enabled_header" msgid="2072311894107038402">"Pausa los controles en otros perfiles primero"</string>
-    <string name="supervision_delete_pin_supervision_enabled_message" msgid="5643922966568203196">"Para eliminar este PIN y borrar los ajustes de supervisión, pausa los controles del resto de los perfiles."</string>
+    <!-- no translation found for supervision_delete_pin_supervision_enabled_header (8999197100719062891) -->
+    <skip />
     <string name="supervision_delete_pin_error_header" msgid="1271034883245391839">"El PIN no se puede eliminar"</string>
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Se ha producido un error al eliminar el PIN."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animación de <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
