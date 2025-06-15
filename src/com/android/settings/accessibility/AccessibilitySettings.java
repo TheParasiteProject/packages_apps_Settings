@@ -91,7 +91,7 @@ public class AccessibilitySettings extends BaseSupportFragment implements
     static final String EXTRA_LAUNCHED_FROM_SUW = "from_suw";
     static final String EXTRA_ANIMATED_IMAGE_RES = "animated_image_res";
     static final String EXTRA_HTML_DESCRIPTION = "html_description";
-    static final String EXTRA_TIME_FOR_LOGGING = "start_time_to_log_a11y_tool";
+    public static final String EXTRA_TIME_FOR_LOGGING = "start_time_to_log_a11y_tool";
     static final String EXTRA_METRICS_CATEGORY = "metrics_category";
     static final String EXTRA_FEEDBACK_CATEGORY = "feedback_category";
 
