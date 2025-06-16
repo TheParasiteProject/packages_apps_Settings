@@ -2748,8 +2748,8 @@
     <string name="reduce_bright_colors_about_title" msgid="503655452544934393">"\"अझै मधुरो\" सुविधाका बारेमा"</string>
     <string name="reduce_bright_colors_preference_intro_text" msgid="3502290826747650566">"सामग्री पढ्न थप सहज होस् भन्नाका लागि आफ्नो डिभाइसको स्क्रिन अझ मधुरो बनाउनुहोस्"</string>
     <string name="reduce_bright_colors_intensity_preference_title" msgid="7455443033955118267">"स्क्रिनको चमकको स्तर"</string>
-    <string name="reduce_bright_colors_intensity_start_label" msgid="930387498396426039">"अझ धमिलो"</string>
-    <string name="reduce_bright_colors_intensity_end_label" msgid="1422600205484299860">"अझ चम्किलो"</string>
+    <string name="brightness_intensity_start_label" msgid="930387498396426039">"अझ धमिलो"</string>
+    <string name="brightness_intensity_end_label" msgid="1422600205484299860">"अझ चम्किलो"</string>
     <string name="reduce_bright_colors_persist_preference_title" msgid="4368829654993343354">"डिभाइस रिस्टार्ट भएपछि अन राख्नुहोस्"</string>
     <string name="accessibilty_autoclick_preference_subtitle_short_delay" msgid="2981206111858937724">"{count,plural, =1{छोटो ({time} सेकेन्ड)}other{छोटो ({time} सेकेन्ड)}}"</string>
     <string name="accessibilty_autoclick_preference_subtitle_medium_delay" msgid="6867395206533459204">"{count,plural, =1{मध्यम ({time} सेकेन्ड)}other{मध्यम ({time} सेकेन्ड)}}"</string>

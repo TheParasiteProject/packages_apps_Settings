@@ -2748,8 +2748,8 @@
     <string name="reduce_bright_colors_about_title" msgid="503655452544934393">"Über die Funktion „Extradunkel“"</string>
     <string name="reduce_bright_colors_preference_intro_text" msgid="3502290826747650566">"Hier kannst du dein Display dunkler machen, um beim Lesen die Augen zu schonen"</string>
     <string name="reduce_bright_colors_intensity_preference_title" msgid="7455443033955118267">"Intensität"</string>
-    <string name="reduce_bright_colors_intensity_start_label" msgid="930387498396426039">"Dunkler"</string>
-    <string name="reduce_bright_colors_intensity_end_label" msgid="1422600205484299860">"Heller"</string>
+    <string name="brightness_intensity_start_label" msgid="930387498396426039">"Dunkler"</string>
+    <string name="brightness_intensity_end_label" msgid="1422600205484299860">"Heller"</string>
     <string name="reduce_bright_colors_persist_preference_title" msgid="4368829654993343354">"Nach dem Neustart des Geräts beibehalten"</string>
     <string name="accessibilty_autoclick_preference_subtitle_short_delay" msgid="2981206111858937724">"{count,plural, =1{Kurz ({time} Sekunde)}other{Kurz ({time} Sekunden)}}"</string>
     <string name="accessibilty_autoclick_preference_subtitle_medium_delay" msgid="6867395206533459204">"{count,plural, =1{Mittel ({time} Sekunde)}other{Mittel ({time} Sekunden)}}"</string>
