@@ -3470,7 +3470,7 @@
                   android:theme="@style/Theme.AlertDialog"
                   android:exported="false"
                   android:taskAffinity=".bluetooth.BluetoothKeyMissingDialog">
-            <intent-filter android:priority="1">
+            <intent-filter>
                 <action android:name="android.bluetooth.device.action.KEY_MISSING" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
