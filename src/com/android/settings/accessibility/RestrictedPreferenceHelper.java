@@ -122,21 +122,6 @@ public class RestrictedPreferenceHelper {
         return preferenceList;
     }
 
-    static String getAccessibilityServiceFragmentTypeName(AccessibilityServiceInfo info) {
-        final int type = AccessibilityUtil.getAccessibilityServiceFragmentType(info);
-        switch (type) {
-            case AccessibilityUtil.AccessibilityServiceFragmentType.VOLUME_SHORTCUT_TOGGLE:
-                return VolumeShortcutToggleAccessibilityServicePreferenceFragment.class.getName();
-            case AccessibilityUtil.AccessibilityServiceFragmentType.INVISIBLE_TOGGLE:
-                return InvisibleToggleAccessibilityServicePreferenceFragment.class.getName();
-            case AccessibilityUtil.AccessibilityServiceFragmentType.TOGGLE:
-                return ToggleAccessibilityServicePreferenceFragment.class.getName();
-            default:
-                throw new IllegalArgumentException(
-                        "Unsupported accessibility fragment type " + type);
-        }
-    }
-
     private void setRestrictedPreferenceEnabled(RestrictedPreference preference,
             final List<String> permittedServices, boolean serviceEnabled) {
         // permittedServices null means all accessibility services are allowed.
