@@ -2734,8 +2734,8 @@
     <string name="reduce_bright_colors_about_title" msgid="503655452544934393">"കൂടുതൽ ഡിം ചെയ്യലിനെ കുറിച്ച്"</string>
     <string name="reduce_bright_colors_preference_intro_text" msgid="3502290826747650566">"വായനാസുഖത്തിന് നിങ്ങളുടെ സ്ക്രീൻ കൂടുതൽ മങ്ങിയതാക്കുക"</string>
     <string name="reduce_bright_colors_intensity_preference_title" msgid="7455443033955118267">"തീവ്രത"</string>
-    <string name="reduce_bright_colors_intensity_start_label" msgid="930387498396426039">"കൂടുതൽ മങ്ങിയത്"</string>
-    <string name="reduce_bright_colors_intensity_end_label" msgid="1422600205484299860">"കൂടുതൽ തെളിച്ചമുള്ളത്"</string>
+    <string name="brightness_intensity_start_label" msgid="930387498396426039">"കൂടുതൽ മങ്ങിയത്"</string>
+    <string name="brightness_intensity_end_label" msgid="1422600205484299860">"കൂടുതൽ തെളിച്ചമുള്ളത്"</string>
     <string name="reduce_bright_colors_persist_preference_title" msgid="4368829654993343354">"ഉപകരണം റീസ്റ്റാർട്ട് ചെയ്തശേഷം ക്രമീകരണം നിലനിർത്തുക"</string>
     <string name="accessibilty_autoclick_preference_subtitle_short_delay" msgid="2981206111858937724">"{count,plural, =1{വളരെ കുറച്ച് സമയം ({time} സെക്കൻഡ്)}other{വളരെ കുറച്ച് സമയം ({time} സെക്കൻഡ്)}}"</string>
     <string name="accessibilty_autoclick_preference_subtitle_medium_delay" msgid="6867395206533459204">"{count,plural, =1{കുറച്ച് സമയം ({time} സെക്കൻഡ്)}other{കുറച്ച് സമയം ({time} സെക്കൻഡ്)}}"</string>

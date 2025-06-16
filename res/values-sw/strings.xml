@@ -2748,8 +2748,8 @@
     <string name="reduce_bright_colors_about_title" msgid="503655452544934393">"Kuhusu kipunguza mwangaza zaidi"</string>
     <string name="reduce_bright_colors_preference_intro_text" msgid="3502290826747650566">"Fanya skrini yako iwe na mwangaza hafifu ili iwe rahisi kusoma"</string>
     <string name="reduce_bright_colors_intensity_preference_title" msgid="7455443033955118267">"Ukolezaji"</string>
-    <string name="reduce_bright_colors_intensity_start_label" msgid="930387498396426039">"Punguza ung\'aavu"</string>
-    <string name="reduce_bright_colors_intensity_end_label" msgid="1422600205484299860">"Ung\'aavu zaidi"</string>
+    <string name="brightness_intensity_start_label" msgid="930387498396426039">"Punguza ung\'aavu"</string>
+    <string name="brightness_intensity_end_label" msgid="1422600205484299860">"Ung\'aavu zaidi"</string>
     <string name="reduce_bright_colors_persist_preference_title" msgid="4368829654993343354">"Iendelee kutumika baada ya kuzima na kuwasha kifaa"</string>
     <string name="accessibilty_autoclick_preference_subtitle_short_delay" msgid="2981206111858937724">"{count,plural, =1{Muda mfupi (sekunde {time})}other{Muda mfupi (sekunde {time})}}"</string>
     <string name="accessibilty_autoclick_preference_subtitle_medium_delay" msgid="6867395206533459204">"{count,plural, =1{Wastani (sekunde {time})}other{Wastani (sekunde {time})}}"</string>

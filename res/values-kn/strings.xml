@@ -2748,8 +2748,8 @@
     <string name="reduce_bright_colors_about_title" msgid="503655452544934393">"ಇನ್ನಷ್ಟು ಮಬ್ಬಾಗಿಸುವ ಕುರಿತು"</string>
     <string name="reduce_bright_colors_preference_intro_text" msgid="3502290826747650566">"ನಿಮ್ಮ ಸ್ಕ್ರೀನ್ ಅನ್ನು ಮಂದಗೊಳಿಸಿ, ಇದರಿಂದ ಓದಲು ಹೆಚ್ಚು ಆರಾಮದಾಯಕವಾಗಿರುತ್ತದೆ"</string>
     <string name="reduce_bright_colors_intensity_preference_title" msgid="7455443033955118267">"ತೀವ್ರತೆ"</string>
-    <string name="reduce_bright_colors_intensity_start_label" msgid="930387498396426039">"ಹೆಚ್ಚು ಮಂದ"</string>
-    <string name="reduce_bright_colors_intensity_end_label" msgid="1422600205484299860">"ಹೆಚ್ಚು ಪ್ರಖರ"</string>
+    <string name="brightness_intensity_start_label" msgid="930387498396426039">"ಹೆಚ್ಚು ಮಂದ"</string>
+    <string name="brightness_intensity_end_label" msgid="1422600205484299860">"ಹೆಚ್ಚು ಪ್ರಖರ"</string>
     <string name="reduce_bright_colors_persist_preference_title" msgid="4368829654993343354">"ಸಾಧನ ಮರುಪ್ರಾರಂಭವಾದ ನಂತರವೂ ಸ್ಕ್ರೀನ್‌ನ ಪ್ರಖರತೆಯನ್ನು ಕಡಿಮೆಯಾಗಿರಿಸಿ"</string>
     <string name="accessibilty_autoclick_preference_subtitle_short_delay" msgid="2981206111858937724">"{count,plural, =1{ಕಡಿಮೆ ({time} ಸೆಕೆಂಡ್)}one{ಕಡಿಮೆ ({time} ಸೆಕೆಂಡ್‌ಗಳು)}other{ಕಡಿಮೆ ({time} ಸೆಕೆಂಡ್‌ಗಳು)}}"</string>
     <string name="accessibilty_autoclick_preference_subtitle_medium_delay" msgid="6867395206533459204">"{count,plural, =1{ಮಧ್ಯಮ ({time} ಸೆಕೆಂಡ್)}one{ಮಧ್ಯಮ ({time} ಸೆಕೆಂಡ್‌ಗಳು)}other{ಮಧ್ಯಮ ({time} ಸೆಕೆಂಡ್‌ಗಳು)}}"</string>

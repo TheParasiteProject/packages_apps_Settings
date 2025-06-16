@@ -2748,8 +2748,8 @@
     <string name="reduce_bright_colors_about_title" msgid="503655452544934393">"অতিরিক্ত কম ব্রাইটনেস বিষয়ক"</string>
     <string name="reduce_bright_colors_preference_intro_text" msgid="3502290826747650566">"স্ক্রিনের আলো কম করুন যাতে এতে থাকা কন্টেন্ট সহজেই পড়া যায়"</string>
     <string name="reduce_bright_colors_intensity_preference_title" msgid="7455443033955118267">"তীব্রতা"</string>
-    <string name="reduce_bright_colors_intensity_start_label" msgid="930387498396426039">"কম উজ্জ্বল"</string>
-    <string name="reduce_bright_colors_intensity_end_label" msgid="1422600205484299860">"আরও উজ্জ্বল"</string>
+    <string name="brightness_intensity_start_label" msgid="930387498396426039">"কম উজ্জ্বল"</string>
+    <string name="brightness_intensity_end_label" msgid="1422600205484299860">"আরও উজ্জ্বল"</string>
     <string name="reduce_bright_colors_persist_preference_title" msgid="4368829654993343354">"এই সেটিং ডিভাইস রিস্টার্ট করার পরও চালু রাখুন"</string>
     <string name="accessibilty_autoclick_preference_subtitle_short_delay" msgid="2981206111858937724">"{count,plural, =1{অল্প সময় ({time} সেকেন্ড)}one{অল্প সময় ({time} সেকেন্ড)}other{অল্প সময় ({time} সেকেন্ড)}}"</string>
     <string name="accessibilty_autoclick_preference_subtitle_medium_delay" msgid="6867395206533459204">"{count,plural, =1{মাঝারি সময় ({time} সেকেন্ড)}one{মাঝারি সময় ({time} সেকেন্ড)}other{মাঝারি সময় ({time} সেকেন্ড)}}"</string>

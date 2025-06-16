@@ -6274,9 +6274,9 @@
     <!-- Title for setting the brightness intensity of the display using Reduce Brightness. [CHAR LIMIT=NONE] -->
     <string name="reduce_bright_colors_intensity_preference_title">Intensity</string>
     <!-- Start label for slider that reduces the brightness intensity of the display using Extra Dim. [CHAR LIMIT=NONE] -->
-    <string name="reduce_bright_colors_intensity_start_label">Dimmer</string>
+    <string name="brightness_intensity_start_label">Dimmer</string>
     <!-- End label for slider that reduces the brightness intensity of the display using Extra Dim. [CHAR LIMIT=NONE] -->
-    <string name="reduce_bright_colors_intensity_end_label">Brighter</string>
+    <string name="brightness_intensity_end_label">Brighter</string>
     <!-- Title for setting whether the Reduce Brightness activation state persists across reboots. [CHAR LIMIT=NONE] -->
     <string name="reduce_bright_colors_persist_preference_title">Keep on after device restarts</string>
 
@@ -13609,10 +13609,6 @@ Data usage charges may apply.</string>
     <string name="media_controls_hide_player">Hide player</string>
     <!-- Subtext for media settings when the player will be shown [CHAR LIMIT=50] -->
     <string name="media_controls_show_player">Show player</string>
-    <!-- Title of setting for device suggestions in the media player [CHAR LIMIT=50]-->
-    <string name="media_controls_suggestions_title">Media suggestions</string>
-    <!-- Description of setting for device suggestions in the media player [CHAR LIMIT=NONE]-->
-    <string name="media_controls_suggestions_description">Provide media suggestions from media apps based on your activity and location.</string>
     <!-- Keywords for the media controls setting [CHAR LIMIT=NONE]-->
     <string name="keywords_media_controls">media</string>
 
