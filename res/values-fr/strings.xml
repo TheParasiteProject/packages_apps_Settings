@@ -446,7 +446,7 @@
     <string name="security_settings_fingerprint_description" msgid="629796299137157167"></string>
     <string name="security_settings_category_use_fingerprint" msgid="4273932435979772330">"Utiliser l\'empreinte digitale pour"</string>
     <string name="security_settings_fingerprint_preference_title" msgid="2484965173528415458">"Empreinte digitale"</string>
-    <string name="security_settings_fingerprint_settings_preferences_category" msgid="8975029409126780752">"Quand le déverrouillage par empreinte est utilisé"</string>
+    <string name="security_settings_fingerprint_settings_preferences_category" msgid="8975029409126780752">"Quand le déverrouillage par empreinte digitale est utilisé"</string>
     <string name="security_settings_work_fingerprint_preference_title" msgid="2076006873519745979">"Empreinte profil pro"</string>
     <string name="security_settings_work_fingerprint_preference_title_new" msgid="8967333987631878868">"Empreinte profil pro"</string>
     <string name="fingerprint_check_enrolled_title" msgid="1007921571704991108">"Vérifier les empreintes digitales enregistrées"</string>
