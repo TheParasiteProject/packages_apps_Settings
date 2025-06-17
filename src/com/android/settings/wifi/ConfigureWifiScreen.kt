@@ -19,15 +19,14 @@ package com.android.settings.wifi
 import android.app.settings.SettingsEnums
 import android.content.Context
 import android.os.PowerManager
-import android.provider.Settings.Global.AIRPLANE_MODE_ON
 import androidx.fragment.app.Fragment
 import com.android.settings.R
 import com.android.settings.Settings.ConfigureWifiSettingsActivity
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.flags.Flags
+import com.android.settings.network.AirplaneModePreference
 import com.android.settings.utils.makeLaunchIntent
 import com.android.settings.wifi.utils.wifiManager
-import com.android.settingslib.datastore.SettingsGlobalStore
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.PreferenceSummaryProvider
 import com.android.settingslib.metadata.ProvidePreferenceScreen
@@ -38,6 +37,9 @@ import kotlinx.coroutines.CoroutineScope
 @ProvidePreferenceScreen(ConfigureWifiScreen.KEY)
 open class ConfigureWifiScreen(context: Context) :
     PreferenceScreenMixin, PreferenceSummaryProvider {
+
+    private val airplaneModeDataStore = AirplaneModePreference.createDataStore(context)
+
     override val key: String
         get() = KEY
 
@@ -76,9 +78,9 @@ open class ConfigureWifiScreen(context: Context) :
     private fun Context.isWifiWakeupEnabled(): Boolean {
         val wifiManager = this.wifiManager ?: return false
         val powerManager = getSystemService(PowerManager::class.java) ?: return false
-        return wifiManager.isAutoWakeupEnabled &&
+        return airplaneModeDataStore.getBoolean(AirplaneModePreference.KEY) == false &&
+            wifiManager.isAutoWakeupEnabled &&
             wifiManager.isScanAlwaysAvailable &&
-            SettingsGlobalStore.get(this).getBoolean(AIRPLANE_MODE_ON) == false &&
             !powerManager.isPowerSaveMode
     }
 

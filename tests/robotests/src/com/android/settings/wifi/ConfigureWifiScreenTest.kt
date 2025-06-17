@@ -22,12 +22,13 @@ import android.net.wifi.WifiManager
 import android.os.PowerManager
 import android.os.UserManager
 import android.platform.test.annotations.EnableFlags
-import android.provider.Settings.Global.AIRPLANE_MODE_ON
 import com.android.settings.R
 import com.android.settings.flags.Flags
+import com.android.settings.network.AirplaneModePreference
+import com.android.settings.testutils.SettingsStoreRule
 import com.android.settings.testutils2.SettingsCatalystTestCase
-import com.android.settingslib.datastore.SettingsGlobalStore
 import com.google.common.truth.Truth.assertThat
+import org.junit.Rule
 import org.junit.Test
 import org.mockito.ArgumentMatchers.anyInt
 import org.mockito.kotlin.doReturn
@@ -35,6 +36,8 @@ import org.mockito.kotlin.mock
 import org.mockito.kotlin.stub
 
 class ConfigureWifiScreenTest : SettingsCatalystTestCase() {
+    @get:Rule(order = 0) val settingsStoreRule = SettingsStoreRule()
+
     private val mockWifiManager = mock<WifiManager>()
     private val mockPowerManager = mock<PowerManager>()
     private val mockUserManager = mock<UserManager>()
@@ -54,6 +57,7 @@ class ConfigureWifiScreenTest : SettingsCatalystTestCase() {
                 }
         }
 
+    private val airplaneModeDataStore = AirplaneModePreference.createDataStore(context)
     override val preferenceScreenCreator = ConfigureWifiScreen(context)
 
     override val flagName: String
@@ -95,7 +99,7 @@ class ConfigureWifiScreenTest : SettingsCatalystTestCase() {
 
         mockPowerManager.stub { on { isPowerSaveMode } doReturn false }
 
-        SettingsGlobalStore.get(context).setBoolean(AIRPLANE_MODE_ON, false)
+        airplaneModeDataStore.setBoolean(AirplaneModePreference.KEY, false)
 
         assertThat(preferenceScreenCreator.getSummary(context))
             .isEqualTo(
@@ -112,7 +116,7 @@ class ConfigureWifiScreenTest : SettingsCatalystTestCase() {
 
         mockPowerManager.stub { on { isPowerSaveMode } doReturn false }
 
-        SettingsGlobalStore.get(context).setBoolean(AIRPLANE_MODE_ON, false)
+        airplaneModeDataStore.setBoolean(AirplaneModePreference.KEY, false)
 
         assertThat(preferenceScreenCreator.getSummary(context))
             .isEqualTo(
@@ -129,7 +133,7 @@ class ConfigureWifiScreenTest : SettingsCatalystTestCase() {
 
         mockPowerManager.stub { on { isPowerSaveMode } doReturn true }
 
-        SettingsGlobalStore.get(context).setBoolean(AIRPLANE_MODE_ON, false)
+        airplaneModeDataStore.setBoolean(AirplaneModePreference.KEY, false)
 
         assertThat(preferenceScreenCreator.getSummary(context))
             .isEqualTo(
@@ -146,7 +150,7 @@ class ConfigureWifiScreenTest : SettingsCatalystTestCase() {
 
         mockPowerManager.stub { on { isPowerSaveMode } doReturn false }
 
-        SettingsGlobalStore.get(context).setBoolean(AIRPLANE_MODE_ON, true)
+        airplaneModeDataStore.setBoolean(AirplaneModePreference.KEY, true)
 
         assertThat(preferenceScreenCreator.getSummary(context))
             .isEqualTo(
