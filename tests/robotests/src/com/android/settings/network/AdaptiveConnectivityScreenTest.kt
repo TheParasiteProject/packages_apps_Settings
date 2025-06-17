@@ -42,6 +42,7 @@ class AdaptiveConnectivityScreenTest() : SettingsCatalystTestCase() {
     private val mContext: Context = ApplicationProvider.getApplicationContext()
     private val testScope = TestScope()
 
+    @Test
     override fun migration() {}
 
     @Test
