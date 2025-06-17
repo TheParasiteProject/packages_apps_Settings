@@ -21,6 +21,7 @@ import android.telephony.SubscriptionInfo
 import android.telephony.SubscriptionManager
 import com.android.settings.flags.Flags
 import com.android.settings.testutils2.SettingsCatalystTestCase
+import org.junit.Test
 import org.mockito.kotlin.mock
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
@@ -34,6 +35,7 @@ class MobileNetworkListScreenTest : SettingsCatalystTestCase() {
 
     @DisableFlags(Flags.FLAG_IS_DUAL_SIM_ONBOARDING_ENABLED)
     @Config(shadows = [ShadowSubscriptionManager::class])
+    @Test
     override fun migration() {
         val subscriptionManager =
             shadowOf(appContext.getSystemService(SubscriptionManager::class.java))
