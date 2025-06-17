@@ -13381,14 +13381,15 @@ Data usage charges may apply.</string>
     <!-- Confirmation dialog title to ensure user wishes to enable 16 KB page size -->
     <string name="confirm_enable_16k_pages_title">Switch from 4 KB mode to 16 KB mode</string>
     <!-- Warning dialog message to confirm user wishes to enable 16 KB page size -->
-    <string name="confirm_enable_16k_pages_update_wipe"> This device’s data partition needs to be converted to ext4 before using the 16 KB developer option.
-        The device will be wiped and the filesystem will be changed to ext4 after confirmation. You are in production mode running a 4 KB kernel,
-        and you are switching to the 16 KB mode. Once you are in this mode, you can switch back and forth between 4 KB and 16 KB mode with a single reboot.
-        Software integrity cannot be guaranteed in this mode, and any data stored on the phone while the bootloader is unlocked may be at risk.
-        Some features will be disabled in these modes, so some applications may not work. To return the device to production mode,
-        you would need to then switch back to the 4 KB mode and lock the bootloader, which factory resets the device.
-        After the device successfully boots into Android, disable OEM unlocking in Developer options.
-        To proceed, click on \'Erase all data and update\'. This will reboot the device.</string>
+    <string name="confirm_enable_16k_pages_update_wipe"> To use the 16 KB developer option, this device\'s data partition needs to be converted to ext4.
+        This will wipe your device and change the filesystem to ext4.&lt;br&gt;&lt;br&gt;
+        Once you are in 16 KB mode, you can switch between 4 KB and 16 KB mode with a single reboot.&lt;br&gt;&lt;br&gt;
+        Things to remember in 16 KB mode:&lt;br&gt;&lt;br&gt;
+        &amp;#8226; Software integrity cannot be guaranteed&lt;br&gt;
+        &amp;#8226; Data stored on the phone while the bootloader is unlocked may be at risk&lt;br&gt;
+        &amp;#8226; Some features will be disabled, which may affect certain apps&lt;br&gt;&lt;br&gt;
+        To return to production mode, you\'ll need to switch back to 4 KB mode and lock the bootloader. This will factory reset your device. After the device successfully boots into Android, disable OEM unlocking in Developer options.&lt;br&gt;&lt;br&gt;
+        To proceed in switching to 16 KB mode, tap \"Erase all data and Update\". This will reboot the device.</string>
     <string name="confirm_enable_16k_pages_text">You are in the page-agnostic mode running a 4 KB kernel, and you are switching to the 16 KB mode.
         Software integrity cannot be guaranteed in this mode, and any data stored on the phone while the bootloader is unlocked may be at risk.
         This will reboot the device. Some features will be disabled in these modes, so some applications may not work.
