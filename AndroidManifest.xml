@@ -5822,6 +5822,23 @@
                 android:value="@string/menu_key_system"/>
         </activity>
 
+        <activity
+            android:name="Settings$AdaptiveConnectivitySettingsActivity"
+            android:label="@string/adaptive_connectivity_title"
+            android:exported="true"
+            android:featureFlag="com.android.settings.flags.catalyst_adaptive_connectivity">
+            <intent-filter android:priority="1">
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.network.AdaptiveConnectivitySettings"/>
+            <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                       android:value="@string/menu_key_network"/>
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                       android:value="true"/>
+        </activity>
+
         <service
             android:name=".appfunctions.DeviceStateAppFunctionService"
             android:permission="android.permission.BIND_APP_FUNCTION_SERVICE"
