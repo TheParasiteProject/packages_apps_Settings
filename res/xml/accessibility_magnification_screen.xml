@@ -75,7 +75,7 @@
         <SwitchPreferenceCompat
             android:key="accessibility_magnification_joystick_enabled"
             android:title="@string/accessibility_screen_magnification_joystick_title"
-            android:summary="accessibility_screen_magnification_joystick_summary"
+            android:summary="@string/accessibility_screen_magnification_joystick_summary"
             android:persistent="false"
             app:controller="com.android.settings.accessibility.screenmagnification.JoystickPreferenceController"/>
 
