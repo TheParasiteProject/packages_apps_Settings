@@ -99,7 +99,7 @@ class BluetoothBatteryIndicator @JvmOverloads constructor(
             invalidate()
         }
 
-    var deviceIcon: Bitmap? = null
+    var deviceIcon: Drawable? = null
 
     init {
         strokeWidth =
@@ -245,7 +245,7 @@ class BluetoothBatteryIndicator @JvmOverloads constructor(
                 deviceIconBackgroundRect.width() / 2,
                 iconBackgroundPaint
             )
-            canvas.drawBitmap(it, null, deviceIconRect, null)
+            canvas.drawBitmap(it.toBitmap(), null, deviceIconRect, null)
         }
 
         if (batteryLevel >= 0) {

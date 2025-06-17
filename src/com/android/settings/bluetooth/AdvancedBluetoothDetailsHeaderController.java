@@ -29,6 +29,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Handler;
@@ -36,7 +37,6 @@ import android.os.Looper;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -539,18 +539,14 @@ public class AdvancedBluetoothDetailsHeaderController extends BasePreferenceCont
         final BluetoothDevice bluetoothDevice = mCachedDevice.getDevice();
         final String iconUri = preloadedIconUri.get();
         final ImageView imageView = linearLayout.findViewById(R.id.header_icon);
-        if (iconUri != null) {
-            imageView.setAlpha(HALF_ALPHA);
-            loadIcon(iconUri, icon -> {
-                imageView.setImageBitmap(icon);
-                imageView.setAlpha(1.0f);
-            });
-        } else {
-            final Pair<Drawable, String> pair =
-                    BluetoothUtils.getBtRainbowDrawableWithDescription(mContext, mCachedDevice);
-            imageView.setImageDrawable(pair.first);
-            imageView.setContentDescription(pair.second);
-        }
+        final boolean isUntethered = preloadedIsUntethered.get();
+
+        imageView.setAlpha(HALF_ALPHA);
+        loadIcon(deviceId, iconUri, icon -> {
+            imageView.setImageDrawable(icon);
+            imageView.setAlpha(1.0f);
+        });
+
         final int batteryLevel;
         if (refactorBatteryLevelDisplay()) {
             batteryLevel = batteryValue;
@@ -571,7 +567,7 @@ public class AdvancedBluetoothDetailsHeaderController extends BasePreferenceCont
             showBatteryPredictionIfNecessary(linearLayout, deviceId, batteryLevel);
         }
         final TextView batterySummaryView = linearLayout.findViewById(R.id.bt_battery_summary);
-        if (preloadedIsUntethered.get()) {
+        if (isUntethered) {
             if (batteryLevel != BluetoothUtils.META_INT_ERROR) {
                 linearLayout.setVisibility(View.VISIBLE);
                 batterySummaryView.setText(
@@ -679,7 +675,7 @@ public class AdvancedBluetoothDetailsHeaderController extends BasePreferenceCont
         subDevice.setBatteryLevel(battery);
         subDevice.setCharging(charging);
         subDevice.setAlpha(HALF_ALPHA);
-        loadIcon(iconUri, icon -> {
+        loadIcon(deviceId, iconUri, icon -> {
             subDevice.setImage(icon);
             subDevice.setAlpha(1f);
         });
@@ -834,14 +830,12 @@ public class AdvancedBluetoothDetailsHeaderController extends BasePreferenceCont
         if (DEBUG) {
             Log.d(TAG, "updateDisconnectLayout() iconUri : " + iconUri);
         }
-        if (iconUri != null) {
-            final ImageView imageView = linearLayout.findViewById(R.id.header_icon);
-            imageView.setAlpha(HALF_ALPHA);
-            loadIcon(iconUri, icon -> {
-                imageView.setImageBitmap(icon);
-                imageView.setAlpha(1f);
-            });
-        }
+        final ImageView imageView = linearLayout.findViewById(R.id.header_icon);
+        imageView.setAlpha(HALF_ALPHA);
+        loadIcon(MAIN_DEVICE_ID, iconUri, icon -> {
+            imageView.setImageDrawable(icon);
+            imageView.setAlpha(1f);
+        });
     }
 
     private void updateDisconnectLayoutExpressive() {
@@ -856,44 +850,84 @@ public class AdvancedBluetoothDetailsHeaderController extends BasePreferenceCont
         final String iconUri = BluetoothUtils.getStringMetaData(mCachedDevice.getDevice(),
                 BluetoothDevice.METADATA_MAIN_ICON);
         middleDevice.setAlpha(HALF_ALPHA);
-        loadIcon(iconUri, icon -> {
+        loadIcon(MAIN_DEVICE_ID, iconUri, icon -> {
             middleDevice.setImage(icon);
             middleDevice.setAlpha(1.0f);
         });
     }
 
     /**
-     * Loads icon by {@code iconUri}. If icon exists in cache, use it; otherwise extract it
-     * from uri in background thread and update it in main thread.
+     * Loads icon by {@code iconUri}. If icon exists in cache, use it; otherwise extract it from uri
+     * in background thread and update it in main thread.
      */
     @VisibleForTesting
-    void loadIcon(String iconUri, Consumer<Bitmap> onIconLoaded) {
+    void loadIcon(int deviceId, String iconUri, Consumer<Drawable> onIconLoaded) {
         if (iconUri == null) {
-            return;
+            int iconTint =
+                    mContext.getColor(
+                            com.android.settingslib.widget.theme.R.color
+                                    .settingslib_materialColorOnSurface);
+            switch (deviceId) {
+                case LEFT_DEVICE_ID -> {
+                    Drawable leftBudIcon = mContext.getDrawable(R.drawable.ic_tws_left_bud);
+                    leftBudIcon.setTint(iconTint);
+                    onIconLoaded.accept(leftBudIcon);
+                    return;
+                }
+                case CASE_DEVICE_ID -> {
+                    Drawable caseIcon = mContext.getDrawable(R.drawable.ic_tws_case);
+                    caseIcon.setTint(iconTint);
+                    onIconLoaded.accept(caseIcon);
+                    return;
+                }
+                case RIGHT_DEVICE_ID -> {
+                    Drawable rightBudIcon = mContext.getDrawable(R.drawable.ic_tws_right_bud);
+                    rightBudIcon.setTint(iconTint);
+                    onIconLoaded.accept(rightBudIcon);
+                    return;
+                }
+                default -> {
+                    final Drawable mainIcon =
+                            BluetoothUtils.getBtRainbowDrawableWithDescription(
+                                            mContext, mCachedDevice)
+                                    .first;
+                    mainIcon.setTint(iconTint);
+                    onIconLoaded.accept(mainIcon);
+                    return;
+                }
+            }
         }
         if (mIconCache.containsKey(iconUri)) {
-            onIconLoaded.accept(mIconCache.get(iconUri));
+            onIconLoaded.accept(
+                    new BitmapDrawable(mContext.getResources(), mIconCache.get(iconUri)));
             return;
         }
 
-        ThreadUtils.postOnBackgroundThread(() -> {
-            final Uri uri = Uri.parse(iconUri);
-            try {
-                mContext.getContentResolver().takePersistableUriPermission(uri,
-                        Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        ThreadUtils.postOnBackgroundThread(
+                () -> {
+                    final Uri uri = Uri.parse(iconUri);
+                    try {
+                        mContext.getContentResolver()
+                                .takePersistableUriPermission(
+                                        uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
-                final Bitmap bitmap = MediaStore.Images.Media.getBitmap(
-                        mContext.getContentResolver(), uri);
-                ThreadUtils.postOnMainThread(() -> {
-                    mIconCache.put(iconUri, bitmap);
-                    onIconLoaded.accept(mIconCache.get(iconUri));
+                        final Bitmap bitmap =
+                                MediaStore.Images.Media.getBitmap(
+                                        mContext.getContentResolver(), uri);
+                        ThreadUtils.postOnMainThread(
+                                () -> {
+                                    mIconCache.put(iconUri, bitmap);
+                                    onIconLoaded.accept(
+                                            new BitmapDrawable(
+                                                    mContext.getResources(),
+                                                    mIconCache.get(iconUri)));
+                                });
+                    } catch (IOException e) {
+                        Log.e(TAG, "Failed to get bitmap for: " + iconUri, e);
+                    } catch (SecurityException e) {
+                        Log.e(TAG, "Failed to take persistable permission for: " + uri, e);
+                    }
                 });
-            } catch (IOException e) {
-                Log.e(TAG, "Failed to get bitmap for: " + iconUri, e);
-            } catch (SecurityException e) {
-                Log.e(TAG, "Failed to take persistable permission for: " + uri, e);
-            }
-        });
     }
 
     @Override

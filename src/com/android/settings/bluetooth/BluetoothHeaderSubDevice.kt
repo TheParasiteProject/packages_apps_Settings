@@ -48,22 +48,16 @@ class BluetoothHeaderSubDevice : LinearLayout {
             updateBatteryUi()
         }
 
+    var image: Drawable? = null
+        set(value) {
+            field = value
+            findViewById<BluetoothBatteryIndicator>(R.id.battery_ring).apply {
+                deviceIcon = value
+            }
+        }
+
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         LayoutInflater.from(context).inflate(R.layout.bluetooth_header_sub_device, this, true)
-    }
-
-    /** Sets the bluetooth image. */
-    fun setImage(image: Bitmap) {
-        findViewById<BluetoothBatteryIndicator>(R.id.battery_ring).apply {
-            deviceIcon = image
-        }
-    }
-
-    /** Sets the bluetooth image. */
-    fun setImage(image: Drawable) {
-        findViewById<BluetoothBatteryIndicator>(R.id.battery_ring).apply {
-            deviceIcon = image.toBitmap()
-        }
     }
 
     /** Sets the charging status. */

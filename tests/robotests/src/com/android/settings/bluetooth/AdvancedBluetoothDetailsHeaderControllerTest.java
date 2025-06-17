@@ -31,6 +31,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.platform.test.annotations.DisableFlags;
 import android.platform.test.annotations.EnableFlags;
@@ -475,6 +476,33 @@ public class AdvancedBluetoothDetailsHeaderControllerTest {
     }
 
     @Test
+    @EnableFlags({
+        FLAG_REFACTOR_BATTERY_LEVEL_DISPLAY,
+        FLAG_ENABLE_EXPRESSIVE_BLUETOOTH_BATTERY_HEADER
+    })
+    public void refresh_untetheredHeadsetWithoutIconUri_useDefaultIcon() {
+        when(mBluetoothDevice.getMetadata(
+                BluetoothDevice.METADATA_IS_UNTETHERED_HEADSET)).thenReturn(
+                String.valueOf(true).getBytes());
+        when(mCachedDevice.getBatteryLevelsInfo()).thenReturn(
+                new BatteryLevelsInfo(LOW_BATTERY_LEVEL, LOW_BATTERY_LEVEL, LOW_BATTERY_LEVEL,
+                        LOW_BATTERY_LEVEL));
+        when(mCachedDevice.isConnected()).thenReturn(true);
+
+        mController.refresh();
+
+        BluetoothHeaderSubDevice left = mLayoutPreference.findViewById(R.id.layout_left);
+        BluetoothHeaderSubDevice middle = mLayoutPreference.findViewById(R.id.layout_middle);
+        BluetoothHeaderSubDevice right = mLayoutPreference.findViewById(R.id.layout_right);
+        assertThat(shadowOf(left.getImage()).getCreatedFromResId())
+                .isEqualTo(R.drawable.ic_tws_left_bud);
+        assertThat(shadowOf(middle.getImage()).getCreatedFromResId())
+                .isEqualTo(R.drawable.ic_tws_case);
+        assertThat(shadowOf(right.getImage()).getCreatedFromResId())
+                .isEqualTo(R.drawable.ic_tws_right_bud);
+    }
+
+    @Test
     public void getAvailabilityStatus_untetheredHeadset_returnAvailable() {
         when(mBluetoothDevice.getMetadata(BluetoothDevice.METADATA_IS_UNTETHERED_HEADSET))
                 .thenReturn("true".getBytes());
@@ -493,15 +521,16 @@ public class AdvancedBluetoothDetailsHeaderControllerTest {
     }
 
     @Test
-    public void updateIcon_existInCache_setImageBitmap() {
+    public void loadIcon_existInCache_setImageBitmap() {
         mController.mIconCache.put(ICON_URI, mBitmap);
 
-        AtomicReference<Bitmap> loadedIcon = new AtomicReference<>();
-        mController.loadIcon(ICON_URI, icon -> {
+        AtomicReference<Drawable> loadedIcon = new AtomicReference<>();
+        mController.loadIcon(1, ICON_URI, icon -> {
             loadedIcon.set(icon);
         });
 
-        assertThat(loadedIcon.get()).isEqualTo(mBitmap);
+        Drawable icon = loadedIcon.get();
+        assertThat(((BitmapDrawable) icon).getBitmap()).isEqualTo(mBitmap);
     }
 
     @Test
