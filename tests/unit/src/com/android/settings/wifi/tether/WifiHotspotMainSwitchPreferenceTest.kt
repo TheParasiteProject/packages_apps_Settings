@@ -36,7 +36,6 @@ class WifiHotspotMainSwitchPreferenceTest {
     private val mockWifiManager = mock<WifiManager>()
     private val mockWifiHotspotStore = mock<KeyValueStore>()
     private val mockWifiHotspotRepository = mock<WifiHotspotRepository>()
-    private val mockRestartingLiveData = mock<LiveData<Boolean>>()
 
     private val context =
         object : ContextWrapper(ApplicationProvider.getApplicationContext()) {
@@ -57,8 +56,7 @@ class WifiHotspotMainSwitchPreferenceTest {
     @Before
     fun setUp() {
         provider.stub { on { wifiHotspotRepository } doReturn mockWifiHotspotRepository }
-        mockWifiHotspotRepository.stub { on { restarting } doReturn mockRestartingLiveData }
-        mockRestartingLiveData.stub { on { value } doReturn false }
+        mockWifiHotspotRepository.stub { on { isRestarting } doReturn false }
     }
 
     @Test
@@ -71,7 +69,7 @@ class WifiHotspotMainSwitchPreferenceTest {
     @Test
     fun isAvailable_isNotRestarting_returnTrue() {
         mockWifiManager.stub { on { wifiApState } doReturn WifiManager.WIFI_AP_STATE_ENABLING }
-        mockRestartingLiveData.stub { on { value } doReturn false }
+        mockWifiHotspotRepository.stub { on { isRestarting } doReturn false }
 
         assertThat(preference.isAvailable(context)).isTrue()
     }
@@ -79,7 +77,7 @@ class WifiHotspotMainSwitchPreferenceTest {
     @Test
     fun isAvailable_isRestarting_returnFalse() {
         mockWifiManager.stub { on { wifiApState } doReturn WifiManager.WIFI_AP_STATE_ENABLING }
-        mockRestartingLiveData.stub { on { value } doReturn true }
+        mockWifiHotspotRepository.stub { on { isRestarting } doReturn true }
 
         assertThat(preference.isAvailable(context)).isFalse()
     }
