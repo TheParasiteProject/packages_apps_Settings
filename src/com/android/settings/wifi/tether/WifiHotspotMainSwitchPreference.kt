@@ -40,8 +40,7 @@ class WifiHotspotMainSwitchPreference(private val wifiHotspotStore: KeyValueStor
 
     override fun isAvailable(context: Context) =
         context.wifiApState == WIFI_AP_STATE_ENABLED ||
-                !(featureFactory.wifiFeatureProvider.wifiHotspotRepository?.restarting?.value
-                    ?: false)
+                !(featureFactory.wifiFeatureProvider.wifiHotspotRepository?.isRestarting ?: false)
 
     override fun storage(context: Context): KeyValueStore = UseWifiHotspotStore(wifiHotspotStore)
 
