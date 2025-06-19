@@ -55,7 +55,7 @@ open class MagnificationPreferenceFragment : ShortcutFragment() {
         super.onDisplayPreferenceDialog(preference)
     }
 
-    override fun getShortcutPreferenceController(): ToggleShortcutPreferenceController {
+    override fun getShortcutPreferenceController(): ToggleShortcutPreferenceController? {
         return use(ToggleMagnificationShortcutPreferenceController::class.java)
     }
 
