@@ -1537,36 +1537,9 @@ public class FingerprintSettings extends SubSettings {
             if (fpref == null) {
                 return;
             }
-            if (isUdfps()) {
-                clearAllFingerprintPreferenceHighlight();
-                fpref.startHighlight();
-            } else {
-                highlightForSfps(fpref);
-            }
+            clearAllFingerprintPreferenceHighlight();
+            fpref.startHighlight();
             setupFingerprintRecognition(fpref.getView(), fpref.getFingerprint());
-        }
-
-        private void highlightForSfps(FingerprintPreference preference) {
-            final Drawable highlight = getHighlightDrawable();
-            if (highlight != null && preference != null) {
-                final View view = preference.getView();
-                if (view == null) {
-                    // FingerprintPreference is not bound to UI yet, so view is null.
-                    return;
-                }
-                final int centerX = view.getWidth() / 2;
-                final int centerY = view.getHeight() / 2;
-                highlight.setHotspot(centerX, centerY);
-                view.setBackground(highlight);
-                view.setPressed(true);
-                view.setPressed(false);
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        view.setBackground(null);
-                    }
-                }, RESET_HIGHLIGHT_DELAY_MS);
-            }
         }
 
         private void setupFingerprintRecognition(View view, Fingerprint fp) {
