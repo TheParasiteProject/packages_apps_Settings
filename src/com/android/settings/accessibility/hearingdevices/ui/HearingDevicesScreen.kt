@@ -131,7 +131,10 @@ open class HearingDevicesScreen(context: Context) :
         makeLaunchIntent(context, HearingDevicesActivity::class.java, metadata?.key)
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
-        preferenceHierarchy(context) {}
+        preferenceHierarchy(context) {
+            +HearingDevicesTopIntroPreference(context)
+            +HearingDevicesFooterPreference(context)
+        }
 
     override fun isIndexable(context: Context): Boolean = true
 
