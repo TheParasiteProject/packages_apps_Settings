@@ -5834,6 +5834,21 @@
             </intent-filter>
         </service>
 
+        <activity android:name="com.android.settings.biometrics.IdentityCheckPromoCardActivity"
+            android:enabled="true"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/IdentityCheckPromoCardActivityTheme"/>
+
+        <receiver
+            android:name="com.android.settings.safetycenter.IdentityCheckSafetySource"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.settings.safetycenter.action.IDENTITY_CHECK_ISSUE_CARD_DISMISSED"/>
+            </intent-filter>
+        </receiver>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>
