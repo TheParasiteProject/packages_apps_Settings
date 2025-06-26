@@ -21,8 +21,7 @@ import android.media.AudioManager
 import android.os.VibrationAttributes
 import android.os.VibrationEffect
 import android.os.Vibrator
-import android.provider.Settings.System.APPLY_RAMPING_RINGER
-import android.provider.Settings.System.RING_VIBRATION_INTENSITY
+import android.provider.Settings
 import androidx.core.content.getSystemService
 import androidx.preference.SwitchPreferenceCompat
 import androidx.test.core.app.ApplicationProvider
@@ -59,8 +58,7 @@ class RampingRingerVibrationSwitchPreferenceTest {
                 }
         }
 
-    private val preference =
-        RampingRingerVibrationSwitchPreference(context, TEST_KEY, RING_KEY)
+    private val preference = RampingRingerVibrationSwitchPreference(context)
 
     @Before
     fun setUp() {
@@ -71,9 +69,7 @@ class RampingRingerVibrationSwitchPreferenceTest {
     fun isAvailable_enabledInTelephony_unavailable() {
         val newPreference = RampingRingerVibrationSwitchPreference(
             context,
-            key = TEST_KEY,
-            ringPreferenceKey = RING_KEY,
-            deviceConfig = object : TelephonyConfigProvider {
+            object : TelephonyConfigProvider {
                 override fun isTelephonyRampingRingerEnabled() = true
                 override fun isVoiceCapable(context: Context) = true
             }
@@ -86,9 +82,7 @@ class RampingRingerVibrationSwitchPreferenceTest {
     fun isAvailable_notVoiceCapable_unavailable() {
         val newPreference = RampingRingerVibrationSwitchPreference(
             context,
-            key = TEST_KEY,
-            ringPreferenceKey = RING_KEY,
-            deviceConfig = object : TelephonyConfigProvider {
+            object : TelephonyConfigProvider {
                 override fun isTelephonyRampingRingerEnabled() = false
                 override fun isVoiceCapable(context: Context) = false
             }
@@ -101,9 +95,7 @@ class RampingRingerVibrationSwitchPreferenceTest {
     fun isAvailable_voiceCapableAndDisabledInTelephony_available() {
         val newPreference = RampingRingerVibrationSwitchPreference(
             context,
-            key = TEST_KEY,
-            ringPreferenceKey = RING_KEY,
-            deviceConfig = object : TelephonyConfigProvider {
+            object : TelephonyConfigProvider {
                 override fun isTelephonyRampingRingerEnabled() = false
                 override fun isVoiceCapable(context: Context) = true
             }
@@ -289,13 +281,13 @@ class RampingRingerVibrationSwitchPreferenceTest {
     }
 
     private fun getRawStoredValue() =
-        SettingsSystemStore.get(context).getBoolean(APPLY_RAMPING_RINGER)
+        SettingsSystemStore.get(context).getBoolean(preference.key)
 
     private fun setValue(value: Boolean?) =
-        SettingsSystemStore.get(context).setBoolean(APPLY_RAMPING_RINGER, value)
+        SettingsSystemStore.get(context).setBoolean(preference.key, value)
 
     private fun setRingIntensityValue(value: Boolean?) =
-        SettingsSystemStore.get(context).setBoolean(RING_VIBRATION_INTENSITY, value)
+        SettingsSystemStore.get(context).setBoolean(Settings.System.RING_VIBRATION_INTENSITY, value)
 
     private fun createWidget(): SwitchPreferenceCompat =
         preference.createAndBindWidget(context)
@@ -311,11 +303,6 @@ class RampingRingerVibrationSwitchPreferenceTest {
         val audioManager = context.getSystemService<AudioManager>()
         audioManager?.ringerModeInternal = ringerMode
         assertThat(audioManager?.ringerModeInternal).isEqualTo(ringerMode)
-    }
-
-    companion object {
-        private const val TEST_KEY = "some_key"
-        private const val RING_KEY = "ring_key"
     }
 }
 // LINT.ThenChange(VibrationRampingRingerTogglePreferenceControllerTest.java)
