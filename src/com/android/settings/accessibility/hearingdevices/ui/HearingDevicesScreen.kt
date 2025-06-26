@@ -43,6 +43,7 @@ import com.android.settingslib.bluetooth.HearingAidInfo.DeviceSide.SIDE_RIGHT
 import com.android.settingslib.bluetooth.LocalBluetoothManager
 import com.android.settingslib.bluetooth.LocalBluetoothProfileManager
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
+import com.android.settingslib.metadata.PreferenceCategory
 import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.metadata.PreferenceLifecycleProvider
 import com.android.settingslib.metadata.PreferenceMetadata
@@ -133,6 +134,9 @@ open class HearingDevicesScreen(context: Context) :
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
         preferenceHierarchy(context) {
             +HearingDevicesTopIntroPreference(context)
+            +AvailableHearingDevicePreferenceCategory()
+            +AddDevicePreference(context)
+            +SavedHearingDevicePreferenceCategory()
             +HearingDevicesFooterPreference(context)
         }
 
@@ -199,6 +203,16 @@ open class HearingDevicesScreen(context: Context) :
             )
         }
     }
+
+    class AvailableHearingDevicePreferenceCategory(
+        key: String = "available_hearing_devices",
+        title: Int = R.string.accessibility_hearing_device_connected_title,
+    ) : PreferenceCategory(key, title)
+
+    class SavedHearingDevicePreferenceCategory(
+        key: String = "previously_connected_hearing_devices",
+        title: Int = R.string.accessibility_hearing_device_saved_title,
+    ) : PreferenceCategory(key, title)
 
     companion object {
         const val KEY = "hearing_devices"
