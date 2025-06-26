@@ -23,7 +23,7 @@ import org.junit.Test
 // LINT.IfChange
 class RingVibrationIntensitySwitchPreferenceTest : VibrationIntensitySwitchPreferenceTestCase() {
     override val hasRingerModeDependency = true
-    override val preference = RingVibrationIntensitySwitchPreference(context, "key", "main_key")
+    override val preference = RingVibrationIntensitySwitchPreference(context)
 
     @Test
     fun click_updatesVibrateWhenRinging() {

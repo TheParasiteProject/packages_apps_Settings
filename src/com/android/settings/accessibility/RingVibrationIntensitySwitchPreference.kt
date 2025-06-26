@@ -17,25 +17,23 @@ package com.android.settings.accessibility
 
 import android.content.Context
 import android.os.VibrationAttributes
-import android.provider.Settings.System.RING_VIBRATION_INTENSITY
+import android.provider.Settings
 import com.android.settings.R
 
 /** Accessibility settings for ring vibration, using a switch toggle. */
 // LINT.IfChange
-class RingVibrationIntensitySwitchPreference(
-    context: Context,
-    key: String,
-    mainSwitchPreferenceKey: String,
-) :
+class RingVibrationIntensitySwitchPreference(context: Context) :
     VibrationIntensitySwitchPreference(
         context = context,
-        key = key,
-        settingsProviderKey = RING_VIBRATION_INTENSITY,
-        mainSwitchPreferenceKey = mainSwitchPreferenceKey,
+        key = KEY,
         vibrationUsage = VibrationAttributes.USAGE_RINGTONE,
         title = R.string.accessibility_ring_vibration_title,
     ) {
     override val keywords: Int
         get() = R.string.keywords_ring_vibration
+
+    companion object {
+        const val KEY = Settings.System.RING_VIBRATION_INTENSITY
+    }
 }
 // LINT.ThenChange(RingVibrationTogglePreferenceController.java)
