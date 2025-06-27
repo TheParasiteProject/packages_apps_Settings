@@ -69,10 +69,11 @@ open class MagnificationScreen : PreferenceScreenMixin {
                 +MagnificationModePreference()
                 +MagnifyKeyboardSwitchPreference()
                 +FollowTypingSwitchPreference()
+                +FollowKeyboardSwitchPreference()
+                +CursorFollowingPreference()
                 +OneFingerPanningSwitchPreference()
                 +AlwaysOnSwitchPreference()
                 +JoystickSwitchPreference()
-                +FollowKeyboardSwitchPreference()
             }
         }
 
