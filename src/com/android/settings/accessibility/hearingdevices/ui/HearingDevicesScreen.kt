@@ -138,6 +138,10 @@ open class HearingDevicesScreen(context: Context) :
             +AddDevicePreference(context)
             +SavedHearingDevicePreferenceCategory()
             +HearingDevicesFooterPreference(context)
+            +HearingDeviceOptionsPreferenceCategory() += {
+                +AudioRoutingPreference()
+                +HearingAidCompatibilitySwitchPreference(context)
+            }
         }
 
     override fun isIndexable(context: Context): Boolean = true
@@ -212,6 +216,11 @@ open class HearingDevicesScreen(context: Context) :
     class SavedHearingDevicePreferenceCategory(
         key: String = "previously_connected_hearing_devices",
         title: Int = R.string.accessibility_hearing_device_saved_title,
+    ) : PreferenceCategory(key, title)
+
+    class HearingDeviceOptionsPreferenceCategory(
+        key: String = "hearing_options_category",
+        title: Int = R.string.accessibility_screen_option,
     ) : PreferenceCategory(key, title)
 
     companion object {
