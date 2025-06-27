@@ -654,33 +654,7 @@ public class AudioSharingDevicePreferenceControllerTest {
 
     @Test
     @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
-    @DisableFlags(Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX)
-    public void testInCallState_showCallStateTitleAndSetActiveOnDeviceClick() {
-        Settings.Secure.putInt(mContext.getContentResolver(),
-                BLUETOOTH_LE_BROADCAST_PRIMARY_DEVICE_GROUP_ID,
-                BluetoothCsipSetCoordinator.GROUP_ID_INVALID);
-        mController.displayPreference(mScreen);
-
-        mAudioManager.setMode(AudioManager.MODE_IN_CALL);
-        mController.onAudioModeChanged();
-        shadowOf(Looper.getMainLooper()).idle();
-
-        assertThat(mPreferenceGroup.getTitle().toString())
-                .isEqualTo(mContext.getString(R.string.connected_device_call_device_title));
-
-        BluetoothDevicePreference preference = createBluetoothDevicePreference();
-        mController.onDeviceClick(preference);
-        verify(mCachedDevice).setActive();
-        assertThat(Settings.Secure.getInt(mContext.getContentResolver(),
-                BLUETOOTH_LE_BROADCAST_PRIMARY_DEVICE_GROUP_ID,
-                BluetoothCsipSetCoordinator.GROUP_ID_INVALID)).isEqualTo(
-                BluetoothCsipSetCoordinator.GROUP_ID_INVALID);
-    }
-
-    @Test
-    @EnableFlags({Flags.FLAG_ENABLE_LE_AUDIO_SHARING,
-            Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX})
-    public void testInCallState_enableHysteresisFix_setAndSaveActiveOnDeviceClick() {
+    public void testInCallState_setAndSaveActiveOnDeviceClick() {
         Settings.Secure.putInt(mContext.getContentResolver(),
                 BLUETOOTH_LE_BROADCAST_PRIMARY_DEVICE_GROUP_ID,
                 BluetoothCsipSetCoordinator.GROUP_ID_INVALID);
