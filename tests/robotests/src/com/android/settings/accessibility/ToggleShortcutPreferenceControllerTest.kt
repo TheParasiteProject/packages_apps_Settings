@@ -17,6 +17,7 @@
 package com.android.settings.accessibility
 
 import android.content.Context
+import android.platform.test.annotations.EnableFlags
 import android.provider.Settings
 import android.view.View
 import android.view.accessibility.AccessibilityManager
@@ -29,13 +30,16 @@ import androidx.lifecycle.Lifecycle.State.INITIALIZED
 import androidx.preference.PreferenceManager
 import androidx.preference.PreferenceViewHolder
 import androidx.test.core.app.ApplicationProvider
+import com.android.hardware.input.Flags
 import com.android.internal.accessibility.AccessibilityShortcutController.AUTOCLICK_COMPONENT_NAME
 import com.android.internal.accessibility.common.ShortcutConstants
 import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.DEFAULT
 import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.GESTURE
 import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.HARDWARE
 import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.SOFTWARE
+import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.KEY_GESTURE
 import com.android.internal.accessibility.util.ShortcutUtils
+import com.android.settings.R
 import com.android.settings.testutils.AccessibilityTestUtils
 import com.android.settings.testutils.shadow.ShadowAccessibilityManager
 import com.google.common.truth.Truth.assertThat
@@ -149,7 +153,7 @@ class ToggleShortcutPreferenceControllerTest {
     }
 
     @Test
-    fun displayPreferenceAndUpdateState_updateCheckStateAndSummary() {
+    fun displayPreferenceAndUpdateState_softwareOrGestureShortcut_updateCheckStateAndSummary() {
         a11yManager.enableShortcutsForTargets(
             /* enable= */ true,
             SOFTWARE or GESTURE,
@@ -165,6 +169,43 @@ class ToggleShortcutPreferenceControllerTest {
         assertThat(shortcutPreference.summary).isEqualTo(
             AccessibilityUtil.getShortcutSummaryList(context, SOFTWARE or GESTURE)
         )
+    }
+
+    @Test
+    fun displayPreferenceAndUpdateState_defaultShortcut_updateCheckStateAndSummary() {
+        a11yManager.enableShortcutsForTargets(
+            /* enable= */ true,
+            DEFAULT,
+            setOf(testComponentString),
+            context.userId
+        )
+
+        fragmentScenario.moveToState(CREATED)
+        controller.displayPreference(shortcutPreference.preferenceManager.preferenceScreen)
+        controller.updateState(shortcutPreference)
+
+        assertThat(shortcutPreference.isChecked).isFalse()
+        assertThat(shortcutPreference.summary).isEqualTo(
+            context.getText(R.string.accessibility_shortcut_state_off))
+    }
+
+    @EnableFlags(Flags.FLAG_ENABLE_TALKBACK_AND_MAGNIFIER_KEY_GESTURES)
+    @Test
+    fun displayPreferenceAndUpdateState_keyGestureShortcut_updateCheckStateAndSummary() {
+        a11yManager.enableShortcutsForTargets(
+            /* enable= */ true,
+            KEY_GESTURE,
+            setOf(testComponentString),
+            context.userId
+        )
+
+        fragmentScenario.moveToState(CREATED)
+        controller.displayPreference(shortcutPreference.preferenceManager.preferenceScreen)
+        controller.updateState(shortcutPreference)
+
+        assertThat(shortcutPreference.isChecked).isFalse()
+        assertThat(shortcutPreference.summary).isEqualTo(
+            context.getText(R.string.accessibility_shortcut_state_off))
     }
 
     @Test
