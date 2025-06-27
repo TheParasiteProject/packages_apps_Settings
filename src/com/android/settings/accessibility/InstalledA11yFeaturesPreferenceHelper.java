@@ -22,7 +22,6 @@ import android.app.AppOpsManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.content.pm.ResolveInfo;
 import android.os.UserHandle;
 
@@ -36,15 +35,15 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * This class helps setup RestrictedPreference for accessibility.
+ * This class helps setup Preferences for installed accessibility features.
  */
-public class RestrictedPreferenceHelper {
+public class InstalledA11yFeaturesPreferenceHelper {
 
     private final Context mContext;
     private final DevicePolicyManager mDpm;
     private final AppOpsManager mAppOps;
 
-    public RestrictedPreferenceHelper(Context context) {
+    public InstalledA11yFeaturesPreferenceHelper(Context context) {
         mContext = context;
         mDpm = context.getSystemService(DevicePolicyManager.class);
         mAppOps = context.getSystemService(AppOpsManager.class);
@@ -103,11 +102,8 @@ public class RestrictedPreferenceHelper {
 
         for (int i = 0; i < installedShortcutsSize; ++i) {
             final AccessibilityShortcutInfo info = installedShortcuts.get(i);
-            final ActivityInfo activityInfo = info.getActivityInfo();
-            final ComponentName componentName = info.getComponentName();
-
             AccessibilityActivityPreference preference = new AccessibilityActivityPreference(
-                    mContext, componentName.getPackageName(), activityInfo.applicationInfo.uid,
+                    mContext,
                     info);
             // Accessibility Activities do not have elevated privileges so restricting
             // them based on ECM or device admin does not give any value.

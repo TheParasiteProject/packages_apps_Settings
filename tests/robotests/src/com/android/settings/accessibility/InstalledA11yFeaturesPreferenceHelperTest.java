@@ -55,12 +55,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Test for {@link RestrictedPreferenceHelper}. */
+/** Test for {@link InstalledA11yFeaturesPreferenceHelper}. */
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {
         ShadowRestrictedLockUtilsInternal.class
 })
-public class RestrictedPreferenceHelperTest {
+public class InstalledA11yFeaturesPreferenceHelperTest {
 
     private static final String PACKAGE_NAME = "com.android.test";
     private static final String CLASS_NAME = PACKAGE_NAME + ".test_a11y_service";
@@ -77,7 +77,8 @@ public class RestrictedPreferenceHelperTest {
             PACKAGE_NAME, CLASS_NAME);
     @Mock
     private AccessibilityShortcutInfo mShortcutInfo;
-    private final RestrictedPreferenceHelper mHelper = new RestrictedPreferenceHelper(mContext);
+    private final InstalledA11yFeaturesPreferenceHelper
+            mHelper = new InstalledA11yFeaturesPreferenceHelper(mContext);
 
     @Rule
     public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
@@ -135,26 +136,9 @@ public class RestrictedPreferenceHelperTest {
 
         final List<AccessibilityActivityPreference> preferenceList =
                 mHelper.createAccessibilityActivityPreferenceList(infoList);
-        final RestrictedPreference preference = preferenceList.get(0);
+        final AccessibilityActivityPreference preference = preferenceList.get(0);
 
         assertThat(preference.getKey()).isEqualTo(key);
-    }
-
-    @Test
-    @EnableFlags(value = {
-            android.security.Flags.FLAG_EXTEND_ECM_TO_ALL_SETTINGS,
-            android.permission.flags.Flags.FLAG_ENHANCED_CONFIRMATION_MODE_APIS_ENABLED,
-    })
-    public void createAccessibilityActivityPreference_ecmRestricted_prefIsNotEcmRestricted() {
-        setMockAccessibilityShortcutInfo(mShortcutInfo);
-        ShadowRestrictedLockUtilsInternal.setEcmRestrictedPkgs(PACKAGE_NAME);
-
-        final List<AccessibilityActivityPreference> preferenceList =
-                mHelper.createAccessibilityActivityPreferenceList(List.of(mShortcutInfo));
-        assertThat(preferenceList).hasSize(1);
-        final RestrictedPreference preference = preferenceList.get(0);
-
-        assertThat(preference.isDisabledByEcm()).isFalse();
     }
 
     private AccessibilityServiceInfo getMockAccessibilityServiceInfo(String packageName,
