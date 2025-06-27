@@ -152,7 +152,7 @@ class MagnificationPreferenceFragmentTest :
 
     companion object {
         private const val SHORTCUT_PREF_KEY = "magnification_shortcut_preference"
-        private const val MAGNIFICATION_MODE_PREF_KEY = "screen_magnification_mode"
+        private const val MAGNIFICATION_MODE_PREF_KEY = "accessibility_magnification_capability"
         private const val CURSOR_FOLLOWING_MODE_PREF_KEY = "magnification_cursor_following_mode"
     }
 }

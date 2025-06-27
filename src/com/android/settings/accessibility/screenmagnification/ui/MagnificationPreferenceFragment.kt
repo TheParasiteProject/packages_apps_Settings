@@ -37,7 +37,9 @@ open class MagnificationPreferenceFragment : BaseSupportFragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        use(ModePreferenceController::class.java)?.setFragmentManager(getChildFragmentManager())
+        if (!Flags.catalystMagnification()) {
+            use(ModePreferenceController::class.java)?.setFragmentManager(getChildFragmentManager())
+        }
         use(CursorFollowingModePreferenceController::class.java)
             ?.setFragmentManager(getChildFragmentManager())
         getShortcutPreferenceController()
