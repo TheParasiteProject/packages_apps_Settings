@@ -685,27 +685,6 @@ public class ToggleScreenMagnificationPreferenceFragment extends
         mShortcutPreference.setChecked(getUserShortcutTypes() != DEFAULT);
         mShortcutPreference.setSummary(getShortcutTypeSummary(getPrefContext()));
     }
-
-    /**
-     * Gets the service summary of magnification.
-     *
-     * @param context The current context.
-     */
-    @NonNull
-    public static CharSequence getServiceSummary(@NonNull Context context) {
-        // Get the user shortcut type from settings provider.
-        final int userShortcutType = AccessibilityUtil.getUserShortcutTypesFromSettings(
-                context, MAGNIFICATION_COMPONENT_NAME);
-        final CharSequence featureState =
-                (userShortcutType != DEFAULT)
-                        ? context.getText(R.string.accessibility_summary_shortcut_enabled)
-                        : context.getText(R.string.generic_accessibility_feature_shortcut_off);
-        final CharSequence featureSummary = context.getText(R.string.magnification_feature_summary);
-        return context.getString(
-                com.android.settingslib.R.string.preference_summary_default_combination,
-                featureState, featureSummary);
-    }
-
     @Override
     protected int getUserPreferredShortcutTypes() {
         return PreferredShortcuts.retrieveUserShortcutType(

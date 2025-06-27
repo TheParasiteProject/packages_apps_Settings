@@ -16,9 +16,7 @@
 
 package com.android.settings.accessibility;
 
-import static com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.DEFAULT;
 import static com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.HARDWARE;
-import static com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.KEY_GESTURE;
 import static com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.QUICK_SETTINGS;
 import static com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.SOFTWARE;
 import static com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.TRIPLETAP;
@@ -827,103 +825,6 @@ public class ToggleScreenMagnificationPreferenceFragmentTest {
         String htmlDescription = fragment.getCurrentHtmlDescription().toString();
         assertThat(htmlDescription).isNotEmpty();
         assertThat(htmlDescription).contains("keyboard");
-    }
-
-    @Test
-    public void getSummary_magnificationEnabled_returnShortcutOnWithSummary() {
-        mShadowAccessibilityManager.setAccessibilityShortcutTargets(
-                TRIPLETAP, List.of(MAGNIFICATION_CONTROLLER_NAME));
-
-        assertThat(
-                ToggleScreenMagnificationPreferenceFragment.getServiceSummary(mContext).toString())
-                .isEqualTo(
-                        mContext.getString(
-                                com.android.settingslib.R.string
-                                        .preference_summary_default_combination,
-                                mContext.getText(R.string.accessibility_summary_shortcut_enabled),
-                                mContext.getText(R.string.magnification_feature_summary)));
-    }
-
-    @Test
-    public void getSummary_magnificationDisabled_returnShortcutOffWithSummary() {
-        mShadowAccessibilityManager.setAccessibilityShortcutTargets(
-                TRIPLETAP, List.of());
-
-        assertThat(
-                ToggleScreenMagnificationPreferenceFragment.getServiceSummary(mContext).toString())
-                .isEqualTo(
-                        mContext.getString(
-                                com.android.settingslib.R.string
-                                        .preference_summary_default_combination,
-                                mContext.getText(
-                                        R.string.generic_accessibility_feature_shortcut_off),
-                                mContext.getText(R.string.magnification_feature_summary)));
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_ENABLE_MAGNIFICATION_MULTIPLE_FINGER_MULTIPLE_TAP_GESTURE)
-    public void getSummary_magnificationGestureEnabled_returnShortcutOnWithSummary() {
-        mShadowAccessibilityManager.setAccessibilityShortcutTargets(
-                TWOFINGER_DOUBLETAP, List.of(MAGNIFICATION_CONTROLLER_NAME));
-
-        assertThat(
-                ToggleScreenMagnificationPreferenceFragment.getServiceSummary(mContext).toString())
-                .isEqualTo(
-                        mContext.getString(
-                                com.android.settingslib.R.string
-                                        .preference_summary_default_combination,
-                                mContext.getText(R.string.accessibility_summary_shortcut_enabled),
-                                mContext.getText(R.string.magnification_feature_summary)));
-    }
-
-    @Test
-    public void getSummary_defaultShortcut_returnShortcutOffWithSummary() {
-        mShadowAccessibilityManager.setAccessibilityShortcutTargets(
-                DEFAULT, List.of(MAGNIFICATION_CONTROLLER_NAME));
-
-        assertThat(
-                ToggleScreenMagnificationPreferenceFragment.getServiceSummary(mContext).toString())
-                .isEqualTo(
-                        mContext.getString(
-                                com.android.settingslib.R.string
-                                        .preference_summary_default_combination,
-                                mContext.getText(
-                                        R.string.generic_accessibility_feature_shortcut_off),
-                                mContext.getText(R.string.magnification_feature_summary)));
-    }
-
-    @EnableFlags(com.android.hardware.input.Flags.FLAG_ENABLE_TALKBACK_AND_MAGNIFIER_KEY_GESTURES)
-    @Test
-    public void getSummary_keyGestureShortcut_returnShortcutOffWithSummary() {
-        mShadowAccessibilityManager.setAccessibilityShortcutTargets(
-                KEY_GESTURE, List.of(MAGNIFICATION_CONTROLLER_NAME));
-
-        assertThat(
-                ToggleScreenMagnificationPreferenceFragment.getServiceSummary(mContext).toString())
-                .isEqualTo(
-                        mContext.getString(
-                                com.android.settingslib.R.string
-                                        .preference_summary_default_combination,
-                                mContext.getText(
-                                        R.string.generic_accessibility_feature_shortcut_off),
-                                mContext.getText(R.string.magnification_feature_summary)));
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_ENABLE_MAGNIFICATION_MULTIPLE_FINGER_MULTIPLE_TAP_GESTURE)
-    public void getSummary_magnificationGestureDisabled_returnShortcutOffWithSummary() {
-        mShadowAccessibilityManager.setAccessibilityShortcutTargets(
-                TRIPLETAP | TWOFINGER_DOUBLETAP, List.of());
-
-        assertThat(
-                ToggleScreenMagnificationPreferenceFragment.getServiceSummary(mContext).toString())
-                .isEqualTo(
-                        mContext.getString(
-                                com.android.settingslib.R.string
-                                        .preference_summary_default_combination,
-                                mContext.getText(
-                                        R.string.generic_accessibility_feature_shortcut_off),
-                                mContext.getText(R.string.magnification_feature_summary)));
     }
 
     @Test
