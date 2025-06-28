@@ -19,9 +19,6 @@ package com.android.settings.accessibility;
 import static com.android.internal.accessibility.AccessibilityShortcutController.MAGNIFICATION_COMPONENT_NAME;
 import static com.android.internal.accessibility.AccessibilityShortcutController.MAGNIFICATION_CONTROLLER_NAME;
 import static com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.DEFAULT;
-import static com.android.settings.accessibility.AccessibilityUtil.State.OFF;
-import static com.android.settings.accessibility.AccessibilityUtil.State.ON;
-import static com.android.settings.accessibility.AccessibilityUtil.getShortcutSummaryList;
 
 import android.app.Dialog;
 import android.app.settings.SettingsEnums;
@@ -562,7 +559,7 @@ public class ToggleScreenMagnificationPreferenceFragment extends
             return context.getText(R.string.switch_off_text);
         }
 
-        return getShortcutSummaryList(context,
+        return AccessibilityUtil.getShortcutSummaryList(context,
                 PreferredShortcuts.retrieveUserShortcutType(context,
                         MAGNIFICATION_CONTROLLER_NAME));
     }
@@ -601,8 +598,8 @@ public class ToggleScreenMagnificationPreferenceFragment extends
 
     @Override
     int getUserShortcutTypes() {
-        return ShortcutUtils.getEnabledShortcutTypes(
-                getPrefContext(), MAGNIFICATION_CONTROLLER_NAME);
+        return AccessibilityUtil.getUserShortcutTypesFromSettings(
+                getPrefContext(), MAGNIFICATION_COMPONENT_NAME);
     }
 
     @Override
@@ -617,7 +614,8 @@ public class ToggleScreenMagnificationPreferenceFragment extends
                 preferenceKey)) {
             showShortcutsTutorialDialog();
         }
-        Settings.Secure.putInt(getContentResolver(), preferenceKey, enabled ? ON : OFF);
+        Settings.Secure.putInt(getContentResolver(), preferenceKey, enabled
+                ? AccessibilityUtil.State.ON : AccessibilityUtil.State.OFF);
     }
 
     @Override
@@ -650,8 +648,8 @@ public class ToggleScreenMagnificationPreferenceFragment extends
 
     @Override
     protected void updateShortcutPreferenceData() {
-        final int shortcutTypes = ShortcutUtils.getEnabledShortcutTypes(
-                getPrefContext(), MAGNIFICATION_CONTROLLER_NAME);
+        final int shortcutTypes = AccessibilityUtil.getUserShortcutTypesFromSettings(
+                getPrefContext(), MAGNIFICATION_COMPONENT_NAME);
         if (shortcutTypes != DEFAULT) {
             final PreferredShortcut shortcut = new PreferredShortcut(
                     MAGNIFICATION_CONTROLLER_NAME, shortcutTypes);
@@ -687,27 +685,6 @@ public class ToggleScreenMagnificationPreferenceFragment extends
         mShortcutPreference.setChecked(getUserShortcutTypes() != DEFAULT);
         mShortcutPreference.setSummary(getShortcutTypeSummary(getPrefContext()));
     }
-
-    /**
-     * Gets the service summary of magnification.
-     *
-     * @param context The current context.
-     */
-    @NonNull
-    public static CharSequence getServiceSummary(@NonNull Context context) {
-        // Get the user shortcut type from settings provider.
-        final int userShortcutType = ShortcutUtils.getEnabledShortcutTypes(
-                context, MAGNIFICATION_CONTROLLER_NAME);
-        final CharSequence featureState =
-                (userShortcutType != DEFAULT)
-                        ? context.getText(R.string.accessibility_summary_shortcut_enabled)
-                        : context.getText(R.string.generic_accessibility_feature_shortcut_off);
-        final CharSequence featureSummary = context.getText(R.string.magnification_feature_summary);
-        return context.getString(
-                com.android.settingslib.R.string.preference_summary_default_combination,
-                featureState, featureSummary);
-    }
-
     @Override
     protected int getUserPreferredShortcutTypes() {
         return PreferredShortcuts.retrieveUserShortcutType(

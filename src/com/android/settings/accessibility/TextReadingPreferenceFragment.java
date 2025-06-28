@@ -85,7 +85,7 @@ public class TextReadingPreferenceFragment extends BaseSupportFragment {
             EntryPoint.ACCESSIBILITY_SETTINGS,
             EntryPoint.HIGH_CONTRAST_TEXT_NOTIFICATION,
     })
-    @interface EntryPoint {
+    public @interface EntryPoint {
         int UNKNOWN_ENTRY = 0;
         int SUW_VISION_SETTINGS = 1;
         int SUW_ANYTHING_ELSE = 2;

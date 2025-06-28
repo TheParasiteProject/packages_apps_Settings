@@ -15,6 +15,7 @@
     limitations under the License.
 -->
 
+<!-- LINT.IfChange -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
@@ -80,3 +81,5 @@
         android:icon="@drawable/ic_history"
         android:persistent="false" />
 </PreferenceScreen>
+<!-- LINT.ThenChange(/src/com/android/settings/accessibility/textreading/ui/TextReadingScreen.kt:ui_hierarchy) -->
+

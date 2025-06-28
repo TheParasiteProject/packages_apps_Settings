@@ -2210,7 +2210,7 @@
     <!-- External Display settings. When external display is disabled. [CHAR LIMIT=40] -->
     <string name="external_display_off">Off</string>
     <!-- External Display settings. The title of the screen. [CHAR LIMIT=40] -->
-    <string name="external_display_settings_title">External display</string>
+    <string name="external_display_settings_title">External displays</string>
     <!-- Built-in display settings category. Appears in External displays and Connected Displays fragments. -->
     <string name="builtin_display_settings_category">Built-in display</string>
     <!-- External Display use. The title of the use preference. [CHAR LIMIT=40] -->

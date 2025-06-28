@@ -22,7 +22,6 @@ import android.os.VibrationAttributes
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.provider.Settings
-import android.provider.Settings.System.KEYBOARD_VIBRATION_ENABLED
 import androidx.core.content.getSystemService
 import androidx.preference.SwitchPreferenceCompat
 import androidx.test.core.app.ApplicationProvider
@@ -45,6 +44,8 @@ import org.mockito.kotlin.verify
 // LINT.IfChange
 @RunWith(AndroidJUnit4::class)
 class KeyboardVibrationSwitchPreferenceTest {
+    private val preference = KeyboardVibrationSwitchPreference()
+
     private val resourcesSpy: Resources =
         spy(ApplicationProvider.getApplicationContext<Context>().resources)
 
@@ -62,8 +63,6 @@ class KeyboardVibrationSwitchPreferenceTest {
                     else -> super.getSystemService(name)
                 }
         }
-
-    private val preference = KeyboardVibrationSwitchPreference(context, "some_key")
 
     @Before
     fun setUp() {
@@ -259,10 +258,10 @@ class KeyboardVibrationSwitchPreferenceTest {
     }
 
     private fun getRawStoredValue() =
-        SettingsSystemStore.get(context).getBoolean(KEYBOARD_VIBRATION_ENABLED)
+        SettingsSystemStore.get(context).getBoolean(preference.key)
 
     private fun setValue(value: Boolean?) =
-        SettingsSystemStore.get(context).setBoolean(KEYBOARD_VIBRATION_ENABLED, value)
+        SettingsSystemStore.get(context).setBoolean(preference.key, value)
 
     private fun setMainVibrationValue(value: Boolean?) =
         SettingsSystemStore.get(context).setBoolean(Settings.System.VIBRATE_ON, value)
