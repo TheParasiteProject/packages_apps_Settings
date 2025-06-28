@@ -28,14 +28,14 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import androidx.preference.PreferenceScreen;
 
-import com.android.settings.widget.SettingsMainSwitchPreferenceController;
+import com.android.settings.core.TogglePreferenceController;
 import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnStart;
 import com.android.settingslib.core.lifecycle.events.OnStop;
 import com.android.settingslib.widget.MainSwitchPreference;
 
 public class AdaptivePlaybackSwitchPreferenceController extends
-        SettingsMainSwitchPreferenceController implements LifecycleObserver, OnStart, OnStop {
+        TogglePreferenceController implements LifecycleObserver, OnStart, OnStop {
 
     private MainSwitchPreference mPreference;
     private final SettingsObserver mSettingsObserver;
@@ -78,13 +78,6 @@ public class AdaptivePlaybackSwitchPreferenceController extends
     @Override
     public void onStop() {
         mContext.getContentResolver().unregisterContentObserver(mSettingsObserver);
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        Settings.System.putIntForUser(mContext.getContentResolver(),
-                Settings.System.ADAPTIVE_PLAYBACK_ENABLED, isChecked ? 1 : 0,
-                UserHandle.USER_CURRENT);
     }
 
     @Override
