@@ -24,6 +24,7 @@ import com.android.settings.accessibility.TextReadingPreferenceFragment.EntryPoi
 import com.android.settings.accessibility.TextReadingPreferenceFragmentForSetupWizard
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.flags.Flags
+import com.android.settingslib.metadata.PreferenceCategory
 import com.android.settingslib.metadata.preferenceHierarchy
 import kotlinx.coroutines.CoroutineScope
 
@@ -45,12 +46,18 @@ abstract class BaseTextReadingScreen : PreferenceScreenMixin {
 
     override fun fragmentClass(): Class<out Fragment>? = TextReadingPreferenceFragment::class.java
 
+    // LINT.IfChange(ui_hierarchy)
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
         preferenceHierarchy(context) {
-            // LINT.IfChange(ui_hierarchy)
-
-            // LINT.ThenChange()
+            +PreferenceCategory(
+                key = "display_text_size",
+                title = R.string.category_title_display_text_size,
+            )
+            +PreferenceCategory(key = "text_style", title = R.string.category_title_text_style) += {
+                +OutlineTextPreference(context, entryPoint)
+            }
         }
+    // LINT.ThenChange()
 }
 
 // @ProvidePreferenceScreen(TextReadingScreen.KEY)

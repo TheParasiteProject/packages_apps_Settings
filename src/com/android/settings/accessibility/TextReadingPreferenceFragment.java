@@ -26,6 +26,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Toast;
 
@@ -61,7 +62,6 @@ public class TextReadingPreferenceFragment extends BaseSupportFragment {
     static final String FONT_SIZE_KEY = "font_size";
     static final String DISPLAY_SIZE_KEY = "display_size";
     static final String BOLD_TEXT_KEY = "toggle_force_bold_text";
-    static final String HIGH_TEXT_CONTRAST_KEY = "toggle_high_text_contrast_preference";
     static final String RESET_KEY = "reset";
     static final String PREVIEW_KEY = "preview";
     private static final String NEED_RESET_SETTINGS = "need_reset_settings";
@@ -207,7 +207,8 @@ public class TextReadingPreferenceFragment extends BaseSupportFragment {
         controllers.add(mFontWeightAdjustmentController);
 
         final HighTextContrastPreferenceController highTextContrastController =
-                new HighTextContrastPreferenceController(context, HIGH_TEXT_CONTRAST_KEY);
+                new HighTextContrastPreferenceController(
+                        context, Settings.Secure.ACCESSIBILITY_HIGH_TEXT_CONTRAST_ENABLED);
         highTextContrastController.setEntryPoint(mEntryPoint);
         controllers.add(highTextContrastController);
 
