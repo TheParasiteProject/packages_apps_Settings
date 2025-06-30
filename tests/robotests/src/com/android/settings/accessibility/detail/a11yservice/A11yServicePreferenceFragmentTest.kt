@@ -48,7 +48,7 @@ import com.android.settings.accessibility.AccessibilityDialogUtils.DialogEnums.E
 import com.android.settings.accessibility.AccessibilityDialogUtils.DialogEnums.ENABLE_WARNING_FROM_TOGGLE
 import com.android.settings.accessibility.AccessibilityFooterPreference
 import com.android.settings.accessibility.AccessibilitySettings
-import com.android.settings.accessibility.BaseShortcutFragmentTestCases
+import com.android.settings.accessibility.BaseShortcutInteractionsTestCases
 import com.android.settings.accessibility.PreferredShortcut
 import com.android.settings.accessibility.PreferredShortcuts
 import com.android.settings.accessibility.ShortcutPreference
@@ -82,7 +82,7 @@ import org.robolectric.shadows.ShadowPackageManager
 
 @RunWith(RobolectricTestParameterInjector::class)
 class A11yServicePreferenceFragmentTest :
-    BaseShortcutFragmentTestCases<A11yServicePreferenceFragment>() {
+    BaseShortcutInteractionsTestCases<A11yServicePreferenceFragment>() {
     private var fragScenario: FragmentScenario<A11yServicePreferenceFragment>? = null
     private var fragment: A11yServicePreferenceFragment? = null
     private val packageManager: ShadowPackageManager = spy(shadowOf(context.packageManager))

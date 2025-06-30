@@ -27,7 +27,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.preference.Preference
 import com.android.internal.accessibility.AccessibilityShortcutController
 import com.android.settings.R
-import com.android.settings.accessibility.BaseShortcutFragmentTestCases
+import com.android.settings.accessibility.BaseShortcutInteractionsTestCases
 import com.android.settings.accessibility.Flags
 import com.android.settings.accessibility.MagnificationCapabilities
 import com.android.settings.accessibility.MagnificationCapabilities.MagnificationMode
@@ -49,7 +49,7 @@ import org.robolectric.shadows.ShadowLooper
 @Config(shadows = [ShadowInputDevice::class])
 @RunWith(RobolectricTestRunner::class)
 class MagnificationPreferenceFragmentTest :
-    BaseShortcutFragmentTestCases<MagnificationPreferenceFragment>() {
+    BaseShortcutInteractionsTestCases<MagnificationPreferenceFragment>() {
     private var fragScenario: FragmentScenario<MagnificationPreferenceFragment>? = null
     private var fragment: MagnificationPreferenceFragment? = null
 
