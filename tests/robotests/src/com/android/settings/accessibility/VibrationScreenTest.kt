@@ -22,14 +22,18 @@ import android.content.res.Resources
 import android.media.AudioManager
 import android.os.Vibrator
 import android.platform.test.annotations.EnableFlags
+import android.provider.Settings.System.APPLY_RAMPING_RINGER
+import android.provider.Settings.System.KEYBOARD_VIBRATION_ENABLED
+import android.provider.Settings.System.NOTIFICATION_VIBRATION_INTENSITY
+import android.provider.Settings.System.RING_VIBRATION_INTENSITY
 import androidx.core.content.getSystemService
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
 import androidx.test.core.app.ApplicationProvider
 import com.android.settings.R
 import com.android.settings.flags.Flags
-import com.android.settings.testutils2.SettingsCatalystTestCase
 import com.android.settings.testutils.shadow.ShadowAudioManager
+import com.android.settings.testutils2.SettingsCatalystTestCase
 import com.android.settingslib.datastore.SettingsSystemStore
 import com.android.settingslib.widget.MainSwitchPreference
 import com.google.common.truth.Truth.assertThat
@@ -104,42 +108,58 @@ class VibrationScreenTest : SettingsCatalystTestCase() {
     @EnableFlags(Flags.FLAG_CATALYST_VIBRATION_INTENSITY_SCREEN_25Q4)
     @Test
     fun mainSwitchClick_withIntensitiesSet_disablesAndUnchecksAllIntensitiesAndPreservesStorage() {
-        setRingerMode(AudioManager.RINGER_MODE_NORMAL)
         val intensityKeys = findVibrationIntensitySwitchPreferences()
         assertThat(intensityKeys).isNotEmpty()
 
         // Setup initial vibration intensities.
         val originalIntensity = Vibrator.VIBRATION_INTENSITY_HIGH
-        intensityKeys.forEach { key -> setStoredIntensity(key, originalIntensity) }
+        intensityKeys.values.forEach { key -> setStoredIntensity(key, originalIntensity) }
+        // Setup other switches.
+        setStoredBoolean(APPLY_RAMPING_RINGER, true)
+        setStoredBoolean(KEYBOARD_VIBRATION_ENABLED, true)
 
         testOnFragment { fragment ->
-            val allSwitches = intensityKeys.stream()
-                .map { key -> fragment.findPreference<SwitchPreferenceCompat>(key)!! }
-                .toList()
-            val mainSwitch: MainSwitchPreference =
-                fragment.findPreference(VibrationMainSwitchPreference.KEY)!!
+            val intensitySwitches =
+                intensityKeys.keys
+                    .stream()
+                    .map { key -> fragment.findPreference<SwitchPreferenceCompat>(key)!! }
+                    .toList()
+            val rampingRingerSwitch: SwitchPreferenceCompat =
+                fragment.findPreference("toggle_apply_ramping_ringer")!!
+            val keyboardSwitch: SwitchPreferenceCompat =
+                fragment.findPreference("toggle_keyboard_vibration_enabled")!!
+            val mainSwitch: MainSwitchPreference = fragment.findPreference("toggle_vibrate_on")!!
 
             // Check all intensity switches are enabled and checked.
             assertThat(mainSwitch.isChecked).isTrue()
-            allSwitches.forEach { switch -> assertSwitchCheckedAndEnabled(switch) }
+            intensitySwitches.forEach { switch -> assertSwitchCheckedAndEnabled(switch) }
+            assertSwitchCheckedAndEnabled(rampingRingerSwitch)
+            assertSwitchCheckedAndEnabled(keyboardSwitch)
 
             // Turn main switch off.
             mainSwitch.performClick()
-            ShadowLooper.idleMainLooper();
+            ShadowLooper.idleMainLooper()
 
             // Check all intensities are disabled and unchecked, and stored value is preserved.
             assertThat(mainSwitch.isChecked).isFalse()
-            allSwitches.forEach { switch ->
-                assertSwitchUncheckedAndDisabled(switch, originalIntensity)
+            intensitySwitches.forEach { switch -> assertSwitchUncheckedAndDisabled(switch) }
+            intensityKeys.values.forEach { settingKey ->
+                assertExpectedStoredIntensity(settingKey, originalIntensity)
             }
+            assertSwitchUncheckedAndDisabled(rampingRingerSwitch)
+            assertExpectedStoredBoolean(APPLY_RAMPING_RINGER, true)
+            assertSwitchUncheckedAndDisabled(keyboardSwitch)
+            assertExpectedStoredBoolean(KEYBOARD_VIBRATION_ENABLED, true)
 
             // Turn main switch back on.
             mainSwitch.performClick()
-            ShadowLooper.idleMainLooper();
+            ShadowLooper.idleMainLooper()
 
             // Check all intensity switches restored.
             assertThat(mainSwitch.isChecked).isTrue()
-            allSwitches.forEach { switch -> assertSwitchCheckedAndEnabled(switch) }
+            intensitySwitches.forEach { switch -> assertSwitchCheckedAndEnabled(switch) }
+            assertSwitchCheckedAndEnabled(rampingRingerSwitch)
+            assertSwitchCheckedAndEnabled(keyboardSwitch)
         }
     }
 
@@ -152,101 +172,116 @@ class VibrationScreenTest : SettingsCatalystTestCase() {
 
         // Setup initial vibration intensities.
         val originalIntensity = Vibrator.VIBRATION_INTENSITY_MEDIUM
-        intensityKeys.forEach { key -> setStoredIntensity(key, originalIntensity) }
+        intensityKeys.values.forEach { key -> setStoredIntensity(key, originalIntensity) }
+        // Setup ramping ringer switch.
+        setStoredBoolean(APPLY_RAMPING_RINGER, true)
 
         testOnFragment { fragment ->
-            val allSwitches = intensityKeys.stream()
-                .map { key -> fragment.findPreference<SwitchPreferenceCompat>(key)!! }
-                .toList()
-            val otherSwitches = allSwitches.stream()
-                .filter { switch ->
-                    switch.key != RingVibrationIntensitySwitchPreference.KEY
-                            && switch.key != NotificationVibrationIntensitySwitchPreference.KEY
-                }
-                .toList()
+            val allIntensitySwitches =
+                intensityKeys.keys
+                    .stream()
+                    .map { key -> fragment.findPreference<SwitchPreferenceCompat>(key)!! }
+                    .toList()
+            val independentIntensitySwitches =
+                allIntensitySwitches
+                    .stream()
+                    .filter { switch ->
+                        switch.key != "toggle_ring_vibration_intensity" &&
+                            switch.key != "toggle_notification_vibration_intensity"
+                    }
+                    .toList()
             val ringSwitch: SwitchPreferenceCompat =
-                fragment.findPreference(RingVibrationIntensitySwitchPreference.KEY)!!
+                fragment.findPreference("toggle_ring_vibration_intensity")!!
             val notificationSwitch: SwitchPreferenceCompat =
-                fragment.findPreference(NotificationVibrationIntensitySwitchPreference.KEY)!!
+                fragment.findPreference("toggle_notification_vibration_intensity")!!
+            val rampingRingerSwitch: SwitchPreferenceCompat =
+                fragment.findPreference("toggle_apply_ramping_ringer")!!
 
             // Check all intensity switches are enabled and checked.
-            allSwitches.forEach { switch -> assertSwitchCheckedAndEnabled(switch) }
+            allIntensitySwitches.forEach { switch -> assertSwitchCheckedAndEnabled(switch) }
+            assertSwitchCheckedAndEnabled(rampingRingerSwitch)
 
             // Turn ringer mode silent.
             setRingerMode(AudioManager.RINGER_MODE_SILENT)
             context.sendBroadcast(Intent(AudioManager.INTERNAL_RINGER_MODE_CHANGED_ACTION))
-            ShadowLooper.idleMainLooper();
+            ShadowLooper.idleMainLooper()
 
             // Check only ring and notification are disabled and unchecked.
-            assertSwitchUncheckedAndDisabled(ringSwitch, originalIntensity)
-            assertSwitchUncheckedAndDisabled(notificationSwitch, originalIntensity)
-            otherSwitches.forEach { switch -> assertSwitchCheckedAndEnabled(switch) }
+            assertSwitchUncheckedAndDisabled(ringSwitch)
+            assertExpectedStoredIntensity(RING_VIBRATION_INTENSITY, originalIntensity)
+            assertSwitchUncheckedAndDisabled(notificationSwitch)
+            assertExpectedStoredIntensity(NOTIFICATION_VIBRATION_INTENSITY, originalIntensity)
+            assertSwitchUncheckedAndDisabled(rampingRingerSwitch)
+            assertExpectedStoredBoolean(APPLY_RAMPING_RINGER, true)
+            independentIntensitySwitches.forEach { switch -> assertSwitchCheckedAndEnabled(switch) }
 
             // Turn ringer mode vibrate-only.
             setRingerMode(AudioManager.RINGER_MODE_VIBRATE)
             context.sendBroadcast(Intent(AudioManager.INTERNAL_RINGER_MODE_CHANGED_ACTION))
-            ShadowLooper.idleMainLooper();
+            ShadowLooper.idleMainLooper()
 
             // Check all intensity switches restored.
-            allSwitches.forEach { switch -> assertSwitchCheckedAndEnabled(switch) }
+            allIntensitySwitches.forEach { switch -> assertSwitchCheckedAndEnabled(switch) }
+            assertSwitchCheckedAndEnabled(rampingRingerSwitch)
         }
     }
 
     @EnableFlags(Flags.FLAG_CATALYST_VIBRATION_INTENSITY_SCREEN_25Q4)
     @Test
-    fun mainVibrationChange_disablesKeyboardSwitchAndPreservesStorage() {
-        setStoredBoolean(VibrationMainSwitchPreference.KEY, true)
-        setStoredBoolean(KeyboardVibrationSwitchPreference.KEY, true)
+    fun ringVibrationChange_disablesRampingRingerAndPreservesStorage() {
+        // Setup initial ring vibration and ramping ringer.
+        setStoredIntensity(RING_VIBRATION_INTENSITY, Vibrator.VIBRATION_INTENSITY_MEDIUM)
+        setStoredBoolean(APPLY_RAMPING_RINGER, true)
 
         testOnFragment { fragment ->
-            val mainSwitch: MainSwitchPreference =
-                fragment.findPreference(VibrationMainSwitchPreference.KEY)!!
-            val keyboardSwitch: SwitchPreferenceCompat =
-                fragment.findPreference(KeyboardVibrationSwitchPreference.KEY)!!
+            val ringSwitch: SwitchPreferenceCompat =
+                fragment.findPreference("toggle_ring_vibration_intensity")!!
+            val rampingRingerSwitch: SwitchPreferenceCompat =
+                fragment.findPreference("toggle_apply_ramping_ringer")!!
 
-            // Check keyboard switch enabled and checked.
-            assertThat(mainSwitch.isChecked).isTrue()
-            assertSwitchCheckedAndEnabled(keyboardSwitch)
+            // Check ramping ringer enabled and checked.
+            assertThat(ringSwitch.isChecked).isTrue()
+            assertSwitchCheckedAndEnabled(rampingRingerSwitch)
 
-            // Turn main vibration switch off.
-            mainSwitch.performClick()
-            ShadowLooper.idleMainLooper();
+            // Turn ring vibrations off.
+            ringSwitch.performClick()
+            ShadowLooper.idleMainLooper()
 
-            // Check keyboard switch disabled and unchecked.
-            assertThat(mainSwitch.isChecked).isFalse()
-            assertSwitchUncheckedAndDisabled(keyboardSwitch, expectedStoredValue = true)
+            // Check ramping ringer disabled and unchecked.
+            assertThat(ringSwitch.isChecked).isFalse()
+            assertSwitchUncheckedAndDisabled(rampingRingerSwitch)
+            assertExpectedStoredBoolean(APPLY_RAMPING_RINGER, true)
 
-            // Turn main vibration switch back on.
-            mainSwitch.performClick()
-            ShadowLooper.idleMainLooper();
+            // Turn ring vibrations back on.
+            ringSwitch.performClick()
+            ShadowLooper.idleMainLooper()
 
-            // Check keyboard switch restored.
-            assertThat(mainSwitch.isChecked).isTrue()
-            assertSwitchCheckedAndEnabled(keyboardSwitch)
+            // Check ramping ringer restored.
+            assertThat(ringSwitch.isChecked).isTrue()
+            assertSwitchCheckedAndEnabled(rampingRingerSwitch)
         }
     }
 
-    private fun assertSwitchUncheckedAndDisabled(
-        switch: SwitchPreferenceCompat,
-        expectedIntensity: Int,
-    ) {
+    private fun assertSwitchUncheckedAndDisabled(switch: SwitchPreferenceCompat) {
         assertWithSwitch(switch).that(switch.isEnabled).isFalse()
         assertWithSwitch(switch).that(switch.isChecked).isFalse()
-        assertWithSwitch(switch).that(getStoredIntensity(switch.key)).isEqualTo(expectedIntensity)
-    }
-
-    private fun assertSwitchUncheckedAndDisabled(
-        switch: SwitchPreferenceCompat,
-        expectedStoredValue: Boolean,
-    ) {
-        assertWithSwitch(switch).that(switch.isEnabled).isFalse()
-        assertWithSwitch(switch).that(switch.isChecked).isFalse()
-        assertWithSwitch(switch).that(getStoredBoolean(switch.key)).isEqualTo(expectedStoredValue)
     }
 
     private fun assertSwitchCheckedAndEnabled(switch: SwitchPreferenceCompat) {
         assertWithSwitch(switch).that(switch.isEnabled).isTrue()
         assertWithSwitch(switch).that(switch.isChecked).isTrue()
+    }
+
+    private fun assertExpectedStoredIntensity(settingKey: String, expectedIntensity: Int?) {
+        assertWithMessage("On setting key %s", settingKey)
+            .that(getStoredIntensity(settingKey))
+            .isEqualTo(expectedIntensity)
+    }
+
+    private fun assertExpectedStoredBoolean(settingKey: String, expectedStoredValue: Boolean?) {
+        assertWithMessage("On setting key %s", settingKey)
+            .that(getStoredBoolean(settingKey))
+            .isEqualTo(expectedStoredValue)
     }
 
     private fun assertWithSwitch(switch: SwitchPreferenceCompat) =
@@ -270,14 +305,15 @@ class VibrationScreenTest : SettingsCatalystTestCase() {
         launchFragment(clazz) { fragment -> action.invoke(fragment) }
     }
 
-    private fun findVibrationIntensitySwitchPreferences(): List<String> {
-        val switches = ArrayList<String>()
-        preferenceScreenCreator.getPreferenceHierarchy(context, testScope)
-            .forEachRecursively { child ->
-                if (child.metadata is VibrationIntensitySwitchPreference) {
-                    switches.add(child.metadata.key)
-                }
+    private fun findVibrationIntensitySwitchPreferences(): Map<String, String> {
+        val switches = HashMap<String, String>()
+        preferenceScreenCreator.getPreferenceHierarchy(context, testScope).forEachRecursively {
+            child ->
+            if (child.metadata is VibrationIntensitySwitchPreference) {
+                val switch = child.metadata as VibrationIntensitySwitchPreference
+                switches.put(switch.key, switch.settingsProviderKey)
             }
+        }
         return switches
     }
 
