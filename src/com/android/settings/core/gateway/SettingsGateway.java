@@ -140,6 +140,7 @@ import com.android.settings.inputmethod.SpellCheckersSettings;
 import com.android.settings.inputmethod.TouchpadAndMouseSettings;
 import com.android.settings.inputmethod.UserDictionaryList;
 import com.android.settings.inputmethod.UserDictionarySettings;
+import com.android.settings.language.LanguageAndRegionSettings;
 import com.android.settings.language.LanguageSettings;
 import com.android.settings.localepicker.AppLocalePickerFragment;
 import com.android.settings.localepicker.LocaleListEditor;
@@ -242,6 +243,7 @@ public class SettingsGateway {
             DataSaverSummary.class.getName(),
             DateTimeSettings.class.getName(),
             LocaleListEditor.class.getName(),
+            LanguageAndRegionSettings.class.getName(),
             AvailableVirtualKeyboardFragment.class.getName(),
             LanguageSettings.class.getName(),
             KeyboardSettings.class.getName(),
@@ -464,6 +466,7 @@ public class SettingsGateway {
             // Home page > Security & screen lock
             Settings.LocationSettingsActivity.class.getName(),
             Settings.LanguageSettingsActivity.class.getName(),
+            Settings.LanguageAndRegionSettingsActivity.class.getName(),
             Settings.KeyboardSettingsActivity.class.getName(),
             Settings.DateTimeSettingsActivity.class.getName(),
             Settings.EnterprisePrivacySettingsActivity.class.getName(),
