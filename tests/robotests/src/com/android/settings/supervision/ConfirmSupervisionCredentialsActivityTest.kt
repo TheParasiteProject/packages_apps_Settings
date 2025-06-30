@@ -270,7 +270,7 @@ class ConfirmSupervisionCredentialsActivityTest {
                     mActivity.getString(R.string.supervision_auth_prompt_forgot_pin_button_label)
             }
         assertThat(forgotPinOption).isNotNull()
-        assertThat(forgotPinOption!!.getIconType()).isEqualTo(BiometricManager.IconType.ACCOUNT)
+        assertThat(forgotPinOption!!.getIconType()).isEqualTo(BiometricManager.ICON_TYPE_ACCOUNT)
 
         mActivity.onForgotPinFallbackClicked()
         verify(metricsRule.metricsFeatureProvider)

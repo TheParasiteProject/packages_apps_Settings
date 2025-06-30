@@ -183,7 +183,7 @@ class ConfirmSupervisionCredentialsActivity : FragmentActivity() {
         return builder
             .addFallbackOption(
                 getString(R.string.supervision_auth_prompt_forgot_pin_button_label),
-                BiometricManager.IconType.ACCOUNT,
+                BiometricManager.ICON_TYPE_ACCOUNT,
                 ContextCompat.getMainExecutor(this),
                 listener,
             )
