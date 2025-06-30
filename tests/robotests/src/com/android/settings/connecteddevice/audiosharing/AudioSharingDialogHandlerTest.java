@@ -203,7 +203,6 @@ public class AudioSharingDialogHandlerTest {
     }
 
     @Test
-    @EnableFlags(Flags.FLAG_ADOPT_PRIMARY_GROUP_MANAGEMENT_API)
     @DisableFlags(Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX)
     public void handleUserTriggeredDeviceConnected_inCall_setActive() {
         Settings.Secure.putInt(
@@ -229,10 +228,7 @@ public class AudioSharingDialogHandlerTest {
     }
 
     @Test
-    @EnableFlags({
-        Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX,
-        Flags.FLAG_ADOPT_PRIMARY_GROUP_MANAGEMENT_API
-    })
+    @EnableFlags(Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX)
     public void handleUserTriggeredDeviceConnected_inCall_enableHysteresisFix_setAndSaveActive() {
         Settings.Secure.putInt(
                 mContext.getContentResolver(),
@@ -534,7 +530,6 @@ public class AudioSharingDialogHandlerTest {
     }
 
     @Test
-    @EnableFlags(Flags.FLAG_ADOPT_PRIMARY_GROUP_MANAGEMENT_API)
     public void handleDeviceConnected_inCall_doNothing() {
         when(mAudioManager.getMode()).thenReturn(AudioManager.MODE_IN_CALL);
         setUpBroadcast(true);
