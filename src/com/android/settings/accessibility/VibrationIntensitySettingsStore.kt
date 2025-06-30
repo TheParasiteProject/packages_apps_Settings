@@ -20,10 +20,17 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.media.AudioManager
+import android.os.VibrationAttributes.USAGE_NOTIFICATION
+import android.os.VibrationAttributes.USAGE_RINGTONE
 import android.os.VibrationAttributes.Usage
 import android.os.Vibrator
 import android.os.Vibrator.VIBRATION_INTENSITY_OFF
-import android.provider.Settings.System
+import android.provider.Settings.System.HAPTIC_FEEDBACK_ENABLED
+import android.provider.Settings.System.HAPTIC_FEEDBACK_INTENSITY
+import android.provider.Settings.System.HARDWARE_HAPTIC_FEEDBACK_INTENSITY
+import android.provider.Settings.System.RING_VIBRATION_INTENSITY
+import android.provider.Settings.System.VIBRATE_ON
+import android.provider.Settings.System.VIBRATE_WHEN_RINGING
 import com.android.settings.R
 import com.android.settings.accessibility.AccessibilityUtil.State
 import com.android.settingslib.datastore.AbstractKeyedDataObservable
@@ -37,41 +44,58 @@ import kotlin.math.min
 /** SettingsStore for vibration intensity preferences with custom default value. */
 class VibrationIntensitySettingsStore(
     private val context: Context,
+    private val preferenceKey: String,
+    private val settingsProviderKey: String,
     @Usage vibrationUsage: Int,
-    private val hasRingerModeDependency: Boolean,
-    private val key: String,
     private val keyValueStoreDelegate: KeyValueStore = SettingsSystemStore.get(context),
     private val defaultIntensity: Int = context.getDefaultVibrationIntensity(vibrationUsage),
     private val supportedIntensityLevels: Int = context.getSupportedVibrationIntensityLevels(),
 ) : AbstractKeyedDataObservable<String>(), KeyedObserver<String>, KeyValueStore {
 
-    private lateinit var ringerModeBroadcastReceiver: BroadcastReceiver
-
-    /** Returns true if the settings key should be enabled, false otherwise. */
-    fun isPreferenceEnabled(): Boolean {
-        if (keyValueStoreDelegate.getBoolean(VibrationMainSwitchPreference.KEY) == false) {
-            return false
+    private val hasRingerModeDependency: Boolean =
+        when (vibrationUsage) {
+            USAGE_RINGTONE,
+            USAGE_NOTIFICATION -> true
+            else -> false
         }
 
+    private var ringerModeBroadcastReceiver: BroadcastReceiver? = null
+
+    fun isPreferenceEnabled(): Boolean {
+        if (keyValueStoreDelegate.getBoolean(VIBRATE_ON) == false) {
+            return false
+        }
         return !isDisabledByRingerMode()
     }
 
     fun isDisabledByRingerMode(): Boolean {
-        return (keyValueStoreDelegate.getBoolean(VibrationMainSwitchPreference.KEY) != false) &&
-                (hasRingerModeDependency && context.isRingerModeSilent())
+        return (keyValueStoreDelegate.getBoolean(VIBRATE_ON) != false) &&
+            (hasRingerModeDependency && context.isRingerModeSilent())
     }
 
-    override fun contains(key: String) = keyValueStoreDelegate.contains(key)
+    fun getSummary(): CharSequence? =
+        // Only display summary if ringer mode silent is the one disabling this preference.
+        if (isDisabledByRingerMode()) {
+            context.getString(
+                R.string.accessibility_vibration_setting_disabled_for_silent_mode_summary
+            )
+        } else {
+            null
+        }
+
+    fun isIntensityOff(): Boolean = getInt(settingsProviderKey) == VIBRATION_INTENSITY_OFF
+
+    override fun contains(key: String) = keyValueStoreDelegate.contains(settingsProviderKey)
 
     override fun <T : Any> getDefaultValue(key: String, valueType: Class<T>) =
         intensityToValue(valueType, defaultIntensity)
 
     override fun <T : Any> getValue(key: String, valueType: Class<T>) =
         if (isPreferenceEnabled()) {
-            getFromDeprecatedValue(key, valueType)
+            getFromDeprecatedValue(valueType)
                 ?: intensityToValue(
                     valueType,
-                    keyValueStoreDelegate.getInt(key) ?: defaultIntensity
+                    keyValueStoreDelegate.getInt(settingsProviderKey) ?: defaultIntensity,
                 )
         } else {
             // Preference must show intensity off when disabled, but value stored must be preserved.
@@ -79,44 +103,40 @@ class VibrationIntensitySettingsStore(
         }
 
     override fun <T : Any> setValue(key: String, valueType: Class<T>, value: T?) {
-        val intensity = value?.let { valueToIntensity(valueType, it) };
-        keyValueStoreDelegate.setInt(key, intensity)
-        setDependentValues(key, intensity)
+        val intensity = value?.let { valueToIntensity(valueType, it) }
+        keyValueStoreDelegate.setInt(settingsProviderKey, intensity)
+        setDependentValues(intensity)
     }
 
     override fun onFirstObserverAdded() {
-        ringerModeBroadcastReceiver = object : BroadcastReceiver() {
-            override fun onReceive(broadcastContext: Context?, intent: Intent?) {
-                notifyChange(PreferenceChangeReason.STATE)
-            }
+        // observe the underlying storage key
+        keyValueStoreDelegate.addObserver(settingsProviderKey, this, HandlerExecutor.main)
+        if (!hasRingerModeDependency) {
+            return
         }
+        ringerModeBroadcastReceiver =
+            object : BroadcastReceiver() {
+                override fun onReceive(broadcastContext: Context?, intent: Intent?) {
+                    notifyChange(PreferenceChangeReason.STATE)
+                }
+            }
         val intentFilter = IntentFilter(AudioManager.INTERNAL_RINGER_MODE_CHANGED_ACTION)
         context.registerReceiver(
             ringerModeBroadcastReceiver,
             intentFilter,
-            Context.RECEIVER_NOT_EXPORTED
+            Context.RECEIVER_NOT_EXPORTED,
         )
-
-        keyValueStoreDelegate.addObserver(key, this, HandlerExecutor.main)
     }
-
-    override fun onKeyChanged(key: String, reason: Int) = notifyChange(key, reason)
 
     override fun onLastObserverRemoved() {
-        context.unregisterReceiver(ringerModeBroadcastReceiver)
-        keyValueStoreDelegate.removeObserver(key, this)
+        keyValueStoreDelegate.removeObserver(settingsProviderKey, this)
+        ringerModeBroadcastReceiver?.let { context.unregisterReceiver(it) }
     }
 
-    fun dependencies() = arrayOf(VibrationMainSwitchPreference.KEY)
-
-    fun getSummary(): CharSequence? =
-        // Only display summary if ringer mode silent is the one disabling this preference.
-        if (isDisabledByRingerMode()) {
-            context.getString(
-                R.string.accessibility_vibration_setting_disabled_for_silent_mode_summary)
-        } else {
-            null
-        }
+    override fun onKeyChanged(key: String, reason: Int) {
+        // forward data change to preference hierarchy key
+        notifyChange(preferenceKey, reason)
+    }
 
     @Suppress("UNCHECKED_CAST")
     private fun <T : Any> intensityToValue(valueType: Class<T>, intensity: Int): T? =
@@ -165,10 +185,10 @@ class VibrationIntensitySettingsStore(
      * deprecation, to make sure the settings are preserved after its deprecation.
      */
     @Suppress("DEPRECATION") // Loading deprecated settings key to maintain support.
-    private fun <T: Any> getFromDeprecatedValue(key: String, valueType: Class<T>): T? {
-        when (key) {
-            System.HAPTIC_FEEDBACK_INTENSITY -> {
-                if (keyValueStoreDelegate.getInt(System.HAPTIC_FEEDBACK_ENABLED) == State.OFF) {
+    private fun <T : Any> getFromDeprecatedValue(valueType: Class<T>): T? {
+        when (settingsProviderKey) {
+            HAPTIC_FEEDBACK_INTENSITY -> {
+                if (keyValueStoreDelegate.getInt(HAPTIC_FEEDBACK_ENABLED) == State.OFF) {
                     // This is deprecated but should still be applied if the user has turned it off.
                     return intensityToValue(valueType, VIBRATION_INTENSITY_OFF)
                 }
@@ -179,26 +199,26 @@ class VibrationIntensitySettingsStore(
 
     /** Set dependent/deprecated settings based on new intensity value being set for given key. */
     @Suppress("DEPRECATION") // Updating deprecated settings key to maintain support.
-    private fun setDependentValues(key: String, intensity: Int?) {
-        when (key) {
-            System.RING_VIBRATION_INTENSITY -> {
+    private fun setDependentValues(intensity: Int?) {
+        when (settingsProviderKey) {
+            RING_VIBRATION_INTENSITY -> {
                 // This is deprecated but should still reflect the intensity setting.
                 // Ramping ringer is independent of the ring intensity and should not be affected.
                 keyValueStoreDelegate.setBoolean(
-                    System.VIBRATE_WHEN_RINGING,
+                    VIBRATE_WHEN_RINGING,
                     intensity?.let { it != VIBRATION_INTENSITY_OFF },
                 )
             }
-            System.HAPTIC_FEEDBACK_INTENSITY -> {
+            HAPTIC_FEEDBACK_INTENSITY -> {
                 // This is dependent on this setting, but should not be disabled by it.
                 keyValueStoreDelegate.setInt(
-                    System.HARDWARE_HAPTIC_FEEDBACK_INTENSITY,
+                    HARDWARE_HAPTIC_FEEDBACK_INTENSITY,
                     intensity?.let { if (it == VIBRATION_INTENSITY_OFF) defaultIntensity else it },
                 )
                 // This is deprecated but should still reflect the intensity setting.
                 keyValueStoreDelegate.setInt(
-                    System.HAPTIC_FEEDBACK_ENABLED,
-                    intensity?.let { if (it == VIBRATION_INTENSITY_OFF) State.OFF else State.ON }
+                    HAPTIC_FEEDBACK_ENABLED,
+                    intensity?.let { if (it == VIBRATION_INTENSITY_OFF) State.OFF else State.ON },
                 )
             }
         }
@@ -218,5 +238,5 @@ private fun Context.isRingerModeSilent() =
     // AudioManager.isSilentMode() also returns true when ringer mode is RINGER_MODE_VIBRATE.
     // The vibration preferences are only disabled when the ringer mode is RINGER_MODE_SILENT.
     // Use getRingerModeInternal() method to check the actual ringer mode.
-    getSystemService(AudioManager::class.java)
-        ?.ringerModeInternal == AudioManager.RINGER_MODE_SILENT
+    getSystemService(AudioManager::class.java)?.ringerModeInternal ==
+        AudioManager.RINGER_MODE_SILENT

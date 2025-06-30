@@ -42,10 +42,11 @@ import com.android.settingslib.preference.SwitchPreferenceBinding
 open class VibrationIntensitySwitchPreference(
     context: Context,
     key: String,
+    val settingsProviderKey: String,
+    private val mainSwitchPreferenceKey: String,
     @Usage val vibrationUsage: Int,
     @StringRes title: Int = 0,
     @StringRes summary: Int = 0,
-    val hasRingerModeDependency: Boolean = false,
 ) :
     SwitchPreference(key, title, summary),
     SwitchPreferenceBinding,
@@ -55,15 +56,15 @@ open class VibrationIntensitySwitchPreference(
     private val storage by lazy {
         VibrationIntensitySettingsStore(
             context,
+            preferenceKey = key,
+            settingsProviderKey = settingsProviderKey,
             vibrationUsage,
-            hasRingerModeDependency,
-            key
         )
     }
 
     override fun storage(context: Context) = storage
 
-    override fun dependencies(context: Context) = storage.dependencies()
+    override fun dependencies(context: Context) = arrayOf(mainSwitchPreferenceKey)
 
     override fun getSummary(context: Context) = storage.getSummary()
 
