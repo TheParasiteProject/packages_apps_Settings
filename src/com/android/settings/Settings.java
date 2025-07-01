@@ -35,6 +35,8 @@ import com.android.settings.accessibility.VibrationIntensitySettingsFragment;
 import com.android.settings.accessibility.VibrationScreen;
 import com.android.settings.accessibility.VibrationSettings;
 import com.android.settings.applications.AppStorageSettings;
+import com.android.settings.applications.specialaccess.SpecialAccessSettings;
+import com.android.settings.applications.specialaccess.SpecialAccessSettingsScreen;
 import com.android.settings.biometrics.face.FaceSettings;
 import com.android.settings.communal.CommunalPreferenceController;
 import com.android.settings.deviceinfo.firmwareversion.FirmwareVersionScreen;
@@ -599,6 +601,13 @@ public class Settings extends SettingsActivity {
     public static class AdaptiveConnectivitySettingsActivity extends CatalystSettingsActivity {
         public AdaptiveConnectivitySettingsActivity() {
             super(AdaptiveConnectivityScreen.KEY, AdaptiveConnectivitySettings.class);
+        }
+    }
+
+    /** Activity for Special Access Settings. */
+    public static class SpecialAccessSettingsActivity extends CatalystSettingsActivity {
+        public SpecialAccessSettingsActivity() {
+            super(SpecialAccessSettingsScreen.KEY, SpecialAccessSettings.class);
         }
     }
 }
