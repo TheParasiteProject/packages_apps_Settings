@@ -5470,7 +5470,7 @@
     <string name="calls_sms_temp_unavailable" msgid="8602291749338757424">"ไม่พร้อมใช้งานชั่วคราว"</string>
     <string name="calls_sms_no_sim" msgid="2336377399761819718">"ไม่มีซิม"</string>
     <string name="network_and_internet_preferences_title" msgid="8635896466814033405">"ค่ากำหนดเครือข่าย"</string>
-    <string name="keywords_internet" msgid="7674082764898690310">"การเชื่อมต่อเครือข่าย, อินเทอร์เน็ต, ไร้สาย, อินเทอร์เน็ตมือถือ, wifi, wi-fi, wi fi, เครือข่ายมือถือ, อุปกรณ์เคลื่อนที่, ผู้ให้บริการเครือข่ายมือถือ, 4g, 3g, 2g, lte"</string>
+    <string name="keywords_internet" msgid="7674082764898690310">"การเชื่อมต่อเครือข่าย, อินเทอร์เน็ต, ไร้สาย, อินเทอร์เน็ตมือถือ, wifi, wi-fi, wi fi, เครือข่ายมือถือ, มือถือ, ผู้ให้บริการมือถือ, 4g, 3g, 2g, lte"</string>
     <string name="reset_your_internet_title" msgid="4856899004343241310">"รีเซ็ตอินเทอร์เน็ตไหม"</string>
     <string name="resetting_internet_text" msgid="6696779371800051806">"กำลังรีเซ็ตอินเทอร์เน็ต…"</string>
     <string name="fix_connectivity" msgid="2781433603228089501">"แก้ไขการเชื่อมต่อ"</string>
@@ -5906,4 +5906,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"เกิดข้อผิดพลาดขณะพยายามลบ PIN"</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"ภาพเคลื่อนไหวสำหรับฟีเจอร์<xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"เปิดการควบคุมไม่ได้"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>

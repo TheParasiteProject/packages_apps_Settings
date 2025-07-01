@@ -215,8 +215,7 @@
     <string name="desc_app_locale_disclaimer" msgid="5295933110644789052">"Język może się różnić od języków dostępnych w aplikacji. NIektóre aplikacje mogą nie obsługiwać tego ustawienia."</string>
     <string name="desc_app_locale_selection_supported" msgid="7363315876602221125">"Wybierz języki poszczególnych aplikacji."</string>
     <string name="desc_app_locale_selection_supported_with_disclaimer" msgid="7622217531143496788">"Wybierz języki poszczególnych aplikacji. Język może się różnić od tych dostępnych w aplikacji. Niektóre aplikacje mogą nie obsługiwać tego ustawienia."</string>
-    <!-- no translation found for desc_introduction_of_language_picker (2164004945569753730) -->
-    <skip />
+    <string name="desc_introduction_of_language_picker" msgid="2164004945569753730">"Urządzenie, aplikacje i witryny używają pierwszego obsługiwanego języka z listy preferowanych języków."</string>
     <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"Aby wybrać języki poszczególnych aplikacji, otwórz ustawienia języków w aplikacjach."</string>
     <string name="desc_locale_helper_footer_general" msgid="6112153921151780303">"Więcej informacji o językach aplikacji"</string>
     <string name="title_change_system_region" msgid="9196602029960380112">"Zmienić region na %s?"</string>
@@ -3858,22 +3857,17 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Najpopularniejsze artykuły, materiały redakcyjne i inne"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Polubienia, posty i inne"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Newslettery, polecane media i inne"</string>
-    <!-- no translation found for notification_ai_features_title (2241618579100257538) -->
-    <skip />
+    <string name="notification_ai_features_title" msgid="2241618579100257538">"Zarządzaj za pomocą AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Podsumowania powiadomień"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Uzyskaj szybko podsumowania dłuższych wiadomości"</string>
     <string name="notification_summarization_main_control_title" msgid="3341727937605794607">"Korzystaj z podsumowań powiadomień"</string>
-    <!-- no translation found for notification_summarization_description (3185465631219791854) -->
-    <skip />
+    <string name="notification_summarization_description" msgid="3185465631219791854">"Uzyskuj szybko podsumowania długich wiadomości i rozmów grupowych.\n\nPodsumowania są generowane przez AI na urządzeniu, która czasami może popełniać błędy. Wiadomości nigdy nie są wysyłane do Google."</string>
     <string name="notification_summarization_excluded_description" msgid="5819160700526641394">"Powiadomienia z tych aplikacji nie będą podsumowywane"</string>
     <string name="notification_summarization_manage_excluded_apps" msgid="1691177835156220384">"Zarządzaj aplikacjami"</string>
-    <!-- no translation found for notification_summarization_manage_excluded_apps_title (8021261855337614327) -->
-    <skip />
+    <string name="notification_summarization_manage_excluded_apps_title" msgid="8021261855337614327">"Zarządzaj aplikacjami, których powiadomienia mają być podsumowywane"</string>
     <string name="notification_excluded_apps" msgid="317898848790046528">"Nie uwzględniaj tych aplikacji"</string>
-    <!-- no translation found for notification_app_level_summarize_title (488390574186154905) -->
-    <skip />
-    <!-- no translation found for notification_app_level_summarize_subtext (2064371198044287108) -->
-    <skip />
+    <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Podsumowania powiadomień"</string>
+    <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Uzyskuj szybko podsumowania dłuższych wiadomości"</string>
     <string name="live_notifications" msgid="4650406646292963831">"Powiadomienia na żywo"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Aktualizacje na żywo"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Wyświetlaj na pasku stanu i ekranie blokady istotne w danym czasie powiadomienia o bieżących zadaniach"</string>
@@ -4024,16 +4018,11 @@
     <string name="notification_polite_work_summary" msgid="5014189280132951378">"Zastosuj w aplikacjach profilu służbowego"</string>
     <string name="notification_bundle_title" msgid="6679586974995981433">"Narzędzie do porządkowania powiadomień"</string>
     <string name="notification_bundle_summary" msgid="8924550009829960969">"Zgrupuj i wycisz powiadomienia o niższym priorytecie"</string>
-    <!-- no translation found for notification_bundle_main_control_title (6413211155343788835) -->
-    <skip />
-    <!-- no translation found for notification_bundle_description (4202633316211056848) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_title (2154075763770894707) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_subtext (8652218688050450291) -->
-    <skip />
-    <!-- no translation found for notification_bundle_manage_excluded_apps_title (6825808714530730009) -->
-    <skip />
+    <string name="notification_bundle_main_control_title" msgid="6413211155343788835">"Używaj narzędzia do porządkowania powiadomień"</string>
+    <string name="notification_bundle_description" msgid="4202633316211056848">"Wybierz typy powiadomień, które chcesz wyciszyć i zgrupować, aby otrzymywać ich mniej.\n\nNarzędzie do porządkowania powiadomień korzysta z AI na urządzeniu, która czasami może popełniać błędy. Powiadomienia nigdy nie są wysyłane do Google."</string>
+    <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Narzędzie do porządkowania powiadomień"</string>
+    <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Grupuj i wyciszaj powiadomienia o niższym priorytecie"</string>
+    <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Zarządzaj aplikacjami w narzędziu do porządkowania powiadomień"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Zastosuj w aplikacjach profilu służbowego"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Usługi pomocnicze rzeczywistości wirtualnej"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Żadne zainstalowane aplikacje nie prosiły o uruchomienie w trybie usług pomocniczych rzeczywistości wirtualnej."</string>
@@ -5919,4 +5908,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Podczas próby usunięcia kodu PIN wystąpił błąd."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animacja <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Nie można włączyć kontroli"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>

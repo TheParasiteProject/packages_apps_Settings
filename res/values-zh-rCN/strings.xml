@@ -3864,7 +3864,7 @@
     <string name="notification_summarization_description" msgid="3185465631219791854">"总结长消息和群组对话内容，快速生成重点摘要。\n\n摘要使用设备上的 AI 技术生成，有时可能会出错。您的消息绝不会发送给 Google。"</string>
     <string name="notification_summarization_excluded_description" msgid="5819160700526641394">"系统不会总结来自这些应用的通知"</string>
     <string name="notification_summarization_manage_excluded_apps" msgid="1691177835156220384">"管理应用"</string>
-    <string name="notification_summarization_manage_excluded_apps_title" msgid="8021261855337614327">"管理用于汇总通知的应用"</string>
+    <string name="notification_summarization_manage_excluded_apps_title" msgid="8021261855337614327">"管理用于总结通知的应用"</string>
     <string name="notification_excluded_apps" msgid="317898848790046528">"排除这些应用"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"通知摘要"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"快速掌握长消息的重点"</string>
@@ -5906,4 +5906,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"尝试删除 PIN 码时出错。"</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"“<xliff:g id="FEATURE">%1$s</xliff:g>”动画"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"无法开启控制功能"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>

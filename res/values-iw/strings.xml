@@ -104,7 +104,7 @@
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"ניתוב הצלילים למכשיר השמיעה או לרמקול של הטלפון"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"קשורים"</string>
     <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"שליחה מהירה יותר עם <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"‏כדי לשתף במהירות עם מכשירי Android ומחשבים עם Windows שנמצאים בקרבת מקום, אפשר להשתמש ב-<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ל-Windows"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"‏<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ל-Windows היא הדרך המהירה ביותר לשתף עם מכשירי Android ומחשבי Windows בקרבת מקום"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"רינגטון ושעונים מעוררים"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"אודיו במהלך שיחות"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"צלילי מדיה ומערכת"</string>
@@ -215,8 +215,7 @@
     <string name="desc_app_locale_disclaimer" msgid="5295933110644789052">"השפה עשויה להיות שונה מהשפות הזמינות באפליקציה. יכול להיות שחלק מהאפליקציות לא תומכות בהגדרה הזו."</string>
     <string name="desc_app_locale_selection_supported" msgid="7363315876602221125">"אפשר לבחור את השפה של כל אפליקציה."</string>
     <string name="desc_app_locale_selection_supported_with_disclaimer" msgid="7622217531143496788">"אפשר לבחור את השפה של כל אפליקציה. יכול להיות שהשפה שונה מהשפות שזמינות באפליקציה. לא בטוח שכל האפליקציות תומכות בהגדרה הזו."</string>
-    <!-- no translation found for desc_introduction_of_language_picker (2164004945569753730) -->
-    <skip />
+    <string name="desc_introduction_of_language_picker" msgid="2164004945569753730">"השפה במכשיר, באפליקציות ובאתרים מוגדרת לשפה הנתמכת הראשונה ברשימת השפות שציינת כמועדפות."</string>
     <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"כדי להגדיר ידנית את השפה של אפליקציות מסוימות, אפשר לעבור לדף \"שפות של אפליקציות\"."</string>
     <string name="desc_locale_helper_footer_general" msgid="6112153921151780303">"מידע נוסף על שפות של אפליקציות"</string>
     <string name="title_change_system_region" msgid="9196602029960380112">"‏לשנות את האזור ל%s?"</string>
@@ -1005,9 +1004,9 @@
     <string name="external_display_rotation_180" msgid="6469137724447819841">"180°"</string>
     <string name="external_display_rotation_270" msgid="7819322302457740514">"270°"</string>
     <string name="external_display_change_resolution_footer_title" msgid="9024291681663573443">"שינוי של מידת הסיבוב או של הרזולוציה עלול להפסיק את כל האפליקציות שפועלות כרגע"</string>
-    <string name="external_display_not_found_footer_title" msgid="3974573337788760338">"אין מסך מחובר\n\nכדי להתחיל, צריך לחבר מסך חיצוני או לנסות להשתמש בכבל אחר"</string>
+    <string name="external_display_not_found_footer_title" msgid="3974573337788760338">"אין מסך מחובר\n\nכדי להתחיל, צריך לחבר מסך חיצוני או להשתמש בכבל אחר"</string>
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"אין מסך מחובר"</string>
-    <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"כדי להתחיל, צריך לחבר מסך חיצוני או לנסות להשתמש בכבל אחר"</string>
+    <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"כדי להתחיל, צריך לחבר מסך חיצוני או להשתמש בכבל אחר"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"אפשרויות נוספות"</string>
     <string name="external_display_topology_hint" msgid="854973327795578470">"כדי לשנות את סדר התצוגות, לוחצים לחיצה ארוכה על תצוגה וגוררים אותה."</string>
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"שיקוף המסך המובנה"</string>
@@ -3858,22 +3857,17 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"כתבות מובילות, מאמרי דעה ועוד"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"לייקים, פוסטים ועוד"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"ניוזלטרים, המלצות על מדיה ועוד"</string>
-    <!-- no translation found for notification_ai_features_title (2241618579100257538) -->
-    <skip />
+    <string name="notification_ai_features_title" msgid="2241618579100257538">"‏ניהול באמצעות AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"סיכומי התראות"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"קבלת תקצירים מהירים של הודעות ארוכות"</string>
     <string name="notification_summarization_main_control_title" msgid="3341727937605794607">"שימוש בסיכומי התראות"</string>
-    <!-- no translation found for notification_summarization_description (3185465631219791854) -->
-    <skip />
+    <string name="notification_summarization_description" msgid="3185465631219791854">"‏אפשר לסכם הודעות ארוכות ושיחות קבוצתיות כדי לקבל תקצירים מהירים.\n\nהתקצירים נוצרים באמצעות AI במכשיר שלך, ולפעמים עלולות להיות שגיאות. ההודעות שלך אף פעם לא נשלחות ל-Google."</string>
     <string name="notification_summarization_excluded_description" msgid="5819160700526641394">"התראות מהאפליקציות האלה לא יסוכמו"</string>
     <string name="notification_summarization_manage_excluded_apps" msgid="1691177835156220384">"ניהול האפליקציות"</string>
-    <!-- no translation found for notification_summarization_manage_excluded_apps_title (8021261855337614327) -->
-    <skip />
+    <string name="notification_summarization_manage_excluded_apps_title" msgid="8021261855337614327">"ניהול האפליקציות לסיכומי ההתראות"</string>
     <string name="notification_excluded_apps" msgid="317898848790046528">"בלי האפליקציות האלה"</string>
-    <!-- no translation found for notification_app_level_summarize_title (488390574186154905) -->
-    <skip />
-    <!-- no translation found for notification_app_level_summarize_subtext (2064371198044287108) -->
-    <skip />
+    <string name="notification_app_level_summarize_title" msgid="488390574186154905">"סיכומי התראות"</string>
+    <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"קבלת תקצירים מהירים של הודעות ארוכות"</string>
     <string name="live_notifications" msgid="4650406646292963831">"התראות בזמן אמת"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"עדכונים בזמן אמת"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"הצגת התראות פעילות ותלויות-זמן בשורת הסטטוס ובמסך הנעילה"</string>
@@ -4024,16 +4018,11 @@
     <string name="notification_polite_work_summary" msgid="5014189280132951378">"הפעלה באפליקציות של פרופיל העבודה"</string>
     <string name="notification_bundle_title" msgid="6679586974995981433">"הכלי לארגון התראות"</string>
     <string name="notification_bundle_summary" msgid="8924550009829960969">"קיבוץ והשתקה של התראות בעדיפות נמוכה"</string>
-    <!-- no translation found for notification_bundle_main_control_title (6413211155343788835) -->
-    <skip />
-    <!-- no translation found for notification_bundle_description (4202633316211056848) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_title (2154075763770894707) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_subtext (8652218688050450291) -->
-    <skip />
-    <!-- no translation found for notification_bundle_manage_excluded_apps_title (6825808714530730009) -->
-    <skip />
+    <string name="notification_bundle_main_control_title" msgid="6413211155343788835">"שימוש בכלי לארגון התראות"</string>
+    <string name="notification_bundle_description" msgid="4202633316211056848">"‏אפשר לבחור את סוגי ההתראות שרוצים להשתיק ולקבץ יחד כדי לצמצם את ההפרעות.\n\nהכלי לארגון התראות פועל בעזרת AI במכשיר, ולפעמים עלולות להיות שגיאות. ההתראות שלך אף פעם לא נשלחות ל-Google."</string>
+    <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"הכלי לארגון התראות"</string>
+    <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"קיבוץ והשתקה של התראות בעדיפות נמוכה"</string>
+    <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"ניהול האפליקציות לכלי לארגון ההתראות"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"הפעלה באפליקציות של פרופיל העבודה"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"‏שירותי סיוע של VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"‏לא התקבלו בקשות מאפליקציות מותקנות לפעול כשירותי סיוע של VR."</string>
@@ -5382,7 +5371,7 @@
     <string name="enable_16k_pages" msgid="1758111531461408337">"‏הפעלה בגודל דף של 16KB"</string>
     <string name="enable_16k_pages_summary" msgid="1937836453571509085">"‏הפעלת המכשיר באמצעות ליבה שתומכת בגודל דף של 16KB"</string>
     <string name="confirm_enable_16k_pages_title" msgid="5477376227161609124">"‏מעבר ממצב 4KB למצב 16KB"</string>
-    <string name="confirm_enable_16k_pages_update_wipe" msgid="5343202230812855846">"‏כדי להשתמש באפשרות למפתחים של מצב 16KB, צריך להמיר את מחיצת הנתונים של המכשיר הזה ל-ext4. הפעולה הזו תגרום לאיפוס הנתונים במכשיר ולשינוי מערכת הקבצים ל-ext4.&lt;br&gt;&lt;br&gt; כשהמכשיר נמצא במצב 16KB, אפשר לעבור בין מצב 4KB למצב 16KB בהפעלה אחת מחדש.&lt;br&gt;&lt;br&gt; דברים שחשוב לזכור במצב 16KB:&lt;br&gt;&lt;br&gt; &amp;#8226; אי אפשר להבטיח את תקינות תוכנה&lt;br&gt; &amp;#8226; נתונים שמאוחסנים בטלפון בזמן שה-bootloader נעול עלולים להיות בסכנה&lt;br&gt; &amp;#8226; חלק מהתכונות יושבתו, מה שעלול להשפיע על אפליקציות מסוימות&lt;br&gt;&lt;br&gt; כדי לחזור למצב ייצור, צריך לעבור בחזרה למצב 4KB ולנעול את ה-bootloader. הפעולה הזו תאפס את המכשיר להגדרות המקוריות. אחרי שהמכשיר מאותחל ל-Android, צריך להשבית את מצב OEM באפשרויות למפתחים.&lt;br&gt;&lt;br&gt; כדי להמשיך במעבר למצב 16KB, יש ללחוץ על \"מחיקת כל הנתונים ועדכון\". המכשיר יופעל מחדש."</string>
+    <string name="confirm_enable_16k_pages_update_wipe" msgid="5343202230812855846">"‏כדי להשתמש באפשרות למפתחים של מצב 16KB, צריך להמיר את מחיצת הנתונים של המכשיר הזה ל-ext4. הפעולה הזו תגרום לאיפוס הנתונים במכשיר ולשינוי מערכת הקבצים ל-ext4.&lt;br&gt;&lt;br&gt; כשהמכשיר נמצא במצב 16KB, אפשר להפעיל אותו מחדש פעם אחת כדי לעבור בין מצב 4KB למצב 16KB.&lt;br&gt;&lt;br&gt; דברים שחשוב לזכור במצב 16KB:&lt;br&gt;&lt;br&gt; &amp;#8226; אי אפשר להבטיח את התקינות של התוכנה&lt;br&gt; &amp;#8226; נתונים שמאוחסנים בטלפון כשתוכנת האתחול לא נעולה עלולים להיות בסכנה&lt;br&gt; &amp;#8226; חלק מהתכונות יושבתו, מה שעלול להשפיע על אפליקציות מסוימות&lt;br&gt;&lt;br&gt; כדי לחזור למצב ייצור, צריך לעבור בחזרה למצב 4KB ולנעול את תוכנת האתחול. הפעולה הזו תאפס את המכשיר להגדרות המקוריות. אחרי שהמכשיר מופעל מחדש עם Android, צריך להשבית את מצב OEM באפשרויות למפתחים.&lt;br&gt;&lt;br&gt; כדי להמשיך במעבר למצב 16KB, יש ללחוץ על \"מחיקת כל הנתונים ועדכון\". המכשיר יופעל מחדש."</string>
     <string name="confirm_enable_16k_pages_text" msgid="6211693250692246982">"‏מופעל אצלך מצב שמסתגל לגודל הדף עם ליבת 4KB, ובחרת לעבור למצב 16KB. לא בטוח שהתוכנה תעבוד באופן תקין במצב הזה. הנתונים שמאוחסנים בטלפון נמצאים בסיכון כשתוכנת האתחול לא נעולה. המכשיר יופעל מחדש. חלק מהתכונות יושבתו במצבים האלה, לכן חלק מהאפליקציות לא יפעלו. כדי להחזיר את המכשיר למצב ייצור, צריך לחזור למצב 4KB ולנעול את תוכנת האתחול. המכשיר יאופס להגדרות המקוריות. אחרי שהמכשיר מאותחל ומפעיל את Android, צריך להשבית את מצב OEM באפשרויות למפתחים."</string>
     <string name="confirm_enable_4k_pages_title" msgid="3001009010581393119">"‏מעבר ממצב 16KB למצב 4KB"</string>
     <string name="confirm_enable_4k_pages_text" msgid="3398001587586470689">"‏מופעל אצלך מצב שמסתגל לגודל הדף עם ליבת 16KB, ובחרת לעבור למצב 4KB. לא בטוח שהתוכנה תעבוד באופן תקין במצב הזה. הנתונים שמאוחסנים בטלפון נמצאים בסיכון כשתוכנת האתחול לא נעולה. המכשיר יופעל מחדש. חלק מהתכונות יושבתו במצבים האלה, לכן חלק מהאפליקציות לא יפעלו. כדי להחזיר את המכשיר למצב ייצור, צריך לנעול את תוכנת האתחול. המכשיר יאופס להגדרות המקוריות. אחרי שהמכשיר מאותחל ומפעיל את Android, צריך להשבית את מצב OEM באפשרויות למפתחים."</string>
@@ -5918,4 +5907,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"הייתה שגיאה במהלך הניסיון למחוק את קוד האימות."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"אנימציה של <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"לא ניתן להפעיל את אמצעי הבקרה"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>

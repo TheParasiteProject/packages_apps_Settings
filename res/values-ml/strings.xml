@@ -992,8 +992,7 @@
     <string name="nfc_reboot_dialog_confirm" msgid="4769763632008584567">"റീസ്റ്റാർട്ട് ചെയ്യൂ"</string>
     <string name="external_display_on" msgid="2560104443500154333">"ഓണാണ്"</string>
     <string name="external_display_off" msgid="5634413756025351374">"ഓഫാണ്"</string>
-    <!-- no translation found for external_display_settings_title (3865786552022665355) -->
-    <skip />
+    <string name="external_display_settings_title" msgid="3865786552022665355">"ബാഹ്യ ഡിസ്‌പ്ലേകൾ"</string>
     <string name="builtin_display_settings_category" msgid="3441388849060771885">"ബിൽറ്റ് ഇൻ ഡിസ്‌പ്ലേ"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"ബാഹ്യ ഡിസ്പ്ലേ ഉപയോഗിക്കുക"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"ഡിസ്‌പ്ലേ റെസല്യൂഷൻ"</string>
@@ -5905,4 +5904,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"പിൻ ഇല്ലാതാക്കാൻ ശ്രമിക്കുമ്പോൾ ഒരു പിശകുണ്ടായി."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> ആനിമേഷൻ"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"നിയന്ത്രണങ്ങൾ ഓണാക്കാനാകില്ല"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>

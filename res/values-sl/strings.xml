@@ -1493,11 +1493,11 @@
     <string name="low_light_display_behavior_main_switch_title" msgid="7138165032358139627">"Uporabi način šibke svetlobe"</string>
     <string name="low_light_display_behavior_subtitle" msgid="1833984014035605413">"Izberite, kaj naj bo prikazano v načinu šibke svetlobe"</string>
     <string name="low_light_display_behavior_screen_off" msgid="4203092158668290404">"Izklop zaslona"</string>
-    <string name="low_light_display_behavior_low_light_clock_dream" msgid="2235561363691252383">"Ura za šibko svetlobo"</string>
+    <string name="low_light_display_behavior_low_light_clock_dream" msgid="2235561363691252383">"Ura s šibko svetlobo"</string>
     <string name="low_light_display_behavior_summary_on" msgid="4218678742261840224">"Vklopljeno/<xliff:g id="LOW_LIGHT_MODE">%1$s</xliff:g>"</string>
     <string name="low_light_display_behavior_summary_off" msgid="4565368094992120316">"Izklopljeno"</string>
     <string name="low_light_display_behavior_screen_off_full_summary" msgid="6671607843870561892">"Zaslon se bo izklopil v temnejšem okolju"</string>
-    <string name="low_light_display_behavior_low_light_clock_dream_full_summary" msgid="1145914465090731721">"Ura za šibko svetlobo bo prikazana v temnejšem okolju"</string>
+    <string name="low_light_display_behavior_low_light_clock_dream_full_summary" msgid="1145914465090731721">"Ura s šibko svetlobo bo prikazana v temnejšem okolju"</string>
     <string name="ambient_display_screen_title" msgid="8615947016991429325">"Prikaz na podlagi okolja"</string>
     <string name="ambient_display_category_triggers" msgid="1216640141609270011">"Kdaj naj se prikaže"</string>
     <string name="doze_title" msgid="1523090408230862316">"Prebudi zaslon ob obvestilih"</string>
@@ -5908,4 +5908,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Pri poskusu brisanja kode PIN je prišlo do napake."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animacija funkcije <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Starševskega nadzora ni mogoče vklopiti"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>

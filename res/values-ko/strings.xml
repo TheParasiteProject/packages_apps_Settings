@@ -215,8 +215,7 @@
     <string name="desc_app_locale_disclaimer" msgid="5295933110644789052">"언어가 앱에서 사용 가능한 언어와 다를 수 있습니다. 일부 앱에서는 이 설정을 지원하지 않을 수도 있습니다."</string>
     <string name="desc_app_locale_selection_supported" msgid="7363315876602221125">"각 앱의 언어를 선택하세요."</string>
     <string name="desc_app_locale_selection_supported_with_disclaimer" msgid="7622217531143496788">"각 앱의 언어를 선택하세요. 언어가 앱에서 사용 가능한 언어와 다를 수 있습니다. 일부 앱에서는 이 설정을 지원하지 않을 수도 있습니다."</string>
-    <!-- no translation found for desc_introduction_of_language_picker (2164004945569753730) -->
-    <skip />
+    <string name="desc_introduction_of_language_picker" msgid="2164004945569753730">"기기, 앱, 웹사이트는 사용자의 선호 언어 목록 중 최우선 지원 언어를 사용합니다."</string>
     <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"앱별로 언어를 선택하려면 앱 언어 설정으로 이동하세요."</string>
     <string name="desc_locale_helper_footer_general" msgid="6112153921151780303">"앱 언어 자세히 알아보기"</string>
     <string name="title_change_system_region" msgid="9196602029960380112">"지역을 %s(으)로 변경하시겠습니까?"</string>
@@ -3858,22 +3857,17 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"주요 뉴스, 사설 등"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"좋아요, 게시물 등"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"뉴스레터, 추천 미디어 등"</string>
-    <!-- no translation found for notification_ai_features_title (2241618579100257538) -->
-    <skip />
+    <string name="notification_ai_features_title" msgid="2241618579100257538">"AI로 관리"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"알림 요약"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"긴 메시지의 요약을 빠르게 확인할 수 있습니다."</string>
     <string name="notification_summarization_main_control_title" msgid="3341727937605794607">"알림 요약 사용"</string>
-    <!-- no translation found for notification_summarization_description (3185465631219791854) -->
-    <skip />
+    <string name="notification_summarization_description" msgid="3185465631219791854">"긴 메시지와 그룹 대화를 요약하여 빠르게 내용을 확인하세요.\n\n요약은 기기의 AI를 사용하며, 때때로 오류가 발생할 수 있습니다. 메시지는 Google로 전송되지 않습니다."</string>
     <string name="notification_summarization_excluded_description" msgid="5819160700526641394">"이 앱의 알림은 요약되지 않습니다."</string>
     <string name="notification_summarization_manage_excluded_apps" msgid="1691177835156220384">"앱 관리"</string>
-    <!-- no translation found for notification_summarization_manage_excluded_apps_title (8021261855337614327) -->
-    <skip />
+    <string name="notification_summarization_manage_excluded_apps_title" msgid="8021261855337614327">"알림 요약을 위한 앱 관리"</string>
     <string name="notification_excluded_apps" msgid="317898848790046528">"이 앱을 포함하지 않음"</string>
-    <!-- no translation found for notification_app_level_summarize_title (488390574186154905) -->
-    <skip />
-    <!-- no translation found for notification_app_level_summarize_subtext (2064371198044287108) -->
-    <skip />
+    <string name="notification_app_level_summarize_title" msgid="488390574186154905">"알림 요약"</string>
+    <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"긴 메시지의 요약을 빠르게 확인할 수 있습니다."</string>
     <string name="live_notifications" msgid="4650406646292963831">"실시간 알림"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"실시간 업데이트"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"상태 표시줄 및 잠금 화면에 시간에 민감한 진행 중 알림 표시"</string>
@@ -4024,16 +4018,11 @@
     <string name="notification_polite_work_summary" msgid="5014189280132951378">"직장 프로필 앱에 적용"</string>
     <string name="notification_bundle_title" msgid="6679586974995981433">"알림 정리 도구"</string>
     <string name="notification_bundle_summary" msgid="8924550009829960969">"우선순위가 낮은 알림을 번들로 묶고 무음 처리"</string>
-    <!-- no translation found for notification_bundle_main_control_title (6413211155343788835) -->
-    <skip />
-    <!-- no translation found for notification_bundle_description (4202633316211056848) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_title (2154075763770894707) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_subtext (8652218688050450291) -->
-    <skip />
-    <!-- no translation found for notification_bundle_manage_excluded_apps_title (6825808714530730009) -->
-    <skip />
+    <string name="notification_bundle_main_control_title" msgid="6413211155343788835">"알림 정리 도구 사용"</string>
+    <string name="notification_bundle_description" msgid="4202633316211056848">"무음 처리하고 번들로 묶을 알림 유형을 선택하여 방해를 최소화하세요.\n\n알림 정리 도구는 기기에서 AI를 사용하며, 때때로 오류가 발생할 수 있습니다. 알림은 Google로 전송되지 않습니다."</string>
+    <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"알림 정리 도구"</string>
+    <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"우선순위가 낮은 알림을 번들로 묶고 무음 처리"</string>
+    <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"알림 정리 도구의 앱 관리"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"직장 프로필 앱에 적용"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR 도우미 서비스"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"설치된 앱 중에서 VR 도우미 서비스로 실행되도록 요청한 앱이 없습니다."</string>
@@ -5917,4 +5906,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"PIN을 삭제하는 중에 오류가 발생했습니다."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> 애니메이션"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"컨트롤을 사용 설정할 수 없음"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>
