@@ -108,7 +108,7 @@ public class ExternalDisplayTestBase {
         DisplayDevice builtinDisplay = new DisplayDevice(
                 DEFAULT_DISPLAY, "local:1111111111", "Built-in display", mode, List.of(mode),
                 DisplayIsEnabled.YES, /* isConnectedDisplay= */ false);
-        displays.add(builtinDisplay);
+        displays.addFirst(builtinDisplay);
         mDisplays = displays;
         doReturn(builtinDisplay).when(mMockedInjector).getDisplay(DEFAULT_DISPLAY);
         doReturn(mDisplays).when(mMockedInjector).getDisplays();
