@@ -51,8 +51,8 @@ open class ToggleShortcutPreferenceController(context: Context, key: String) :
     protected var shortcutPreference: ShortcutPreference? = null
     protected var componentName: ComponentName? = null
     protected var featureName: CharSequence? = null
-    private var sourceMetricsCategory: Int = 0
-    private var fragmentManager: FragmentManager? = null
+    protected var sourceMetricsCategory: Int = 0
+    protected var fragmentManager: FragmentManager? = null
 
     protected open val shortcutSettingsKey = ShortcutConstants.GENERAL_SHORTCUT_SETTINGS.toList()
 
