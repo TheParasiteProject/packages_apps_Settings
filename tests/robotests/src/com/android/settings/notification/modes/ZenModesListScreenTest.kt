@@ -21,7 +21,7 @@ import android.platform.test.annotations.DisableFlags
 import android.platform.test.annotations.EnableFlags
 import android.provider.Settings
 import com.android.settings.R
-import com.android.settings.Settings.ModeSettingsActivity
+import com.android.settings.Settings.ModesSettingsActivity
 import com.android.settings.contract.TAG_DEVICE_STATE_PREFERENCE
 import com.android.settings.contract.TAG_DEVICE_STATE_SCREEN
 import com.android.settings.flags.Flags
@@ -141,7 +141,7 @@ class ZenModesListScreenTest : SettingsCatalystTestCase() {
         val underTest = preferenceScreenCreator.getLaunchIntent(appContext, null)
 
         assertThat(underTest.getComponent()?.getClassName())
-            .isEqualTo(ModeSettingsActivity::class.java.getName())
+            .isEqualTo(ModesSettingsActivity::class.java.getName())
     }
 
     @Test
