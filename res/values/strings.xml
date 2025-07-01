@@ -11117,9 +11117,9 @@ Data usage charges may apply.</string>
     <!-- Dialog content shown when parental consent is required for the child to set up biometric authentication. [CHAR LIMIT=NONE] -->
     <string name="disabled_by_policy_content_biometric_parental_consent">Hand the phone to your parent to start setting this up</string>
     <!-- Dialog title shown when the user interacts with a restricted setting on a supervised device. [CHAR LIMIT=NONE] -->
-    <string name="disabled_by_policy_title_parental_controls">Restricted by parental controls</string>
+    <string name="disabled_by_policy_title_parental_controls">Ask for help</string>
     <!-- Dialog content shown when the user interacts with a restricted setting on a supervised device. [CHAR LIMIT=NONE] -->
-    <string name="disabled_by_policy_content_parental_controls">Only the person who manages your parental controls can change this setting</string>
+    <string name="disabled_by_policy_content_parental_controls">To change this setting, the person who set up controls for your device or account will need to change it for you.</string>
     <!-- Dialog content shown when parental consent is required for the child to change blocked settings. [CHAR LIMIT=NONE] -->
     <string name="disabled_by_policy_parental_consent">Hand the phone to your parent to allow this setting to be changed.</string>
     <!-- Shown when the user tries to change phone settings that are blocked by their IT admin [CHAR LIMIT=200] -->
