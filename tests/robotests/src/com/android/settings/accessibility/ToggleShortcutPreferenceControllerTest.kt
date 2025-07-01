@@ -36,8 +36,8 @@ import com.android.internal.accessibility.common.ShortcutConstants
 import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.DEFAULT
 import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.GESTURE
 import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.HARDWARE
-import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.SOFTWARE
 import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.KEY_GESTURE
+import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.SOFTWARE
 import com.android.internal.accessibility.util.ShortcutUtils
 import com.android.settings.R
 import com.android.settings.testutils.AccessibilityTestUtils
@@ -59,19 +59,18 @@ import org.robolectric.shadow.api.Shadow
 private const val PREFERENCE_KEY = "prefKey"
 private const val PREFERENCE_TITLE = "prefTitle"
 
-/**
- * Tests for [ToggleShortcutPreferenceController]
- */
+/** Tests for [ToggleShortcutPreferenceController] */
 @RunWith(RobolectricTestRunner::class)
 class ToggleShortcutPreferenceControllerTest {
-    @get:Rule
-    val mockitoRule: MockitoRule = MockitoJUnit.rule()
+    @get:Rule val mockitoRule: MockitoRule = MockitoJUnit.rule()
 
     @Mock
-    private lateinit var preferenceTreeClickListener: PreferenceManager.OnPreferenceTreeClickListener
+    private lateinit var preferenceTreeClickListener:
+        PreferenceManager.OnPreferenceTreeClickListener
 
     @Mock
-    private lateinit var displayPreferenceDialogListener: PreferenceManager.OnDisplayPreferenceDialogListener
+    private lateinit var displayPreferenceDialogListener:
+        PreferenceManager.OnDisplayPreferenceDialogListener
     private lateinit var shortcutPreference: ShortcutPreference
     private lateinit var controller: ToggleShortcutPreferenceController
     private lateinit var fragmentScenario: FragmentScenario<Fragment>
@@ -90,11 +89,7 @@ class ToggleShortcutPreferenceControllerTest {
         controller.initialize(AUTOCLICK_COMPONENT_NAME)
 
         fragmentScenario = launchFragment<Fragment>(initialState = INITIALIZED)
-        fragmentScenario.onFragment { fragment ->
-            fragment.lifecycle.addObserver(
-                controller
-            )
-        }
+        fragmentScenario.onFragment { fragment -> fragment.lifecycle.addObserver(controller) }
         shortcutPreference = ShortcutPreference(context, null)
         shortcutPreference.key = PREFERENCE_KEY
         shortcutPreference.title = PREFERENCE_TITLE
@@ -141,15 +136,16 @@ class ToggleShortcutPreferenceControllerTest {
     fun onCreate_hasShortcuts_updateUserPreferredShortcuts() {
         PreferredShortcuts.saveUserShortcutType(
             context,
-            PreferredShortcut(testComponentString, SOFTWARE or HARDWARE)
+            PreferredShortcut(testComponentString, SOFTWARE or HARDWARE),
         )
         a11yManager.setAccessibilityShortcutTargets(HARDWARE, listOf<String>(testComponentString))
 
         fragmentScenario.moveToState(CREATED)
 
         assertThat(
-            PreferredShortcuts.retrieveUserShortcutType(context, testComponentString)
-        ).isEqualTo(HARDWARE)
+                PreferredShortcuts.retrieveUserShortcutType(context, testComponentString, SOFTWARE)
+            )
+            .isEqualTo(HARDWARE)
     }
 
     @Test
@@ -158,7 +154,7 @@ class ToggleShortcutPreferenceControllerTest {
             /* enable= */ true,
             SOFTWARE or GESTURE,
             setOf(testComponentString),
-            context.userId
+            context.userId,
         )
 
         fragmentScenario.moveToState(CREATED)
@@ -166,9 +162,8 @@ class ToggleShortcutPreferenceControllerTest {
         controller.updateState(shortcutPreference)
 
         assertThat(shortcutPreference.isChecked).isTrue()
-        assertThat(shortcutPreference.summary).isEqualTo(
-            AccessibilityUtil.getShortcutSummaryList(context, SOFTWARE or GESTURE)
-        )
+        assertThat(shortcutPreference.summary)
+            .isEqualTo(AccessibilityUtil.getShortcutSummaryList(context, SOFTWARE or GESTURE))
     }
 
     @Test
@@ -177,7 +172,7 @@ class ToggleShortcutPreferenceControllerTest {
             /* enable= */ true,
             DEFAULT,
             setOf(testComponentString),
-            context.userId
+            context.userId,
         )
 
         fragmentScenario.moveToState(CREATED)
@@ -185,8 +180,8 @@ class ToggleShortcutPreferenceControllerTest {
         controller.updateState(shortcutPreference)
 
         assertThat(shortcutPreference.isChecked).isFalse()
-        assertThat(shortcutPreference.summary).isEqualTo(
-            context.getText(R.string.accessibility_shortcut_state_off))
+        assertThat(shortcutPreference.summary)
+            .isEqualTo(context.getText(R.string.accessibility_shortcut_state_off))
     }
 
     @EnableFlags(Flags.FLAG_ENABLE_TALKBACK_AND_MAGNIFIER_KEY_GESTURES)
@@ -196,7 +191,7 @@ class ToggleShortcutPreferenceControllerTest {
             /* enable= */ true,
             KEY_GESTURE,
             setOf(testComponentString),
-            context.userId
+            context.userId,
         )
 
         fragmentScenario.moveToState(CREATED)
@@ -204,8 +199,8 @@ class ToggleShortcutPreferenceControllerTest {
         controller.updateState(shortcutPreference)
 
         assertThat(shortcutPreference.isChecked).isFalse()
-        assertThat(shortcutPreference.summary).isEqualTo(
-            context.getText(R.string.accessibility_shortcut_state_off))
+        assertThat(shortcutPreference.summary)
+            .isEqualTo(context.getText(R.string.accessibility_shortcut_state_off))
     }
 
     @Test
@@ -225,12 +220,8 @@ class ToggleShortcutPreferenceControllerTest {
 
         verify(displayPreferenceDialogListener).onDisplayPreferenceDialog(shortcutPreference)
         assertThat(shortcutPreference.isChecked).isTrue()
-        assertThat(
-            ShortcutUtils.getEnabledShortcutTypes(
-                context,
-                testComponentString
-            )
-        ).isNotEqualTo(DEFAULT)
+        assertThat(ShortcutUtils.getEnabledShortcutTypes(context, testComponentString))
+            .isNotEqualTo(DEFAULT)
     }
 
     @Test
@@ -240,35 +231,29 @@ class ToggleShortcutPreferenceControllerTest {
         controller.updateState(shortcutPreference)
         assertThat(shortcutPreference.isChecked).isFalse()
         assertThat(
-            PreferredShortcuts.retrieveUserShortcutType(
-                context,
-                testComponentString,
-                DEFAULT
+                PreferredShortcuts.retrieveUserShortcutType(context, testComponentString, DEFAULT)
             )
-        ).isEqualTo(DEFAULT)
+            .isEqualTo(DEFAULT)
 
-        a11yManager.enableShortcutsForTargets(/* enable=*/ true,
+        a11yManager.enableShortcutsForTargets(
+            /* enable=*/ true,
             GESTURE,
             setOf(testComponentString),
-            context.userId
+            context.userId,
         )
-        controller.getContentObserverForTesting().onChange(/* selfChange= */ false,
-            Settings.Secure.getUriFor(Settings.Secure.ACCESSIBILITY_GESTURE_TARGETS)
-        )
+        controller
+            .getContentObserverForTesting()
+            .onChange(
+                /* selfChange= */ false,
+                Settings.Secure.getUriFor(Settings.Secure.ACCESSIBILITY_GESTURE_TARGETS),
+            )
 
         assertThat(shortcutPreference.isChecked).isTrue()
-        assertThat(shortcutPreference.summary).isEqualTo(
-            AccessibilityUtil.getShortcutSummaryList(
-                context,
-                GESTURE
-            )
-        )
+        assertThat(shortcutPreference.summary)
+            .isEqualTo(AccessibilityUtil.getShortcutSummaryList(context, GESTURE))
         assertThat(
-            PreferredShortcuts.retrieveUserShortcutType(
-                context,
-                testComponentString,
-                DEFAULT
+                PreferredShortcuts.retrieveUserShortcutType(context, testComponentString, DEFAULT)
             )
-        ).isEqualTo(GESTURE)
+            .isEqualTo(GESTURE)
     }
 }
