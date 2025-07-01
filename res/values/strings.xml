@@ -14659,7 +14659,7 @@ Data usage charges may apply.</string>
     <!-- Title on dialog that confirms whether user wants to delete their supervision PIN [CHAR LIMIT=NONE] -->
     <string name="supervision_delete_pin_confirm_header">Delete PIN?</string>
     <!-- Title on dialog that informs the user that they need to disable supervision before deleting the PIN [CHAR LIMIT=NONE] -->
-    <string name="supervision_delete_pin_supervision_enabled_header">Turn off parental controls for other users</string>
+    <string name="supervision_delete_pin_supervision_enabled_header">Can\u2019t delete PIN</string>
     <!-- Title on dialog that informs the user that an error occurred while trying to delete the PIN [CHAR LIMIT=NONE] -->
     <string name="supervision_delete_pin_error_header">PIN can not be deleted</string>
     <!-- Message in dialog that informs the user that an error occurred while trying to delete the PIN [CHAR LIMIT=NONE] -->
