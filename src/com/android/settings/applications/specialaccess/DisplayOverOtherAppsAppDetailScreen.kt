@@ -95,7 +95,7 @@ open class DisplayOverOtherAppsAppDetailScreen(context: Context, arguments: Bund
         fun parameters(context: Context, showSystemApp: Boolean) =
             parameters(context, showSystemApp, ::hasOverlayPermission)
 
-        private fun hasOverlayPermission(context: Context, appInfo: ApplicationInfo?): Boolean {
+        fun hasOverlayPermission(context: Context, appInfo: ApplicationInfo?): Boolean {
             if (appInfo == null) return false
             try {
                 val packageInfo: PackageInfo =
