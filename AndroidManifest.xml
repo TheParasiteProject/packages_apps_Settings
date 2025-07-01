@@ -1060,7 +1060,7 @@
             android:label="@string/language_picker_title"
             android:exported="true"
             android:icon="@drawable/ic_settings_language">
-            <intent-filter android:priority="1">
+            <intent-filter>
                 <action android:name="android.settings.LOCALE_SETTINGS" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -1141,6 +1141,33 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                        android:value="com.android.settings.language.LanguageSettings"/>
+            <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                       android:value="@string/menu_key_system"/>
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                       android:value="true"/>
+        </activity>
+
+        <activity
+            android:name=".Settings$LanguageAndRegionSettingsActivity"
+            android:label="@string/language_and_region_settings"
+            android:exported="true"
+            android:icon="@drawable/ic_settings_languages">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.LANGUAGE_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.LOCALE_SETTINGS" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.VOICE_LAUNCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.language.LanguageAndRegionSettings"/>
             <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
                        android:value="@string/menu_key_system"/>
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
@@ -1369,6 +1396,17 @@
                 android:targetActivity="Settings$LanguageSettingsActivity">
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.language.LanguageSettings" />
+            <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                       android:value="@string/menu_key_system"/>
+        </activity-alias>
+
+        <activity-alias android:name="LanguageAndRegionSettings"
+                        android:label="@string/language_and_region_settings"
+                        android:clearTaskOnLaunch="true"
+                        android:exported="true"
+                        android:targetActivity="Settings$LanguageAndRegionSettingsActivity">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.language.LanguageAndRegionSettings" />
             <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
                        android:value="@string/menu_key_system"/>
         </activity-alias>

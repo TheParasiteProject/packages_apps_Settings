@@ -112,6 +112,7 @@ public class Settings extends SettingsActivity {
     /** Activity for the language settings. */
     public static class LocalePickerActivity extends SettingsActivity { /* empty */ }
     public static class LanguageSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class LanguageAndRegionSettingsActivity extends SettingsActivity { /* empty */ }
     public static class SystemLanguageSettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppLanguageSettingsActivity extends SettingsActivity { /* empty */ }
     /** Activity for the regional preferences settings. */
