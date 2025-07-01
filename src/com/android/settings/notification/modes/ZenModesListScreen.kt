@@ -21,7 +21,7 @@ import android.content.Context
 import android.os.UserManager.DISALLOW_ADJUST_VOLUME
 import androidx.fragment.app.Fragment
 import com.android.settings.R
-import com.android.settings.Settings.ModeSettingsActivity
+import com.android.settings.Settings.ModesSettingsActivity
 import com.android.settings.contract.TAG_DEVICE_STATE_PREFERENCE
 import com.android.settings.contract.TAG_DEVICE_STATE_SCREEN
 import com.android.settings.core.PreferenceScreenMixin
@@ -90,7 +90,7 @@ open class ZenModesListScreen :
     override fun hasCompleteHierarchy() = false
 
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?) =
-        makeLaunchIntent(context, ModeSettingsActivity::class.java, metadata?.key)
+        makeLaunchIntent(context, ModesSettingsActivity::class.java, metadata?.key)
 
     override fun fragmentClass(): Class<out Fragment> = ZenModesListFragment::class.java
 
