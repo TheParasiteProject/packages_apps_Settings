@@ -11117,9 +11117,9 @@ Data usage charges may apply.</string>
     <!-- Dialog content shown when parental consent is required for the child to set up biometric authentication. [CHAR LIMIT=NONE] -->
     <string name="disabled_by_policy_content_biometric_parental_consent">Hand the phone to your parent to start setting this up</string>
     <!-- Dialog title shown when the user interacts with a restricted setting on a supervised device. [CHAR LIMIT=NONE] -->
-    <string name="disabled_by_policy_title_parental_controls">Restricted by parental controls</string>
+    <string name="disabled_by_policy_title_parental_controls">Ask for help</string>
     <!-- Dialog content shown when the user interacts with a restricted setting on a supervised device. [CHAR LIMIT=NONE] -->
-    <string name="disabled_by_policy_content_parental_controls">Only the person who manages your parental controls can change this setting</string>
+    <string name="disabled_by_policy_content_parental_controls">To change this setting, the person who set up controls for your device or account will need to change it for you.</string>
     <!-- Dialog content shown when parental consent is required for the child to change blocked settings. [CHAR LIMIT=NONE] -->
     <string name="disabled_by_policy_parental_consent">Hand the phone to your parent to allow this setting to be changed.</string>
     <!-- Shown when the user tries to change phone settings that are blocked by their IT admin [CHAR LIMIT=200] -->
@@ -14659,7 +14659,7 @@ Data usage charges may apply.</string>
     <!-- Title on dialog that confirms whether user wants to delete their supervision PIN [CHAR LIMIT=NONE] -->
     <string name="supervision_delete_pin_confirm_header">Delete PIN?</string>
     <!-- Title on dialog that informs the user that they need to disable supervision before deleting the PIN [CHAR LIMIT=NONE] -->
-    <string name="supervision_delete_pin_supervision_enabled_header">Turn off parental controls for other users</string>
+    <string name="supervision_delete_pin_supervision_enabled_header">Can\u2019t delete PIN</string>
     <!-- Title on dialog that informs the user that an error occurred while trying to delete the PIN [CHAR LIMIT=NONE] -->
     <string name="supervision_delete_pin_error_header">PIN can not be deleted</string>
     <!-- Message in dialog that informs the user that an error occurred while trying to delete the PIN [CHAR LIMIT=NONE] -->

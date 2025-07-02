@@ -24,7 +24,6 @@ import static com.android.settings.accessibility.TextReadingPreferenceFragment.E
 import static com.android.settings.accessibility.TextReadingPreferenceFragment.EntryPoint.SUW_ANYTHING_ELSE;
 import static com.android.settings.accessibility.TextReadingPreferenceFragment.EntryPoint.SUW_VISION_SETTINGS;
 import static com.android.settings.accessibility.TextReadingPreferenceFragment.FONT_SIZE_KEY;
-import static com.android.settings.accessibility.TextReadingPreferenceFragment.HIGH_TEXT_CONTRAST_KEY;
 import static com.android.settings.accessibility.TextReadingPreferenceFragment.RESET_KEY;
 
 import android.content.ComponentName;
@@ -78,7 +77,7 @@ public final class AccessibilityStatsLogUtils {
      * @param prefKey the preference key
      * @return the int value which maps to the key name
      */
-    static int convertToItemKeyName(String prefKey) {
+    public static int convertToItemKeyName(String prefKey) {
         switch (prefKey) {
             case FONT_SIZE_KEY:
                 return SettingsStatsLog.ACCESSIBILITY_TEXT_READING_OPTIONS_CHANGED__NAME__TEXT_READING_FONT_SIZE;
@@ -86,8 +85,6 @@ public final class AccessibilityStatsLogUtils {
                 return SettingsStatsLog.ACCESSIBILITY_TEXT_READING_OPTIONS_CHANGED__NAME__TEXT_READING_DISPLAY_SIZE;
             case BOLD_TEXT_KEY:
                 return SettingsStatsLog.ACCESSIBILITY_TEXT_READING_OPTIONS_CHANGED__NAME__TEXT_READING_BOLD_TEXT;
-            case HIGH_TEXT_CONTRAST_KEY:
-                return SettingsStatsLog.ACCESSIBILITY_TEXT_READING_OPTIONS_CHANGED__NAME__TEXT_READING_HIGH_CONTRAST_TEXT;
             case RESET_KEY:
                 return SettingsStatsLog.ACCESSIBILITY_TEXT_READING_OPTIONS_CHANGED__NAME__TEXT_READING_RESET;
             default:
@@ -101,7 +98,7 @@ public final class AccessibilityStatsLogUtils {
      * @param entryPoint the entry point
      * @return the int value which maps to the entry point
      */
-    static int convertToEntryPoint(int entryPoint) {
+    public static int convertToEntryPoint(int entryPoint) {
         switch (entryPoint) {
             case SUW_VISION_SETTINGS:
                 return SettingsStatsLog.ACCESSIBILITY_TEXT_READING_OPTIONS_CHANGED__ENTRY_POINT__TEXT_READING_SUW_VISION_SETTINGS;
