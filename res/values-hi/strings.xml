@@ -215,8 +215,7 @@
     <string name="desc_app_locale_disclaimer" msgid="5295933110644789052">"भाषा, ऐप्लिकेशन में उपलब्ध भाषाओं से अलग हो सकती है. हो सकता है कि कुछ ऐप्लिकेशन के साथ, भाषा की यह सेटिंग काम न करे."</string>
     <string name="desc_app_locale_selection_supported" msgid="7363315876602221125">"हर ऐप्लिकेशन के लिए भाषा चुनें."</string>
     <string name="desc_app_locale_selection_supported_with_disclaimer" msgid="7622217531143496788">"हर ऐप्लिकेशन के लिए भाषा चुनें. यह ऐप्लिकेशन में उपलब्ध अन्य भाषाओं से अलग हो सकती है. ऐसा हो सकता है कि कुछ ऐप्लिकेशन के साथ, भाषा की यह सेटिंग काम न करे."</string>
-    <!-- no translation found for desc_introduction_of_language_picker (2164004945569753730) -->
-    <skip />
+    <string name="desc_introduction_of_language_picker" msgid="2164004945569753730">"आपका डिवाइस, ऐप्लिकेशन और वेबसाइटें आपकी पसंदीदा भाषाओं की सूची में से उस पहली भाषा का इस्तेमाल करती हैं जो डिवाइस पर उपलब्ध होती है."</string>
     <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"अगर आपको हर ऐप्लिकेशन के लिए अलग भाषा चुननी है, तो ऐप्लिकेशन की भाषा सेटिंग पर जाएं."</string>
     <string name="desc_locale_helper_footer_general" msgid="6112153921151780303">"ऐप्लिकेशन की भाषाओं के बारे में ज़्यादा जानें"</string>
     <string name="title_change_system_region" msgid="9196602029960380112">"क्या इलाके को बदलकर %s पर सेट करना है?"</string>
@@ -3858,22 +3857,17 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"लोकप्रिय खबरें, एडिटोरियल वगैरह"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"पसंद किए जाने की संख्या, पोस्ट वगैरह"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"न्यूज़लेटर, सुझाया गया मीडिया वगैरह"</string>
-    <!-- no translation found for notification_ai_features_title (2241618579100257538) -->
-    <skip />
+    <string name="notification_ai_features_title" msgid="2241618579100257538">"एआई की मदद से मैनेज करें"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"सूचनाओं की खास जानकारी"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"लंबे मैसेज के रीकैप तुरंत पाएं"</string>
     <string name="notification_summarization_main_control_title" msgid="3341727937605794607">"सूचनाओं की खास जानकारी वाली सुविधा का इस्तेमाल करें"</string>
-    <!-- no translation found for notification_summarization_description (3185465631219791854) -->
-    <skip />
+    <string name="notification_summarization_description" msgid="3185465631219791854">"लंबे मैसेज और ग्रुप चैट का रीकैप तुरंत पाने के लिए, उनकी खास जानकारी जनरेट करें.\n\nखास जानकारी जनरेट करने के लिए, आपके डिवाइस पर एआई का इस्तेमाल किया जाता है. इसलिए, इसमें कभी-कभी गड़बड़ियां हो सकती हैं. Google को आपके मैसेज की जानकारी कभी भी नहीं भेजी जाती."</string>
     <string name="notification_summarization_excluded_description" msgid="5819160700526641394">"इन ऐप्लिकेशन से मिलने वाली सूचनाओं की खास जानकारी जनरेट नहीं की जाएगी"</string>
     <string name="notification_summarization_manage_excluded_apps" msgid="1691177835156220384">"ऐप्लिकेशन मैनेज करें"</string>
-    <!-- no translation found for notification_summarization_manage_excluded_apps_title (8021261855337614327) -->
-    <skip />
+    <string name="notification_summarization_manage_excluded_apps_title" msgid="8021261855337614327">"सूचनाओं की खास जानकारी पाने के लिए, ऐप्लिकेशन मैनेज करें"</string>
     <string name="notification_excluded_apps" msgid="317898848790046528">"ये ऐप्लिकेशन शामिल न करें"</string>
-    <!-- no translation found for notification_app_level_summarize_title (488390574186154905) -->
-    <skip />
-    <!-- no translation found for notification_app_level_summarize_subtext (2064371198044287108) -->
-    <skip />
+    <string name="notification_app_level_summarize_title" msgid="488390574186154905">"सूचनाओं की खास जानकारी पाने से जुड़ी सेटिंग"</string>
+    <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"लंबे मैसेज के रीकैप तुरंत पाएं"</string>
     <string name="live_notifications" msgid="4650406646292963831">"रीयल-टाइम में मिलने वाली सूचनाएं"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"लाइव अपडेट"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"स्टेटस बार और लॉक स्क्रीन पर, जारी गतिविधियों की सूचनाएं और अहम सूचनाएं दिखाएं"</string>
@@ -4024,16 +4018,11 @@
     <string name="notification_polite_work_summary" msgid="5014189280132951378">"वर्क प्रोफ़ाइल के ऐप्लिकेशन पर लागू करें"</string>
     <string name="notification_bundle_title" msgid="6679586974995981433">"सूचनाओं को व्यवस्थित करने की सेटिंग"</string>
     <string name="notification_bundle_summary" msgid="8924550009829960969">"जो सूचनाएं ज़्यादा अहम नहीं हैं उन्हें बंडल करें और उनकी आवाज़ बंद करें"</string>
-    <!-- no translation found for notification_bundle_main_control_title (6413211155343788835) -->
-    <skip />
-    <!-- no translation found for notification_bundle_description (4202633316211056848) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_title (2154075763770894707) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_subtext (8652218688050450291) -->
-    <skip />
-    <!-- no translation found for notification_bundle_manage_excluded_apps_title (6825808714530730009) -->
-    <skip />
+    <string name="notification_bundle_main_control_title" msgid="6413211155343788835">"सूचनाओं को व्यवस्थित करने की सेटिंग का इस्तेमाल करें"</string>
+    <string name="notification_bundle_description" msgid="4202633316211056848">"चुनें कि आपको किस तरह की सूचनाओं की आवाज़ बंद करनी है. सूचनाओं की वजह से आने वाली रुकावटें कम करने के लिए, उन्हें बंडल करें.\n\nसूचनाओं को व्यवस्थित करने के लिए, आपके डिवाइस पर एआई का इस्तेमाल किया जाता है. इसलिए, इसमें कभी-कभी गड़बड़ियां हो सकती हैं. Google को आपकी सूचनाओं की जानकारी कभी भी नहीं भेजी जाती."</string>
+    <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"सूचनाओं को व्यवस्थित करने की सेटिंग"</string>
+    <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"जो सूचनाएं ज़्यादा अहम नहीं हैं उन्हें बंडल करें और उनकी आवाज़ बंद करें"</string>
+    <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"सूचनाओं को व्यवस्थित करने के लिए, ऐप्लिकेशन मैनेज करें"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"वर्क प्रोफ़ाइल वाले ऐप्लिकेशन पर लागू करें"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"वीआर के साथ काम करने वाली सेवाएं"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"डिवाइस पर मौजूद किसी भी ऐप्लिकेशन ने वीआर के साथ काम करने वाली सेवा के तौर पर चलाए जाने का अनुरोध नहीं किया है."</string>
@@ -5917,4 +5906,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"पिन मिटाते समय कोई गड़बड़ी हुई."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> ऐनिमेशन"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"कंट्रोल चालू नहीं किए जा सकते"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>
