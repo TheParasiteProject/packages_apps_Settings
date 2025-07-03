@@ -12919,20 +12919,22 @@ Data usage charges may apply.</string>
     <string name="summary_add_satellite_setting">Learn More</string>
     <!-- Category name "How it works" [CHAR_LIMIT=NONE] -->
     <string name="category_name_how_it_works">How it works</string>
-    <!-- Title for satellite connection guide [CHAR_LIMIT=NONE] -->
-    <string name="title_satellite_connection_guide">When you don\u2019t have a mobile or Wi-Fi network</string>
+    <!-- Title for satellite connection guide [CHAR_LIMIT=NONE] [SCREENSHOT=screen/SZtkv3Mx2F3aPPp]-->
+    <string name="title_satellite_connection_guide">When you don\u2019t have a mobile or Wi\u2011Fi network</string>
     <!-- Title for satellite connection guide for NTN manual connection type. [CHAR_LIMIT=NONE] -->
     <string name="title_satellite_connection_guide_for_manual_type">Text a phone number</string>
-    <!-- Summary for satellite connection guide [CHAR_LIMIT=NONE] -->
-    <string name="summary_satellite_connection_guide">Your phone will auto-connect to a satellite. For the best connection, keep a clear view of the sky.</string>
+    <!-- Summary for satellite connection guide [CHAR_LIMIT=NONE] [SCREENSHOT=screen/7hKJowp6BKrUYU9]-->
+    <string name="summary_satellite_connection_guide">Your phone will auto\u2011connect to a satellite. For the best connection, keep a clear view of the sky.</string>
     <!-- Summary for satellite connection guide for NTN manual connection type. [CHAR_LIMIT=NONE] -->
     <string name="summary_satellite_connection_guide_for_manual_type">If you don\u2019t have a mobile network, you\u2019ll see an option to use satellite.</string>
     <!-- Title for satellite supported service [CHAR_LIMIT=NONE] -->
     <string name="title_supported_service">After your phone connects to a satellite</string>
     <!-- Title for satellite supported service for NTN manual connection type. [CHAR_LIMIT=NONE] -->
     <string name="title_supported_service_for_manual_type">Follow steps to connect to the satellite</string>
-    <!-- Summary for satellite supported service [CHAR_LIMIT=NONE] [SCREENSHOT=screen/6wvz2FKMGAaJBGJ] -->
-    <string name="summary_supported_service">You can text anyone, including emergency services, and use supported apps. Your phone will reconnect to a mobile network when available.</string>
+    <!-- Summary for satellite supported service with constrained data [CHAR_LIMIT=NONE] [SCREENSHOT=screen/4f3njzUdBXbZEAD] -->
+    <string name="summary_supported_service_with_constrained_data">You can text anyone, including emergency services, and use supported apps. Your phone will reconnect to a mobile network when available.</string>
+    <!-- Summary for satellite supported service with unconstrained data [CHAR_LIMIT=NONE] [SCREENSHOT=screen/5CbaRmndawLqiJS] -->
+    <string name="summary_supported_service_with_unconstrained_data">You can text anyone, including emergency services, and use data for apps. Your phone will reconnect to a mobile network when available.</string>
     <!-- Summary for satellite supported service without data supported [CHAR_LIMIT=NONE] [SCREENSHOT=screen/7sidqhHfwNNoacB] -->
     <string name="summary_supported_service_without_data_supported">You can text anyone, including emergency services. Your phone will reconnect to a mobile network when available.</string>
     <!-- Summary for satellite supported service for NTN manual connection type. [CHAR_LIMIT=NONE] -->
@@ -12941,8 +12943,8 @@ Data usage charges may apply.</string>
     <string name="satellite_footer_content_section_0">Keep in mind</string>
     <!-- learn more text - part 1 of disclaimer of satellite connectivity [CHAR_LIMIT=NONE] -->
     <string name="satellite_footer_content_section_1">Satellite connectivity may take longer and is available only in some areas.</string>
-    <!-- learn more text - part 2 of disclaimer of satellite connectivity [CHAR_LIMIT=NONE] -->
-    <string name="satellite_footer_content_section_2">Weather and certain structures may affect your satellite connection.</string>
+    <!-- learn more text - part 2 of disclaimer of satellite connectivity [CHAR_LIMIT=NONE] [SCREENSHOT=screen/5tcJMguULJETqDt] -->
+    <string name="satellite_footer_content_section_2">Weather and certain structures may affect the satellite connection.</string>
     <!-- learn more text - part 3 of disclaimer of satellite connectivity [CHAR_LIMIT=NONE] -->
     <string name="satellite_footer_content_section_3">Calling over satellite isn\u2019t available.</string>
     <!-- learn more text - part 4 of disclaimer of satellite connectivity [CHAR_LIMIT=NONE] -->
@@ -12965,10 +12967,10 @@ Data usage charges may apply.</string>
     <string name="title_satellite_setting_connectivity">Satellite connectivity</string>
     <!-- Description of satellite function with data transmission [CHAR LIMIT=60] -->
     <string name="description_satellite_setting_connectivity">satellite connectivity</string>
-    <!-- Description of satellite function [CHAR LIMIT=60] -->
-    <string name="description_satellite_setting_messaging">satellite messaging</string>
-    <!-- Title for notifying user's account be able to use data transmission of Satellite" [CHAR_LIMIT=NONE] -->
-    <string name="title_have_satellite_data_plan">Use of supported apps is included with your account</string>
+    <!-- Title for notifying user's account be able to use constrained data transmission of Satellite" [CHAR_LIMIT=NONE] [SCREENSHOT=screen/9FiNr7RKa4j9T8Y]-->
+    <string name="title_have_satellite_constrained_data_plan">Use of supported apps is included with your account</string>
+    <!-- Title for notifying user's account be able to use unconstrained data transmission of Satellite" [CHAR_LIMIT=NONE] [SCREENSHOT=screen/BVG79MF3V43JHHs]-->
+    <string name="title_have_satellite_unconstrained_data_plan">Data for all apps is included with your account</string>
     <!-- Category title for Satellite supported apps info  [CHAR LIMIT=60] -->
     <string name="category_title_satellite_supported_apps">Supported apps on your phone</string>
     <!-- Title for a entry to start apps list page with Satellite service supported.  [CHAR LIMIT=60] -->
