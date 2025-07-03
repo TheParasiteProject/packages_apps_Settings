@@ -94,7 +94,7 @@ open class AppInfoScreen(context: Context, override val arguments: Bundle) :
         @JvmStatic
         fun parameters(context: Context): Flow<Bundle> = flow {
             AppListRepositoryImpl(context).loadAndFilterApps(context.userId, true).forEach {
-                emit(Bundle(1).apply { putString("app", it.packageName) })
+                emit(Bundle(1).apply { putString("pkg", it.packageName) })
             }
         }
     }
