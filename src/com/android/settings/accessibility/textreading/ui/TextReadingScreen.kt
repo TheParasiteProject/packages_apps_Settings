@@ -54,6 +54,7 @@ abstract class BaseTextReadingScreen : PreferenceScreenMixin {
                 title = R.string.category_title_display_text_size,
             )
             +PreferenceCategory(key = "text_style", title = R.string.category_title_text_style) += {
+                +BoldTextPreference(context, entryPoint)
                 +OutlineTextPreference(context, entryPoint)
             }
         }

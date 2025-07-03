@@ -26,7 +26,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.View;
 import android.widget.Toast;
 
@@ -37,6 +36,8 @@ import com.android.graphics.hwui.flags.Flags;
 import com.android.modules.expresslog.Counter;
 import com.android.settings.R;
 import com.android.settings.accessibility.AccessibilityDialogUtils.DialogEnums;
+import com.android.settings.accessibility.textreading.ui.BoldTextPreference;
+import com.android.settings.accessibility.textreading.ui.OutlineTextPreference;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.search.SearchIndexable;
@@ -61,7 +62,6 @@ public class TextReadingPreferenceFragment extends BaseSupportFragment {
     private static final String SETUP_WIZARD_PACKAGE = "setupwizard";
     static final String FONT_SIZE_KEY = "font_size";
     static final String DISPLAY_SIZE_KEY = "display_size";
-    static final String BOLD_TEXT_KEY = "toggle_force_bold_text";
     static final String RESET_KEY = "reset";
     static final String PREVIEW_KEY = "preview";
     private static final String NEED_RESET_SETTINGS = "need_reset_settings";
@@ -202,13 +202,13 @@ public class TextReadingPreferenceFragment extends BaseSupportFragment {
         controllers.add(displaySizeController);
 
         mFontWeightAdjustmentController =
-                new FontWeightAdjustmentPreferenceController(context, BOLD_TEXT_KEY);
+                new FontWeightAdjustmentPreferenceController(context, BoldTextPreference.KEY);
         mFontWeightAdjustmentController.setEntryPoint(mEntryPoint);
         controllers.add(mFontWeightAdjustmentController);
 
         final HighTextContrastPreferenceController highTextContrastController =
                 new HighTextContrastPreferenceController(
-                        context, Settings.Secure.ACCESSIBILITY_HIGH_TEXT_CONTRAST_ENABLED);
+                        context, OutlineTextPreference.KEY);
         highTextContrastController.setEntryPoint(mEntryPoint);
         controllers.add(highTextContrastController);
 

@@ -16,7 +16,6 @@
 
 package com.android.settings.accessibility;
 
-import static com.android.settings.accessibility.TextReadingPreferenceFragment.BOLD_TEXT_KEY;
 import static com.android.settings.accessibility.TextReadingPreferenceFragment.DISPLAY_SIZE_KEY;
 import static com.android.settings.accessibility.TextReadingPreferenceFragment.EntryPoint.ACCESSIBILITY_SETTINGS;
 import static com.android.settings.accessibility.TextReadingPreferenceFragment.EntryPoint.DISPLAY_SETTINGS;
@@ -83,8 +82,6 @@ public final class AccessibilityStatsLogUtils {
                 return SettingsStatsLog.ACCESSIBILITY_TEXT_READING_OPTIONS_CHANGED__NAME__TEXT_READING_FONT_SIZE;
             case DISPLAY_SIZE_KEY:
                 return SettingsStatsLog.ACCESSIBILITY_TEXT_READING_OPTIONS_CHANGED__NAME__TEXT_READING_DISPLAY_SIZE;
-            case BOLD_TEXT_KEY:
-                return SettingsStatsLog.ACCESSIBILITY_TEXT_READING_OPTIONS_CHANGED__NAME__TEXT_READING_BOLD_TEXT;
             case RESET_KEY:
                 return SettingsStatsLog.ACCESSIBILITY_TEXT_READING_OPTIONS_CHANGED__NAME__TEXT_READING_RESET;
             default:
