@@ -653,8 +653,7 @@ public class AudioSharingDevicePreferenceControllerTest {
     }
 
     @Test
-    @EnableFlags({Flags.FLAG_ENABLE_LE_AUDIO_SHARING,
-            Flags.FLAG_ADOPT_PRIMARY_GROUP_MANAGEMENT_API})
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     @DisableFlags(Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX)
     public void testInCallState_showCallStateTitleAndSetActiveOnDeviceClick() {
         Settings.Secure.putInt(mContext.getContentResolver(),
@@ -680,7 +679,6 @@ public class AudioSharingDevicePreferenceControllerTest {
 
     @Test
     @EnableFlags({Flags.FLAG_ENABLE_LE_AUDIO_SHARING,
-            Flags.FLAG_ADOPT_PRIMARY_GROUP_MANAGEMENT_API,
             Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX})
     public void testInCallState_enableHysteresisFix_setAndSaveActiveOnDeviceClick() {
         Settings.Secure.putInt(mContext.getContentResolver(),
