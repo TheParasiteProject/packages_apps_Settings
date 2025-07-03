@@ -215,8 +215,7 @@
     <string name="desc_app_locale_disclaimer" msgid="5295933110644789052">"Die Sprache kann von den in der App verfügbaren Sprachen abweichen. Einige Apps unterstützen diese Einstellung möglicherweise nicht."</string>
     <string name="desc_app_locale_selection_supported" msgid="7363315876602221125">"Wähle die Sprache für jede App aus."</string>
     <string name="desc_app_locale_selection_supported_with_disclaimer" msgid="7622217531143496788">"Wähle die Sprache für jede App aus. Sie kann von den in der App verfügbaren Sprachen abweichen. Einige Apps unterstützen diese Einstellung möglicherweise nicht."</string>
-    <!-- no translation found for desc_introduction_of_language_picker (2164004945569753730) -->
-    <skip />
+    <string name="desc_introduction_of_language_picker" msgid="2164004945569753730">"Dein Gerät, deine Apps und deine Websites verwenden die erste deiner bevorzugten Sprachen, die unterstützt wird."</string>
     <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"Unter „App-Sprachen“ kannst du für jede App eine andere Sprache festlegen."</string>
     <string name="desc_locale_helper_footer_general" msgid="6112153921151780303">"Weitere Informationen zu App-Sprachen"</string>
     <string name="title_change_system_region" msgid="9196602029960380112">"Region ändern zu „%s“?"</string>
@@ -3858,22 +3857,17 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Top-Meldungen, Artikel und mehr"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Likes, Beiträge und mehr"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Newsletter, empfohlene Medien und mehr"</string>
-    <!-- no translation found for notification_ai_features_title (2241618579100257538) -->
-    <skip />
+    <string name="notification_ai_features_title" msgid="2241618579100257538">"Mit KI verwalten"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Zusammenfassung von Benachrichtigungen"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Du kannst kurze Zusammenfassungen längerer Nachrichten erhalten"</string>
     <string name="notification_summarization_main_control_title" msgid="3341727937605794607">"Zusammenfassung von Benachrichtigungen verwenden"</string>
-    <!-- no translation found for notification_summarization_description (3185465631219791854) -->
-    <skip />
+    <string name="notification_summarization_description" msgid="3185465631219791854">"Du kannst lange Nachrichten und Gruppenunterhaltungen zusammenfassen lassen, damit du schnell einen Überblick bekommst.\n\nZusammenfassungen werden mithilfe von KI auf deinem Gerät erstellt, die manchmal Fehler machen kann. Deine Nachrichten werden niemals an Google gesendet."</string>
     <string name="notification_summarization_excluded_description" msgid="5819160700526641394">"Benachrichtigungen von diesen Apps werden nicht zusammengefasst"</string>
     <string name="notification_summarization_manage_excluded_apps" msgid="1691177835156220384">"Apps verwalten"</string>
-    <!-- no translation found for notification_summarization_manage_excluded_apps_title (8021261855337614327) -->
-    <skip />
+    <string name="notification_summarization_manage_excluded_apps_title" msgid="8021261855337614327">"Apps für Zusammenfassungen von Benachrichtigungen verwalten"</string>
     <string name="notification_excluded_apps" msgid="317898848790046528">"Diese Apps nicht einbeziehen"</string>
-    <!-- no translation found for notification_app_level_summarize_title (488390574186154905) -->
-    <skip />
-    <!-- no translation found for notification_app_level_summarize_subtext (2064371198044287108) -->
-    <skip />
+    <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Zusammenfassungen von Benachrichtigungen"</string>
+    <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Du kannst kurze Zusammenfassungen längerer Nachrichten erhalten"</string>
     <string name="live_notifications" msgid="4650406646292963831">"Live-Benachrichtigungen"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Livemeldungen"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Du kannst zeitkritische Benachrichtigungen über laufende Aktivitäten in der Statusleiste und auf dem Sperrbildschirm anzeigen lassen"</string>
@@ -4024,16 +4018,11 @@
     <string name="notification_polite_work_summary" msgid="5014189280132951378">"Auf Apps im Arbeitsprofil anwenden"</string>
     <string name="notification_bundle_title" msgid="6679586974995981433">"Benachrichtigungs­organisator"</string>
     <string name="notification_bundle_summary" msgid="8924550009829960969">"Benachrichtigungen mit niedriger Priorität bündeln und stummschalten"</string>
-    <!-- no translation found for notification_bundle_main_control_title (6413211155343788835) -->
-    <skip />
-    <!-- no translation found for notification_bundle_description (4202633316211056848) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_title (2154075763770894707) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_subtext (8652218688050450291) -->
-    <skip />
-    <!-- no translation found for notification_bundle_manage_excluded_apps_title (6825808714530730009) -->
-    <skip />
+    <string name="notification_bundle_main_control_title" msgid="6413211155343788835">"Benachrichtigungsorganisator verwenden"</string>
+    <string name="notification_bundle_description" msgid="4202633316211056848">"Du kannst auswählen, welche Arten von Benachrichtigen stummgeschaltet und gebündelt werden sollen, um Unterbrechungen zu minimieren.\n\nDer Organisator verwendet KI auf deinem Gerät, die manchmal Fehler machen kann. Deine Benachrichtigungen werden niemals an Google gesendet."</string>
+    <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Benachrichtigungs­organisator"</string>
+    <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Benachrichtigungen mit niedriger Priorität bündeln und stummschalten"</string>
+    <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Apps für den Benachrichtigungsorganisator verwalten"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Auf Apps im Arbeitsprofil anwenden"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR-Hilfsdienste"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Keine installierte App hat die Ausführung als VR-Hilfsdienst angefordert."</string>
@@ -5917,4 +5906,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Beim Löschen der PIN ist ein Fehler aufgetreten."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animation der Bedienungshilfe „<xliff:g id="FEATURE">%1$s</xliff:g>“"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Einstellungen können nicht aktiviert werden"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>

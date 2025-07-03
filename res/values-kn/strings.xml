@@ -215,8 +215,7 @@
     <string name="desc_app_locale_disclaimer" msgid="5295933110644789052">"ಆ್ಯಪ್‌ನಲ್ಲಿ ಲಭ್ಯವಿರುವ ಭಾಷೆಗಳಿಗಿಂತ ಭಾಷೆ ಭಿನ್ನವಾಗಿರಬಹುದು. ಕೆಲವು ಆ್ಯಪ್‌ಗಳು ಈ ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ಬೆಂಬಲಿಸದಿರಬಹುದು."</string>
     <string name="desc_app_locale_selection_supported" msgid="7363315876602221125">"ಪ್ರತಿ ಆ್ಯಪ್‌ಗೆ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."</string>
     <string name="desc_app_locale_selection_supported_with_disclaimer" msgid="7622217531143496788">"ಪ್ರತಿ ಆ್ಯಪ್‌ಗೆ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ. ಆ್ಯಪ್‌ನಲ್ಲಿ ಲಭ್ಯವಿರುವ ಭಾಷೆಗಳಿಗಿಂತ ಭಾಷೆಯು ಬೇರೆಯಾಗಿರಬಹುದು. ಕೆಲವು ಆ್ಯಪ್‌ಗಳು ಈ ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ಬಂಬಲಿಸದಿರಬಹುದು."</string>
-    <!-- no translation found for desc_introduction_of_language_picker (2164004945569753730) -->
-    <skip />
+    <string name="desc_introduction_of_language_picker" msgid="2164004945569753730">"ನಿಮ್ಮ ಸಾಧನ, ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ವೆಬ್‌ಸೈಟ್‌ಗಳು ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷಾ ಪಟ್ಟಿಯಲ್ಲಿನ ಮೊದಲ ಬೆಂಬಲಿತ ಭಾಷೆಯನ್ನು ಬಳಸುತ್ತವೆ."</string>
     <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"ಪ್ರತಿ ಆ್ಯಪ್‌ಗೆ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಲು, ಆ್ಯಪ್ ಭಾಷೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ ಹೋಗಿ."</string>
     <string name="desc_locale_helper_footer_general" msgid="6112153921151780303">"ಆ್ಯಪ್ ಭಾಷೆಗಳ ಕುರಿತು ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"</string>
     <string name="title_change_system_region" msgid="9196602029960380112">"ಪ್ರದೇಶವನ್ನು %s ಗೆ ಬದಲಾಯಿಸಬೇಕೇ?"</string>
@@ -3672,8 +3671,7 @@
     <string name="keywords_always_show_time_info" msgid="1066752498285497595">"ಯಾವಾಗಲೂ ಆನ್ ಇರುವ ಆ್ಯಂಬಿಯೆಂಟ್ ಡಿಸ್‌ಪ್ಲೇ, AOD"</string>
     <string name="keywords_change_nfc_tag_apps_state" msgid="9032287964590554366">"NFC, ಟ್ಯಾಗ್, ರೀಡರ್"</string>
     <string name="keywords_keyboard_vibration" msgid="6485149510591654697">"ಕೀಬೋರ್ಡ್, ಹ್ಯಾಪ್ಟಿಕ್ಸ್, ವೈಬ್ರೇಟ್,"</string>
-    <!-- no translation found for keywords_external_display_settings (4717990369488386495) -->
-    <skip />
+    <string name="keywords_external_display_settings" msgid="4717990369488386495">"ಬಾಹ್ಯ ಡಿಸ್‌ಪ್ಲೇ, ಕನೆಕ್ಟ್ ಆಗಿರುವ ಡಿಸ್‌ಪ್ಲೇ, ವಿಸ್ತೃತ ಡಿಸ್‌ಪ್ಲೇ, ಎರಡನೇ ಡಿಸ್‌ಪ್ಲೇ, ಬಿಲ್ಟ್-ಇನ್ ಡಿಸ್‌ಪ್ಲೇ, ಡಿಸ್‌ಪ್ಲೇಗಳನ್ನು ಜೋಡಿಸಿ, ಕನ್ನಡಿ, ಡಿಸ್‌ಪ್ಲೇ ಗಾತ್ರ, ತಿರುಗುವಿಕೆ, ರೆಸಲ್ಯೂಶನ್, ರಿಫ್ರೆಶ್ ರೇಟ್"</string>
     <string name="sound_dashboard_summary" msgid="8254699132423665654">"ವಾಲ್ಯೂಮ್ ಮತ್ತು ವೈಬ್ರೇಷನ್‌"</string>
     <string name="media_volume_option_title" msgid="5966569685119475630">"ಮಾಧ್ಯಮ ವಾಲ್ಯೂಮ್"</string>
     <string name="remote_media_volume_option_title" msgid="7907330631195715350">"Google Cast ವಾಲ್ಯೂಮ್"</string>
@@ -3858,22 +3856,17 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"ಟಾಪ್ ಸ್ಟೋರಿಗಳು, ಎಡಿಟೋರಿಯಲ್‌ಗಳು ಹಾಗೂ ಇನ್ನಷ್ಟು"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"ಲೈಕ್‌ಗಳು, ಪೋಸ್ಟ್‌ಗಳು ಹಾಗೂ ಇನ್ನಷ್ಟು"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"ಸುದ್ದಿ ಪತ್ರಗಳು, ಶಿಫಾರಸು ಮಾಡಿರುವ ಮೀಡಿಯಾ ಹಾಗೂ ಇನ್ನಷ್ಟು"</string>
-    <!-- no translation found for notification_ai_features_title (2241618579100257538) -->
-    <skip />
+    <string name="notification_ai_features_title" msgid="2241618579100257538">"AI ಮೂಲಕ ನಿರ್ವಹಿಸಿ"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"ನೋಟಿಫಿಕೇಶನ್ ಸಾರಾಂಶಗಳು"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"ದೀರ್ಘ ಸಂದೇಶಗಳ ತ್ವರಿತ ರೀಕ್ಯಾಪ್ ಪಡೆಯಿರಿ"</string>
     <string name="notification_summarization_main_control_title" msgid="3341727937605794607">"ನೋಟಿಫಿಕೇಶನ್ ಸಾರಾಂಶಗಳನ್ನು ಬಳಸಿ"</string>
-    <!-- no translation found for notification_summarization_description (3185465631219791854) -->
-    <skip />
+    <string name="notification_summarization_description" msgid="3185465631219791854">"ತ್ವರಿತ ರೀಕ್ಯಾಪ್‌ಗಳನ್ನು ಪಡೆಯಲು ದೀರ್ಘ ಸಂದೇಶಗಳನ್ನು ಮತ್ತು ಗುಂಪು ಸಂವಾದಗಳನ್ನು ಸಾರಾಂಶಗೊಳಿಸಿ.\n\nಸಾರಾಂಶಗಳು ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ AI ಅನ್ನು ಬಳಸುತ್ತವೆ, ಇವು ಕೆಲವೊಮ್ಮೆ ತಪ್ಪುಗಳನ್ನು ಮಾಡಬಹುದು. ನಿಮ್ಮ ಸಂದೇಶಗಳನ್ನು ಎಂದಿಗೂ Google ಗೆ ಕಳುಹಿಸಲಾಗುವುದಿಲ್ಲ."</string>
     <string name="notification_summarization_excluded_description" msgid="5819160700526641394">"ಈ ಆ್ಯಪ್‌‌ಗಳಿಂದ ಬರುವ ಸಂಭಾಷಣೆ ನೋಟಿಫಿಕೇಶನ್‌ಗಳನ್ನು ಸಾರಾಂಶಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ"</string>
     <string name="notification_summarization_manage_excluded_apps" msgid="1691177835156220384">"ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಿ"</string>
-    <!-- no translation found for notification_summarization_manage_excluded_apps_title (8021261855337614327) -->
-    <skip />
+    <string name="notification_summarization_manage_excluded_apps_title" msgid="8021261855337614327">"ನೋಟಿಫಿಕೇಶನ್ ಸಾರಾಂಶಗಳಿಗೆ ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಿ"</string>
     <string name="notification_excluded_apps" msgid="317898848790046528">"ಈ ಆ್ಯಪ್‌ಗಳನ್ನು ಸೇರಿಸಬೇಡಿ"</string>
-    <!-- no translation found for notification_app_level_summarize_title (488390574186154905) -->
-    <skip />
-    <!-- no translation found for notification_app_level_summarize_subtext (2064371198044287108) -->
-    <skip />
+    <string name="notification_app_level_summarize_title" msgid="488390574186154905">"ನೋಟಿಫಿಕೇಶನ್ ಸಾರಾಂಶಗಳು"</string>
+    <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"ದೀರ್ಘ ಸಂದೇಶಗಳ ತ್ವರಿತ ರೀಕ್ಯಾಪ್ ಪಡೆಯಿರಿ"</string>
     <string name="live_notifications" msgid="4650406646292963831">"ಲೈವ್ ನೋಟಿಫಿಕೇಶನ್‌ಗಳು"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"ಲೈವ್ ಅಪ್‌ಡೇಟ್‌ಗಳು"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"ಜರುಗುತ್ತಿರುವ, ಸಮಯ-ಸೂಕ್ಷ್ಮ ನೋಟಿಫಿಕೇಶನ್‌ಗಳನ್ನು ಸ್ಥಿತಿ ಪಟ್ಟಿ ಮತ್ತು ಲಾಕ್ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಪ್ರದರ್ಶಿಸಿ"</string>
@@ -4024,16 +4017,11 @@
     <string name="notification_polite_work_summary" msgid="5014189280132951378">"ಉದ್ಯೋಗ ಪ್ರೊಫೈಲ್‌ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನ್ವಯಿಸಿ"</string>
     <string name="notification_bundle_title" msgid="6679586974995981433">"ನೋಟಿಫಿಕೇಶನ್ ಆರ್ಗನೈಜರ್"</string>
     <string name="notification_bundle_summary" msgid="8924550009829960969">"ಕಡಿಮೆ ಆದ್ಯತೆಯ ನೋಟಿಫಿಕೇಶನ್‌ಗಳನ್ನು ಬಂಡಲ್ ಮಾಡಿ ಮತ್ತು ನಿಶ್ಶಬ್ದಗೊಳಿಸಿ"</string>
-    <!-- no translation found for notification_bundle_main_control_title (6413211155343788835) -->
-    <skip />
-    <!-- no translation found for notification_bundle_description (4202633316211056848) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_title (2154075763770894707) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_subtext (8652218688050450291) -->
-    <skip />
-    <!-- no translation found for notification_bundle_manage_excluded_apps_title (6825808714530730009) -->
-    <skip />
+    <string name="notification_bundle_main_control_title" msgid="6413211155343788835">"ನೋಟಿಫಿಕೇಶನ್ ಆರ್ಗನೈಜರ್ ಅನ್ನು ಬಳಸಿ"</string>
+    <string name="notification_bundle_description" msgid="4202633316211056848">"ಅಡಚಣೆಗಳನ್ನು ಕಡಿಮೆಗೊಳಿಸುವುದಕ್ಕಾಗಿ ನೀವು ನಿಶ್ಶಬ್ದಗೊಳಿಸಲು ಅಥವಾ ಒಟ್ಟಿಗೆ ಬಂಡಲ್ ಮಾಡಲು ಬಯಸುವ ನೋಟಿಫಿಕೇಶನ್ ಪ್ರಕಾರಗಳನ್ನು ಆರಿಸಿ.\n\nಆರ್ಗನೈಜರ್ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ AI ಅನ್ನು ಬಳಸುತ್ತದೆ, ಇದು ಕೆಲವೊಮ್ಮೆ ತಪ್ಪುಗಳನ್ನು ಮಾಡಬಹುದು. ನಿಮ್ಮ ನೋಟಿಫಿಕೇಶನ್‌ಗಳನ್ನು ಎಂದಿಗೂ Google ಗೆ ಕಳುಹಿಸಲಾಗುವುದಿಲ್ಲ."</string>
+    <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"ನೋಟಿಫಿಕೇಶನ್ ಆರ್ಗನೈಜರ್"</string>
+    <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"ಕಡಿಮೆ ಆದ್ಯತೆಯ ನೋಟಿಫಿಕೇಶನ್‌ಗಳನ್ನು ಬಂಡಲ್ ಮಾಡಿ ಮತ್ತು ನಿಶ್ಶಬ್ದಗೊಳಿಸಿ"</string>
+    <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"ನೋಟಿಫಿಕೇಶನ್ ಆರ್ಗನೈಜರ್‌ಗೆ ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಿ"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"ಉದ್ಯೋಗ ಪ್ರೊಫೈಲ್‌ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನ್ವಯಿಸಿ"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR ಸಹಾಯ ಸೇವೆಗಳು"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"ಯಾವುದೇ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿದ ಆ್ಯಪ್‌ಗಳು VR ಅಸಿಸ್ಟೆಂಟ್ ಸೇವೆಗಳ ರೀತಿಯಲ್ಲಿ ರನ್ ಮಾಡಲು ವಿನಂತಿಸಿಲ್ಲ."</string>
@@ -5917,4 +5905,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"ಪಿನ್ ಅನ್ನು ಅಳಿಸಲು ಪ್ರಯತ್ನಿಸುವಾಗ ದೋಷ ಸಂಭವಿಸಿದೆ."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> ಆ್ಯನಿಮೇಶನ್"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"ಕಂಟ್ರೋಲ್‌ಗಳನ್ನು ಆನ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>

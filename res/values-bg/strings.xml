@@ -215,8 +215,7 @@
     <string name="desc_app_locale_disclaimer" msgid="5295933110644789052">"Езикът може да се различава от езиците, налични в приложението. Възможно е някои приложения да не поддържат тази настройка."</string>
     <string name="desc_app_locale_selection_supported" msgid="7363315876602221125">"Изберете език за всяко приложение."</string>
     <string name="desc_app_locale_selection_supported_with_disclaimer" msgid="7622217531143496788">"Изберете език за всяко приложение. Той може да се различава от езиците, налични в приложението. Възможно е някои приложения да не поддържат тази настройка."</string>
-    <!-- no translation found for desc_introduction_of_language_picker (2164004945569753730) -->
-    <skip />
+    <string name="desc_introduction_of_language_picker" msgid="2164004945569753730">"Устройството ви, приложенията и уебсайтовете използват първия поддържан език от списъка ви с предпочитани езици."</string>
     <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"За да изберете език за всяко отделно приложение, отворете настройките за език на приложенията."</string>
     <string name="desc_locale_helper_footer_general" msgid="6112153921151780303">"Научете повече за езиците на приложенията"</string>
     <string name="title_change_system_region" msgid="9196602029960380112">"Искате ли да промените региона на %s?"</string>
@@ -3858,22 +3857,17 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Водещи материали, редакторски статии и др."</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Харесвания, публикации и др."</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Бюлетини, препоръчани медии и др."</string>
-    <!-- no translation found for notification_ai_features_title (2241618579100257538) -->
-    <skip />
+    <string name="notification_ai_features_title" msgid="2241618579100257538">"Управление с AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Обобщения на известията"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Получавайте кратка обзорна информация за по-дългите съобщения"</string>
     <string name="notification_summarization_main_control_title" msgid="3341727937605794607">"Използване на обобщения на известията"</string>
-    <!-- no translation found for notification_summarization_description (3185465631219791854) -->
-    <skip />
+    <string name="notification_summarization_description" msgid="3185465631219791854">"Обобщавайте дълги съобщения и групови разговори, за да получавате кратка обзорна информация.\n\nОбобщенията използват AI на устройството ви, който понякога може да прави грешки. Съобщенията ви никога не се изпращат до Google."</string>
     <string name="notification_summarization_excluded_description" msgid="5819160700526641394">"Известията от тези приложения няма да бъдат обобщавани"</string>
     <string name="notification_summarization_manage_excluded_apps" msgid="1691177835156220384">"Управление на приложенията"</string>
-    <!-- no translation found for notification_summarization_manage_excluded_apps_title (8021261855337614327) -->
-    <skip />
+    <string name="notification_summarization_manage_excluded_apps_title" msgid="8021261855337614327">"Управление на приложенията за обобщенията на известията"</string>
     <string name="notification_excluded_apps" msgid="317898848790046528">"Без включване на тези приложения"</string>
-    <!-- no translation found for notification_app_level_summarize_title (488390574186154905) -->
-    <skip />
-    <!-- no translation found for notification_app_level_summarize_subtext (2064371198044287108) -->
-    <skip />
+    <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Обобщения на известията"</string>
+    <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Получавайте кратка обзорна информация за по-дългите съобщения"</string>
     <string name="live_notifications" msgid="4650406646292963831">"Известия в реално време"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Актуализации на живо"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Показване на текущите и ограничени във времето известия в лентата на състоянието и на заключения екран"</string>
@@ -4024,16 +4018,11 @@
     <string name="notification_polite_work_summary" msgid="5014189280132951378">"Прилагане за приложенията в служебния потребителски профил"</string>
     <string name="notification_bundle_title" msgid="6679586974995981433">"Инструмент за организиране на известията"</string>
     <string name="notification_bundle_summary" msgid="8924550009829960969">"Групиране и заглушаване на известията с по-нисък приоритет"</string>
-    <!-- no translation found for notification_bundle_main_control_title (6413211155343788835) -->
-    <skip />
-    <!-- no translation found for notification_bundle_description (4202633316211056848) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_title (2154075763770894707) -->
-    <skip />
-    <!-- no translation found for notification_app_level_bundle_subtext (8652218688050450291) -->
-    <skip />
-    <!-- no translation found for notification_bundle_manage_excluded_apps_title (6825808714530730009) -->
-    <skip />
+    <string name="notification_bundle_main_control_title" msgid="6413211155343788835">"Използване на инструмента за организиране на известията"</string>
+    <string name="notification_bundle_description" msgid="4202633316211056848">"Изберете типовете известия, които искате да заглушите и групирате, за да намалите прекъсванията.\n\nИнструментът за организиране използва AI на устройството ви, който понякога може да прави грешки. Известията ви никога не се изпращат до Google."</string>
+    <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Инструмент за организиране на известията"</string>
+    <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Групиране и заглушаване на известията с по-нисък приоритет"</string>
+    <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Управление на приложенията за инструмента за организиране на известията"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Прилагане за приложенията в служебния потребителски профил"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Помощни услуги за VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Никое инсталирано приложение не е заявило да се изпълнява като помощна услуга за VR."</string>
@@ -5917,4 +5906,14 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"При опита за изтриване на ПИН кода възникна грешка."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Анимация за <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Контролите не могат да бъдат включени"</string>
+    <!-- no translation found for identity_check_issue_card_title (864543931965445926) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (5216214598056911479) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_button_text (9194407367671256494) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_title (1495226082133610343) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (5745161401829550512) -->
+    <skip />
 </resources>
