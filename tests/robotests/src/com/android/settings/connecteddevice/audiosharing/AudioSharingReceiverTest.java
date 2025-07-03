@@ -425,10 +425,7 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
-    @EnableFlags({
-        Flags.FLAG_ENABLE_LE_AUDIO_SHARING,
-        Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX
-    })
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingDeviceConnected_alreadyTwoSinks_noNotif() {
         setAppInForeground(false);
         when(mBroadcast.isEnabled(null)).thenReturn(true);
@@ -465,10 +462,7 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
-    @EnableFlags({
-        Flags.FLAG_ENABLE_LE_AUDIO_SHARING,
-        Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX
-    })
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingDeviceConnected_alreadyHasSource_noNotif() {
         setAppInForeground(false);
         when(mBroadcast.isEnabled(null)).thenReturn(true);
@@ -498,10 +492,7 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
-    @EnableFlags({
-        Flags.FLAG_ENABLE_LE_AUDIO_SHARING,
-        Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX
-    })
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingDeviceConnected_showNotification() {
         setAppInForeground(false);
         when(mBroadcast.isEnabled(null)).thenReturn(true);
@@ -634,10 +625,7 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
-    @EnableFlags({
-        Flags.FLAG_ENABLE_LE_AUDIO_SHARING,
-        Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX
-    })
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingAddSource_alreadyTwoSinks_cancelNotif() {
         when(mBroadcast.isEnabled(null)).thenReturn(true);
         when(mBroadcast.getLatestBroadcastId()).thenReturn(1);
@@ -672,10 +660,7 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
-    @EnableFlags({
-        Flags.FLAG_ENABLE_LE_AUDIO_SHARING,
-        Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX
-    })
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingAddSource_alreadyHasSource_cancelNotif() {
         when(mBroadcast.isEnabled(null)).thenReturn(true);
         when(mBroadcast.getLatestBroadcastId()).thenReturn(1);
@@ -703,10 +688,7 @@ public class AudioSharingReceiverTest {
     }
 
     @Test
-    @EnableFlags({
-        Flags.FLAG_ENABLE_LE_AUDIO_SHARING,
-        Flags.FLAG_AUDIO_SHARING_HYSTERESIS_MODE_FIX
-    })
+    @EnableFlags(Flags.FLAG_ENABLE_LE_AUDIO_SHARING)
     public void broadcastReceiver_receiveAudioSharingAddSource_addSource() {
         when(mBroadcast.isEnabled(null)).thenReturn(true);
         when(mBroadcast.getLatestBroadcastId()).thenReturn(1);
