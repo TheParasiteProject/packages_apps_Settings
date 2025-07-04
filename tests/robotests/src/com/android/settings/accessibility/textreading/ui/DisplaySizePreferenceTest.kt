@@ -108,7 +108,7 @@ class DisplaySizePreferenceTest {
     }
 
     @Test
-    fun `verify dataStore value won't change while sliding the slider`() {
+    fun verifyDataStoreValueWontChangeWhileSlidingTheSlider() {
         val valueSize = preference.displaySizePreview.value.values.size
         assumeTrue(
             "Skip the test because there is only one value. We can't change the value",
@@ -133,7 +133,7 @@ class DisplaySizePreferenceTest {
     }
 
     @Test
-    fun `verify datastore value is updated when stop sliding the slider`() {
+    fun verifyDatastoreValueIsUpdatedWhenStopSlidingTheSlider() {
         val valueSize = preference.displaySizePreview.value.values.size
         assumeTrue(
             "Skip the test because there is only one value. We can't change the value",
@@ -158,7 +158,7 @@ class DisplaySizePreferenceTest {
     }
 
     @Test
-    fun `verify display size preview data changes when onValueChange is called`() {
+    fun verifyDisplaySizePreviewDataChangesWhenOnValueChangeIsCalled() {
         val sliderPreference =
             preference.createAndBindWidget<SliderPreference>(context, preferenceScreen)
         val slider =

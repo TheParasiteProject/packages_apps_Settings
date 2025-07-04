@@ -54,6 +54,7 @@ abstract class BaseTextReadingScreen : PreferenceScreenMixin {
                 title = R.string.category_title_display_text_size,
             ) +=
                 {
+                    +FontSizePreference(context, entryPoint)
                     +DisplaySizePreference(context, entryPoint)
                 }
             +PreferenceCategory(key = "text_style", title = R.string.category_title_text_style) += {
