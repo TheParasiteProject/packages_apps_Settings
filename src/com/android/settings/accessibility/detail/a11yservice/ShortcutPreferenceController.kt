@@ -19,6 +19,7 @@ package com.android.settings.accessibility.detail.a11yservice
 import android.accessibilityservice.AccessibilityServiceInfo
 import android.content.Context
 import android.os.Build
+import androidx.fragment.app.FragmentManager
 import androidx.preference.Preference
 import androidx.preference.PreferenceScreen
 import com.android.internal.accessibility.common.ShortcutConstants.UserShortcutType.HARDWARE
@@ -36,8 +37,18 @@ class ShortcutPreferenceController(context: Context, prefKey: String) :
     private var shortcutTitle: CharSequence? = null
     private var serviceInfo: AccessibilityServiceInfo? = null
 
-    fun initialize(serviceInfo: AccessibilityServiceInfo) {
-        super.initialize(serviceInfo.componentName)
+    fun initialize(
+        serviceInfo: AccessibilityServiceInfo,
+        fragmentManager: FragmentManager,
+        featureName: CharSequence,
+        sourceMetricsCategory: Int,
+    ) {
+        super.initialize(
+            serviceInfo.componentName,
+            fragmentManager,
+            featureName,
+            sourceMetricsCategory,
+        )
         this.serviceInfo = serviceInfo
         shortcutTitle =
             mContext.getString(
@@ -70,6 +81,12 @@ class ShortcutPreferenceController(context: Context, prefKey: String) :
 
     override fun onToggleClicked(preference: ShortcutPreference) {
         preference.preferenceManager.showDialog(preference)
+    }
+
+    override fun onSettingsClicked(preference: ShortcutPreference) {
+        preference.preferenceManager.onPreferenceTreeClickListener?.onPreferenceTreeClick(
+            preference
+        )
     }
 
     private fun setAllowedPreferredShortcutType() {

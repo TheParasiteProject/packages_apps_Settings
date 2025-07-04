@@ -38,7 +38,7 @@ import com.android.settings.accessibility.AccessibilityDialogUtils.DialogEnums.E
 import com.android.settings.accessibility.AccessibilityDialogUtils.DialogEnums.ENABLE_WARNING_FROM_TOGGLE
 import com.android.settings.accessibility.AccessibilitySettings
 import com.android.settings.accessibility.AccessibilityStatsLogUtils
-import com.android.settings.accessibility.ShortcutFragment
+import com.android.settings.accessibility.BaseSupportFragment
 import com.android.settings.accessibility.ShortcutPreference
 import com.android.settings.accessibility.ToggleShortcutPreferenceController
 import com.android.settings.accessibility.data.AccessibilityRepositoryProvider
@@ -52,7 +52,7 @@ import com.android.settings.accessibility.shared.dialogs.DisableAccessibilitySer
 import com.android.settings.overlay.FeatureFactory.Companion.featureFactory
 
 /** Fragment that shows the detail screen of an AccessibilityService */
-open class A11yServicePreferenceFragment : ShortcutFragment() {
+open class A11yServicePreferenceFragment : BaseSupportFragment() {
     private val tag = A11yServicePreferenceFragment::class.simpleName
     private var disabledStateLogged = false
     private var startTimeMillisForLogging = 0L
@@ -180,7 +180,8 @@ open class A11yServicePreferenceFragment : ShortcutFragment() {
         use(AccessibilityServiceIllustrationPreferenceController::class.java)
             .initialize(a11yServiceInfo)
         use(UseServiceTogglePreferenceController::class.java).initialize(a11yServiceInfo)
-        use(ShortcutPreferenceController::class.java).initialize(a11yServiceInfo)
+        use(ShortcutPreferenceController::class.java)
+            .initialize(a11yServiceInfo, childFragmentManager, getFeatureName(), metricsCategory)
         use(SettingsPreferenceController::class.java).initialize(a11yServiceInfo)
         use(LaunchAppInfoPreferenceController::class.java).initialize(a11yServiceInfo.componentName)
         use(AccessibilityServiceHtmlFooterPreferenceController::class.java)
@@ -253,11 +254,11 @@ open class A11yServicePreferenceFragment : ShortcutFragment() {
         }
     }
 
-    override fun getFeatureName(): CharSequence {
+    private fun getFeatureName(): CharSequence {
         return serviceInfo?.getFeatureName(requireContext()) ?: ""
     }
 
-    override fun getFeatureComponentName(): ComponentName {
+    private fun getFeatureComponentName(): ComponentName {
         return requireNotNull(
             requireArguments()
                 .getParcelable<ComponentName>(
@@ -281,7 +282,7 @@ open class A11yServicePreferenceFragment : ShortcutFragment() {
         )
     }
 
-    override fun getShortcutPreferenceController(): ToggleShortcutPreferenceController? {
+    fun getShortcutPreferenceController(): ToggleShortcutPreferenceController? {
         return use(ShortcutPreferenceController::class.java)
     }
 
@@ -291,7 +292,8 @@ open class A11yServicePreferenceFragment : ShortcutFragment() {
                 ENABLE_WARNING_FROM_TOGGLE -> turnOnService()
                 ENABLE_WARNING_FROM_SHORTCUT -> {
                     findShortcutPreference()?.run {
-                        showEditShortcutsScreen(requireNotNull(this.title))
+                        use(ShortcutPreferenceController::class.java)
+                            .showEditShortcutsScreen(requireNotNull(this.title))
                     }
                 }
 
@@ -309,7 +311,7 @@ open class A11yServicePreferenceFragment : ShortcutFragment() {
         val prefController = getShortcutPreferenceController() ?: return
         findShortcutPreference()?.run {
             prefController.setChecked(this, checked = true)
-            showShortcutsTutorial(
+            prefController.showShortcutsTutorial(
                 prefController.getUserPreferredShortcutTypes(getFeatureComponentName())
             )
         }
@@ -317,9 +319,7 @@ open class A11yServicePreferenceFragment : ShortcutFragment() {
 
     private fun turnOffShortcuts() {
         val prefController = getShortcutPreferenceController() ?: return
-        findShortcutPreference()?.run {
-            prefController.setChecked(this, checked = false)
-        }
+        findShortcutPreference()?.run { prefController.setChecked(this, checked = false) }
     }
 
     private fun turnOnService() {
@@ -335,9 +335,7 @@ open class A11yServicePreferenceFragment : ShortcutFragment() {
     }
 
     private fun findShortcutPreference(): ShortcutPreference? {
-        return getShortcutPreferenceController()?.let { it ->
-            findPreference(it.preferenceKey)
-        }
+        return getShortcutPreferenceController()?.let { it -> findPreference(it.preferenceKey) }
     }
 
     private fun findUseServicePreference(): TwoStatePreference? {
