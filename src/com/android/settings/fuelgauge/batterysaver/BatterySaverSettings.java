@@ -25,11 +25,18 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.settings.R;
+import com.android.settings.SettingsActivity;
+import com.android.settings.core.InstrumentedPreferenceFragment;
 import com.android.settings.dashboard.DashboardFragment;
+import com.android.settings.fuelgauge.RestrictAppPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.HelpUtils;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.FooterPreference;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /** Battery saver settings page */
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
@@ -62,6 +69,25 @@ public class BatterySaverSettings extends DashboardFragment {
     @Override
     public int getHelpResource() {
         return R.string.help_url_battery_saver_settings;
+    }
+
+    @Override
+    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
+        return buildPreferenceControllers(context, (SettingsActivity) getActivity(), this);
+    }
+
+    private static List<AbstractPreferenceController> buildPreferenceControllers(
+            Context context,
+            SettingsActivity settingsActivity,
+            InstrumentedPreferenceFragment fragment) {
+        final List<AbstractPreferenceController> controllers = new ArrayList<>();
+        if (settingsActivity != null && fragment != null) {
+            controllers.add(new RestrictAppPreferenceController(fragment));
+        } else {
+            controllers.add(new RestrictAppPreferenceController(context));
+        }
+
+        return controllers;
     }
 
     /** For Search. */
