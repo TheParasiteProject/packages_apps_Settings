@@ -40,6 +40,8 @@ import com.android.settings.applications.specialaccess.SpecialAccessSettingsScre
 import com.android.settings.biometrics.face.FaceSettings;
 import com.android.settings.communal.CommunalPreferenceController;
 import com.android.settings.deviceinfo.firmwareversion.FirmwareVersionScreen;
+import com.android.settings.emergency.EmergencyDashboardFragment;
+import com.android.settings.emergency.EmergencyDashboardScreen;
 import com.android.settings.enterprise.EnterprisePrivacySettings;
 import com.android.settings.network.AdaptiveConnectivityScreen;
 import com.android.settings.network.AdaptiveConnectivitySettings;
@@ -406,6 +408,7 @@ public class Settings extends SettingsActivity {
     }
     public static class ConfigureNotificationSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ConversationListSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class BubbleNotificationSettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppBubbleNotificationSettingsActivity extends SettingsActivity { /* empty */ }
     public static class NotificationAssistantSettingsActivity extends SettingsActivity{ /* empty */ }
     public static class NotificationAppListActivity extends SettingsActivity { /* empty */ }
@@ -552,6 +555,11 @@ public class Settings extends SettingsActivity {
     public static class PowerUsageAdvancedActivity extends SettingsActivity { /* empty */ }
     public static class StorageDashboardActivity extends SettingsActivity {}
     public static class AccountDashboardActivity extends SettingsActivity {}
+    public static class EmergencyDashboardActivity extends CatalystSettingsActivity {
+        public EmergencyDashboardActivity() {
+            super(EmergencyDashboardScreen.KEY, EmergencyDashboardFragment.class);
+        }
+    }
     public static class SystemDashboardActivity extends SettingsActivity {}
     public static class ResetDashboardActivity extends CatalystSettingsActivity {
         public ResetDashboardActivity() {

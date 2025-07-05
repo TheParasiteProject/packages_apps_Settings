@@ -159,6 +159,7 @@ import com.android.settings.network.telephony.NetworkSelectSettings;
 import com.android.settings.network.telephony.satellite.SatelliteSetting;
 import com.android.settings.network.tether.TetherSettings;
 import com.android.settings.nfc.PaymentSettings;
+import com.android.settings.notification.BubbleNotificationSettings;
 import com.android.settings.notification.BundlePreferenceFragment;
 import com.android.settings.notification.ConfigureNotificationSettings;
 import com.android.settings.notification.LockScreenNotificationsPreferencePageFragment;
@@ -322,6 +323,7 @@ public class SettingsGateway {
             PhysicalKeyboardFragment.class.getName(),
             SoundSettings.class.getName(),
             ConversationListSettings.class.getName(),
+            BubbleNotificationSettings.class.getName(),
             ConfigureNotificationSettings.class.getName(),
             ChooseLockPassword.ChooseLockPasswordFragment.class.getName(),
             ChooseLockPattern.ChooseLockPatternFragment.class.getName(),
