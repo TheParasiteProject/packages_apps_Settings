@@ -256,4 +256,4 @@ class TextReadingPreviewController extends BasePreferenceController implements
         return configurations;
     }
 }
-// LINT.ThenChange(/src/com/android/settings/accessibility/textreading/ui/TextReadingPreview.kt)
+// LINT.ThenChange(/src/com/android/settings/accessibility/textreading/ui/TextReadingPreview.kt, /src/com/android/settings/accessibility/shared/utils/DebounceConfigurationCommitController.kt)
