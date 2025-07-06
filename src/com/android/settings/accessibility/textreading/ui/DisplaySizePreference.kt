@@ -64,7 +64,7 @@ internal class DisplaySizePreference(context: Context, @EntryPoint private val e
         get() = SensitivityLevel.NO_SENSITIVITY
 
     private val displaySizeDataStore =
-        DisplaySizeDataStore(context = context.applicationContext, entryPoint = entryPoint)
+        DisplaySizeDataStore(context = context, entryPoint = entryPoint)
 
     private val displaySizes = displaySizeDataStore.displaySizeData.value.values
     private var isDraggingSlider = false

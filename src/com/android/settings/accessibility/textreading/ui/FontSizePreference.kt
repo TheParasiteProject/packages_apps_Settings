@@ -46,8 +46,7 @@ import kotlinx.coroutines.launch
 
 internal class FontSizePreference(context: Context, @EntryPoint private val entryPoint: Int) :
     IntRangeValuePreference, SliderPreferenceBinding, PreferenceLifecycleProvider {
-    private val fontSizeDataStore =
-        FontSizeDataStore(context = context.applicationContext, entryPoint = entryPoint)
+    private val fontSizeDataStore = FontSizeDataStore(context = context, entryPoint = entryPoint)
     private val fontSizes = fontSizeDataStore.fontSizeData.value.values
     private val fontSizesLabel =
         fontSizes

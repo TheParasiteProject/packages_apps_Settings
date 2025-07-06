@@ -33,8 +33,8 @@ import kotlinx.coroutines.flow.asStateFlow
 /** DataStore for the font size setting. */
 class FontSizeDataStore(
     private val context: Context,
-    private val settingsSecure: SettingsStore = SettingsSecureStore.get(context.applicationContext),
-    private val settingsSystem: SettingsStore = SettingsSystemStore.get(context.applicationContext),
+    private val settingsSecure: SettingsStore = SettingsSecureStore.get(context),
+    private val settingsSystem: SettingsStore = SettingsSystemStore.get(context),
     @EntryPoint private val entryPoint: Int = EntryPoint.UNKNOWN_ENTRY,
 ) : KeyValueStoreDelegate {
     init {

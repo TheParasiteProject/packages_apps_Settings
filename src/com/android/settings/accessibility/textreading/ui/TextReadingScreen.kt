@@ -68,6 +68,7 @@ abstract class BaseTextReadingScreen : PreferenceScreenMixin {
                 +BoldTextPreference(context, entryPoint)
                 +OutlineTextPreference(context, entryPoint)
             }
+            +ResetPreference(entryPoint)
         }
     // LINT.ThenChange()
 }
