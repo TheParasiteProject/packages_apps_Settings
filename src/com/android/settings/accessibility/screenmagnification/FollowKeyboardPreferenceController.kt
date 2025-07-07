@@ -46,7 +46,7 @@ class FollowKeyboardPreferenceController(context: Context, prefKey: String) :
         return Settings.Secure.getInt(
             mContext.getContentResolver(),
             SETTING_KEY,
-            AccessibilityUtil.State.ON,
+            AccessibilityUtil.State.OFF,
         ) == AccessibilityUtil.State.ON
     }
 
