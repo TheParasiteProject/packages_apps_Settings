@@ -26,6 +26,10 @@ import com.android.settings.accessibility.AccessibilityQuickSettingsTooltipWindo
 import com.android.settings.accessibility.TextReadingPreferenceFragment.EntryPoint
 import com.android.settings.accessibility.TooltipSliderPreference
 import com.android.settings.accessibility.extensions.isInSetupWizard
+import com.android.settings.accessibility.shared.utils.DebounceConfigurationChangeCommitController
+import com.android.settings.accessibility.shared.utils.DebounceConfigurationChangeCommitController.Companion.CHANGE_BY_BUTTON_DELAY
+import com.android.settings.accessibility.shared.utils.DebounceConfigurationChangeCommitController.Companion.CHANGE_BY_SLIDER_DELAY
+import com.android.settings.accessibility.shared.utils.DebounceConfigurationChangeCommitController.Companion.MIN_COMMIT_DELAY
 import com.android.settings.accessibility.textreading.data.FontSizeDataStore
 import com.android.settingslib.R as SettingsLibR
 import com.android.settingslib.datastore.KeyValueStore
@@ -39,6 +43,7 @@ import com.android.settingslib.metadata.SensitivityLevel
 import com.android.settingslib.widget.SliderPreference
 import com.android.settingslib.widget.SliderPreferenceBinding
 import com.google.android.material.slider.Slider
+import kotlin.time.Duration
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -61,6 +66,9 @@ internal class FontSizePreference(context: Context, @EntryPoint private val entr
      * the change. This is useful when trying to display preview of the size changes.
      */
     val fontSizePreview = _fontSizePreview.asStateFlow()
+
+    private val debounceCommitController =
+        DebounceConfigurationChangeCommitController(minCommitDelay = MIN_COMMIT_DELAY)
 
     override fun getReadPermissions(context: Context) = Permissions.EMPTY
 
@@ -105,7 +113,7 @@ internal class FontSizePreference(context: Context, @EntryPoint private val entr
             setTickVisible(true)
             setDefaultValue(_fontSizePreview.value.currentIndex)
             setExtraChangeListener { slider, value, fromUser ->
-                onValueChange(preference = this@apply, slider = slider, value = value)
+                onValueChange(preference = this@apply, value = value)
             }
             setExtraTouchListener(
                 object : Slider.OnSliderTouchListener {
@@ -182,24 +190,24 @@ internal class FontSizePreference(context: Context, @EntryPoint private val entr
 
     private fun onStopTrackingTouch(preference: TooltipSliderPreference, slider: Slider) {
         isDraggingSlider = false
-        commitChange(preference, slider, slider.value.toInt())
+        commitChange(CHANGE_BY_SLIDER_DELAY, preference, slider.value.toInt())
     }
 
-    private fun onValueChange(preference: TooltipSliderPreference, slider: Slider, value: Float) {
+    private fun onValueChange(preference: TooltipSliderPreference, value: Float) {
         preference.setSliderStateDescription(fontSizesLabel[value.toInt()])
         _fontSizePreview.value = _fontSizePreview.value.copy(currentIndex = value.toInt())
 
         if (!isDraggingSlider) {
             // if not dragging call datastore to save the value
-            commitChange(preference, slider, value.toInt())
+            commitChange(CHANGE_BY_BUTTON_DELAY, preference, value.toInt())
         }
     }
 
-    private fun commitChange(preference: TooltipSliderPreference, slider: Slider, index: Int) {
+    private fun commitChange(delay: Duration, preference: TooltipSliderPreference, index: Int) {
         if (index != fontSizeDataStore.getInt(KEY)) {
             showQuickSettingsTooltipIfNeeded(preference)
         }
-        slider.post { fontSizeDataStore.setInt(KEY, index) }
+        debounceCommitController.commitDelayed(delay) { fontSizeDataStore.setInt(KEY, index) }
     }
 
     private fun showQuickSettingsTooltipIfNeeded(preference: TooltipSliderPreference) {
