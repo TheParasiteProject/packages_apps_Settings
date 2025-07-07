@@ -22,6 +22,10 @@ import androidx.annotation.VisibleForTesting
 import androidx.preference.Preference
 import com.android.settings.R
 import com.android.settings.accessibility.TextReadingPreferenceFragment.EntryPoint
+import com.android.settings.accessibility.shared.utils.DebounceConfigurationChangeCommitController
+import com.android.settings.accessibility.shared.utils.DebounceConfigurationChangeCommitController.Companion.CHANGE_BY_BUTTON_DELAY
+import com.android.settings.accessibility.shared.utils.DebounceConfigurationChangeCommitController.Companion.CHANGE_BY_SLIDER_DELAY
+import com.android.settings.accessibility.shared.utils.DebounceConfigurationChangeCommitController.Companion.MIN_COMMIT_DELAY
 import com.android.settings.accessibility.textreading.data.DisplaySizeDataStore
 import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.datastore.Permissions
@@ -34,6 +38,7 @@ import com.android.settingslib.metadata.SensitivityLevel
 import com.android.settingslib.widget.SliderPreference
 import com.android.settingslib.widget.SliderPreferenceBinding
 import com.google.android.material.slider.Slider
+import kotlin.time.Duration
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
@@ -64,7 +69,7 @@ internal class DisplaySizePreference(context: Context, @EntryPoint private val e
         get() = SensitivityLevel.NO_SENSITIVITY
 
     private val displaySizeDataStore =
-        DisplaySizeDataStore(context = context.applicationContext, entryPoint = entryPoint)
+        DisplaySizeDataStore(context = context, entryPoint = entryPoint)
 
     private val displaySizes = displaySizeDataStore.displaySizeData.value.values
     private var isDraggingSlider = false
@@ -76,6 +81,9 @@ internal class DisplaySizePreference(context: Context, @EntryPoint private val e
      * commit the change. This is useful when trying to display preview of the size changes.
      */
     val displaySizePreview = _displaySizePreview.asStateFlow()
+
+    private val debounceCommitController =
+        DebounceConfigurationChangeCommitController(minCommitDelay = MIN_COMMIT_DELAY)
 
     override val key: String
         get() = KEY
@@ -147,7 +155,7 @@ internal class DisplaySizePreference(context: Context, @EntryPoint private val e
     override fun onStopTrackingTouch(slider: Slider) {
         isDraggingSlider = false
         // call data store to save the value
-        commitChange(slider, slider.value.toInt())
+        commitChange(CHANGE_BY_SLIDER_DELAY, slider.value.toInt())
     }
 
     override fun onValueChange(slider: Slider, value: Float, fromUser: Boolean) {
@@ -155,13 +163,13 @@ internal class DisplaySizePreference(context: Context, @EntryPoint private val e
 
         if (!isDraggingSlider) {
             // if not dragging call datastore to save the value
-            commitChange(slider, value.toInt())
+            commitChange(CHANGE_BY_BUTTON_DELAY, value.toInt())
         }
     }
 
     @VisibleForTesting
-    internal fun commitChange(slider: Slider, index: Int) {
-        slider.post { displaySizeDataStore.setInt(KEY, index) }
+    internal fun commitChange(delay: Duration, index: Int) {
+        debounceCommitController.commitDelayed(delay) { displaySizeDataStore.setInt(KEY, index) }
     }
 
     companion object {
