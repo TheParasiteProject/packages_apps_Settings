@@ -5942,18 +5942,6 @@
                        android:value="true"/>
         </activity>
 
-        <service
-            android:name=".appfunctions.DeviceStateAppFunctionService"
-            android:permission="android.permission.BIND_APP_FUNCTION_SERVICE"
-            android:exported="true"
-            android:featureFlag="com.android.settings.flags.device_state">
-            <property android:name="android.app.appfunctions"
-                android:value="appfunctions.xml"/>
-            <intent-filter>
-                <action android:name="android.app.appfunctions.AppFunctionService"/>
-            </intent-filter>
-        </service>
-
         <activity android:name="com.android.settings.biometrics.IdentityCheckPromoCardActivity"
             android:enabled="true"
             android:launchMode="singleTask"
