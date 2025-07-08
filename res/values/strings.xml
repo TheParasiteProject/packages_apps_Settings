@@ -281,6 +281,9 @@
     <!-- Footer description for discoverable mode in bluetooth off state [CHAR LIMIT=none] -->
     <string name="bluetooth_off_footer">Turn on Bluetooth to connect to other devices.</string>
 
+    <!-- Footer description for shared network [CHAR LIMIT=none] -->
+    <string name="shared_network_footer">Contact the network owner or a device admin to make changes to this network.</string>
+
     <!-- Title for paired device group [CHAR LIMIT=none] -->
     <string name="bluetooth_paired_device_title">Your devices</string>
     <!-- Title for pairing bluetooth device page [CHAR LIMIT=none] -->
@@ -2213,6 +2216,10 @@
     <string name="external_display_settings_title">External displays</string>
     <!-- Built-in display settings category. Appears in External displays and Connected Displays fragments. -->
     <string name="builtin_display_settings_category">Built-in display</string>
+    <!-- Built-in display settings category. Toggle to include / exclude built-in display as part of DisplayTopology. -->
+    <string name="builtin_display_settings_universal_cursor_title">Universal cursor</string>
+    <!-- Built-in display settings category. Description for universal cursor settings. -->
+    <string name="builtin_display_settings_universal_cursor_description">Move your mouse between displays</string>
     <!-- External Display use. The title of the use preference. [CHAR LIMIT=40] -->
     <string name="external_display_use_title">Use external display</string>
     <!-- External Display resolution settings. The title of the screen. [CHAR LIMIT=40] -->
@@ -14695,4 +14702,13 @@ Data usage charges may apply.</string>
     <string name="identity_check_promo_card_title">Use Identity Check to secure more apps</string>
     <!-- Summary for Identity Check promo card in Safety Center [CHAR LIMIT=NONE] -->
     <string name="identity_check_promo_card_summary">When you use Identity Check for all apps that support Fingerprint and Face Unlock, you ensure stronger protection and a more consistent experience – without extra setup</string>
+
+    <!-- Title on issue card for Identity Check in Safety Center (watch-specific) [CHAR LIMIT=NONE] -->
+    <string name="identity_check_watch_issue_card_title">Identity Check works with your watch</string>
+    <!-- Summary on issue card for Identity Check in Safety Center (watch-specific) [CHAR LIMIT=NONE] -->
+    <string name="identity_check_watch_issue_card_summary">Prevent others from opening apps that require Fingerprint or Face Unlock. When connected to your watch, your security is assured with greater mobility.</string>
+    <!-- Title for Identity Check promo card in Safety Center (watch-specific) [CHAR LIMIT=NONE] -->
+    <string name="identity_check_watch_promo_card_title">Use Identity Check and watch on more apps</string>
+    <!-- Summary for Identity Check promo card in Safety Center (watch-specific) [CHAR LIMIT=NONE] -->
+    <string name="identity_check_promo_card_watch_summary">Ensure your identity protection on all apps that support Fingerprint and Face Unlock in trusted places like your home or office. Use Identity Check with your watch to extend your protection even beyond trusted places.</string>
 </resources>
