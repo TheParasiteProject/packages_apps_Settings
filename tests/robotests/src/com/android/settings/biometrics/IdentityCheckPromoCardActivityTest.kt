@@ -13,14 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.settings.biometrics
 
 import android.content.Context
-import android.content.DialogInterface
-import android.content.DialogInterface.OnDismissListener
-import android.os.Bundle
-import androidx.fragment.app.testing.launchFragment
-import androidx.fragment.app.testing.launchFragmentInContainer
+import android.content.Intent
+import android.provider.Settings
+import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -29,46 +28,48 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.SmallTest
 import com.android.settings.R
 import com.android.settings.safetycenter.IdentityCheckSafetySource
+import com.google.common.truth.Truth.assertThat
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mockito.Mock
-import org.mockito.Mockito.verify
 import org.mockito.junit.MockitoJUnit
 import org.mockito.junit.MockitoRule
 
 @RunWith(AndroidJUnit4::class)
-class IdentityCheckPromoCardFragmentTest {
+@SmallTest
+class IdentityCheckPromoCardActivityTest {
     @get:Rule val mockitoRule: MockitoRule = MockitoJUnit.rule()
 
-    @Mock lateinit var onDismissListener: OnDismissListener
-    @Mock lateinit var dialogInterface: DialogInterface
-
-    private val context = ApplicationProvider.getApplicationContext<Context>()
-    private val watchBundle = Bundle()
+    private val context: Context = ApplicationProvider.getApplicationContext()
 
     @Test
-    fun launchFragment_onDismissListener() {
-        launchFragment { IdentityCheckPromoCardFragment() }
-            .onFragment { fragment ->
-                fragment.setOnDismissListener(onDismissListener)
-                fragment.onDismiss(dialogInterface)
-                verify(onDismissListener).onDismiss(dialogInterface)
+    fun launchActivity_showsDialog() {
+        ActivityScenario.launch<IdentityCheckPromoCardActivity>(getIntent()).use {
+            onView(withId(R.id.bottom_sheet)).inRoot(isDialog()).check(matches(isDisplayed()))
+        }
+        assertThat(hasPromoCardBeenShown()).isTrue()
+    }
+
+    @Test
+    fun launchActivity_showsFragment_showCardDetails() {
+        val expectedTitle = context.getString(R.string.identity_check_promo_card_title)
+        val expectedSummary = context.getString(R.string.identity_check_promo_card_summary)
+
+        ActivityScenario.launch<IdentityCheckPromoCardActivity>(
+                getIntent(IdentityCheckSafetySource.ACTION_ISSUE_CARD_SHOW_DETAILS)
+            )
+            .use {
+                onView(withId(R.id.illustration)).inRoot(isDialog()).check(matches(isDisplayed()))
+                onView(withId(R.id.title)).check(matches(withText(expectedTitle)))
+                onView(withId(R.id.summary)).check(matches(withText(expectedSummary)))
             }
     }
 
     @Test
-    fun launchFragment_showDialog() {
-        launchFragment { IdentityCheckPromoCardFragment() }
-            .onFragment {
-                onView(withId(R.id.bottom_sheet)).inRoot(isDialog()).check(matches(isDisplayed()))
-            }
-    }
-
-    @Test
-    fun launchFragment_watchPromoCard_checkContent() {
+    fun launchActivity_showsFragment_showWatchCardDetails() {
         val watchTitleString = context.getString(R.string.identity_check_watch_promo_card_title)
         val watchSummaryString = context.getString(R.string.identity_check_promo_card_watch_summary)
         val shouldShowWatchStrings =
@@ -85,31 +86,25 @@ class IdentityCheckPromoCardFragmentTest {
             } else {
                 context.getString(R.string.identity_check_promo_card_summary)
             }
-        watchBundle.putString(
-            IdentityCheckPromoCardFragment.KEY_INTENT_ACTION,
-            IdentityCheckSafetySource.ACTION_ISSUE_CARD_WATCH_SHOW_DETAILS,
-        )
-        launchFragmentInContainer(watchBundle) { IdentityCheckPromoCardFragment() }
-            .onFragment {
-                onView(withId(R.id.illustration)).check(matches(isDisplayed()))
+
+        ActivityScenario.launch<IdentityCheckPromoCardActivity>(
+                getIntent(IdentityCheckSafetySource.ACTION_ISSUE_CARD_WATCH_SHOW_DETAILS)
+            )
+            .use {
+                onView(withId(R.id.illustration)).inRoot(isDialog()).check(matches(isDisplayed()))
                 onView(withId(R.id.title)).check(matches(withText(expectedTitle)))
                 onView(withId(R.id.summary)).check(matches(withText(expectedSummary)))
             }
     }
 
-    @Test
-    fun launchFragment_generalPromoCard_checkContent() {
-        val expectedTitle = context.getString(R.string.identity_check_promo_card_title)
-        val expectedSummary = context.getString(R.string.identity_check_promo_card_summary)
-        watchBundle.putString(
-            IdentityCheckPromoCardFragment.KEY_INTENT_ACTION,
-            IdentityCheckSafetySource.ACTION_ISSUE_CARD_SHOW_DETAILS,
-        )
-        launchFragmentInContainer(watchBundle) { IdentityCheckPromoCardFragment() }
-            .onFragment {
-                onView(withId(R.id.illustration)).check(matches(isDisplayed()))
-                onView(withId(R.id.title)).check(matches(withText(expectedTitle)))
-                onView(withId(R.id.summary)).check(matches(withText(expectedSummary)))
-            }
+    private fun getIntent(action: String = "") =
+        Intent(context, IdentityCheckPromoCardActivity::class.java).setAction(action)
+
+    private fun hasPromoCardBeenShown(): Boolean {
+        return Settings.Secure.getInt(
+            context.contentResolver,
+            Settings.Secure.IDENTITY_CHECK_PROMO_CARD_SHOWN,
+            0,
+        ) == 1
     }
 }

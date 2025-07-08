@@ -5953,7 +5953,7 @@
             android:name="com.android.settings.safetycenter.IdentityCheckSafetySource"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.android.settings.safetycenter.action.IDENTITY_CHECK_ISSUE_CARD_DISMISSED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
 
