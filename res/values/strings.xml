@@ -281,6 +281,9 @@
     <!-- Footer description for discoverable mode in bluetooth off state [CHAR LIMIT=none] -->
     <string name="bluetooth_off_footer">Turn on Bluetooth to connect to other devices.</string>
 
+    <!-- Footer description for shared network [CHAR LIMIT=none] -->
+    <string name="shared_network_footer">Contact the network owner or a device admin to make changes to this network.</string>
+
     <!-- Title for paired device group [CHAR LIMIT=none] -->
     <string name="bluetooth_paired_device_title">Your devices</string>
     <!-- Title for pairing bluetooth device page [CHAR LIMIT=none] -->
