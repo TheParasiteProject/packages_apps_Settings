@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 The Android Open Source Project
+ * Copyright (C) 2025 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,25 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.settings.accessibility.textreading.ui
 
 import android.app.settings.SettingsEnums
-import android.content.ComponentName
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import com.android.settings.R
-import com.android.settings.Settings
-import com.android.settings.SettingsActivity.EXTRA_FRAGMENT_ARG_KEY
 import com.android.settings.accessibility.TextReadingPreferenceFragment
 import com.android.settings.flags.Flags
 import com.android.settings.testutils2.SettingsCatalystTestCase
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 
-/** Tests for [TextReadingScreen]. */
-class TextReadingScreenTest : SettingsCatalystTestCase() {
+/** Tests for [TextReadingScreenOnAccessibility]. */
+class TextReadingScreenOnAccessibilityTest : SettingsCatalystTestCase() {
     private val context: Context = ApplicationProvider.getApplicationContext()
-    override val preferenceScreenCreator = TextReadingScreen()
+    override val preferenceScreenCreator = TextReadingScreenOnAccessibility()
 
     override val flagName: String
         get() = Flags.FLAG_CATALYST_TEXT_READING_SCREEN
@@ -40,12 +38,12 @@ class TextReadingScreenTest : SettingsCatalystTestCase() {
 
     @Test
     fun key() {
-        assertThat(preferenceScreenCreator.key).isEqualTo(TextReadingScreen.KEY)
+        assertThat(preferenceScreenCreator.key).isEqualTo(TextReadingScreenOnAccessibility.KEY)
     }
 
     @Test
     fun isIndexable() {
-        assertThat(preferenceScreenCreator.isIndexable(context)).isTrue()
+        assertThat(preferenceScreenCreator.isIndexable(context)).isFalse()
     }
 
     @Test
@@ -68,23 +66,17 @@ class TextReadingScreenTest : SettingsCatalystTestCase() {
 
     @Test
     fun getLaunchIntent() {
-        val expectedComponent =
-            ComponentName(context, Settings.TextReadingSettingsActivity::class.java)
-        val launchIntent = preferenceScreenCreator.getLaunchIntent(context, preferenceScreenCreator)
-        assertThat(launchIntent).isNotNull()
-        assertThat(launchIntent!!.component).isEqualTo(expectedComponent)
-        assertThat(launchIntent.getStringExtra(EXTRA_FRAGMENT_ARG_KEY))
-            .isEqualTo(TextReadingScreen.KEY)
+        assertThat(preferenceScreenCreator.getLaunchIntent(context, null)).isNull()
     }
 
     @Test
     fun getEntryPoint() {
         assertThat(preferenceScreenCreator.entryPoint)
-            .isEqualTo(TextReadingPreferenceFragment.EntryPoint.DISPLAY_SETTINGS)
+            .isEqualTo(TextReadingPreferenceFragment.EntryPoint.ACCESSIBILITY_SETTINGS)
     }
 
     @Test
     fun getIcon() {
-        assertThat(preferenceScreenCreator.icon).isEqualTo(0)
+        assertThat(preferenceScreenCreator.icon).isEqualTo(R.drawable.ic_adaptive_font_download)
     }
 }
