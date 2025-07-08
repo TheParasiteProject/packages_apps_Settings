@@ -25,6 +25,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.android.internal.annotations.VisibleForTesting
 import com.android.settings.R
 import com.android.settings.core.SettingsBaseActivity
+import com.android.settingslib.collapsingtoolbar.widget.ScrollableToolbarItemLayout
+import com.google.common.collect.HashBiMap
 
 /**
  * The main fragment that holds both the DisplayTopologyPreferenceView and the
@@ -44,6 +46,9 @@ open class TabbedDisplayPreferenceFragment(
     @VisibleForTesting internal lateinit var noDisplayConnectedLayout: View
 
     private lateinit var viewModel: DisplayPreferenceViewModel
+
+    // Map toolbar indices to display IDs
+    private val toolbarIdxToDisplayIdMapping: HashBiMap<Int, Int> = HashBiMap.create()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +87,7 @@ open class TabbedDisplayPreferenceFragment(
         if (::displayTopologyPreferenceView.isInitialized) {
             displayTopologyPreferenceView.removeOnDisplayBlockSelectedListener()
         }
-        // TODO(b/409354332): Remove toolbar item selected listener
+        getCurrentActivity()?.removeOnItemSelectedListener()
     }
 
     @VisibleForTesting
@@ -115,10 +120,10 @@ open class TabbedDisplayPreferenceFragment(
                 showMainViews()
                 val highlightedDisplayId = if (isMirroring) -1 else selectedDisplayId
                 displayTopologyPreferenceView.selectDisplay(highlightedDisplayId)
-                // TODO(b/409354332): Update toolbar
+                updateToolbarDisplays(enabledDisplays, selectedDisplayId)
             } else {
                 hideMainViews()
-                // TODO(b/409354332): Clear toolbar
+                clearToolbar()
             }
         }
     }
@@ -154,5 +159,61 @@ open class TabbedDisplayPreferenceFragment(
                 SelectedDisplayPreferenceFragment(),
             )
             .commit()
+    }
+
+    private fun clearToolbar() {
+        val activity = getCurrentActivity() ?: return
+        // Remove existing listener to not get updated when toolbar items are re-added
+        activity.removeOnItemSelectedListener()
+        toolbarIdxToDisplayIdMapping.clear()
+        activity.setFloatingToolbarVisibility(false)
+        activity.setToolbarItems(emptyList())
+    }
+
+    private fun updateToolbarDisplays(
+        enabledDisplays: Map<Int, DisplayDevice>,
+        selectedDisplayId: Int,
+    ) {
+        val activity = getCurrentActivity() ?: return
+        clearToolbar()
+
+        val toolbarItems = mutableListOf<ScrollableToolbarItemLayout.ToolbarItem>()
+        enabledDisplays.values.forEachIndexed { i, display ->
+            val displayId = display.id
+            if (!display.isConnectedDisplay) {
+                toolbarItems.add(
+                    ScrollableToolbarItemLayout.ToolbarItem(
+                        R.drawable.display_category_builtin_display_icon,
+                        requireContext().getString(R.string.builtin_display_settings_category),
+                    )
+                )
+            } else {
+                toolbarItems.add(
+                    ScrollableToolbarItemLayout.ToolbarItem(
+                        R.drawable.display_category_connected_display_icon,
+                        display.name,
+                    )
+                )
+            }
+            toolbarIdxToDisplayIdMapping[i] = displayId
+        }
+
+        activity.setToolbarItems(toolbarItems)
+        activity.setFloatingToolbarVisibility(true)
+        activity.setOnItemSelectedListener(
+            object : ScrollableToolbarItemLayout.OnItemSelectedListener {
+                override fun onItemSelected(
+                    position: Int,
+                    toolbarItem: ScrollableToolbarItemLayout.ToolbarItem,
+                ) {
+                    toolbarIdxToDisplayIdMapping[position]?.let { displayId ->
+                        viewModel.updateSelectedDisplay(displayId)
+                    }
+                }
+            }
+        )
+        toolbarIdxToDisplayIdMapping.inverse().get(selectedDisplayId)?.let { toolbarPosition ->
+            activity.setToolbarSelectedItem(toolbarPosition)
+        }
     }
 }

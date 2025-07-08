@@ -27,13 +27,18 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.settings.Settings
 import com.android.settings.core.SettingsBaseActivity
 import com.android.settings.testutils.InstantTaskExecutorRule
+import com.android.settingslib.collapsingtoolbar.widget.ScrollableToolbarItemLayout
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.ArgumentCaptor
+import org.mockito.Captor
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.spy
+import org.mockito.Mockito.verify
+import org.mockito.kotlin.atLeastOnce
 import org.mockito.kotlin.doReturn
 import org.mockito.kotlin.reset
 
@@ -44,6 +49,13 @@ class TabbedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
 
     @get:Rule
     val activityScenarioRule = ActivityScenarioRule(Settings.TestingSettingsActivity::class.java)
+
+    @Captor
+    private lateinit var toolbarListener:
+        ArgumentCaptor<ScrollableToolbarItemLayout.OnItemSelectedListener>
+    @Captor
+    private lateinit var toolbarItemsCaptor:
+        ArgumentCaptor<List<ScrollableToolbarItemLayout.ToolbarItem>>
 
     private lateinit var viewModel: DisplayPreferenceViewModel
     private lateinit var fragment: TestableTabbedDisplayPreferenceFragment
@@ -61,6 +73,7 @@ class TabbedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
         topologyView = FakeDisplayTopologyPreferenceView(mMockedInjector)
         initFragment()
 
+        verify(settingsActivity, atLeastOnce()).setOnItemSelectedListener(toolbarListener.capture())
         reset(settingsActivity)
     }
 
@@ -73,7 +86,10 @@ class TabbedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
         assertThat(fragment.appBarLayout.visibility).isEqualTo(View.GONE)
         assertThat(fragment.selectedDisplayPrefContainer.visibility).isEqualTo(View.GONE)
         assertThat(fragment.noDisplayConnectedLayout.visibility).isEqualTo(View.VISIBLE)
-        // TODO(b/409354332): Test toolbar
+        verify(settingsActivity).setFloatingToolbarVisibility(false)
+        verify(settingsActivity).removeOnItemSelectedListener()
+        verify(settingsActivity).setToolbarItems(toolbarItemsCaptor.capture())
+        assertThat(toolbarItemsCaptor.value.size).isEqualTo(0)
     }
 
     @Test
@@ -83,7 +99,10 @@ class TabbedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
         assertThat(fragment.appBarLayout.visibility).isEqualTo(View.VISIBLE)
         assertThat(fragment.selectedDisplayPrefContainer.visibility).isEqualTo(View.VISIBLE)
         assertThat(fragment.noDisplayConnectedLayout.visibility).isEqualTo(View.GONE)
-        // TODO(b/409354332): Test toolbar
+        verify(settingsActivity).setToolbarSelectedItem(/* position= */ 0)
+        verify(settingsActivity).setFloatingToolbarVisibility(true)
+        verify(settingsActivity, atLeastOnce()).setToolbarItems(toolbarItemsCaptor.capture())
+        assertThat(toolbarItemsCaptor.value.size).isEqualTo(3)
     }
 
     @Test
@@ -99,7 +118,16 @@ class TabbedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
 
     @Test
     fun onToolbarItemSelected_updatesViewModel() {
-        // TODO(b/409354332): Test toolbar
+        val listener = toolbarListener.value
+        val secondDisplayId = mDisplays[1].id
+
+        listener.onItemSelected(
+            /* position= */ 1,
+            ScrollableToolbarItemLayout.ToolbarItem(/* iconResId= */ null, ""),
+        )
+
+        val updatedState = viewModel.uiState.value
+        assertThat(updatedState?.selectedDisplayId).isEqualTo(secondDisplayId)
     }
 
     @Test
@@ -109,7 +137,7 @@ class TabbedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
         viewModel.updateSelectedDisplay(secondDisplayId)
 
         assertThat(topologyView.selectedDisplay).isEqualTo(secondDisplayId)
-        // TODO(b/409354332): Test toolbar
+        verify(settingsActivity).setToolbarSelectedItem(/* position= */ 1)
     }
 
     @Test
