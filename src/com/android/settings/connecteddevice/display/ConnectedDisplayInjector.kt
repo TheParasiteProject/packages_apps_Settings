@@ -146,6 +146,11 @@ open class ConnectedDisplayInjector(open val context: Context?) {
             isConnectedDisplay,
         )
 
+    /**
+     * This is not limited to displays that are going to be included in the topology, but also
+     * displays that are relying on external display settings page to modify their settings (e.g.
+     * rotation)
+     */
     private fun isConnectedDisplay(display: Display): Boolean =
         display.type == Display.TYPE_EXTERNAL ||
             display.type == Display.TYPE_OVERLAY ||

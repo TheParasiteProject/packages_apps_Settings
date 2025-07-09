@@ -18,6 +18,7 @@ package com.android.settings.connecteddevice.display
 
 import android.app.Application
 import android.provider.Settings
+import android.view.Display
 import android.view.Display.DEFAULT_DISPLAY
 import androidx.lifecycle.Observer
 import androidx.test.core.app.ApplicationProvider
@@ -114,7 +115,62 @@ class DisplayPreferenceViewModelTest : ExternalDisplayTestBase() {
     }
 
     @Test
+    fun updateEnabledDisplays_excludeNonConnectedDisplaysAndNotDefaultDisplay() {
+        val initialState = viewModel.uiState.value!!
+        assertThat(initialState.enabledDisplays).hasSize(2)
+
+        val updatedEnabledDisplays = mDisplays.toMutableList()
+        // Add non-connected display
+        val mode = Display.Mode(720, 1280, 60f)
+        updatedEnabledDisplays.add(
+            DisplayDevice(
+                123,
+                "test",
+                mode,
+                listOf(mode),
+                DisplayIsEnabled.YES,
+                /* isConnectedDisplay= */ false,
+            )
+        )
+        updateDisplaysAndTopology(updatedEnabledDisplays)
+
+        viewModel.updateEnabledDisplays()
+
+        val state = viewModel.uiState.value!!
+        assertThat(state.enabledDisplays).hasSize(2)
+    }
+
+    @Test
+    fun updateEnabledDisplays_excludeNonEnabledDisplaysAndNotDefaultDisplay() {
+        val initialState = viewModel.uiState.value!!
+        assertThat(initialState.enabledDisplays).hasSize(2)
+
+        val updatedEnabledDisplays = mDisplays.toMutableList()
+        // Add non-enabled display
+        val mode = Display.Mode(720, 1280, 60f)
+        updatedEnabledDisplays.add(
+            DisplayDevice(
+                123,
+                "test",
+                mode,
+                listOf(mode),
+                DisplayIsEnabled.NO,
+                /* isConnectedDisplay= */ true,
+            )
+        )
+        updateDisplaysAndTopology(updatedEnabledDisplays)
+
+        viewModel.updateEnabledDisplays()
+
+        val state = viewModel.uiState.value!!
+        assertThat(state.enabledDisplays).hasSize(2)
+    }
+
+    @Test
     fun updateEnabledDisplays_removeSelectedDisplay_selectedDisplayUpdated() {
+        val initialState = viewModel.uiState.value!!
+        assertThat(initialState.enabledDisplays).hasSize(2)
+
         val updatedEnabledDisplays = mDisplays.toMutableList()
         // Remove initially selected display
         updatedEnabledDisplays.removeIf { it.id == mDisplayTopology.primaryDisplayId }

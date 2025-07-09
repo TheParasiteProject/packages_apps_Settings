@@ -99,7 +99,10 @@ constructor(
         val enabledDisplaysMap =
             injector
                 .getDisplays()
-                .filter { it.isEnabled == DisplayIsEnabled.YES }
+                .filter {
+                    it.isEnabled == DisplayIsEnabled.YES &&
+                        (it.id == DEFAULT_DISPLAY || it.isConnectedDisplay)
+                }
                 .associateBy { it.id }
         enabledDisplays.value = enabledDisplaysMap
 
