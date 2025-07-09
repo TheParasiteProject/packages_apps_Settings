@@ -4108,7 +4108,7 @@
             android:exported="true"
             android:featureFlag="com.android.settings.flags.deeplink_apps_25q4">
             <intent-filter android:priority="1">
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.settings.SPECIAL_ACCESS_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
             <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
