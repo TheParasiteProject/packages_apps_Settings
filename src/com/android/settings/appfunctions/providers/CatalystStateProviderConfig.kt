@@ -63,6 +63,7 @@ import com.android.settings.display.darkmode.DarkModeScreen
 import com.android.settings.dream.ScreensaverScreen
 import com.android.settings.emergency.EmergencyDashboardScreen
 import com.android.settings.fuelgauge.batterysaver.BatterySaverScreen
+import com.android.settings.fuelgauge.batteryusage.PowerUsageAdvancedScreen
 import com.android.settings.fuelgauge.batteryusage.PowerUsageSummaryScreen
 import com.android.settings.gestures.DoubleTapPowerScreen
 import com.android.settings.gestures.SystemNavigationGestureScreen
@@ -173,6 +174,11 @@ fun getCatalystScreenConfigs() =
         PerScreenCatalystConfig(
             enabled = true,
             screenKey = PowerUsageSummaryScreen.KEY,
+            category = setOf(DeviceStateCategory.BATTERY),
+        ),
+        PerScreenCatalystConfig(
+            enabled = true,
+            screenKey = PowerUsageAdvancedScreen.KEY,
             category = setOf(DeviceStateCategory.BATTERY),
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = ScreenTimeoutScreen.KEY),
