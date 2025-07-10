@@ -75,29 +75,13 @@ open class ConnectedDisplayInjector(open val context: Context?) {
         context?.getSystemService(DisplayManager::class.java)
     }
 
+    val desktopState: DesktopState? by lazy { context?.let { DesktopState.fromContext(it) } }
+
     /** The window manager instance, or null if it cannot be retrieved. */
     val windowManager: IWindowManager? by lazy { WindowManagerGlobal.getWindowManagerService() }
 
-    inner class DesktopStateWrapper(val context: Context?) {
-        private val desktopState = context?.let { DesktopState.fromContext(context) }
-        private lateinit var defaultDisplay: Display
-
-        fun isDesktopModeSupportedOnDefaultDisplay(): Boolean {
-            if (desktopState == null) {
-                return false
-            }
-            if (!::defaultDisplay.isInitialized) {
-                defaultDisplay = displayManager?.getDisplay(DEFAULT_DISPLAY) ?: return false
-            }
-            return desktopState.isDesktopModeSupportedOnDisplay(defaultDisplay)
-        }
-    }
-
-    private val desktopStateWrapper = DesktopStateWrapper(context)
-
-    open fun isDesktopModeSupportedOnDefaultDisplay(): Boolean {
-        return desktopStateWrapper.isDesktopModeSupportedOnDefaultDisplay()
-    }
+    open fun isDesktopModeSupportedOnDefaultDisplay(): Boolean =
+        desktopState?.isDesktopModeSupportedOnDisplay(DEFAULT_DISPLAY) ?: false
 
     /**
      * Reveals the wallpaper on the given display using a View with FLAG_SHOW_WALLPAPER flag set in
