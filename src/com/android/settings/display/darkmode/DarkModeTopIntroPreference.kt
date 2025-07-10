@@ -13,34 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.settings.supervision
+
+package com.android.settings.display.darkmode
 
 import android.content.Context
-import androidx.preference.Preference
+import android.view.accessibility.Flags
+import com.android.settings.R
 import com.android.settingslib.metadata.PreferenceMetadata
+import com.android.settingslib.metadata.PreferenceTitleProvider
 import com.android.settingslib.preference.PreferenceBinding
+import com.android.settingslib.widget.TopIntroPreference
 
-class SupervisionSupportedAppPreference(
-    private val titleString: CharSequence?,
-    private val summaryString: CharSequence?,
-    private val packageName: String,
-) : PreferenceMetadata, PreferenceBinding {
+// LINT.IfChange
+internal class DarkModeTopIntroPreference :
+    PreferenceMetadata, PreferenceBinding, PreferenceTitleProvider {
+
     override val key: String
         get() = KEY
 
     override fun isIndexable(context: Context) = false
 
-    override fun createWidget(context: Context) =
-        Preference(context, /* attrs= */ null).apply {
-            val packageManager = context.packageManager
-            val icon = packageManager.getApplicationIcon(packageName)
+    override fun createWidget(context: Context) = TopIntroPreference(context)
 
-            title = titleString
-            summary = summaryString
-            setIcon(icon)
-        }
+    override fun getTitle(context: Context): CharSequence? =
+        context.getText(
+            if (Flags.forceInvertColor()) {
+                R.string.dark_ui_text_force_invert
+            } else {
+                R.string.dark_ui_text
+            }
+        )
 
     companion object {
-        const val KEY = "web_content_filters_supported_app"
+        const val KEY = "dark_ui_top_intro"
     }
 }
+// LINT.ThenChange(DarkModeTopIntroPreferenceController.java)
