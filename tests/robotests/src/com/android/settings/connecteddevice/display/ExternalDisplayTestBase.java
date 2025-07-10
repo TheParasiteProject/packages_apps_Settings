@@ -32,6 +32,7 @@ import static org.mockito.Mockito.spy;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.hardware.display.DisplayTopology;
 import android.os.RemoteException;
 import android.view.Display.Mode;
 
@@ -65,6 +66,7 @@ public class ExternalDisplayTestBase {
     PreferenceManager mPreferenceManager;
     PreferenceScreen mPreferenceScreen;
     List<DisplayDevice> mDisplays;
+    DisplayTopology mDisplayTopology;
 
     /**
      * Setup.
@@ -82,13 +84,8 @@ public class ExternalDisplayTestBase {
         mFlags.setFlag(FLAG_RESOLUTION_AND_ENABLE_CONNECTED_DISPLAY_SETTING, true);
         mFlags.setFlag(FLAG_DISPLAY_SIZE_CONNECTED_DISPLAY_SETTING, true);
         mFlags.setFlag(FLAG_ENABLE_DEFAULT_DISPLAY_IN_TOPOLOGY_SWITCH_BUGFIX, true);
-        mDisplays = List.of(
-                createExternalDisplay(DisplayIsEnabled.YES),
-                createOverlayDisplay(DisplayIsEnabled.YES));
-        doReturn(mDisplays).when(mMockedInjector).getDisplays();
-        for (var display : mDisplays) {
-            doReturn(display).when(mMockedInjector).getDisplay(display.getId());
-        }
+        updateDisplaysAndTopology(List.of(createExternalDisplay(DisplayIsEnabled.YES),
+                createOverlayDisplay(DisplayIsEnabled.YES)));
         doReturn(mInjectedFlags).when(mMockedInjector).getFlags();
         mHandler = new TestHandler(mContext.getMainThreadHandler());
         doReturn(mHandler).when(mMockedInjector).getHandler();
@@ -114,6 +111,7 @@ public class ExternalDisplayTestBase {
         mDisplays = displays;
         doReturn(builtinDisplay).when(mMockedInjector).getDisplay(DEFAULT_DISPLAY);
         doReturn(mDisplays).when(mMockedInjector).getDisplays();
+        updateDisplayTopology();
         return builtinDisplay;
     }
 
@@ -135,5 +133,23 @@ public class ExternalDisplayTestBase {
         var supportedModes = List.of(new Mode(0, 1240, 780, 60, 60, new float[0], new int[0]));
         return new DisplayDevice(displayId, "Overlay #1", supportedModes.get(0), supportedModes,
                 isEnabled, /* isConnectedDisplay= */ true);
+    }
+
+    void updateDisplaysAndTopology(List<DisplayDevice> displays) {
+        mDisplays = displays;
+        doReturn(mDisplays).when(mMockedInjector).getDisplays();
+        for (var display : mDisplays) {
+            doReturn(display).when(mMockedInjector).getDisplay(display.getId());
+        }
+
+        updateDisplayTopology();
+    }
+
+    private void updateDisplayTopology() {
+        mDisplayTopology = new DisplayTopology();
+        mDisplays.forEach(
+                display -> mDisplayTopology.addDisplay(display.getId(), /* logicalWidth= */
+                        123, /* logicalHeight= */ 456, /* logicalDensity= */ 789));
+        doReturn(mDisplayTopology).when(mMockedInjector).getDisplayTopology();
     }
 }
