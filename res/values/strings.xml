@@ -6620,6 +6620,8 @@
     <string name="manager_battery_usage_restricted_title">Restricted</string>
     <!-- Summary for the battery unrestricted settings [CHAR_LIMIT=NONE] -->
     <string name="manager_battery_usage_unrestricted_summary">Allow battery usage in background without restrictions. May use more battery.</string>
+    <!-- Summary V2 for the battery unrestricted settings [CHAR_LIMIT=NONE] -->
+    <string name="manager_battery_usage_unrestricted_summary_v2">Allow battery usage in background. May use more battery.</string>
     <!-- Summary for the battery optimized settings [CHAR_LIMIT=NONE] -->
     <string name="manager_battery_usage_optimized_summary">Optimize based on your usage. Recommended for most apps.</string>
     <!-- Summary for the battery restricted settings [CHAR_LIMIT=NONE] -->
