@@ -18,12 +18,15 @@ package com.android.settings.connecteddevice.display
 
 import android.app.settings.SettingsEnums
 import android.os.Bundle
+import android.provider.Settings
+import android.provider.Settings.Secure.INCLUDE_DEFAULT_DISPLAY_IN_TOPOLOGY
 import android.window.DesktopExperienceFlags
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModelProvider
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
+import androidx.preference.SwitchPreferenceCompat
 import com.android.settings.R
 import com.android.settings.SettingsPreferenceFragmentBase
 import com.android.settings.Utils.createAccessibleSequence
@@ -97,9 +100,7 @@ open class SelectedDisplayPreferenceFragment(
     }
 
     override fun onStartCallback() {
-        viewModel.uiState.observe(viewLifecycleOwner) { state ->
-            update(state.selectedDisplayId, state.enabledDisplays, state.isMirroring)
-        }
+        viewModel.uiState.observe(viewLifecycleOwner) { state -> update(state) }
     }
 
     override fun onStopCallback() {
@@ -113,9 +114,14 @@ open class SelectedDisplayPreferenceFragment(
         // Built-in display preferences
         prefComponents.add(PrefComponent(mirroringPreference(), PrefInfo.DISPLAY_MIRRORING))
         prefComponents.add(
+            PrefComponent(
+                includeDefaultDisplayInTopologyPreference(),
+                PrefInfo.INCLUDE_DEFAULT_DISPLAY,
+            )
+        )
+        prefComponents.add(
             PrefComponent(builtinDisplaySizePreference(), PrefInfo.DISPLAY_SIZE_AND_TEXT)
         )
-        // TODO(b/420885578): Add universal cursor preference
         // External display preferences
         prefComponents.add(PrefComponent(externalDisplaySizePreference(), PrefInfo.DISPLAY_SIZE))
         prefComponents.add(PrefComponent(resolutionPreference(), PrefInfo.DISPLAY_RESOLUTION))
@@ -124,11 +130,12 @@ open class SelectedDisplayPreferenceFragment(
         prefComponents.forEach { selectedDisplayPreference.addPreference(it.preference) }
     }
 
-    private fun update(
-        displayId: Int,
-        enabledDisplays: Map<Int, DisplayDevice>,
-        isMirroring: Boolean,
-    ) {
+    private fun update(state: DisplayPreferenceViewModel.DisplayUiState) {
+        val displayId = state.selectedDisplayId
+        val enabledDisplays = state.enabledDisplays
+        val isMirroring = state.isMirroring
+        val includeDefaultDisplayInTopology = state.includeDefaultDisplayInTopology
+
         val display = enabledDisplays[displayId]
         // By design, if there's one or more enabled connected displays, `displayId` should always
         // be a valid key of `enabledDisplays`. In case where there's no enabled connected display,
@@ -146,6 +153,16 @@ open class SelectedDisplayPreferenceFragment(
 
         if (displayType == DisplayType.BUILTIN_DISPLAY) {
             selectedDisplayPreference.setTitle(R.string.builtin_display_settings_category)
+
+            selectedDisplayPreference
+                .findPreference<SwitchPreferenceCompat>(PrefInfo.INCLUDE_DEFAULT_DISPLAY.key)
+                ?.let {
+                    updateIncludeDefaultDisplayInTopologyPreference(
+                        it,
+                        isMirroring,
+                        includeDefaultDisplayInTopology,
+                    )
+                }
         } else {
             selectedDisplayPreference.setTitle(display.name)
 
@@ -170,6 +187,44 @@ open class SelectedDisplayPreferenceFragment(
                 setTitle(PrefInfo.DISPLAY_MIRRORING.titleResource)
                 key = PrefInfo.DISPLAY_MIRRORING.key
             }
+    }
+
+    private fun includeDefaultDisplayInTopologyPreference(): SwitchPreferenceCompat {
+        return SwitchPreferenceCompat(requireContext()).apply {
+            setTitle(PrefInfo.INCLUDE_DEFAULT_DISPLAY.titleResource)
+            setSummary(R.string.builtin_display_settings_universal_cursor_description)
+            key = PrefInfo.INCLUDE_DEFAULT_DISPLAY.key
+            onPreferenceClickListener =
+                object : Preference.OnPreferenceClickListener {
+                    override fun onPreferenceClick(preference: Preference): Boolean {
+                        writePreferenceClickMetric(preference)
+                        Settings.Secure.putInt(
+                            requireContext().getContentResolver(),
+                            INCLUDE_DEFAULT_DISPLAY_IN_TOPOLOGY,
+                            if ((preference as SwitchPreferenceCompat).isChecked()) 1 else 0,
+                        )
+                        return true
+                    }
+                }
+        }
+    }
+
+    private fun updateIncludeDefaultDisplayInTopologyPreference(
+        preference: SwitchPreferenceCompat,
+        isMirroring: Boolean,
+        includeDefaultDisplayInTopology: Boolean,
+    ) {
+        val showPreference =
+            !isMirroring &&
+                viewModel.injector.isDefaultDisplayInTopologyFlagEnabled() &&
+                viewModel.injector.isProjectedModeEnabled()
+        if (showPreference) {
+            preference.setVisible(true)
+            preference.setChecked(includeDefaultDisplayInTopology)
+        } else {
+            preference.setVisible(false)
+            return
+        }
     }
 
     private fun builtinDisplaySizePreference(): Preference {
@@ -198,7 +253,7 @@ open class SelectedDisplayPreferenceFragment(
     private fun updateExternalDisplaySizePreference(
         preference: ExternalDisplaySizePreference,
         display: DisplayDevice,
-        isMirroring: Boolean
+        isMirroring: Boolean,
     ) {
         if (isMirroring) {
             preference.setVisible(false)
@@ -296,6 +351,11 @@ open class SelectedDisplayPreferenceFragment(
         DISPLAY_MIRRORING(
             R.string.external_display_mirroring_title,
             "pref_key_builtin_display_mirroring",
+            DisplayType.BUILTIN_DISPLAY,
+        ),
+        INCLUDE_DEFAULT_DISPLAY(
+            R.string.builtin_display_settings_universal_cursor_title,
+            "pref_key_builtin_display_include_default_display_in_topology",
             DisplayType.BUILTIN_DISPLAY,
         ),
         DISPLAY_SIZE_AND_TEXT(
