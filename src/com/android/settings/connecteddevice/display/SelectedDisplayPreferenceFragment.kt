@@ -120,10 +120,12 @@ open class SelectedDisplayPreferenceFragment(
             )
         )
         prefComponents.add(
-            PrefComponent(builtinDisplaySizePreference(), PrefInfo.DISPLAY_SIZE_AND_TEXT)
+            PrefComponent(builtinDisplayDensityPreference(), PrefInfo.BUILTIN_DISPLAY_DENSITY)
         )
         // External display preferences
-        prefComponents.add(PrefComponent(externalDisplaySizePreference(), PrefInfo.DISPLAY_SIZE))
+        prefComponents.add(
+            PrefComponent(externalDisplayDensityPreference(), PrefInfo.EXTERNAL_DISPLAY_DENSITY)
+        )
         prefComponents.add(PrefComponent(resolutionPreference(), PrefInfo.DISPLAY_RESOLUTION))
         prefComponents.add(PrefComponent(rotationPreference(), PrefInfo.DISPLAY_ROTATION))
 
@@ -167,8 +169,10 @@ open class SelectedDisplayPreferenceFragment(
             selectedDisplayPreference.setTitle(display.name)
 
             selectedDisplayPreference
-                .findPreference<ExternalDisplaySizePreference>(PrefInfo.DISPLAY_SIZE.key)
-                ?.let { updateExternalDisplaySizePreference(it, display, isMirroring) }
+                .findPreference<ExternalDisplaySizePreference>(
+                    PrefInfo.EXTERNAL_DISPLAY_DENSITY.key
+                )
+                ?.let { updateExternalDisplayDensityPreference(it, display, isMirroring) }
             selectedDisplayPreference
                 .findPreference<Preference>(PrefInfo.DISPLAY_RESOLUTION.key)
                 ?.let { updateResolutionPreference(it, display) }
@@ -227,11 +231,11 @@ open class SelectedDisplayPreferenceFragment(
         }
     }
 
-    private fun builtinDisplaySizePreference(): Preference {
+    private fun builtinDisplayDensityPreference(): Preference {
         return Preference(requireContext()).apply {
             isPersistent = false
-            setTitle(PrefInfo.DISPLAY_SIZE_AND_TEXT.titleResource)
-            key = PrefInfo.DISPLAY_SIZE_AND_TEXT.key
+            setTitle(PrefInfo.BUILTIN_DISPLAY_DENSITY.titleResource)
+            key = PrefInfo.BUILTIN_DISPLAY_DENSITY.key
             onPreferenceClickListener =
                 object : Preference.OnPreferenceClickListener {
                     override fun onPreferenceClick(preference: Preference): Boolean {
@@ -242,15 +246,15 @@ open class SelectedDisplayPreferenceFragment(
         }
     }
 
-    private fun externalDisplaySizePreference(): ExternalDisplaySizePreference {
+    private fun externalDisplayDensityPreference(): ExternalDisplaySizePreference {
         return ExternalDisplaySizePreference(requireContext(), /* attrs= */ null).apply {
-            setTitle(PrefInfo.DISPLAY_SIZE.titleResource)
-            key = PrefInfo.DISPLAY_SIZE.key
+            setTitle(PrefInfo.EXTERNAL_DISPLAY_DENSITY.titleResource)
+            key = PrefInfo.EXTERNAL_DISPLAY_DENSITY.key
             setSummary(R.string.screen_zoom_short_summary)
         }
     }
 
-    private fun updateExternalDisplaySizePreference(
+    private fun updateExternalDisplayDensityPreference(
         preference: ExternalDisplaySizePreference,
         display: DisplayDevice,
         isMirroring: Boolean,
@@ -358,14 +362,14 @@ open class SelectedDisplayPreferenceFragment(
             "pref_key_builtin_display_include_default_display_in_topology",
             DisplayType.BUILTIN_DISPLAY,
         ),
-        DISPLAY_SIZE_AND_TEXT(
+        BUILTIN_DISPLAY_DENSITY(
             R.string.accessibility_text_reading_options_title,
-            "pref_key_builtin_display_size_and_text",
+            "pref_key_builtin_display_density",
             DisplayType.BUILTIN_DISPLAY,
         ),
-        DISPLAY_SIZE(
+        EXTERNAL_DISPLAY_DENSITY(
             R.string.screen_zoom_title,
-            "pref_key_external_display_size",
+            "pref_key_external_display_density",
             DisplayType.EXTERNAL_DISPLAY,
         ),
         DISPLAY_RESOLUTION(
