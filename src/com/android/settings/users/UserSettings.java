@@ -588,7 +588,7 @@ public class UserSettings extends SettingsPreferenceFragment
         } else if (mGuestUserAutoCreated && requestCode == REQUEST_EDIT_GUEST
                 && resultCode == RESULT_GUEST_REMOVED) {
             scheduleGuestCreation();
-        } else if (Flags.requirePinBeforeUserDeletion() && requestCode == REQUEST_DELETE_USER) {
+        } else if (requestCode == REQUEST_DELETE_USER) {
             if (resultCode == Activity.RESULT_OK) {
                 removeUserNow();
             } else {
@@ -727,8 +727,7 @@ public class UserSettings extends SettingsPreferenceFragment
                         UserDialogs.createRemoveDialog(getActivity(), mRemovingUserId,
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        if (Flags.requirePinBeforeUserDeletion()
-                                                && runUserRemovalKeyguardConfirmation()) {
+                                        if (runUserRemovalKeyguardConfirmation()) {
                                             mUserRemovalCredentialConfirmationPending = true;
                                             return;
                                         }
@@ -1026,18 +1025,6 @@ public class UserSettings extends SettingsPreferenceFragment
                 mRemovingUserId = -1;
                 mUserRemovalCredentialConfirmationPending = false;
             }
-        } else if (!Flags.requirePinBeforeUserDeletion()) {
-            // This method is only called when a user deletes themselves so this part of code is
-            // never executed and can be removed.
-            ThreadUtils.postOnBackgroundThread(new Runnable() {
-                @Override
-                public void run() {
-                    synchronized (mUserLock) {
-                        mUserManager.removeUser(mRemovingUserId);
-                        mHandler.sendEmptyMessage(MESSAGE_UPDATE_LIST);
-                    }
-                }
-            });
         }
     }
 
