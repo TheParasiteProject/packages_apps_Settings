@@ -63,6 +63,7 @@ import android.view.WindowManagerGlobal;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.WorkerThread;
 import androidx.appcompat.app.AlertDialog;
@@ -73,15 +74,12 @@ import androidx.preference.PreferenceScreen;
 import com.android.internal.util.UserIcons;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.R;
-import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.core.SubSettingLauncher;
 import com.android.settings.password.ChooseLockGeneric;
 import com.android.settings.password.ChooseLockSettingsHelper;
 import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.widget.MainSwitchBarController;
-import com.android.settings.widget.SettingsMainSwitchBar;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.RestrictedPreference;
@@ -230,8 +228,7 @@ public class UserSettings extends SettingsPreferenceFragment
 
     private MultiUserSwitchBarController mSwitchBarController;
 
-    //TODO: Add @NonNull during Flags.changeSwitchBarIntoMainPreference() cleanup
-    @SuppressWarnings("NullAway")
+    @NonNull
     private MultiUserMainSwitchPreferenceController mMainSwitchController;
 
     private EditUserInfoController mEditUserInfoController =
@@ -303,25 +300,8 @@ public class UserSettings extends SettingsPreferenceFragment
         boolean openUserEditDialog = getIntent().getBooleanExtra(
                 EXTRA_OPEN_DIALOG_USER_PROFILE_EDITOR, false);
 
-        if (Flags.changeSwitchBarIntoMainPreference()) {
-            if (openUserEditDialog) {
-                showDialog(DIALOG_USER_PROFILE_EDITOR);
-            }
-        } else {
-            final SettingsActivity activity = (SettingsActivity) getActivity();
-            final SettingsMainSwitchBar switchBar = activity.getSwitchBar();
-            switchBar.setTitle(getContext().getString(R.string.multiple_users_main_switch_title));
-            if (!mUserCaps.mIsGuest && mUserCaps.mUserSwitchingUiEnabled) {
-                switchBar.show();
-            } else {
-                switchBar.hide();
-            }
-            mSwitchBarController = new MultiUserSwitchBarController(activity,
-                    new MainSwitchBarController(switchBar), this /* listener */);
-            getSettingsLifecycle().addObserver(mSwitchBarController);
-            if (switchBar.isChecked() && openUserEditDialog) {
-                showDialog(DIALOG_USER_PROFILE_EDITOR);
-            }
+        if (openUserEditDialog) {
+            showDialog(DIALOG_USER_PROFILE_EDITOR);
         }
     }
 
@@ -353,10 +333,8 @@ public class UserSettings extends SettingsPreferenceFragment
         mTimeoutToDockUserPreferenceController = new TimeoutToDockUserPreferenceController(
                 activity, KEY_TIMEOUT_TO_DOCK_USER);
 
-        if (Flags.changeSwitchBarIntoMainPreference()) {
-            mMainSwitchController = new MultiUserMainSwitchPreferenceController(
-                    activity, KEY_USER_SWITCH_TOGGLE);
-        }
+        mMainSwitchController = new MultiUserMainSwitchPreferenceController(
+                activity, KEY_USER_SWITCH_TOGGLE);
 
         final PreferenceScreen screen = getPreferenceScreen();
         mAddUserWhenLockedPreferenceController.displayPreference(screen);
@@ -364,11 +342,8 @@ public class UserSettings extends SettingsPreferenceFragment
         mRemoveGuestOnExitPreferenceController.displayPreference(screen);
         mMultiUserTopIntroPreferenceController.displayPreference(screen);
         mTimeoutToDockUserPreferenceController.displayPreference(screen);
-        if (Flags.changeSwitchBarIntoMainPreference()) {
-            mMainSwitchController.displayPreference(screen);
-        } else {
-            screen.findPreference(KEY_USER_SWITCH_TOGGLE).setVisible(false);
-        }
+        mMainSwitchController.displayPreference(screen);
+
 
         screen.findPreference(mAddUserWhenLockedPreferenceController.getPreferenceKey())
                 .setOnPreferenceChangeListener(mAddUserWhenLockedPreferenceController);
@@ -452,11 +427,7 @@ public class UserSettings extends SettingsPreferenceFragment
                 mTimeoutToDockUserPreferenceController.getPreferenceKey()));
         mRemoveGuestOnExitPreferenceController.updateState(screen.findPreference(
                 mRemoveGuestOnExitPreferenceController.getPreferenceKey()));
-        if (Flags.changeSwitchBarIntoMainPreference()) {
-            mMainSwitchController.updateState();
-        } else {
-            mSwitchBarController.updateState();
-        }
+        mMainSwitchController.updateState();
         if (mShouldUpdateUserList) {
             updateUI();
         }
