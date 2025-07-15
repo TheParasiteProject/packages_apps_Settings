@@ -20,6 +20,7 @@ import static android.os.UserManager.SWITCHABILITY_STATUS_OK;
 import static android.os.UserManager.SWITCHABILITY_STATUS_USER_IN_CALL;
 import static android.os.UserManager.SWITCHABILITY_STATUS_USER_SWITCH_DISALLOWED;
 
+import static com.android.settings.flags.Flags.FLAG_SHOW_USER_DETAILS_SETTINGS_FOR_SELF;
 import static com.android.settings.users.UserDetailsSettings.REQUEST_CONFIRM_REMOVE;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -49,9 +50,11 @@ import android.multiuser.Flags;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.platform.test.annotations.EnableFlags;
 import android.platform.test.annotations.RequiresFlagsEnabled;
 import android.platform.test.flag.junit.CheckFlagsRule;
 import android.platform.test.flag.junit.DeviceFlagsValueProvider;
+import android.platform.test.flag.junit.SetFlagsRule;
 import android.telephony.TelephonyManager;
 
 import androidx.fragment.app.FragmentActivity;
@@ -137,6 +140,9 @@ public class UserDetailsSettingsTest {
 
     @Rule
     public final CheckFlagsRule mCheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule();
+
+    @Rule public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
+
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
@@ -720,6 +726,7 @@ public class UserDetailsSettingsTest {
 
     @Test
     public void canDeleteUser_nonAdminUser_shouldReturnFalse() {
+        setupSelectedUser();
         mUserManager.setIsAdminUser(false);
 
         boolean result = mFragment.canDeleteUser();
@@ -828,6 +835,32 @@ public class UserDetailsSettingsTest {
     }
 
     @Test
+    @EnableFlags(FLAG_SHOW_USER_DETAILS_SETTINGS_FOR_SELF)
+    public void initialize_nonAdminCurrentUserSelected_shouldShowRemovePref() {
+        setupSelectedCurrentUser();
+        mFragment.initialize(mActivity, mArguments);
+
+        verify(mRemoveUserPref).setOnPreferenceClickListener(mFragment);
+        verify(mRemoveUserPref).setTitle(R.string.user_remove_user);
+        verify(mFragment, never()).removePreference(KEY_REMOVE_USER);
+        verify(mFragment).removePreference(KEY_GRANT_ADMIN);
+    }
+
+    @Test
+    @EnableFlags(FLAG_SHOW_USER_DETAILS_SETTINGS_FOR_SELF)
+    public void initialize_adminCurrentUserSelected_shouldShowRemoveAndGrantAdminPref() {
+        setupSelectedCurrentUser();
+        mUserManager.setIsAdminUser(true);
+        ShadowUserManager.setIsMultipleAdminEnabled(true);
+        mFragment.initialize(mActivity, mArguments);
+
+        verify(mRemoveUserPref).setOnPreferenceClickListener(mFragment);
+        verify(mRemoveUserPref).setTitle(R.string.user_remove_user);
+        verify(mFragment, never()).removePreference(KEY_REMOVE_USER);
+        verify(mFragment, never()).removePreference(KEY_GRANT_ADMIN);
+    }
+
+    @Test
     public void onPreferenceChange_grantAdminClicked_isNotAdmin_shouldLogGrantAdmin() {
         setupSelectedUser();
         mFragment.mUserInfo = mUserInfo;
@@ -894,6 +927,15 @@ public class UserDetailsSettingsTest {
         mUserInfo = new UserInfo(21, "Bob", null,
                 UserInfo.FLAG_FULL | UserInfo.FLAG_INITIALIZED | UserInfo.FLAG_RESTRICTED,
                 UserManager.USER_TYPE_FULL_RESTRICTED);
+        mFragment.mUserInfo = mUserInfo;
+        mUserManager.addProfile(mUserInfo);
+    }
+
+    private void setupSelectedCurrentUser() {
+        mArguments.putInt("user_id", 0);
+        mUserInfo = new UserInfo(0, "Me", null,
+                UserInfo.FLAG_FULL | UserInfo.FLAG_INITIALIZED,
+                UserManager.USER_TYPE_FULL_SECONDARY);
         mFragment.mUserInfo = mUserInfo;
         mUserManager.addProfile(mUserInfo);
     }

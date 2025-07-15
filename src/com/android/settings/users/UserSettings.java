@@ -378,10 +378,7 @@ public class UserSettings extends SettingsPreferenceFragment
         mMePreference = new UserPreference(getPrefContext(), null /* attrs */, myUserId);
         mMePreference.setKey(KEY_USER_ME);
         mMePreference.setOnPreferenceClickListener(this);
-        if (showUserDetailsSettingsForSelf()
-                && getPrefContext()
-                        .getResources()
-                        .getBoolean(R.bool.config_show_user_details_settings_for_self)) {
+        if (showUserDetailsSettingsForSelf()) {
             mMePreference.setOnEditClickListener((view) -> showDialog(DIALOG_USER_PROFILE_EDITOR));
         }
 
@@ -479,7 +476,10 @@ public class UserSettings extends SettingsPreferenceFragment
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         int pos = 0;
-        if (!mUserCaps.mIsMain && !isCurrentUserGuest() && !mUserManager.isProfile()) {
+        if (!mUserCaps.mIsMain
+                && !isCurrentUserGuest()
+                && !mUserManager.isProfile()
+                && !showUserDetailsSettingsForSelf()) {
             String nickname = mUserManager.getUserName();
             MenuItem removeThisUser = menu.add(0, MENU_REMOVE_USER, pos++,
                     getResources().getString(R.string.user_remove_user_menu, nickname));
@@ -1695,7 +1695,12 @@ public class UserSettings extends SettingsPreferenceFragment
         }
         if (pref == mMePreference) {
             if (!isCurrentUserGuest()) {
-                showDialog(DIALOG_USER_PROFILE_EDITOR);
+                if (showUserDetailsSettingsForSelf()) {
+                    UserInfo userInfo = mUserManager.getUserInfo(UserHandle.myUserId());
+                    openUserDetails(userInfo, false);
+                } else {
+                    showDialog(DIALOG_USER_PROFILE_EDITOR);
+                }
                 return true;
             }
         } else if (pref instanceof UserPreference) {
