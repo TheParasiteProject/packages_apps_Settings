@@ -16,7 +16,6 @@
 
 package com.android.settings.display.darkmode
 
-import android.Manifest
 import android.app.settings.SettingsEnums
 import android.app.settings.SettingsEnums.ACTION_DARK_THEME
 import android.content.Context
@@ -33,7 +32,6 @@ import com.android.settings.metrics.PreferenceActionMetricsProvider
 import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.PrimarySwitchPreferenceBinding
 import com.android.settingslib.datastore.KeyValueStore
-import com.android.settingslib.datastore.Permissions
 import com.android.settingslib.metadata.BooleanValuePreference
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.PreferenceSummaryProvider
@@ -69,10 +67,9 @@ abstract class BaseDarkModeScreen(context: Context) :
 
     override fun tags(context: Context) = arrayOf(KEY_DARK_THEME)
 
-    override fun getReadPermissions(context: Context) = Permissions.EMPTY
+    override fun getReadPermissions(context: Context) = DarkModeStorage.getReadPermissions()
 
-    override fun getWritePermissions(context: Context) =
-        Permissions.allOf(Manifest.permission.MODIFY_DAY_NIGHT_MODE)
+    override fun getWritePermissions(context: Context) = DarkModeStorage.getWritePermissions()
 
     override fun getReadPermit(context: Context, callingPid: Int, callingUid: Int) =
         ReadWritePermit.ALLOW
@@ -97,7 +94,10 @@ abstract class BaseDarkModeScreen(context: Context) :
     override fun hasCompleteHierarchy() = Flags.catalystDarkUiMode()
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
-        preferenceHierarchy(context) { +DarkModeTopIntroPreference() }
+        preferenceHierarchy(context) {
+            +DarkModeTopIntroPreference()
+            +DarkModeMainSwitchPreference(darkModeStorage)
+        }
 
     override fun storage(context: Context): KeyValueStore = darkModeStorage
 
