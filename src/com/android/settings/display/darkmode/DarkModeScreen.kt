@@ -112,7 +112,7 @@ abstract class BaseDarkModeScreen(context: Context) :
         Flags.catalystDarkUiMode() && !context.isPowerSaveMode()
 
     override fun getSummary(context: Context): CharSequence? {
-        val active = darkModeStorage.getBoolean(KEY) == true
+        val active = darkModeStorage.getBoolean(key) == true
         return when {
             !context.isPowerSaveMode() -> AutoDarkTheme.getStatus(context, active)
             active -> context.getString(R.string.dark_ui_mode_disabled_summary_dark_theme_on)
@@ -121,8 +121,6 @@ abstract class BaseDarkModeScreen(context: Context) :
     }
 
     companion object {
-        const val KEY = "dark_ui_mode"
-
         private fun Context.isPowerSaveMode() =
             getSystemService(PowerManager::class.java)?.isPowerSaveMode == true
     }
