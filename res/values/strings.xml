@@ -6688,6 +6688,10 @@
     <string name="battery_tip_high_usage_title">Higher battery usage</string>
     <!-- Summary for the battery high usage tip, which presents apps with highest usage [CHAR LIMIT=NONE] -->
     <string name="battery_tip_high_usage_summary">See apps with highest usage</string>
+    <!-- Title for the default battery limited temporarily tip [CHAR LIMIT=NONE] -->
+    <string name="battery_tip_default_limited_temporarily_title">Charging is limited to protect battery</string>
+    <!-- Summary for the default battery limited temporarily tip [CHAR LIMIT=NONE] -->
+    <string name="battery_tip_default_limited_temporarily_summary">Your battery was warm for an extended period. Normal charging will resume once your battery has cooled down further</string>
     <!-- Title for the battery limited temporarily tip [CHAR LIMIT=NONE] -->
     <string name="battery_tip_limited_temporarily_title">Charging optimized to protect your battery</string>
     <!-- Summary for the battery limited temporarily tip [CHAR LIMIT=NONE] -->
@@ -6741,7 +6745,7 @@
     <!-- CANCEL button for dialog to remove restriction for app [CHAR LIMIT=NONE] -->
     <string name="battery_tip_unrestrict_app_dialog_cancel">Cancel</string>
     <!-- Override button for Battery Defender Tip to start charging  [CHAR LIMIT=NONE] -->
-    <string name="battery_tip_charge_to_full_button">Override</string>
+    <string name="battery_tip_charge_to_full_button">Charge anyway</string>
     <!-- Title of incompatible charging battery tip [CHAR LIMIT=NONE] -->
     <string name="battery_tip_incompatible_charging_title">Check charging accessory</string>
     <!-- Content description for the incompatible charging battery tip button [CHAR LIMIT=NONE] -->
