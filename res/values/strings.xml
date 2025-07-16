@@ -6688,6 +6688,10 @@
     <string name="battery_tip_high_usage_title">Higher battery usage</string>
     <!-- Summary for the battery high usage tip, which presents apps with highest usage [CHAR LIMIT=NONE] -->
     <string name="battery_tip_high_usage_summary">See apps with highest usage</string>
+    <!-- Title for the default battery limited temporarily tip [CHAR LIMIT=NONE] -->
+    <string name="battery_tip_default_limited_temporarily_title">Charging is limited to protect battery</string>
+    <!-- Summary for the default battery limited temporarily tip [CHAR LIMIT=NONE] -->
+    <string name="battery_tip_default_limited_temporarily_summary">Your battery was warm for an extended period. Normal charging will resume once your battery has cooled down further</string>
     <!-- Title for the battery limited temporarily tip [CHAR LIMIT=NONE] -->
     <string name="battery_tip_limited_temporarily_title">Charging optimized to protect your battery</string>
     <!-- Summary for the battery limited temporarily tip [CHAR LIMIT=NONE] -->
@@ -6741,7 +6745,7 @@
     <!-- CANCEL button for dialog to remove restriction for app [CHAR LIMIT=NONE] -->
     <string name="battery_tip_unrestrict_app_dialog_cancel">Cancel</string>
     <!-- Override button for Battery Defender Tip to start charging  [CHAR LIMIT=NONE] -->
-    <string name="battery_tip_charge_to_full_button">Override</string>
+    <string name="battery_tip_charge_to_full_button">Charge anyway</string>
     <!-- Title of incompatible charging battery tip [CHAR LIMIT=NONE] -->
     <string name="battery_tip_incompatible_charging_title">Check charging accessory</string>
     <!-- Content description for the incompatible charging battery tip button [CHAR LIMIT=NONE] -->
@@ -14047,39 +14051,9 @@ Data usage charges may apply.</string>
     <!-- Developer settings: Summary for disabling phantom process monitoring. [CHAR LIMIT=NONE]-->
     <string name="enable_notes_role_summary">Enable note-taking system integrations via the Notes role. If the Notes role is already enabled, does nothing. Requires reboot.</string>
 
-
     <!-- BT LE Audio Device: Media Broadcast -->
-    <!-- The title of the Media Broadcast Dialog [CHAR LIMIT=none] -->
-    <string name="bluetooth_broadcast_dialog_title">Broadcast</string>
-    <!-- [CHAR LIMIT=NONE] Le audio broadcast dialog, switch to others app. -->
-    <string name="bluetooth_broadcast_dialog_broadcast_app">Broadcast <xliff:g id="currentApp" example="App Name 2">%1$s</xliff:g></string>
-    <!-- The message of the Media Broadcast Dialog for finding broadcast [CHAR LIMIT=none] -->
-    <string name="bluetooth_broadcast_dialog_find_message">Listen to broadcasts that are playing near you</string>
-    <!-- The message of the Media Broadcast Dialog for broadcast [CHAR LIMIT=none] -->
-    <string name="bluetooth_broadcast_dialog_broadcast_message">Broadcast media to devices near you, or listen to someone else’s broadcast</string>
-    <!-- The title of the Media Find Broadcast activity [CHAR LIMIT=none] -->
-    <string name="bluetooth_find_broadcast_title">Broadcasts</string>
-    <!-- The summary of the Media Find Broadcast activity [CHAR LIMIT=none] -->
-    <string name="bluetooth_find_broadcast_summary">Listening to</string>
-    <!-- The Button of the action to find broadcasts [CHAR LIMIT=none] -->
-    <string name="bluetooth_find_broadcast">Find broadcasts</string>
-    <!-- The Button of the action to leave the broadcast [CHAR LIMIT=none] -->
-    <string name="bluetooth_find_broadcast_button_leave">Leave broadcast</string>
-    <!-- The Button of the action to scan QR code [CHAR LIMIT=none] -->
-    <string name="bluetooth_find_broadcast_button_scan">Scan QR code</string>
     <!-- The title of enter password dialog in bluetooth find broadcast page. [CHAR LIMIT=none] -->
     <string name="find_broadcast_password_dialog_title">Enter password</string>
-    <!-- The error message of enter password dialog in bluetooth find broadcast page [CHAR LIMIT=none] -->
-    <string name="find_broadcast_password_dialog_connection_error">Can\u2019t connect. Try again.</string>
-    <!-- The error message of enter password dialog in bluetooth find broadcast page [CHAR LIMIT=none] -->
-    <string name="find_broadcast_password_dialog_password_error">Wrong password</string>
-    <!-- The error message of join the broadcast session by scanning the QR code [CHAR LIMIT=none] -->
-    <string name="find_broadcast_join_broadcast_error">Can\u2019t join the broadcast</string>
-
-    <!-- [CHAR LIMIT=NONE] Le audio QR code scanner sub-title -->
-    <string name="bt_le_audio_scan_qr_code_scanner">To start listening, center the QR code below</string>
-    <!-- [CHAR LIMIT=NONE] Hint for QR code process failure -->
-    <string name="bt_le_audio_qr_code_is_not_valid_format">QR code isn\u0027t a valid format</string>
 
     <!-- Accessibility Software Cursor -->
 
