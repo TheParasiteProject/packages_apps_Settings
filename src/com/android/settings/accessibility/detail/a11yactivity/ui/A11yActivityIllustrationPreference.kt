@@ -14,40 +14,37 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.detail.a11yactivity
+package com.android.settings.accessibility.detail.a11yactivity.ui
 
 import android.accessibilityservice.AccessibilityShortcutInfo
 import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
 import com.android.settings.R
-import com.android.settings.accessibility.IllustrationPreferenceController
+import com.android.settings.accessibility.shared.ui.ImageUriPreference
 
-// LINT.IfChange
-class AccessibilityActivityIllustrationPreferenceController(context: Context, prefKey: String) :
-    IllustrationPreferenceController(context, prefKey) {
+internal class A11yActivityIllustrationPreference(
+    private val shortcutInfo: AccessibilityShortcutInfo
+) : ImageUriPreference() {
 
-    fun initialize(shortcutInfo: AccessibilityShortcutInfo) {
-        val componentName = shortcutInfo.componentName
-        val imageRes = shortcutInfo.animatedImageRes
-        val imageUri =
-            if (imageRes > 0) {
+    override fun getImageUri(context: Context): Uri? {
+        return shortcutInfo.run {
+            if (animatedImageRes > 0) {
                 Uri.Builder()
                     .scheme(ContentResolver.SCHEME_ANDROID_RESOURCE)
                     .authority(componentName.packageName)
-                    .appendPath("$imageRes")
+                    .appendPath(animatedImageRes.toString())
                     .build()
             } else {
                 null
             }
+        }
+    }
 
-        val contentDescription =
-            mContext.getString(
-                R.string.accessibility_illustration_content_description,
-                shortcutInfo.activityInfo.loadLabel(mContext.packageManager),
-            )
-
-        initialize(imageUri, contentDescription)
+    override fun getContentDescription(context: Context): CharSequence? {
+        return context.getString(
+            R.string.accessibility_illustration_content_description,
+            shortcutInfo.activityInfo.loadLabel(context.packageManager),
+        )
     }
 }
-// LINT.ThenChange(ui/A11yActivityIllustrationPreference.kt)
