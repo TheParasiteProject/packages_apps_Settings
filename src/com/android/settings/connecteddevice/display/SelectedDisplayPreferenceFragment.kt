@@ -119,6 +119,12 @@ open class SelectedDisplayPreferenceFragment(
                 PrefInfo.INCLUDE_DEFAULT_DISPLAY,
             )
         )
+        // Built-in display preferences - sub-category
+        val builtinDisplaySubCategory = PreferenceCategory(requireContext())
+        builtinDisplaySubCategory.key = PrefInfo.BUILTIN_DISPLAY_SUB_CATEGORY.key
+        prefComponents.add(
+            PrefComponent(builtinDisplaySubCategory, PrefInfo.BUILTIN_DISPLAY_SUB_CATEGORY)
+        )
         prefComponents.add(
             PrefComponent(builtinDisplayDensityPreference(), PrefInfo.BUILTIN_DISPLAY_DENSITY)
         )
@@ -129,7 +135,15 @@ open class SelectedDisplayPreferenceFragment(
         prefComponents.add(PrefComponent(resolutionPreference(), PrefInfo.DISPLAY_RESOLUTION))
         prefComponents.add(PrefComponent(rotationPreference(), PrefInfo.DISPLAY_ROTATION))
 
-        prefComponents.forEach { selectedDisplayPreference.addPreference(it.preference) }
+        // Add all pref components
+        prefComponents.forEach {
+            when (it.prefInfo.parentPrefCategory) {
+                ParentPrefCategory.ROOT -> selectedDisplayPreference.addPreference(it.preference)
+                ParentPrefCategory.BUILTIN_DISPLAY_SUB_CATEGORY ->
+                    builtinDisplaySubCategory.addPreference(it.preference)
+            }
+            it.preference.setPersistent(false)
+        }
     }
 
     private fun update(state: DisplayPreferenceViewModel.DisplayUiState) {
@@ -154,8 +168,6 @@ open class SelectedDisplayPreferenceFragment(
         prefComponents.forEach { it.preference.setVisible(it.prefInfo.displayType == displayType) }
 
         if (displayType == DisplayType.BUILTIN_DISPLAY) {
-            selectedDisplayPreference.setTitle(R.string.builtin_display_settings_category)
-
             selectedDisplayPreference
                 .findPreference<SwitchPreferenceCompat>(PrefInfo.INCLUDE_DEFAULT_DISPLAY.key)
                 ?.let {
@@ -166,8 +178,6 @@ open class SelectedDisplayPreferenceFragment(
                     )
                 }
         } else {
-            selectedDisplayPreference.setTitle(display.name)
-
             selectedDisplayPreference
                 .findPreference<ExternalDisplaySizePreference>(
                     PrefInfo.EXTERNAL_DISPLAY_DENSITY.key
@@ -340,6 +350,11 @@ open class SelectedDisplayPreferenceFragment(
         }
     }
 
+    internal enum class ParentPrefCategory {
+        ROOT,
+        BUILTIN_DISPLAY_SUB_CATEGORY,
+    }
+
     @VisibleForTesting
     internal enum class DisplayType {
         BUILTIN_DISPLAY,
@@ -351,36 +366,49 @@ open class SelectedDisplayPreferenceFragment(
         val titleResource: Int,
         val key: String,
         val displayType: DisplayType,
+        val parentPrefCategory: ParentPrefCategory,
     ) {
         DISPLAY_MIRRORING(
             R.string.external_display_mirroring_title,
             "pref_key_builtin_display_mirroring",
             DisplayType.BUILTIN_DISPLAY,
+            ParentPrefCategory.ROOT,
         ),
         INCLUDE_DEFAULT_DISPLAY(
             R.string.builtin_display_settings_universal_cursor_title,
             "pref_key_builtin_display_include_default_display_in_topology",
             DisplayType.BUILTIN_DISPLAY,
+            ParentPrefCategory.ROOT,
+        ),
+        BUILTIN_DISPLAY_SUB_CATEGORY(
+            -1,
+            "pref_key_builtin_display_sub_category",
+            DisplayType.BUILTIN_DISPLAY,
+            ParentPrefCategory.ROOT,
         ),
         BUILTIN_DISPLAY_DENSITY(
             R.string.accessibility_text_reading_options_title,
             "pref_key_builtin_display_density",
             DisplayType.BUILTIN_DISPLAY,
+            ParentPrefCategory.BUILTIN_DISPLAY_SUB_CATEGORY,
         ),
         EXTERNAL_DISPLAY_DENSITY(
             R.string.screen_zoom_title,
             "pref_key_external_display_density",
             DisplayType.EXTERNAL_DISPLAY,
+            ParentPrefCategory.ROOT,
         ),
         DISPLAY_RESOLUTION(
             R.string.external_display_resolution_settings_title,
             "pref_key_external_display_resolution",
             DisplayType.EXTERNAL_DISPLAY,
+            ParentPrefCategory.ROOT,
         ),
         DISPLAY_ROTATION(
             R.string.external_display_rotation,
             "pref_key_external_display_rotation",
             DisplayType.EXTERNAL_DISPLAY,
+            ParentPrefCategory.ROOT,
         ),
     }
 
