@@ -17,12 +17,15 @@
 package com.android.settings.appfunctions.sources
 
 import android.app.INotificationManager
+import android.app.usage.IUsageStatsManager
+import android.app.usage.UsageEvents
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.ServiceManager
 import com.android.settings.appfunctions.DeviceStateCategory
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
+import java.util.concurrent.TimeUnit
 
 class NotificationsStateSource : DeviceStateSource {
     override val category: DeviceStateCategory = DeviceStateCategory.UNCATEGORIZED
@@ -34,9 +37,17 @@ class NotificationsStateSource : DeviceStateSource {
             INotificationManager.Stub.asInterface(
                 ServiceManager.getService(Context.NOTIFICATION_SERVICE)
             )
+        val usageStatsManager =
+            IUsageStatsManager.Stub.asInterface(
+                ServiceManager.getService(Context.USAGE_STATS_SERVICE)
+            )
 
         val installedApplications =
             packageManager.getInstalledApplications(PackageManager.MATCH_DISABLED_COMPONENTS)
+
+        val nowMs = System.currentTimeMillis()
+        val lastNotificationTimeMsByPackage =
+            queryLastNotificationTimes(context, nowMs, usageStatsManager)
 
         val deviceStateItems = mutableListOf<DeviceStateItem>()
         for (info in installedApplications) {
@@ -45,11 +56,20 @@ class NotificationsStateSource : DeviceStateSource {
             val uid = info.uid
             val areNotificationsEnabled =
                 notificationManager?.areNotificationsEnabledForPackage(packageName, uid) ?: false
+            val lastNotificationTimeAgoMs =
+                lastNotificationTimeMsByPackage[packageName]?.let { nowMs - it }
 
             deviceStateItems.add(
                 DeviceStateItem(
                     key = "notifications_enabled_package_$packageName",
                     jsonValue = areNotificationsEnabled.toString(),
+                    hintText = "App: $appName",
+                )
+            )
+            deviceStateItems.add(
+                DeviceStateItem(
+                    key = "notifications_last_notification_time_package_$packageName",
+                    jsonValue = lastNotificationTimeAgoMs?.let { "$it ms ago" } ?: "null",
                     hintText = "App: $appName",
                 )
             )
@@ -60,5 +80,42 @@ class NotificationsStateSource : DeviceStateSource {
                 "Notifications Settings Screen. Note that to get to the notification settings for a given package, the intent uri is intent:#Intent;action=android.settings.APP_NOTIFICATION_SETTINGS;S.android.provider.extra.APP_PACKAGE=\$packageName;end",
             deviceStateItems = deviceStateItems,
         )
+    }
+
+    private fun queryLastNotificationTimes(
+        context: Context,
+        nowMs: Long,
+        usageStatsManager: IUsageStatsManager,
+    ): Map<String, Long> {
+        val startTimeMs = nowMs - LAST_NOTIFICATION_TIME_CUTOFF_MS
+        return usageStatsManager
+            .queryEvents(startTimeMs, nowMs, context.packageName)
+            .getNotificationEvents()
+            .groupBy { it.packageName }
+            .mapValues { (_, packageEvents) -> packageEvents.maxOf { it.notificationTimeMs } }
+    }
+
+    private companion object {
+        /**
+         * This value comes from
+         * [com.android.settings.spa.notification.AppNotificationRepository.DAYS_TO_CHECK].
+         */
+        val LAST_NOTIFICATION_TIME_CUTOFF_MS = TimeUnit.DAYS.toMillis(7)
+    }
+}
+
+private data class NotificationEvent(val packageName: String, val notificationTimeMs: Long)
+
+private fun UsageEvents.getNotificationEvents() = sequence {
+    val event = UsageEvents.Event()
+    while (getNextEvent(event)) {
+        if (event.eventType == UsageEvents.Event.NOTIFICATION_INTERRUPTION) {
+            yield(
+                NotificationEvent(
+                    packageName = event.packageName,
+                    notificationTimeMs = event.timeStamp,
+                )
+            )
+        }
     }
 }
