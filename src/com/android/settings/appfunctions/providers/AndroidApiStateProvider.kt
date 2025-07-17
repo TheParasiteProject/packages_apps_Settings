@@ -22,6 +22,7 @@ import com.android.settings.appfunctions.DeviceStateCategory
 import com.android.settings.appfunctions.sources.AdaptiveBrightnessStateSource
 import com.android.settings.appfunctions.sources.BubblesStateSource
 import com.android.settings.appfunctions.sources.DeviceStateSource
+import com.android.settings.appfunctions.sources.LockScreenStateSource
 import com.android.settings.appfunctions.sources.NfcStateSource
 import com.android.settings.appfunctions.sources.NotificationHistoryStateSource
 import com.android.settings.appfunctions.sources.NotificationsStateSource
@@ -40,6 +41,7 @@ class AndroidApiStateProvider(private val context: Context) : DeviceStateProvide
         listOf(
             AdaptiveBrightnessStateSource(),
             BubblesStateSource(),
+            LockScreenStateSource(),
             NfcStateSource(),
             NotificationHistoryStateSource(),
             NotificationsStateSource(),
