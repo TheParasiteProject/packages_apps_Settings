@@ -19,6 +19,7 @@ package com.android.settings.appfunctions.providers
 import android.content.Context
 import android.util.Log
 import com.android.settings.appfunctions.DeviceStateCategory
+import com.android.settings.appfunctions.sources.BubblesStateSource
 import com.android.settings.appfunctions.sources.DeviceStateSource
 import com.android.settings.appfunctions.sources.NotificationsStateSource
 
@@ -33,7 +34,8 @@ class AndroidApiStateProvider(private val context: Context) : DeviceStateProvide
     // List of all active DeviceStateSource
     private val settingStates: List<DeviceStateSource> =
         listOf(
-            NotificationsStateSource()
+            BubblesStateSource(),
+            NotificationsStateSource(),
             // Add other sources instances here
         )
 
