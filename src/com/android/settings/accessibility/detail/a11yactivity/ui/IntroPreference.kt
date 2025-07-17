@@ -26,7 +26,7 @@ import com.android.settingslib.preference.PreferenceBinding
 import com.android.settingslib.widget.TopIntroPreference
 
 /** Handles fetching and display the introduction text of an [AccessibilityShortcutInfo]. */
-internal class IntroPreference(private val shortcutInfo: AccessibilityShortcutInfo) :
+class IntroPreference(private val shortcutInfo: AccessibilityShortcutInfo) :
     PreferenceMetadata, PreferenceBinding, PreferenceTitleProvider, PreferenceAvailabilityProvider {
     override val key: String
         get() = KEY
