@@ -105,6 +105,7 @@ import com.android.settings.supervision.SupervisionWebContentFiltersScreen
 import com.android.settings.system.ResetDashboardScreen
 import com.android.settings.system.SystemDashboardScreen
 import com.android.settings.vpn2.VpnSettingsScreen
+import com.android.settings.wfd.WifiDisplayScreen
 import com.android.settings.wifi.ConfigureWifiScreen
 import com.android.settings.wifi.calling.WifiCallingScreen
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiScreen
@@ -353,6 +354,7 @@ private fun getCatalystScreenConfigs() =
             screenKey = WifiHotspotScreen.KEY,
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_MOBILE_DATA),
         ),
+        PerScreenCatalystConfig(enabled = true, screenKey = WifiDisplayScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AppsFullScreenIntentScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AppsNotificationAccessScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = PreviouslyConnectedDeviceScreen.KEY),
