@@ -3343,11 +3343,11 @@
     <!-- Dark UI screen footer summary text shown to indicate Modes may turn on/off Dark theme automatically according to their triggers. [CHAR LIMIT=NONE] -->
     <string name="dark_ui_modes_footer_summary">
         {count, plural, offset:2
-        =0    {Modes can also activate dark theme}
-        =1    {{mode_1} also activates dark theme}
-        =2    {{mode_1} and {mode_2} also activate dark theme}
-        =3    {{mode_1}, {mode_2}, and {mode_3} also activate dark theme}
-        other {{mode_1}, {mode_2}, and # more also activate dark theme}
+        =0    {Modes can also turn on Dark theme}
+        =1    {{mode_1} also turns on Dark theme}
+        =2    {{mode_1} and {mode_2} also turn on Dark theme}
+        =3    {{mode_1}, {mode_2}, and {mode_3} also turn on Dark theme}
+        other {{mode_1}, {mode_2}, and # more also turn on Dark theme}
         }
     </string>
     <!-- Dark UI screen footer action text linking to Modes settings. [CHAR LIMIT=NONE] -->
@@ -5914,18 +5914,20 @@
         screen magnification on app transitions</string>
     <!-- Title for the accessibility preference to power button to end a call. [CHAR LIMIT=35] -->
     <string name="accessibility_power_button_ends_call_prerefence_title">Power button ends call</string>
-    <!-- Title for the dark theme group category -->
-    <string name="dark_theme_version_category">Mode</string>
+    <!-- Title for the dark theme group category where the user can select between the "standard" and "expanded" versions of Dark theme -->
+    <string name="dark_theme_version_category">Options</string>
+    <!-- Title for the dark theme group category where the user can choose schedule timing behavior for Dark theme -->
+    <string name="dark_theme_timing_category">Timing</string>
     <!-- Title for the accessibility preference for applying the original dark theme. [CHAR LIMIT=35] -->
     <string name="accessibility_standard_dark_theme_title">Standard</string>
     <!-- Title in the search result for standard dark theme mode. -->
-    <string name="accessibility_standard_dark_theme_title_in_search">Standard Dark Theme</string>
+    <string name="accessibility_standard_dark_theme_title_in_search">Standard Dark theme</string>
     <!-- Summary for the accessibility preference for applying the original dark theme. [CHAR LIMIT=100] -->
     <string name="accessibility_standard_dark_theme_summary">Applies Dark theme across your device and supported apps</string>
     <!-- Title for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=35] -->
     <string name="accessibility_expanded_dark_theme_title">Expanded</string>
     <!-- Title in the search result for expanded dark theme mode. -->
-    <string name="accessibility_expanded_dark_theme_title_in_search">Expanded Dark Theme</string>
+    <string name="accessibility_expanded_dark_theme_title_in_search">Expanded Dark theme</string>
     <!-- Summary for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=100] -->
     <string name="accessibility_expanded_dark_theme_summary">Automatically applies Dark theme to more apps for improved accessibility</string>
     <!-- Title for the accessibility preference for disabling animations. [CHAR LIMIT=35] -->
@@ -6134,7 +6136,7 @@
     <string name="accessibility_dark_theme_footer_learn_more_helper_link">Learn more about Dark theme</string>
     <!-- Footer Content for the expanded dark theme. [CHAR LIMIT=NONE] -->
     <string name="accessibility_dark_theme_preference_footer_content">
-        Some apps may not support Dark theme in the expanded setting. If you experience appearance issues, use the standard setting.
+        Some apps may not support Dark theme with the expanded option. If you experience appearance issues, use the standard option.
     </string>
     <!-- Title for captioning settings screen to control turning on/off the feature entirely [CHAR LIMIT=60] -->
     <string name="accessibility_captioning_primary_switch_title">Show captions</string>
@@ -9008,9 +9010,9 @@ Data usage charges may apply.</string>
     <!-- Do not disturb: device effect summary [CHAR LIMIT=NONE] -->
     <string name="mode_wallpaper_summary">Filter the brightness of the wallpaper</string>
     <!-- Do not disturb: device effect option, title or first in list [CHAR LIMIT=80] -->
-    <string name="mode_dark_theme_title">Enable dark theme</string>
+    <string name="mode_dark_theme_title">Enable Dark theme</string>
     <!-- Do not disturb: device effect option, not first in list [CHAR LIMIT=80] -->
-    <string name="mode_dark_theme_title_secondary_list">enable dark theme</string>
+    <string name="mode_dark_theme_title_secondary_list">enable Dark theme</string>
     <!-- Do not disturb: device effect summary [CHAR LIMIT=NONE] -->
     <string name="mode_dark_theme_summary">Switch the device theme to use a dark background, which is easier on the eyes</string>
     <!-- [CHAR LIMIT=NONE] Zen mode settings: Summary for sound interruption settings -->
