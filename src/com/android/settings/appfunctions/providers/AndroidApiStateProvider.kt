@@ -19,8 +19,15 @@ package com.android.settings.appfunctions.providers
 import android.content.Context
 import android.util.Log
 import com.android.settings.appfunctions.DeviceStateCategory
+import com.android.settings.appfunctions.sources.AdaptiveBrightnessStateSource
+import com.android.settings.appfunctions.sources.BubblesStateSource
 import com.android.settings.appfunctions.sources.DeviceStateSource
+import com.android.settings.appfunctions.sources.LockScreenStateSource
+import com.android.settings.appfunctions.sources.NfcStateSource
+import com.android.settings.appfunctions.sources.NotificationHistoryStateSource
 import com.android.settings.appfunctions.sources.NotificationsStateSource
+import com.android.settings.appfunctions.sources.ScreenTimeoutStateSource
+import com.android.settings.appfunctions.sources.ZenModesStateSource
 
 /**
  * A [DeviceStateProvider] that gathers device state information directly from Android APIs rather
@@ -33,7 +40,14 @@ class AndroidApiStateProvider(private val context: Context) : DeviceStateProvide
     // List of all active DeviceStateSource
     private val settingStates: List<DeviceStateSource> =
         listOf(
-            NotificationsStateSource()
+            AdaptiveBrightnessStateSource(),
+            BubblesStateSource(),
+            LockScreenStateSource(),
+            NfcStateSource(),
+            NotificationHistoryStateSource(),
+            NotificationsStateSource(),
+            ScreenTimeoutStateSource(),
+            ZenModesStateSource(),
             // Add other sources instances here
         )
 
