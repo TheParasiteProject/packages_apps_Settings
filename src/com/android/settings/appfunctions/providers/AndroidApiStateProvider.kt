@@ -24,6 +24,7 @@ import com.android.settings.appfunctions.sources.DeviceStateSource
 import com.android.settings.appfunctions.sources.NfcStateSource
 import com.android.settings.appfunctions.sources.NotificationHistoryStateSource
 import com.android.settings.appfunctions.sources.NotificationsStateSource
+import com.android.settings.appfunctions.sources.ScreenTimeoutStateSource
 
 /**
  * A [DeviceStateProvider] that gathers device state information directly from Android APIs rather
@@ -40,6 +41,7 @@ class AndroidApiStateProvider(private val context: Context) : DeviceStateProvide
             NfcStateSource(),
             NotificationHistoryStateSource(),
             NotificationsStateSource(),
+            ScreenTimeoutStateSource(),
             // Add other sources instances here
         )
 
