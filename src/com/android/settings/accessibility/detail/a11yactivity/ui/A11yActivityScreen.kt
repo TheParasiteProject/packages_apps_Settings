@@ -121,6 +121,7 @@ open class A11yActivityScreen(context: Context, override val arguments: Bundle) 
             if (shortcutInfo != null) {
                 +IntroPreference(shortcutInfo)
                 +A11yActivityIllustrationPreference(shortcutInfo)
+                +LaunchA11yActivityPreference(shortcutInfo)
             }
         }
 
