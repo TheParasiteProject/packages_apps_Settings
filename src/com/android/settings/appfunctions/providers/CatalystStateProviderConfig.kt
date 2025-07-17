@@ -45,6 +45,7 @@ import com.android.settings.connecteddevice.AdvancedConnectedDeviceScreen
 import com.android.settings.connecteddevice.BluetoothDashboardScreen
 import com.android.settings.connecteddevice.ConnectedDeviceDashboardScreen
 import com.android.settings.connecteddevice.NfcAndPaymentScreen
+import com.android.settings.connecteddevice.PreviouslyConnectedDeviceScreen
 import com.android.settings.datausage.DataSaverScreen
 import com.android.settings.datausage.DataUsageAppDetailScreen
 import com.android.settings.datetime.DateTimeSettingsScreen
@@ -345,6 +346,7 @@ private fun getCatalystScreenConfigs() =
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = AppsFullScreenIntentScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AppsNotificationAccessScreen.KEY),
+        PerScreenCatalystConfig(enabled = true, screenKey = PreviouslyConnectedDeviceScreen.KEY),
     )
 
 private fun getDeviceStateItemList() =
