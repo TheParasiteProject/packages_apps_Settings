@@ -17,7 +17,6 @@
 package com.android.settings.supervision
 
 import android.content.Intent
-import android.os.Bundle
 import com.android.settings.CatalystSettingsActivity
 
 /**
@@ -30,8 +29,9 @@ class SupervisionDashboardActivity :
         SupervisionDashboardScreen.KEY,
         SupervisionDashboardFragment::class.java,
     ) {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
+    override fun onResume() {
+        super.onResume()
 
         if (shouldRedirectToSupervisionApp()) {
             val redirectIntent = getSupervisionAppIntent()
