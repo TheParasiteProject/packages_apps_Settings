@@ -7965,6 +7965,10 @@ Data usage charges may apply.</string>
     <string name="user_revoke_admin_confirm_title">Remove admin privileges?</string>
     <!-- Message for confirmation of revoking admin privileges [CHAR LIMIT=none] -->
     <string name="user_revoke_admin_confirm_message">If you remove admin privileges for this user, you or another admin can give them back later.</string>
+    <!-- Title for confirmation of revoking the user's own admin privileges [CHAR LIMIT=45] -->
+    <string name="user_revoke_admin_for_self_confirm_title">Are you sure you want to remove your own admin privileges?</string>
+    <!-- Message for confirmation of revoking the user's own admin privileges [CHAR LIMIT=none] -->
+    <string name="user_revoke_admin_for_self_confirm_message">Only other admins will be able to grant you admin privileges if you proceed.</string>
     <!-- Title for the emergency info preference [CHAR LIMIT=40] -->
     <string name="emergency_info_title">Emergency information</string>
     <!-- Summary for the emergency info preference [CHAR LIMIT=40] -->

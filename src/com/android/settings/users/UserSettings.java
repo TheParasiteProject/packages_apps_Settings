@@ -1315,6 +1315,8 @@ public class UserSettings extends SettingsPreferenceFragment
                 pref.setSummary(R.string.user_owner);
             } else if (user.isAdmin()) {
                 pref.setSummary(R.string.user_admin);
+            } else {
+                pref.setSummary(null);
             }
             if (user.id != UserHandle.myUserId() && !user.isGuest() && !user.isInitialized()) {
                 // sometimes after creating a guest the initialized flag isn't immediately set

@@ -886,6 +886,22 @@ public class UserDetailsSettingsTest {
                 eq(SettingsEnums.ACTION_REVOKE_ADMIN_FROM_SETTINGS));
     }
 
+    @Test
+    @EnableFlags(FLAG_SHOW_USER_DETAILS_SETTINGS_FOR_SELF)
+    public void onPreferenceChange_revokeOwnAdmin_shouldHideAdminToggle() {
+        setupSelectedCurrentUser();
+        mUserManager.setIsAdminUser(true);
+        ShadowUserManager.setIsMultipleAdminEnabled(true);
+        mFragment.mGrantAdminPref = mGrantAdminPref;
+        doNothing().when(mFragment).showDialog(anyInt());
+
+        mFragment.onPreferenceChange(mGrantAdminPref, false);
+
+        verify(mMetricsFeatureProvider).action(any(),
+                eq(SettingsEnums.ACTION_REVOKE_ADMIN_FROM_SETTINGS));
+        assertThat(mGrantAdminPref.isVisible()).isFalse();
+    }
+
     private void setupSelectedUser() {
         mArguments.putInt("user_id", 1);
         mUserInfo = new UserInfo(1, "Tom", null,
