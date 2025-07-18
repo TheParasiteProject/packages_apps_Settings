@@ -3246,7 +3246,6 @@
         </activity>
 
         <activity android:name=".password.SetupChooseLockGeneric$InternalActivity"
-            android:theme="@style/GlifTheme.Light"
             android:exported="false"
             android:enableOnBackInvokedCallback="false"
             android:excludeFromRecents="true" />
