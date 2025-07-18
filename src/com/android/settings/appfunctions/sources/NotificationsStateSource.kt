@@ -21,8 +21,10 @@ import android.app.usage.IUsageStatsManager
 import android.app.usage.UsageEvents
 import android.content.Context
 import android.content.pm.PackageManager
+import android.icu.text.RelativeDateTimeFormatter
 import android.os.ServiceManager
 import com.android.settings.appfunctions.DeviceStateCategory
+import com.android.settingslib.utils.StringUtil
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
 import java.util.concurrent.TimeUnit
@@ -58,6 +60,16 @@ class NotificationsStateSource : DeviceStateSource {
                 notificationManager?.areNotificationsEnabledForPackage(packageName, uid) ?: false
             val lastNotificationTimeAgoMs =
                 lastNotificationTimeMsByPackage[packageName]?.let { nowMs - it }
+            val formattedLastNotificationTimeAgo =
+                lastNotificationTimeAgoMs?.let {
+                    StringUtil.formatRelativeTime(
+                            context,
+                            it.toDouble(),
+                            true, // withSeconds
+                            RelativeDateTimeFormatter.Style.LONG,
+                        )
+                        .toString()
+                }
 
             deviceStateItems.add(
                 DeviceStateItem(
@@ -69,7 +81,7 @@ class NotificationsStateSource : DeviceStateSource {
             deviceStateItems.add(
                 DeviceStateItem(
                     key = "notifications_last_notification_time_package_$packageName",
-                    jsonValue = lastNotificationTimeAgoMs?.let { "$it ms ago" } ?: "null",
+                    jsonValue = formattedLastNotificationTimeAgo.toString(),
                     hintText = "App: $appName",
                 )
             )
