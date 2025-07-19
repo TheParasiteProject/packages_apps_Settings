@@ -411,6 +411,7 @@ public class Settings extends SettingsActivity {
     public static class ConfigureNotificationSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ConversationListSettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppBubbleNotificationSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class BubbleNotificationSettingsActivity extends SettingsActivity { /* empty */ }
     public static class NotificationAssistantSettingsActivity extends SettingsActivity{ /* empty */ }
     public static class NotificationAppListActivity extends SettingsActivity { /* empty */ }
     public static class NotificationExcludeSummarizationActivity extends SettingsActivity { /* empty */ }

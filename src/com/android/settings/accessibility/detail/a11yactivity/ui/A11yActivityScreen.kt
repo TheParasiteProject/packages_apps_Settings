@@ -32,9 +32,11 @@ import com.android.settings.accessibility.AccessibilitySettings
 import com.android.settings.accessibility.Flags
 import com.android.settings.accessibility.LaunchAccessibilityActivityPreferenceFragment
 import com.android.settings.accessibility.data.AccessibilityRepositoryProvider
+import com.android.settings.accessibility.shared.ui.LaunchAppInfoPreference
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.overlay.FeatureFactory.Companion.featureFactory
 import com.android.settings.utils.highlightPreference
+import com.android.settingslib.metadata.PreferenceCategory
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.PreferenceSummaryProvider
 import com.android.settingslib.metadata.PreferenceTitleProvider
@@ -122,6 +124,17 @@ open class A11yActivityScreen(context: Context, override val arguments: Bundle) 
                 +IntroPreference(shortcutInfo)
                 +A11yActivityIllustrationPreference(shortcutInfo)
                 +LaunchA11yActivityPreference(shortcutInfo)
+                +PreferenceCategory(
+                    key = "general_categories",
+                    title = R.string.accessibility_screen_option,
+                ) +=
+                    {
+                        +A11yActivitySettingPreference(shortcutInfo)
+                        +LaunchAppInfoPreference(
+                            key = "accessibility_activity_app_info",
+                            packageName = shortcutInfo.componentName.packageName,
+                        )
+                    }
             }
         }
 

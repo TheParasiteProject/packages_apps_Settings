@@ -60,7 +60,7 @@ class SupervisionDashboardActivityTest {
     private val shadowPackageManager = shadowOf(context.packageManager)
     private val shadowDpm =
         shadowOf(context.getSystemService(DevicePolicyManager::class.java))
-                as ShadowDevicePolicyManager
+            as ShadowDevicePolicyManager
     private val mockRoleManager = mock<RoleManager>()
 
     @get:Rule
@@ -116,14 +116,11 @@ class SupervisionDashboardActivityTest {
         setUpMessengerServiceComponent(disabled = true)
 
         val activityScenario = ActivityScenario.launch(SupervisionDashboardActivity::class.java)
-        val nextActivityIntent = shadowOf(context as Application).nextStartedActivity
-
-        // Check that the loading activity is started
-        assertThat(nextActivityIntent.component?.className)
-            .isEqualTo(SupervisionDashboardLoadingActivity::class.java.name)
-
-        // Check that the activity is finished
-        assertThat(activityScenario.state).isEqualTo(Lifecycle.State.DESTROYED)
+        activityScenario.onActivity { activity ->
+            assertThat(shadowOf(activity).nextStartedActivity.component?.className)
+                .isEqualTo(SupervisionDashboardLoadingActivity::class.java.name)
+            assertThat(activity.isFinishing).isTrue()
+        }
     }
 
     @Test
@@ -134,13 +131,11 @@ class SupervisionDashboardActivityTest {
         setUpRedirectActivityComponent(DEFAULT_SUPERVISION_PACKAGE, INTERSTITIAL_REDIRECT_ACTION)
 
         val activityScenario = ActivityScenario.launch(SupervisionDashboardActivity::class.java)
-        val nextActivityIntent = shadowOf(context as Application).nextStartedActivity
-
-        // Check that the redirect activity is started
-        assertThat(nextActivityIntent.action).isEqualTo(INTERSTITIAL_REDIRECT_ACTION)
-
-        // Check that the dashboard activity is finished
-        assertThat(activityScenario.state).isEqualTo(Lifecycle.State.DESTROYED)
+        activityScenario.onActivity { activity ->
+            assertThat(shadowOf(activity).nextStartedActivity.action)
+                .isEqualTo(INTERSTITIAL_REDIRECT_ACTION)
+            assertThat(activity.isFinishing).isTrue()
+        }
     }
 
     @Test
@@ -149,13 +144,11 @@ class SupervisionDashboardActivityTest {
         setUpRedirectActivityComponent(DEFAULT_SUPERVISION_PACKAGE, INTERSTITIAL_REDIRECT_ACTION)
 
         val activityScenario = ActivityScenario.launch(SupervisionDashboardActivity::class.java)
-        val nextActivityIntent = shadowOf(context as Application).nextStartedActivity
-
-        // Check that the redirect activity is started
-        assertThat(nextActivityIntent.action).isEqualTo(INTERSTITIAL_REDIRECT_ACTION)
-
-        // Check that the dashboard activity is finished
-        assertThat(activityScenario.state).isEqualTo(Lifecycle.State.DESTROYED)
+        activityScenario.onActivity { activity ->
+            assertThat(shadowOf(activity).nextStartedActivity.action)
+                .isEqualTo(INTERSTITIAL_REDIRECT_ACTION)
+            assertThat(activity.isFinishing).isTrue()
+        }
     }
 
     @Test
@@ -193,13 +186,10 @@ class SupervisionDashboardActivityTest {
     fun noNecessaryComponent_appInstallIntentNotResolved_doNotRedirect() = runTest {
         mockRoleManager.stub { on { getRoleHolders(any()) } doReturn emptyList() }
         val activityScenario = ActivityScenario.launch(SupervisionDashboardActivity::class.java)
-        val nextActivityIntent = shadowOf(context as Application).nextStartedActivity
-
-        // Check that the app install activity is not started
-        assertThat(nextActivityIntent).isNull()
-
-        // Check that the dashboard activity is finished
-        assertThat(activityScenario.state).isEqualTo(Lifecycle.State.DESTROYED)
+        activityScenario.onActivity { activity ->
+            assertThat(shadowOf(activity).nextStartedActivity).isNull()
+            assertThat(activity.isFinishing).isTrue()
+        }
     }
 
     @Test
@@ -207,13 +197,11 @@ class SupervisionDashboardActivityTest {
         setUpRedirectActivityComponent(TEST_SUPERVISION_PACKAGE, INSTALL_SUPERVISION_APP_ACTION)
 
         val activityScenario = ActivityScenario.launch(SupervisionDashboardActivity::class.java)
-        val nextActivityIntent = shadowOf(context as Application).nextStartedActivity
-
-        // Check that the app install activity is started
-        assertThat(nextActivityIntent.action).isEqualTo(INSTALL_SUPERVISION_APP_ACTION)
-
-        // Check that the dashboard activity is finished
-        assertThat(activityScenario.state).isEqualTo(Lifecycle.State.DESTROYED)
+        activityScenario.onActivity { activity ->
+            assertThat(shadowOf(activity).nextStartedActivity.action)
+                .isEqualTo(INSTALL_SUPERVISION_APP_ACTION)
+            assertThat(activity.isFinishing).isTrue()
+        }
     }
 
     @Test
@@ -225,14 +213,11 @@ class SupervisionDashboardActivityTest {
         )
 
         val activityScenario = ActivityScenario.launch(SupervisionDashboardActivity::class.java)
-        val nextActivityIntent = shadowOf(context as Application).nextStartedActivity
-
-        // Check that the loading activity is started
-        assertThat(nextActivityIntent.component?.className)
-            .isEqualTo(SupervisionDashboardLoadingActivity::class.java.name)
-
-        // Check that the dashboard activity is finished
-        assertThat(activityScenario.state).isEqualTo(Lifecycle.State.DESTROYED)
+        activityScenario.onActivity { activity ->
+            assertThat(shadowOf(activity).nextStartedActivity.component?.className)
+                .isEqualTo(SupervisionDashboardLoadingActivity::class.java.name)
+            assertThat(activity.isFinishing).isTrue()
+        }
     }
 
     private fun setUpMessengerServiceComponent(disabled: Boolean) {
