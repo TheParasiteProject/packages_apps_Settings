@@ -20,12 +20,15 @@ import android.content.Context
 import android.util.Log
 import com.android.settings.appfunctions.DeviceStateCategory
 import com.android.settings.appfunctions.sources.AdaptiveBrightnessStateSource
+import com.android.settings.appfunctions.sources.AppsStorageStateSource
 import com.android.settings.appfunctions.sources.BubblesStateSource
 import com.android.settings.appfunctions.sources.DeviceStateSource
 import com.android.settings.appfunctions.sources.LockScreenStateSource
+import com.android.settings.appfunctions.sources.MediaOutputStateSource
 import com.android.settings.appfunctions.sources.NfcStateSource
 import com.android.settings.appfunctions.sources.NotificationHistoryStateSource
 import com.android.settings.appfunctions.sources.NotificationsStateSource
+import com.android.settings.appfunctions.sources.RecentAppsStateSource
 import com.android.settings.appfunctions.sources.ScreenTimeoutStateSource
 import com.android.settings.appfunctions.sources.ZenModesStateSource
 
@@ -41,11 +44,14 @@ class AndroidApiStateProvider(private val context: Context) : DeviceStateProvide
     private val settingStates: List<DeviceStateSource> =
         listOf(
             AdaptiveBrightnessStateSource(),
+            AppsStorageStateSource(),
             BubblesStateSource(),
             LockScreenStateSource(),
+            MediaOutputStateSource(),
             NfcStateSource(),
             NotificationHistoryStateSource(),
             NotificationsStateSource(),
+            RecentAppsStateSource(),
             ScreenTimeoutStateSource(),
             ZenModesStateSource(),
             // Add other sources instances here
