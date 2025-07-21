@@ -24,6 +24,7 @@ import android.hardware.display.DisplayManager.DISPLAY_CATEGORY_ALL_INCLUDING_DI
 import android.hardware.display.DisplayManager.EVENT_TYPE_DISPLAY_ADDED
 import android.hardware.display.DisplayManager.EVENT_TYPE_DISPLAY_CHANGED
 import android.hardware.display.DisplayManager.EVENT_TYPE_DISPLAY_REMOVED
+import android.hardware.display.DisplayManager.EXTERNAL_DISPLAY_CONNECTION_PREFERENCE_ASK
 import android.hardware.display.DisplayManager.PRIVATE_EVENT_TYPE_DISPLAY_CONNECTION_CHANGED
 import android.hardware.display.DisplayManagerGlobal
 import android.hardware.display.DisplayTopology
@@ -139,6 +140,7 @@ open class ConnectedDisplayInjector(open val context: Context?) {
     ): DisplayDevice =
         DisplayDevice(
             display.displayId,
+            display.uniqueId ?: "",
             display.name,
             display.mode,
             display.supportedModes.asList(),
@@ -264,6 +266,13 @@ open class ConnectedDisplayInjector(open val context: Context?) {
         dm.disableConnectedDisplay(displayId)
         return true
     }
+
+    open fun getDisplayConnectionPreference(uniqueId: String?): Int =
+        displayManager?.getExternalDisplayConnectionPreference(uniqueId)
+            ?: EXTERNAL_DISPLAY_CONNECTION_PREFERENCE_ASK
+
+    open fun updateDisplayConnectionPreference(uniqueId: String, connectionPreference: Int) =
+        displayManager?.setExternalDisplayConnectionPreference(uniqueId, connectionPreference)
 
     /**
      * Get display rotation
