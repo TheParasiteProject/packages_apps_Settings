@@ -97,6 +97,7 @@ abstract class BaseDarkModeScreen(context: Context) :
         preferenceHierarchy(context) {
             +DarkModeTopIntroPreference()
             +DarkModeMainSwitchPreference(darkModeStorage)
+            +TwilightLocationPreference()
         }
 
     override fun storage(context: Context): KeyValueStore = darkModeStorage
