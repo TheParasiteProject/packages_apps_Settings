@@ -42,6 +42,7 @@ import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.widget.MenuHandler;
 import com.android.settingslib.widget.OrderMenuPreference;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -71,6 +72,7 @@ public class UserPreferredLocalePreferenceController extends BasePreferenceContr
     private FragmentManager mFragmentManager;
     private List<LocaleStore.LocaleInfo> mUpdatedLocaleInfoList;
     private LocaleStore.LocaleInfo mSelectedLocaleInfo;
+    private NumberFormat mNumberFormatter = NumberFormat.getNumberInstance();
     private int mMenuItemId;
 
     @SuppressWarnings("NullAway")
@@ -106,6 +108,7 @@ public class UserPreferredLocalePreferenceController extends BasePreferenceContr
     @VisibleForTesting
     void setupPreference(Map<String, OrderMenuPreference> existingPreferences) {
         Log.d(TAG, "setupPreference");
+        mNumberFormatter = NumberFormat.getNumberInstance(Locale.getDefault());
         List<LocaleStore.LocaleInfo> localeInfoList = getUserLocaleList();
         int listSize = localeInfoList.size();
         for (int i = 0; i < listSize; i++) {
@@ -173,7 +176,7 @@ public class UserPreferredLocalePreferenceController extends BasePreferenceContr
                 updatePreferences();
                 return true;
             });
-            pref.setNumber(i + 1);
+            pref.setNumber(Integer.parseInt(mNumberFormatter.format(i + 1)));
             mPreferences.put(localeInfo.getId(), pref);
         }
     }
