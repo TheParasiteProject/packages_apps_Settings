@@ -49,6 +49,13 @@ flag {
 }
 
 flag {
+  name: "catalyst_daltonizer"
+  namespace: "accessibility"
+  description: "Migrate daltonizer screen to the Catalyst infrastructure"
+  bug: "413453264"
+}
+
+flag {
   name: "catalyst_flash_notifications"
   namespace: "accessibility"
   description: "Migrate flash notification screen to the Catalyst infrastructure"
