@@ -125,6 +125,7 @@ class DisplayPreferenceViewModelTest : ExternalDisplayTestBase() {
         updatedEnabledDisplays.add(
             DisplayDevice(
                 123,
+                "local:1111111111",
                 "test",
                 mode,
                 listOf(mode),
@@ -151,6 +152,7 @@ class DisplayPreferenceViewModelTest : ExternalDisplayTestBase() {
         updatedEnabledDisplays.add(
             DisplayDevice(
                 123,
+                "local:1111111111",
                 "test",
                 mode,
                 listOf(mode),
