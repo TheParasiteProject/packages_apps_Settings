@@ -1095,6 +1095,7 @@
     <!-- Watch unlock enrollment and settings --><skip />
     <!-- Title shown for menu item that launches watch unlock settings. [CHAR LIMIT=40] -->
     <string name ="security_settings_activeunlock_preference_title">Watch Unlock</string>
+    <!-- Title shown for menu item that launches active unlock settings related to a paired watch [CHAR_LIMIT=NONE] [SCREENSHOT=screen/78pZDqPruidwZqW] -->
     <string name="security_settings_activeunlock">Watch</string>
     <!-- Introduction shown in face and fingerprint page to introduce the biometric feature. [CHAR LIMIT=NONE]-->
     <string name="biometric_settings_intro_with_activeunlock">When you set up Face Unlock and Fingerprint Unlock, your phone will ask for your fingerprint when you wear a mask or are in a dark area.\n\nWatch Unlock is another convenient way to unlock your phone, for example, when your fingers are wet or face isn\u2019t recognized.</string>
@@ -4718,7 +4719,7 @@
     <!-- [CHAR LIMIT=30] App details, text telling an application is installed. -->
     <string name="installed">Installed</string>
     <!-- [CHAR LIMIT=25] Text shown when there are no applications to display. -->
-    <string name="no_applications">No apps.</string>
+    <string name="no_applications">No matching apps</string>
     <!-- [CHAR LIMIT=15] Manage applications, label for chart showing internal storage use. -->
     <string name="internal_storage">Internal storage</string>
     <!-- Manage app screen, shown when the activity is busy recomputing the size of each app -->
@@ -6071,6 +6072,10 @@
     <string name="accessibility_autoclick_navigation_title">Autoclick works better with 3-button navigation</string>
     <!-- Message for autoclick navigation recommendation dialog [CHAR LIMIT=NONE] -->
     <string name="accessibility_autoclick_navigation_message">To easily go back, Home, and switch apps when using autoclick, use 3-button navigation instead of gesture navigation</string>
+    <!-- Button text to keep current gesture navigation [CHAR LIMIT=NONE] -->
+    <string name="accessibility_autoclick_keep_gesture_navigation">Keep gesture navigation</string>
+    <!-- Button text to open navigation settings [CHAR LIMIT=NONE] -->
+    <string name="accessibility_autoclick_navigation_settings">Navigation settings</string>
     <string name="accessibility_vibration_settings_title">Vibration &amp; haptics</string>
     <!-- Summary for preference screen for configuring vibrations. [CHAR LIMIT=NONE] -->
     <string name="accessibility_vibration_settings_summary">Control the vibration strength for different usages</string>
