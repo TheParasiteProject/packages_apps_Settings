@@ -133,10 +133,11 @@ public class PowerUsageSummaryTest {
     }
 
     @Test
-    public void initPreference_hasCorrectSummary() {
+    public void initPreference_updateVisibility() {
         mFragment.initPreference();
 
-        verify(mBatteryUsagePreference).setSummary("View usage since last full charge");
+        verify(mBatteryUsagePreference).setVisible(
+                mFeatureFactory.powerUsageFeatureProvider.isBatteryUsageEnabled());
     }
 
     @Test

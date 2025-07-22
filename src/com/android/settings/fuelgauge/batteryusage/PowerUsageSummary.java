@@ -226,7 +226,6 @@ public class PowerUsageSummary extends PowerUsageBase
     @VisibleForTesting
     void initPreference() {
         mBatteryUsagePreference = findPreference(KEY_BATTERY_USAGE);
-        mBatteryUsagePreference.setSummary(getString(R.string.advanced_battery_preference_summary));
         mBatteryUsagePreference.setVisible(mPowerFeatureProvider.isBatteryUsageEnabled());
 
         mHelpPreference = findPreference(KEY_BATTERY_ERROR);
