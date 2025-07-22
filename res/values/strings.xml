@@ -4718,7 +4718,7 @@
     <!-- [CHAR LIMIT=30] App details, text telling an application is installed. -->
     <string name="installed">Installed</string>
     <!-- [CHAR LIMIT=25] Text shown when there are no applications to display. -->
-    <string name="no_applications">No apps.</string>
+    <string name="no_applications">No matching apps.</string>
     <!-- [CHAR LIMIT=15] Manage applications, label for chart showing internal storage use. -->
     <string name="internal_storage">Internal storage</string>
     <!-- Manage app screen, shown when the activity is busy recomputing the size of each app -->
