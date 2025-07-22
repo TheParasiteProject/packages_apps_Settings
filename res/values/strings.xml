@@ -6072,6 +6072,10 @@
     <string name="accessibility_autoclick_navigation_title">Autoclick works better with 3-button navigation</string>
     <!-- Message for autoclick navigation recommendation dialog [CHAR LIMIT=NONE] -->
     <string name="accessibility_autoclick_navigation_message">To easily go back, Home, and switch apps when using autoclick, use 3-button navigation instead of gesture navigation</string>
+    <!-- Button text to keep current gesture navigation [CHAR LIMIT=NONE] -->
+    <string name="accessibility_autoclick_keep_gesture_navigation">Keep gesture navigation</string>
+    <!-- Button text to open navigation settings [CHAR LIMIT=NONE] -->
+    <string name="accessibility_autoclick_navigation_settings">Navigation settings</string>
     <string name="accessibility_vibration_settings_title">Vibration &amp; haptics</string>
     <!-- Summary for preference screen for configuring vibrations. [CHAR LIMIT=NONE] -->
     <string name="accessibility_vibration_settings_summary">Control the vibration strength for different usages</string>
