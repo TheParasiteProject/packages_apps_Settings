@@ -24,10 +24,12 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.ServiceInfo;
+import android.os.Bundle;
 
 import com.android.security.SecureBox;
 import com.android.settings.R;
 
+import com.google.android.setupcompat.partnerconfig.PartnerConfigHelper;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
 import org.robolectric.Robolectric;
@@ -87,11 +89,10 @@ public final class TestUtils {
                 .putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
     }
 
-    public static Intent createRemoteLockscreenValidationIntentWithGlifExpressiveStyle(
-            int lockscreenType, int remainingAttempts) throws Exception {
-        return createRemoteLockscreenValidationIntent(lockscreenType, remainingAttempts)
-                .putExtra(ChooseLockSettingsHelper.EXTRA_KEY_USE_EXPRESSIVE_STYLE,
-                        /*ThemeHelper.shouldApplyGlifExpressiveStyle()=*/true);
+    public static void setGlifExpressiveInPartnerConfigHelper() {
+        Bundle fakeBundle = new Bundle();
+        fakeBundle.putBoolean(PartnerConfigHelper.IS_GLIF_EXPRESSIVE_ENABLED, true);
+        PartnerConfigHelper.applyGlifExpressiveBundle = fakeBundle;
     }
 
     public static RemoteLockscreenValidationSession createRemoteLockscreenValidationSession(
