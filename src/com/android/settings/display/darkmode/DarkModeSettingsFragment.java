@@ -63,20 +63,24 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final Context context = getContext();
-        mContentObserver = new DarkModeObserver(context);
+        if (!Flags.catalystDarkUiMode()) {
+            final Context context = getContext();
+            mContentObserver = new DarkModeObserver(context);
+        }
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        // Listen for changes only while visible.
-        mContentObserver.subscribe(() -> {
-            PreferenceScreen preferenceScreen = getPreferenceScreen();
-            mCustomStartController.displayPreference(preferenceScreen);
-            mCustomEndController.displayPreference(preferenceScreen);
-            updatePreferenceStates();
-        });
+        if (!Flags.catalystDarkUiMode()) {
+            // Listen for changes only while visible.
+            mContentObserver.subscribe(() -> {
+                PreferenceScreen preferenceScreen = getPreferenceScreen();
+                mCustomStartController.displayPreference(preferenceScreen);
+                mCustomEndController.displayPreference(preferenceScreen);
+                updatePreferenceStates();
+            });
+        }
     }
 
     @Override
@@ -104,8 +108,10 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
     @Override
     public void onStop() {
         super.onStop();
-        // Stop listening for state changes.
-        mContentObserver.unsubscribe();
+        if (!Flags.catalystDarkUiMode()) {
+            // Stop listening for state changes.
+            mContentObserver.unsubscribe();
+        }
     }
 
     @Override

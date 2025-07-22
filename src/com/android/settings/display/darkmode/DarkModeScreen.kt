@@ -16,6 +16,7 @@
 
 package com.android.settings.display.darkmode
 
+import android.app.UiModeManager
 import android.app.settings.SettingsEnums
 import android.app.settings.SettingsEnums.ACTION_DARK_THEME
 import android.content.Context
@@ -108,6 +109,13 @@ abstract class BaseDarkModeScreen(context: Context) :
                     +StandardDarkModeSelectorPreference(modeStorage)
                     +ExpandedDarkModeSelectorPreference(modeStorage)
                 }
+            }
+            +PreferenceCategory("display_category", R.string.dark_theme_timing_category) += {
+                val uiModeManager =
+                    context.getSystemService<UiModeManager?>(UiModeManager::class.java)
+                +DarkModeSchedulePreference(uiModeManager!!, BedtimeSettings(context))
+                +StartTimePreference(uiModeManager)
+                +EndTimePreference(uiModeManager)
             }
             +DarkModeExpandedFooterPreference()
             +DarkModeCustomModesFooterPreference()
