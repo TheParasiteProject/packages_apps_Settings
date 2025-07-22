@@ -26,10 +26,6 @@ import com.android.settings.accessibility.flashnotifications.ui.FlashNotificatio
 import com.android.settings.accessibility.hearingdevices.ui.HearingDevicesScreen
 import com.android.settings.accessibility.screenmagnification.ui.MagnificationScreen
 import com.android.settings.accessibility.textreading.ui.TextReadingScreen
-import com.android.settings.accessibility.textreading.ui.TextReadingScreenFromNotification
-import com.android.settings.accessibility.textreading.ui.TextReadingScreenInAnythingElse
-import com.android.settings.accessibility.textreading.ui.TextReadingScreenInSuw
-import com.android.settings.accessibility.textreading.ui.TextReadingScreenOnAccessibility
 import com.android.settings.accounts.AccountScreen
 import com.android.settings.applications.AppDashboardScreen
 import com.android.settings.applications.specialaccess.AppInfoInstallUnknownAppsScreen
@@ -64,7 +60,6 @@ import com.android.settings.display.DisplayScreen
 import com.android.settings.display.NightDisplayScreen
 import com.android.settings.display.ScreenTimeoutScreen
 import com.android.settings.display.darkmode.DarkModeScreen
-import com.android.settings.display.darkmode.DarkModeScreenOnAccessibility
 import com.android.settings.dream.ScreensaverScreen
 import com.android.settings.emergency.EmergencyDashboardScreen
 import com.android.settings.fuelgauge.batterysaver.BatterySaverScreen
@@ -232,7 +227,6 @@ fun getCatalystScreenConfigs() =
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = AdvancedConnectedDeviceScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = ConversationListScreen.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = DarkModeScreenOnAccessibility.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = DateTimeSettingsScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = HardwareInfoScreen.KEY),
         PerScreenCatalystConfig(
@@ -272,10 +266,6 @@ fun getCatalystScreenConfigs() =
         PerScreenCatalystConfig(enabled = true, screenKey = SpecialAccessSettingsScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = SupervisionWebContentFiltersScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = TextReadingScreen.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = TextReadingScreenOnAccessibility.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = TextReadingScreenInAnythingElse.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = TextReadingScreenFromNotification.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = TextReadingScreenInSuw.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AccessibilityScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AccountScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AppDashboardScreen.KEY),
