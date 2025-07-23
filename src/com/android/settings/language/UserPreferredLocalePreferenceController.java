@@ -187,7 +187,11 @@ public class UserPreferredLocalePreferenceController extends BasePreferenceContr
         LocaleStore.LocaleInfo defaultAfterChange = localeInfoList.get(0);
         if (!defaultAfterChange.getLocale().equals(currentSystemLocale)) {
             if (Locale.getDefault().equals(defaultAfterChange.getLocale())) {
-                doTheUpdate();
+                if (mMenuItemId == R.id.remove) {
+                    displayRemovalDialogFragment(mSelectedLocaleInfo);
+                } else {
+                    doTheUpdate();
+                }
             } else {
                 if (mMenuItemId == R.id.move_up && !defaultAfterChange.isTranslated()) {
                     showUnavailableDialog(defaultAfterChange);
