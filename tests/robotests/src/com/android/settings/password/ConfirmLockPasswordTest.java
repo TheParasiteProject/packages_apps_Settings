@@ -65,6 +65,8 @@ import com.android.settings.testutils.shadow.ShadowUserManager;
 import com.android.settings.testutils.shadow.ShadowUtils;
 import com.android.settings.widget.ImeAwareTextInputEditText;
 
+import com.google.android.setupcompat.partnerconfig.PartnerConfigHelper;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -131,6 +133,7 @@ public class ConfirmLockPasswordTest {
     @After
     public void tearDown() {
         ShadowLockPatternUtils.reset();
+        PartnerConfigHelper.applyGlifExpressiveBundle = null;
     }
 
     @Test

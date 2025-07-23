@@ -89,6 +89,12 @@ public final class TestUtils {
                 .putExtra(WizardManagerHelper.EXTRA_IS_SETUP_FLOW, true);
     }
 
+    /**
+     * Enables Glif Expressive theme via {@link PartnerConfigHelper}
+     *
+     * <p>{@code PartnerConfigHelper.applyGlifExpressiveBundle = null} must be used afterwards to
+     * ensure there is no leftover state affecting other test cases.
+     */
     public static void setGlifExpressiveInPartnerConfigHelper() {
         Bundle fakeBundle = new Bundle();
         fakeBundle.putBoolean(PartnerConfigHelper.IS_GLIF_EXPRESSIVE_ENABLED, true);
