@@ -14669,7 +14669,7 @@ Data usage charges may apply.</string>
     <!-- Title on activity to choose PIN for supervision setup [CHAR LIMIT=NONE] -->
     <string name="supervision_choose_your_pin_header">Set a parental controls PIN</string>
     <!-- Title on activity to confirm PIN for supervision setup [CHAR LIMIT=NONE] -->
-    <string name="supervision_confirm_your_pin_header">Confirm PIN</string>
+    <string name="supervision_confirm_your_pin_header">Confirm parental controls PIN</string>
     <string name="supervision_pin_reset_success_toast">PIN updated</string>
     <!-- Content description for the action button in the supervision promo footer.
          This button typically opens a related application or a web page for more information.
