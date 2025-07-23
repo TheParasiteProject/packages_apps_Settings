@@ -14775,4 +14775,10 @@
     <!-- Summary for more_security_privacy_summary category in Safety Center [CHAR LIMIT=NONE] -->
     <string name="more_security_privacy_summary">Autofill, notifications, and more</string>
 
+    <!-- Title for promo notification for Identity Check -->
+    <string name="identity_check_notification_title">Identity Check works with more apps</string>
+    <!-- Summary for promo notification for Identity Check -->
+    <string name="identity_check_notification_summary">Identity Check prevents unwanted access to your apps. Now available with any app that uses Fingerprint or Face Unlock.</string>
+    <!-- Identity Check promo notification button text -->
+    <string name="identity_check_view_details">View details</string>
 </resources>
