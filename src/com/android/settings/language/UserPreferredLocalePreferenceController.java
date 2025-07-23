@@ -26,10 +26,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.LocaleList;
 import android.provider.Settings;
-import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Log;
-import android.view.MenuItem;
 
 import com.android.internal.app.LocalePicker;
 import com.android.internal.app.LocaleStore;
@@ -39,11 +37,8 @@ import com.android.settings.localepicker.NotificationController;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.R;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
-import com.android.settingslib.widget.MenuHandler;
 import com.android.settingslib.widget.OrderMenuPreference;
 
-import java.text.NumberFormat;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -72,7 +67,6 @@ public class UserPreferredLocalePreferenceController extends BasePreferenceContr
     private FragmentManager mFragmentManager;
     private List<LocaleStore.LocaleInfo> mUpdatedLocaleInfoList;
     private LocaleStore.LocaleInfo mSelectedLocaleInfo;
-    private NumberFormat mNumberFormatter = NumberFormat.getNumberInstance();
     private int mMenuItemId;
 
     @SuppressWarnings("NullAway")
@@ -108,7 +102,6 @@ public class UserPreferredLocalePreferenceController extends BasePreferenceContr
     @VisibleForTesting
     void setupPreference(Map<String, OrderMenuPreference> existingPreferences) {
         Log.d(TAG, "setupPreference");
-        mNumberFormatter = NumberFormat.getNumberInstance(Locale.getDefault());
         List<LocaleStore.LocaleInfo> localeInfoList = getUserLocaleList();
         int listSize = localeInfoList.size();
         for (int i = 0; i < listSize; i++) {
@@ -176,7 +169,7 @@ public class UserPreferredLocalePreferenceController extends BasePreferenceContr
                 updatePreferences();
                 return true;
             });
-            pref.setNumber(Integer.parseInt(mNumberFormatter.format(i + 1)));
+            pref.setNumber(i + 1);
             mPreferences.put(localeInfo.getId(), pref);
         }
     }
