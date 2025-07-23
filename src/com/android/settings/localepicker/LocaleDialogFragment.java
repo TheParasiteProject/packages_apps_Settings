@@ -263,7 +263,8 @@ public class LocaleDialogFragment extends InstrumentedDialogFragment {
                             R.string.desc_notice_device_locale_and_region_settings_change,
                             localeLanguage, localeCountry);
                     dialogContent.mMessage =
-                            mMenuItemId == R.id.remove && mSelectedLocaleInfo == defaultLocaleInfo
+                            mMenuItemId == R.id.remove && mSelectedLocaleInfo.toString().equals(
+                                    defaultLocaleInfo.toString())
                                     ? mContext.getString(
                                     R.string.dlg_desc_delete_preferred_default_locale,
                                     defaultLocaleInfo.getFullNameNative())
