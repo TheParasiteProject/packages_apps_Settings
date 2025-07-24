@@ -286,8 +286,13 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
         CustomDialogHelper dialogHelper = new CustomDialogHelper(context);
         dialogHelper.setIcon(
                 context.getDrawable(com.android.settingslib.R.drawable.ic_admin_panel_settings));
-        dialogHelper.setTitle(R.string.user_revoke_admin_confirm_title);
-        dialogHelper.setMessage(R.string.user_revoke_admin_confirm_message);
+        if (mUserInfo.id == UserHandle.myUserId()) {
+            dialogHelper.setTitle(R.string.user_revoke_admin_for_self_confirm_title);
+            dialogHelper.setMessage(R.string.user_revoke_admin_for_self_confirm_message);
+        } else {
+            dialogHelper.setTitle(R.string.user_revoke_admin_confirm_title);
+            dialogHelper.setMessage(R.string.user_revoke_admin_confirm_message);
+        }
         dialogHelper.setMessagePadding(MESSAGE_PADDING);
         dialogHelper.setPositiveButton(R.string.remove, view -> {
             updateUserAdminStatus(false);
@@ -523,6 +528,11 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
         mGrantAdminPref.setChecked(isSetAdmin);
         if (!isSetAdmin) {
             mUserManager.revokeUserAdmin(mUserInfo.id);
+            if (mUserInfo.id == UserHandle.myUserId()) {
+                // Hides the toggle after an admin self-revokes their admin status, as they can no
+                // longer modify it.
+                mGrantAdminPref.setVisible(false);
+            }
         } else if ((mUserInfo.flags & UserInfo.FLAG_ADMIN) == 0) {
             mUserManager.setUserAdmin(mUserInfo.id);
         }
