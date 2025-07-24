@@ -18,7 +18,6 @@ package com.android.settings.appfunctions.sources
 
 import android.app.usage.StorageStatsManager
 import android.content.Context
-import android.content.pm.PackageManager
 import com.android.settings.appfunctions.DeviceStateCategory
 import com.android.settingslib.spaprivileged.framework.common.BytesFormatter
 import com.android.settingslib.spaprivileged.model.app.userHandle
@@ -28,22 +27,23 @@ import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDev
 class AppsStorageStateSource : DeviceStateSource {
     override val category: DeviceStateCategory = DeviceStateCategory.STORAGE
 
-    override fun get(context: Context): PerScreenDeviceStates {
+    override fun get(
+        context: Context,
+        sharedDeviceStateData: SharedDeviceStateData,
+    ): PerScreenDeviceStates {
         val packageManager = context.packageManager
         val storageStatsManager = context.getSystemService(StorageStatsManager::class.java)
         val bytesFormatter = BytesFormatter(context)
-        val installedApplications =
-            packageManager.getInstalledApplications(PackageManager.MATCH_DISABLED_COMPONENTS)
 
         val deviceStateItems = mutableListOf<DeviceStateItem>()
-        for (app in installedApplications) {
-            val appName = packageManager.getApplicationLabel(app.applicationInfo)
-            val packageName = app.packageName
+        for (app in sharedDeviceStateData.installedApplications) {
+            val appName = app.label
+            val packageName = app.info.packageName
             val stats =
                 storageStatsManager.queryStatsForPackage(
-                    app.storageUuid,
-                    app.packageName,
-                    app.userHandle,
+                    app.info.storageUuid,
+                    app.info.packageName,
+                    app.info.userHandle,
                 )
 
             val appBytes = stats.appBytes

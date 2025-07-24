@@ -21,36 +21,27 @@ import android.provider.Settings
 import com.android.settings.appfunctions.DeviceStateCategory
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
-import java.util.concurrent.TimeUnit
 
-class ScreenTimeoutStateSource : DeviceStateSource {
-    override val category: DeviceStateCategory = DeviceStateCategory.UNCATEGORIZED
+class BatterySaverStateSource : DeviceStateSource {
+    override val category: DeviceStateCategory = DeviceStateCategory.BATTERY
 
     override fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): PerScreenDeviceStates {
-        val screenTimeoutMilliseconds =
-            Settings.System.getLong(
-                context.contentResolver,
-                Settings.System.SCREEN_OFF_TIMEOUT,
-                FALLBACK_SCREEN_TIMEOUT_VALUE,
+        val areRemindersEnabled =
+            Settings.Global.getInt(
+                context.getContentResolver(),
+                Settings.Global.LOW_POWER_MODE_REMINDER_ENABLED,
+                1,
+            ) == 1
+
+        val item =
+            DeviceStateItem(
+                key = "battery_saver_reminders",
+                jsonValue = areRemindersEnabled.toString(),
             )
-        val screenTimeoutSeconds = TimeUnit.MILLISECONDS.toSeconds(screenTimeoutMilliseconds)
 
-        val item = DeviceStateItem(key = "screen_timeout", jsonValue = "$screenTimeoutSeconds s")
-
-        return PerScreenDeviceStates(
-            description = "Screen timeout",
-            deviceStateItems = listOf(item),
-        )
-    }
-
-    private companion object {
-        /**
-         * This value comes from
-         * [com.android.settings.display.ScreenTimeoutSettings.FALLBACK_SCREEN_TIMEOUT_VALUE].
-         */
-        const val FALLBACK_SCREEN_TIMEOUT_VALUE = 30000L
+        return PerScreenDeviceStates(description = "Battery Saver", deviceStateItems = listOf(item))
     }
 }

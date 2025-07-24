@@ -29,7 +29,10 @@ import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDev
 class RecentAppsStateSource : DeviceStateSource {
     override val category: DeviceStateCategory = DeviceStateCategory.UNCATEGORIZED
 
-    override fun get(context: Context): PerScreenDeviceStates {
+    override fun get(
+        context: Context,
+        sharedDeviceStateData: SharedDeviceStateData,
+    ): PerScreenDeviceStates {
         val recentAppStatsMixin = RecentAppStatsMixin(context, RECENT_APP_COUNT)
         recentAppStatsMixin.loadDisplayableRecentApps(RECENT_APP_COUNT)
         val deviceStateItems = mutableListOf<DeviceStateItem>()
