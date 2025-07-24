@@ -363,7 +363,8 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
 
         mGrantAdminPref.setChecked(mUserInfo.isAdmin());
 
-        mSwitchUserPref.setVisible(mUserCaps.mUserSwitchingUiEnabled);
+        mSwitchUserPref.setVisible(mUserCaps.mUserSwitchingUiEnabled
+                && UserHandle.myUserId() != mUserInfo.id);
 
         mSwitchUserPref.setTitle(
                 context.getString(com.android.settingslib.R.string.user_switch_to_user,
@@ -546,7 +547,7 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
     }
 
     private void removeThisUser() {
-        if (mUserManager.getUserSwitchability() != UserManager.SWITCHABILITY_STATUS_OK) {
+        if (!canSwitchUserNow()) {
             Log.w(TAG, "Cannot remove current user when switching is disabled");
             return;
         }
