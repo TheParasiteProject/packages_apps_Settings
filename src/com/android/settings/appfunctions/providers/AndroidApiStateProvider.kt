@@ -21,6 +21,7 @@ import android.util.Log
 import com.android.settings.appfunctions.DeviceStateCategory
 import com.android.settings.appfunctions.sources.AdaptiveBrightnessStateSource
 import com.android.settings.appfunctions.sources.AppsStorageStateSource
+import com.android.settings.appfunctions.sources.BatterySaverStateSource
 import com.android.settings.appfunctions.sources.BubblesStateSource
 import com.android.settings.appfunctions.sources.DeviceStateSource
 import com.android.settings.appfunctions.sources.LockScreenStateSource
@@ -48,6 +49,7 @@ class AndroidApiStateProvider(private val context: Context) : DeviceStateProvide
         listOf(
             AdaptiveBrightnessStateSource(),
             AppsStorageStateSource(),
+            BatterySaverStateSource(),
             BubblesStateSource(),
             LockScreenStateSource(),
             ManagedProfileStateSource(),
