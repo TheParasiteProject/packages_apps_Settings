@@ -25,7 +25,6 @@ import static com.android.settings.users.UserDetailsSettings.REQUEST_CONFIRM_REM
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.junit.Assume.assumeTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyString;
@@ -780,7 +779,6 @@ public class UserDetailsSettingsTest {
 
     @Test
     public void initialize_userSelected_shouldShowGrantAdminPref_MultipleAdminEnabled() {
-        assumeTrue(UserManager.isHeadlessSystemUserMode());
         setupSelectedUser();
         mUserManager.setIsAdminUser(true);
         ShadowUserManager.setIsMultipleAdminEnabled(true);
