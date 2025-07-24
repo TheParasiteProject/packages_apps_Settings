@@ -54,7 +54,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.Settings;
 import com.android.settings.biometrics.BiometricEnrollActivity;
-import com.android.settings.biometrics.face.FaceEnroll;
 import com.android.settings.flags.Flags;
 import com.android.settings.testutils.FakeFeatureFactory;
 import com.android.settings.testutils.ResourcesUtils;
@@ -229,7 +228,7 @@ public class FaceSafetySourceTest {
         assertSafetySourceEnabledDataSetWithSingularSummary(
                 "security_settings_face_preference_title_new",
                 "security_settings_face_preference_summary_none_new",
-                FaceEnroll.class.getName());
+                Settings.FaceSettingsInternalActivity.class.getName());
     }
 
     @Test
