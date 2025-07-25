@@ -22,7 +22,9 @@ import android.content.Intent
 import androidx.fragment.app.Fragment
 import com.android.settings.R
 import com.android.settings.Settings.MagnificationActivity
+import com.android.settings.accessibility.FeedbackManager
 import com.android.settings.accessibility.Flags
+import com.android.settings.accessibility.shared.ui.FeedbackButtonPreference
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.metadata.PreferenceCategory
@@ -76,6 +78,7 @@ open class MagnificationScreen : PreferenceScreenMixin {
                 +JoystickSwitchPreference()
             }
             +MagnificationFooterPreference()
+            +FeedbackButtonPreference(FeedbackManager(context, metricsCategory))
         }
 
     companion object {
