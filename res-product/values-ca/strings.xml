@@ -367,8 +367,8 @@
     <string name="ethernet_tethering_subtext" product="desktop" msgid="454840171632885947">"Comparteix la connexió a Internet del dispositiu per Ethernet"</string>
     <string name="about_settings" product="tablet" msgid="1471390492111370330">"Sobre la tauleta"</string>
     <string name="about_settings" product="default" msgid="2621311564780208250">"Sobre el telèfon"</string>
-    <string name="about_settings" product="device" msgid="7595574154492383452">"Informació del dispositiu"</string>
-    <string name="about_settings" product="desktop" msgid="7595574154492383452">"Informació del dispositiu"</string>
+    <string name="about_settings" product="device" msgid="7595574154492383452">"Sobre el dispositiu"</string>
+    <string name="about_settings" product="desktop" msgid="7595574154492383452">"Sobre el dispositiu"</string>
     <string name="about_settings" product="emulator" msgid="1099246296173401003">"Sobre el dispositiu emulat"</string>
     <string name="install_all_warning" product="tablet" msgid="1732116924846572063">"La tauleta i les dades personals són més vulnerables a atacs d\'aplicacions desconegudes. En instal·lar aplicacions d\'aquesta font, acceptes que ets responsable de qualsevol dany a la tauleta i qualsevol pèrdua de dades que es pugui produir per l\'ús d\'aquestes aplicacions."</string>
     <string name="install_all_warning" product="default" msgid="4597256179485325694">"El telèfon i les dades personals són més vulnerables a atacs d\'aplicacions desconegudes. En instal·lar aplicacions d\'aquesta font, acceptes que ets responsable de qualsevol pèrdua de dades o dany que puguin causar al telèfon."</string>

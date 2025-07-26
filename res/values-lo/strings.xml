@@ -999,6 +999,14 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"ເລື່ອນເມົ້າຂອງທ່ານລະຫວ່າງຈໍສະແດງຜົນ"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"ໃຊ້ຈໍສະແດງຜົນພາຍນອກ"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"ຄວາມລະອຽດຂອງຈໍສະແດງຜົນ"</string>
+    <!-- no translation found for external_display_connection_preference (9158531639269299045) -->
+    <skip />
+    <!-- no translation found for external_display_connection_preference_desktop (1132935527002697518) -->
+    <skip />
+    <!-- no translation found for external_display_connection_preference_mirroring (7389135903725596964) -->
+    <skip />
+    <!-- no translation found for external_display_connection_preference_show_dialog (6797743658612540027) -->
+    <skip />
     <string name="external_display_not_found" msgid="1912355133386555798">"ຍົກເລີກການເຊື່ອມຕໍ່ຈໍສະແດງຜົນພາຍນອກແລ້ວ"</string>
     <string name="external_display_rotation" msgid="7160062306817490204">"ການໝຸນ"</string>
     <string name="external_display_standard_rotation" msgid="545969032327487219">"ມາດຕະຖານ"</string>
@@ -1012,6 +1020,12 @@
     <string name="external_display_more_options_title" msgid="1222751990705118774">"ຕົວເລືອກເພີ່ມເຕີມ"</string>
     <string name="external_display_topology_hint" msgid="854973327795578470">"ກົດຄ້າງແລ້ວລາກເພື່ອຈັດຮຽງຈໍສະແດງຜົນຄືນໃໝ່."</string>
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"ສະທ້ອນການສະແດງຜົນທີ່ມີໃນຕົວ"</string>
+    <!-- no translation found for external_display_resolution_change_dialog_title (8834095214420638411) -->
+    <skip />
+    <!-- no translation found for external_display_resolution_change_dialog_description (813174417182932956) -->
+    <skip />
+    <!-- no translation found for external_display_resolution_change_dialog_confirm (8451683005995976984) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"ແວ່ນສະທ້ອນ"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"ເປີດໃຊ້ງານການສະແດງພາບໄຮ້ສາຍ"</string>
@@ -2035,7 +2049,8 @@
     <string name="filter_apps_running" msgid="535465683273284141">"ກຳລັງເຮັດວຽກ"</string>
     <string name="not_installed" msgid="5074606858798519449">"ບໍ່ໄດ້​ຕິດຕັ້ງ​ສຳລັບ​ຜູ່ໃຊ້ນີ້"</string>
     <string name="installed" msgid="2837449358488825884">"ຕິດຕັ້ງແລ້ວ"</string>
-    <string name="no_applications" msgid="985069304755391640">"ບໍ່ມີແອັບ."</string>
+    <!-- no translation found for no_applications (5471491608902031500) -->
+    <skip />
     <string name="internal_storage" msgid="999496851424448809">"ພື້ນທີ່ຈັດເກັບຂໍ້ມູນພາຍໃນ"</string>
     <string name="recompute_size" msgid="1098091228370999128">"ກຳລັງຄຳນວນຂະໜາດຄືນໃໝ່..."</string>
     <string name="clear_data_dlg_title" msgid="180446967743732410">"ລຶບຂໍ້ມູນແອັບບໍ່?"</string>
@@ -2391,15 +2406,11 @@
     <string name="accessibility_send_survey_title" msgid="7899716184811587023">"ໃຫ້ຄະແນນພວກເຮົາ"</string>
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອຄົນພິການຂອງ Google"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"ແບບສຳຫຼວດກ່ຽວກັບການຊ່ວຍເຂົ້າເຖິງ"</string>
-    <!-- no translation found for dark_theme_survey_notification_title (662387994868661452) -->
-    <skip />
-    <!-- no translation found for dark_theme_survey_notification_summary (2893701785229702405) -->
-    <skip />
+    <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"ແບ່ງປັນຄຳຕິຊົມຂອງທ່ານ"</string>
+    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"ທ່ານພໍໃຈກັບຮູບແບບສີສັນມືດຫຼາຍໜ້ອຍເທົ່າໃດ?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"ເຮັດແບບສຳຫຼວດ"</string>
-    <!-- no translation found for magnification_survey_notification_title (8308432889772152950) -->
-    <skip />
-    <!-- no translation found for magnification_survey_notification_summary (2238290609820811258) -->
-    <skip />
+    <string name="magnification_survey_notification_title" msgid="8308432889772152950">"ແບ່ງປັນຄຳຕິຊົມຂອງທ່ານ"</string>
+    <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"ທ່ານພໍໃຈກັບການຂະຫຍາຍຫຼາຍໜ້ອຍເທົ່າໃດ?"</string>
     <string name="magnification_survey_notification_action" msgid="8042464088582144918">"ເຮັດແບບສຳຫຼວດ"</string>
     <string name="user_installed_services_category_title" msgid="2639470729311439731">"ແອັບທີ່ດາວໂຫຼດແລ້ວ"</string>
     <string name="experimental_category_title" msgid="898904396646344152">"ຍັງຢູ່ໃນການທົດລອງ"</string>
@@ -2634,9 +2645,18 @@
     <string name="autoclick_cursor_area_size_dialog_option_small" msgid="3987901922883658043">"ນ້ອຍ"</string>
     <string name="autoclick_cursor_area_size_dialog_option_extra_small" msgid="6056674574040448864">"ນ້ອຍພິເສດ"</string>
     <string name="autoclick_ignore_minor_cursor_movement_title" msgid="5038721995720529808">"ບໍ່ສົນໃຈການເໜັງຕີງເລັກໜ້ອຍຂອງເຄີເຊີ"</string>
-    <string name="autoclick_revert_to_left_click_title" msgid="9213418243482609005">"ປ່ຽນກັບໄປເປັນການຄລິກຊ້າຍຫຼັງຈາກດຳເນີນການແລ້ວ"</string>
-    <string name="accessibility_autoclick_navigation_title" msgid="6808216178814576714">"ປ່ຽນໂໝດການນຳທາງຂອງທ່ານເພື່ອໃຊ້ການຄລິກອັດຕະໂນມັດ"</string>
-    <string name="accessibility_autoclick_navigation_message" msgid="112626284307103141">"ເພື່ອກັບຄືນ, ໜ້າຫຼັກ ແລະ ສະຫຼັບລະຫວ່າງແອັບໂດຍໃຊ້ການຄລິກອັດຕະໂນມັດ, ໃຫ້ໃຊ້ການນຳທາງແບບ 3 ປຸ່ມແທນການນຳທາງແບບທ່າທາງ"</string>
+    <!-- no translation found for autoclick_revert_to_left_click_title (6868866422993461739) -->
+    <skip />
+    <!-- no translation found for autoclick_revert_to_left_click_summary (9207568192335942225) -->
+    <skip />
+    <!-- no translation found for accessibility_autoclick_navigation_title (1577786826651016069) -->
+    <skip />
+    <!-- no translation found for accessibility_autoclick_navigation_message (4985375526457764240) -->
+    <skip />
+    <!-- no translation found for accessibility_autoclick_keep_gesture_navigation (5403212927837555942) -->
+    <skip />
+    <!-- no translation found for accessibility_autoclick_navigation_settings (26376319288642658) -->
+    <skip />
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"ການສັ່ນເຕືອນ ແລະ ການສຳຜັດ"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"ຄວບຄຸມຄວາມແຮງຂອງການສັ່ນເຕືອນສຳລັບການໃຊ້ທີ່ແຕກຕ່າງກັນ"</string>
     <string name="accessibility_vibration_settings_state_on" msgid="5566026932372832502">"ເປີດ"</string>
@@ -5905,7 +5925,8 @@
     <string name="supervision_web_content_filters_footer_title" msgid="1741897040916039165">"ເມື່ອປິດການຕັ້ງຄ່າເຫຼົ່ານີ້, ການຕັ້ງຄ່າບັນຊີອື່ນໆອາດຍັງຄົງມີຜົນນຳໃຊ້."</string>
     <string name="supervision_full_screen_pin_verification_title" msgid="7685279446792771815">"ລະບຸ PIN ການຄວບຄຸມຂອງພໍ່ແມ່"</string>
     <string name="supervision_choose_your_pin_header" msgid="3872062168986738629">"ຕັ້ງ PIN ການຄວບຄຸມຂອງພໍ່ແມ່"</string>
-    <string name="supervision_confirm_your_pin_header" msgid="8236956712482718354">"ຢືນຢັນ PIN"</string>
+    <!-- no translation found for supervision_confirm_your_pin_header (1560013211840245690) -->
+    <skip />
     <string name="supervision_pin_reset_success_toast" msgid="9163550161698311831">"ອັບເດດ PIN ແລ້ວ"</string>
     <string name="supervision_promo_footer_action_button_description" msgid="7617359721703338141">"ເປີດແອັບ"</string>
     <string name="supervision_delete_pin_confirm_header" msgid="8499276643990949268">"ລຶບ PIN ບໍ?"</string>
