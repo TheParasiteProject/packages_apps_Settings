@@ -73,7 +73,10 @@ class AndroidApiStateProvider(private val context: Context) : DeviceStateProvide
                 .mapNotNull { provider ->
                     val providerName = provider::class.simpleName
                     try {
-                        provider.get(context, sharedDeviceStateData)
+                        Log.v(TAG, "Getting device state from $providerName")
+                        val state = provider.get(context, sharedDeviceStateData)
+                        Log.v(TAG, "Got device state from $providerName")
+                        state
                     } catch (e: Exception) {
                         Log.e(TAG, "Error getting device state from $providerName", e)
                         null
