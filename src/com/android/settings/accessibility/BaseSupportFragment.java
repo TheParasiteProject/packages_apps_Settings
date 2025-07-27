@@ -32,7 +32,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.settings.accessibility.actionbar.DisabilitySupportMenuController;
 import com.android.settings.accessibility.actionbar.SurveyMenuController;
 import com.android.settings.dashboard.DashboardFragment;
 
@@ -47,10 +46,6 @@ public abstract class BaseSupportFragment extends DashboardFragment {
 
         if (com.android.server.accessibility.Flags.enableLowVisionHats()) {
             handleSurveyFlow();
-        }
-
-        if (com.android.settings.accessibility.Flags.enableDisabilitySupport()) {
-            handleDisabilitySupportFlow();
         }
     }
 
@@ -86,11 +81,6 @@ public abstract class BaseSupportFragment extends DashboardFragment {
         return "";
     }
 
-    @NonNull
-    protected String getDisabilitySupportUrl() {
-        return "";
-    }
-
     private void handleSurveyFlow() {
         final Context context = getActivity();
         if (context == null) {
@@ -115,14 +105,5 @@ public abstract class BaseSupportFragment extends DashboardFragment {
         }
 
         SurveyMenuController.init(this, surveyManager);
-    }
-
-    private void handleDisabilitySupportFlow() {
-        final String disabilitySupportUrl = getDisabilitySupportUrl();
-        if (TextUtils.isEmpty(disabilitySupportUrl)) {
-            return;
-        }
-
-        DisabilitySupportMenuController.init(this, disabilitySupportUrl);
     }
 }
