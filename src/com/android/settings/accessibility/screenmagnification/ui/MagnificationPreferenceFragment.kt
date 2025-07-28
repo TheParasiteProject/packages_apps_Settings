@@ -25,7 +25,6 @@ import com.android.settings.accessibility.BaseSupportFragment
 import com.android.settings.accessibility.FeedbackButtonPreferenceController
 import com.android.settings.accessibility.FeedbackManager
 import com.android.settings.accessibility.Flags
-import com.android.settings.accessibility.SurveyManager
 import com.android.settings.accessibility.screenmagnification.CursorFollowingModePreferenceController
 import com.android.settings.accessibility.screenmagnification.ModePreferenceController
 import com.android.settings.accessibility.screenmagnification.ToggleMagnificationShortcutPreferenceController
@@ -54,14 +53,6 @@ open class MagnificationPreferenceFragment : BaseSupportFragment() {
                 childFragmentManager,
                 getFeatureName(),
                 metricsCategory,
-            )
-            setSurveyManager(
-                SurveyManager(
-                    this@MagnificationPreferenceFragment,
-                    context,
-                    surveyKey,
-                    metricsCategory,
-                )
             )
         }
     }

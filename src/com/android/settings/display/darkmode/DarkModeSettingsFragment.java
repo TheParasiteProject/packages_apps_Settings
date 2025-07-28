@@ -30,8 +30,6 @@ import com.android.settings.accessibility.BaseSupportFragment;
 import com.android.settings.accessibility.FeedbackButtonPreferenceController;
 import com.android.settings.accessibility.FeedbackManager;
 import com.android.settings.accessibility.Flags;
-import com.android.settings.accessibility.ForceInvertPreferenceController;
-import com.android.settings.accessibility.SurveyManager;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.search.SearchIndexable;
@@ -82,9 +80,6 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         if (!Flags.catalystDarkUiMode()) {
-            final SurveyManager surveyManager = new SurveyManager(this, context,
-                    FORCE_INVERT_SURVEY_KEY, getMetricsCategory());
-            use(ForceInvertPreferenceController.class).setSurveyManager(surveyManager);
             use(FeedbackButtonPreferenceController.class).initialize(
                     new FeedbackManager(context, getMetricsCategory()));
         }

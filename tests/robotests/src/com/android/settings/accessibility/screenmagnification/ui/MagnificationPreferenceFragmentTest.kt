@@ -36,7 +36,6 @@ import com.android.settings.accessibility.MagnificationCapabilities.Magnificatio
 import com.android.settings.accessibility.ShortcutPreference
 import com.android.settings.accessibility.screenmagnification.dialogs.CursorFollowingModeChooser
 import com.android.settings.accessibility.screenmagnification.dialogs.MagnificationModeChooser
-import com.android.settings.accessibility.screenmagnification.ui.MagnificationPreferenceFragment.Companion.MAGNIFICATION_SURVEY_KEY
 import com.android.settings.testutils.AccessibilityTestUtils.assertDialogShown
 import com.android.settings.testutils.inflateViewHolder
 import com.android.settings.testutils.shadow.ShadowInputDevice
