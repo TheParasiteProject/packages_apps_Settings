@@ -95,13 +95,6 @@ class MagnificationPreferenceFragmentTest :
     }
 
     @Test
-    fun getSurveyKey_returnCorrectKey() {
-        val fragment = launchFragment()
-
-        assertThat(fragment.surveyKey).isEqualTo(MAGNIFICATION_SURVEY_KEY)
-    }
-
-    @Test
     fun getMetricsCategory_returnsCorrectCategory() {
         val fragment = launchFragment()
 

@@ -15,7 +15,6 @@
 package com.android.settings.display.darkmode;
 
 import android.app.Dialog;
-import android.app.UiModeManager;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
@@ -84,7 +83,7 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
         super.onAttach(context);
         if (!Flags.catalystDarkUiMode()) {
             final SurveyManager surveyManager = new SurveyManager(this, context,
-                    getSurveyKey(), getMetricsCategory());
+                    FORCE_INVERT_SURVEY_KEY, getMetricsCategory());
             use(ForceInvertPreferenceController.class).setSurveyManager(surveyManager);
             use(FeedbackButtonPreferenceController.class).initialize(
                     new FeedbackManager(context, getMetricsCategory()));
@@ -158,17 +157,6 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
     @Override
     public int getMetricsCategory() {
         return SettingsEnums.DARK_UI_SETTINGS;
-    }
-
-    @Override
-    @NonNull
-    public String getSurveyKey() {
-        final UiModeManager uiModeManager = getContext().getSystemService(UiModeManager.class);
-        if (uiModeManager != null
-                && uiModeManager.getForceInvertState() == UiModeManager.FORCE_INVERT_TYPE_DARK) {
-            return FORCE_INVERT_SURVEY_KEY;
-        }
-        return super.getSurveyKey();
     }
 
     @Override

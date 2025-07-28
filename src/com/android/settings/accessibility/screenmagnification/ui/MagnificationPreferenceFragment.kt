@@ -19,7 +19,6 @@ package com.android.settings.accessibility.screenmagnification.ui
 import android.app.settings.SettingsEnums
 import android.content.ComponentName
 import android.content.Context
-import androidx.annotation.VisibleForTesting
 import com.android.internal.accessibility.AccessibilityShortcutController
 import com.android.settings.R
 import com.android.settings.accessibility.BaseSupportFragment
@@ -91,11 +90,6 @@ open class MagnificationPreferenceFragment : BaseSupportFragment() {
 
     override fun getMetricsCategory(): Int {
         return SettingsEnums.ACCESSIBILITY_TOGGLE_SCREEN_MAGNIFICATION
-    }
-
-    @VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
-    public override fun getSurveyKey(): String {
-        return MAGNIFICATION_SURVEY_KEY
     }
 
     override fun getHelpResource(): Int {
