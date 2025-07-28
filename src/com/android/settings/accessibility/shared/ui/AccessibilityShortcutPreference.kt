@@ -117,7 +117,7 @@ open class AccessibilityShortcutPreference(
                 override fun onToggleClicked(preference: ShortcutPreference?) {
                     if (shortcutPreference.isChecked) {
                         showShortcutsTutorial(
-                            context.fragmentManager,
+                            context.childFragmentManager,
                             dataStore.getUserShortcutTypes(),
                             shortcutPreference.context.isInSetupWizard(),
                         )
