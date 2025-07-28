@@ -30,12 +30,7 @@ public final class MenusUtils {
         /**
          * Identifier for the send survey menu option.
          */
-        SEND_SURVEY(20),
-
-        /**
-         * Identifier for the disability support menu option.
-         */
-        DISABILITY_SUPPORT(30);
+        SEND_SURVEY(20);
 
         private final int mValue;
 
