@@ -2044,8 +2044,7 @@
     <string name="filter_apps_running" msgid="535465683273284141">"En ejecución"</string>
     <string name="not_installed" msgid="5074606858798519449">"No instalada para este usuario"</string>
     <string name="installed" msgid="2837449358488825884">"Instalada"</string>
-    <!-- no translation found for no_applications (5471491608902031500) -->
-    <skip />
+    <string name="no_applications" msgid="5471491608902031500">"No hay apps que coincidan"</string>
     <string name="internal_storage" msgid="999496851424448809">"Almacenamiento interno"</string>
     <string name="recompute_size" msgid="1098091228370999128">"Recalculando el tamaño…"</string>
     <string name="clear_data_dlg_title" msgid="180446967743732410">"¿Borrar los datos de la app?"</string>
@@ -2642,10 +2641,8 @@
     <skip />
     <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"El clic automático funciona mejor con la navegación con 3 botones"</string>
     <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"Para retroceder, ir a la pantalla principal y cambiar de app de forma sencilla cuando usas el clic automático, utiliza la navegación con 3 botones en lugar de la navegación por gestos"</string>
-    <!-- no translation found for accessibility_autoclick_keep_gesture_navigation (5403212927837555942) -->
-    <skip />
-    <!-- no translation found for accessibility_autoclick_navigation_settings (26376319288642658) -->
-    <skip />
+    <string name="accessibility_autoclick_keep_gesture_navigation" msgid="5403212927837555942">"Mantener la navegación por gestos"</string>
+    <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"Configuración de navegación"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"Vibración y tecnología táctil"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"Controla la intensidad de la vibración para diferentes usos"</string>
     <string name="accessibility_vibration_settings_state_on" msgid="5566026932372832502">"Activadas"</string>
@@ -3444,6 +3441,10 @@
     <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"Se compartirá el historial de llamadas y SMS con este usuario."</string>
     <string name="user_revoke_admin_confirm_title" msgid="3057842401861731863">"¿Quitar los privilegios de administrador?"</string>
     <string name="user_revoke_admin_confirm_message" msgid="9207187319308572958">"Si quitas los privilegios de administrador de este usuario, tú o algún otro administrador podrán volver a otorgárselos."</string>
+    <!-- no translation found for user_revoke_admin_for_self_confirm_title (5661292626700927475) -->
+    <skip />
+    <!-- no translation found for user_revoke_admin_for_self_confirm_message (4397795314721962937) -->
+    <skip />
     <string name="emergency_info_title" msgid="8233682750953695582">"Información de emergencia"</string>
     <string name="emergency_info_summary" msgid="8463622253016757697">"Información y contactos de <xliff:g id="USER_NAME">%1$s</xliff:g>"</string>
     <string name="open_app_button" msgid="5025229765547191710">"Abrir <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -4375,8 +4376,10 @@
     <string name="app_permissions" msgid="8666537659217653626">"Administrador de permisos"</string>
     <string name="app_data_sharing_updates_title" msgid="1694297952320402788">"Actualizaciones de los datos compartidos de ubicación"</string>
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Revisa las apps que cambiaron la forma en que comparten tus datos de ubicación"</string>
-    <string name="app_function_access_settings_title" msgid="1474765429611652468">"Control del agente de otras apps"</string>
-    <string name="app_function_access_settings_summary" msgid="6465715820745848068">"Realiza acciones en tu dispositivo y en otras apps"</string>
+    <!-- no translation found for app_function_access_settings_title (1837117989202166166) -->
+    <skip />
+    <!-- no translation found for app_function_access_settings_summary (3654291845453799170) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Presionar para activar"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Presiona dos veces en cualquier lugar de la pantalla para activar el dispositivo."</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Abrir vínculos"</string>
@@ -5890,6 +5893,8 @@
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"Configurar PIN"</string>
     <string name="keywords_supervision_settings" msgid="43064288661561602">"supervisión, controles parentales, padres, PIN de supervisión, PIN"</string>
     <string name="supervision_pin_management_preference_title" msgid="7721501202320841845">"Administra tu PIN"</string>
+    <!-- no translation found for supervision_pin_management_screen_title (9118601026702645173) -->
+    <skip />
     <string name="supervision_pin_management_preference_keywords" msgid="5034450635706621750">"PIN parental, PIN de control parental"</string>
     <string name="supervision_pin_management_preference_summary_add" msgid="2247921267270577374">"Agrega un correo de recuperación"</string>
     <string name="supervision_pin_management_preference_summary_verify_recovery" msgid="5072554239108915119">"Verifica el correo de recuperación"</string>
