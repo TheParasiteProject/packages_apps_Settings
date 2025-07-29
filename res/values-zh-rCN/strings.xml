@@ -2044,8 +2044,7 @@
     <string name="filter_apps_running" msgid="535465683273284141">"正在运行"</string>
     <string name="not_installed" msgid="5074606858798519449">"此用户未安装"</string>
     <string name="installed" msgid="2837449358488825884">"已安装"</string>
-    <!-- no translation found for no_applications (5471491608902031500) -->
-    <skip />
+    <string name="no_applications" msgid="5471491608902031500">"没有匹配的应用"</string>
     <string name="internal_storage" msgid="999496851424448809">"内部存储空间"</string>
     <string name="recompute_size" msgid="1098091228370999128">"正在重新计算大小..."</string>
     <string name="clear_data_dlg_title" msgid="180446967743732410">"要删除应用数据吗？"</string>
@@ -2573,7 +2572,7 @@
     <string name="dark_theme_version_category" msgid="3555549588764154187">"选项"</string>
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"时间"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"标准"</string>
-    <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"标准深色主题"</string>
+    <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"标准版深色主题"</string>
     <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"在您的设备和支持的应用中应用深色主题"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"扩展版"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"扩展版深色主题"</string>
@@ -2642,10 +2641,8 @@
     <skip />
     <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"“自动点击”功能搭配“三按钮”导航使用时效果更佳"</string>
     <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"如果想通过“自动点击”功能轻松返回上一页、前往主屏幕和切换应用，请使用“三按钮”导航，而非手势导航"</string>
-    <!-- no translation found for accessibility_autoclick_keep_gesture_navigation (5403212927837555942) -->
-    <skip />
-    <!-- no translation found for accessibility_autoclick_navigation_settings (26376319288642658) -->
-    <skip />
+    <string name="accessibility_autoclick_keep_gesture_navigation" msgid="5403212927837555942">"继续使用手势导航"</string>
+    <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"导航设置"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"振动和触感反馈"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"控制各种使用情形的振动强度"</string>
     <string name="accessibility_vibration_settings_state_on" msgid="5566026932372832502">"已开启"</string>
@@ -2682,7 +2679,7 @@
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"关于颜色反转"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"详细了解颜色反转"</string>
     <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"详细了解深色主题"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"部分应用可能不支持深色主题搭配扩展选项。如果您遇到外观方面的问题，请使用标准选项。"</string>
+    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"部分应用可能不支持扩展版深色主题。如果遇到外观方面的问题，请使用标准版。"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"显示字幕"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"仅限支持的应用"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"字幕大小和样式"</string>
@@ -3444,6 +3441,10 @@
     <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"开启后，系统将与此用户共享通话记录和短信记录。"</string>
     <string name="user_revoke_admin_confirm_title" msgid="3057842401861731863">"要移除管理员权限吗？"</string>
     <string name="user_revoke_admin_confirm_message" msgid="9207187319308572958">"如果您移除该用户的管理员权限，您或其他管理员之后可以重新授予该权限。"</string>
+    <!-- no translation found for user_revoke_admin_for_self_confirm_title (5661292626700927475) -->
+    <skip />
+    <!-- no translation found for user_revoke_admin_for_self_confirm_message (4397795314721962937) -->
+    <skip />
     <string name="emergency_info_title" msgid="8233682750953695582">"急救信息"</string>
     <string name="emergency_info_summary" msgid="8463622253016757697">"<xliff:g id="USER_NAME">%1$s</xliff:g>的相关信息和联系人信息"</string>
     <string name="open_app_button" msgid="5025229765547191710">"打开“<xliff:g id="APP_NAME">%1$s</xliff:g>”"</string>
@@ -4375,8 +4376,10 @@
     <string name="app_permissions" msgid="8666537659217653626">"权限管理器"</string>
     <string name="app_data_sharing_updates_title" msgid="1694297952320402788">"位置数据共享方面的更新"</string>
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"查看改变了位置数据共享方式的应用"</string>
-    <string name="app_function_access_settings_title" msgid="1474765429611652468">"其他应用的代理控制"</string>
-    <string name="app_function_access_settings_summary" msgid="6465715820745848068">"在您的设备和其他应用中执行操作"</string>
+    <!-- no translation found for app_function_access_settings_title (1837117989202166166) -->
+    <skip />
+    <!-- no translation found for app_function_access_settings_summary (3654291845453799170) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"点按唤醒"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"在屏幕上的任意位置点按两次即可唤醒设备"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"打开链接"</string>
@@ -5890,6 +5893,8 @@
     <string name="device_supervision_switch_no_pin_summary" msgid="4869563544571033220">"设置 PIN 码"</string>
     <string name="keywords_supervision_settings" msgid="43064288661561602">"监督, 家长控制, 家长, 监督 PIN 码, PIN 码, supervision, parental controls, parents, supervision pin, pin"</string>
     <string name="supervision_pin_management_preference_title" msgid="7721501202320841845">"管理 PIN 码"</string>
+    <!-- no translation found for supervision_pin_management_screen_title (9118601026702645173) -->
+    <skip />
     <string name="supervision_pin_management_preference_keywords" msgid="5034450635706621750">"家长专用 PIN 码, 家长控制 PIN 码, Parent PIN, Parental controls PIN"</string>
     <string name="supervision_pin_management_preference_summary_add" msgid="2247921267270577374">"添加辅助邮箱"</string>
     <string name="supervision_pin_management_preference_summary_verify_recovery" msgid="5072554239108915119">"验证辅助邮箱"</string>
