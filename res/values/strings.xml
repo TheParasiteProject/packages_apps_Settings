@@ -6190,8 +6190,8 @@
     <string name="accessibility_hearingaid_asha_only_intro">Set up and manage ASHA hearing aids, cochlear implants, and other amplification devices</string>
     <!-- Introduction for the Hearing devices page to introduce feature. This string is for device that only supports LE Audio hearing aids.  [CHAR LIMIT=NONE] -->
     <string name="accessibility_hearingaid_hap_only_intro">Set up and manage LE Audio hearing aids, cochlear implants, and other amplification devices</string>
-    <!-- Summary for the accessibility preference for hearing aid when not connected. [CHAR LIMIT=50] -->
-    <string name="accessibility_hearingaid_not_connected_summary">No hearing devices connected</string>
+    <!-- Summary for the accessibility preference for hearing aid. Action-based descriptions to introduce hearing aid.  [CHAR LIMIT=NONE] -->
+    <string name="accessibility_hearingaid_not_connected_summary">Set up and manage hearing aids and other amplification devices</string>
     <!-- Summary for the accessibility preference for hearing aid when adding new devices. [CHAR LIMIT=50] -->
     <string name="accessibility_hearingaid_adding_summary">Add hearing aids</string>
     <!-- Title of the pair instruction dialog. Dialog shows to ask the user to make sure that their hearing aid devices are in pairing mode. [CHAR LIMIT=25] -->
