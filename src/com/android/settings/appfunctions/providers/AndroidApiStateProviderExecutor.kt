@@ -41,6 +41,7 @@ import com.android.settings.appfunctions.sources.ScreenTimeoutStateSource
 import com.android.settings.appfunctions.sources.SharedDeviceStateData
 import com.android.settings.appfunctions.sources.WifiStatusStateSource
 import com.android.settings.appfunctions.sources.ZenModesStateSource
+import com.android.settings.fuelgauge.batteryusage.BatteryUsageStateSource
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 
@@ -59,6 +60,7 @@ class AndroidApiStateProviderExecutor(private val context: Context) : DeviceStat
             AppsStorageStateSource(),
             BatterySaverStateSource(),
             BatteryStatusStateSource(),
+            BatteryUsageStateSource(),
             BubblesStateSource(),
             LockScreenStateSource(),
             ManagedProfileStateSource(),
