@@ -46,7 +46,6 @@ import android.view.View
 import android.view.ViewManager
 import android.view.WindowManager
 import android.view.WindowManagerGlobal
-import com.android.server.display.feature.flags.Flags.enableModeLimitForExternalDisplay
 import com.android.settings.connecteddevice.display.ExternalDisplaySettingsConfiguration.VIRTUAL_DISPLAY_PACKAGE_NAME_SYSTEM_PROPERTY
 import com.android.settings.flags.FeatureFlagsImpl
 import com.android.wm.shell.shared.desktopmode.DesktopState
@@ -301,9 +300,6 @@ open class ConnectedDisplayInjector(open val context: Context?) {
     open fun setUserPreferredDisplayMode(displayId: Int, mode: Display.Mode) {
         DisplayManagerGlobal.getInstance().setUserPreferredDisplayMode(displayId, mode)
     }
-
-    /** @return true if the display mode limit flag enabled. */
-    open fun isModeLimitForExternalDisplayEnabled(): Boolean = enableModeLimitForExternalDisplay()
 
     open fun isDefaultDisplayInTopologySwitchEnabled(): Boolean =
         android.window.DesktopExperienceFlags.ENABLE_DEFAULT_DISPLAY_IN_TOPOLOGY_SWITCH.isTrue() &&
