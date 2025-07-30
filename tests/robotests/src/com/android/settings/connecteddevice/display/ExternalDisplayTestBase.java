@@ -93,7 +93,6 @@ public class ExternalDisplayTestBase {
         doReturn(mHandler).when(mMockedInjector).getHandler();
         doReturn("").when(mMockedInjector).getSystemProperty(
                 VIRTUAL_DISPLAY_PACKAGE_NAME_SYSTEM_PROPERTY);
-        doReturn(true).when(mMockedInjector).isModeLimitForExternalDisplayEnabled();
         doReturn(true).when(mMockedInjector).isDefaultDisplayInTopologySwitchEnabled();
         doReturn(false).when(mMockedInjector).isDesktopModeSupportedOnDefaultDisplay();
         doAnswer((arg) -> {
