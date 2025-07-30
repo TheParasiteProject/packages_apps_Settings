@@ -44,8 +44,5 @@ interface DeviceStateSource {
      * @return A [PerScreenDeviceStates] object. This object might contain an empty list of states
      *   or have specific default values if no relevant states are found or applicable.
      */
-    suspend fun get(
-        context: Context,
-        sharedDeviceStateData: SharedDeviceStateData,
-    ): PerScreenDeviceStates
+    fun get(context: Context, sharedDeviceStateData: SharedDeviceStateData): PerScreenDeviceStates
 }

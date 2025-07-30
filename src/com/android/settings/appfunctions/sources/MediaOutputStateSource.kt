@@ -32,7 +32,7 @@ import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDev
 class MediaOutputStateSource : DeviceStateSource {
     override val category: DeviceStateCategory = DeviceStateCategory.UNCATEGORIZED
 
-    override suspend fun get(
+    override fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): PerScreenDeviceStates {
