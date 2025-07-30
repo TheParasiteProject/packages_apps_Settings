@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit
 class ScreenTimeoutStateSource : DeviceStateSource {
     override val category: DeviceStateCategory = DeviceStateCategory.UNCATEGORIZED
 
-    override suspend fun get(
+    override fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): PerScreenDeviceStates {
