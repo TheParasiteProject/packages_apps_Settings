@@ -60,9 +60,7 @@ public class LocationServices extends DashboardFragment {
 
     @Override
     public @Nullable String getPreferenceScreenBindingKey(@NonNull Context context) {
-        // TODO b/419103809 - Return LocationServicesScreen.KEY when preference screen supports
-        // service injection.
-        return null;
+        return LocationServicesScreen.KEY;
     }
     /**
      * For Search.
