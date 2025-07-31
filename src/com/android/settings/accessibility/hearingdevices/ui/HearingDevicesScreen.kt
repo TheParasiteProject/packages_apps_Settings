@@ -31,10 +31,12 @@ import com.android.internal.accessibility.AccessibilityShortcutController.ACCESS
 import com.android.settings.R
 import com.android.settings.Settings.HearingDevicesActivity
 import com.android.settings.accessibility.AccessibilityHearingAidsFragment
+import com.android.settings.accessibility.FeedbackManager
 import com.android.settings.accessibility.Flags
 import com.android.settings.accessibility.HearingAidHelper
 import com.android.settings.accessibility.HearingAidUtils
 import com.android.settings.accessibility.shared.ui.AccessibilityShortcutPreference
+import com.android.settings.accessibility.shared.ui.FeedbackButtonPreference
 import com.android.settings.bluetooth.Utils
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.utils.makeLaunchIntent
@@ -145,6 +147,7 @@ open class HearingDevicesScreen(context: Context) :
                 +HearingAidCompatibilitySwitchPreference(context)
             }
             +HearingDevicesFooterPreference(context)
+            +FeedbackButtonPreference { FeedbackManager(context, metricsCategory) }
         }
 
     override fun isIndexable(context: Context): Boolean = true

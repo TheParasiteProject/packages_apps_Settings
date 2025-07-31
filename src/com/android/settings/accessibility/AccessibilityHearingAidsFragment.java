@@ -59,6 +59,8 @@ public class AccessibilityHearingAidsFragment extends BaseRestrictedSupportFragm
                         getMetricsCategory()
                 );
             }
+            use(FeedbackButtonPreferenceController.class).initialize(
+                    new FeedbackManager(context, getMetricsCategory()));
         }
     }
 
