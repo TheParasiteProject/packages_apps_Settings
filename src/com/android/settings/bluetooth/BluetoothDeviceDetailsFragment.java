@@ -21,21 +21,17 @@ import static android.bluetooth.BluetoothDevice.BOND_NONE;
 import android.app.Activity;
 import android.app.settings.SettingsEnums;
 import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserManager;
-import android.text.TextUtils;
 import android.util.FeatureFlagUtils;
 import android.util.Log;
 import android.view.InputDevice;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -47,7 +43,6 @@ import com.android.settings.bluetooth.ui.model.FragmentTypeModel;
 import com.android.settings.connecteddevice.stylus.StylusDevicesController;
 import com.android.settings.inputmethod.KeyboardSettingsPreferenceController;
 import com.android.settings.overlay.FeatureFactory;
-import com.android.settings.slices.SlicePreferenceController;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.BluetoothUtils;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -95,8 +90,6 @@ public class BluetoothDeviceDetailsFragment extends BluetoothDetailsConfigurable
     InputDevice mInputDevice;
 
     private UserManager mUserManager;
-    int mExtraControlViewWidth = 0;
-    boolean mExtraControlUriLoaded = false;
 
     private final BluetoothCallback mBluetoothCallback =
             new BluetoothCallback() {
@@ -117,17 +110,6 @@ public class BluetoothDeviceDetailsFragment extends BluetoothDetailsConfigurable
                     if (device.equals(cachedDevice)) {
                         finishFragmentIfNecessary();
                     }
-                }
-            };
-
-    private final BluetoothAdapter.OnMetadataChangedListener mExtraControlMetadataListener =
-            (device, key, value) -> {
-                if (key == METADATA_FAST_PAIR_CUSTOMIZED_FIELDS
-                        && mExtraControlViewWidth > 0
-                        && !mExtraControlUriLoaded
-                        && getActivity() != null) {
-                    Log.i(TAG, "Update extra control UI because of metadata change.");
-                    updateExtraControlUri(mExtraControlViewWidth);
                 }
             };
 
@@ -202,67 +184,12 @@ public class BluetoothDeviceDetailsFragment extends BluetoothDetailsConfigurable
                                         cachedDevice.getDevice())));
 
         localBluetoothManager.getEventManager().registerCallback(mBluetoothCallback);
-        mBluetoothAdapter.addOnMetadataChangedListener(
-                cachedDevice.getDevice(),
-                context.getMainExecutor(),
-                mExtraControlMetadataListener);
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
         localBluetoothManager.getEventManager().unregisterCallback(mBluetoothCallback);
-        if (cachedDevice == null) {
-            return;
-        }
-        BluetoothDevice device = cachedDevice.getDevice();
-        try {
-            mBluetoothAdapter.removeOnMetadataChangedListener(
-                    device, mExtraControlMetadataListener);
-        } catch (IllegalArgumentException e) {
-            Log.w(
-                    TAG,
-                    "Unable to unregister metadata change callback for "
-                            + cachedDevice,
-                    e);
-        }
-    }
-
-    private void updateExtraControlUri(int viewWidth) {
-        BluetoothFeatureProvider featureProvider =
-                FeatureFactory.getFeatureFactory().getBluetoothFeatureProvider();
-        Uri controlUri = null;
-        String uri = featureProvider.getBluetoothDeviceControlUri(cachedDevice.getDevice());
-        if (!TextUtils.isEmpty(uri)) {
-            try {
-                controlUri = Uri.parse(uri + viewWidth);
-            } catch (NullPointerException exception) {
-                Log.d(TAG, "unable to parse uri");
-            }
-        }
-        mExtraControlUriLoaded |= controlUri != null;
-
-        Uri finalControlUri = controlUri;
-        getController(
-                SlicePreferenceController.class,
-                controller -> {
-                    if (getPreferenceScreen().findPreference(controller.getPreferenceKey())
-                            != null) {
-                        controller.setSliceUri(finalControlUri);
-                        controller.onStart();
-                        controller.displayPreference(getPreferenceScreen());
-                    }
-                });
-
-        // Temporarily fix the issue that the page will be automatically scrolled to a wrong
-        // position when entering the page. This will make sure the bluetooth header is shown on top
-        // of the page.
-        getController(
-                LeAudioBluetoothDetailsHeaderController.class,
-                controller -> controller.displayPreference(getPreferenceScreen()));
-        getController(
-                AdvancedBluetoothDetailsHeaderController.class,
-                controller -> controller.displayPreference(getPreferenceScreen()));
     }
 
     protected <T extends AbstractPreferenceController> void getController(Class<T> clazz,
@@ -272,24 +199,6 @@ public class BluetoothDeviceDetailsFragment extends BluetoothDetailsConfigurable
             action.accept(controller);
         }
     }
-
-    private final ViewTreeObserver.OnGlobalLayoutListener mOnGlobalLayoutListener =
-            new ViewTreeObserver.OnGlobalLayoutListener() {
-                @Override
-                public void onGlobalLayout() {
-                    View view = getView();
-                    if (view == null) {
-                        return;
-                    }
-                    if (view.getWidth() <= 0) {
-                        return;
-                    }
-                    mExtraControlViewWidth = view.getWidth() - getPaddingSize();
-                    updateExtraControlUri(mExtraControlViewWidth);
-                    view.getViewTreeObserver().removeOnGlobalLayoutListener(
-                            mOnGlobalLayoutListener);
-                }
-            };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -301,9 +210,6 @@ public class BluetoothDeviceDetailsFragment extends BluetoothDetailsConfigurable
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
-        if (view != null) {
-            view.getViewTreeObserver().addOnGlobalLayoutListener(mOnGlobalLayoutListener);
-        }
         getListView().setItemViewCacheSize(100);
         return view;
     }

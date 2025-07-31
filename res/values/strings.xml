@@ -4343,17 +4343,21 @@
     <!-- Header on first screen of choose password/PIN as backup for fingerprint flow. If this string cannot be translated in under 40 characters, please translate "Set fingerprint backup" [CHAR LIMIT=40] -->
     <string name="lockpassword_choose_your_pin_header_for_fingerprint">To use fingerprint, set PIN</string>
     <!-- Header on password confirm screen [CHAR LIMIT=40] -->
-    <string name="lockpassword_confirm_your_password_header">Re-enter your password</string>
+    <string name="lockpassword_confirm_your_password_header">Enter your device password</string>
+    <!-- Header on password setup confirm screen [CHAR LIMIT=40] -->
+    <string name="lockpassword_reenter_your_password_header">Re-enter your password</string>
     <!-- Header on work profile password confirm screen [CHAR LIMIT=40] -->
     <string name="lockpassword_reenter_your_profile_password_header">Re-enter your work password</string>
     <!-- Header on password confirm screen for the work profile [CHAR LIMIT=40] -->
     <string name="lockpassword_confirm_your_work_password_header">Enter your work password</string>
     <!-- Header on pattern confirm screen [CHAR LIMIT=30] -->
-    <string name="lockpassword_confirm_your_pattern_header">Confirm your pattern</string>
+    <string name="lockpassword_confirm_your_pattern_header">Enter your device pattern</string>
     <!-- Header on pattern confirm screen for the work profile [CHAR LIMIT=30] -->
     <string name="lockpassword_confirm_your_work_pattern_header">Enter your work pattern</string>
     <!-- Header on password confirm screen [CHAR LIMIT=40] -->
-    <string name="lockpassword_confirm_your_pin_header">Re-enter your PIN</string>
+    <string name="lockpassword_confirm_your_pin_header">Enter your device PIN</string>
+    <!-- Header on password setup confirm screen [CHAR LIMIT=40] -->
+    <string name="lockpassword_reenter_your_pin_header">Re-enter your PIN</string>
     <!-- Header on work profile password confirm screen [CHAR LIMIT=40] -->
     <string name="lockpassword_reenter_your_profile_pin_header">Re-enter your work PIN</string>
     <!-- Header on password confirm screen for the work profile [CHAR LIMIT=40] -->
@@ -4396,22 +4400,22 @@
 
     <!-- Message to be used to explain the users that they need to enter their pattern to continue a
          particular operation. [CHAR LIMIT=70]-->
-    <string name="lockpassword_confirm_your_pattern_generic">Draw your pattern to continue</string>
+    <string name="lockpassword_confirm_your_pattern_generic">Your pattern verifies it\'s you</string>
     <!-- Message to be used to explain the users that they need to enter their PIN to continue a
          particular operation. [CHAR LIMIT=70]-->
-    <string name="lockpassword_confirm_your_pin_generic">Enter your PIN to continue</string>
+    <string name="lockpassword_confirm_your_pin_generic">Your PIN verifies it\'s you</string>
     <!-- Message to be used to explain the users that they need to enter their password to continue a
          particular operation. [CHAR LIMIT=70]-->
-    <string name="lockpassword_confirm_your_password_generic">Enter your password to continue</string>
+    <string name="lockpassword_confirm_your_password_generic">Your password verifies it\'s you</string>
     <!-- Message to be used to explain the users that they need to enter their work pattern to continue a
          particular operation. [CHAR LIMIT=70]-->
-    <string name="lockpassword_confirm_your_pattern_generic_profile">Draw your work pattern to continue</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile">Your work pattern verifies it\'s you</string>
     <!-- Message to be used to explain the users that they need to enter their work PIN to continue a
          particular operation. [CHAR LIMIT=70]-->
-    <string name="lockpassword_confirm_your_pin_generic_profile">Enter your work PIN to continue</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile">Your work PIN verifies it\'s you</string>
     <!-- Message to be used to explain the users that they need to enter their work password to continue a
          particular operation. [CHAR LIMIT=70]-->
-    <string name="lockpassword_confirm_your_password_generic_profile">Enter your work password to continue</string>
+    <string name="lockpassword_confirm_your_password_generic_profile">Your work password verifies it\'s you</string>
 
     <!-- This string shows up on a screen where a user can enter a pattern that
      unlocks their device. This is an extra security measure that's required for them to
@@ -5514,11 +5518,11 @@
     <string name="accessibility_tap_assistance_title">Timing controls</string>
     <!-- Title for the accessibility system controls page. [CHAR LIMIT=50] -->
     <string name="accessibility_system_controls_title">System controls</string>
-    <!-- The menu item to start the feedback process for the accessibility [CHAR LIMIT=30] -->
+    <!-- Title for button preference to start the feedback process for the accessibility [CHAR LIMIT=30] -->
     <string name="accessibility_send_feedback_title">Send feedback</string>
-    <!-- The menu item to start the survey process for the accessibility [CHAR LIMIT=30] -->
-    <string name="accessibility_send_survey_title">Rate us</string>
-    <!-- The menu item to start the disability support for the accessibility [CHAR LIMIT=30] -->
+    <!-- Title for button preference to start the survey process for the accessibility [CHAR LIMIT=30] -->
+    <string name="accessibility_send_survey_title">Take survey</string>
+    <!-- Title for button preference to start the disability support for the accessibility [CHAR LIMIT=30] -->
     <string name="accessibility_disability_support_title">Contact Google Disability Support</string>
     <!-- Channel name for the accessibility survey notification. [CHAR LIMIT=50] -->
     <string name="accessibility_send_survey_notification_channel">Accessibility Survey</string>
@@ -7192,15 +7196,14 @@
     <string name="adaptive_connectivity_switch_off">Off</string>
     <!-- Title for adaptive connectivity main switch preferences. [CHAR LIMIT=50] -->
     <string name="adaptive_connectivity_main_switch_title">Use adaptive connectivity</string>
-    <!-- Title for adaptive connectivity wi-fi switch preferences. [CHAR LIMIT=50] -->
-    <string name="adaptive_connectivity_wifi_switch_title">Auto\u2011switch Wi\u2011Fi to Cellular</string>
-    <!-- Summary for adaptive connectivity wi-fi switch preferences. [CHAR LIMIT=NONE] -->
-    <string name="adaptive_connectivity_wifi_switch_summary">Automatically use cellular data when Wi\u2011Fi connection is poor or unavailable.
-Data usage charges may apply.</string>
-    <!-- Title for adaptive connectivity mobile network switch preferences. [CHAR LIMIT=50] -->
-    <string name="adaptive_connectivity_mobile_network_switch_title">Auto\u2011switch mobile network for battery life</string>
-    <!-- Summary for adaptive connectivity mobile network switch preferences. [CHAR LIMIT=NONE] -->
-    <string name="adaptive_connectivity_mobile_network_switch_summary">Extend battery life by automatically managing network connections</string>
+    <!-- Title for adaptive connectivity wi-fi switch preferences. [CHAR LIMIT=50] [SCREENSHOT=screen/5yodM4sTT9o7LEK]-->
+    <string name="adaptive_connectivity_wifi_switch_title">Auto\u2011switch to mobile network</string>
+    <!-- Summary for adaptive connectivity wi-fi switch preferences. [CHAR LIMIT=NONE] [SCREENSHOT=screen/7Vxes8GzdbnG389] -->
+    <string name="adaptive_connectivity_wifi_switch_summary">Ensures connectivity when Wi\u2011Fi is poor or unavailable. Data charges may apply.</string>
+    <!-- Title for adaptive connectivity mobile network switch preferences. [CHAR LIMIT=50] [SCREENSHOT=screen/8EHTHBaQDBu8Zhp] -->
+    <string name="adaptive_connectivity_mobile_network_switch_title">Optimize network for battery life</string>
+    <!-- Summary for adaptive connectivity mobile network switch preferences. [CHAR LIMIT=NONE] [SCREENSHOT=screen/SRfH93TndJSwz4i] -->
+    <string name="adaptive_connectivity_mobile_network_switch_summary">Automatically selects the best network connection to extend your battery life</string>
     <!-- Cellular security related strings -->
     <!-- Title of Cellular security tile in Network & Internet settings page. [CHAR LIMIT=60]-->
     <string name="cellular_security_title">Mobile network security</string>
