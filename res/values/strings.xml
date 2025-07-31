@@ -5514,11 +5514,11 @@
     <string name="accessibility_tap_assistance_title">Timing controls</string>
     <!-- Title for the accessibility system controls page. [CHAR LIMIT=50] -->
     <string name="accessibility_system_controls_title">System controls</string>
-    <!-- The menu item to start the feedback process for the accessibility [CHAR LIMIT=30] -->
+    <!-- Title for button preference to start the feedback process for the accessibility [CHAR LIMIT=30] -->
     <string name="accessibility_send_feedback_title">Send feedback</string>
-    <!-- The menu item to start the survey process for the accessibility [CHAR LIMIT=30] -->
-    <string name="accessibility_send_survey_title">Rate us</string>
-    <!-- The menu item to start the disability support for the accessibility [CHAR LIMIT=30] -->
+    <!-- Title for button preference to start the survey process for the accessibility [CHAR LIMIT=30] -->
+    <string name="accessibility_send_survey_title">Take survey</string>
+    <!-- Title for button preference to start the disability support for the accessibility [CHAR LIMIT=30] -->
     <string name="accessibility_disability_support_title">Contact Google Disability Support</string>
     <!-- Channel name for the accessibility survey notification. [CHAR LIMIT=50] -->
     <string name="accessibility_send_survey_notification_channel">Accessibility Survey</string>
