@@ -190,7 +190,6 @@ class AccessibilityShortcutPreferenceTest {
     inner class TestableAccessibilityShortcutPreference :
         AccessibilityShortcutPreference(
             context,
-            testScope,
             TEST_KEY,
             TEST_TITLE_RES,
             testComponentName,
