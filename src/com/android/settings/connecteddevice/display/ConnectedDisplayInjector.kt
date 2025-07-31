@@ -80,8 +80,8 @@ open class ConnectedDisplayInjector(open val context: Context?) {
     /** The window manager instance, or null if it cannot be retrieved. */
     val windowManager: IWindowManager? by lazy { WindowManagerGlobal.getWindowManagerService() }
 
-    open fun isDesktopModeSupportedOnDefaultDisplay(): Boolean =
-        desktopState?.isDesktopModeSupportedOnDisplay(DEFAULT_DISPLAY) ?: false
+    open fun isProjectedModeEnabled(): Boolean =
+        desktopState?.isDesktopModeSupportedOnDisplay(DEFAULT_DISPLAY) != true
 
     /**
      * Reveals the wallpaper on the given display using a View with FLAG_SHOW_WALLPAPER flag set in
@@ -301,7 +301,7 @@ open class ConnectedDisplayInjector(open val context: Context?) {
         DisplayManagerGlobal.getInstance().setUserPreferredDisplayMode(displayId, mode)
     }
 
-    open fun isDefaultDisplayInTopologySwitchEnabled(): Boolean =
+    open fun isDefaultDisplayInTopologyFlagEnabled(): Boolean =
         android.window.DesktopExperienceFlags.ENABLE_DEFAULT_DISPLAY_IN_TOPOLOGY_SWITCH.isTrue() &&
             flags.enableDefaultDisplayInTopologySwitchBugfix()
 
