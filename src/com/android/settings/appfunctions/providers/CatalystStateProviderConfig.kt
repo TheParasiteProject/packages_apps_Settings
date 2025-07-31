@@ -246,11 +246,9 @@ fun getCatalystScreenConfigs() =
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = FlashNotificationsScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = DoubleTapPowerScreen.KEY),
-        // TODO(b/434774087): Re-enable once it doesn't block the app function coroutine scope.
-        PerScreenCatalystConfig(enabled = false, screenKey = HearingDevicesScreen.KEY),
+        PerScreenCatalystConfig(enabled = true, screenKey = HearingDevicesScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AppInfoScreen.KEY),
-        // TODO(b/434774087): Re-enable once it doesn't block the app function corouting scope.
-        PerScreenCatalystConfig(enabled = false, screenKey = MagnificationScreen.KEY),
+        PerScreenCatalystConfig(enabled = true, screenKey = MagnificationScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = MediaControlsScreen.KEY),
         PerScreenCatalystConfig(
             enabled = true,
