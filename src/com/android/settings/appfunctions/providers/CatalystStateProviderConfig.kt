@@ -22,6 +22,7 @@ import com.android.settings.accessibility.ColorAndMotionScreen
 import com.android.settings.accessibility.VibrationIntensityScreen
 import com.android.settings.accessibility.VibrationScreen
 import com.android.settings.accessibility.detail.a11yactivity.ui.A11yActivityScreen
+import com.android.settings.accessibility.detail.a11yservice.ui.A11yServiceScreen
 import com.android.settings.accessibility.flashnotifications.ui.FlashNotificationsScreen
 import com.android.settings.accessibility.hearingdevices.ui.HearingDevicesScreen
 import com.android.settings.accessibility.screenmagnification.ui.MagnificationScreen
@@ -69,6 +70,7 @@ import com.android.settings.gestures.DoubleTapPowerScreen
 import com.android.settings.gestures.SystemNavigationGestureScreen
 import com.android.settings.language.LanguageAndRegionScreen
 import com.android.settings.location.LocationScreen
+import com.android.settings.location.LocationServicesScreen
 import com.android.settings.location.RecentLocationAccessScreen
 import com.android.settings.network.AdaptiveConnectivityScreen
 import com.android.settings.network.MobileNetworkListScreen
@@ -170,6 +172,7 @@ private fun getCatalystScreenConfigs() =
         PerScreenCatalystConfig(enabled = false, screenKey = LanguageAndRegionScreen.KEY),
         PerScreenCatalystConfig(enabled = false, screenKey = ModuleLicensesScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = LegalSettingsScreen.KEY),
+        PerScreenCatalystConfig(enabled = true, screenKey = LocationServicesScreen.KEY),
         PerScreenCatalystConfig(
             enabled = true,
             screenKey = LocationScreen.KEY,
@@ -235,6 +238,7 @@ private fun getCatalystScreenConfigs() =
             category = setOf(DeviceStateCategory.UNCATEGORIZED),
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = A11yActivityScreen.KEY),
+        PerScreenCatalystConfig(enabled = true, screenKey = A11yServiceScreen.KEY),
         PerScreenCatalystConfig(
             enabled = true,
             screenKey = AmbientDisplayAlwaysOnPreferenceScreen.KEY,
