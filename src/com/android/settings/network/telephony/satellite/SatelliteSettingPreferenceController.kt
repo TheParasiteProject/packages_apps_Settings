@@ -20,6 +20,8 @@ import android.content.Intent
 import android.os.PersistableBundle
 import android.provider.Settings
 import android.telephony.CarrierConfigManager.CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC
+import android.telephony.CarrierConfigManager.CARRIER_ROAMING_NTN_CONNECT_HYBRID
+import android.telephony.CarrierConfigManager.CARRIER_ROAMING_NTN_CONNECT_MANUAL
 import android.telephony.CarrierConfigManager.KEY_CARRIER_ROAMING_NTN_CONNECT_TYPE_INT
 import android.telephony.CarrierConfigManager.KEY_SATELLITE_ATTACH_SUPPORTED_BOOL
 import android.telephony.CarrierConfigManager.KEY_SATELLITE_ENTITLEMENT_SUPPORTED_BOOL
@@ -75,39 +77,63 @@ constructor(
                 return@launch
             }
 
-            val isCarrierRoamingNtnConnectedTypeManual =
-                CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC !=
-                    mCarrierConfigs.getInt(
-                        KEY_CARRIER_ROAMING_NTN_CONNECT_TYPE_INT,
-                        CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC,
+            val carrierRoamingNtnConnectedType =
+                mCarrierConfigs.getInt(
+                    KEY_CARRIER_ROAMING_NTN_CONNECT_TYPE_INT,
+                    CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC,
+                )
+
+            val isSatelliteEntitlementSupported =
+                mCarrierConfigs.getBoolean(KEY_SATELLITE_ENTITLEMENT_SUPPORTED_BOOL, false)
+
+            when (carrierRoamingNtnConnectedType) {
+                CARRIER_ROAMING_NTN_CONNECT_MANUAL -> {
+                    preference.isVisible = actionManual()
+                }
+
+                CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC -> {
+                    preference.isVisible = true
+                    if (!isSatelliteEntitlementSupported) {
+                        preference.setSummary(
+                            R.string.satellite_setting_summary_without_entitlement
+                        )
+                        return@launch
+                    }
+                    val isSatelliteEligible =
+                        SatelliteCarrierSettingUtils.isSatelliteAccountEligible(mContext, mSubId)
+
+                    preference.setSummary(
+                        if (isSatelliteEligible) R.string.satellite_setting_enabled_summary
+                        else R.string.satellite_setting_disabled_summary
                     )
-            if (isCarrierRoamingNtnConnectedTypeManual) {
-                if (satelliteRepository.requestIsSupportedFlow().first()) {
+                }
+
+                CARRIER_ROAMING_NTN_CONNECT_HYBRID -> {
                     if (
-                        satelliteRepository
-                            .carrierRoamingNtnAvailableServicesChangedFlow(mSubId)
-                            .first()
+                        isSatelliteEntitlementSupported &&
+                            SatelliteCarrierSettingUtils.isSatelliteAccountEligible(
+                                mContext,
+                                mSubId,
+                            )
                     ) {
-                        preference.isVisible = true
                         preference.setSummary(R.string.satellite_setting_enabled_summary)
                     } else {
-                        preference.isVisible = false
+                        preference.isVisible = actionManual()
                     }
                 }
-            } else {
-                preference.isVisible = true
-                if (!mCarrierConfigs.getBoolean(KEY_SATELLITE_ENTITLEMENT_SUPPORTED_BOOL, false)) {
-                    preference.setSummary(R.string.satellite_setting_summary_without_entitlement)
-                    return@launch
-                }
-                val isSatelliteEligible =
-                    SatelliteCarrierSettingUtils.isSatelliteAccountEligible(mContext, mSubId)
-                val summary =
-                    if (isSatelliteEligible) R.string.satellite_setting_enabled_summary
-                    else R.string.satellite_setting_disabled_summary
-                preference.setSummary(summary)
             }
         }
+    }
+
+    private suspend fun actionManual(): Boolean {
+        if (
+            satelliteRepository.requestIsSupportedFlow().first() &&
+                satelliteRepository.carrierRoamingNtnAvailableServicesChangedFlow(mSubId).first()
+        ) {
+            preference.setSummary(R.string.satellite_setting_enabled_summary)
+            return true
+        }
+        return false
     }
 
     override fun getAvailabilityStatus(subId: Int): Int {
@@ -146,24 +172,49 @@ constructor(
                     return@runBlocking false
                 }
 
-                val isCarrierRoamingNtnConnectedTypeManual =
-                    CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC !=
-                        carrierConfigs.getInt(
-                            KEY_CARRIER_ROAMING_NTN_CONNECT_TYPE_INT,
-                            CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC,
-                        )
-                if (isCarrierRoamingNtnConnectedTypeManual) {
-                    val satelliteRepository = SatelliteRepository(context)
-                    if (satelliteRepository.requestIsSupportedFlow().first()) {
-                        satelliteRepository
-                            .carrierRoamingNtnAvailableServicesChangedFlow(subId)
-                            .first()
-                    } else {
-                        false
+                val carrierRoamingNtnConnectedType =
+                    carrierConfigs.getInt(
+                        KEY_CARRIER_ROAMING_NTN_CONNECT_TYPE_INT,
+                        CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC,
+                    )
+                var available = false
+                when (carrierRoamingNtnConnectedType) {
+                    CARRIER_ROAMING_NTN_CONNECT_MANUAL -> {
+                        val satelliteRepository = SatelliteRepository(context)
+                        available =
+                            satelliteRepository.requestIsSupportedFlow().first() &&
+                                satelliteRepository
+                                    .carrierRoamingNtnAvailableServicesChangedFlow(subId)
+                                    .first()
                     }
-                } else {
-                    true
+
+                    CARRIER_ROAMING_NTN_CONNECT_AUTOMATIC -> {
+                        available = true
+                    }
+
+                    CARRIER_ROAMING_NTN_CONNECT_HYBRID -> {
+                        if (
+                            carrierConfigs.getBoolean(
+                                KEY_SATELLITE_ENTITLEMENT_SUPPORTED_BOOL,
+                                false,
+                            ) &&
+                                SatelliteCarrierSettingUtils.isSatelliteAccountEligible(
+                                    context,
+                                    subId,
+                                )
+                        ) {
+                            available = true
+                        } else {
+                            val satelliteRepository = SatelliteRepository(context)
+                            available =
+                                satelliteRepository.requestIsSupportedFlow().first() &&
+                                    satelliteRepository
+                                        .carrierRoamingNtnAvailableServicesChangedFlow(subId)
+                                        .first()
+                        }
+                    }
                 }
+                available
             }
 
             override fun getSearchResult(subId: Int): MobileNetworkSettingsSearchResult? {
