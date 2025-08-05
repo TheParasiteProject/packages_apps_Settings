@@ -5461,7 +5461,7 @@
     <!-- Title for the accessibility preference category of display services and settings. [CHAR LIMIT=50] -->
     <string name="display_category_title">Display</string>
     <!-- Title for the accessibility color and motion page. [CHAR LIMIT=50] -->
-    <string name="accessibility_color_and_motion_title">Color and motion</string>
+    <string name="accessibility_color_and_motion_title">Color &amp; motion</string>
     <!-- Subtext for the accessibility color and motion page to highlight key functionality. [CHAR LIMIT=NONE] -->
     <string name="accessibility_color_and_motion_subtext">Dark theme, color correction, remove animations</string>
     <!-- Title for the accessibility cursor and touchpad page. [CHAR LIMIT=50] -->
@@ -5671,7 +5671,7 @@
     <!-- Title for the footer text to explain what accessibility service does. [CHAR LIMIT=35] -->
     <string name="accessibility_introduction_title">About <xliff:g id="service" example="Select to Speak">%1$s</xliff:g></string>
     <!-- Title for the accessibility preference to adjust the display size, font size, bold text, and high contrast text features. [CHAR LIMIT=NONE] -->
-    <string name="accessibility_text_reading_options_title">Display size and text</string>
+    <string name="accessibility_text_reading_options_title">Display size &amp; text</string>
     <!-- Subtext of the "Display size and text" options to highlight the key functionality. [CHAR LIMIT=NONE] -->
     <string name="accessibility_text_reading_options_subtext">Font size, display size, bold text, outline text</string>
     <!-- Title for the entry of the text reading options. [CHAR LIMIT=NONE] -->
@@ -13648,6 +13648,8 @@
 
     <!-- Title for RTT setting. [CHAR LIMIT=NONE] -->
     <string name="rtt_settings_title"></string>
+    <!-- Subtext for the RTT settings that explains what RTT settings is [CHAR LIMIT=NONE]-->
+    <string name="rtt_settings_summary">Use text to communicate during a call</string>
     <!-- Subtext for showing the option of RTT setting. [CHAR LIMIT=NONE] -->
     <string name="rtt_settings_no_visible"></string>
     <!-- Subtext for showing the option of RTT setting. [CHAR LIMIT=NONE] -->
