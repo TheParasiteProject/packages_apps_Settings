@@ -149,7 +149,7 @@
         <Preference
             android:key="rtt_setting"
             android:icon="@drawable/ic_rtt_settings"
-            android:summary="@string/summary_placeholder"
+            android:summary="@string/rtt_settings_summary"
             android:title="@string/rtt_settings_title"
             settings:keywords="@string/keywords_rtt"
             settings:controller="com.android.settings.accessibility.RTTSettingPreferenceController"/>
