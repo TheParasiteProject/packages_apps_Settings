@@ -42,7 +42,7 @@ import androidx.preference.PreferenceViewHolder;
 
 import com.android.settings.R;
 import com.android.settings.overlay.FeatureFactory;
-import com.android.settingslib.bluetooth.AmbientVolumeUi;
+import com.android.settingslib.bluetooth.hearingdevices.ui.AmbientVolumeUi;
 import com.android.settingslib.widget.Expandable;
 import com.android.settingslib.widget.SettingsThemeHelper;
 import com.android.settingslib.widget.SliderPreference;
@@ -104,7 +104,8 @@ public class AmbientVolumePreference extends PreferenceGroup implements AmbientV
     public AmbientVolumePreference(@NonNull Context context) {
         super(context, null);
         if (SettingsThemeHelper.isExpressiveTheme(context)) {
-            setLayoutResource(R.layout.preference_ambient_volume_expressive);
+            setLayoutResource(com.android.settingslib.widget.theme
+                    .R.layout.settingslib_expressive_preference);
             setWidgetLayoutResource(com.android.settingslib.widget.preference.expandable
                     .R.layout.settingslib_widget_expandable_icon);
         } else {

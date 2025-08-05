@@ -45,7 +45,7 @@ import androidx.preference.PreferenceViewHolder;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.settings.R;
-import com.android.settingslib.bluetooth.AmbientVolumeUi;
+import com.android.settingslib.bluetooth.hearingdevices.ui.AmbientVolumeUi;
 import com.android.settingslib.widget.SliderPreference;
 
 import org.junit.Before;
