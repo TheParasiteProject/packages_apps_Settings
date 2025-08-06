@@ -5966,6 +5966,22 @@
             </intent-filter>
         </receiver>
 
+        <activity
+            android:name="Settings$SafetyCenterActivity"
+            android:exported="true"
+            android:label="@string/safety_center_title"
+            android:featureFlag="com.android.settings.flags.enable_safety_center_new_ui">
+            <intent-filter android:priority="20">
+                <action android:name="android.intent.action.SAFETY_CENTER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                   android:value="com.android.settings.safetycenter.ui.SafetyCenterFragment" />
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                   android:value="true" />
+        </activity>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
+
     </application>
 </manifest>
