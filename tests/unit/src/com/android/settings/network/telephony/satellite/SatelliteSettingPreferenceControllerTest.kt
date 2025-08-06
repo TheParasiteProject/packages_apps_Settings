@@ -30,18 +30,24 @@ import com.android.settings.network.CarrierConfigCache
 import com.android.settings.network.SatelliteRepository
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.kotlin.any
 import org.mockito.kotlin.eq
 import org.mockito.kotlin.mock
+import org.mockito.kotlin.stub
 import org.mockito.kotlin.whenever
 
 @RunWith(AndroidJUnit4::class)
 class SatelliteSettingPreferenceControllerTest {
     private val mockCarrierConfigCache = mock<CarrierConfigCache>()
-    private var mockSatelliteRepository = mock<SatelliteRepository>()
+    private var mockSatelliteRepository =
+        mock<SatelliteRepository>().stub {
+            on { isSatelliteAccessConfigurationForCurrentLocationFlow(TEST_SUB_ID) }
+                .thenReturn(flowOf(true))
+        }
     private val context: Context = ApplicationProvider.getApplicationContext()
     private val preferenceIntent = Intent()
     private val preference =
@@ -58,6 +64,31 @@ class SatelliteSettingPreferenceControllerTest {
             carrierConfigCache = mockCarrierConfigCache,
             satelliteRepository = mockSatelliteRepository,
         )
+
+    @Test
+    fun isVisible_outOfFence_disabled() = runBlocking {
+        val carrierConfigs = PersistableBundle()
+        carrierConfigs.putBoolean(KEY_SATELLITE_ATTACH_SUPPORTED_BOOL, true)
+        whenever(mockCarrierConfigCache.getSpecificConfigsForSubId(eq(TEST_SUB_ID), any()))
+            .thenReturn(carrierConfigs)
+        whenever(
+                mockSatelliteRepository.isSatelliteAccessConfigurationForCurrentLocationFlow(
+                    TEST_SUB_ID
+                )
+            )
+            .thenReturn(flowOf(false))
+
+        preference.key = controller.preferenceKey
+
+        controller.initialize(TEST_SUB_ID)
+        preferenceScreen.addPreference(preference)
+
+        controller.displayPreference(preferenceScreen)
+        controller.onViewCreated(TestLifecycleOwner())
+        delay(100)
+
+        assertThat(preference.isEnabled).isEqualTo(false)
+    }
 
     @Test
     fun isVisible_satelliteIsNotSupported_inVisible() = runBlocking {
