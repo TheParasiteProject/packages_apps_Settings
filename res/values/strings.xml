@@ -9284,6 +9284,8 @@
     <!-- [CHAR LIMIT=100] Notification bundle type summary: content recommendations -->
     <string name="notification_bundle_recs_summary">Newsletters, recommended media, and more</string>
 
+    <!-- Notification bundling: text to be displayed when there are no apps excluded from being bundled -->
+    <string name="notification_bundle_no_apps_desc">All apps are currently using notification organizer</string>
 
     <!-- App Info > Notifications: Title for section where notifications AI features can be configured [CHAR LIMIT=80]-->
     <string name="notification_ai_features_title">Manage with AI</string>
@@ -9299,6 +9301,9 @@
     <string name="notification_excluded_apps">Don\'t include these apps</string>
     <string name="notification_app_level_summarize_title">Notification summaries</string>
     <string name="notification_app_level_summarize_subtext">Get quick recaps of longer messages</string>
+
+    <!-- Notification summarization: text to be displayed when there are no messaging apps excluded from being summarized -->
+    <string name="notification_summarization_no_apps_desc">All applicable apps are currently using notification summaries</string>
 
     <!-- App Info > Notifications: Title for section controlling whether this app may show notifications in a promoted format [CHAR LIMIT=80] -->
     <string name="live_notifications">Live notifications</string>
