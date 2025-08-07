@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.android.settings;
 
 import static android.provider.Settings.ACTION_PRIVACY_SETTINGS;
@@ -51,6 +50,7 @@ import com.android.settings.network.AdaptiveConnectivitySettings;
 import com.android.settings.network.MobileNetworkIntentConverter;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.safetycenter.SafetyCenterManagerWrapper;
+import com.android.settings.safetycenter.SafetyCenterUtils;
 import com.android.settings.security.SecuritySettingsFeatureProvider;
 import com.android.settings.spa.app.catalyst.AppInfoStorageScreen;
 import com.android.settings.system.ResetDashboardFragment;
@@ -209,12 +209,8 @@ public class Settings extends SettingsActivity {
             }
 
             if (SafetyCenterManagerWrapper.get().isEnabled(this)) {
-                try {
-                    startActivity(new Intent(Intent.ACTION_SAFETY_CENTER)
-                            .setPackage(getPackageManager().getPermissionControllerPackageName()));
+                if (SafetyCenterUtils.redirectToSafetyCenter(this)) {
                     finish();
-                } catch (ActivityNotFoundException e) {
-                    Log.e(TAG, "Unable to open safety center", e);
                 }
             }
         }
@@ -305,14 +301,11 @@ public class Settings extends SettingsActivity {
 
             if (ACTION_PRIVACY_SETTINGS.equals(getIntent().getAction())
                     && SafetyCenterManagerWrapper.get().isEnabled(this)) {
-                try {
-                    startActivity(new Intent(Intent.ACTION_SAFETY_CENTER)
-                            .setPackage(getPackageManager().getPermissionControllerPackageName()));
+                if (SafetyCenterUtils.redirectToSafetyCenter(this)) {
                     finish();
-                } catch (ActivityNotFoundException e) {
-                    Log.e(TAG, "Unable to open safety center", e);
                 }
             }
+
         }
     }
     public static class PrivacyControlsActivity extends SettingsActivity { /* empty */ }
@@ -640,4 +633,5 @@ public class Settings extends SettingsActivity {
             super(ColorModeScreen.KEY, ColorModePreferenceFragment.class);
         }
     }
+    public static class SafetyCenterActivity extends SettingsActivity { }
 }
