@@ -202,7 +202,11 @@ private fun getCatalystScreenConfigs() =
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_BATTERY),
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = ScreenTimeoutScreen.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = SoundScreen.KEY),
+        PerScreenCatalystConfig(
+            enabled = true,
+            screenKey = SoundScreen.KEY,
+            appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_NOTIFICATIONS),
+        ),
         PerScreenCatalystConfig(enabled = false, screenKey = SupervisionPinManagementScreen.KEY),
         PerScreenCatalystConfig(
             enabled = true,
@@ -253,7 +257,11 @@ private fun getCatalystScreenConfigs() =
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_MOBILE_DATA),
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = AdvancedConnectedDeviceScreen.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = ConversationListScreen.KEY),
+        PerScreenCatalystConfig(
+            enabled = true,
+            screenKey = ConversationListScreen.KEY,
+            appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_NOTIFICATIONS),
+        ),
         PerScreenCatalystConfig(enabled = true, screenKey = DateTimeSettingsScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = HardwareInfoScreen.KEY),
         PerScreenCatalystConfig(
@@ -265,7 +273,11 @@ private fun getCatalystScreenConfigs() =
             screenKey = AppInfoStorageScreen.KEY,
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_STORAGE),
         ),
-        PerScreenCatalystConfig(enabled = true, screenKey = FlashNotificationsScreen.KEY),
+        PerScreenCatalystConfig(
+            enabled = true,
+            screenKey = FlashNotificationsScreen.KEY,
+            appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_NOTIFICATIONS),
+        ),
         PerScreenCatalystConfig(enabled = true, screenKey = DoubleTapPowerScreen.KEY),
         //        PerScreenCatalystConfig(enabled = true, screenKey = HearingDevicesScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AppInfoScreen.KEY),
@@ -278,7 +290,11 @@ private fun getCatalystScreenConfigs() =
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = NfcAndPaymentScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = NightDisplayScreen.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = BubbleNotificationScreen.KEY),
+        PerScreenCatalystConfig(
+            enabled = true,
+            screenKey = BubbleNotificationScreen.KEY,
+            appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_NOTIFICATIONS),
+        ),
         PerScreenCatalystConfig(enabled = true, screenKey = ResetDashboardScreen.KEY),
         PerScreenCatalystConfig(
             enabled = true,
@@ -298,7 +314,11 @@ private fun getCatalystScreenConfigs() =
         PerScreenCatalystConfig(enabled = true, screenKey = AppDashboardScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = ConnectedDeviceDashboardScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = EmergencyDashboardScreen.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = ZenModesListScreen.KEY),
+        PerScreenCatalystConfig(
+            enabled = true,
+            screenKey = ZenModesListScreen.KEY,
+            appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_NOTIFICATIONS),
+        ),
         PerScreenCatalystConfig(enabled = true, screenKey = SystemDashboardScreen.KEY),
         PerScreenCatalystConfig(
             enabled = true,
