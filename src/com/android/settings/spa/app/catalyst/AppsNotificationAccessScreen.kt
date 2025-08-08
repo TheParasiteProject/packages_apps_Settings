@@ -26,20 +26,21 @@ import android.content.pm.PackageManager
 import android.content.pm.ServiceInfo
 import android.os.Bundle
 import android.provider.Settings
-import android.provider.Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS
 import android.service.notification.NotificationListenerService
 import android.util.Log
 import com.android.settings.R
+import com.android.settings.Settings.NotificationAccessSettingsActivity
 import com.android.settings.contract.TAG_DEVICE_STATE_SCREEN
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.flags.Flags
+import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.preferenceHierarchy
 import kotlinx.coroutines.CoroutineScope
 
 /** "Apps" -> "Special app access" -> "Notification read, reply & control" */
-//@ProvidePreferenceScreen(AppsNotificationAccessScreen.KEY)
+@ProvidePreferenceScreen(AppsNotificationAccessScreen.KEY)
 open class AppsNotificationAccessScreen : PreferenceScreenMixin {
 
     override val key: String
@@ -51,7 +52,7 @@ open class AppsNotificationAccessScreen : PreferenceScreenMixin {
     override val highlightMenuKey: Int
         get() = R.string.menu_key_apps
 
-    override fun getMetricsCategory() = SettingsEnums.PAGE_UNKNOWN // TODO: correct page id
+    override fun getMetricsCategory() = SettingsEnums.NOTIFICATION_ACCESS
 
     override fun tags(context: Context) = arrayOf(TAG_DEVICE_STATE_SCREEN)
 
@@ -59,10 +60,8 @@ open class AppsNotificationAccessScreen : PreferenceScreenMixin {
 
     override fun hasCompleteHierarchy() = false
 
-    // TODO: kurtismelby - app highlighting should be supported when there is a
-    //   a PreferenceMetadata for a specific app.
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?): Intent? =
-        Intent(ACTION_NOTIFICATION_LISTENER_SETTINGS)
+        makeLaunchIntent(context, NotificationAccessSettingsActivity::class.java, metadata?.key)
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
         preferenceHierarchy(context) {
@@ -78,7 +77,7 @@ open class AppsNotificationAccessScreen : PreferenceScreenMixin {
         }
 
     companion object {
-        const val KEY = "device_state_apps_notification_access"
+        const val KEY = "notification_access"
 
         // TODO: b/416239475 - unify this code with ServiceListing.java
         @JvmStatic
