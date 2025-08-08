@@ -31,6 +31,7 @@ import com.android.settings.appfunctions.sources.LockScreenStateSource
 import com.android.settings.appfunctions.sources.ManagedProfileStateSource
 import com.android.settings.appfunctions.sources.MediaOutputStateSource
 import com.android.settings.appfunctions.sources.MobileDataUsageStateSource
+import com.android.settings.appfunctions.sources.MobileNetworkStateSource
 import com.android.settings.appfunctions.sources.NfcStateSource
 import com.android.settings.appfunctions.sources.NotificationHistoryStateSource
 import com.android.settings.appfunctions.sources.NotificationsStateSource
@@ -63,6 +64,7 @@ class AndroidApiStateProviderExecutor(private val context: Context) : DeviceStat
             ManagedProfileStateSource(),
             MediaOutputStateSource(),
             MobileDataUsageStateSource(),
+            MobileNetworkStateSource(),
             NfcStateSource(),
             NotificationHistoryStateSource(),
             NotificationsStateSource(),
