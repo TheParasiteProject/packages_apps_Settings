@@ -128,7 +128,12 @@ open class A11yServiceScreen(context: Context, override val arguments: Bundle) :
         get() = featureComponentName.flattenToString()
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
-        preferenceHierarchy(context) {}
+        preferenceHierarchy(context) {
+            val serviceInfo = accessibilityServiceInfo
+            if (serviceInfo != null) {
+                +IntroPreference(serviceInfo)
+            }
+        }
 
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?): Intent {
         return Intent(Settings.ACTION_ACCESSIBILITY_DETAILS_SETTINGS).apply {
