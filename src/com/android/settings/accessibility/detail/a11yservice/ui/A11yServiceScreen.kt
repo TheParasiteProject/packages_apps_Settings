@@ -132,6 +132,7 @@ open class A11yServiceScreen(context: Context, override val arguments: Bundle) :
             val serviceInfo = accessibilityServiceInfo
             if (serviceInfo != null) {
                 +IntroPreference(serviceInfo)
+                +A11yServiceIllustrationPreference(serviceInfo)
             }
         }
 
