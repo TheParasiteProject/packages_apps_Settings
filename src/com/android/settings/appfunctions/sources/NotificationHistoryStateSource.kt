@@ -25,7 +25,7 @@ import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDev
 
 class NotificationHistoryStateSource : DeviceStateSource {
     override val appFunctionType: DeviceStateAppFunctionType =
-        DeviceStateAppFunctionType.GET_UNCATEGORIZED
+        DeviceStateAppFunctionType.GET_NOTIFICATIONS
 
     override suspend fun get(
         context: Context,

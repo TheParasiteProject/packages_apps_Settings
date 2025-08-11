@@ -134,11 +134,7 @@ public class FingerprintSettings extends SubSettings {
 
     private static final long LOCKOUT_DURATION = 30000; // time we have to wait for fp to reset, ms
 
-    public static final String ANNOTATION_URL = "url";
-    public static final String ANNOTATION_ADMIN_DETAILS = "admin_details";
-
     private static final int RESULT_FINISHED = BiometricEnrollBase.RESULT_FINISHED;
-    private static final int RESULT_SKIP = BiometricEnrollBase.RESULT_SKIP;
     private static final int RESULT_TIMEOUT = BiometricEnrollBase.RESULT_TIMEOUT;
     @VisibleForTesting
     static final VibrationEffect SUCCESS_VIBRATION_EFFECT =
@@ -886,21 +882,6 @@ public class FingerprintSettings extends SubSettings {
                         this::fingerprintUnlockCategoryHasChild);
             }
             if (isSfps()) {
-                // For both SFPS "screen on to auth" and "rest to unlock"
-                final Preference restToUnlockPreference = FeatureFactory.getFeatureFactory()
-                        .getFingerprintFeatureProvider()
-                        .getSfpsRestToUnlockFeature(getContext())
-                        .getRestToUnlockPreference(getContext());
-                if (restToUnlockPreference != null) {
-                    // Use custom featured preference if any.
-                    mRequireScreenOnToAuthPreference.setTitle(restToUnlockPreference.getTitle());
-                    mRequireScreenOnToAuthPreference.setSummary(
-                            restToUnlockPreference.getSummary());
-                    mRequireScreenOnToAuthPreference.setChecked(
-                            ((TwoStatePreference) restToUnlockPreference).isChecked());
-                    mRequireScreenOnToAuthPreference.setOnPreferenceChangeListener(
-                            restToUnlockPreference.getOnPreferenceChangeListener());
-                }
                 setupFingerprintUnlockCategoryPreferencesForScreenOnToAuth();
             } else if (screenOffUnlockUdfps() && isScreenOffUnlcokSupported()) {
                 setupFingerprintUnlockCategoryPreferencesForScreenOffUnlock();

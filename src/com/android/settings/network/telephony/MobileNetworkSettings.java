@@ -59,7 +59,6 @@ import com.android.settings.network.telephony.cdma.CdmaSystemSelectPreferenceCon
 import com.android.settings.network.telephony.gsm.AutoSelectPreferenceController;
 import com.android.settings.network.telephony.gsm.OpenNetworkSelectPagePreferenceController;
 import com.android.settings.network.telephony.satellite.SatelliteSettingPreferenceController;
-import com.android.settings.network.telephony.satellite.SatelliteSettingsPreferenceCategoryController;
 import com.android.settings.network.telephony.wificalling.CrossSimCallingViewModel;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.wifi.WifiPickerTrackerHelper;
@@ -280,12 +279,7 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
         if (roamingPreferenceController != null) {
             roamingPreferenceController.init(getParentFragmentManager(), mSubId);
         }
-        final SatelliteSettingsPreferenceCategoryController
-                satelliteSettingsPreferenceCategoryController =
-                use(SatelliteSettingsPreferenceCategoryController.class);
-        if (satelliteSettingsPreferenceCategoryController != null) {
-            satelliteSettingsPreferenceCategoryController.init(mSubId);
-        }
+
         final SatelliteSettingPreferenceController satelliteSettingPreferenceController = use(
                 SatelliteSettingPreferenceController.class);
         if (satelliteSettingPreferenceController != null) {
