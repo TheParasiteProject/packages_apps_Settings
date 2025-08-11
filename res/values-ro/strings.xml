@@ -147,7 +147,7 @@
     <string name="bluetooth_leaudio_broadcast_ui_summary" msgid="3616202872693209662">"Activează previzualizarea interfeței de utilizare pentru permiterea accesului prin LE Audio, inclusiv permiterea accesului la audio personal și difuzarea privată"</string>
     <string name="bluetooth_show_leaudio_device_details" msgid="3306637862550475370">"Comutator LE Audio în Detalii dispozitiv"</string>
     <string name="bluetooth_bypass_leaudio_allowlist" msgid="7392319491894565552">"Omite lista cu acces permis Bluetooth LE Audio"</string>
-    <string name="bluetooth_bypass_leaudio_allowlist_summary" msgid="8999245286359656738">"Folosește în mod prestabilit LE Audio chiar dacă dispozitivul periferic LE Audio nu a fost confirmat ca respectând criteriile Allowlist."</string>
+    <string name="bluetooth_bypass_leaudio_allowlist_summary" msgid="8999245286359656738">"Folosește în mod prestabilit LE Audio chiar dacă dispozitivul periferic LE Audio nu a fost confirmat ca respectând criteriile listei cu acces permis."</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"Dispozitive media"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"Dispozitive de apel"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"Alte dispozitive"</string>
@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Folosește un fundal întunecat pentru a face ecranul mai confortabil de vizualizat și pentru a reduce utilizarea bateriei pe unele ecrane. Tema se va schimba dacă ai un program, când ecranul este dezactivat."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Tema întunecată urmează momentan programul modului Ora de culcare"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Setările modului Ora de culcare"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Modurile pot și să activeze Tema întunecată.}=1{{mode_1} activează și Tema întunecată.}=2{{mode_1} și {mode_2} activează și Tema întunecată.}=3{{mode_1}, {mode_2} și {mode_3} activează și Tema întunecată.}few{{mode_1}, {mode_2} și încă # activează și Tema întunecată.}other{{mode_1}, {mode_2} și încă # activează și Tema întunecată.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Setările pentru Moduri"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Luminează, extinde gama de culori și îmbunătățește claritatea imaginilor și videoclipurilor cu HDR (High Dynamic Range). Conținutul HDR va părea mai luminos."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Durată până la dezactivarea ecranului"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Pentru a utiliza amprenta, setați modelul"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Din motive de securitate, setați un cod PIN"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Pentru a utiliza amprenta, setează codul PIN"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Reintrodu parola"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Introdu parola dispozitivului"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Reintrodu parola"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Reintrodu parola de serviciu"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Introdu parola de la serviciu"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Confirmă modelul"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Introdu modelul dispozitivului"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Introdu modelul pentru serviciu"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"Reintrodu codul PIN"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Introdu codul PIN al dispozitivului"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"Reintrodu codul PIN"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Reintrodu codul PIN de serviciu"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Introdu codul PIN pentru serviciu"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Parolele nu corespund"</string>
@@ -1898,16 +1899,16 @@
     <string name="lockpassword_choose_your_pin_header_for_face" msgid="704061826984851309">"Pentru Deblocare facială, setează PIN-ul"</string>
     <string name="lockpassword_choose_your_password_header_for_biometrics" msgid="2053366309272487015">"Setează o parolă pentru a folosi chipul sau amprenta"</string>
     <string name="lockpassword_choose_your_pattern_header_for_biometrics" msgid="4038476475293734905">"Setează un model pentru a folosi fața sau amprenta"</string>
-    <string name="lockpassword_choose_your_pin_header_for_biometrics" msgid="9086039918921009380">"Setează un PIN pentru a folosi fața sau amprenta"</string>
+    <string name="lockpassword_choose_your_pin_header_for_biometrics" msgid="9086039918921009380">"Setează un PIN pentru a folosi chipul sau amprenta"</string>
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Ai uitat parola?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Ai uitat modelul?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Ai uitat codul PIN?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Desenează modelul pentru a continua"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Introdu codul PIN pentru a continua"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Introdu parola pentru a continua"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Desenează modelul de serviciu pentru a continua"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Pentru a continua, introdu codul PIN de serviciu"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Pentru a continua, introdu parola de serviciu"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Prin model îți confirmi identitatea"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"Prin PIN îți confirmi identitatea"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Prin parolă îți confirmi identitatea"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Prin modelul de serviciu îți confirmi identitatea"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"Prin PIN-ul de serviciu îți confirmi identitatea"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Prin parola de serviciu îți confirmi identitatea"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Pentru mai multă siguranță, folosește modelul dispozitivului"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Pentru mai multă siguranță, introduceți codul PIN al dispozitivului"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Pentru mai multă siguranță, introdu parola dispozitivului"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Derulare"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Derulare controlată"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Viteza de derulare"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Fă cursorul mai rapid"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Fă cursorul mai lent"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Comută butonul principal al mouse-ului"</string>
@@ -2545,7 +2550,7 @@
     <string name="accessibility_shortcut_edit_screen_title_triple_tap" msgid="3314488747597058942">"Atinge de trei ori"</string>
     <string name="accessibility_shortcut_edit_screen_summary_triple_tap" msgid="4839204951599629871">"Atinge rapid ecranul de %1$d ori. Această acțiune poate încetini funcționarea dispozitivului."</string>
     <string name="accessibility_shortcut_two_finger_double_tap_keyword" msgid="6271718715836961167">"Atinge de două ori cu %1$d degete"</string>
-    <string name="accessibility_shortcut_triple_tap_keyword" msgid="5359347130888464334">"atinge de trei ori"</string>
+    <string name="accessibility_shortcut_triple_tap_keyword" msgid="5359347130888464334">"Atingere triplă"</string>
     <string name="accessibility_shortcut_edit_dialog_title_advance" msgid="4567868630655591506">"Avansate"</string>
     <string name="accessibility_screen_magnification_navbar_configuration_warning" msgid="266736851606791552">"Butonul Accesibilitate este setat pe <xliff:g id="SERVICE">%1$s</xliff:g>. Pentru a folosi mărirea, atinge lung butonul Accesibilitate și apoi selectează mărirea."</string>
     <string name="accessibility_screen_magnification_gesture_navigation_warning" msgid="991017769735632046">"Gestul de accesibilitate este setat la <xliff:g id="SERVICE">%1$s</xliff:g>. Pentru a folosi mărirea, glisează în sus cu două degete din partea de jos a ecranului și ține apăsat. Apoi selectează mărirea."</string>
@@ -3135,7 +3140,7 @@
     <string name="cellular_security_notifications_controller_title" msgid="4853056963523277847">"Notificări privind rețeaua"</string>
     <string name="cellular_security_notifications_controller_summary" msgid="8339863845393759958">"Primește notificări când dispozitivul tău se conectează la o rețea necriptată sau când o rețea înregistrează ID-ul unic al cardului SIM sau al dispozitivului tău"</string>
     <string name="cellular_security_2G_network_generation_header" msgid="2892850064192939887">"Generația rețelei"</string>
-    <string name="cellular_security_2G_network_generation_summary" msgid="4041699962072749477">"Protecția împotriva rețelelor 2G evită rețelele 2G, care sunt mai puțin sigure. Aceasta limita conectivitatea în unele locații. 2G este permis întotdeauna pentru apelurile de urgență, dar apelurile pot să nu se conecteze dacă folosești roamingul internațional."</string>
+    <string name="cellular_security_2G_network_generation_summary" msgid="4041699962072749477">"Protecția împotriva rețelelor 2G evită rețelele 2G, care sunt mai puțin sigure. Aceasta poate limita conectivitatea în unele locații. 2G este permis întotdeauna pentru apelurile de urgență, dar apelurile pot să nu se conecteze dacă folosești roamingul internațional."</string>
     <string name="cellular_security_2G_network_generation_title" msgid="706766676947606951">"Protecție împotriva rețelelor 2G"</string>
     <string name="cellular_security_settings_encryption_title" msgid="4013084091666375780">"Criptare"</string>
     <string name="cellular_security_network_generations_title" msgid="2343026988833783854">"Generații de rețele"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Sunete de sistem și vibrații"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Sunetul profilului de serviciu"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Subtitrări live"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Adaugă subtitrări automate la fișierele media"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Căști cu fir"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Sunetul de la dispozitivele media compatibile devine mai captivant"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Dezactivat"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Cele mai populare subiecte, editoriale și altele"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Aprecieri, postări și altele"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Buletine informative, conținut media recomandat și altele"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Gestionează cu AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Rezumate de notificare"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Obține rezumate scurte ale mesajelor mai lungi"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Nu include aceste aplicații"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Rezumate ale notificărilor"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Obține rezumate scurte ale mesajelor mai lungi"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Notificări live"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Actualizări live"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Afișează notificările urgente în curs în bara de stare și pe ecranul de blocare"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Examinează aplicațiile care au schimbat modul în care pot permite accesul la datele tale privind locațiile"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Agenți"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Agenți care pot să acceseze informații sau să facă acțiuni în aplicații"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Atinge pentru a activa"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Atinge de două ori oriunde pe ecran pentru a activa dispozitivul"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Deschiderea linkurilor"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{O aplicație are permisiunea să folosească date mobile nelimitate când Economizorul de date este activat}few{# aplicații au permisiunea să folosească date mobile nelimitate când Economizorul de date este activat}other{# de aplicații au permisiunea să folosească date mobile nelimitate când Economizorul de date este activat}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"Date principale"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Date Wi‑Fi"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>⁠"</string>
     <string name="data_overusage" msgid="3680477320458707259">"Mai mult de <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_remaining" msgid="6316251496381922837">"Rămas: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"Graficul arată utilizarea datelor între <xliff:g id="START_DATE">%1$s</xliff:g> și <xliff:g id="END_DATE">%2$s</xliff:g>."</string>
@@ -5304,7 +5325,7 @@
     <string name="imei_primary" msgid="5312232202518974440">"IMEI (primar)"</string>
     <string name="meid_primary" msgid="3256732684155678106">"MEID (primar)"</string>
     <string name="mobile_network_phone_number_title" msgid="2090794402855021784">"Număr de telefon"</string>
-    <string name="mobile_network_sim_label_color_title" msgid="2401352348041132876">"Culoarea și eticheta SIM"</string>
+    <string name="mobile_network_sim_label_color_title" msgid="2401352348041132876">"Culoare și etichetă pentru SIM"</string>
     <string name="sim_setup_channel_id" msgid="8797972565087458515">"Activarea rețelei"</string>
     <string name="sim_switch_channel_id" msgid="4927038626791837861">"Schimbarea operatorului"</string>
     <string name="post_dsds_reboot_notification_title_with_carrier" msgid="975447139749692794">"SIM-ul <xliff:g id="CARRIER_NAME">%1$s</xliff:g> este activ"</string>
@@ -5385,7 +5406,7 @@
     <string name="content_capture" msgid="868372905432812238">"Conținutul aplicației"</string>
     <string name="content_capture_summary" msgid="49720773699715531">"Permite aplicațiilor să trimită conținut la sistemul Android"</string>
     <string name="capture_system_heap_dump_title" msgid="9210974110606886455">"Capturează datele privind memoria heap a sistemului"</string>
-    <string name="development_memtag_page_title" msgid="3546667618748029188">"Memory Tagging Extension"</string>
+    <string name="development_memtag_page_title" msgid="3546667618748029188">"Extensie de etichetare memorie"</string>
     <string name="development_memtag_intro" msgid="8032596625527637164">"Memory Tagging Extension (MTE) simplifică identificarea problemelor legate de siguranța memoriei în aplicație și protejează codul nativ al acesteia."</string>
     <string name="development_memtag_footer" msgid="5681925148773626562">"Activarea MTE poate cauza funcționarea mai lentă a dispozitivului."</string>
     <string name="development_memtag_learn_more" msgid="8961984806973926704">"Află mai multe despre MTE"</string>
@@ -5442,7 +5463,7 @@
     <string name="error_pending_updates" msgid="7196832772265874760">"Actualizarea nucleului nu a reușit. Verifică și instalează actualizările în așteptare."</string>
     <string name="error_ota_failed" msgid="4762376085470989653">"Actualizarea nucleului nu a reușit. A apărut o eroare la aplicarea actualizării OTA."</string>
     <string name="bug_report_handler_title" msgid="713439959113250125">"Handler pentru rapoartele de eroare"</string>
-    <string name="bug_report_handler_picker_footer_text" msgid="4935758328366585673">"Stabilește ce aplicație gestionează comanda rapidă pentru Raportul de eroare pe dispozitivul tău."</string>
+    <string name="bug_report_handler_picker_footer_text" msgid="4935758328366585673">"Stabilește ce aplicație gestionează comanda rapidă pentru Better Bug pe dispozitivul tău."</string>
     <string name="personal_profile_app_subtext" msgid="5586060806997067676">"Personal"</string>
     <string name="work_profile_app_subtext" msgid="5043419461440127879">"Serviciu"</string>
     <string name="system_default_app_subtext" msgid="5212055189703164839">"Valoare prestabilită"</string>
@@ -5594,7 +5615,7 @@
     <string name="smart_forwarding_missing_mdn_text" msgid="2907314684242542226">"Lipsește numărul de telefon."</string>
     <string name="smart_forwarding_missing_alert_dialog_text" msgid="7870419247987316112">"OK"</string>
     <string name="enable_2g_title" msgid="5657132300321750181">"Protecție față de rețeaua 2G"</string>
-    <string name="enable_2g_summary" msgid="6194875539424151678">"Evită rețelele 2G, care sunt mai puțin sigure. Aceasta limita conectivitatea în unele locații. 2G este permis întotdeauna pentru apelurile de urgență, dar apelurile pot să nu se conecteze dacă folosești roamingul internațional."</string>
+    <string name="enable_2g_summary" msgid="6194875539424151678">"Evită rețelele 2G, care sunt mai puțin sigure. Aceasta poate limita conectivitatea în unele locații. 2G este permis întotdeauna pentru apelurile de urgență, dar apelurile pot să nu se conecteze dacă folosești roamingul internațional."</string>
     <string name="enable_2g_summary_disabled_carrier" msgid="8141118453219482762">"<xliff:g id="CARRIER_NAME_2G">%1$s</xliff:g> necesită 2G pentru a fi disponibil"</string>
     <string name="require_cellular_encryption_title" msgid="6087085031703089235">"Permite numai rețele criptate"</string>
     <string name="require_cellular_encryption_summary" msgid="6090569065420631457">"Această opțiune este mai sigură, dar poate limita conexiunea la rețeaua mobilă în unele locații. Apelarea de urgență este permisă întotdeauna."</string>
@@ -5952,4 +5973,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Împiedică alte persoane să deschidă aplicații care necesită Deblocarea cu amprenta sau Deblocarea facială. Când te conectezi la ceas, siguranța ta este protejată cu mobilitate sporită."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Folosește Verificarea identității și ceasul în mai multe aplicații"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Asigură-ți protecția identității în toate aplicațiile care acceptă Deblocarea cu amprenta și Deblocarea facială în locuri de încredere, cum ar fi acasă sau la birou. Folosește Verificarea identității cu ceasul pentru a-ți extinde protecția chiar și în afara locurilor de încredere."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

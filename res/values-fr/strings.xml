@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Utilisez un arrière-plan sombre pour améliorer votre confort visuel et réduire l\'utilisation de la batterie. Si vous avez défini une programmation, le thème changera lorsque l\'écran sera éteint."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Actuellement, le thème sombre s\'active au même horaire que le mode Coucher."</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Paramètres du mode Coucher"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Certains modes peuvent également activer le thème sombre.}=1{Le mode {mode_1} active également le thème sombre.}=2{Les modes {mode_1} et {mode_2} activent également le thème sombre.}=3{Les modes {mode_1}, {mode_2} et {mode_3} activent également le thème sombre.}one{Les modes {mode_1}, {mode_2} et # autre mode activent également le thème sombre.}other{Les modes {mode_1}, {mode_2} et # autres modes activent également le thème sombre.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Paramètres des modes"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Améliorez la luminosité, la gamme de couleurs et la clarté des images et vidéos HDR (High Dynamic Range). Le contenu HDR sera plus lumineux."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Délai de mise en veille de l\'écran"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Pour utiliser votre empreinte, définissez un schéma"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Pour des raisons de sécurité, définissez un code"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Définissez un code"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Saisissez de nouveau votre mot de passe"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Saisissez le mot de passe de votre appareil"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Saisissez de nouveau votre mot de passe"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Confirmez votre mot de passe (profil pro)"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Saisissez votre mot de passe (profile pro)"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Confirmez votre schéma"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Saisissez le schéma de votre appareil"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Tracez le schéma de votre profil professionnel"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"Saisissez de nouveau votre code"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Saisissez le code de votre appareil"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"Saisissez de nouveau votre code"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Confirmez votre code (profile pro)"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Saisissez votre code (profil pro)"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Les mots de passe ne correspondent pas"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Mot de passe oublié ?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Schéma oublié ?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Code oublié ?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Dessinez votre schéma pour continuer."</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Saisissez votre code PIN pour continuer."</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Saisissez votre mot de passe pour continuer."</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Dessinez votre schéma professionnel pour continuer."</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Saisissez le code PIN de votre profil professionnel pour continuer."</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Saisissez le mot de passe du profil professionnel pour continuer."</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Votre schéma confirme votre identité"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"Votre code confirme votre identité"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Votre mot de passe confirme votre identité"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Le schéma de votre profil professionnel confirme votre identité"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"Le code de votre profil professionnel confirme votre identité"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Le mot de passe de votre profil professionnel confirme votre identité"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Pour plus de sécurité, utilisez le schéma de l\'appareil"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Pour plus de sécurité, saisissez le code de l\'appareil"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Pour plus de sécurité, saisissez le mot de passe de l\'appareil"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Défilement"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Défilement contrôlé"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Vitesse du défilement"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Accélérer le pointeur"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Ralentir le pointeur"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Inverser le bouton principal de la souris"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Sons et vibrations du système"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Son du profil professionnel"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Sous-titres instantanés"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Sous-titrer automatiquement les contenus multimédias"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Casque filaire"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Le son des appareils multimédias compatibles devient plus immersif"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Désactivé"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Actualités, éditoriaux, etc."</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Mentions \"J\'aime\", publications, etc."</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Newsletters, médias recommandés, etc."</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Gérer avec l\'IA"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Résumés de notifications"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Obtenir un résumé rapide des messages plus longs"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Ne pas inclure ces applis"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Résumés de notifications"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Obtenir un résumé rapide des messages plus longs"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Notifications en direct"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Mises à jour en temps réel"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Afficher les notifications en cours et urgentes dans la barre d\'état et sur l\'écran de verrouillage"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Consulter les applis qui ont modifié la manière dont elles peuvent partager vos données de localisation"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Agents"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Agents pouvant accéder aux informations ou effectuer des actions dans les applis"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Appuyer pour réactiver"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Appuyez deux fois n\'importe où sur l\'écran pour réactiver l\'appareil."</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Ouverture des liens"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{1 appli autorisée à utiliser des données mobiles illimitées lorsque l\'Économiseur de données est activé}one{# appli autorisée à utiliser des données mobiles illimitées lorsque l\'Économiseur de données est activé}other{# applis autorisées à utiliser des données mobiles illimitées lorsque l\'Économiseur de données est activé}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"Données principales"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Données Wi-Fi"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>⁠"</string>
     <string name="data_overusage" msgid="3680477320458707259">"Dépassement de <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_remaining" msgid="6316251496381922837">"Il reste <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"Graphique indiquant la consommation des données entre le <xliff:g id="START_DATE">%1$s</xliff:g> et le <xliff:g id="END_DATE">%2$s</xliff:g>."</string>
@@ -5898,7 +5919,7 @@
     <string name="contacts_storage_device_only_preference_summary" msgid="8585284581093336284">"Il est possible que les contacts ne soient pas synchronisés ou disponibles sur vos autres appareils"</string>
     <string name="contacts_storage_selection_message" msgid="8082077300632059003">"Les contacts seront enregistrés sur votre appareil et synchronisés avec votre compte par défaut"</string>
     <string name="contacts_storage_set_default_account_error_message" msgid="849847649756411393">"Erreur lors de la définition du compte par défaut"</string>
-    <string name="contacts_storage_no_account_set_summary" msgid="7454973781666475276">"Aucun compte par défaut n\'a été défini"</string>
+    <string name="contacts_storage_no_account_set_summary" msgid="7454973781666475276">"Aucun réglage par défaut n\'a été défini"</string>
     <string name="contacts_storage_local_account_summary" msgid="5034805108128685712">"Appareil uniquement"</string>
     <string name="contacts_storage_account_title" msgid="7334522539665856395">"Appareil et %1$s"</string>
     <string name="contacts_storage_first_time_add_account_message" msgid="5161093169928132323">"Ajoutez un compte pour commencer"</string>
@@ -5951,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Empêchez les autres personnes d\'ouvrir des applications qui nécessitent le déverrouillage par empreinte digitale ou par reconnaissance faciale. Lorsque vous êtes connecté à votre montre, votre sécurité est assurée avec une plus grande mobilité."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Utiliser la vérification de l\'identité avec la montre sur plus d\'applis"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Protégez votre identité dans toutes les applications compatibles avec le déverrouillage par empreinte digitale et par reconnaissance faciale dans des lieux vérifiés comme votre domicile ou votre bureau. Utilisez la vérification de l\'identité avec votre montre pour étendre votre protection au-delà des lieux vérifiés."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

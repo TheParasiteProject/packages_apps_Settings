@@ -977,7 +977,7 @@
     <string name="device_details_battery" msgid="5466987755790847884">"ବେଟେରୀ"</string>
     <string name="device_details_battery_charging" msgid="3464969346075775143">"ବେଟେରୀ, ଚାର୍ଜିଂ"</string>
     <string name="device_details_key_missing_title" msgid="3568401701538114387">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ରିଷ୍ଟାର୍ଟ କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ତାହା କାମ ନକରେ, ଡିଭାଇସକୁ ଭୁଲି ଯାଆନ୍ତୁ। ଆପଣଙ୍କର ସୁରକ୍ଷା ପାଇଁ, ଆପଣ କୌଣସି ପବ୍ଲିକ ସ୍ଥାନରେ ନଥିବା ସମୟରେ କେବଳ ଏହାକୁ ପୁଣି ପେୟାର କରନ୍ତୁ।\n\nଯଦି ଏହି ଡିଭାଇସ ଆଖପାଖରେ ନାହିଁ, ତେବେ ଆପଣଙ୍କୁ କିଛି କରିବାର ଆବଶ୍ୟକତା ନାହିଁ।"</string>
-    <string name="verbose_printer_logging_title" msgid="6525634245166402031">"ଶବ୍ଦ ବହୁଳତା ପ୍ରିଣ୍ଟ ଲଗିଂ"</string>
+    <string name="verbose_printer_logging_title" msgid="6525634245166402031">"ଭର୍ବୋସ ପ୍ରିଣ୍ଟ ଲଗିଂ"</string>
     <string name="verbose_printer_logging_summary" msgid="6558076303223667013">"ଇଣ୍ଟର୍ନେଟ ପ୍ରିଣ୍ଟିଂ ପ୍ରୋଟୋକଲ (IPP) ସମେତ ଅତିରିକ୍ତ ଡିବଗ ଲଗଗୁଡ଼ିକରେ ପ୍ରାଇଭେଟ ସୂଚନା ଥାଇପାରେ।"</string>
     <string name="bluetooth_unpair_dialog_forget_confirm_button" msgid="9184489424930549015">"ଡିଭାଇସ୍‌କୁ ଭୁଲିଯାଆନ୍ତୁ"</string>
     <string name="bluetooth_companion_app_remove_association_confirm_button" msgid="76323555527926915">"ଆପକୁ ବିଚ୍ଛିନ୍ନ କରନ୍ତୁ"</string>
@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"ଆପଣଙ୍କ ସ୍କ୍ରିନକୁ ଭ୍ୟୁ କରିବା ଅଧିକ ଆରାମଦାୟକ କରିବା ଏବଂ କିଛି ସ୍କ୍ରିନରେ ବେଟେରୀ ବ୍ୟବହାର ହ୍ରାସ କରିବାକୁ ଏକ ଡାର୍କ ବେକଗ୍ରାଉଣ୍ଡକୁ ବ୍ୟବହାର କରନ୍ତୁ। ଯଦି ଆପଣଙ୍କର ଏକ ସିଡୁଲ ଅଛି, ତେବେ ସ୍କ୍ରିନ ବନ୍ଦ ଥିବା ସମୟରେ ଆପଣଙ୍କର ଥିମ ପରିବର୍ତ୍ତନ ହେବ।"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"ବର୍ତ୍ତମାନ ଗାଢ଼ା ଥିମ ଆପଣଙ୍କ ଶୋଇବା ସମୟ ମୋଡ ସିଡୁଲକୁ ଅନୁସରଣ କରୁଛି"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"ଶୋଇବା ସମୟ ମୋଡ ସେଟିଂସ"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{ମୋଡଗୁଡ଼ିକ ଡାର୍କ ଥିମକୁ ମଧ୍ୟ ଚାଲୁ କରିପାରିବ।}=1{{mode_1} ଡାର୍କ ଥିମକୁ ମଧ୍ୟ ଚାଲୁ କରେ।}=2{{mode_1} ଏବଂ {mode_2} ଡାର୍କ ଥିମକୁ ମଧ୍ୟ ଚାଲୁ କରେ।}=3{{mode_1}, {mode_2} ଏବଂ {mode_3} ଡାର୍କ ଥିମକୁ ମଧ୍ୟ ଚାଲୁ କରେ।}other{{mode_1}, {mode_2} ଏବଂ ଅଧିକ # ଡାର୍କ ଥିମକୁ ମଧ୍ୟ ଚାଲୁ କରେ।}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"ମୋଡ ସେଟିଂସ"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"ହାଇ ଡାଇନାମିକ ରେଞ୍ଜ (HDR) ଇମେଜ ଏବଂ ଭିଡିଓଗୁଡ଼ିକରେ ରଙ୍ଗର ରେଞ୍ଜ ଏବଂ ସ୍ପଷ୍ଟତାକୁ ଉଜ୍ଜ୍ୱଳ ଏବଂ ବିସ୍ତାର କରେ। HDR ବିଷୟବସ୍ତୁ ଉଜ୍ଜ୍ୱଳ ଦେଖାଯିବ।"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"ସ୍କ୍ରିନ ଟାଇମଆଉଟ"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"ଟିପଚିହ୍ନ ବ୍ୟବହାର କରିବା ପାଇଁ ପାଟର୍ନ ସେଟ୍‌ କରନ୍ତୁ"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"ସୁରକ୍ଷା ପାଇଁ PIN ସେଟ୍ କରନ୍ତୁ"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"ଟିପଚିହ୍ନ ବ୍ୟବହାର କରିବା ପାଇଁ PIN ସେଟ୍‌ କରନ୍ତୁ"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"ପାସୱାର୍ଡ ପୁଣି-ଲେଖନ୍ତୁ"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"ଆପଣଙ୍କ ଡିଭାଇସ ପାସୱାର୍ଡ ଲେଖନ୍ତୁ"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"ଆପଣଙ୍କ ପାସୱାର୍ଡ ପୁଣି-ଲେଖନ୍ତୁ"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"ଆପଣଙ୍କ ୱାର୍କ ପାସୱାର୍ଡ ପୁଣି-ଲେଖନ୍ତୁ"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"ଆପଣଙ୍କର ୱାର୍କ ପାସୱାର୍ଡ ଲେଖନ୍ତୁ"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"ଆପଣଙ୍କ ପାଟର୍ନ ସୁନିଶ୍ଚିତ କରନ୍ତୁ"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"ଆପଣଙ୍କ ଡିଭାଇସ ପାଟର୍ନ ଲେଖନ୍ତୁ"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"ଆପଣଙ୍କ ୱାର୍କ ପାଟର୍ନ ଲେଖନ୍ତୁ"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"ଆପଣଙ୍କ PIN ପୁଣି ଲେଖନ୍ତୁ"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"ଆପଣଙ୍କ ଡିଭାଇସ PIN ଲେଖନ୍ତୁ"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"ଆପଣଙ୍କ PIN ପୁଣି-ଲେଖନ୍ତୁ"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"ଆପଣଙ୍କ ୱାର୍କ PIN ପୁଣି-ଲେଖନ୍ତୁ"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"ଆପଣଙ୍କ ୱାର୍କ PIN ଲେଖନ୍ତୁ"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"ପାସୱାର୍ଡଗୁଡ଼ିକ ମେଳ ଖାଉନାହିଁ"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"ଆପଣଙ୍କ ପାସୱାର୍ଡ ଭୁଲି ଯାଇଛନ୍ତି କି?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"ପାଟର୍ନ ଭୁଲି ଯାଇଛନ୍ତି କି?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"PIN ଭୁଲି ଯାଇଛନ୍ତି?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"ଜାରି ରଖିବାକୁ ଆପଣଙ୍କ ପାଟର୍ନ ଡ୍ର କରନ୍ତୁ"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"ଜାରି ରଖିବାକୁ ଆପଣଙ୍କ PIN ଲେଖନ୍ତୁ"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"ଜାରି ରଖିବାକୁ ଆପଣଙ୍କ ପାସୱାର୍ଡ ଲେଖନ୍ତୁ"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"ଜାରି ରଖିବାକୁ ଆପଣଙ୍କ ୱାର୍କ ପାଟର୍ନ ଡ୍ର କରନ୍ତୁ"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"ଜାରି ରଖିବାକୁ ଆପଣଙ୍କ ୱାର୍କ PIN ଲେଖନ୍ତୁ"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"ଜାରି ରଖିବାକୁ ଆପଣଙ୍କ କାର୍ଯ୍ୟ ପାସ୍‌ୱର୍ଡ ଲେଖନ୍ତୁ"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"ଏହା ଆପଣ ଅଟନ୍ତି ବୋଲି ଆପଣଙ୍କ ପାଟର୍ନ ଯାଞ୍ଚ କରେ"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"ଏହା ଆପଣ ଅଟନ୍ତି ବୋଲି ଆପଣଙ୍କ PIN ଯାଞ୍ଚ କରେ"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"ଏହା ଆପଣ ଅଟନ୍ତି ବୋଲି ଆପଣଙ୍କ ପାସୱାର୍ଡ ଯାଞ୍ଚ କରେ"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"ଏହା ଆପଣ ଅଟନ୍ତି ବୋଲି ଆପଣଙ୍କ ୱାର୍କ ପାଟର୍ନ ଯାଞ୍ଚ କରେ"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"ଏହା ଆପଣ ଅଟନ୍ତି ବୋଲି ଆପଣଙ୍କ ୱାର୍କ PIN ଯାଞ୍ଚ କରେ"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"ଏହା ଆପଣ ଅଟନ୍ତି ବୋଲି ଆପଣଙ୍କ ୱାର୍କ ପାସୱାର୍ଡ ଯାଞ୍ଚ କରେ"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"ଅଧିକ ସୁରକ୍ଷା ପାଇଁ ନିଜ ଡିଭାଇସ ପାଟର୍ନ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"ଅତିରିକ୍ତ ସୁରକ୍ଷା ପାଇଁ, ନିଜ ଡିଭାଇସ୍‌ ପିନ୍‌ ଲେଖନ୍ତୁ"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"ଅତିରିକ୍ତ ସୁରକ୍ଷା ପାଇଁ; ନିଜ ଡିଭାଇସ୍‌ର ପାସ୍‌ୱର୍ଡ ଦିଅନ୍ତୁ"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"ସ୍କ୍ରୋଲିଂ"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"ନିୟନ୍ତ୍ରିତ ସ୍କ୍ରୋଲିଂ"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"ସ୍କ୍ରୋଲିଂ ସ୍ପିଡ"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"ପଏଣ୍ଟରର ସ୍ପିଡ ବଢ଼ାନ୍ତୁ"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"ପଏଣ୍ଟରର ସ୍ପିଡ କମାନ୍ତୁ"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"ପ୍ରାଥମିକ ମାଉସ ବଟନକୁ ସ୍ୱାପ କରନ୍ତୁ"</string>
@@ -2882,7 +2887,7 @@
     <string name="power_discharge_remaining" msgid="6997529817917076536">"<xliff:g id="REMAIN">%1$s</xliff:g> ଅବଶିଷ୍ଟ ଅଛି"</string>
     <string name="power_charge_remaining" msgid="7046064326172265116">"ଚାର୍ଜ କରିବା ପାଇଁ <xliff:g id="UNTIL_CHARGED">%1$s</xliff:g> ଲାଗିବ"</string>
     <string name="power_usage_detail_screen_time" msgid="6027274749498485283">"ସ୍କ୍ରିନ ଟାଇମ"</string>
-    <string name="power_usage_detail_background_time" msgid="3661437083554322691">"ପୃଷ୍ଠପଟ ସମୟ"</string>
+    <string name="power_usage_detail_background_time" msgid="3661437083554322691">"ବେକଗ୍ରାଉଣ୍ଡ ସମୟ"</string>
     <string name="low_battery_summary" msgid="4458925347316501953">"ବ୍ୟାଟେରୀ ସ୍ତର କମ୍ ଅଛି"</string>
     <string name="background_activity_summary" msgid="3817376868497046016">"ଆପ୍‌ଟିକୁ ବ୍ୟାକ୍‌ଗ୍ରାଉଣ୍ଡରେ ଚାଲିବାକୁ ଦିଅନ୍ତୁ"</string>
     <string name="background_activity_warning_dialog_title" msgid="3449566823290744823">"ବ୍ୟାକ୍‌ଗ୍ରାଉଣ୍ଡ କାର୍ଯ୍ୟକଳାପ ସୀମିତ କରିବେ?"</string>
@@ -2890,7 +2895,7 @@
     <string name="background_activity_disabled_dialog_text" msgid="4053170297325882494">"ବ୍ୟାଟେରୀକୁ ଅପ୍ଟିମାଇଜ୍ କରିବା ପାଇଁ ଯେହେତୁ ଏହି ଆପ୍‍କୁ ସେଟ୍ କରାଯାଇନାହିଁ, ତେଣୁ ଆପଣ ଏହାକୁ ସୀମାବଦ୍ଧ କରିପାରିବେ ନାହିଁ। \n\nଆପ୍‍କୁ ସୀମାବଦ୍ଧ କରିବା ପାଇଁ ପ୍ରଥମେ ବ୍ୟାଟେରୀ ଅପ୍ଟିମାଇଜେସନ୍‍କୁ ଚାଲୁ କରନ୍ତୁ।"</string>
     <string name="manager_battery_usage_category_title" msgid="1493303237531629961">"ବ୍ୟାଟେରୀ ବ୍ୟବହାର ପରିଚାଳନା କରନ୍ତୁ"</string>
     <string name="manager_battery_usage_allow_background_usage_settings_title" msgid="8150026934645052635">"ବେକଗ୍ରାଉଣ୍ଡରେ ବ୍ୟବହାର କରିବାକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
-    <string name="manager_battery_usage_allow_background_usage_title" msgid="6294649996820358852">"ପୃଷ୍ଠପଟରେ ବ୍ୟବହାର କରିବାକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="manager_battery_usage_allow_background_usage_title" msgid="6294649996820358852">"ବେକଗ୍ରାଉଣ୍ଡରେ ବ୍ୟବହାର କରିବାକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="manager_battery_usage_allow_background_usage_summary" msgid="8021153755201340819">"ରିଅଲ-ଟାଇମ ଅପଡେଟ ପାଇଁ ସକ୍ଷମ କରନ୍ତୁ, ବେଟେରୀର ଚାର୍ଜ ସେଭ କରିବାକୁ ଅକ୍ଷମ କରନ୍ତୁ"</string>
     <string name="manager_battery_usage_unrestricted_title" msgid="2426486290463258032">"ଅପ୍ରତିବନ୍ଧିତ"</string>
     <string name="manager_battery_usage_optimized_title" msgid="8080765739761921817">"ଅପ୍ଟିମାଇଜ କରାଯାଇଛି"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"ସିଷ୍ଟମ ସାଉଣ୍ଡ &amp; ଭାଇବ୍ରେସନ"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"ୱାର୍କ ପ୍ରୋଫାଇଲ ସାଉଣ୍ଡ"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"ଲାଇଭ କେପ୍ସନ"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"ସ୍ୱତଃ କେପ୍ସନ ମିଡିଆ"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"ତାରଯୁକ୍ତ ହେଡଫୋନଗୁଡ଼ିକ"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"କମ୍ପାଟିବଲ ମିଡିଆରୁ ଆସିଥିବା ଅଡିଓ ଅଧିକ ଇମର୍ସିଭ ହୋଇଥାଏ"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"ବନ୍ଦ ଅଛି"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"ଟପ ଷ୍ଟୋରୀ, ଏଡିଟୋରିଆଲ ଏବଂ ଆହୁରି ଅନେକ କିଛି"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"ପସନ୍ଦ, ପୋଷ୍ଟ ଏବଂ ଆହୁରି ଅନେକ କିଛି"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"ନ୍ୟୁଜଲେଟର, ସୁପାରିଶ କରାଯାଇଥିବା ମିଡିଆ ଏବଂ ଆହୁରି ଅନେକ କିଛି"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"AI ମାଧ୍ୟମରେ ପରିଚାଳନା କରନ୍ତୁ"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"ବିଜ୍ଞପ୍ତି ସାରାଂଶ"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"ଲମ୍ବା ମେସେଜଗୁଡ଼ିକର କ୍ୱିକ ରିକେପ ପାଆନ୍ତୁ"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"ଏହି ଆପ୍ସକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରନ୍ତୁ ନାହିଁ"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"ବିଜ୍ଞପ୍ତି ସାରାଂଶ"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"ଲମ୍ବା ମେସେଜଗୁଡ଼ିକର କ୍ୱିକ ରିକେପ ପାଆନ୍ତୁ"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"ଲାଇଭ ବିଜ୍ଞପ୍ତି"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"ଲାଇଭ ଅପଡେଟ"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"ଷ୍ଟାଟସ ବାର ଏବଂ ଲକ ସ୍କ୍ରିନରେ ଚାଲିଥିବା, ସମୟ-ସମ୍ବେଦନଶୀଳ ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକ ଡିସପ୍ଲେ କରନ୍ତୁ"</string>
@@ -3960,7 +3974,7 @@
     <string name="lock_screen_notifications_summary_show" msgid="6540443483088311328">"ସମସ୍ତ ବିଜ୍ଞପ୍ତି ବିଷୟବସ୍ତୁ ଦେଖାନ୍ତୁ"</string>
     <string name="lock_screen_notifications_summary_hide" msgid="7837303171531166789">"ସମ୍ବେଦନଶୀଳ ବିଷୟବସ୍ତୁ ଅନଲକ ଥିବା ବେଳେ ହିଁ ଦେଖାନ୍ତୁ"</string>
     <string name="lock_screen_notifications_summary_disable" msgid="3388290397947365744">"ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକୁ ଆଦୌ ଦେଖାନ୍ତୁ ନାହିଁ"</string>
-    <string name="lock_screen_notifications_interstitial_message" msgid="6326229471276829730">"ଆପଣଙ୍କ ଲକ ସ୍କ୍ରିନ କଣ ଦେଖାଇବା ପାଇଁ ଆପଣ ଚାହାଁନ୍ତି?"</string>
+    <string name="lock_screen_notifications_interstitial_message" msgid="6326229471276829730">"ଆପଣଙ୍କ ଲକ ସ୍କ୍ରିନ କଣ ଦେଖାଉ ବୋଲି ଆପଣ ଚାହାଁନ୍ତି?"</string>
     <string name="lock_screen_notifications_interstitial_title" msgid="1360388192096354315">"ଲକ ସ୍କ୍ରିନ"</string>
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"ସମସ୍ତ ୱାର୍କ ବିଜ୍ଞପ୍ତି ବିଷୟବସ୍ତୁ ଦେଖାନ୍ତୁ"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"ସମ୍ବେଦନଶୀଳ ୱାର୍କ ବିଷୟବସ୍ତୁକୁ ଲୁଚାନ୍ତୁ"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"ଆପଣଙ୍କ ଲୋକେସନ ଡାଟା ସେୟାର କରିବାର ଉପାୟକୁ ପରିବର୍ତ୍ତନ କରିଥିବା ଆପ୍ସକୁ ସମୀକ୍ଷା କରନ୍ତୁ"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"ଏଜେଣ୍ଟ"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"ଆପ୍ସରେ ସୂଚନାକୁ ଆକ୍ସେସ କରିପାରୁଥିବା କିମ୍ବା ପଦକ୍ଷେପ ନେଇପାରୁଥିବା ଏଜେଣ୍ଟ"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"ଜାଗ୍ରତ କରିବାକୁ ଟାପ୍‌ କରନ୍ତୁ"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"ଡିଭାଇସ୍‌କୁ ଜାଗ୍ରତ କରିବା ପାଇଁ ସ୍କ୍ରୀନ୍‌ର ଯେକୌଣସି ସ୍ଥାନରେ ଟାପ୍‌ କରନ୍ତୁ"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"ଓପନିଂ ଲିଙ୍କ୍"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{ଡାଟା ସେଭର ଚାଲୁ ଥିବା ସମୟରେ 1 ଆପକୁ ଅପ୍ରତିବନ୍ଧିତ ମୋବାଇଲ ଡାଟା ବ୍ୟବହାର କରିବାକୁ ଅନୁମତି ଅଛି}other{ଡାଟା ସେଭର ଚାଲୁ ଥିବା ସମୟରେ # ଆପ୍ସକୁ ଅପ୍ରତିବନ୍ଧିତ ମୋବାଇଲ ଡାଟା ବ୍ୟବହାର କରିବାକୁ ଅନୁମତି ଅଛି}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"ପ୍ରାଥମିକ ଡାଟା"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"ୱାଇ-ଫାଇ ଡାଟା"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>⁠"</string>
     <string name="data_overusage" msgid="3680477320458707259">"<xliff:g id="ID_1">^1</xliff:g> ଅଧିକ ଡାଟା ବ୍ୟବହାର ହୋଇଛି"</string>
     <string name="data_remaining" msgid="6316251496381922837">"<xliff:g id="ID_1">^1</xliff:g> ଅବଶିଷ୍ଟ"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"<xliff:g id="START_DATE">%1$s</xliff:g> ଏବଂ <xliff:g id="END_DATE">%2$s</xliff:g> ମଧ୍ୟରେ ଡାଟା ବ୍ୟବହାର ଉପରେ ଗ୍ରାଫ୍ ଦେଖାଯାଉଛି।"</string>
@@ -5952,4 +5973,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"ଫିଙ୍ଗରପ୍ରିଣ୍ଟ କିମ୍ବା ଫେସ ଅନଲକ ଆବଶ୍ୟକ କରୁଥିବା ଆପ୍ସ ଖୋଲିବାରୁ ଅନ୍ୟମାନଙ୍କୁ ପ୍ରତିରୋଧ କରନ୍ତୁ। ଆପଣଙ୍କର ୱାଚ ସହ କନେକ୍ଟ ହେଲେ, ଆପଣଙ୍କର ସୁରକ୍ଷା ଅଧିକ ମୋବିଲିଟି ସହିତ ସୁନିଶ୍ଚିତ କରାଯାଏ।"</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"ଅଧିକ ଆପ୍ସରେ ପରିଚୟ ଯାଞ୍ଚ ଏବଂ ୱାଚ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"ଆପଣଙ୍କ ଘର କିମ୍ବା ଅଫିସ ପରି ବିଶ୍ୱସ୍ତ ସ୍ଥାନଗୁଡ଼ିକରେ ଫିଙ୍ଗରପ୍ରିଣ୍ଟ ଏବଂ ଫେସ ଅନଲକ ସପୋର୍ଟ କରୁଥିବା ସମସ୍ତ ଆପ୍ସରେ ଆପଣଙ୍କର ପରିଚୟ ସୁରକ୍ଷା ସୁନିଶ୍ଚିତ କରନ୍ତୁ। ବିଶ୍ୱସ୍ତ ସ୍ଥାନଗୁଡ଼ିକ ବାହାରେ ମଧ୍ୟ ଆପଣଙ୍କର ସୁରକ୍ଷାକୁ ବିସ୍ତାର କରିବା ପାଇଁ ଆପଣଙ୍କର ୱାଚ ସହିତ ପରିଚୟ ଯାଞ୍ଚ ବ୍ୟବହାର କରନ୍ତୁ।"</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

@@ -1046,7 +1046,7 @@
     <string name="art_verifier_for_debuggable_title" msgid="1926445785190030479">"Bytecode verifiëren van apps met foutopsporing"</string>
     <string name="art_verifier_for_debuggable_summary" msgid="4802875841862652879">"Sta ART toe de bytecode te verifiëren voor apps waarop foutopsporing kan worden toegepast"</string>
     <string name="show_refresh_rate" msgid="5742688821872354973">"Vernieuwingssnelheid tonen"</string>
-    <string name="show_refresh_rate_summary" msgid="3558118122374609663">"Toon huidige vernieuwingssnelheid van scherm"</string>
+    <string name="show_refresh_rate_summary" msgid="3558118122374609663">"Toon de huidige vernieuwingssnelheid van het scherm"</string>
     <string name="show_hdr_sdr_ratio" msgid="4188007289024955585">"HDR/SDR-ratio tonen"</string>
     <string name="show_hdr_sdr_ratio_summary" msgid="986292785096013733">"Toon de huidige HDR/SDR-ratio"</string>
     <string name="nfc_quick_toggle_title" msgid="3607620705230351666">"NFC"</string>
@@ -1877,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Patroon bij gebruik van vingerafdruk"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Stel een pincode in voor betere beveiliging"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Pincode bij gebruik van vingerafdruk"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Voer je wachtwoord opnieuw in"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Voer je apparaatwachtwoord in"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Geef je wachtwoord opnieuw op"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Voer wachtwoord werkprofiel opnieuw in"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Voer het wachtwoord van je werkprofiel in"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Bevestig je patroon"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Voer je apparaatpatroon in"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Teken het patroon van je werkprofiel"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"Voer je pincode opnieuw in"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Voer de pincode van je apparaat in"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"Geef je pincode opnieuw op"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Voer pincode van werkprofiel opnieuw in"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Voer de pincode van je werkprofiel in"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Wachtwoorden komen niet overeen"</string>
@@ -1901,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Je wachtwoord vergeten?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Je patroon vergeten?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Je pincode vergeten?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Teken je patroon om door te gaan"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Voer je pincode in om door te gaan"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Voer je wachtwoord in om door te gaan"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Teken je werkpatroon om door te gaan"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Geef de pincode van je werkprofiel op om door te gaan"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Geef het wachtwoord van je werkprofiel op om door te gaan"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Met je patroon wordt geverifieerd dat jij het bent"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"Met je pincode wordt geverifieerd dat jij het bent"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Met je wachtwoord wordt geverifieerd dat jij het bent"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Met je werkpatroon wordt geverifieerd dat jij het bent"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"Met je werkpincode wordt geverifieerd dat jij het bent"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Met je werk-wachtwoord wordt geverifieerd dat jij het bent"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Geef voor extra veiligheid je apparaatpatroon op"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Geef voor extra veiligheid je apparaatpincode op"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Geef voor extra veiligheid je apparaatwachtwoord op"</string>
@@ -2183,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Scrollen"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Gecontroleerd scrollen"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Scrollsnelheid"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Cursor sneller maken"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Cursor langzamer maken"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Primaire muisknop omwisselen"</string>
@@ -3754,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Systeemgeluiden en -trillingen"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Geluid voor werkprofiel"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Live ondertiteling"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Ondertitel media automatisch"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Bedrade koptelefoon"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Compatibele media leveren een royaler geluid"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Uit"</string>
@@ -3900,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Topverhalen, redactionele artikelen en meer"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Likes, posts en meer"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Nieuwsbrieven, aanbevolen media en meer"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Beheren met AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Meldingssamenvattingen"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Krijg korte samenvattingen van langere berichten"</string>
@@ -3911,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Deze apps niet opnemen"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Meldingssamenvattingen"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Krijg korte samenvattingen van langere berichten"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Live meldingen"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Live updates"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Doorlopende, tijdgevoelige meldingen tonen in de statusbalk en op het vergrendelscherm"</string>
@@ -4393,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Controleer de apps die de manier hebben veranderd waarop ze je locatiegegevens delen"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Agents"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Agents die toegang hebben tot informatie of acties kunnen uitvoeren in apps"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Tikken om te activeren"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Dubbeltikken op het scherm om het apparaat te activeren"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Links openen"</string>
@@ -5949,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Voorkom dat anderen apps openen die Ontgrendelen met vingerafdruk of Ontgrendelen via gezichtsherkenning vereisen. Als je verbonden bent met je smartwatch, is je beveiliging gewaarborgd met meer mobiliteit."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Gebruik Identiteitscontrole en je smartwatch met meer apps"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Zorg dat je identiteit beschermd blijft in alle apps die Ontgrendelen met vingerafdruk en Ontgrendelen via gezichtsherkenning ondersteunen op veilige plaatsen zoals je huis of kantoor. Gebruik Identiteitscontrole met je smartwatch om je bescherming uit te breiden, zelfs als je niet op een veilige plaats bent."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

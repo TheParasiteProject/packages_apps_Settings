@@ -1125,7 +1125,7 @@
     <string name="wifi_eap_domain" msgid="8304301470752333203">"डोमेन"</string>
     <string name="wifi_eap_user_cert" msgid="3569182430929173220">"वापरकर्ता प्रमाणपत्र"</string>
     <string name="wifi_eap_identity" msgid="3629406902174137028">"ओळख"</string>
-    <string name="wifi_eap_anonymous" msgid="8630332141751267000">"अनामित ओळख"</string>
+    <string name="wifi_eap_anonymous" msgid="8630332141751267000">"अनामिक ओळख"</string>
     <string name="wifi_password" msgid="165204973532996861">"पासवर्ड*"</string>
     <string name="wifi_password_optional" msgid="6770706664834070705">"पासवर्ड (पर्यायी)"</string>
     <string name="wifi_password_invalid" msgid="8884500804472828356">"पासवर्ड चुकीचा आहे"</string>
@@ -1877,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"फिंगरप्रिंट वापरण्यासाठी पॅटर्न सेट करा"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"सुरक्षिततेसाठी, पिन सेट करा"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"फिंगरप्रिंट वापरण्यासाठी पिन सेट करा"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"तुमचा पासवर्ड पुन्‍हा एंटर करा"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"तुमच्या डिव्हाइसचा पासवर्ड एंटर करा"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"तुमचा पासवर्ड पुन्‍हा एंटर करा"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"कार्य प्रोफाइल पासवर्ड पुन्हा एंटर करा"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"तुमचा कार्य प्रोफाइल पासवर्ड एंटर करा"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"तुमचा पॅटर्न कन्फर्म करा"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"तुमच्या डिव्हाइसचा पॅटर्न एंटर करा"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"कार्य प्रोफाइल पॅटर्न एंटर करा"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"तुमचा पिन पुन्हा एंटर करा"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"तुमच्या डिव्हाइसचा पिन एंटर करा"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"तुमचा पिन पुन्हा एंटर करा"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"तुमचा कार्य प्रोफाइल पिन पुन्हा एंटर करा"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"तुमचा कार्य प्रोफाइल पिन एंटर करा"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"पासवर्ड जुळत नाहीत"</string>
@@ -1901,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"तुमचा पासवर्ड विसरलात का?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"तुमचा पॅटर्न विसरलात का?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"तुमचा पिन विसरलात का?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"पुढे सुरू ठेवण्यासाठी तुमचा पॅटर्न ड्रॉ करा"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"पुढे सुरू ठेवण्यासाठी तुमचा पिन एंटर करा"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"पुढे सुरू ठेवण्यासाठी तुमचा पासवर्ड एंटर करा"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"पुढे सुरू ठेवण्यासाठी तुमच्या कार्य प्रोफाइलचा पॅटर्न ड्रॉ करा"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"सुरू ठेवण्यासाठी तुमचा कार्य पिन एंटर करा"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"सुरू ठेवण्यासाठी तुमचा कार्य पासवर्ड एंटर करा"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"तुमचा पॅटर्न हे तुम्हीच असल्याची पडताळणी करतो"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"तुमचा पिन हे तुम्हीच असल्याची पडताळणी करतो"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"तुमचा पासवर्ड हे तुम्हीच असल्याची पडताळणी करतो"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"तुमचा ऑफिसचा पॅटर्न हे तुम्हीच असल्याची पडताळणी करतो"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"तुमचा ऑफिसचा पिन हे तुम्हीच असल्याची पडताळणी करतो"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"तुमचा ऑफिसचा पासवर्ड हे तुम्हीच असल्याची पडताळणी करतो"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"वाढीव सुरक्षिततेसाठी, तुमच्या डीव्हाइसचा पॅटर्न वापरा"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"वाढीव सुरक्षिततेसाठी, तुमच्या डिव्हाइसचा पिन टाका"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"वाढीव सुरक्षिततेसाठी, तुमच्या डिव्हाइसचा पासवर्ड टाका"</string>
@@ -2183,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"स्क्रोल करणे"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"स्क्रोल करणे नियंत्रित केले आहे"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"स्क्रोलिंगचा वेग"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"पॉइंटर अधिक जलद करा"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"पॉइंटर अधिक हळू करा"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"प्राथमिक माउस बटण स्वॅप करा"</string>
@@ -3754,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"सिस्टीमचा आवाज आणि व्हायब्रेशन"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"कार्य प्रोफाइलचा आवाज"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"लाइव्ह कॅप्शन"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"मीडियाला आपोआप कॅप्शन द्या"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"वायर असलेले हेडफोन"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"कंपॅटिबल मीडियामधील ऑडिओ हा आणखी इमर्सिव्ह होतो"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"बंद आहे"</string>
@@ -3900,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"टॉप स्टोरी, संपादकीय आणि आणखी बरेच काही"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"लाइक, पोस्ट आणि आणखी बरेच काही"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"बातमीपत्रक, शिफारस केलेला मीडिया आणि आणखी बरेच काही"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"AI सह व्यवस्थापित करणे"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"नोटिफिकेशनचे सारांश"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"मोठ्या मेसेजचे झटपट रीकॅप मिळवा"</string>
@@ -3911,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"या अ‍ॅप्सचा समावेश करू नका"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"नोटिफिकेशनचे सारांश"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"मोठ्या मेसेजचे झटपट रीकॅप मिळवा"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"लाइव्ह नोटिफिकेशन"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"लाइव्ह अपडेट"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"स्टेटस बार आणि लॉक स्क्रीनवर सुरू असलेली, वेळेनुसार संवेदनशील नोटिफिकेशन प्रदर्शित करा"</string>
@@ -4393,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"ज्या अ‍ॅप्सनी तुमचा स्थान डेटा शेअर करण्याची त्यांची पद्धत बदलली अशा अ‍ॅप्सचे पुनरावलोकन करा"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"एजंट"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"या अ‍ॅप्समधील माहिती अ‍ॅक्सेस करू शकणारे आणि कृती करू शकणारे एजंट"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"सक्रिय करण्यासाठी टॅप करा"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"डिव्हाइस ॲक्टिव्हेट करण्यासाठी स्क्रीनवर कुठेही दोनदा टॅप करा"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"उघडणाऱ्या लिंक"</string>
@@ -5054,7 +5077,7 @@
     <!-- no translation found for graphics_driver_app_preference_values:1 (485288770206606512) -->
     <!-- no translation found for graphics_driver_app_preference_values:2 (5391218026495225599) -->
     <!-- no translation found for graphics_driver_app_preference_values:3 (2586045835780389650) -->
-    <string name="enable_angle_as_system_driver" msgid="4648827560023949786">"प्रायोगिक: Enable सुरू करा"</string>
+    <string name="enable_angle_as_system_driver" msgid="4648827560023949786">"प्रायोगिक: ANGLE सुरू करा"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="2170215556348477481">"चेतावणी: डीफॉल्ट OpenGL ES ड्रायव्हर म्हणून ANGLE सुरू करा. या वैशिष्ट्यावर प्रयोग सुरू आहे आणि ते काही कॅमेरा व व्हिडिओ अ‍ॅप्सशी कंपॅटिबल नसू शकते."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="2619263039763150810">"सिस्टीम OpenGL ES ड्रायव्हर बदलण्यासाठी रीबूट करणे आवश्यक आहे"</string>
     <string name="platform_compat_dashboard_title" msgid="1323980546791790236">"ॲप कंपॅटिबिलिटी बदल"</string>
@@ -5949,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"इतरांना फिंगरप्रिंट किंवा फेस अनलॉक आवश्यक असलेली अ‍ॅप्स उघडण्यापासून रोखा. तुमच्या वॉचशी कनेक्ट केलेले असताना, अधिक मोबिलिटीसह तुमची सुरक्षा सुनिश्चित केली जाते."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"अधिकाधिक अ‍ॅप्सच्या सुरक्षेसाठी ओळख तपासणी आणि वॉच वापरा"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"तुमचे घर किंवा ऑफिस यासारख्या विश्वसनीय ठिकाणी फिंगरप्रिंट आणि फेस अनलॉक याला सपोर्ट करणाऱ्या सर्व ॲप्सवर तुमची ओळख सुरक्षित असल्याची खात्री करा. विश्वसनीय ठिकाणांच्या व्यतिरिक्तदेखील तुमचे संरक्षण वाढवण्यासाठी तुमच्या वॉचच्या मदतीने ओळख तपासणी वापरा."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

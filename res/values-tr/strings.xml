@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Ekranınızı daha rahat görüntülemek ve bazı ekranlarda pil kullanımını azaltmak için koyu arka plan kullanın. Program kullanıyorsanız ekran kapandığında temanız değişir."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Koyu tema şu anda Uyku Vakti modu programınıza uyuyor."</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Uyku Vakti modu ayarları"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Modlar, koyu temayı da açabilir.}=1{{mode_1}, koyu temayı da açar.}=2{{mode_1} ve {mode_2}, koyu temayı da açar.}=3{{mode_1}, {mode_2} ve {mode_3}, koyu temayı da açar.}other{{mode_1}, {mode_2} ve diğer # mod koyu temayı da açar}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Mod ayarları"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Yüksek Dinamik Aralık (HDR) özellikli görsel ve videolardaki renk aralığını/netliği artırın ve parlaklaştırın. HDR içerikler daha parlak görünür."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Ekran zaman aşımı"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Parmak izi için desen ayarlayın"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Güvenlik için PIN oluşturun"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Parmak izi için PIN ayarlayın"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Şifrenizi yeniden girin"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Cihazınızın şifresini girin"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Şifrenizi yeniden girin"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"İş şifrenizi tekrar girin"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"İş şifrenizi girin"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Deseninizi onaylayın"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Cihazınızın desenini girin"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"İş deseninizi girin"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"PIN\'inizi yeniden girin"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Cihazınızın PIN\'ini girin"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"PIN\'inizi yeniden girin"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"İş PIN\'inizi tekrar girin"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"İş PIN\'inizi girin"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Şifreler eşleşmiyor"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Şifrenizi mi unuttunuz?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Deseninizi mi unuttunuz?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"PIN\'inizi mi unuttunuz?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Devam etmek için deseninizi çizin"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Devam etmek için PIN\'inizi girin"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Devam etmek için şifrenizi girin"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Devam etmek için iş profilinizin desenini çizin"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Devam etmek için iş profilinizin PIN\'ini girin"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Devam etmek için iş profilinizin şifresini girin"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Deseniniz, kimliğinizi doğrular"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"PIN\'iniz, kimliğinizi doğrular"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Şifreniz, kimliğinizi doğrular"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"İş deseniniz, kimliğinizi doğrular"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"İş PIN\'iniz, kimliğinizi doğrular"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"İş şifreniz, kimliğinizi doğrular"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Daha fazla güvenlik için cihaz deseninizi kullanın"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Daha fazla güvenlik için cihaz PIN\'inizi girin"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Daha fazla güvenlik için cihaz şifrenizi girin"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Kaydırma"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Kontrollü kaydır"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Kaydırma hızı"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"İşaretçiyi hızlandır"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"İşaretçiyi yavaşlat"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Birincil fare düğmesini değiştir"</string>
@@ -3756,7 +3761,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Sistem sesleri ve titreşimler"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"İş profili sesi"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Canlı Altyazı"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Otomatik medya altyazısı"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Kablolu kulaklık"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Uyumlu medyadaki sesler daha yoğun hale gelir"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Kapalı"</string>
@@ -3902,6 +3912,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"En çok okunan haberler, editoryal içerikler ve daha fazlası"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Beğeniler, gönderiler ve daha fazlası"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Bültenler, önerilen medya ve daha fazlası"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Yapay zeka ile yönetin"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Bildirim özetleri"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Uzun mesajların özetlerini hızlıca alın"</string>
@@ -3913,6 +3925,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Bu uygulamaları dahil etme"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Bildirim özetleri"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Uzun mesajların özetlerini hızlıca alın"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Canlı bildirimler"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Canlı güncellemeler"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Devam eden ve zamana duyarlı bildirimleri durum çubuğunda ve kilit ekranında göster"</string>
@@ -4395,6 +4409,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Konum verilerinizi paylaşma şekillerini değiştiren uygulamaları inceleyin"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Temsilciler"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Uygulamalarda bilgilere erişebilen veya işlem yapabilen temsilciler"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Dokunarak uyandır"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Cihazı uyandırmak için ekranda herhangi bir yere iki kez dokunun"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Bağlantıları açma"</string>
@@ -4659,8 +4681,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{Veri Tasarrufu açıkken 1 uygulamanın sınırsız mobil veri kullanmasına izin verildi}other{Veri Tasarrufu açıkken # uygulamanın sınırsız mobil veri kullanmasına izin verildi}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"Birincil veri"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Kablosuz ağ verisi"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="data_overusage" msgid="3680477320458707259">"<xliff:g id="ID_1">^1</xliff:g>\'ın üzerinde"</string>
     <string name="data_remaining" msgid="6316251496381922837">"<xliff:g id="ID_1">^1</xliff:g> kaldı"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"<xliff:g id="START_DATE">%1$s</xliff:g>-<xliff:g id="END_DATE">%2$s</xliff:g> tarihleri arasındaki veri kullanımını gösteren grafik."</string>
@@ -5952,4 +5973,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Başkalarının parmak izi veya yüz tanıma kilidi gerektiren uygulamaları açmasını engelleyin. Kol saatinize bağlandığınızda daha fazla hareket özgürlüğüyle güvenliğiniz sağlanır."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Kimlik Kontrolü ile kol saatini daha fazla uygulamada kullanın"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Eviniz veya ofisiniz gibi güvenilir yerlerde parmak izi ve Yüz Tanıma Kilidi\'ni destekleyen tüm uygulamalarda kimliğinizin korunduğundan emin olun. Güvenilir yerlerin dışında da korunmak için kol saatinizde Kimlik Kontrolü\'nü kullanın."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

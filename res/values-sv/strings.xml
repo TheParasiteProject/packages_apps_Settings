@@ -1877,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Rita mönster för fingeravtryck"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Välj en pinkod"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Pinkod krävs för fingeravtryck"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Ange ditt lösenord igen"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Ange enhetens lösenord"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Ange ditt lösenord igen"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Ange lösenordet för jobbet igen"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Ange lösenordet för jobbprofilen"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Bekräfta mönster"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Ange enhetens mönster"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Ange mönstret för jobbet"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"Ange din pinkod igen"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Ange enhetens pinkod"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"Ange din pinkod igen"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Ange pinkoden för jobbet igen"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Ange pinkoden för jobbprofilen"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Lösenorden matchar inte"</string>
@@ -1901,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Har du glömt lösenordet?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Har du glömt mönstret?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Har du glömt pinkoden?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Rita mönstret för att fortsätta"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Ange pinkoden för att fortsätta"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Ange lösenordet för att fortsätta"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Ange mönstret för arbetet om du vill fortsätta"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Ange pinkoden för jobbprofilen om du vill fortsätta"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Ange lösenordet för jobbprofilen om du vill fortsätta"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Ditt mönster verifierar din identitet"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"Pinkoden verifierar din identitet"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Lösenordet verifierar din identitet"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Ditt arbetsschema verifierar din identitet"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"Din pinkod för arbetet verifierar din identitet"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Lösenordet för jobbprofilen verifierar din identitet"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Använd mönstret för enheten för att öka säkerheten"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Ange enhetens pinkod för att öka säkerheten"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Ange enhetens lösenord för att öka säkerheten."</string>
@@ -2183,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Scrollning"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Kontrollerad scrollning"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Scrollningshastighet"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Gör markören snabbare"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Gör markören långsammare"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Byt primär musknapp"</string>
@@ -3754,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Systemljud och vibrationer"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Ljud för jobbprofil"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Live Caption"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Texta media automatiskt"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Hörlurar med sladd"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Ljud från kompatibel media blir mer omgivande"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Av"</string>
@@ -3900,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Toppnyheter, ledare med mera"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Gilla-markeringar, inlägg med mera"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Nyhetsbrev, rekommenderade medier med mera"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Hantera med AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Aviseringssammanfattningar"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Få snabba sammanfattningar av längre meddelanden"</string>
@@ -3911,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Inkludera inte dessa appar"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Aviseringssammanfattningar"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Få snabba sammanfattningar av längre meddelanden"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Liveaviseringar"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Liveuppdateringar"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Visa pågående, tidskänsliga aviseringar i statusfältet och på låsskärmen"</string>
@@ -4393,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Granska appar som har ändrat hur de kan dela din platsdata"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Agenter"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Agenter som kan komma åt information eller vidta åtgärder i appar"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Väck genom att trycka"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Väck enheten genom att trycka två gånger var som helst på skärmen"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Öppna länkar"</string>
@@ -5949,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Förhindra att andra öppnar appar som kräver fingeravtryckslås eller ansiktslås. När den är ansluten till klockan är din säkerhet garanterad med större rörlighet."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Använd identitetskoll och klockan i fler appar"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Se till att ditt identitetsskydd är aktiverat i alla appar som stöder fingeravtryckslås och ansiktslås på betrodda platser som hemmet eller kontoret. Använd identitetskoll med klockan för att utöka skyddet även utanför betrodda platser."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

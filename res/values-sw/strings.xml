@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Tumia mandharinyuma meusi ili uweke skrini yako katika hali nzuri zaidi ya kutazama na upunguze matumizi ya betri kwenye baadhi ya skrini. Mandhari yako yatabadilika iwapo una ratiba, wakati skrini imezimwa."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Kwa sasa mandhari meusi yanafuata ratiba yako ya hali tuli"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Mipangilio ya Hali tuli"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Hali zinaweza pia kuwasha Mandhari meusi.}=1{Hali ya {mode_1} huwasha pia Mandhari meusi.}=2{Hali za {mode_1} na {mode_2} huwasha pia Mandhari meusi.}=3{Hali za {mode_1}, {mode_2} na {mode_3} huwasha pia Mandhari meusi.}other{Hali za {mode_1}, {mode_2} na # zaidi huwasha pia Mandhari meusi.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Mipangilio ya hali"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Ongeza mwangaza na upanue wigo wa rangi na mwonekano mzuri katika picha na video za HDR. Maudhui ya HDR yataonekana kuwa na ung’aavu zaidi."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Muda wa skrini kujizima"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Weka mchoro ili utumie alama ya kidole"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Kwa sababu za usalama, weka PIN"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Weka PIN ili utumie alama ya kidole"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Weka nenosiri lako tena"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Weka nenosiri la kifaa chako"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Weka nenosiri lako tena"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Weka nenosiri lako la kazini tena"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Weka nenosiri lako la kazini"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Thibitisha mchoro wako"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Weka mchoro wa kufungua kifaa"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Weka mchoro wako wa kazini"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"Weka PIN yako tena"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Weka PIN ya kifaa chako"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"Weka PIN yako tena"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Weka PIN yako ya kazini tena"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Weka PIN yako ya kazini"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Nenosiri halilingani"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Je, umesahau nenosiri lako?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Je, umesahau mchoro wako?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Je, umesahau PIN yako?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Chora mchoro wako ili uendelee"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Weka PIN yako ili uendelee"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Weka nenosiri lako ili uendelee"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Chora mchoro wa wasifu wako wa kazini ili uendelee"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Weka PIN ya kazini ili uendelee"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Weka nenosiri lako ili uendelee"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Mchoro wako wa kufungua kifaa huthibitisha kuwa ni wewe"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"PIN yako huthibitisha kuwa ni wewe"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Nenosiri lako huthibitisha kuwa ni wewe"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Mchoro wako wa kufungua kifaa cha kazini huthibitisha kuwa ni wewe"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"PIN yako ya kazini huthibitisha kuwa ni wewe"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Nenosiri lako la kazini huthibitisha kuwa ni wewe"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Ili kuimarisha usalama, tumia mchoro wa kufungua kifaa chako"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Ili kuimarisha usalama, weka PIN ya kifaa chako"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Ili kuimarisha usalama, weka nenosiri la kifaa chako"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Usogezaji"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Usogezaji unaodhibitiwa"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Kasi ya kusogeza"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Ongeza kasi ya kielekezi"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Punguza kasi ya kielekezi"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Kubadilisha kitufe msingi cha kipanya"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Sauti na mitetemo ya mfumo"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Sauti ya wasifu wa kazini"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Manukuu Papo Hapo"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Wekea maudhui manukuu kiotomatiki"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Vipokea sauti vya kichwani vinavyotumia waya"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Sauti kutoka kwenye maudhui yanayooana huwa murua zaidi"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Imezimwa"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Habari kuu, makala ya uhariri na mengineyo"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Alama za nimeipenda, machapisho na mengineyo"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Majarida, maudhui yanayopendekezwa na mengineyo"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Dhibiti ukitumia AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Mihtasari ya arifa"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Pata mihtasari ya haraka ya ujumbe mrefu"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Usijumuishe programu hizi"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Mihtasari ya arifa"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Pata mihtasari ya haraka ya ujumbe mrefu"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Arifa za moja kwa moja"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Taarifa za moja kwa moja"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Onyesha arifa zinazoendelea ambazo zinazingatia muda kwenye sehemu ya arifa na skrini iliyofungwa"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Kagua programu zilizobadilisha jinsi zinavyoweza kushiriki data ya mahali ulipo"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Mifumo tekelezi"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Mifumo tekelezi inayoweza kufikia maelezo na kutekeleza vitendo kwenye programu"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Gusa ili uanze kutumia"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Gusa mara mbili mahali popote kwenye skrini ili uanze kutumia kifaa"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Kufungua viungo"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{Programu 1 imeruhusiwa kutumia data isiyodhibitiwa ya mtandao wa simu wakati Kiokoa Data kimewashwa}other{Programu # zimeruhusiwa kutumia data isiyodhibitiwa ya mtandao wa simu wakati Kiokoa Data kimewashwa}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"Data ya msingi"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Data ya Wi‑Fi"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_2">^2</xliff:g> <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_overusage" msgid="3680477320458707259">"Zaidi ya <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_remaining" msgid="6316251496381922837">"Zimesalia <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"Grafu inayoonyesha matumizi ya data kati ya tarehe <xliff:g id="START_DATE">%1$s</xliff:g> na <xliff:g id="END_DATE">%2$s</xliff:g>."</string>
@@ -5951,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Zuia wengine wasifungue programu zinazohitaji Kufunguliwa kwa Uso au Alama ya kidole. Unapounganisha na saa yako, unahakikishiwa usalama popote unapokwenda."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Tumia saa na kipengele cha Kuthibitisha Utambulisho kwenye programu zaidi"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Hakikisha umelinda utambulisho wako kwenye programu zote zinazotumia kipengele cha Kufungua kwa Uso na Alama ya kidole katika maeneo unayoyaamini kama vile ofisini au nyumbani kwako. Tumia kipengele cha Kuthibitisha Utambulisho kwenye saa yako ili uimarishe ulinzi hata katika maeneo mengine kando na unayoyaamini."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"ប្រើផ្ទៃខាងក្រោយងងឹត ដើម្បីធ្វើឱ្យអេក្រង់របស់អ្នកកាន់តែស្រួលក្នុងការមើល និងកាត់បន្ថយការប្រើប្រាស់ថ្មនៅលើអេក្រង់មួយចំនួន។ ទម្រង់រចនារបស់អ្នកនឹងផ្លាស់ប្ដូរ នៅពេលអេក្រង់បិទ ប្រសិនបើអ្នកមានកាលវិភាគ។"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"បច្ចុប្បន្ន រចនាប័ទ្ម​ងងឹត​កំពុងអនុវត្តតាម​កាលវិភាគមុខងារ​ម៉ោងគេងរបស់អ្នក"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"ការកំណត់​មុខងារ​ម៉ោង​គេង"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{គំរូក៏អាចបើកទម្រង់រចនាងងឹតបានផងដែរ។}=1{{mode_1} ក៏បើកទម្រង់រចនាងងឹតផងដែរ។}=2{{mode_1} និង {mode_2} ក៏បើកទម្រង់រចនាងងឹតផងដែរ។}=3{{mode_1}, {mode_2} និង {mode_3} ក៏បើកទម្រង់រចនាងងឹតផងដែរ។}other{{mode_1}, {mode_2} និង # ទៀតក៏បើកទម្រង់រចនាងងឹតផងដែរ។}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"ការកំណត់មុខងារ"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"បង្កើនពន្លឺ និងពង្រីក​ចន្លោះពណ៌ និងភាពច្បាស់​នៅក្នុងរូបភាព និងវីដេអូដែលមានកម្រិតឌីណាមិកខ្ពស់ (HDR)។ ខ្លឹមសារ HDR នឹងបង្ហាញកាន់តែភ្លឺ។"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"រយៈពេលទម្រាំអេក្រង់បិទ"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"ដើម្បី​ប្រើស្នាម​ម្រាមដៃ សូម​កំណត់​លំនាំ"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"ដើម្បី​សុវត្ថិភាព សូម​កំណត់​កូដ PIN"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"ដើម្បី​ប្រើប្រាស់​ស្នាម​ម្រាមដៃ សូម​កំណត់​កូដ PIN"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"បញ្ចូល​ពាក្យ​សម្ងាត់​របស់​អ្នក​ម្តងទៀត"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"បញ្ចូលពាក្យសម្ងាត់ឧបករណ៍របស់អ្នក"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"បញ្ចូល​ពាក្យ​សម្ងាត់​របស់​អ្នកម្ដងទៀត"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"បញ្ចូលពាក្យសម្ងាត់​ការងាររបស់អ្នក​ឡើងវិញ"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"បញ្ចូល​ពាក្យសម្ងាត់​ការងារ​របស់អ្នក"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"បញ្ជាក់​លំនាំ​របស់​អ្នក"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"បញ្ចូលលំនាំឧបករណ៍របស់អ្នក"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"បញ្ចូល​លំនាំការងារ​របស់អ្នក"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"បញ្ចូល​កូដ PIN របស់អ្នក​ម្តងទៀត"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"បញ្ចូលកូដ PIN ឧបករណ៍របស់អ្នក"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"បញ្ចូល​កូដ PIN របស់អ្នក​ម្ដងទៀត"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"បញ្ចូលកូដ PIN ការងាររបស់អ្នក​ឡើងវិញ"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"បញ្ចូល​កូដ PIN ការងារ​របស់អ្នក"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"ពាក្យសម្ងាត់​មិន​ដូចគ្នា"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"ភ្លេចពាក្យសម្ងាត់​របស់អ្នកឬ?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"ភ្លេចលំនាំ​របស់អ្នកឬ?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"ភ្លេចកូដ PIN របស់អ្នកឬ?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"គូរលំនាំរបស់អ្នកដើម្បីបន្ត"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"បញ្ចូលកូដ PIN របស់អ្នក​ដើម្បីបន្ត"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"បញ្ចូលពាក្យសម្ងាត់​របស់អ្នកដើម្បីបន្ត"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"គូរលំនាំការងាររបស់អ្នកដើម្បីបន្ត"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"បញ្ចូលកូដ PIN ការងាររបស់អ្នកដើម្បីបន្ត"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"បញ្ចូលពាក្យសម្ងាត់ការងាររបស់អ្នកដើម្បីបន្ត"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"លំនាំរបស់អ្នកផ្ទៀងផ្ទាត់ថាជាអ្នក"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"កូដ PIN របស់អ្នកផ្ទៀងផ្ទាត់ថាជាអ្នក"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"ពាក្យសម្ងាត់របស់អ្នកផ្ទៀងផ្ទាត់ថាជាអ្នក"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"លំនាំការងាររបស់អ្នកផ្ទៀងផ្ទាត់ថាជាអ្នក"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"កូដ PIN ការងាររបស់អ្នកផ្ទៀងផ្ទាត់ថាជាអ្នក"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"ពាក្យសម្ងាត់ការងាររបស់អ្នកផ្ទៀងផ្ទាត់ថាជាអ្នក"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"ដើម្បី​ទទួលបាន​សុវត្ថិភាព​បន្ថែម សូម​ប្រើប្រាស់​លំនាំ​ឧបករណ៍​របស់អ្នក"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"ដើម្បី​ទទួលបាន​សុវត្ថិភាព​បន្ថែម សូម​បញ្ចូល​កូដ PIN ឧបករណ៍​របស់អ្នក"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"ដើម្បី​ទទួលបាន​សុវត្ថិភាព​បន្ថែម សូម​បញ្ចូល​ពាក្យសម្ងាត់​ឧបករណ៍​របស់អ្នក"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"ការរំកិល"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"ការរំកិលដែលមានការគ្រប់គ្រង"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"ល្បឿនរំកិល"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"ធ្វើឱ្យសញ្ញាព្រួញលឿនជាងមុន"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"ធ្វើឱ្យសញ្ញាព្រួញយឺតជាងមុន"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"ឆ្លាស់ប៊ូតុងម៉ៅស៍ចម្បង"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"ប្រព័ន្ធសំឡេង និងរំញ័រ"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"សំឡេងកម្រងព័ត៌មានការងារ"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"អក្សររត់ក្នុងពេលជាក់ស្ដែង"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"ដាក់អក្សររត់លើមេឌៀដោយស្វ័យប្រវត្តិ"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"កាស​ប្រើ​ខ្សែ"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"សំឡេងពីមេឌៀដែលអាចប្រើសំឡេងលំហបានស្ដាប់ទៅកាន់តែជក់អារម្មណ៍"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"បិទ"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"វិចារណកថា រឿងពេញនិយម និងច្រើនទៀត"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"ការចូលចិត្ត សារបង្ហោះ និងច្រើនទៀត"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"ព្រឹត្តិបត្រ មេឌៀដែលបានណែនាំ និងច្រើនទៀត"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"គ្រប់គ្រងដោយប្រើ AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"ការសង្ខេបការ​ជូនដំណឹង"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"ទទួលបានការសង្ខេបខ្លីៗអំពីសារកាន់តែវែង"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"កុំរួមបញ្ចូលកម្មវិធីទាំងនេះ"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"ការសង្ខេបការ​ជូនដំណឹង"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"ទទួលបានការសង្ខេបខ្លីៗអំពីសារវែងៗ"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"ការជូនដំណឹងបន្តផ្ទាល់"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"ព័ត៌មាន​បន្តផ្ទាល់"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"បង្ហាញការជូនដំណឹងទាន់ពេល និងបន្តបន្ទាប់នៅលើរបារ​ស្ថានភាព និងអេក្រង់ចាក់សោ"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"ពិនិត្យមើលកម្មវិធីដែលបានផ្លាស់ប្ដូររបៀបដែលកម្មវិធីទាំងនោះអាចចែករំលែកទិន្នន័យទីតាំងរបស់អ្នក"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"ភ្នាក់ងារ"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"ភ្នាក់ងារដែលអាចចូលប្រើព័ត៌មាន ឬធ្វើសកម្មភាពនៅក្នុងកម្មវិធីបាន"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"ប៉ះដើម្បីដាស់"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"ប៉ះកន្លែងណាមួយនៅលើអេក្រង់ពីរដងដើម្បីដាស់ឧបករណ៍ឲ្យភ្ញាក់"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"ការបើកតំណ"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{បានអនុញ្ញាតឱ្យកម្មវិធី 1 ប្រើប្រាស់ទិន្នន័យទូរសព្ទចល័តគ្មានដែនកំណត់ នៅពេលកម្មវិធីសន្សំសំចៃទិន្នន័យត្រូវបានបើក}other{បានអនុញ្ញាតឱ្យកម្មវិធី # ប្រើប្រាស់ទិន្នន័យទូរសព្ទចល័តគ្មានដែនកំណត់ នៅពេលកម្មវិធីសន្សំសំចៃទិន្នន័យត្រូវបានបើក}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"ទិន្នន័យ​ចម្បង"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"ទិន្នន័យ Wi‑Fi"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>⁠"</string>
     <string name="data_overusage" msgid="3680477320458707259">"លើស <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_remaining" msgid="6316251496381922837">"នៅ​សល់ <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"ក្រាហ្វ​ដែល​បង្ហាញ​អំពី​ការប្រើ​ទិន្នន័យ​នៅ​ចន្លោះ​ថ្ងៃទី <xliff:g id="START_DATE">%1$s</xliff:g> និង <xliff:g id="END_DATE">%2$s</xliff:g>។"</string>
@@ -5951,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"ទប់ស្កាត់អ្នកដទៃ​មិនឱ្យបើកកម្មវិធីដែលតម្រូវឱ្យប្រើស្នាមម្រាមដៃ ឬការដោះ​សោ​ដោយស្កេន​មុខ។ នៅពេលបានភ្ជាប់ជាមួយនាឡិការបស់អ្នក សុវត្ថិភាពរបស់អ្នកត្រូវបានធានាដោយមានការផ្លាស់ទីកាន់តែច្រើន។"</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"ប្រើការពិនិត្យអត្តសញ្ញាណ និងនាឡិកានៅលើកម្មវិធីច្រើនទៀត"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"ទទួលបានការការពារអត្តសញ្ញាណរបស់អ្នកនៅលើកម្មវិធីទាំងអស់ដែលអាចប្រើស្នាមម្រាមដៃ និងការដោះ​សោ​ដោយស្កេន​មុខនៅក្នុងកន្លែងដែលទុកចិត្ត ដូចជាផ្ទះ ឬការិយាល័យរបស់អ្នកជាដើម។ ប្រើការពិនិត្យអត្តសញ្ញាណជាមួយនាឡិការបស់អ្នក ដើម្បីបង្កើនការការពាររបស់អ្នកបន្ថែមពីលើកន្លែងដែលទុកចិត្ត។"</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

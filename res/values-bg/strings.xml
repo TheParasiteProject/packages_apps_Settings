@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Използвайте тъмен фон, за да направите съдържанието на екрана по-удобно за гледане и да намалите използването на батерията на някои екрани. Темата ви ще се промени, ако имате график, когато екранът е изключен."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Понастоящем тъмната тема следва графика ви за режима „Време за сън“"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Настройки за режима „Време за сън“"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Режимите могат да включват и тъмната тема.}=1{{mode_1} включва и тъмната тема.}=2{{mode_1} и {mode_2} включват и тъмната тема.}=3{{mode_1}, {mode_2} и {mode_3} включват и тъмната тема.}other{{mode_1}, {mode_2} и още # включват и тъмната тема.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Настройки за режимите"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Увеличаване на яркостта и разгъване на цветовата гама и яснотата в изображенията и видеоклиповете с HDR (голям динамичен обхват). Съдържанието с HDR ще изглежда по-ярко."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Време до автоматично изключване на екрана"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Задайте фигура, за да ползвате отпечатък"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"От съображения за сигурност задайте ПИН код"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Задайте ПИН, за да ползвате отпечатък"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Въведете отново паролата си"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Въведете паролата за устройството си"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Въведете отново паролата си"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Повторно въвеждане на служебната парола"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Въведете служебната си парола"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Потвърдете фигурата си"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Въведете фигурата за устройството си"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Въведете служебната си фигура"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"Въведете отново ПИН кода си"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Въведете ПИН кода за устройството си"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"Въведете отново ПИН кода си"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Повторно въвеждане на служебния ПИН код"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Въведете служебния си ПИН код"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Паролите не си съответстват"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Забравили сте паролата?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Забравили сте фигурата?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Забравили сте ПИН кода?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Начертайте фигурата си, за да продължите"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Въведете ПИН кода си, за да продължите"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Въведете паролата си, за да продължите"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Начертайте служебната си фигура, за да продължите"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Въведете служебния си ПИН код, за да продължите"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Въведете служебната си парола, за да продължите"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Фигурата ви служи за потвърждаване на самоличността ви"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"ПИН кодът ви служи за потвърждаване на самоличността ви"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Паролата ви служи за потвърждаване на самоличността ви"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Служебната ви фигура служи за потвърждаване на самоличността ви"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"Служебният ви ПИН код служи за потвърждаване на самоличността ви"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Служебната ви парола служи за потвърждаване на самоличността ви"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"За допълнителна сигурност използвайте фигурата за устройството си"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"За допълнителна сигурност въведете ПИН кода за устройството си"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"За допълнителна сигурност въведете паролата за устройството си"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Превъртане"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Контролирано превъртане"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Скорост на превъртане"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Ускоряване на курсора"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Забавяне на курсора"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Размяна на основния бутон на мишката"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Системни звуци и вибрирания"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Звук за служебния потребителски профил"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Надписи на живо"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Мултимедия с автоматични надписи"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Слушалки с кабел"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Звукът от съвместимите източници става по-реалистичен"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Изкл."</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Водещи материали, редакторски статии и др."</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Харесвания, публикации и др."</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Бюлетини, препоръчани медии и др."</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Управление с AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Обобщения на известията"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Получавайте кратка обзорна информация за по-дългите съобщения"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Без включване на тези приложения"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Обобщения на известията"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Получавайте кратка обзорна информация за по-дългите съобщения"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Известия в реално време"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Актуализации на живо"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Показване на текущите и ограничени във времето известия в лентата на състоянието и на заключения екран"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Прегледайте приложенията, променили начина, по който могат да споделят данни за местоположението ви"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Агенти"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Агенти, които имат достъп до информация или могат да предприемат действия в приложенията"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Докоснете за „събуждане“"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Докоснете два пъти произволно място на екрана, за да „събудите“ устройството"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Отваряне на връзки"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{1 приложение може да използва неограничени мобилни данни, когато функцията „Икономия на данни“ е включена}other{# приложения могат да използват неограничени мобилни данни, когато функцията „Икономия на данни“ е включена}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"Основни данни"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Данни през Wi‑Fi"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="data_overusage" msgid="3680477320458707259">"<xliff:g id="ID_1">^1</xliff:g> над лимита"</string>
     <string name="data_remaining" msgid="6316251496381922837">"Остават: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"Графика, показваща преноса на данни между <xliff:g id="START_DATE">%1$s</xliff:g> и <xliff:g id="END_DATE">%2$s</xliff:g>."</string>
@@ -5951,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Попречете на други хора да отварят приложения, които изискват отключване с отпечатък или лице. Когато функцията е свързана с часовника ви, сигурността ви е гарантирана дори и в движение."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Използвайте функцията за проверка на самоличността и часовника си с повече приложения"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Осигурете защита на самоличността си във всички приложения, които поддържат „Отключване с отпечатък“ и „Отключване с лице“, на надеждни места, като например дома или офиса ви. Използвайте функцията за проверка на самоличността с часовника си, така че защитата да е активна дори извън надеждните места."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

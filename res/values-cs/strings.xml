@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Použijte tmavé pozadí, aby se na obrazovku dívalo příjemněji a na některých obrazovkách se snížilo využití baterie. Pokud máte zapnutý plán, motiv se změní, když je obrazovka vypnutá."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Tmavý motiv se aktuálně řídí plánem režimu nočního klidu"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Nastavení režimu nočního klidu"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Režimy můžou taky zapnout tmavý motiv.}=1{{mode_1} taky zapíná tmavý motiv.}=2{{mode_1} a {mode_2} taky zapínají tmavý motiv.}=3{{mode_1}, {mode_2} a {mode_3} taky zapínají tmavý motiv.}few{{mode_1}, {mode_2} a # další režimy taky zapínají tmavý motiv.}many{{mode_1}, {mode_2} a # dalšího režimu taky zapíná tmavý motiv.}other{{mode_1}, {mode_2} a # dalších režimů taky zapíná tmavý motiv.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Nastavení režimů"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Projasní a rozšíří barevný rozsah a ostrost obrázků a videí s technologií High Dynamic Range (HDR). Obsah s HDR bude jasnější."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Interval vypnutí obrazovky"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Otisk vyžaduje nastavení gesta"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Z bezpečnostních důvodů nastavte PIN"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Otisk vyžaduje nastavení PINu"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Znovu zadejte heslo"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Zadejte heslo k zařízení"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Znovu zadejte heslo"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Znovu zadejte svoje pracovní heslo"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Zadejte pracovní heslo"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Potvrďte své gesto"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Zadejte gesto k zařízení"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Zadejte pracovní gesto"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"Znovu zadejte PIN"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Zadejte PIN k zařízení"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"Znovu zadejte PIN"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Znovu zadejte svůj pracovní PIN"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Zadejte pracovní PIN"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Hesla nejsou shodná"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Zapomněli jste heslo?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Zapomněli jste gesto?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Zapomněli jste PIN?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Pokud chcete pokračovat, zadejte gesto"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Pokud chcete pokračovat, zadejte PIN"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Pokud chcete pokračovat, zadejte heslo"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Pokud chcete pokračovat, zadejte pracovní gesto"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Chcete-li pokračovat, zadejte pracovní PIN."</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Chcete-li pokračovat, zadejte pracovní heslo."</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Gestem se ověřuje vaše totožnost"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"Kódem PIN se ověřuje vaše totožnost"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Heslem se ověřuje vaše totožnost"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Pracovním gestem se ověřuje vaše totožnost"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"Pracovním kódem PIN se ověřuje vaše totožnost"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Pracovním heslem se ověřuje vaše totožnost"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Za účelem zvýšení zabezpečení použijte gesto zařízení"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Za účelem zvýšení zabezpečení zadejte PIN zařízení"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Za účelem zvýšení zabezpečení zadejte heslo zařízení"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Posouvání"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Řízené posouvání"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Rychlost posouvání"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Zrychlit ukazatel"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Zpomalit ukazatel"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Zaměnit primární tlačítko myši"</string>
@@ -2516,7 +2521,7 @@
     <string name="accessibility_tutorial_dialog_message_quick_setting" msgid="3715446725334547432">"{count,plural, =1{Pokud chcete funkci použít, přejeďte prstem po obrazovce shora dolů. Pak najděte dlaždici {featureName}.}few{Pokud chcete funkci použít, přejeďte # prsty po obrazovce shora dolů. Pak najděte dlaždici {featureName}.}many{Pokud chcete funkci použít, přejeďte # prstu po obrazovce shora dolů. Pak najděte dlaždici {featureName}.}other{Pokud chcete funkci použít, přejeďte # prsty po obrazovce shora dolů. Pak najděte dlaždici {featureName}.}}"</string>
     <string name="accessibility_tutorial_dialog_shortcut_unavailable_in_suw" msgid="3847728530771929959">"Zkratka bude k dispozici, až dokončíte nastavení zařízení."</string>
     <string name="accessibility_tutorial_dialog_message_gesture" msgid="4148062210755434854">"Tuto funkci použijete tak, že přejedete dvěma prsty z dolního okraje obrazovky nahoru.\n\nPokud chcete přepnout mezi funkcemi, přejeďte dvěma prsty nahoru a podržte je."</string>
-    <string name="accessibility_tutorial_dialog_gesture_shortcut_instruction" msgid="7349950768250852308">"{count,plural, =1{Pokud chcete používat tuhle funkci, přejeďte po obrazovce zdola nahoru}few{Pokud chcete používat tuhle funkci, přejeďte po obrazovce # prsty zdola nahoru}many{Pokud chcete používat tuhle funkci, přejeďte po obrazovce # prstu zdola nahoru}other{Pokud chcete používat tuhle funkci, přejeďte po obrazovce # prsty zdola nahoru}}"</string>
+    <string name="accessibility_tutorial_dialog_gesture_shortcut_instruction" msgid="7349950768250852308">"{count,plural, =1{Funkci použijete tak, že přejedete po obrazovce zdola nahoru}few{Funkci použijete tak, že přejedete po obrazovce # prsty zdola nahoru}many{Funkci použijete tak, že přejedete po obrazovce # prstu zdola nahoru}other{Funkci použijete tak, že přejedete po obrazovce # prsty zdola nahoru}}"</string>
     <string name="accessibility_tutorial_dialog_message_gesture_talkback" msgid="8142847782708562793">"Tuto funkci použijete tak, že přejedete třemi prsty z dolního okraje obrazovky nahoru.\n\nChcete-li přepnout mezi funkcemi, přejeďte třemi prsty nahoru a podržte je."</string>
     <string name="accessibility_tutorial_dialog_button" msgid="2031773187678948436">"OK"</string>
     <string name="accessibility_tutorial_dialog_link_button" msgid="13364319079385020">"Přizpůsobit tlačítko"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Systémové zvuky a vibrace"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Zvuk pracovního profilu"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Okamžité titulky"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Automatické přepisy médií"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Sluchátka s kabelem"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Zvuk z kompatibilních médií bude realističtější"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Vypnutý"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Top příběhy, úvodníky atd."</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Lajky, příspěvky atd."</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Zpravodaje, doporučená média atd."</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Správa pomocí AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Souhrny oznámení"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Rychlé rekapitulace dlouhých zpráv"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Tyto aplikace nezahrnovat"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Souhrny oznámení"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Rychlé rekapitulace dlouhých zpráv"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Živá oznámení"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Aktuality živě"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Zobrazovat průběžná, časově omezená oznámení na stavovém řádku a na obrazovce uzamčení"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Zkontrolujte aplikace, které změnily způsob, jakým mohou sdílet vaše údaje o poloze"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Agenti"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Agenti, kteří mají v aplikacích přístup k informacím a můžou provádět akce"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Probudit klepnutím"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Dvojitým klepnutím kamkoli na obrazovku zařízení probudíte"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Otevírání odkazů"</string>
@@ -4482,7 +4504,7 @@
     <string name="average_memory_use" msgid="717313706368825388">"Průměrné využití paměti"</string>
     <string name="maximum_memory_use" msgid="2171779724001152933">"Maximální využití paměti"</string>
     <string name="memory_usage" msgid="5594133403819880617">"Využití paměti"</string>
-    <string name="app_list_memory_use" msgid="3178720339027577869">"Využití aplikací"</string>
+    <string name="app_list_memory_use" msgid="3178720339027577869">"Využití aplikacemi"</string>
     <string name="memory_details" msgid="6133226869214421347">"Podrobnosti"</string>
     <string name="memory_use_summary" msgid="3915964794146424142">"Za poslední 3 hodiny bylo v průměru využito <xliff:g id="SIZE">%1$s</xliff:g> paměti."</string>
     <string name="no_memory_use_summary" msgid="6708111974923274436">"Za poslední 3 hodiny nebyla využita žádná paměť."</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{1 aplikace má povoleno využívat neomezená mobilní data, i když je zapnutý Spořič dat}few{# aplikace mají povoleno využívat neomezená mobilní data, i když je zapnutý Spořič dat}many{# aplikace má povoleno využívat neomezená mobilní data, i když je zapnutý Spořič dat}other{# aplikací má povoleno využívat neomezená mobilní data, i když je zapnutý Spořič dat}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"Primární data"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Data přes Wi‑Fi"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="data_overusage" msgid="3680477320458707259">"<xliff:g id="ID_1">^1</xliff:g> nad limit"</string>
     <string name="data_remaining" msgid="6316251496381922837">"Zbývá: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"Graf zobrazuje využití dat od <xliff:g id="START_DATE">%1$s</xliff:g> do <xliff:g id="END_DATE">%2$s</xliff:g>."</string>
@@ -5497,9 +5518,9 @@
     <string name="disable_screen_share_protections_for_apps_and_notifications_summary" msgid="5379583403909210858">"Vypnout systémovou ochranu citlivého obsahu aplikací u nadcházejících relací sdílení obrazovky"</string>
     <string name="media_controls_title" msgid="403271085636252597">"Média"</string>
     <string name="media_controls_resume_title" msgid="855076860336652370">"Připnout přehrávač médií"</string>
-    <string name="media_controls_resume_description" msgid="3163482266454802097">"Přehrávač médií zůstane otevřený v Rychlém nastavení, aby se mohlo rychle obnovit přehrávání"</string>
+    <string name="media_controls_resume_description" msgid="3163482266454802097">"Přehrávač médií zůstane otevřený v Rychlém nastavení, aby se mohlo přehrávání rychle obnovit"</string>
     <string name="media_controls_lockscreen_title" msgid="2188311721857512510">"Zobrazovat média na obrazovce uzamčení"</string>
-    <string name="media_controls_lockscreen_description" msgid="3320333660404439510">"Přehrávač médií zůstane otevřený na obrazovce uzamčení, aby bylo možné rychle obnovit přehrávání"</string>
+    <string name="media_controls_lockscreen_description" msgid="3320333660404439510">"Přehrávač médií zůstane otevřený na obrazovce uzamčení, aby se mohlo přehrávání rychle obnovit"</string>
     <string name="media_controls_hide_player" msgid="2751439192580884015">"Skrýt přehrávač"</string>
     <string name="media_controls_show_player" msgid="8504571042365814021">"Zobrazovat přehrávač"</string>
     <string name="keywords_media_controls" msgid="8345490568291778638">"média"</string>
@@ -5953,4 +5974,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Zabraňte ostatním v otevření aplikací, které vyžadují odemknutí otiskem prstu nebo obličejem. Připojení k hodinkám vám zajistí bezpečnost s větší mobilitou."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Používejte ověření totožnosti a hodinky ve více aplikacích"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Chraňte svou identitu ve všech aplikacích, které na důvěryhodných místech, jako je váš domov nebo kancelář, podporují odemknutí otiskem prstu a obličejem. Pro rozšířenou ochranu i mimo důvěryhodná místa používejte ověření totožnosti s hodinkami."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

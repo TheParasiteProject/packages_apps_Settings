@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Notaðu dökkan bakgrunn til að eiga auðveldara með að sjá á skjáinn og draga úr rafhlöðunotkun. Ef þú hefur sett upp áætlun mun þemað þitt breytast þegar það slokknar á skjánum."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Dökkt þema fylgir áætlun háttatímastillingar eins og er"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Valkostir háttatímastillingar"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Stillingar geta einnig kveikt á dökku þema.}=1{{mode_1} kveikir einnig á dökku þema.}=2{{mode_1} og {mode_2} kveikja einnig á dökku þema.}=3{{mode_1}, {mode_2} og {mode_3} kveikja einnig á dökku þema.}one{{mode_1}, {mode_2} og # í viðbót kveikja einnig á dökku þema}other{{mode_1}, {mode_2} og # í viðbót kveikja einnig á dökku þema}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Stillingar"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Auktu birtu og skýrleika lita og breikkaðu litasvið mynda og vídeóa sem styðja hástyrksvið (HDR). HDR-efni verður bjartara."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Tími þar til skjár slekkur á sér"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Veldu mynstur til að nota fingrafar"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Veldu þér PIN-númer til að gæta fyllsta öryggis"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Veldu PIN-númer til að nota fingrafar"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Sláðu aðgangsorðið inn aftur"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Sláðu inn aðgangsorð tækisins"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Sláðu aðgangsorðið inn aftur"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Sláðu aðgangsorðið fyrir vinnu aftur inn"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Sláðu inn aðgangsorð fyrir vinnu"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Staðfestu mynstrið"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Sláðu inn mynstur tækisins"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Teiknaðu mynstur fyrir vinnu"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"Sláðu PIN-númerið inn aftur"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Sláðu inn PIN-númer tækisins"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"Sláðu PIN-númerið inn aftur"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Sláðu PIN-númerið fyrir vinnu aftur inn"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Sláðu inn PIN-númer fyrir vinnu"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Aðgangsorðin stemma ekki"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Gleymt aðgangsorð?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Gleymdirðu mynstrinu?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Gleymdirðu PIN-númerinu?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Teiknaðu mynstrið þitt til að halda áfram"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Sláðu inn PIN-númerið þitt til að halda áfram."</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Sláðu inn aðgangsorðið þitt til að halda áfram"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Teiknaðu mynstrið fyrir vinnuprófílinn til að halda áfram"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Sláðu inn PIN-númerið þitt fyrir vinnuna til að halda áfram"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Sláðu inn vinnuaðgangsorðið þitt til að halda áfram"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Mynstrið staðfestir hver þú ert"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"PIN-númerið staðfestir hver þú ert"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Aðgangsorðið staðfestir hver þú ert"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Vinnumynstrið staðfestir hver þú ert"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"PIN-vinnunúmerið staðfestir hver þú ert"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Vinnuaðgangsorðið staðfestir hver þú ert"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Notaðu mynstur tækisins til að gæta fyllsta öryggis"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Færðu inn PIN-númer tækisins til að gæta fyllsta öryggis"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Settu upp aðgangsorð tækisins til að gæta fyllsta öryggis"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Fletting"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Stýrð fletting"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Flettihraði"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Hraðari hreyfingar bendils"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Hægari hreyfingar bendils"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Víxla aðalmúsarhnappi"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Kerfishljóð og titringur"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Vinnusniðshljóð"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Skjátextar í rauntíma"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Setja sjálfkrafa skjátexta við efni"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Heyrnartól með snúru"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Hljómgæði samhæfs efnis verða betri"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Slökkt"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Aðalfréttir, leiðarar og fleira"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Læk, færslur og fleira"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Fréttabréf, efni sem mælt er með og fleira"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Stjórna með gervigreind"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Samantektir á tilkynningum"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Fá sneggri samantektir á löngum skilaboðum"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Ekki hafa þessi forrit með"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Samantektir á tilkynningum"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Fá sneggri samantektir á löngum skilaboðum"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Tilkynningar í rauntíma"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Uppfærslur í beinni"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Fáðu áframhaldandi og áríðandi tilkynningar á stöðustikunni og lásskjánum"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Yfirfarðu forrit sem breyttu því hvernig þau geta deilt staðsetningargögnunum þínum"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Fulltrúar"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Fulltrúar sem eru með aðgang að upplýsingum og geta gripið til aðgerða í forritum"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Ýta til að vekja"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Ýttu tvisvar hvar sem er á skjáinn til að vekja tækið."</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Opnun tengla"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{1 forrit má nota ótakmörkuð farsímagögn þegar kveikt er á gagnasparnaði}one{# forrit má nota ótakmörkuð farsímagögn þegar kveikt er á gagnasparnaði}other{# forrit mega nota ótakmörkuð farsímagögn þegar kveikt er á gagnasparnaði}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"Aðalgögn"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Wi‑Fi gögn"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>⁠"</string>
     <string name="data_overusage" msgid="3680477320458707259">"<xliff:g id="ID_1">^1</xliff:g> yfir"</string>
     <string name="data_remaining" msgid="6316251496381922837">"<xliff:g id="ID_1">^1</xliff:g> eftir"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"Myndrit sem sýnir gagnanotkun frá <xliff:g id="START_DATE">%1$s</xliff:g> til <xliff:g id="END_DATE">%2$s</xliff:g>."</string>
@@ -5951,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Notaðu fingrafara- eða andlitskenni til að aðrir geti ekki opnað tiltekin forrit. Með tengingu við úrið þitt geturðu aukið öryggi þitt á ferðinni."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Notaðu sannvottun auðkennis í úrinu fyrir fleiri forrit"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Fáðu örugga auðkennisvörn í öllum forritum sem styðja fingrafara- og andlitskenni á traustum stöðum á borð við heimilið eða skrifstofuna. Notaðu sannvottun auðkennis með úrinu til að auka vörnina annars staðar en á traustum stöðum."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>
