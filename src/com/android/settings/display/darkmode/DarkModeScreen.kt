@@ -96,8 +96,6 @@ abstract class BaseDarkModeScreen(context: Context) :
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?): Intent? =
         makeLaunchIntent(context, DarkThemeSettingsActivity::class.java, metadata?.key)
 
-    override fun hasCompleteHierarchy() = false
-
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
         preferenceHierarchy(context) {
             +DarkModeTopIntroPreference()
@@ -117,6 +115,7 @@ abstract class BaseDarkModeScreen(context: Context) :
                 +StartTimePreference(uiModeManager)
                 +EndTimePreference(uiModeManager)
             }
+            +DarkModePendingLocationFooterPreference()
             +DarkModeExpandedFooterPreference()
             +DarkModeCustomModesFooterPreference()
             +FeedbackButtonPreference { FeedbackManager(context, metricsCategory) }

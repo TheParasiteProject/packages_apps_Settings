@@ -193,11 +193,13 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.dark_mode_settings) {
-                @Override
-                protected boolean isPageSearchEnabled(Context context) {
-                    return !context.getSystemService(PowerManager.class).isPowerSaveMode();
-                }
-            };
+            Flags.catalystDarkUiMode()
+                    ? new BaseSearchIndexProvider()
+                    : new BaseSearchIndexProvider(R.xml.dark_mode_settings) {
+                        @Override
+                        protected boolean isPageSearchEnabled(Context context) {
+                            return !context.getSystemService(PowerManager.class).isPowerSaveMode();
+                        }
+                    };
 
 }
