@@ -40,6 +40,7 @@ import com.android.settings.utils.highlightPreference
 import com.android.settingslib.RestrictedPreference
 import com.android.settingslib.datastore.HandlerExecutor
 import com.android.settingslib.datastore.KeyedObserver
+import com.android.settingslib.metadata.PreferenceCategory
 import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.metadata.PreferenceLifecycleProvider
 import com.android.settingslib.metadata.PreferenceMetadata
@@ -169,12 +170,17 @@ open class A11yServiceScreen(context: Context, override val arguments: Bundle) :
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
         preferenceHierarchy(context) {
-            val serviceInfo = accessibilityServiceInfo
-            if (serviceInfo != null) {
-                +IntroPreference(serviceInfo)
-                +A11yServiceIllustrationPreference(serviceInfo)
-                +UseServicePreference(context, serviceInfo, metricsCategory)
-            }
+            val serviceInfo = accessibilityServiceInfo ?: return@preferenceHierarchy
+            +IntroPreference(serviceInfo)
+            +A11yServiceIllustrationPreference(serviceInfo)
+            +UseServicePreference(context, serviceInfo, metricsCategory)
+            +PreferenceCategory(
+                key = "general_categories",
+                title = R.string.accessibility_screen_option,
+            ) +=
+                {
+                    +A11yServiceShortcutPreference(context, serviceInfo, metricsCategory)
+                }
         }
 
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?): Intent {

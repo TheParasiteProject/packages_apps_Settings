@@ -139,31 +139,32 @@ class A11yServiceScreenTest : SettingsCatalystTestCase() {
     }
 
     @Test
-    fun parameters_hasTwoA11yServices_returnTwoItems() = runTest {
+    fun parameters_hasTwoA11yServices_returnTwoItems() {
         AccessibilityRepositoryProvider.resetInstanceForTesting()
+        runTest {
+            val serviceInfo1 = createA11yServiceInfo(serviceComponent = A11Y_SERVICE_COMPONENT)
+            val serviceInfo2 = createA11yServiceInfo(serviceComponent = A11Y_SERVICE_COMPONENT2)
 
-        val serviceInfo1 = createA11yServiceInfo(serviceComponent = A11Y_SERVICE_COMPONENT)
-        val serviceInfo2 = createA11yServiceInfo(serviceComponent = A11Y_SERVICE_COMPONENT2)
-
-        a11yManager.setInstalledAccessibilityServiceList(listOf(serviceInfo1, serviceInfo2))
-        val collectedItems = mutableListOf<String?>()
-        A11yServiceScreen.parameters(appContext).collect {
-            collectedItems.add(
-                it.getParcelable(
-                        AccessibilitySettings.EXTRA_COMPONENT_NAME,
-                        ComponentName::class.java,
-                    )
-                    ?.flattenToString()
-            )
-        }
-        assertThat(collectedItems).hasSize(2)
-        assertThat(collectedItems)
-            .containsExactlyElementsIn(
-                listOf(
-                    A11Y_SERVICE_COMPONENT.flattenToString(),
-                    A11Y_SERVICE_COMPONENT2.flattenToString(),
+            a11yManager.setInstalledAccessibilityServiceList(listOf(serviceInfo1, serviceInfo2))
+            val collectedItems = mutableListOf<String?>()
+            A11yServiceScreen.parameters(appContext).collect {
+                collectedItems.add(
+                    it.getParcelable(
+                            AccessibilitySettings.EXTRA_COMPONENT_NAME,
+                            ComponentName::class.java,
+                        )
+                        ?.flattenToString()
                 )
-            )
+            }
+            assertThat(collectedItems).hasSize(2)
+            assertThat(collectedItems)
+                .containsExactlyElementsIn(
+                    listOf(
+                        A11Y_SERVICE_COMPONENT.flattenToString(),
+                        A11Y_SERVICE_COMPONENT2.flattenToString(),
+                    )
+                )
+        }
     }
 
     override fun launchFragmentScenario(
