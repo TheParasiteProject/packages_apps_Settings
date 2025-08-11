@@ -5963,6 +5963,8 @@
     <string name="accessibility_expanded_dark_theme_title_in_search">Expanded Dark theme</string>
     <!-- Summary for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=100] -->
     <string name="accessibility_expanded_dark_theme_summary">Automatically applies Dark theme to more apps for improved accessibility</string>
+    <!-- Search keywords for the Expanded dark theme settings. [CHAR_LIMIT=NONE] -->
+    <string name="keywords_expanded_dark_theme">force invert, color inversion, contrast</string>
     <!-- Title for the accessibility preference for disabling animations. [CHAR LIMIT=35] -->
     <string name="accessibility_disable_animations">Remove animations</string>
     <!-- Summary for the accessibility preference for disabling animations. [CHAR LIMIT=60] -->
