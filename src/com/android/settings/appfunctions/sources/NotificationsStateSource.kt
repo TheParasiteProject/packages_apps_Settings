@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit
 
 class NotificationsStateSource : DeviceStateSource {
     override val appFunctionType: DeviceStateAppFunctionType =
-        DeviceStateAppFunctionType.GET_UNCATEGORIZED
+        DeviceStateAppFunctionType.GET_NOTIFICATIONS
 
     // TODO: prototype implementation, to be replaced in b/426005115
     override suspend fun get(
