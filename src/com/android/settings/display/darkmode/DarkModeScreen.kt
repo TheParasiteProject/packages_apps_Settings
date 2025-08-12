@@ -94,7 +94,7 @@ abstract class BaseDarkModeScreen(context: Context) :
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?): Intent? =
         makeLaunchIntent(context, DarkThemeSettingsActivity::class.java, metadata?.key)
 
-    override fun hasCompleteHierarchy() = Flags.catalystDarkUiMode()
+    override fun hasCompleteHierarchy() = false
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
         preferenceHierarchy(context) {
