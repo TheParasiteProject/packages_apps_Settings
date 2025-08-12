@@ -69,6 +69,7 @@ import com.android.settings.emergency.EmergencyDashboardScreen
 import com.android.settings.fuelgauge.batterysaver.BatterySaverScreen
 import com.android.settings.fuelgauge.batteryusage.PowerUsageAdvancedScreen
 import com.android.settings.fuelgauge.batteryusage.PowerUsageSummaryScreen
+import com.android.settings.gestures.ButtonNavigationSettingsScreen
 import com.android.settings.gestures.DoubleTapPowerScreen
 import com.android.settings.gestures.SystemNavigationGestureScreen
 import com.android.settings.language.LanguageAndRegionScreen
@@ -347,6 +348,11 @@ private fun getCatalystScreenConfigs() =
         PerScreenCatalystConfig(enabled = true, screenKey = AppsFullScreenIntentScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AppsNotificationAccessScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = PreviouslyConnectedDeviceScreen.KEY),
+        PerScreenCatalystConfig(
+            enabled = true,
+            screenKey = ButtonNavigationSettingsScreen.KEY,
+            appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_UNCATEGORIZED),
+        ),
     )
 
 private fun getDeviceStateItemList() =
