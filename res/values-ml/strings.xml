@@ -1877,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"ഫിംഗർപ്രിന്റ് ഉപയോഗിക്കാൻ, പാറ്റേൺ സജ്ജമാക്കുക"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"സുരക്ഷയ്‌ക്കായി, പിൻ സജ്ജീകരിക്കുക"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"ഫിംഗർപ്രിന്റ് ഉപയോഗിക്കാൻ, പിൻ സജ്ജീകരിക്കുക"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"നിങ്ങളുടെ പാസ്‌വേഡ് വീണ്ടും നൽകുക"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"നിങ്ങളുടെ ഉപകരണത്തിന്റെ പാസ്‌വേഡ് നൽകുക"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"നിങ്ങളുടെ പാസ്‌വേഡ് വീണ്ടും നൽകുക"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"ഔദ്യോഗിക പാസ്‌വേഡ് വീണ്ടും നൽകൂ"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"നിങ്ങളുടെ ഔദ്യോഗിക പാസ്‌വേഡ് നൽകുക"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"നിങ്ങളുടെ പാറ്റേൺ സ്ഥിരീകരിക്കുക"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"ഉപകരണത്തിന്റെ പാറ്റേൺ നൽകുക"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"ഔദ്യോഗിക പാറ്റേൺ നൽകുക"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"നിങ്ങളുടെ പിൻ വീണ്ടും നൽകുക"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"നിങ്ങളുടെ ഉപകരണത്തിന്റെ പിൻ നൽകുക"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"നിങ്ങളുടെ പിൻ വീണ്ടും നൽകുക"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"ഔദ്യോഗിക പിൻ വീണ്ടും നൽകൂ"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"നിങ്ങളുടെ ഔദ്യോഗിക പിൻ നൽകുക"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"പാസ്‌വേഡുകൾ പൊരുത്തപ്പെടുന്നില്ല"</string>
@@ -1901,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"പാസ്‌വേഡ് മറന്നോ?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"പാറ്റേൺ മറന്നോ?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"പിൻ മറന്നോ?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"തുടരാൻ നിങ്ങളുടെ പാറ്റേൺ വരയ്ക്കുക"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"തുടരാൻ നിങ്ങളുടെ പിൻ നൽകുക"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"തുടരാൻ നിങ്ങളുടെ പാസ്‌വേഡ് നൽകുക"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"തുടരാൻ നിങ്ങളുടെ ഔദ്യോഗിക പാറ്റേൺ വരയ്ക്കുക"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"തുടരാൻ നിങ്ങളുടെ ഔദ്യോഗിക പിൻ നൽകുക"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"തുടരാൻ നിങ്ങളുടെ ഔദ്യോഗിക പാസ്‌വേഡ് നൽകുക"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"നിങ്ങളുടെ പാറ്റേൺ, ഇത് നിങ്ങൾ തന്നെയാണെന്ന് പരിശോധിച്ചുറപ്പിക്കുന്നു"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"നിങ്ങളുടെ പിൻ, ഇത് നിങ്ങൾ തന്നെയാണെന്ന് പരിശോധിച്ചുറപ്പിക്കുന്നു"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"നിങ്ങളുടെ പാസ്‌വേഡ്, ഇത് നിങ്ങൾ തന്നെയാണെന്ന് പരിശോധിച്ചുറപ്പിക്കുന്നു"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"നിങ്ങളുടെ വർക്ക് പാറ്റേൺ, ഇത് നിങ്ങളാണെന്ന് പരിശോധിച്ചുറപ്പിക്കുന്നു"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"നിങ്ങളുടെ വർക്ക് പിൻ, ഇത് നിങ്ങളാണെന്ന് പരിശോധിച്ചുറപ്പിക്കുന്നു"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"നിങ്ങളുടെ വർക്ക് പാസ്‌വേഡ്, ഇത് നിങ്ങളാണെന്ന് പരിശോധിച്ചുറപ്പിക്കുന്നു"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"അധിക സുരക്ഷയ്ക്ക്, നിങ്ങളുടെ ഉപകരണത്തിന്റെ പാറ്റേൺ ഉപയോഗിക്കുക"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"അധിക സുരക്ഷയ്ക്ക്, നിങ്ങളുടെ ഉപകരണത്തിന്റെ പിൻ നൽകുക"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"അധിക സുരക്ഷയ്ക്ക്, നിങ്ങളുടെ ഉപകരണത്തിന്റെ പാസ്‌വേഡ് നൽകുക"</string>
@@ -2183,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"സ്ക്രോളിംഗ്"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"നിയന്ത്രിത സ്ക്രോളിംഗ്"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"സ്ക്രോളിംഗ് വേഗത"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"പോയിന്റർ വേഗത്തിലാക്കുക"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"പോയിന്റർ പതുക്കെയാക്കുക"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"പ്രാഥമിക മൗസ് ബട്ടൺ സ്വാപ്പ് ചെയ്യുക"</string>
@@ -2369,8 +2375,7 @@
     <string name="audio_category_title" msgid="5283853679967605826">"ഓഡിയോ"</string>
     <string name="general_category_title" msgid="6298579528716834157">"പൊതുവായവ"</string>
     <string name="display_category_title" msgid="6638191682294461408">"ഡി‌സ്‌പ്ലേ"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"നിറവും മോഷനും"</string>
     <!-- no translation found for accessibility_color_and_motion_subtext (1150281881647191503) -->
     <skip />
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"കഴ്‌സർ, ടച്ച്പാഡ് ഉപയോഗസഹായി"</string>
@@ -2475,8 +2480,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"കുറുക്കുവഴിയിലൂടെ മാഗ്നിഫൈ ചെയ്യൂ"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"കുറുക്കുവഴി, മൂന്ന് തവണ ടാപ്പ് എന്നിവയിലൂടെ മാഗ്നിഫൈ ചെയ്യൂ"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"<xliff:g id="SERVICE">%1$s</xliff:g> എന്നതിനെ കുറിച്ച്"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"ഡിസ്പ്ലേ വലുപ്പവും ടെക്‌സ്‌റ്റും"</string>
     <!-- no translation found for accessibility_text_reading_options_subtext (3480489973093251705) -->
     <skip />
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"ടെക്‌സ്‌റ്റ് പ്രദർശിപ്പിക്കുന്ന രീതി മാറ്റുക"</string>
@@ -3754,7 +3758,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"സിസ്റ്റം ശബ്ദങ്ങളും വൈബ്രേഷനുകളും"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"ഔദ്യോഗിക പ്രൊഫൈലിനുള്ള ശബ്ദം"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"തത്സമയ ക്യാപ്‌ഷനുകൾ"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"മീഡിയയ്ക്ക് സ്വയമേവ അടിക്കുറിപ്പ് നൽകുക"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"വയേർഡ് ഹെഡ്ഫോണുകൾ"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"അനുയോജ്യമായ മീഡിയയിൽ നിന്നുള്ള ഓഡിയോ കൂടുതൽ മുഴുകിപ്പിക്കുന്നതാക്കുന്നു"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"ഓഫാണ്"</string>
@@ -3900,6 +3909,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"പ്രധാന വാർത്തകളും എഡിറ്റോറിയലുകളും മറ്റും"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"ലൈക്കുകളും പോസ്റ്റുകളും മറ്റും"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"വാർത്താക്കുറിപ്പുകളും നിർദ്ദേശിക്കുന്ന മീഡിയയും മറ്റും"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"AI ഉപയോഗിച്ച് മാനേജ് ചെയ്യുക"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"അറിയിപ്പ് സംഗ്രഹങ്ങൾ"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"ദൈർഘ്യമേറിയ സന്ദേശങ്ങളുടെ അതിവേഗ റീക്യാപ്പുകൾ നേടുക"</string>
@@ -3911,6 +3922,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"ഈ ആപ്പുകൾ ഉൾപ്പെടുത്തരുത്"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"അറിയിപ്പ് സംഗ്രഹങ്ങൾ"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"ദൈർഘ്യമേറിയ സന്ദേശങ്ങളുടെ അതിവേഗ റീക്യാപ്പുകൾ നേടുക"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"തത്സമയ അറിയിപ്പുകൾ"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"തത്സമയ അപ്‌ഡേറ്റുകൾ"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"സ്‌റ്റാറ്റസ് ബാറിലും ലോക്ക് സ്‌ക്രീനിലും നിലവിലെ, സമയ-പരിധിയുള്ള അറിയിപ്പുകൾ പ്രദർശിപ്പിക്കുക"</string>
@@ -4393,6 +4406,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"നിങ്ങളുടെ ലൊക്കേഷൻ ഡാറ്റ പങ്കിടുന്ന രീതി മാറ്റിയ ആപ്പുകൾ അവലോകനം ചെയ്യുക"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"ഏജന്റുകൾ"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"ആപ്പുകളിൽ വിവരങ്ങൾ ആക്‌സസ് ചെയ്യാനോ പ്രവർത്തനങ്ങൾ നടത്താനോ കഴിയുന്ന ഏജന്റുകൾ"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"സജീവമാക്കാൻ ടാപ്പുചെയ്യുക"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"ഉപകരണം സജീവമാക്കാൻ സ്‌ക്രീനിലെവിടെയെങ്കിലും ഡബിൾ ടാപ്പ് ചെയ്യുക"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"ലിങ്കുകൾ തുറക്കൽ"</string>
@@ -5475,8 +5496,7 @@
       <item quantity="one"><xliff:g id="FIRST_0">%1$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"ഒരു കോളിനിടയിൽ ആശയവിനിമയം നടത്താൻ ടെക്സ്റ്റ് ഉപയോഗിക്കുക"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5949,4 +5969,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"ഫിംഗർപ്രിന്റ് അല്ലെങ്കിൽ ഫെയ്‌സ് അൺലോക്ക് ആവശ്യമായ ആപ്പുകൾ തുറക്കുന്നതിൽ നിന്ന് മറ്റുള്ളവരെ തടയുക. നിങ്ങൾ വാച്ചിലേക്ക് കണക്‌റ്റ് ചെയ്‌തിരിക്കുമ്പോൾ, മികച്ച മൊബിലിറ്റി ഉപയോഗിച്ച് നിങ്ങളുടെ സുരക്ഷ ഉറപ്പുനൽകുന്നു."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"കൂടുതൽ ആപ്പുകളിൽ ഐഡന്റിറ്റി പരിശോധനയും വാച്ചും ഉപയോഗിക്കുക"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"നിങ്ങളുടെ വീടോ ഓഫീസോ പോലുള്ള ട്രസ്റ്റഡ് പ്ലേസുകളിൽ ഫിംഗർപ്രിന്റ്, ഫെയ്‌സ് അൺലോക്ക് എന്നിവ പിന്തുണയ്ക്കുന്ന എല്ലാ ആപ്പുകളിലും നിങ്ങളുടെ ഐഡന്റിറ്റി പരിരക്ഷ ഉറപ്പാക്കുക. ട്രസ്റ്റഡ് പ്ലേസുകൾക്ക് പുറത്തും, പരിരക്ഷ വിപുലീകരിക്കാൻ നിങ്ങളുടെ വാച്ചിനൊപ്പം ഐഡന്റിറ്റി പരിശോധന ഉപയോഗിക്കുക."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

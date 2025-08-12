@@ -39,6 +39,7 @@ import com.android.settingslib.metadata.BooleanValuePreference
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.PreferenceSummaryProvider
 import com.android.settingslib.metadata.PreferenceTitleProvider
+import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.preferenceHierarchy
 import com.android.settingslib.preference.SwitchPreferenceBinding
 import com.android.settingslib.widget.MainSwitchPreferenceBinding
@@ -47,7 +48,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 /** "Apps" -> "Special app access" -> "Notification read, reply & control" -> {app name} */
-//@ProvidePreferenceScreen(AppInfoNotificationAccessScreen.KEY, parameterized = true)
+@ProvidePreferenceScreen(AppInfoNotificationAccessScreen.KEY, parameterized = true)
 open class AppInfoNotificationAccessScreen(context: Context, override val arguments: Bundle) :
     PreferenceScreenMixin, PreferenceSummaryProvider, PreferenceTitleProvider {
 
@@ -69,7 +70,7 @@ open class AppInfoNotificationAccessScreen(context: Context, override val argume
     override val highlightMenuKey: Int
         get() = R.string.menu_key_apps
 
-    override fun getMetricsCategory() = SettingsEnums.PAGE_UNKNOWN // TODO: correct page id
+    override fun getMetricsCategory() = SettingsEnums.NOTIFICATION_ACCESS_DETAIL
 
     override fun tags(context: Context) =
         arrayOf(TAG_DEVICE_STATE_SCREEN, TAG_DEVICE_STATE_PREFERENCE)
@@ -288,7 +289,8 @@ private class NotificationAccessStorage(
                     serviceName,
                 )
             else -> throw IllegalArgumentException("Unknown key: $key")
-        } as T
+        }
+            as T
 
     override fun <T : Any> setValue(key: String, valueType: Class<T>, value: T?) {}
 

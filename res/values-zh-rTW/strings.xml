@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"使用深色背景可讓你更舒適地觀看螢幕，顯示某些畫面時還可減少電池用量。如果已設定時間表，主題會在螢幕關閉時變更。"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"目前依照就寢模式時間表開啟或關閉深色主題"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"就寢模式設定"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{模式也能啟用深色主題。}=1{「{mode_1}」也會啟用深色主題。}=2{「{mode_1}」和「{mode_2}」也會啟用深色主題。}=3{「{mode_1}」、「{mode_2}」和「{mode_3}」也會啟用深色主題。}other{「{mode_1}」、「{mode_2}」和另外 # 個模式也會啟用深色主題。}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"模式設定"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"提高高動態範圍 (HDR) 圖片和影片的亮度，同時擴展色彩範圍並強化清晰度。HDR 內容會看起來更明亮。"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"螢幕自動關閉"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"如要使用指紋，請設定解鎖圖案"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"為了安全起見，請設定 PIN 碼"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"如要使用指紋，請設定 PIN 碼"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"重新輸入密碼"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"輸入裝置密碼"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"再次輸入密碼"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"重新輸入工作資料夾密碼"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"輸入工作資料夾密碼"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"確認圖案"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"畫出裝置解鎖圖案"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"請畫出工作資料夾的解鎖圖案"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"重新輸入 PIN 碼"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"輸入裝置 PIN 碼"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"再次輸入 PIN 碼"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"重新輸入工作資料夾 PIN 碼"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"請輸入工作資料夾的 PIN 碼"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"密碼不符"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"忘記密碼了嗎？"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"忘記解鎖圖案了嗎？"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"忘記 PIN 碼了嗎？"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"如要繼續操作，請畫出解鎖圖案"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"如要繼續操作，請輸入 PIN 碼"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"如要繼續操作，請輸入密碼"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"如要繼續操作，請畫出工作資料夾的解鎖圖案"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"請輸入你的工作資料夾 PIN 碼以繼續作業"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"請輸入你的 Work 密碼以繼續作業"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"必須畫出解鎖圖案驗證身分"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"必須輸入 PIN 碼驗證身分"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"必須輸入密碼驗證身分"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"必須畫出工作資料夾解鎖圖案驗證身分"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"必須輸入工作資料夾 PIN 碼驗證身分"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"必須輸入工作資料夾密碼驗證身分"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"為了提升安全性，請使用裝置解鎖圖案"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"為了提升安全性，請輸入裝置 PIN 碼"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"為了提升安全性，請輸入裝置密碼"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"捲動"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"捲動控制"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"捲動速度"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"加快指標速度"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"調慢指標速度"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"調換滑鼠主按鈕"</string>
@@ -2896,7 +2901,7 @@
     <string name="manager_battery_usage_optimized_title" msgid="8080765739761921817">"最佳化"</string>
     <string name="manager_battery_usage_restricted_title" msgid="7702863764130323118">"受限制"</string>
     <string name="manager_battery_usage_unrestricted_summary" msgid="6819279865465667692">"不限制應用程式在背景執行時的電池用量。如果選擇這項設定，應用程式可能會比較耗電。"</string>
-    <string name="manager_battery_usage_unrestricted_summary_v2" msgid="7857049686332197528">"允許在背景使用電池。這樣可能會比較耗電。"</string>
+    <string name="manager_battery_usage_unrestricted_summary_v2" msgid="7857049686332197528">"允許在背景使用電池，可能會比較耗電。"</string>
     <string name="manager_battery_usage_optimized_summary" msgid="1332545476428039900">"根據你的使用情形進行最佳化調整。這是適用於大多數應用程式的建議設定。"</string>
     <string name="manager_battery_usage_restricted_summary" msgid="8324695640704416905">"限制應用程式在背景執行時的電池用量。應用程式可能無法正常運作，通知也可能會延後出現。"</string>
     <string name="manager_battery_usage_footer" msgid="2635906573922553766">"變更應用程式的電池使用方式，可能會影響應用程式效能。"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"系統音效和震動"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"工作資料夾音效"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"即時字幕"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"自動產生媒體字幕"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"有線耳機"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"相容媒體裝置音效更具臨場感"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"已關閉"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"焦點新聞、社論等等"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"喜歡的項目、貼文等等"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"電子報、推薦媒體等等"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"使用 AI 管理"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"通知摘要"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"快速掌握長訊息的重點"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"排除這些應用程式"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"通知摘要"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"快速掌握長訊息的重點"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"即時通知"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"即時更新"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"在狀態列和螢幕鎖定畫面上顯示持續且具時效性的通知"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"查看曾變更位置資料共用方式的應用程式"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"代理"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"代理可以在應用程式中存取資訊或執行操作"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"輕觸即可喚醒"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"在螢幕上任一處輕觸兩下即可喚醒裝置"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"開啟連結"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{1 個應用程式可在數據節省模式開啟時，無限量使用行動數據}other{# 個應用程式可在數據節省模式開啟時，無限量使用行動數據}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"主要數據"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Wi‑Fi 數據"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="data_overusage" msgid="3680477320458707259">"超過 <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_remaining" msgid="6316251496381922837">"還剩 <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"這張圖表顯示 <xliff:g id="START_DATE">%1$s</xliff:g>到 <xliff:g id="END_DATE">%2$s</xliff:g>之間的數據用量。"</string>
@@ -5951,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"防止他人開啟需要指紋或人臉解鎖的應用程式。連結手錶後，行動更自由，安全依然有保障。"</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"使用「身分驗證」搭配手錶，保護更多應用程式資料"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"在住家或辦公室等信任的位置，為支援指紋和人臉解鎖的應用程式提供身分防護。如果搭配手錶使用「身分驗證」，即使不在信任的位置，也能享有安全保障。"</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

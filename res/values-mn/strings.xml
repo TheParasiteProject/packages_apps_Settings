@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Дэлгэцээ үзэхэд илүү тухтай болгож, зарим дэлгэцийн батарей ашиглалтыг багасгахын тулд бараан дэвсгэрийг ашиглана уу. Хэрэв танд хуваарь байгаа бол дэлгэц унтарсан үед таны загвар өөрчлөгдөнө."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Бараан загвар нь одоогоор таны Унтлагын цагийн горимын хуваарийг дагаж байна"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Унтлагын цагийн горимын тохиргоо"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Горимууд мөн Бараан загварыг асааж болно.}=1{{mode_1} мөн Бараан загварыг асаана.}=2{{mode_1}, {mode_2} мөн Бараан загварыг асаана.}=3{{mode_1}, {mode_2}, {mode_3} мөн Бараан загварыг асаана.}other{{mode_1}, {mode_2} болон өөр # горим мөн Бараан загварыг асаана.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Горимын тохиргоо"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"High Dynamic Range (HDR)-н зураг, видеоны өнгөний хүрээ, тод байдлыг өргөжүүлж, гэрэлтүүлгийг нэмнэ үү. HDR контент илүү тод харагдана."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Дэлгэц автоматаар амрах"</string>
@@ -1685,7 +1684,7 @@
     <string name="when_to_show_hubmode_charging_and_upright" msgid="537039046490426922">"Эгц босоо бөгөөд цэнэглэж байхад"</string>
     <string name="when_to_show_hubmode_docked" msgid="8876633401873168284">"Суурилуулсан бөгөөд цэнэглэж байхад"</string>
     <string name="hub_restrict_to_wireless_charging_title" msgid="2234080978449692163">"Утасгүй цэнэглэх үед эхлүүлэхээр хязгаарлах"</string>
-    <string name="apn_settings" msgid="4295467389400441299">"APNs"</string>
+    <string name="apn_settings" msgid="4295467389400441299">"APN"</string>
     <string name="apn_edit" msgid="2003683641840248741">"Хандалтын цэгийг засах"</string>
     <string name="apn_add" msgid="9069613192201630934">"Хандалтын цэг нэмэх"</string>
     <string name="apn_not_set" msgid="8246646433109750293">"Тохируулаагүй"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Хурууны хээ ашиглахын тулд хээ тохируулах"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Аюулгүй байдлын үүднээс ПИН тохируулна уу"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Хурууны хээ ашиглахын тулд ПИН тохируулах"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Нууц үгээ дахин оруулах"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Төхөөрөмжийнхөө нууц үгийг оруулна уу"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Нууц үгээ дахин оруулна уу"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Ажлын нууц үгээ дахин оруулна уу"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Ажлын нууц үгээ оруулна уу"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Хээгээ баталгаажуулна уу"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Төхөөрөмжийнхөө хээг оруул"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Ажлын хээгээ оруулна уу"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"ПИН-ээ дахин оруулах"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Төхөөрөмжийнхөө ПИН-г оруулна уу"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"ПИН-ээ дахин оруулна уу"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Ажлын ПИН-ээ дахин оруулна уу"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Ажлын ПИН-ээ оруулна уу"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Нууц үг таарахгүй байна"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Нууц үгээ мартсан уу?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Хээгээ мартсан уу?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"ПИН-ээ мартсан уу?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Үргэлжлүүлэхийн тулд хээгээ зурна уу"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Үргэлжлүүлэхийн тулд ПИН-ээ оруулна уу"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Үргэлжлүүлэхийн тулд нууц үгээ оруулна уу"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Үргэлжлүүлэхийн тулд ажлын профайлын хээгээ зурна уу"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Үргэлжлүүлэхийн тулд ажлын ПИН кодоо оруулна уу"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Үргэлжлүүлэхийн тулд ажлын нууц үгээ оруулна уу"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Таны хээ таныг мөн болохыг баталгаажуулна"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"Таны ПИН таныг мөн болохыг баталгаажуулна"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Таны нууц үг таныг мөн болохыг баталгаажуулна"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Таны ажлын хээ таныг мөн болохыг баталгаажуулна"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"Таны ажлын ПИН таныг мөн болохыг баталгаажуулна"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Таны ажлын нууц үг таныг мөн болохыг баталгаажуулна"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Хамгаалалтыг сайжруулахын тулд төхөөрөмжийнхөө зурган түгжээг ашиглана уу"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Хамгаалалтыг сайжруулахын тулд төхөөрөмжийнхөө ПИН-ийг оруулна уу"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Хамгаалалтыг сайжруулахын тулд төхөөрөмжийнхөө нууц үгийг оруулна уу"</string>
@@ -1946,7 +1947,7 @@
     <string name="lockpattern_pattern_confirmed_header" msgid="2969990617475456153">"Таны шинэ тайлах хээ"</string>
     <string name="lockpattern_confirm_button_text" msgid="6122815520373044089">"Баталгаажуулах"</string>
     <string name="lockpattern_restart_button_text" msgid="255339375151895998">"Дахин зурах"</string>
-    <string name="lockpattern_retry_button_text" msgid="4229668933251849760">"Цэвэрлэх"</string>
+    <string name="lockpattern_retry_button_text" msgid="4229668933251849760">"Арилгах"</string>
     <string name="lockpattern_continue_button_text" msgid="5253269556259503537">"Үргэлжлүүлэх"</string>
     <string name="lockpattern_settings_title" msgid="9223165804553269083">"Тайлах хээ"</string>
     <string name="lockpattern_settings_enable_title" msgid="7401197111303283723">"Загвар шаардах"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Гүйлгэх"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Хяналттай гүйлгэх"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Гүйлгэх хурд"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Заагчийг илүү хурдан болгох"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Заагчийг илүү удаан болгох"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Хулганын үндсэн товчийг солих"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Системийн дуу, чичиргээ"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Ажлын профайлын дуу чимээ"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Шууд тайлбар"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Медиад автоматаар тайлбар нэмэх"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Утастай чихэвч"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Тохиромжтой медианы аудио илүү таатай сонсогдоно"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Унтраалттай"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Шилдэг мэдээ, нийтлэл, редакторын нийтлэл болон бусад"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Таалагдсан, нийтлэл болон бусад"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Мэдээллийн хуудас, санал болгосон медиа болон бусад"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"ХОУ-аар удирдах"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Мэдэгдлийн хураангуй"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Урт мессежийн шуурхай тоймыг авах"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Эдгээр аппыг бүү оруул"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Мэдэгдлийн хураангуй"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Урт мессежийн шуурхай тоймыг аваарай"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Шууд мэдэгдэл"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Шууд шинэчлэлт"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Статус самбар, түгжээтэй дэлгэц дээр үргэлжилж буй, тодорхой хугацаатай мэдэгдлийг үзүүлэх"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Таны байршлын өгөгдлийг хуваалцдаг аргыг өөрчилсөн аппуудыг шалгана уу"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Агент"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Апп дахь мэдээлэлд хандах, үйлдэл хийх боломжтой агентууд"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Идэвхжүүлэхийн тулд товших"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Төхөөрөмжийг идэвхжүүлэхийн тулд дэлгэцийн аль нэг хэсэгт 2 удаа товших"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Холбоосыг нээх"</string>
@@ -4640,7 +4662,7 @@
     <string name="wifi_data_template" msgid="935934798340307438">"<xliff:g id="AMOUNT">^1</xliff:g> Wi-Fi дата"</string>
     <string name="ethernet_data_template" msgid="1429173767445201145">"<xliff:g id="AMOUNT">^1</xliff:g> этернэт дата"</string>
     <string name="billing_cycle" msgid="6618424022653876279">"Дата анхааруулга, хязгаарлалт"</string>
-    <string name="app_usage_cycle" msgid="341009528778520583">"Мобайл дата ашиглалтын мөчлөг"</string>
+    <string name="app_usage_cycle" msgid="341009528778520583">"Хөдөлгөөнт дата ашиглалтын цикл"</string>
     <string name="cell_data_warning" msgid="5664921950473359634">"<xliff:g id="ID_1">^1</xliff:g> дата хэрэглээний сануулга"</string>
     <string name="cell_data_limit" msgid="256855024790622112">"<xliff:g id="ID_1">^1</xliff:g> дата хэрэглээний хязгаар"</string>
     <string name="cell_data_warning_and_limit" msgid="8393200831986035724">"<xliff:g id="ID_1">^1</xliff:g> дата хэрэглээний сануулга / <xliff:g id="ID_2">^2</xliff:g> дата хэрэглээний хязгаар"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{Дата хэмнэгч асаалттай үед 1 аппад хязгаарлалтгүй хөдөлгөөнт төхөөрөмжийн датаг ашиглахыг зөвшөөрсөн}other{Дата хэмнэгч асаалттай үед # аппад хязгаарлалтгүй хөдөлгөөнт төхөөрөмжийн датаг ашиглахыг зөвшөөрсөн}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"Үндсэн өгөгдөл"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Wi‑Fi өгөгдөл"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="data_overusage" msgid="3680477320458707259">"<xliff:g id="ID_1">^1</xliff:g>-р хэтэрсэн"</string>
     <string name="data_remaining" msgid="6316251496381922837">"<xliff:g id="ID_1">^1</xliff:g> үлдсэн"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"<xliff:g id="START_DATE">%1$s</xliff:g>-с <xliff:g id="END_DATE">%2$s</xliff:g>-н хоорондох дата ашиглалтыг харуулах график."</string>
@@ -5951,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Бусад хүнийг Хурууны хээ, Царайгаар түгжээ тайлах онцлогийг шаарддаг аппыг нээхээс сэргийлээрэй. Таны цагтай холбогдсон үед таны аюулгүй байдлыг илүү олон газар баталгаажуулдаг."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Илүү олон апп дээр Өөрөө мөн эсэхийг шалгах онцлог болон цаг ашиглаарай"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Танай гэр, оффис зэрэг итгэмжлэгдсэн газарт Хурууны хээ, Царайгаар түгжээ тайлах онцлогийг дэмждэг бүх апп дээр таниулбараа хамгаалаарай. Хамгаалалтаа итгэмжлэгдсэн газраас цааш өргөжүүлэхийн тулд цагаараа Өөрөө мөн эсэхийг шалгах онцлогийг ашиглаарай."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

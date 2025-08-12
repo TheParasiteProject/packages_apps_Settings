@@ -321,7 +321,7 @@
     <string name="date_time_set_time_title" msgid="2870083415922991906">"時刻"</string>
     <string name="time_format_category_title" msgid="7108616745509689991">"時刻の表示形式"</string>
     <string name="date_time_set_timezone_title" msgid="790404320569600222">"タイムゾーン"</string>
-    <string name="date_time_set_timezone" msgid="2915125337941495746">"タイムゾーンの選択"</string>
+    <string name="date_time_set_timezone" msgid="2915125337941495746">"タイムゾーンを選択"</string>
     <string name="date_time_search_time_zone" msgid="7373967602009974399">"タイムゾーンを検索"</string>
     <string name="date_time_set_date_title" msgid="7624166157167528407">"日付"</string>
     <string name="date_time_search_region" msgid="1364133854952610919">"地域を検索します"</string>
@@ -1877,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"指紋認証にはパターンが必要です"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"セキュリティ強化のため、PIN を設定してください"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"指紋認証には PIN が必要です"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"パスワードを再入力"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"デバイスのパスワードを入力してください"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"パスワードをもう一度入力してください"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"仕事パスワードをもう一度入力してください"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"仕事用のパスワードを入力"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"パターンの確認"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"デバイスのパターンを入力"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"仕事用のパターンを入力"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"PIN を再入力"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"デバイスの PIN を入力してください"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"PIN をもう一度入力してください"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"仕事用 PIN をもう一度入力してください"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"仕事用の PIN を入力"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"パスワードが一致しません"</string>
@@ -1901,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"パスワードを忘れた場合"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"パターンを忘れた場合"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"PIN を忘れた場合"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"続行するにはパターンを入力してください"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"続行するには PIN を入力してください"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"続行するにはパスワードを入力してください"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"続行するには仕事用のパターンを入力してください"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"続行するには仕事用の PIN を入力してください"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"続行するには仕事用のパスワードを入力してください"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"パターンで本人確認を行います"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"PIN で本人確認を行います"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"パスワードで本人確認を行います"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"仕事用のパターンで本人確認を行います"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"仕事用の PIN で本人確認を行います"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"仕事用のパスワードで本人確認を行います"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"セキュリティ強化のため、デバイスのパターンを入力してください"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"セキュリティ強化のため、デバイスの PIN を入力してください"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"セキュリティ強化のため、デバイスのパスワードを入力してください"</string>
@@ -2183,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"スクロール"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"制御付きスクロール"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"スクロール速度"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"ポインタの速度を速くします"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"ポインタの速度を遅くします"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"マウスのメイン ボタンを右にする"</string>
@@ -2371,8 +2377,7 @@
     <string name="display_category_title" msgid="6638191682294461408">"表示"</string>
     <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
     <skip />
-    <!-- no translation found for accessibility_color_and_motion_subtext (1150281881647191503) -->
-    <skip />
+    <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"ダークモード、色補正、アニメーションを無効化"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"カーソルとタッチパッドのユーザー補助"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"サイズ、色、タイプ"</string>
     <string name="accessibility_pointer_color_customization_title" msgid="2841888132681075999">"カーソルの色"</string>
@@ -2395,13 +2400,10 @@
     <string name="accessibility_turn_screen_darker_title" msgid="5986223133285858349">"画面を暗くする"</string>
     <string name="interaction_control_category_title" msgid="2696474616743882372">"操作のコントロール"</string>
     <string name="accessibility_tap_assistance_title" msgid="1058913033421048284">"タイミングの調節"</string>
-    <!-- no translation found for accessibility_tap_assistance_subtext (1805279944665087799) -->
-    <skip />
+    <string name="accessibility_tap_assistance_subtext" msgid="1805279944665087799">"長押しする時間、操作までの時間"</string>
     <string name="accessibility_system_controls_title" msgid="6403287349518987624">"システム操作"</string>
-    <!-- no translation found for accessibility_system_controls_subtext (2722046038429586174) -->
-    <skip />
-    <!-- no translation found for accessibility_system_controls_subtext_one_handed_not_supported (4973507525360793402) -->
-    <skip />
+    <string name="accessibility_system_controls_subtext" msgid="2722046038429586174">"ナビゲーション モード、片手モード、画面の回転"</string>
+    <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"ナビゲーション モード、画面の回転"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"フィードバックを送信"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"アンケートに回答"</string>
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google Disability Support への問い合わせ"</string>
@@ -2477,8 +2479,7 @@
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"<xliff:g id="SERVICE">%1$s</xliff:g>について"</string>
     <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
     <skip />
-    <!-- no translation found for accessibility_text_reading_options_subtext (3480489973093251705) -->
-    <skip />
+    <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"フォントサイズ、表示サイズ、太字機能、アウトライン テキスト"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"テキストの表示方法を変更する"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"件名: 熱気球の設計"</string>
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"送信元: 大介"</string>
@@ -2652,10 +2653,8 @@
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"ナビゲーションの設定"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"バイブレーションとハプティクス"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"用途に合わせてバイブレーションの強さを調整します"</string>
-    <!-- no translation found for accessibility_vibration_settings_state_on (3316037269092584284) -->
-    <skip />
-    <!-- no translation found for accessibility_vibration_settings_state_off (113565506991847845) -->
-    <skip />
+    <string name="accessibility_vibration_settings_state_on" msgid="3316037269092584284">"ON / 着信、通知、アラームのバイブレーション レベルを設定する"</string>
+    <string name="accessibility_vibration_settings_state_off" msgid="113565506991847845">"OFF / 着信、通知、アラームのバイブレーション レベルを設定する"</string>
     <string name="accessibility_vibration_setting_disabled_for_silent_mode_summary" msgid="3982701772953323190">"デバイスがサイレント モードに設定されているため、設定は無効です"</string>
     <string name="accessibility_call_vibration_category_title" msgid="2545607568768192318">"通話"</string>
     <string name="accessibility_notification_alarm_vibration_category_title" msgid="2683635252414849417">"通知とアラーム"</string>
@@ -2675,8 +2674,7 @@
     <string name="accessibility_color_correction_qs_tooltip_content" msgid="3258628434235475205">"画面の上部からクイック設定に「色補正」を追加することもできます"</string>
     <string name="accessibility_color_inversion_auto_added_qs_tooltip_content" msgid="7267618234972101725">"「色反転」をクイック設定に追加しました。下にスワイプすると、いつでも ON と OFF を切り替えられます。"</string>
     <string name="accessibility_color_inversion_qs_tooltip_content" msgid="5046332142185711869">"画面の上部からクイック設定に「色反転」を追加することもできます"</string>
-    <!-- no translation found for reduce_bright_colors_preference_summary (8112736110942731246) -->
-    <skip />
+    <string name="reduce_bright_colors_preference_summary" msgid="8112736110942731246">"画面を最低限の明るさよりも暗くします"</string>
     <string name="accessibility_reduce_bright_colors_auto_added_qs_tooltip_content" msgid="1906588335786328512">"「さらに輝度を下げる」をクイック設定に追加しました。下にスワイプすると、いつでも ON と OFF を切り替えられます。"</string>
     <string name="accessibility_reduce_bright_colors_qs_tooltip_content" msgid="7522121299176176785">"画面の上部からクイック設定に「さらに輝度を下げる」を追加することもできます"</string>
     <string name="accessibility_one_handed_mode_auto_added_qs_tooltip_content" msgid="7914554254280416532">"「片手モード」をクイック設定に追加しました。下にスワイプすると、いつでも ON と OFF を切り替えられます。"</string>
@@ -2742,8 +2740,7 @@
     <string name="accessibility_found_all_devices" msgid="7817834722148556520">"補聴器が表示されない場合"</string>
     <string name="accessibility_list_all_devices_title" msgid="161495343959211216">"他のデバイスを見る"</string>
     <string name="accessibility_audio_adjustment_title" msgid="1332113739136802997">"音声の調整"</string>
-    <!-- no translation found for accessibility_audio_adjustment_subtext (2190523175597700025) -->
-    <skip />
+    <string name="accessibility_audio_adjustment_subtext" msgid="2190523175597700025">"モノラル音声、オーディオ バランス"</string>
     <string name="accessibility_toggle_audio_description_preference_title" msgid="8916473886256061220">"音声による説明"</string>
     <string name="accessibility_audio_description_summary" msgid="2554789094873781056">"対応する映画や番組にて、画面の表示内容の説明を読み上げます"</string>
     <string name="keywords_audio_description" msgid="6202816411593281252">"音声による説明, 音声, 説明, ロービジョン,"</string>
@@ -2754,8 +2751,7 @@
     <string name="accessibility_summary_state_stopped" msgid="2343602489802623424">"動作していません。タップすると情報が表示されます。"</string>
     <string name="accessibility_description_state_stopped" msgid="5364752492861199133">"このサービスは機能していません。"</string>
     <string name="accessibility_shortcuts_settings_title" msgid="974740249671825145">"ユーザー補助機能のショートカット"</string>
-    <!-- no translation found for accessibility_shortcuts_settings_subtext (3870836550836457943) -->
-    <skip />
+    <string name="accessibility_shortcuts_settings_subtext" msgid="3870836550836457943">"ユーザー補助機能ボタン、音量ボタンのショートカット"</string>
     <string name="enable_quick_setting" msgid="6648073323202243604">"クイック設定に表示"</string>
     <string name="daltonizer_mode_deuteranomaly_title" msgid="3229433065035047931">"赤 - 緑、緑色弱"</string>
     <string name="daltonizer_mode_protanomaly_title" msgid="2572040492905945405">"赤 - 緑、赤色弱"</string>
@@ -2928,7 +2924,7 @@
     <string name="battery_tip_default_limited_temporarily_title" msgid="2244840552837449409">"バッテリーを保護するため、充電は制限されています"</string>
     <string name="battery_tip_default_limited_temporarily_summary" msgid="182448435746170298">"バッテリーが長時間熱くなっていました。バッテリーの温度がさらに下がると、通常の充電が再開されます"</string>
     <string name="battery_tip_limited_temporarily_title" msgid="6258554134146272311">"バッテリーを保護するために、充電が最適化されています"</string>
-    <string name="battery_tip_limited_temporarily_summary" msgid="5107379280241187562">"バッテリーを長持ちさせるために、充電が最適化されます"</string>
+    <string name="battery_tip_limited_temporarily_summary" msgid="5107379280241187562">"バッテリーの劣化を防ぐために、充電が最適化されます"</string>
     <string name="battery_tip_limited_temporarily_sec_button_content_description" msgid="5648444926736883551">"充電一時停止の詳細"</string>
     <string name="battery_tip_limited_temporarily_dialog_resume_charge" msgid="2302295458913832342">"充電を再開"</string>
     <string name="battery_tip_dialog_message_footer" msgid="986542164372177504">"電力消費量の多いバックグラウンド アクティビティを含める"</string>
@@ -3099,8 +3095,7 @@
     <string name="on_device_recognition_settings" msgid="6503160369314598069">"デバイス上の認識の設定"</string>
     <string name="on_device_recognition_settings_title" msgid="7137599722039096545">"デバイスによる認識"</string>
     <string name="on_device_recognition_settings_summary" msgid="3292736423223499348">"デバイスによる音声認識"</string>
-    <!-- no translation found for tts_subtext (8958790811881046789) -->
-    <skip />
+    <string name="tts_subtext" msgid="8958790811881046789">"読み上げ速度と声の高さを調整"</string>
     <string name="tts_engine_preference_title" msgid="7808775764174571132">"優先するエンジン"</string>
     <string name="tts_engine_settings_title" msgid="1298093555056321577">"エンジンの設定"</string>
     <string name="tts_sliders_title" msgid="6901146958648426181">"音声の速度と高さ"</string>
@@ -3259,7 +3254,7 @@
     <string name="preference_change_password_title" msgid="5465821666939825972">"パスワードを変更"</string>
     <string name="header_account_settings" msgid="1189339410278750008">"アカウントの設定"</string>
     <string name="remove_account_label" msgid="4169490568375358010">"アカウントを削除"</string>
-    <string name="header_add_an_account" msgid="3919151542338822661">"アカウントの追加"</string>
+    <string name="header_add_an_account" msgid="3919151542338822661">"アカウントを追加"</string>
     <string name="really_remove_account_title" msgid="253097435885652310">"アカウントを削除しますか？"</string>
     <string name="remove_account_failed" msgid="3709502163548900644">"この変更は管理者によって許可されていません"</string>
     <string name="cant_sync_dialog_title" msgid="2613000568881139517">"手動では同期できません"</string>
@@ -3754,7 +3749,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"システムの音とバイブレーション"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"仕事用プロファイルの音"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"自動字幕起こし"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"メディアの字幕を自動で作成します"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"有線ヘッドフォン"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"対応するメディアの臨場感を高めます"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"OFF"</string>
@@ -3900,6 +3900,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"トップニュース、論説など"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"高評価、投稿など"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"ニュースレター、おすすめのメディアなど"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"AI で管理"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"通知の要約"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"長いメッセージをすばやく要約できます"</string>
@@ -3911,6 +3913,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"これらのアプリを含めない"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"通知の要約"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"長いメッセージをすばやく要約できます"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"ライブ通知"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"ライブ情報"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"時間的制約のある進行中の通知をステータスバーとロック画面に表示します"</string>
@@ -4393,6 +4397,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"ユーザーの位置情報を共有する方法が変更されたアプリを確認"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"エージェント"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"アプリで情報にアクセスし、操作できるエージェント"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"タップして復帰"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"画面をダブルタップするとデバイスが復帰します"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"リンクを開く"</string>
@@ -5447,7 +5459,7 @@
     <string name="default_app_none" msgid="5420632042222036264">"なし"</string>
     <string name="select_invalid_bug_report_handler_toast_text" msgid="8857326334015386692">"この選択は無効になりました。もう一度お試しください。"</string>
     <string name="power_menu_setting_name" msgid="2394440932633137229">"電源ボタンを長押し"</string>
-    <string name="power_menu_long_press_category_title" msgid="1051146091093775002">"電源ボタンを長押ししてアクセスする"</string>
+    <string name="power_menu_long_press_category_title" msgid="1051146091093775002">"電源ボタンを長押ししてアクセス:"</string>
     <string name="power_menu_long_press_for_power_menu_title" msgid="477584639843663599">"電源ボタン メニュー"</string>
     <string name="power_menu_long_press_for_assistant_title" msgid="6557738348262616455">"デジタル アシスタント"</string>
     <string name="power_menu_summary_long_press_for_assistant" msgid="32706459458422952">"デジタル アシスタントを起動する"</string>
@@ -5735,13 +5747,10 @@
     <string name="color_inversion_state_on" msgid="1160969033636440368">"ON"</string>
     <string name="color_inversion_state_off" msgid="6925638668080451724">"OFF"</string>
     <string name="color_inversion_feature_summary" msgid="1199876648549627647">"明るい画面が暗くなり、暗い画面が明るくなります"</string>
-    <!-- no translation found for magnification_feature_summary (4403387702011660253) -->
-    <skip />
+    <string name="magnification_feature_summary" msgid="4403387702011660253">"画面上のコンテンツを拡大表示します"</string>
     <string name="autoclick_disabled" msgid="3213396804955002120">"OFF"</string>
-    <!-- no translation found for show_captions_disabled (924366862253349790) -->
-    <skip />
-    <!-- no translation found for show_captions_enabled (3495595825041704052) -->
-    <skip />
+    <string name="show_captions_disabled" msgid="924366862253349790">"OFF / 字幕のサイズとスタイルをカスタマイズする"</string>
+    <string name="show_captions_enabled" msgid="3495595825041704052">"ON / 字幕のサイズとスタイルをカスタマイズする"</string>
     <string name="live_caption_disabled" msgid="3562035026547887366">"OFF"</string>
     <string name="live_caption_enabled" msgid="5269360946200718949">"ON"</string>
     <string name="audio_seek_bar_state_left_first" msgid="1641359989891833888">"音声: 左 <xliff:g id="PERCENT_LEFT">%1$s</xliff:g>、右 <xliff:g id="PERCENT_RIGHT">%2$s</xliff:g>"</string>
@@ -5949,4 +5958,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"指紋認証や顔認証が必要なアプリを他のユーザーが開けないようにします。スマートウォッチと接続することで、セキュリティを維持しつつ、さまざまな場所で作業できます。"</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"さまざまなアプリで ID チェックとスマートウォッチを利用できます"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"自宅やオフィスなどの信頼できる場所では、指紋認証と顔認証に対応しているアプリで、個人情報を強力に保護しましょう。信頼できる場所以外でも保護を強化するには、スマートウォッチを使った ID チェック機能を活用してください。"</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

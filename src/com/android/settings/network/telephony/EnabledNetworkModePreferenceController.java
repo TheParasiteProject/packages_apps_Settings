@@ -235,7 +235,7 @@ public class EnabledNetworkModePreferenceController extends
         return true;
     }
 
-    void init(int subId, FragmentManager fragmentManager) {
+    public void init(int subId, FragmentManager fragmentManager) {
         mSubId = subId;
         mFragmentManager = fragmentManager;
         mTelephonyManager = mContext.getSystemService(TelephonyManager.class)

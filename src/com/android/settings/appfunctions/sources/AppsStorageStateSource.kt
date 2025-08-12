@@ -32,7 +32,6 @@ class AppsStorageStateSource : DeviceStateSource {
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): PerScreenDeviceStates {
-        val packageManager = context.packageManager
         val storageStatsManager = context.getSystemService(StorageStatsManager::class.java)
         val bytesFormatter = BytesFormatter(context)
 

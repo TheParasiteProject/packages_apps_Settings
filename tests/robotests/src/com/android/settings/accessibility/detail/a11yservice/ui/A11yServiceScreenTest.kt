@@ -72,11 +72,6 @@ class A11yServiceScreenTest : SettingsCatalystTestCase() {
     }
 
     @Test
-    override fun migration() {
-        // Remove this empty override once we've completed the migration
-    }
-
-    @Test
     fun getKey() {
         assertThat(preferenceScreenCreator.key).isEqualTo(A11yServiceScreen.KEY)
     }
@@ -139,37 +134,47 @@ class A11yServiceScreenTest : SettingsCatalystTestCase() {
     }
 
     @Test
-    fun parameters_hasTwoA11yServices_returnTwoItems() = runTest {
+    fun parameters_hasTwoA11yServices_returnTwoItems() {
         AccessibilityRepositoryProvider.resetInstanceForTesting()
+        runTest {
+            val serviceInfo1 = createA11yServiceInfo(serviceComponent = A11Y_SERVICE_COMPONENT)
+            val serviceInfo2 = createA11yServiceInfo(serviceComponent = A11Y_SERVICE_COMPONENT2)
 
-        val serviceInfo1 = createA11yServiceInfo(serviceComponent = A11Y_SERVICE_COMPONENT)
-        val serviceInfo2 = createA11yServiceInfo(serviceComponent = A11Y_SERVICE_COMPONENT2)
-
-        a11yManager.setInstalledAccessibilityServiceList(listOf(serviceInfo1, serviceInfo2))
-        val collectedItems = mutableListOf<String?>()
-        A11yServiceScreen.parameters(appContext).collect {
-            collectedItems.add(
-                it.getParcelable(
-                        AccessibilitySettings.EXTRA_COMPONENT_NAME,
-                        ComponentName::class.java,
-                    )
-                    ?.flattenToString()
-            )
-        }
-        assertThat(collectedItems).hasSize(2)
-        assertThat(collectedItems)
-            .containsExactlyElementsIn(
-                listOf(
-                    A11Y_SERVICE_COMPONENT.flattenToString(),
-                    A11Y_SERVICE_COMPONENT2.flattenToString(),
+            a11yManager.setInstalledAccessibilityServiceList(listOf(serviceInfo1, serviceInfo2))
+            val collectedItems = mutableListOf<String?>()
+            A11yServiceScreen.parameters(appContext).collect {
+                collectedItems.add(
+                    it.getParcelable(
+                            AccessibilitySettings.EXTRA_COMPONENT_NAME,
+                            ComponentName::class.java,
+                        )
+                        ?.flattenToString()
                 )
-            )
+            }
+            assertThat(collectedItems).hasSize(2)
+            assertThat(collectedItems)
+                .containsExactlyElementsIn(
+                    listOf(
+                        A11Y_SERVICE_COMPONENT.flattenToString(),
+                        A11Y_SERVICE_COMPONENT2.flattenToString(),
+                    )
+                )
+        }
     }
 
     override fun launchFragmentScenario(
         fragmentClass: Class<PreferenceFragmentCompat>
     ): FragmentScenario<PreferenceFragmentCompat> {
-        return FragmentScenario.launch(fragmentClass, arguments)
+        val scenario = FragmentScenario.launch(fragmentClass, arguments)
+        scenario.onFragment { fragment ->
+            // Pre catalyst, we didn't set up the preference screen's title.
+            // Hence, we had to add the title to preference screen directly in order to test the
+            // migration test case.
+            // We also have a separate test case to test the title in post-catalyst scenario
+            fragment.preferenceScreen.title = "FakeA11yService"
+        }
+
+        return scenario
     }
 
     private fun createA11yServiceInfo(
