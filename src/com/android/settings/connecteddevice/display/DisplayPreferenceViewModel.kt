@@ -25,6 +25,9 @@ import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 
 /** Centralized data source to provide display updates for display preference fragments */
 class DisplayPreferenceViewModel
@@ -36,7 +39,7 @@ constructor(
 ) : AndroidViewModel(application) {
 
     data class DisplayUiState(
-        val enabledDisplays: Map<Int, DisplayDevice> = emptyMap(),
+        val enabledDisplays: Map<Int, DisplayDeviceAdditionalInfo> = emptyMap(),
         val selectedDisplayId: Int = -1,
         val isMirroring: Boolean = false,
         val includeDefaultDisplayInTopology: Boolean = false,
@@ -74,15 +77,19 @@ constructor(
         registerMirrorModeObserver()
         registerIncludeDefaultDisplayInTopologyObserver()
 
-        updateEnabledDisplays()
+        // Wait synchronously for the first load
+        viewModelScope.launch { updateEnabledDisplays().join() }
         updateMirroringState()
         updateIncludeDefaultDisplayInTopology()
     }
 
     override fun onCleared() {
         super.onCleared()
-        injector.unregisterDisplayListener(displayListener)
+        appContext.contentResolver.unregisterContentObserver(
+            includeDefaultDisplayInTopologyObserver
+        )
         appContext.contentResolver.unregisterContentObserver(mirrorModeObserver)
+        injector.unregisterDisplayListener(displayListener)
     }
 
     fun updateSelectedDisplay(newDisplayId: Int) {
@@ -91,31 +98,38 @@ constructor(
         }
     }
 
-    fun updateEnabledDisplays() {
-        val enabledDisplaysMap =
-            injector
-                .getDisplays()
-                .filter {
-                    it.isEnabled == DisplayIsEnabled.YES &&
-                        (it.id == DEFAULT_DISPLAY || it.isConnectedDisplay)
-                }
-                .associateBy { it.id }
+    fun updateEnabledDisplays(): Job {
+        return viewModelScope.launch {
+            // getDisplaysWithAdditionalInfo() runs on bg thread as it will do multiple binder calls
+            val enabledDisplaysMap =
+                injector
+                    .getDisplaysWithAdditionalInfo()
+                    .filter {
+                        it.isEnabled == DisplayIsEnabled.YES &&
+                            (it.id == DEFAULT_DISPLAY || it.isConnectedDisplay)
+                    }
+                    .associateBy { it.id }
 
-        updateState { currentState ->
-            val selectedId =
-                if (enabledDisplaysMap.contains(currentState.selectedDisplayId)) {
-                    currentState.selectedDisplayId
-                } else {
-                    // If the currently selected display is no longer available, reset to default.
-                    getDefaultDisplayId()
-                }
-            currentState.copy(enabledDisplays = enabledDisplaysMap, selectedDisplayId = selectedId)
+            updateState { currentState ->
+                val selectedId =
+                    if (enabledDisplaysMap.contains(currentState.selectedDisplayId)) {
+                        currentState.selectedDisplayId
+                    } else {
+                        // If the currently selected display is no longer available, reset to
+                        // default.
+                        getDefaultDisplayId()
+                    }
+                currentState.copy(
+                    enabledDisplays = enabledDisplaysMap,
+                    selectedDisplayId = selectedId,
+                )
+            }
         }
     }
 
     private fun updateMirroringState() {
         // This doesn't need to trigger manual viewmodel updates for enabled displays as Display
-        // and/or DisplayTopology callback will eventually be called following mirroring update
+        // callback will eventually be called following mirroring update
         val newMirroringState = isDisplayInMirroringMode(appContext)
         if (_uiState.value?.isMirroring != newMirroringState) {
             updateState { it.copy(isMirroring = newMirroringState) }

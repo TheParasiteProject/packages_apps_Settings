@@ -146,6 +146,11 @@ open class SelectedDisplayPreferenceFragment(
         }
     }
 
+    /**
+     * Note that update will be called on every tab switch as well. So all the operations to update
+     * UI should be fast and not fetching any new data (use only what's available from
+     * [DisplayPreferenceViewModel.DisplayUiState])
+     */
     private fun update(state: DisplayPreferenceViewModel.DisplayUiState) {
         val displayId = state.selectedDisplayId
         val enabledDisplays = state.enabledDisplays
@@ -266,7 +271,7 @@ open class SelectedDisplayPreferenceFragment(
 
     private fun updateExternalDisplayDensityPreference(
         preference: ExternalDisplaySizePreference,
-        display: DisplayDevice,
+        display: DisplayDeviceAdditionalInfo,
         isMirroring: Boolean,
     ) {
         if (isMirroring) {
@@ -297,7 +302,10 @@ open class SelectedDisplayPreferenceFragment(
         }
     }
 
-    private fun updateResolutionPreference(preference: Preference, display: DisplayDevice) {
+    private fun updateResolutionPreference(
+        preference: Preference,
+        display: DisplayDeviceAdditionalInfo,
+    ) {
         val displayMode = display.mode ?: return
         val width = displayMode.getPhysicalWidth()
         val height = displayMode.getPhysicalHeight()
@@ -342,8 +350,11 @@ open class SelectedDisplayPreferenceFragment(
         }
     }
 
-    private fun updateRotationPreference(preference: ListPreference, display: DisplayDevice) {
-        val rotation = viewModel.injector.getDisplayUserRotation(display.id)
+    private fun updateRotationPreference(
+        preference: ListPreference,
+        display: DisplayDeviceAdditionalInfo,
+    ) {
+        val rotation = display.rotation
         preference.apply {
             setValueIndex(rotation)
             setSummary(rotationEntries[rotation])
