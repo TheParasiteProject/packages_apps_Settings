@@ -19,12 +19,17 @@ package com.android.settings.accessibility.screenmagnification.ui
 import android.app.settings.SettingsEnums
 import android.content.ComponentName
 import android.content.Context
+import android.text.TextUtils
 import com.android.internal.accessibility.AccessibilityShortcutController
+import com.android.internal.accessibility.common.NotificationConstants.EXTRA_SOURCE
+import com.android.internal.accessibility.common.NotificationConstants.SOURCE_START_SURVEY
 import com.android.settings.R
 import com.android.settings.accessibility.BaseSupportFragment
 import com.android.settings.accessibility.FeedbackButtonPreferenceController
 import com.android.settings.accessibility.FeedbackManager
 import com.android.settings.accessibility.Flags
+import com.android.settings.accessibility.MagnificationSurveyButtonPreferenceController
+import com.android.settings.accessibility.SurveyManager
 import com.android.settings.accessibility.screenmagnification.CursorFollowingModePreferenceController
 import com.android.settings.accessibility.screenmagnification.ModePreferenceController
 import com.android.settings.accessibility.screenmagnification.ToggleMagnificationShortcutPreferenceController
@@ -46,7 +51,7 @@ open class MagnificationPreferenceFragment : BaseSupportFragment() {
             ?.setFragmentManager(getChildFragmentManager())
         use(FeedbackButtonPreferenceController::class.java)
             .initialize(FeedbackManager(context, metricsCategory))
-
+        initMagnificationSurvey(context)
         getShortcutPreferenceController()?.apply {
             initialize(
                 getFeatureComponentName(),
@@ -62,6 +67,20 @@ open class MagnificationPreferenceFragment : BaseSupportFragment() {
             null
         } else {
             use(ToggleMagnificationShortcutPreferenceController::class.java)
+        }
+    }
+
+    private fun initMagnificationSurvey(context: Context) {
+        val surveyManager = SurveyManager(this, context, MAGNIFICATION_SURVEY_KEY, metricsCategory)
+        val intent = getIntent()
+        if (
+            intent != null &&
+                intent.getStringExtra(EXTRA_SOURCE) != null &&
+                TextUtils.equals(intent.getStringExtra(EXTRA_SOURCE), SOURCE_START_SURVEY)
+        ) {
+            surveyManager.startSurvey()
+        } else {
+            use(MagnificationSurveyButtonPreferenceController::class.java).initialize(surveyManager)
         }
     }
 

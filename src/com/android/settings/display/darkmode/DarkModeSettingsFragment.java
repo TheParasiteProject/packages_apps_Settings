@@ -14,11 +14,16 @@
 
 package com.android.settings.display.darkmode;
 
+import static com.android.internal.accessibility.common.NotificationConstants.EXTRA_SOURCE;
+import static com.android.internal.accessibility.common.NotificationConstants.SOURCE_START_SURVEY;
+
 import android.app.Dialog;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +35,8 @@ import com.android.settings.accessibility.BaseSupportFragment;
 import com.android.settings.accessibility.FeedbackButtonPreferenceController;
 import com.android.settings.accessibility.FeedbackManager;
 import com.android.settings.accessibility.Flags;
+import com.android.settings.accessibility.ForceInvertSurveyButtonPreferenceController;
+import com.android.settings.accessibility.SurveyManager;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.search.SearchIndexable;
@@ -82,6 +89,7 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
         if (!Flags.catalystDarkUiMode()) {
             use(FeedbackButtonPreferenceController.class).initialize(
                     new FeedbackManager(context, getMetricsCategory()));
+            initForceInvertSurvey(context);
         }
     }
 
@@ -169,6 +177,19 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
     @Override
     public @Nullable String getPreferenceScreenBindingKey(@Nullable Context context) {
         return DarkModeScreen.KEY;
+    }
+
+    private void initForceInvertSurvey(@NonNull Context context) {
+        final SurveyManager surveyManager = new SurveyManager(this, context,
+                FORCE_INVERT_SURVEY_KEY, getMetricsCategory());
+        final Intent intent = getIntent();
+        if (intent != null
+                && intent.getStringExtra(EXTRA_SOURCE) != null
+                && TextUtils.equals(intent.getStringExtra(EXTRA_SOURCE), SOURCE_START_SURVEY)) {
+            surveyManager.startSurvey();
+        } else {
+            use(ForceInvertSurveyButtonPreferenceController.class).initialize(surveyManager);
+        }
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
