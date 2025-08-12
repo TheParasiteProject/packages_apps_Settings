@@ -34,6 +34,7 @@ import com.android.settings.accessibility.data.AccessibilityRepositoryProvider
 import com.android.settings.accessibility.detail.a11yservice.A11yServicePreferenceFragment
 import com.android.settings.accessibility.detail.a11yservice.data.UseServiceDataStore
 import com.android.settings.accessibility.extensions.getFeatureName
+import com.android.settings.accessibility.shared.ui.LaunchAppInfoPreference
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.overlay.FeatureFactory.Companion.featureFactory
 import com.android.settings.utils.highlightPreference
@@ -180,6 +181,11 @@ open class A11yServiceScreen(context: Context, override val arguments: Bundle) :
             ) +=
                 {
                     +A11yServiceShortcutPreference(context, serviceInfo, metricsCategory)
+                    +A11yServiceSettingPreference(serviceInfo)
+                    +LaunchAppInfoPreference(
+                        key = "accessibility_service_app_info",
+                        packageName = serviceInfo.componentName.packageName,
+                    )
                 }
         }
 
