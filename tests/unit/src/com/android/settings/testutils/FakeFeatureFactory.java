@@ -41,6 +41,7 @@ import com.android.settings.fuelgauge.BatterySettingsFeatureProvider;
 import com.android.settings.fuelgauge.BatteryStatusFeatureProvider;
 import com.android.settings.fuelgauge.PowerUsageFeatureProvider;
 import com.android.settings.homepage.contextualcards.ContextualCardFeatureProvider;
+import com.android.settings.i18n.RegionalCustomizationFeatureProvider;
 import com.android.settings.inputmethod.KeyboardSettingsFeatureProvider;
 import com.android.settings.localepicker.LocaleFeatureProvider;
 import com.android.settings.notification.syncacrossdevices.SyncAcrossDevicesFeatureProvider;
@@ -103,6 +104,7 @@ public class FakeFeatureFactory extends FeatureFactory {
     public StylusFeatureProvider mStylusFeatureProvider;
     public ThreadNetworkFeatureProvider mThreadNetworkFeatureProvider;
     public OnboardingFeatureProvider mOnboardingFeatureProvider;
+    public RegionalCustomizationFeatureProvider mRegionalCustomizationFeatureProvider;
     public FastPairFeatureProvider mFastPairFeatureProvider;
     public PrivateSpaceLoginFeatureProvider mPrivateSpaceLoginFeatureProvider;
     public DisplayFeatureProvider mDisplayFeatureProvider;
@@ -336,6 +338,11 @@ public class FakeFeatureFactory extends FeatureFactory {
     @Override
     public OnboardingFeatureProvider getOnboardingFeatureProvider() {
         return mOnboardingFeatureProvider;
+    }
+
+    @Override
+    public RegionalCustomizationFeatureProvider getRegionalCustomizationFeatureProvider() {
+        return mRegionalCustomizationFeatureProvider;
     }
 
     @Override
