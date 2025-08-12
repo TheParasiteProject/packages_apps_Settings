@@ -43,6 +43,7 @@ constructor(
         val selectedDisplayId: Int = -1,
         val isMirroring: Boolean = false,
         val includeDefaultDisplayInTopology: Boolean = false,
+        val showIncludeDefaultDisplayInTopologyPref: Boolean = false,
     )
 
     private val appContext = application.applicationContext
@@ -131,8 +132,12 @@ constructor(
         // This doesn't need to trigger manual viewmodel updates for enabled displays as Display
         // callback will eventually be called following mirroring update
         val newMirroringState = isDisplayInMirroringMode(appContext)
-        if (_uiState.value?.isMirroring != newMirroringState) {
-            updateState { it.copy(isMirroring = newMirroringState) }
+        updateState {
+            it.copy(
+                isMirroring = newMirroringState,
+                showIncludeDefaultDisplayInTopologyPref =
+                    isIncludeDefaultDisplayInTopologyPrefAllowed(newMirroringState),
+            )
         }
     }
 
@@ -165,6 +170,11 @@ constructor(
             INCLUDE_DEFAULT_DISPLAY_IN_TOPOLOGY,
             0,
         ) != 0
+
+    private fun isIncludeDefaultDisplayInTopologyPrefAllowed(isMirroring: Boolean) =
+        !isMirroring &&
+            injector.isDefaultDisplayInTopologyFlagEnabled() &&
+            injector.isProjectedModeEnabled()
 
     private fun getDefaultDisplayId(): Int {
         return injector.displayTopology?.primaryDisplayId ?: DEFAULT_DISPLAY

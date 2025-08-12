@@ -155,7 +155,6 @@ open class SelectedDisplayPreferenceFragment(
         val displayId = state.selectedDisplayId
         val enabledDisplays = state.enabledDisplays
         val isMirroring = state.isMirroring
-        val includeDefaultDisplayInTopology = state.includeDefaultDisplayInTopology
 
         val display = enabledDisplays[displayId]
         // By design, if there's one or more enabled connected displays, `displayId` should always
@@ -175,13 +174,7 @@ open class SelectedDisplayPreferenceFragment(
         if (displayType == DisplayType.BUILTIN_DISPLAY) {
             selectedDisplayPreference
                 .findPreference<SwitchPreferenceCompat>(PrefInfo.INCLUDE_DEFAULT_DISPLAY.key)
-                ?.let {
-                    updateIncludeDefaultDisplayInTopologyPreference(
-                        it,
-                        isMirroring,
-                        includeDefaultDisplayInTopology,
-                    )
-                }
+                ?.let { updateIncludeDefaultDisplayInTopologyPreference(it, state) }
         } else {
             selectedDisplayPreference
                 .findPreference<ExternalDisplaySizePreference>(
@@ -230,16 +223,11 @@ open class SelectedDisplayPreferenceFragment(
 
     private fun updateIncludeDefaultDisplayInTopologyPreference(
         preference: SwitchPreferenceCompat,
-        isMirroring: Boolean,
-        includeDefaultDisplayInTopology: Boolean,
+        state: DisplayPreferenceViewModel.DisplayUiState,
     ) {
-        val showPreference =
-            !isMirroring &&
-                viewModel.injector.isDefaultDisplayInTopologyFlagEnabled() &&
-                viewModel.injector.isProjectedModeEnabled()
-        if (showPreference) {
+        if (state.showIncludeDefaultDisplayInTopologyPref) {
             preference.setVisible(true)
-            preference.setChecked(includeDefaultDisplayInTopology)
+            preference.setChecked(state.includeDefaultDisplayInTopology)
         } else {
             preference.setVisible(false)
             return
