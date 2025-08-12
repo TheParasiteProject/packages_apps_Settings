@@ -2226,7 +2226,7 @@
     <!-- External Display resolution settings. The title of the screen. [CHAR LIMIT=40] -->
     <string name="external_display_resolution_settings_title">Display resolution</string>
     <!-- External Display Connection Preference. The preferred method of connection for an external display. [CHAR LIMIT=40] -->
-    <string name="external_display_connection_preference">Default Connection Behaviour</string>
+    <string name="external_display_connection_preference">Default connection behavior</string>
     <!-- External Display settings. Always start in desktop mode when display is connected. -->
     <string name="external_display_connection_preference_desktop">Use as separate display</string>
     <!-- External Display settings. Always start in mirroring mode when display is connected. -->
