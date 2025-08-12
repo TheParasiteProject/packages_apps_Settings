@@ -33,6 +33,8 @@ import com.android.settings.accessibility.Flags
 import com.android.settings.accessibility.data.AccessibilityRepositoryProvider
 import com.android.settings.accessibility.detail.a11yservice.A11yServicePreferenceFragment
 import com.android.settings.accessibility.detail.a11yservice.data.UseServiceDataStore
+import com.android.settings.accessibility.detail.a11yservice.ui.A11yServiceFooterPreference.Companion.FOOTER_KEY
+import com.android.settings.accessibility.detail.a11yservice.ui.A11yServiceFooterPreference.Companion.HTML_FOOTER_KEY
 import com.android.settings.accessibility.extensions.getFeatureName
 import com.android.settings.accessibility.shared.ui.LaunchAppInfoPreference
 import com.android.settings.core.PreferenceScreenMixin
@@ -187,6 +189,8 @@ open class A11yServiceScreen(context: Context, override val arguments: Bundle) :
                         packageName = serviceInfo.componentName.packageName,
                     )
                 }
+            +A11yServiceFooterPreference(HTML_FOOTER_KEY, serviceInfo, loadHtmlFooter = true)
+            +A11yServiceFooterPreference(FOOTER_KEY, serviceInfo, loadHtmlFooter = false)
         }
 
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?): Intent {

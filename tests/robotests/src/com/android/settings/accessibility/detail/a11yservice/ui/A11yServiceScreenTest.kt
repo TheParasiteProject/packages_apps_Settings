@@ -72,11 +72,6 @@ class A11yServiceScreenTest : SettingsCatalystTestCase() {
     }
 
     @Test
-    override fun migration() {
-        // Remove this empty override once we've completed the migration
-    }
-
-    @Test
     fun getKey() {
         assertThat(preferenceScreenCreator.key).isEqualTo(A11yServiceScreen.KEY)
     }
@@ -170,7 +165,16 @@ class A11yServiceScreenTest : SettingsCatalystTestCase() {
     override fun launchFragmentScenario(
         fragmentClass: Class<PreferenceFragmentCompat>
     ): FragmentScenario<PreferenceFragmentCompat> {
-        return FragmentScenario.launch(fragmentClass, arguments)
+        val scenario = FragmentScenario.launch(fragmentClass, arguments)
+        scenario.onFragment { fragment ->
+            // Pre catalyst, we didn't set up the preference screen's title.
+            // Hence, we had to add the title to preference screen directly in order to test the
+            // migration test case.
+            // We also have a separate test case to test the title in post-catalyst scenario
+            fragment.preferenceScreen.title = "FakeA11yService"
+        }
+
+        return scenario
     }
 
     private fun createA11yServiceInfo(
