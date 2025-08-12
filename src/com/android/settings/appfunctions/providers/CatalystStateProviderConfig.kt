@@ -27,6 +27,10 @@ import com.android.settings.accessibility.flashnotifications.ui.FlashNotificatio
 import com.android.settings.accessibility.textreading.ui.TextReadingScreen
 import com.android.settings.accounts.AccountScreen
 import com.android.settings.applications.AppDashboardScreen
+import com.android.settings.applications.specialaccess.AlarmsAndRemindersAppDetailScreen
+import com.android.settings.applications.specialaccess.AlarmsAndRemindersAppListScreen
+import com.android.settings.applications.specialaccess.AllFilesAccessAppDetailScreen
+import com.android.settings.applications.specialaccess.AllFilesAccessAppListScreen
 import com.android.settings.applications.specialaccess.AppInfoInstallUnknownAppsScreen
 import com.android.settings.applications.specialaccess.AppInfoManageWriteSettingsScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen
@@ -308,6 +312,8 @@ private fun getCatalystScreenConfigs() =
             enabled = true,
             screenKey = WriteSystemPreferencesAppListScreen.KEY,
         ),
+        PerScreenCatalystConfig(enabled = true, screenKey = AllFilesAccessAppListScreen.KEY),
+        PerScreenCatalystConfig(enabled = true, screenKey = AlarmsAndRemindersAppListScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = SpecialAccessSettingsScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = SupervisionWebContentFiltersScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = TextReadingScreen.KEY),
@@ -708,5 +714,15 @@ private fun getDeviceStateItemList() =
             enabled = true,
             settingKey = WriteSystemPreferencesAppDetailScreen.KEY,
             settingScreenKey = WriteSystemPreferencesAppListScreen.KEY,
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
+            settingKey = AllFilesAccessAppDetailScreen.KEY,
+            settingScreenKey = AllFilesAccessAppListScreen.KEY,
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
+            settingKey = AlarmsAndRemindersAppDetailScreen.KEY,
+            settingScreenKey = AlarmsAndRemindersAppListScreen.KEY,
         ),
     )
