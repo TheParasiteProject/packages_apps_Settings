@@ -28,7 +28,6 @@ import static com.android.settings.bluetooth.BluetoothDetailsAmbientVolumePrefer
 import static com.android.settingslib.bluetooth.HearingAidInfo.DeviceSide.SIDE_LEFT;
 import static com.android.settingslib.bluetooth.HearingAidInfo.DeviceSide.SIDE_RIGHT;
 
-import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.util.ArrayMap;
 import android.view.View;
@@ -52,6 +51,7 @@ import com.google.common.collect.HashBiMap;
 import com.google.common.primitives.Ints;
 
 import java.util.Map;
+import java.util.Set;
 
 /**
  * A preference group of ambient volume controls.
@@ -241,9 +241,8 @@ public class AmbientVolumePreference extends PreferenceGroup implements AmbientV
     }
 
     @Override
-    public void setupSliders(@NonNull Map<Integer, BluetoothDevice> sideToDeviceMap) {
-        sideToDeviceMap.forEach((side, device) ->
-                createSlider(side, ORDER_AMBIENT_VOLUME_CONTROL_SEPARATED + side));
+    public void setupSliders(@NonNull Set<Integer> sides) {
+        sides.forEach(side -> createSlider(side, ORDER_AMBIENT_VOLUME_CONTROL_SEPARATED + side));
         createSlider(SIDE_UNIFIED, ORDER_AMBIENT_VOLUME_CONTROL_UNIFIED);
 
         if (!mSideToSliderMap.isEmpty()) {
@@ -287,8 +286,7 @@ public class AmbientVolumePreference extends PreferenceGroup implements AmbientV
         }
     }
 
-    @Override
-    public void updateLayout() {
+    private void updateLayout() {
         mSideToSliderMap.forEach((side, slider) -> {
             if (side == SIDE_UNIFIED) {
                 slider.setVisible(!mExpanded);
