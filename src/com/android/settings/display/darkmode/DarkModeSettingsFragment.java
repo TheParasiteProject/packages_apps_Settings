@@ -59,24 +59,20 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!Flags.catalystDarkUiMode()) {
-            final Context context = getContext();
-            mContentObserver = new DarkModeObserver(context);
-        }
+        final Context context = getContext();
+        mContentObserver = new DarkModeObserver(context);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        if (!Flags.catalystDarkUiMode()) {
-            // Listen for changes only while visible.
-            mContentObserver.subscribe(() -> {
-                PreferenceScreen preferenceScreen = getPreferenceScreen();
-                mCustomStartController.displayPreference(preferenceScreen);
-                mCustomEndController.displayPreference(preferenceScreen);
-                updatePreferenceStates();
-            });
-        }
+        // Listen for changes only while visible.
+        mContentObserver.subscribe(() -> {
+            PreferenceScreen preferenceScreen = getPreferenceScreen();
+            mCustomStartController.displayPreference(preferenceScreen);
+            mCustomEndController.displayPreference(preferenceScreen);
+            updatePreferenceStates();
+        });
     }
 
     @Override
@@ -106,10 +102,8 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
     @Override
     public void onStop() {
         super.onStop();
-        if (!Flags.catalystDarkUiMode()) {
-            // Stop listening for state changes.
-            mContentObserver.unsubscribe();
-        }
+        // Stop listening for state changes.
+        mContentObserver.unsubscribe();
     }
 
     @Override
@@ -192,8 +186,7 @@ public class DarkModeSettingsFragment extends BaseSupportFragment {
             new BaseSearchIndexProvider(R.xml.dark_mode_settings) {
                 @Override
                 protected boolean isPageSearchEnabled(Context context) {
-                    return !Flags.catalystDarkUiMode()
-                            && !context.getSystemService(PowerManager.class).isPowerSaveMode();
+                    return !context.getSystemService(PowerManager.class).isPowerSaveMode();
                 }
             };
 
