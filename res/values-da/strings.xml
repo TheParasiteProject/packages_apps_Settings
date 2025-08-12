@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Brug en mørk baggrund for at gøre det mere behageligt at se på skærmen og reducere batteriforbruget på nogle skærme. Hvis du har en tidsplan, ændres dit tema, når skærmen er slukket."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Mørkt tema følger i øjeblikket din tidsplan for sengetid"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Indstillinger for sengetid"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Tilstande kan også aktivere Mørkt tema.}=1{{mode_1} aktiverer også Mørkt tema.}=2{{mode_1} og {mode_2} aktiverer også Mørkt tema.}=3{{mode_1}, {mode_2} og {mode_3} aktiverer også Mørkt tema.}one{{mode_1}, {mode_2} og # anden aktiverer også Mørkt tema.}other{{mode_1}, {mode_2} og # andre aktiverer også Mørkt tema.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Indstillinger for tilstande"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Gør farverne lysere og mere klare i HDR-billeder og -videoer. HDR-indhold vises med højere lysstyrke."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Timeout for skærmen"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Angiv mønster for at bruge fingeraftryk"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Angiv en pinkode af hensyn til sikkerheden"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Angiv pinkode for at bruge fingeraftryk"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Angiv din adgangs­kode igen"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Angiv din enheds adgangskode"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Angiv din adgangskode igen"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Angiv adgangskoden til arbejdsprofilen igen"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Angiv adgangskoden til din arbejdsprofil"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Bekræft dit mønster"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Angiv din enheds mønster"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Angiv mønsteret til din arbejdsprofil"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"Angiv din pinkode igen"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Angiv din enheds pinkode"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"Angiv din pinkode igen"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Angiv pinkoden til arbejdsprofilen igen"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Angiv pinkoden til din arbejdsprofil"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Adgangskoderne matcher ikke"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Har du glemt din adgangskode?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Har du glemt dit mønster?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Har du glemt din pinkode?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Tegn dit mønster for at fortsætte"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Angiv din pinkode for at fortsætte"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Angiv din adgangskode for at fortsætte"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Tegn dit arbejdsmønster for at fortsætte"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Angiv pinkoden til din arbejdsprofil for at fortsætte"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Angiv adgangskoden til din arbejdsprofil for at fortsætte"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Dit mønster verificerer din identitet"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"Din pinkode verificerer din identitet"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Din adgangskode verificerer din identitet"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Dit arbejdsmønster verificerer din identitet"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"Din arbejdspinkode verificerer dit identitet"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Din arbejdsadgangskode verificerer din identitet"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Brug mønsteret til din enhed for at opnå øget sikkerhed"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Angiv pinkoden til din enhed for at opnå øget sikkerhed"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Angiv adgangskoden til din enhed for at opnå øget sikkerhed"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Rulning"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Kontrolleret rulning"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Hastighed ved rulning"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Gør markøren hurtigere"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Gør markøren langsommere"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Skift primær museknap"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Systemlyde og -vibrationer"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Lyd for arbejdsprofil"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Livetekstning"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Undertekster til medier"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Høretelefoner med ledning"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Lyden fra kompatible medieenheder bliver endnu bedre"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Fra"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Tophistorier, redaktionelt indhold m.m."</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Likes, opslag m.m."</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Nyhedsbreve, anbefalede medier m.m."</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Administrer med AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Notifikationsoversigter"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Få hurtige opsummeringer af længere beskeder"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Undlad at inkludere disse apps"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Notifikationsoversigter"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Få hurtige opsummeringer af længere beskeder"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Livenotifikationer"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Liveopdateringer"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Vis igangværende, tidsfølsomme notifikationer på statusbjælken og låseskærmen"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Gennemse apps, der har ændret måden, de kan dele dine lokationsdata på"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Agenter"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Agenter, der kan tilgå oplysninger eller foretage handlinger i apps"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Tryk for at vække"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Tryk to gange et vilkårligt sted på skærmen for at vække enheden"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Åbning af links"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{1 app har tilladelse til at bruge ubegrænset mobildata, når datasparefunktionen er aktiveret}one{# app har tilladelse til at bruge ubegrænset mobildata, når datasparefunktionen er aktiveret}other{# apps har tilladelse til at bruge ubegrænset mobildata, når datasparefunktionen er aktiveret}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"Primære data"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Wi‑Fi-data"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> og <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="data_overusage" msgid="3680477320458707259">"Overskredet med <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="data_remaining" msgid="6316251496381922837">"Der er <xliff:g id="ID_1">^1</xliff:g> tilbage"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"Graf, der viser dataforbrug mellem den <xliff:g id="START_DATE">%1$s</xliff:g> og <xliff:g id="END_DATE">%2$s</xliff:g>."</string>
@@ -5951,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Sørg for, at andre ikke kan åbne apps, der kræver finger- eller ansigtsoplåsning. Denne funktion på dit ur giver dig ro i sindet, når du er på farten."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Brug identitetstjek, og se indhold i flere apps"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Sørg for, at din identitet er beskyttet i alle apps, der understøtter finger- og ansigtsoplåsning på sikre steder som f.eks. dit hjem eller kontor. Brug identitetstjek med dit ur for at øge din beskyttelse – også uden for dine sikre steder."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

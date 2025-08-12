@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"আপোনাৰ স্ক্ৰীনখন চোৱাটো অধিক আৰামদায়ক কৰিবলৈ আৰু কিছুমান স্ক্ৰীনত বেটাৰীৰ ব্যৱহাৰ হ্ৰাস কৰিবলৈ এটা গাঢ় ৰঙৰ পটভূমি ব্যৱহাৰ কৰক। যদি আপোনাৰ সময়সূচী আছে, স্ক্ৰীন অফ হ’লে আপোনাৰ থীম সলনি হ’ব।"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"গাঢ় ৰঙৰ থীমে বৰ্তমান আপোনাৰ শোৱাৰ সময়ৰ ম\'ড অনুসৰণ কৰে"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"শোৱাৰ সময়ৰ ম’ডটোৰ ছেটিং"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{ম’ডেও গাঢ় ৰঙৰ থীম অন কৰিব পাৰে।}=1{{mode_1}এও গাঢ় ৰঙৰ থীম অন কৰে।}=2{{mode_1}, {mode_2} আৰু এও গাঢ় ৰঙৰ থীম অন কৰে।}=3{{mode_1}, {mode_2} আৰু {mode_3}এও গাঢ় ৰঙৰ থীম অন কৰে।}one{{mode_1}, {mode_2} আৰু আন # টায়ো গাঢ় ৰঙৰ থীম অন কৰে।}other{{mode_1}, {mode_2} আৰু আন # টায়ো গাঢ় ৰঙৰ থীম অন কৰে।}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"ম’ডৰ ছেটিং"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"হাই ডায়নামিক ৰেঞ্জ (HDR) প্ৰতিচ্ছবি আৰু ভিডিঅ’ত ৰঙৰ পৰিসৰ আৰু স্পষ্টতা অধিক উজ্জ্বল আৰু বিস্তাৰ কৰক। HDR সমল অধিক উজ্জ্বল দেখা যাব।"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"স্ক্ৰীন টাইমআউট"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"ফিংগাৰপ্ৰিণ্ট ব্যৱহাৰ কৰিবলৈ আৰ্হি দিয়ক"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"সুৰক্ষাৰ বাবে পিন দিয়ক"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"ফিংগাৰপ্ৰিণ্ট ব্যৱহাৰ কৰিবলৈ এটা পিন ছেট কৰক"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"আপোনাৰ পাছৱৰ্ডটো আকৌ দিয়ক"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"আপোনাৰ ডিভাইচৰ পাছৱৰ্ড দিয়ক"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"আপোনাৰ পাছৱৰ্ডটো পুনৰ দিয়ক"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"আপোনাৰ কৰ্মস্থানৰ পাছৱৰ্ডটো পুনৰ দিয়ক"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"আপোনাৰ কর্মস্থানৰ পাছৱৰ্ড দিয়ক"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"আপোনাৰ আৰ্হি নিশ্চিত কৰক"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"আপোনাৰ ডিভাইচৰ আৰ্হিটো দিয়ক"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"আপোনাৰ কর্মস্থানৰ আর্হি দিয়ক"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"আপোনাৰ পিনটো আকৌ দিয়ক"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"আপোনাৰ ডিভাইচৰ পিনটো দিয়ক"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"আপোনাৰ পিনটো পুনৰ দিয়ক"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"আপোনাৰ কৰ্মস্থানৰ পিনটো পুনৰ দিয়ক"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"আপোনাৰ কর্মস্থানৰ পিন দিয়ক"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"পাছৱৰ্ড দুটা একেই নহয়"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"আপোনাৰ পাছৱর্ডটো পাহৰিলে নেকি?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"আপোনাৰ আর্হিটো পাহৰিলে নেকি?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"আপোনাৰ পিনটো পাহৰিলে নেকি?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"অব্যাহত ৰাখিবলৈ আপোনাৰ আৰ্হিটো অংকন কৰক"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"অব্যাহত ৰাখিবলৈ আপোনাৰ পিনটো দিয়ক"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"অব্যাহত ৰাখিবলৈ আপোনাৰ পাছৱৰ্ডটো দিয়ক"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"অব্যাহত ৰাখিবলৈ আপোনাৰ কৰ্মস্থানৰ আৰ্হিটো অংকন কৰক"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"অব্যাহত ৰাখিবলৈ আপোনাৰ কৰ্মস্থানৰ পিন লিখক"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"অব্যাহত ৰাখিবলৈ আপোনাৰ কৰ্মস্থানৰ পাছৱৰ্ড লিখক"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"আপোনাৰ আৰ্হিয়ে এয়া আপুনিয়েই বুলি সত্যাপন কৰে"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"আপোনাৰ পিনে এয়া আপুনিয়েই বুলি সত্যাপন কৰে"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"আপোনাৰ পাছৱৰ্ডে এয়া আপুনিয়েই বুলি সত্যাপন কৰে"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"আপোনাৰ কৰ্মস্থানৰ আৰ্হিয়ে এয়া আপুনিয়েই বুলি সত্যাপন কৰে"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"আপোনাৰ কৰ্মস্থানৰ পিনে এয়া আপুনিয়েই বুলি সত্যাপন কৰে"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"আপোনাৰ কৰ্মস্থানৰ পাছৱৰ্ডে এয়া আপুনিয়েই বুলি সত্যাপন কৰে"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"অতিৰিক্ত সুৰক্ষাৰ বাবে আপোনাৰ ডিভাইচ আৰ্হি ব্যৱহাৰ কৰক"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"ওপৰঞ্চি সুৰক্ষাৰ বাবে আপোনাৰ ডিভাইচৰ দিয়ক"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"অতিৰিক্ত সুৰক্ষাৰ বাবে আপোনাৰ ডিভাইচৰ পাছৱৰ্ড দিয়ক"</string>
@@ -2184,6 +2185,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"স্ক্ৰ’ল কৰাৰ সুবিধা"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"নিয়ন্ত্ৰিত স্ক্ৰ’ল কৰাৰ সুবিধা"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"স্ক্ৰ’ল কৰাৰ গতিবেগ"</string>
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"স্ক্ৰ’লিং দ্ৰুত কৰক"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"স্ক্ৰ’লিং লেহেমীয়া কৰক"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"পইণ্টাৰ দ্ৰুত কৰক"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"পইণ্টাৰ লেহেমীয়া কৰক"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"মাউছৰ প্ৰাথমিক বুটাম সলনি-সলনি কৰক"</string>
@@ -3755,7 +3758,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"ছিষ্টেমৰ ধ্বনি আৰু কম্পন"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"কৰ্মস্থানৰ প্ৰ’ফাইলৰ ধ্বনি"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"লাইভ কেপশ্বন"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"স্বয়ংক্ৰিয় কেপশ্বন মিডিয়া"</string>
+    <string name="live_caption_summary" msgid="7290150167089515457">"কল, ভিডিঅ’ আৰু আন মিডিয়াৰ বাবে কেপশ্বন লাভ কৰক"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"অন আছে / কল, ভিডিঅ’ আৰু আন মিডিয়াৰ বাবে কেপশ্বন লাভ কৰক"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"অফ আছে / কল, ভিডিঅ’ আৰু আন মিডিয়াৰ বাবে কেপশ্বন লাভ কৰক"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"তাঁৰযুক্ত হেডফ’ন"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"সমিল মিডিয়াৰ পৰা অহা অডিঅ’ অধিক নিমগ্ন হৈ পৰে"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"অফ আছে"</string>
@@ -3901,6 +3906,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"শীৰ্ষ কাহিনী, সম্পাদকীয় আৰু বহুতো"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"লাইক, প’ষ্ট আৰু বহুতো"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"সংবাদপত্ৰ, চুপাৰিছ কৰা মিডিয়া আৰু বহুতো"</string>
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"বৰ্তমান আটাইবোৰ এপে জাননীৰ সংগঠক ব্যৱহাৰ কৰি আছে"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"AIৰ জৰিয়তে পৰিচালনা কৰক"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"জাননীৰ সাৰাংশ"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"দীঘলীয়া বাৰ্তাৰ দ্ৰুত ৰীকেপ পাওক"</string>
@@ -3912,6 +3918,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"এই এপ্‌সমূহ অন্তৰ্ভুক্ত নকৰিব"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"জাননীৰ সাৰাংশ"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"দীঘলীয়া বাৰ্তাৰ দ্ৰুত ৰীকেপ পাওক"</string>
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"বৰ্তমান আটাইবোৰ প্ৰযোজ্য এপে জাননীৰ সাৰাংশ ব্যৱহাৰ কৰি আছে"</string>
     <string name="live_notifications" msgid="4650406646292963831">"লাইভ জাননী"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"লাইভ আপডে’ট"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"স্থিতি দণ্ড আৰু লক স্ক্ৰীনত চলিত, সময়-সংবেদনশীল জাননী দেখুৱাওক"</string>
@@ -4394,6 +4401,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"আপোনাৰ অৱস্থানৰ ডেটা শ্বেয়াৰ কৰিব পৰাৰ ধৰণসমূহ সলনি কৰা এপ্‌সমূহ পৰ্যালোচনা কৰক"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"এজেণ্টসকল"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"এপ্‌সমূহত তথ্য এক্সেছ কৰিব আৰু কাৰ্যব্যৱস্থা গ্ৰহণ কৰিব পৰা এজেণ্টসকল"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"জাগ্ৰত কৰিবলৈ টিপক"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"ডিভাইচটোক সাৰ পোৱাবলৈ স্ক্ৰীনৰ যিকোনো স্থানত দুবাৰ টিপক"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"লিংক খোলাৰ অগ্ৰাধিকাৰ"</string>
@@ -4658,8 +4673,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{ডেটা সঞ্চয়কাৰী অন হৈ থাকিলে ১ টা এপক বাধা-নিষেধহীন ম’বাইল ডেটা ব্যৱহাৰ কৰিবলৈ অনুমতি দিয়া হয়}one{ডেটা সঞ্চয়কাৰী অন হৈ থাকিলে # টা এপক বাধা-নিষেধহীন ম’বাইল ডেটা ব্যৱহাৰ কৰিবলৈ অনুমতি দিয়া হয়}other{ডেটা সঞ্চয়কাৰী অন হৈ থাকিলে # টা এপক বাধা-নিষেধহীন ম’বাইল ডেটা ব্যৱহাৰ কৰিবলৈ অনুমতি দিয়া হয়}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"প্ৰাথমিক ডেটা"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"ৱাই-ফাই ডেটা"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>⁠"</string>
     <string name="data_overusage" msgid="3680477320458707259">"<xliff:g id="ID_1">^1</xliff:g> বেছি খৰছ হ’ল"</string>
     <string name="data_remaining" msgid="6316251496381922837">"<xliff:g id="ID_1">^1</xliff:g> বাকী আছে"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"গ্ৰাফে <xliff:g id="START_DATE">%1$s</xliff:g> আৰু <xliff:g id="END_DATE">%2$s</xliff:g>ৰ ভিতৰৰ ডেটাৰ ব্যৱহাৰ দেখুৱাইছে।"</string>
@@ -5951,4 +5965,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"ফিংগাৰপ্ৰিণ্ট বা ফে’চ আনলকৰ সুবিধাটো আৱশ্যক হোৱা এপ্‌সমূহ অন্য লোকে খোলাটো ৰোধ কৰক। আপোনাৰ ঘড়ীটোৰ সৈতে সংযুক্ত হৈ থাকোঁতে, অধিক ঠাই ঘূৰি ফুৰিলেও আপোনাৰ সুৰক্ষা নিশ্চিত কৰা হয়।"</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"পৰিচয় পৰীক্ষা কৰা সুবিধাটো আৰু ঘড়ী অধিক এপত ব্যৱহাৰ কৰক"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"আপোনাৰ ঘৰ বা কাৰ্যালয়ৰ দৰে বিশ্বাসযোগ্য স্থানসমূহত ফিংগাৰপ্ৰিণ্ট বা ফে’চ আনলকৰ সুবিধাটো সমৰ্থন কৰা আটাইবোৰ এপত আপোনাৰ পৰিচয়ৰ সুৰক্ষাটো নিশ্চিত কৰক। বিশ্বাসযোগ্য স্থানসমূহৰ বাহিৰেও অন্য ঠাইত নিজৰ সুৰক্ষা বিস্তাৰ কৰিবলৈ আপোনাৰ ঘড়ীটোৰ সৈতে পৰিচয় পৰীক্ষাটো ব্যৱহাৰ কৰক।"</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

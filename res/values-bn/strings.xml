@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"কিছু স্ক্রিনের ক্ষেত্রে, আরও সহজে স্ক্রিনের দিকে তাকাতে ও ব্যাটারির ব্যবহার কমানোর জন্য ডার্ক ব্যাকগ্রাউন্ড ব্যবহার করুন। যদি শিডিউল করে রাখেন তাহলে স্ক্রিন বন্ধ থাকলে, আপনার থিম পরিবর্তন হবে।"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"ডার্ক থিম বর্তমানে আপনার বেডটাইম মোডের শিডিউল অনুযায়ী চালু বা বন্ধ হয়"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"বেডটাইম মোডের সেটিংস"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{এছাড়াও মোড, ডার্ক থিম চালু করতে পারে।}=1{এছাড়াও {mode_1} ডার্ক থিম চালু করে।}=2{এছাড়াও {mode_1} এবং {mode_2} ডার্ক থিম চালু করে।}=3{এছাড়াও {mode_1}, {mode_2} এবং {mode_3} ডার্ক থিম চালু করে।}one{এছাড়াও {mode_1}, {mode_2} ও আরও #টি মোড ডার্ক থিম চালু করে।}other{এছাড়াও {mode_1}, {mode_2} ও আরও #টি মোড ডার্ক থিম চালু করে।}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"মোড সেটিংস"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"উচ্চ মাত্রার ডায়নামিক রেঞ্জে (HDR) ছবি ও ভিডিও আরও উজ্জ্বল করুন, কালার রেঞ্জ আরও বাড়ান এবং আরও স্পষ্ট করে তুলুন। HDR কন্টেন্ট আরও উজ্জ্বলভাবে দেখা যাবে।"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"স্ক্রিন টাইমআউট"</string>
@@ -1878,12 +1877,14 @@
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"আঙ্গুলের ছাপ ব্যবহার করার জন্য প্যাটার্ন সেট করুন"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"নিরাপত্তার জন্য, পিন সেট করুন"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"আঙ্গুলের ছাপ ব্যবহার করার জন্য পিন সেট করুন"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"আপনার পাসওয়ার্ডটি আবার লিখুন"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"আপনার ডিভাইসের পাসওয়ার্ড লিখুন"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"আপনার পাসওয়ার্ড আবার লিখুন"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"অফিস প্রোফাইল পাসওয়ার্ড আবার লিখুন"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"আপনার অফিসের পাসওয়ার্ড লিখুন"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"আপনার প্যাটার্ন নিশ্চিত করুন"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"আপনার ডিভাইসের প্যাটার্ন দিন"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"আপনার অফিসের প্যাটার্ন লিখুন"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"আপনার পিনটি আবার লিখুন"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"আপনার ডিভাইসের পিন লিখুন"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"আপনার পিন আবার লিখুন"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"অফিস প্রোফাইল পিন আবার লিখুন"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"আপনার অফিস প্রোফাইলের পিনটি লিখুন"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"পাসওয়ার্ড মিলছে না"</string>
@@ -1902,12 +1903,12 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"পাসওয়ার্ড ভুলে গেছেন?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"প্যাটার্ন ভুলে গেছেন?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"পিন ভুলে গেছেন?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"চালিয়ে যেতে আপনার প্যাটার্ন আঁকুন"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"চালিয়ে যেতে আপনার পিন লিখুন"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"চালিয়ে যেতে আপনার পাসওয়ার্ড লিখুন"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"চালিয়ে যেতে আপনার অফিসের প্যাটার্ন আঁকুন"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"চালিয়ে যেতে আপনার অফিসের পিন লিখুন"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"চালিয়ে যেতে আপনার কর্মস্থলের পাসওয়ার্ড লিখুন"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"আপনার প্যাটার্ন আপনার পরিচয় যাচাই করে"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"আপনার পিন আপনার পরিচয় যাচাই করে"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"আপনার পাসওয়ার্ড আপনার পরিচয় যাচাই করে"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"আপনার অফিস প্রোফাইলের প্যাটার্ন আপনার পরিচয় যাচাই করে"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"আপনার অফিস প্রোফাইলের পিন আপনার পরিচয় যাচাই করে"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"আপনার অফিস প্রোফাইলের পাসওয়ার্ড আপনার পরিচয় যাচাই করে"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"অতিরিক্ত নিরাপত্তার জন্য, আপনার ডিভাইসের প্যাটার্ন ব্যবহার করুন"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"অতিরিক্ত নিরাপত্তার জন্য, আপনার ডিভাইসের পিন লিখুন"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"অতিরিক্ত নিরাপত্তার জন্য, আপনার ডিভাইসের পাসওয়ার্ড লিখুন"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"স্ক্রোলিংয়ের স্পিড"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"কন্ট্রোল করা স্ক্রলিং"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"স্ক্রলিংয়ের স্পিড"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"মাউস পয়েন্টারের স্পিড বাড়ান"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"মাউস পয়েন্টারের স্পিড কমান"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"প্রাথমিক মাউস বোতাম অদলবদল করুন"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"সিস্টেম সাউন্ড ও ভাইব্রেশন"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"অফিস প্রোফাইল সাউন্ড"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"লাইভ ক্যাপশন"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"অটোমেটিক মিডিয়া ক্যাপশন দেখুন"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"তারযুক্ত হেডফোন"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"মানানসই মিডিয়ার অডিও আরও বেশি শ্রবণযোগ্য হয়"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"বন্ধ আছে"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"সেরা খবর, এডিটোরিয়াল ও আরও অনেক কিছু"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"লাইক, পোস্ট ও আরও অনেক কিছু"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"নিউজলেটার, সাজেস্ট করা মিডিয়া ও আরও অনেক কিছু"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"AI-এর মাধ্যমে ম্যানেজ করুন"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"বিজ্ঞপ্তি সম্পর্কিত সারসংক্ষেপ"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"অপেক্ষাকৃত দীর্ঘ মেসেজের দ্রুত রিক্যাপ পান"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"এইসব অ্যাপ অন্তর্ভুক্ত করবেন না"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"বিজ্ঞপ্তির সারসংক্ষেপ"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"অপেক্ষাকৃত দীর্ঘ মেসেজের দ্রুত রিক্যাপ পান"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"লাইভ বিজ্ঞপ্তি"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"লাইভ আপডেট"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"স্ট্যাটাস বার ও লক স্ক্রিনে চালু থাকা, সীমিত সময়ের জন্য বিজ্ঞপ্তি দেখুন"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"আপনার লোকেশন ডেটা শেয়ার করার উপায় পরিবর্তন করে এমন অ্যাপ পর্যালোচনা করুন"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"এজেন্ট"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"যেসব এজেন্ট, অ্যাপে তথ্য অ্যাক্সেস করতে বা অ্যাকশন নিতে পারে"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"জাগাতে আলতো চাপুন"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"ডিভাইসকে জাগাতে স্ক্রিনের যেকোনও জায়গায় ডাবল-ট্যাপ করুন"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"লিঙ্ক খোলা"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{\'ডেটা সেভার\' চালু থাকাকালীন ১টি অ্যাপের আনলিমিটেড মোবাইল ডেটা ব্যবহারের অনুমতি রয়েছে}one{\'ডেটা সেভার\' চালু থাকাকালীন #টি অ্যাপের আনলিমিটেড মোবাইল ডেটা ব্যবহারের অনুমতি রয়েছে}other{\'ডেটা সেভার\' চালু থাকাকালীন #টি অ্যাপের আনলিমিটেড মোবাইল ডেটা ব্যবহারের অনুমতি রয়েছে}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"প্রাথমিক ডেটা"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"ওয়াই-ফাই ডেটা"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>⁠"</string>
     <string name="data_overusage" msgid="3680477320458707259">"<xliff:g id="ID_1">^1</xliff:g> শেষ"</string>
     <string name="data_remaining" msgid="6316251496381922837">"<xliff:g id="ID_1">^1</xliff:g> বাকি আছে"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"<xliff:g id="START_DATE">%1$s</xliff:g> এবং <xliff:g id="END_DATE">%2$s</xliff:g>-এর ডেটা ব্যবহারের উপর গ্রাফ দেখানো হচ্ছে।"</string>
@@ -5951,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"অ্যাক্সেস করতে ফিঙ্গারপ্রিন্ট বা ফেস আনলক প্রয়োজন এমন অ্যাপ খুলতে অন্যদের বাধা দিন। স্মার্টওয়াচে কানেক্ট করা থাকলে, আরও বেশি মোবিলিটি সহ আপনার নিরাপত্তা নিশ্চিত করা সম্ভব হয়।"</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"স্মার্টওয়াচে পরিচয় যাচাই ফিচার সহ আরও অ্যাপ ব্যবহার করুন"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"আপনার বাড়ি বা কর্মস্থলের মতো বিশ্বস্ত জায়গায় ফিঙ্গারপ্রিন্ট এবং ফেস আনলক কাজ করে এমন সমস্ত অ্যাপে আপনার পরিচয়ের গোপনীয়তা সুরক্ষিত করুন। বিশ্বস্ত জায়গার পাশাপাশি অন্যান্য জায়গায় আপনার সুরক্ষা বাড়াতে স্মার্টওয়াচে পরিচয় যাচাই ফিচার ব্যবহার করুন।"</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>

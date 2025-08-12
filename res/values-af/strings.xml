@@ -773,11 +773,11 @@
     <string name="suggested_lock_settings_title" msgid="7836065447159730217">"Beveilig jou foon"</string>
     <string name="suggested_fingerprint_lock_settings_title" msgid="3140266181874137984">"Voeg vingerafdruk by om te ontsluit"</string>
     <string name="lock_settings_picker_title" msgid="9219376327364915334">"Kies skermslot"</string>
-    <string name="lock_settings_picker_new_lock_title" msgid="3113042086804290919">"Kies \'n skermslot"</string>
+    <string name="lock_settings_picker_new_lock_title" msgid="3113042086804290919">"Kies ’n skermslot"</string>
     <string name="lock_settings_picker_update_lock_title" msgid="536853138943415927">"Kies \'n nuwe skermslot"</string>
     <string name="lock_settings_picker_new_profile_lock_title" msgid="2270462215256413800">"Kies slot vir werkapps"</string>
     <string name="lock_settings_picker_update_profile_lock_title" msgid="5929068163516308927">"Kies \'n nuwe werkslot"</string>
-    <string name="lock_settings_picker_biometrics_added_security_message" msgid="1105247657304421299">"Stel \'n rugsteunskermslot vir bykomende sekuriteit"</string>
+    <string name="lock_settings_picker_biometrics_added_security_message" msgid="1105247657304421299">"Stel ’n rugsteunskermslot vir bykomende sekuriteit"</string>
     <string name="lock_settings_picker_biometric_message" msgid="2609666443527262781">"Kies jou rugsteunmetode vir skermsluiting"</string>
     <string name="lock_settings_picker_admin_restricted_personal_message" msgid="3532653662159888328">"As jy jou skermslot vergeet, kan jou IT-admin dit nie terugstel nie."</string>
     <string name="lock_settings_picker_admin_restricted_personal_message_action" msgid="5956615234246626264">"Stel ’n afsonderlike werkslot"</string>
@@ -1468,8 +1468,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Gebruik ’n donker agtergrond om dit gemakliker te maak om na jou skerm te kyk en batterygebruik op sommige skerms te verminder. As jy ’n skedule het, sal jou tema verander wanneer die skerm af is."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Donkertema volgs tans jou Slaaptydmodus-skedule"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Slaaptydmodus-instellings"</string>
-    <!-- no translation found for dark_ui_modes_footer_summary (22160899184470368) -->
-    <skip />
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Modusse kan ook donkertema aanskakel.}=1{{mode_1} skakel ook donkertema aan.}=2{{mode_1} en {mode_2} skakel ook donkertema aan.}=3{{mode_1}, {mode_2} en {mode_3} skakel ook donkertema aan.}other{{mode_1}, {mode_2} en nog # skakel ook donkertema aan.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Modusinstellings"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Verhelder en verbreed die kleurreeks en -duidelikheid in prente en video’s van hoë dinamiese omvang (HDR). HDR-inhoud sal meer helder voorkom."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Skermuitteltyd"</string>
@@ -1867,23 +1866,25 @@
     <string name="settings_license_activity_unavailable" msgid="9014803774391134570">"Daar was \'n probleem om lisensies te loods."</string>
     <string name="settings_license_activity_loading" msgid="1653151990366578827">"Laai tans…"</string>
     <string name="settings_safetylegal_activity_loading" msgid="1757860124583063395">"Laai tans…"</string>
-    <string name="lockpassword_choose_your_password_header" msgid="2407205113298094824">"Stel \'n wagwoord"</string>
+    <string name="lockpassword_choose_your_password_header" msgid="2407205113298094824">"Stel ’n wagwoord"</string>
     <string name="lockpassword_choose_your_profile_password_header" msgid="7038997227611893312">"Stel \'n werkwagwoord"</string>
     <string name="lockpassword_choose_your_pin_header" msgid="7754265746504679473">"Stel \'n PIN"</string>
     <string name="lockpassword_choose_your_profile_pin_header" msgid="4581749963670819048">"Stel \'n werk-PIN"</string>
-    <string name="lockpassword_choose_your_pattern_header" msgid="5674909390779586252">"Stel \'n patroon"</string>
+    <string name="lockpassword_choose_your_pattern_header" msgid="5674909390779586252">"Stel ’n patroon"</string>
     <string name="lockpassword_choose_your_pattern_description" msgid="6808109256008481046">"Stel ’n patroon om die toestel te ontsluit vir bykomende sekuriteit"</string>
     <string name="lockpassword_choose_your_profile_pattern_header" msgid="3101811498330756641">"Stel \'n werkpatroon"</string>
     <string name="lockpassword_choose_your_password_header_for_fingerprint" msgid="3167261267229254090">"Stel wagwoord vir vingerafdruk"</string>
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"Stel patroon vir vingerafdruk"</string>
     <string name="lockpassword_choose_your_pin_message" msgid="7230665212172041837">"Stel PIN vir sekuriteit"</string>
     <string name="lockpassword_choose_your_pin_header_for_fingerprint" msgid="2783879743691792556">"Stel PIN vir vingerafdruk"</string>
-    <string name="lockpassword_confirm_your_password_header" msgid="6132312814563023990">"Voer jou wagwoord weer in"</string>
+    <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"Voer jou toestelwagwoord in"</string>
+    <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"Voer jou wagwoord weer in"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"Voer jou werkwagwoord weer in"</string>
     <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"Voer jou werkwagwoord in"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="4037701363240138651">"Bevestig jou patroon"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"Voer jou toestelpatroon in"</string>
     <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"Voer jou werkpatroon in"</string>
-    <string name="lockpassword_confirm_your_pin_header" msgid="2241722970567131308">"Voer jou PIN weer in"</string>
+    <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"Voer jou toestel-PIN in"</string>
+    <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"Voer jou PIN weer in"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"Voer jou werk-PIN weer in"</string>
     <string name="lockpassword_confirm_your_work_pin_header" msgid="4229765521391960255">"Voer jou werk-PIN in"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="2100071354970605232">"Wagwoorde verskil"</string>
@@ -1896,18 +1897,18 @@
     <string name="lockpassword_choose_your_password_header_for_face" msgid="622276003801157839">"Stel wagwoord om Gesigslot te gebruik"</string>
     <string name="lockpassword_choose_your_pattern_header_for_face" msgid="7333603579958317102">"Stel patroon om Gesigslot te gebruik"</string>
     <string name="lockpassword_choose_your_pin_header_for_face" msgid="704061826984851309">"Stel PIN om Gesigslot te gebruik"</string>
-    <string name="lockpassword_choose_your_password_header_for_biometrics" msgid="2053366309272487015">"Stel \'n wagwoord om gesig of vingerafdruk te gebruik"</string>
+    <string name="lockpassword_choose_your_password_header_for_biometrics" msgid="2053366309272487015">"Stel ’n wagwoord om gesig of vingerafdruk te gebruik"</string>
     <string name="lockpassword_choose_your_pattern_header_for_biometrics" msgid="4038476475293734905">"Stel \'n patroon om gesig of vingerafdruk te gebruik"</string>
-    <string name="lockpassword_choose_your_pin_header_for_biometrics" msgid="9086039918921009380">"Stel \'n PIN om gesig of vingerafdruk te gebruik"</string>
+    <string name="lockpassword_choose_your_pin_header_for_biometrics" msgid="9086039918921009380">"Stel ’n PIN om gesig of vingerafdruk te gebruik"</string>
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Jou wagwoord vergeet?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Jou patroon vergeet?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Jou PIN vergeet?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="7401165571170203743">"Teken jou patroon om voort te gaan"</string>
-    <string name="lockpassword_confirm_your_pin_generic" msgid="8990266101852808091">"Voer jou PIN in om voort te gaan"</string>
-    <string name="lockpassword_confirm_your_password_generic" msgid="8823867445451497224">"Voer jou wagwoord in om voort te gaan"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="7003851856761939690">"Teken jou werkpatroon om voort te gaan"</string>
-    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6524208128570235127">"Voer jou werk-PIN in om voort te gaan"</string>
-    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5918738487760814147">"Voer jou werkwagwoord in om voort te gaan"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Jou patroon verifieer dat dit jy is"</string>
+    <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"Jou PIN verifieer dat dit jy is"</string>
+    <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Jou wagwoord verifieer dat dit jy is"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Jou werkpatroon verifieer dat dit jy is"</string>
+    <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"Jou werk-PIN verifieer dat dit jy is"</string>
+    <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Jou werkwagwoord verifieer dat dit jy is"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Gebruik jou toestelpatroon vir bykomende sekuriteit"</string>
     <string name="lockpassword_strong_auth_required_device_pin" msgid="9163822166411129815">"Voer jou toestel-PIN in vir bykomende sekuriteit"</string>
     <string name="lockpassword_strong_auth_required_device_password" msgid="8310047427464299337">"Voer jou toestelwagwoord in vir bykomende sekuriteit"</string>
@@ -2184,6 +2185,10 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Rollees"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Beheerde rollees"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Rolleesspoed"</string>
+    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
+    <skip />
+    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
+    <skip />
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Maak wyser vinniger"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Maak wyser stadiger"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Ruil primêre muisknoppie"</string>
@@ -3516,7 +3521,7 @@
     <string name="access_point_names" msgid="5768430498022188057">"Toegangspuntname"</string>
     <string name="enhanced_4g_lte_mode_title" msgid="6624700245232361149">"VoLTE"</string>
     <string name="enhanced_4g_lte_mode_title_advanced_calling" msgid="7066009898031465265">"Gevorderde oproepe"</string>
-    <string name="enhanced_4g_lte_mode_title_4g_calling" msgid="7445853566718786195">"4G-Oproepe"</string>
+    <string name="enhanced_4g_lte_mode_title_4g_calling" msgid="7445853566718786195">"4G-oproepe"</string>
     <string name="enhanced_4g_lte_mode_summary" msgid="1067066329756036427">"Gebruik LTE-dienste om stemoproepe te verbeter (aanbeveel)"</string>
     <string name="enhanced_4g_lte_mode_summary_4g_calling" msgid="2575004054914178405">"Gebruik 4G-dienste om stemoproepe te verbeter (aanbeveel)"</string>
     <string name="nr_advanced_calling_title" msgid="6106286679535355939">"Vo5G"</string>
@@ -3755,7 +3760,12 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Stelselklanke en -vibrasies"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Werkprofielklank"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Intydse Onderskrifte"</string>
-    <string name="live_caption_summary" msgid="2898451867595161809">"Verskaf outomaties onderskrifte vir media"</string>
+    <!-- no translation found for live_caption_summary (7290150167089515457) -->
+    <skip />
+    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
+    <skip />
+    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
+    <skip />
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Bedrade oorfone"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Oudio vanaf versoenbare media word meer meesleurend"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Af"</string>
@@ -3901,6 +3911,8 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Topstories, hoofartikels en meer"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Opduime, plasings en meer"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Nuusbriewe, aanbevole media en meer"</string>
+    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
+    <skip />
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Bestuur met KI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Kennisgewingopsommings"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Kry kitsopsommings van langer boodskappe"</string>
@@ -3912,6 +3924,8 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Moenie hierdie apps insluit nie"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Kennisgewingopsommings"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Kry kitsopsommings van langer boodskappe"</string>
+    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
+    <skip />
     <string name="live_notifications" msgid="4650406646292963831">"Regstreekse kennisgewings"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Regstreekse opdaterings"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Wys voortdurende, tydsensitiewe kennisgewings op die statusbalk en sluitskerm"</string>
@@ -4394,6 +4408,14 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Gaan apps na wat die manier waarop hulle jou liggingdata kan deel, verander het"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Agente"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Agente wat toegang tot inligting kan kry of handelinge in apps kan uitvoer"</string>
+    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
+    <skip />
+    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
+    <skip />
+    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
+    <skip />
     <string name="tap_to_wake" msgid="3313433536261440068">"Tik om wakker te maak"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Dubbeltik enige plek op die skerm om die toestel wakker te maak"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Oopmaak van skakels"</string>
@@ -4658,8 +4680,7 @@
     <string name="data_saver_unrestricted_summary" msgid="559673440849071149">"{count,plural, =1{1 app word toegelaat om onbeperkte mobiele data te gebruik wanneer Databespaarder aan is}other{# apps word toegelaat om onbeperkte mobiele data te gebruik wanneer Databespaarder aan is}}"</string>
     <string name="data_usage_title" msgid="4039024073687469094">"Primêre data"</string>
     <string name="data_usage_wifi_title" msgid="1060495519280456926">"Wi‑Fi-data"</string>
-    <!-- no translation found for data_used_formatted (6825854220655476713) -->
-    <skip />
+    <string name="data_used_formatted" msgid="6825854220655476713">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="data_overusage" msgid="3680477320458707259">"<xliff:g id="ID_1">^1</xliff:g> oor"</string>
     <string name="data_remaining" msgid="6316251496381922837">"<xliff:g id="ID_1">^1</xliff:g> oor"</string>
     <string name="data_usage_chart_brief_content_description" msgid="5548074070258881530">"Grafiek wat datagebruik tussen <xliff:g id="START_DATE">%1$s</xliff:g> en <xliff:g id="END_DATE">%2$s</xliff:g> wys."</string>
@@ -5490,7 +5511,7 @@
     <string name="overlay_settings_title" msgid="1032863083496396365">"Laat skermoorleggers op Instellings toe"</string>
     <string name="overlay_settings_summary" msgid="2745336273786148166">"Laat apps wat oor ander apps kan wys toe om Instellings-skerms te oorlê"</string>
     <string name="allow_mock_modem" msgid="3832264806530479214">"Laat skynmodem toe"</string>
-    <string name="allow_mock_modem_summary" msgid="9097416612748005374">"Laat hierdie toestel toe om skymodemdiens vir instrumenttoetse te gebruik. Moenie dit tydens normale gebruik van die foon aktiveer nie"</string>
+    <string name="allow_mock_modem_summary" msgid="9097416612748005374">"Laat hierdie toestel toe om skynmodemdiens vir instrumenttoetse te gebruik. Moenie dit tydens normale gebruik van die foon aktiveer nie"</string>
     <string name="disable_screen_share_protections_for_apps_and_notifications" msgid="4987116103699222633">"Deaktiveer skermdelingbeskerming"</string>
     <string name="disable_screen_share_protections_for_apps_and_notifications_summary" msgid="5379583403909210858">"Skakel stelselbeskermings vir sensitiewe appinhoud vir komende skermdeelsessies af"</string>
     <string name="media_controls_title" msgid="403271085636252597">"Media"</string>
@@ -5593,7 +5614,7 @@
     <string name="smart_forwarding_missing_mdn_text" msgid="2907314684242542226">"Foonnommer ontbreek."</string>
     <string name="smart_forwarding_missing_alert_dialog_text" msgid="7870419247987316112">"OK"</string>
     <string name="enable_2g_title" msgid="5657132300321750181">"2G-netwerkbeskerming"</string>
-    <string name="enable_2g_summary" msgid="6194875539424151678">"/vermy 2G-netwerke wat minder veilig is. Dit kan konnektiwiteit in sommige plekke beperk. 2G word altyd toegelaat vir noodoproepe, maar oproepe sal dalk nie verbind as jy internasionaal swerf nie."</string>
+    <string name="enable_2g_summary" msgid="6194875539424151678">"Vermy 2G-netwerke wat minder veilig is. Dit kan konnektiwiteit in sommige plekke beperk. 2G word altyd toegelaat vir noodoproepe, maar oproepe sal dalk nie verbind as jy internasionaal swerf nie."</string>
     <string name="enable_2g_summary_disabled_carrier" msgid="8141118453219482762">"<xliff:g id="CARRIER_NAME_2G">%1$s</xliff:g> vereis 2G om beskikbaar te wees"</string>
     <string name="require_cellular_encryption_title" msgid="6087085031703089235">"Laat slegs geënkripteerde netwerke toe"</string>
     <string name="require_cellular_encryption_summary" msgid="6090569065420631457">"Dit is veiliger, maar kan jou selnetwerkverbinding in sekere liggings beperk. Noodoproepe word altyd toegelaat."</string>
@@ -5951,4 +5972,8 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Verhoed ander om apps oop te maak wat Vingerafdruk of Gesigslot vereis. In die geval van meer mobiliteit, is jou veiligheid verseker as jou horlosie gekoppel is."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Gebruik Identiteitkontrole en jou horlosie op meer apps"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Verseker jou identiteitbeskerming op alle apps wat Vingerafdruk en Gesigslot in vertroude plekke soos jou huis of kantoor steun. Gebruik Identiteitkontrole met jou horlosie om jou beskerming verder as net in jou vertroude plekke uit te brei."</string>
+    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <skip />
+    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
 </resources>
