@@ -1663,5 +1663,6 @@
         <item>Recent apps</item>
         <item>Notifications</item>
         <item>Quick settings</item>
+        <item>Lockscreen</item>
     </string-array>
 </resources>

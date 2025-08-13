@@ -2226,7 +2226,7 @@
     <!-- External Display resolution settings. The title of the screen. [CHAR LIMIT=40] -->
     <string name="external_display_resolution_settings_title">Display resolution</string>
     <!-- External Display Connection Preference. The preferred method of connection for an external display. [CHAR LIMIT=40] -->
-    <string name="external_display_connection_preference">Default Connection Behaviour</string>
+    <string name="external_display_connection_preference">Default connection behavior</string>
     <!-- External Display settings. Always start in desktop mode when display is connected. -->
     <string name="external_display_connection_preference_desktop">Use as separate display</string>
     <!-- External Display settings. Always start in mirroring mode when display is connected. -->
@@ -11938,6 +11938,16 @@
     <!-- Title for the screen to show all the 2- and 3-button navigation settings. [CHAR LIMIT=80] -->
     <string name="button_navigation_settings_activity_title">Button navigation</string>
 
+    <!-- Title text for changing the order of the navbar buttons -->
+    <string name="button_navigation_settings_order_title">Button order</string>
+
+    <!-- Text describing the back button on the navigation bar -->
+    <string name="navbar_back_button">Back</string>
+    <!-- Text describing the home button on the navigation bar -->
+    <string name="navbar_home_button">Home</string>
+    <!-- Text describing the recent button on the navigation bar -->
+    <string name="navbar_recent_button">Recents</string>
+
     <!-- Keywords for the gesture navigation settings. [CHAR LIMIT=NONE] -->
     <string name="keywords_gesture_navigation_settings">gesture navigation, back sensitivity, back gesture</string>
 
@@ -14772,7 +14782,19 @@
 
     <!-- Title for Other settings category in Safety Center [CHAR LIMIT=60] -->
     <string name="more_security_privacy_category_title">Other settings</string>
-    <!-- Summary for more_security_privacy_summary category in Safety Center [CHAR LIMIT=NONE] -->
+    <!-- Summary for more_security_privacy_summary subpage in Safety Center [CHAR LIMIT=NONE] -->
     <string name="more_security_privacy_summary">Autofill, notifications, and more</string>
+    <!-- Title for Privacy controls subpage in Safety Center [CHAR LIMIT=60] -->
+    <string name="privacy_sources_title" >Privacy controls</string>
+    <!-- Summary for privacy_sources_summary subpage in Safety Center [CHAR LIMIT=NONE] -->
+    <string name="privacy_sources_summary">Permissions, controls</string>
+    <!-- The title of the subpage for safety settings relating to screen lock and biometrics [CHAR LIMIT=60] -->
+    <string name="device_unlock_subpage_title">Device unlock</string>
+    <!-- The default title of the setting for managing the screen lock on the device [CHAR LIMIT=60] -->
+    <string name="lock_screen_title">Screen lock</string>
+    <!-- Title that leads to location settings in Safety Center [CHAR LIMIT=60] -->
+    <string name="location_settings">Location access</string>
+    <!-- Subtitle for the link to location in Safety Center [CHAR LIMIT=NONE] -->
+    <string name="location_settings_subtitle">See apps and services that have access to location</string>
 
 </resources>
