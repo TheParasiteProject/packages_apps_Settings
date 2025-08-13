@@ -16,6 +16,13 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <!-- App permissions -->
+    <Preference
+        android:key="privacy_manage_perms"
+        android:title="@string/app_permissions"
+        android:summary="@string/runtime_permissions_summary_control_app_access"
+        settings:controller="com.android.settings.privacy.ManagePermissionsPreferenceController"/>
+
     <PreferenceCategory
         android:key="privacy_controls_page"
         android:title="@string/privacy_controls_title">
@@ -39,5 +46,20 @@
         android:title="@string/show_clip_access_notification"
         android:summary="@string/show_clip_access_notification_summary"
         settings:controller="com.android.settings.privacy.ShowClipAccessNotificationPreferenceController"/>
+
+    <!-- Show passwords -->
+    <SwitchPreferenceCompat
+        android:key="show_password"
+        android:title="@string/show_password"
+        android:summary="@string/show_password_summary"
+        settings:controller="com.android.settings.security.ShowPasswordPreferenceController"/>
+
+    <!-- Location settings -->
+    <Preference
+        android:key="privacy_location_access"
+        android:title="@string/location_settings"
+        android:summary="@string/location_settings_subtitle"
+        android:fragment="com.android.settings.location.LocationSettings">
+    </Preference>
     </PreferenceCategory>
 </PreferenceScreen>
