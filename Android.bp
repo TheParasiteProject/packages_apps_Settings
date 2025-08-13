@@ -59,6 +59,7 @@ android_library {
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
     ],
+    javac_shard_size: 50,
     use_resource_processor: true,
     resource_dirs: [
         "res",
