@@ -39,6 +39,7 @@ import com.android.settings.fuelgauge.BatterySettingsFeatureProvider
 import com.android.settings.fuelgauge.BatteryStatusFeatureProvider
 import com.android.settings.fuelgauge.PowerUsageFeatureProvider
 import com.android.settings.homepage.contextualcards.ContextualCardFeatureProvider
+import com.android.settings.i18n.RegionalCustomizationFeatureProvider
 import com.android.settings.inputmethod.KeyboardSettingsFeatureProvider
 import com.android.settings.localepicker.LocaleFeatureProvider
 import com.android.settings.notification.syncacrossdevices.SyncAcrossDevicesFeatureProvider
@@ -187,6 +188,11 @@ abstract class FeatureFactory {
      * Retrieves implementation for Onboarding related feature.
      */
     open val onboardingFeatureProvider: OnboardingFeatureProvider? = null
+
+    /**
+     * Retrieves implementation for Regional Customization related feature.
+     */
+    open val regionalCustomizationFeatureProvider: RegionalCustomizationFeatureProvider? = null
 
     /**
      * Gets implementation for Fast Pair device updater provider.
