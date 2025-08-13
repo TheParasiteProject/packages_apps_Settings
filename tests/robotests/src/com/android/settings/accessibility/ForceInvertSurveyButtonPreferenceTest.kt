@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.screenmagnification.ui
+package com.android.settings.accessibility
 
 import android.app.Application
+import android.app.UiModeManager
 import android.app.settings.SettingsEnums
 import android.content.ComponentName
 import android.content.Context
@@ -24,6 +25,7 @@ import android.content.Intent
 import android.platform.test.annotations.DisableFlags
 import android.platform.test.annotations.EnableFlags
 import android.platform.test.flag.junit.SetFlagsRule
+import androidx.core.content.getSystemService
 import androidx.core.util.Consumer
 import androidx.fragment.app.testing.EmptyFragmentActivity
 import androidx.lifecycle.testing.TestLifecycleOwner
@@ -38,7 +40,6 @@ import com.android.internal.accessibility.common.NotificationConstants.SOURCE_ST
 import com.android.server.accessibility.Flags
 import com.android.settings.R
 import com.android.settings.Utils.SETTINGS_PACKAGE_NAME
-import com.android.settings.accessibility.screenmagnification.ui.MagnificationPreferenceFragment.Companion.MAGNIFICATION_SURVEY_KEY
 import com.android.settings.accessibility.shared.ui.BaseSurveyButtonPreference.Companion.PREFERENCE_KEY
 import com.android.settings.overlay.SurveyFeatureProvider
 import com.android.settings.testutils.FakeFeatureFactory
@@ -60,17 +61,19 @@ import org.mockito.Mockito.verify
 import org.mockito.kotlin.doAnswer
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.never
+import org.mockito.kotlin.spy
 import org.robolectric.RobolectricTestParameterInjector
 import org.robolectric.Shadows
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.shadows.ShadowPackageManager
 
 @RunWith(RobolectricTestParameterInjector::class)
-class MagnificationSurveyButtonPreferenceTest {
+class ForceInvertSurveyButtonPreferenceTest {
     @get:Rule val setFlagsRule = SetFlagsRule()
     private lateinit var context: Context
     private lateinit var shadowPackageManager: ShadowPackageManager
     private lateinit var surveyFeatureProvider: SurveyFeatureProvider
+    private lateinit var uiModeManager: UiModeManager
     private lateinit var preferenceManager: PreferenceManager
     private lateinit var preferenceScreen: PreferenceScreen
     private var activityScenario: ActivityScenario<EmptyFragmentActivity>? = null
@@ -85,6 +88,7 @@ class MagnificationSurveyButtonPreferenceTest {
         preferenceScreen = preferenceManager.createPreferenceScreen(context)
         surveyFeatureProvider =
             FakeFeatureFactory.setupForTest().getSurveyFeatureProvider(context)!!
+        uiModeManager = spy(context.getSystemService<UiModeManager>())!!
     }
 
     @After
@@ -127,22 +131,32 @@ class MagnificationSurveyButtonPreferenceTest {
     @TestParameters(
         value =
             [
-                "{hasShortcuts: true" +
+                "{forceInvertState: " +
+                    UiModeManager.FORCE_INVERT_TYPE_DARK +
                     ", surveyAvailability: true" +
                     ", inSetupWizard: false" +
                     ", expectedValue: true" +
                     "}",
-                "{hasShortcuts: false" +
+                "{forceInvertState: " +
+                    UiModeManager.FORCE_INVERT_TYPE_LIGHT +
                     ", surveyAvailability: true" +
                     ", inSetupWizard: false" +
                     ", expectedValue: false" +
                     "}",
-                "{hasShortcuts: true" +
+                "{forceInvertState: " +
+                    UiModeManager.FORCE_INVERT_TYPE_OFF +
+                    ", surveyAvailability: true" +
+                    ", inSetupWizard: false" +
+                    ", expectedValue: false" +
+                    "}",
+                "{forceInvertState: " +
+                    UiModeManager.FORCE_INVERT_TYPE_DARK +
                     ", surveyAvailability: false" +
                     ", inSetupWizard: false" +
                     ", expectedValue: false" +
                     "}",
-                "{hasShortcuts: true" +
+                "{forceInvertState: " +
+                    UiModeManager.FORCE_INVERT_TYPE_DARK +
                     ", surveyAvailability: true" +
                     ", inSetupWizard: true" +
                     ", expectedValue: false" +
@@ -150,15 +164,16 @@ class MagnificationSurveyButtonPreferenceTest {
             ]
     )
     fun isAvailable_flagOn_returnExpectedValue(
-        hasShortcuts: Boolean,
+        forceInvertState: Int,
         surveyAvailability: Boolean,
         inSetupWizard: Boolean,
         expectedValue: Boolean,
     ) {
-        val newContext = createContext(inSetupWizard = inSetupWizard)
+        val newContext = createContext(inSetupWizard)
+        setupForceInvertState(forceInvertState)
         setupSurveyAvailability(surveyAvailability)
 
-        val preference = createPreference(newContext, hasShortcuts)
+        val preference = createPreference(newContext)
 
         assertThat(preference.isAvailable(newContext)).isEqualTo(expectedValue)
     }
@@ -167,9 +182,10 @@ class MagnificationSurveyButtonPreferenceTest {
     @DisableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     fun isAvailable_flagOff_returnFalse() {
         val newContext = createContext(inSetupWizard = false)
+        setupForceInvertState(UiModeManager.FORCE_INVERT_TYPE_DARK)
         setupSurveyAvailability(available = true)
 
-        val preference = createPreference(newContext, hasShortcuts = true)
+        val preference = createPreference(newContext)
 
         assertThat(preference.isAvailable(newContext)).isFalse()
     }
@@ -178,21 +194,23 @@ class MagnificationSurveyButtonPreferenceTest {
     @EnableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     fun buttonClick_callsSurveyMethodsAndHidesButton() {
         val newContext = createContext(inSetupWizard = false)
+        setupForceInvertState(UiModeManager.FORCE_INVERT_TYPE_DARK)
         setupSurveyAvailability(available = true)
-        createPreference(newContext, hasShortcuts = true)
+        createPreference(newContext)
         Shadows.shadowOf(context as Application?).clearBroadcastIntents()
 
         buttonPreference!!.button.performClick()
 
         assertThat(buttonPreference!!.isVisible).isFalse()
-        verify(surveyFeatureProvider).sendActivityIfAvailable(MAGNIFICATION_SURVEY_KEY)
+        verify(surveyFeatureProvider)
+            .sendActivityIfAvailable(ForceInvertSurveyButtonPreference.SURVEY_KEY)
         val intents = Shadows.shadowOf(context as Application?).getBroadcastIntents()
         assertThat(intents.size).isEqualTo(1)
         val intent: Intent = intents.get(0)
         assertThat(intent.getAction()).isEqualTo(ACTION_CANCEL_SURVEY_NOTIFICATION)
         assertThat(intent.getPackage()).isEqualTo(SETTINGS_PACKAGE_NAME)
         assertThat(intent.getIntExtra(EXTRA_PAGE_ID, SettingsEnums.PAGE_UNKNOWN))
-            .isEqualTo(SettingsEnums.ACCESSIBILITY_TOGGLE_SCREEN_MAGNIFICATION)
+            .isEqualTo(SettingsEnums.DARK_UI_SETTINGS)
     }
 
     @Test
@@ -202,7 +220,8 @@ class MagnificationSurveyButtonPreferenceTest {
 
         createPreference(newContext)
 
-        verify(surveyFeatureProvider).sendActivityIfAvailable(MAGNIFICATION_SURVEY_KEY)
+        verify(surveyFeatureProvider)
+            .sendActivityIfAvailable(ForceInvertSurveyButtonPreference.Companion.SURVEY_KEY)
     }
 
     @Test
@@ -212,7 +231,8 @@ class MagnificationSurveyButtonPreferenceTest {
 
         createPreference(newContext)
 
-        verify(surveyFeatureProvider, never()).sendActivityIfAvailable(MAGNIFICATION_SURVEY_KEY)
+        verify(surveyFeatureProvider, never())
+            .sendActivityIfAvailable(ForceInvertSurveyButtonPreference.Companion.SURVEY_KEY)
     }
 
     private fun setupSurveyAvailability(available: Boolean) {
@@ -225,14 +245,14 @@ class MagnificationSurveyButtonPreferenceTest {
             .checkSurveyAvailable(any(), anyString(), any())
     }
 
+    private fun setupForceInvertState(forceInvertType: Int) {
+        doAnswer { invocation -> forceInvertType }.`when`(uiModeManager).getForceInvertState()
+    }
+
     private fun createPreference(
-        context: Context = this.context,
-        hasShortcuts: Boolean = false,
-    ): MagnificationSurveyButtonPreference {
-        val preference =
-            MagnificationSurveyButtonPreference(
-                SettingsEnums.ACCESSIBILITY_TOGGLE_SCREEN_MAGNIFICATION
-            )
+        context: Context = this.context
+    ): ForceInvertSurveyButtonPreference {
+        val preference = ForceInvertSurveyButtonPreference(SettingsEnums.DARK_UI_SETTINGS)
         buttonPreference =
             preference.createAndBindWidget<ButtonPreference>(context, preferenceScreen)
         preferenceScreen.addPreference(buttonPreference!!)
@@ -247,7 +267,7 @@ class MagnificationSurveyButtonPreferenceTest {
                 }
         }
         preference.onCreate(preferenceLifecycleContext)
-        preference.dataStore?.setBoolean(PREFERENCE_KEY, hasShortcuts)
+        preference.uiModeManager = uiModeManager
         buttonPreference!!.inflateViewHolder()
         return preference
     }

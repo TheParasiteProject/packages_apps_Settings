@@ -14,55 +14,59 @@
  * limitations under the License.
  */
 
-package com.android.settings.accessibility.screenmagnification.ui
+package com.android.settings.accessibility
 
+import android.app.UiModeManager
+import android.app.UiModeManager.ForceInvertStateChangeListener
 import android.content.Context
+import android.view.accessibility.Flags.forceInvertColor
 import androidx.annotation.VisibleForTesting
-import com.android.internal.accessibility.AccessibilityShortcutController
-import com.android.settings.accessibility.shared.data.AccessibilityShortcutDataStore
+import androidx.core.content.getSystemService
 import com.android.settings.accessibility.shared.ui.BaseSurveyButtonPreference
 import com.android.settingslib.core.instrumentation.Instrumentable.METRICS_CATEGORY_UNKNOWN
-import com.android.settingslib.datastore.HandlerExecutor
-import com.android.settingslib.datastore.KeyedObserver
 import com.android.settingslib.metadata.PreferenceLifecycleContext
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.asExecutor
 
-class MagnificationSurveyButtonPreference(metricsCategory: Int = METRICS_CATEGORY_UNKNOWN) :
+class ForceInvertSurveyButtonPreference(metricsCategory: Int = METRICS_CATEGORY_UNKNOWN) :
     BaseSurveyButtonPreference(metricsCategory) {
 
-    private var settingsKeyedObserver: KeyedObserver<String>? = null
-    @VisibleForTesting var dataStore: AccessibilityShortcutDataStore? = null
+    private var forceInvertStateChangeListener: ForceInvertStateChangeListener? = null
+    @VisibleForTesting var uiModeManager: UiModeManager? = null
 
     override val surveyKey: String
         get() = SURVEY_KEY
 
     override fun onCreate(context: PreferenceLifecycleContext) {
         super.onCreate(context)
-        dataStore =
-            AccessibilityShortcutDataStore(
-                context.baseContext,
-                AccessibilityShortcutController.MAGNIFICATION_COMPONENT_NAME,
-            )
+        uiModeManager = context.getSystemService()
     }
 
     override fun onStart(context: PreferenceLifecycleContext) {
-        settingsKeyedObserver = KeyedObserver { _, _ ->
-            context.notifyPreferenceChange(key)
-            scheduleSurvey(context)
+        if (forceInvertColor()) {
+            forceInvertStateChangeListener = ForceInvertStateChangeListener { newState ->
+                context.notifyPreferenceChange(key)
+                scheduleSurvey(context)
+            }
+            uiModeManager?.let { uiManager ->
+                uiManager.addForceInvertStateChangeListener(
+                    Dispatchers.Default.asExecutor(),
+                    forceInvertStateChangeListener!!,
+                )
+            }
         }
-        dataStore?.addObserver(key, settingsKeyedObserver!!, HandlerExecutor.main)
     }
 
     override fun onStop(context: PreferenceLifecycleContext) {
-        settingsKeyedObserver?.let {
-            dataStore?.removeObserver(key, it)
-            settingsKeyedObserver = null
+        forceInvertStateChangeListener?.let {
+            uiModeManager?.removeForceInvertStateChangeListener(it)
         }
     }
 
     override fun isSurveyConditionMet(context: Context): Boolean =
-        dataStore?.getBoolean(key) == true
+        uiModeManager?.getForceInvertState() == UiModeManager.FORCE_INVERT_TYPE_DARK
 
     companion object {
-        const val SURVEY_KEY = "A11yMagnificationUser"
+        const val SURVEY_KEY = "A11yForceInvertUser"
     }
 }
