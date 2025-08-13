@@ -308,7 +308,7 @@
     <string name="airplane_mode" msgid="3196085857882526817">"Modo avião"</string>
     <string name="wireless_networks_settings_title" msgid="8557542379234105369">"Redes sem fio e outras"</string>
     <string name="roaming" msgid="3055365654530847985">"Roaming"</string>
-    <string name="roaming_enable" msgid="7845716016861535340">"Conectar aos serviços de dados quando estiver em roaming"</string>
+    <string name="roaming_enable" msgid="7845716016861535340">"Conecta-se aos serviços de dados quando está em roaming"</string>
     <string name="roaming_disable" msgid="729512894708689604">"Conectar aos serviços de dados quando estiver em roaming"</string>
     <string name="roaming_warning" msgid="7703647889040229013">"Sujeito a cobrança por uso de roaming."</string>
     <string name="date_time_auto" msgid="1759599045100040686">"Data e hora automáticas"</string>
@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"Mova o mouse entre as telas"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"Usar tela externa"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"Resolução da tela"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"Comportamento de conexão padrão"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"Usar como tela separada"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"Espelhar tela integrada"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"Mostrar caixa de diálogo de conexão"</string>
@@ -1044,11 +1045,11 @@
     <string name="wifi_ask_enable" msgid="6860056048266810769">"<xliff:g id="REQUESTER">%s</xliff:g> quer ativar o Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="1663208096020309639">"<xliff:g id="REQUESTER">%s</xliff:g> quer desativar o Wi-Fi"</string>
     <string name="art_verifier_for_debuggable_title" msgid="1926445785190030479">"Verificar bytecode de apps depuráveis"</string>
-    <string name="art_verifier_for_debuggable_summary" msgid="4802875841862652879">"Permitir que o ART verifique o bytecode de apps depuráveis"</string>
+    <string name="art_verifier_for_debuggable_summary" msgid="4802875841862652879">"Permita que o ART verifique o bytecode de apps depuráveis"</string>
     <string name="show_refresh_rate" msgid="5742688821872354973">"Mostrar taxa de atualização"</string>
-    <string name="show_refresh_rate_summary" msgid="3558118122374609663">"Mostrar a taxa de atualização de tela atual"</string>
+    <string name="show_refresh_rate_summary" msgid="3558118122374609663">"Mostra a taxa de atualização de tela atual"</string>
     <string name="show_hdr_sdr_ratio" msgid="4188007289024955585">"Mostrar a proporção HDR/SDR"</string>
-    <string name="show_hdr_sdr_ratio_summary" msgid="986292785096013733">"Mostrar a proporção HDR/SDR atual"</string>
+    <string name="show_hdr_sdr_ratio_summary" msgid="986292785096013733">"Mostra a proporção HDR/SDR atual"</string>
     <string name="nfc_quick_toggle_title" msgid="3607620705230351666">"NFC"</string>
     <string name="nfc_secure_settings_title" msgid="4906958426927741485">"Exigir desbloqueio de dispositivo para usar a NFC"</string>
     <string name="android_beam_settings_title" msgid="2797963824490671295">"Android Beam"</string>
@@ -1405,7 +1406,7 @@
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"Usar apps com a tela dobrada"</string>
     <string name="disable_game_default_frame_rate_title" msgid="3712908601744143753">"Desativar o frame rate padrão para jogos"</string>
-    <string name="disable_game_default_frame_rate_summary" msgid="4436762704707434225">"Desativar o limite máximo de frame rate para jogos em <xliff:g id="FRAME_RATE">%1$d</xliff:g> Hz."</string>
+    <string name="disable_game_default_frame_rate_summary" msgid="4436762704707434225">"Desative o limite máximo de frame rate para jogos em <xliff:g id="FRAME_RATE">%1$d</xliff:g> Hz."</string>
     <string name="peak_refresh_rate_title" msgid="2056355754210341011">"Smooth Display"</string>
     <string name="peak_refresh_rate_summary" msgid="3212309985294885790">"Aumenta automaticamente a taxa de atualização para <xliff:g id="ID_1">%1$d</xliff:g> Hz para alguns conteúdos. Usa mais bateria."</string>
     <string name="force_high_refresh_rate_toggle" msgid="3325789621928312050">"Forçar taxa de atualização máxima"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Rolagem"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Rolagem controlada"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Velocidade da rolagem"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"Acelerar rolagem"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"Desacelerar rolagem"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Deixar cursor mais rápido"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Deixar cursor mais lento"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Trocar botão principal do mouse"</string>
@@ -2477,7 +2476,7 @@
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"Ampliar com atalho e toque triplo"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"Sobre <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Tamanho de exibição e texto"</string>
-    <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Tamanho da fonte, tamanho de exibição, Negrito, contorno do texto"</string>
+    <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Tamanho da fonte, tamanho de exibição, negrito, contorno do texto"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Mudar a exibição do texto"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Assunto: Balões de ar quente"</string>
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"De: Bruno"</string>
@@ -3747,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Sons e vibrações do sistema"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Som do perfil de trabalho"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Legenda Instantânea"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"Ver legendas em ligações, vídeos e outras mídias"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"Ativado / Ver legendas em ligações, vídeos e outras mídias"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"Desativado / Ver legendas em ligações, vídeos e outras mídias"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Fones de ouvido com fio"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"O áudio de dispositivos de mídia compatíveis fica mais imersivo"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Desativado"</string>
@@ -3898,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Principais notícias, editoriais e muito mais"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Marcações \"gostei\", posts e muito mais"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Newsletters, mídia recomendada e muito mais"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"Todos os apps estão usando o organizador de notificações"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Gerenciar com IA"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Resumos de notificações"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Receba resumos rápidos de mensagens mais longas"</string>
@@ -3911,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Não incluir estes apps"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Resumos de notificações"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Receba resumos rápidos de mensagens mais longas"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"Todos os apps aplicáveis estão usando os resumos de notificações"</string>
     <string name="live_notifications" msgid="4650406646292963831">"Notificações ao vivo"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Atualizações ao vivo"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Mostrar notificações em andamento e com detecção de hora na barra de status e na tela de bloqueio"</string>
@@ -4635,7 +4629,7 @@
     <string name="color_temperature_toast" msgid="7611532183532407342">"Para aplicar a alteração de cor, desative a tela"</string>
     <string name="camera_laser_sensor_switch" msgid="7097842750947187671">"Sensor a laser da câmera"</string>
     <string name="ota_disable_automatic_update" msgid="1953894421412420231">"Atualizações automáticas do sistema"</string>
-    <string name="ota_disable_automatic_update_summary" msgid="7803279951533276841">"Aplicar atualizações quando o dispositivo for reiniciado"</string>
+    <string name="ota_disable_automatic_update_summary" msgid="7803279951533276841">"Aplica atualizações quando o dispositivo é reiniciado"</string>
     <string name="usage" msgid="287782903846013936">"Utilização"</string>
     <string name="cellular_data_usage" msgid="5874156338825285334">"Uso de dados móveis"</string>
     <string name="app_cellular_data_usage" msgid="7603292978956033926">"Uso de dados do app"</string>
@@ -4839,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"Navegação por gestos"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"Veja uma demonstração"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"Navegação com botões"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"navegação por gestos, sensibilidade para voltar, gestos de retorno"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"navegação, botão home"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"Modo para uma mão"</string>
@@ -5049,7 +5051,7 @@
     <string name="angle_enabled_app_not_set" msgid="4472572224881726067">"Nenhum conjunto de aplicativos ativados para ANGLE"</string>
     <string name="angle_enabled_app_set" msgid="7811829383833353021">"Aplicativo ativado para ANGLE: <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="graphics_driver_dashboard_title" msgid="5661084817492587796">"Preferências do driver de gráficos"</string>
-    <string name="graphics_driver_dashboard_summary" msgid="6348759885315793654">"Modificar configurações do driver de gráficos"</string>
+    <string name="graphics_driver_dashboard_summary" msgid="6348759885315793654">"Modifique configurações do driver de gráficos"</string>
     <string name="graphics_driver_footer_text" msgid="5123754522284046790">"Quando houver vários drivers gráficos, você poderá usar o driver gráfico atualizado dos apps instalados no dispositivo."</string>
     <string name="graphics_driver_all_apps_preference_title" msgid="1343065382898127360">"Ativar para todos os apps"</string>
     <string name="graphics_driver_app_preference_title" msgid="3133255818657706857">"Selecionar driver gráfico"</string>
@@ -5495,7 +5497,7 @@
     <string name="blob_never_expires_text" msgid="7293376386620106623">"Nunca expira."</string>
     <string name="accessor_never_expires_text" msgid="4647624492147788340">"O lease nunca expira."</string>
     <string name="overlay_settings_title" msgid="1032863083496396365">"Permitir sobreposições de tela no app Configurações"</string>
-    <string name="overlay_settings_summary" msgid="2745336273786148166">"Permitir que apps que podem ser sobrepostos a outros sejam abertos sobre telas de configuração"</string>
+    <string name="overlay_settings_summary" msgid="2745336273786148166">"Permita que apps que podem ser sobrepostos a outros sejam abertos sobre telas de configuração"</string>
     <string name="allow_mock_modem" msgid="3832264806530479214">"Permitir Mock Modem"</string>
     <string name="allow_mock_modem_summary" msgid="9097416612748005374">"Permita que este dispositivo execute o serviço Mock Modem para testes de instrumentação. Não ative esse recurso durante o uso normal do smartphone."</string>
     <string name="disable_screen_share_protections_for_apps_and_notifications" msgid="4987116103699222633">"Desativar as proteções do compartilhamento de tela"</string>
@@ -5958,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"Lëvize miun midis ekraneve"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"Përdor ekranin e jashtëm"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"Rezolucioni i ekranit"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"Sjellja e parazgjedhur e lidhjes"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"Përdor si ekran të veçantë"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"Pasqyro ekranin e integruar"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"Shfaq dialogun e lidhjes"</string>
@@ -2375,10 +2376,8 @@
     <string name="audio_category_title" msgid="5283853679967605826">"Audioja"</string>
     <string name="general_category_title" msgid="6298579528716834157">"Të përgjithshme"</string>
     <string name="display_category_title" msgid="6638191682294461408">"Ekrani"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
-    <!-- no translation found for accessibility_color_and_motion_subtext (1150281881647191503) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"Ngjyra dhe lëvizja"</string>
+    <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"Tema e errët, korrigjimi i ngjyrës, hiq animacionet"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"Qasshmëria për kursorin dhe bllokun me prekje"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"Madhësia, ngjyra, lloji"</string>
     <string name="accessibility_pointer_color_customization_title" msgid="2841888132681075999">"Ngjyra e kursorit"</string>
@@ -2401,13 +2400,10 @@
     <string name="accessibility_turn_screen_darker_title" msgid="5986223133285858349">"Bëj ekranin më të errët"</string>
     <string name="interaction_control_category_title" msgid="2696474616743882372">"Kontrollet e ndërveprimeve"</string>
     <string name="accessibility_tap_assistance_title" msgid="1058913033421048284">"Kontrollet në lidhje me kohën"</string>
-    <!-- no translation found for accessibility_tap_assistance_subtext (1805279944665087799) -->
-    <skip />
+    <string name="accessibility_tap_assistance_subtext" msgid="1805279944665087799">"Vonesa e prekjes dhe mbajtjes shtypur, koha për të ndërmarrë veprim"</string>
     <string name="accessibility_system_controls_title" msgid="6403287349518987624">"Kontrollet e sistemit"</string>
-    <!-- no translation found for accessibility_system_controls_subtext (2722046038429586174) -->
-    <skip />
-    <!-- no translation found for accessibility_system_controls_subtext_one_handed_not_supported (4973507525360793402) -->
-    <skip />
+    <string name="accessibility_system_controls_subtext" msgid="2722046038429586174">"Modaliteti i navigimit, modaliteti i përdorimit me një dorë, rrotullimi i ekranit"</string>
+    <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Modaliteti i navigimit, rrotullimi i ekranit"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Dërgo komente"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Plotëso anketën"</string>
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Kontakto mbështetjen për aftësi të kufizuara"</string>
@@ -2481,10 +2477,8 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"Zmadho me shkurtore"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"Zmadho me shkurtore dhe tri trokitje"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"Rreth \"<xliff:g id="SERVICE">%1$s</xliff:g>\""</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
-    <!-- no translation found for accessibility_text_reading_options_subtext (3480489973093251705) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Madhësia në ekran dhe teksti"</string>
+    <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Madhësia e fontit, madhësia në ekran, teksti i trashësuar, teksti me kontur"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Ndrysho mënyrën se si shfaqet teksti"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Subjekti: Dizajnet e balonave"</string>
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"Nga: Bill"</string>
@@ -2658,10 +2652,8 @@
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"Cilësimet e navigimit"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"Dridhja dhe prekja"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"Kontrollo fuqinë e dridhjes për përdorime të ndryshme"</string>
-    <!-- no translation found for accessibility_vibration_settings_state_on (3316037269092584284) -->
-    <skip />
-    <!-- no translation found for accessibility_vibration_settings_state_off (113565506991847845) -->
-    <skip />
+    <string name="accessibility_vibration_settings_state_on" msgid="3316037269092584284">"Aktivizuar / Kontrollo nivelet e dridhjes për telefonatat, njoftimet dhe alarmet"</string>
+    <string name="accessibility_vibration_settings_state_off" msgid="113565506991847845">"Çaktivizuar / Kontrollo nivelet e dridhjes për telefonatat, njoftimet dhe alarmet"</string>
     <string name="accessibility_vibration_setting_disabled_for_silent_mode_summary" msgid="3982701772953323190">"Cilësimet u çaktivizuan sepse pajisja është vendosur në heshtje"</string>
     <string name="accessibility_call_vibration_category_title" msgid="2545607568768192318">"Telefonatat"</string>
     <string name="accessibility_notification_alarm_vibration_category_title" msgid="2683635252414849417">"Njoftimet dhe alarmet"</string>
@@ -2681,8 +2673,7 @@
     <string name="accessibility_color_correction_qs_tooltip_content" msgid="3258628434235475205">"Gjithashtu, korrigjimin e ngjyrës mund ta shtosh te \"Cilësimet e shpejta\" nga kreu i ekranit"</string>
     <string name="accessibility_color_inversion_auto_added_qs_tooltip_content" msgid="7267618234972101725">"Anasjellja e ngjyrës u shtua te \"Cilësimet e shpejta\". Rrëshqit shpejt poshtë për ta aktivizuar ose çaktivizuar në çdo kohë."</string>
     <string name="accessibility_color_inversion_qs_tooltip_content" msgid="5046332142185711869">"Gjithashtu, anasjelljen e ngjyrës mund ta shtosh te \"Cilësimet e shpejta\" nga kreu i ekranit"</string>
-    <!-- no translation found for reduce_bright_colors_preference_summary (8112736110942731246) -->
-    <skip />
+    <string name="reduce_bright_colors_preference_summary" msgid="8112736110942731246">"Zbeh ekranin përtej ndriçimit minimal"</string>
     <string name="accessibility_reduce_bright_colors_auto_added_qs_tooltip_content" msgid="1906588335786328512">"Veçoria \"Shumë më i zbehtë\" u shtua te \"Cilësimet e shpejta\". Rrëshqit shpejt poshtë për ta aktivizuar ose çaktivizuar në çdo kohë."</string>
     <string name="accessibility_reduce_bright_colors_qs_tooltip_content" msgid="7522121299176176785">"Gjithashtu, veçorinë \"Shumë më i zbehtë\" mund ta shtosh te \"Cilësimet e shpejta\" nga kreu i ekranit"</string>
     <string name="accessibility_one_handed_mode_auto_added_qs_tooltip_content" msgid="7914554254280416532">"Modaliteti i përdorimit me një dorë u shtua te \"Cilësimet e shpejta\". Rrëshqit shpejt poshtë për ta aktivizuar ose çaktivizuar në çdo kohë."</string>
@@ -2748,8 +2739,7 @@
     <string name="accessibility_found_all_devices" msgid="7817834722148556520">"Nuk e sheh pajisjen tënde të dëgjimit?"</string>
     <string name="accessibility_list_all_devices_title" msgid="161495343959211216">"Shiko pajisje të tjera"</string>
     <string name="accessibility_audio_adjustment_title" msgid="1332113739136802997">"Rregullimi i audios"</string>
-    <!-- no translation found for accessibility_audio_adjustment_subtext (2190523175597700025) -->
-    <skip />
+    <string name="accessibility_audio_adjustment_subtext" msgid="2190523175597700025">"Audioja mono, balanca e audios"</string>
     <string name="accessibility_toggle_audio_description_preference_title" msgid="8916473886256061220">"Përshkrimi i audios"</string>
     <string name="accessibility_audio_description_summary" msgid="2554789094873781056">"Dëgjo një përshkrim të asaj që ndodh në ekran te filmat dhe shfaqjet e mbështetura"</string>
     <string name="keywords_audio_description" msgid="6202816411593281252">"përshkrimi i audios, audio, përshkrimi, shikim i dobët"</string>
@@ -2760,8 +2750,7 @@
     <string name="accessibility_summary_state_stopped" msgid="2343602489802623424">"Nuk funksionon. Trokit për informacione."</string>
     <string name="accessibility_description_state_stopped" msgid="5364752492861199133">"Ky shërbim nuk po funksionon mirë."</string>
     <string name="accessibility_shortcuts_settings_title" msgid="974740249671825145">"Shkurtoret e qasshmërisë"</string>
-    <!-- no translation found for accessibility_shortcuts_settings_subtext (3870836550836457943) -->
-    <skip />
+    <string name="accessibility_shortcuts_settings_subtext" msgid="3870836550836457943">"Butoni i qasshmërisë, shkurt. e tasteve të volumit"</string>
     <string name="enable_quick_setting" msgid="6648073323202243604">"Shfaq në Cilësimet e shpejta"</string>
     <string name="daltonizer_mode_deuteranomaly_title" msgid="3229433065035047931">"E kuqe - e gjelbër, e gjelbër e dobët"</string>
     <string name="daltonizer_mode_protanomaly_title" msgid="2572040492905945405">"E kuqe - e gjelbër, e kuqe e dobët"</string>
@@ -3105,8 +3094,7 @@
     <string name="on_device_recognition_settings" msgid="6503160369314598069">"Cilësimet e njohjes në pajisje"</string>
     <string name="on_device_recognition_settings_title" msgid="7137599722039096545">"Njohja në pajisje"</string>
     <string name="on_device_recognition_settings_summary" msgid="3292736423223499348">"Njohja e ligjërimit në pajisje"</string>
-    <!-- no translation found for tts_subtext (8958790811881046789) -->
-    <skip />
+    <string name="tts_subtext" msgid="8958790811881046789">"Rregullo shpejtësinë dhe tonalitetin e të folurit"</string>
     <string name="tts_engine_preference_title" msgid="7808775764174571132">"Motori i preferuar"</string>
     <string name="tts_engine_settings_title" msgid="1298093555056321577">"Cilësimet e motorit"</string>
     <string name="tts_sliders_title" msgid="6901146958648426181">"Shpejtësia e të folurës dhe intonacioni"</string>
@@ -4852,6 +4840,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"Navigimi me gjeste"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"Provo një demonstrim"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"Navigimi me butona"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"navigimi me gjeste, ndjeshmëria e kthimit prapa, gjesti i kthimit prapa"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"navigimi, butoni \"krehu\""</string>
     <string name="one_handed_title" msgid="2584414010282746195">"Modaliteti i përdorimit me një dorë"</string>
@@ -5498,8 +5494,7 @@
       <item quantity="one"><xliff:g id="FIRST_0">%1$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"Përdor tekstin për të komunikuar gjatë një telefonate"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5758,13 +5753,10 @@
     <string name="color_inversion_state_on" msgid="1160969033636440368">"Aktivizuar"</string>
     <string name="color_inversion_state_off" msgid="6925638668080451724">"Çaktivizuar"</string>
     <string name="color_inversion_feature_summary" msgid="1199876648549627647">"Kthen ekranet e ndriçuara në të errëta dhe ekranet e errëta në të ndriçuara"</string>
-    <!-- no translation found for magnification_feature_summary (4403387702011660253) -->
-    <skip />
+    <string name="magnification_feature_summary" msgid="4403387702011660253">"Zmadho për t\'i bërë përmbajtjet më të mëdha në ekran"</string>
     <string name="autoclick_disabled" msgid="3213396804955002120">"Çaktivizuar"</string>
-    <!-- no translation found for show_captions_disabled (924366862253349790) -->
-    <skip />
-    <!-- no translation found for show_captions_enabled (3495595825041704052) -->
-    <skip />
+    <string name="show_captions_disabled" msgid="924366862253349790">"Çaktivizuar / Personalizo madhësinë dhe stilin e titrave"</string>
+    <string name="show_captions_enabled" msgid="3495595825041704052">"Aktivizuar / Personalizo madhësinë dhe stilin e titrave"</string>
     <string name="live_caption_disabled" msgid="3562035026547887366">"Çaktivizuar"</string>
     <string name="live_caption_enabled" msgid="5269360946200718949">"Aktivizuar"</string>
     <string name="audio_seek_bar_state_left_first" msgid="1641359989891833888">"Audioja: <xliff:g id="PERCENT_LEFT">%1$s</xliff:g> majtas, <xliff:g id="PERCENT_RIGHT">%2$s</xliff:g> djathtas"</string>
@@ -5975,5 +5967,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

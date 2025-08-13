@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"ডিছপ্লে’সমূহৰ মাজত আপোনাৰ মাউছটো লৰচৰ কৰক"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"বাহ্যিক ডিছপ্লে’ ব্যৱহাৰ কৰক"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"ডিছপ্লে’ৰ ৰিজ’লিউশ্বন"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"ডিফ’ল্ট সংযোগ আচৰণ"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"ভিন্ন ডিছপ্লে’ হিচাপে ব্যৱহাৰ কৰক"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"বিল্ট-ইন ডিছপ্লে’ মিৰ’ৰ কৰক"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"সংযোগ ডায়লগ দেখুৱাওক"</string>
@@ -2373,10 +2374,8 @@
     <string name="audio_category_title" msgid="5283853679967605826">"অডিঅ’"</string>
     <string name="general_category_title" msgid="6298579528716834157">"সাধাৰণ"</string>
     <string name="display_category_title" msgid="6638191682294461408">"ডিছপ্লে’"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
-    <!-- no translation found for accessibility_color_and_motion_subtext (1150281881647191503) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"ৰং আৰু ম’শ্বন"</string>
+    <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"গাঢ় ৰঙৰ থীম, ৰং শুধৰণী, এনিমেশ্বন আঁতৰোৱা"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"কাৰ্ছৰ আৰু টাচ্চপেডৰ সাধ্য সুবিধা"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"আকাৰ, ৰং, প্ৰকাৰ"</string>
     <string name="accessibility_pointer_color_customization_title" msgid="2841888132681075999">"কাৰ্ছৰৰ ৰং"</string>
@@ -2399,13 +2398,10 @@
     <string name="accessibility_turn_screen_darker_title" msgid="5986223133285858349">"স্ক্ৰীনখন গাঢ় কৰক"</string>
     <string name="interaction_control_category_title" msgid="2696474616743882372">"ভাব-বিনিময় নিয়ন্ত্ৰণ"</string>
     <string name="accessibility_tap_assistance_title" msgid="1058913033421048284">"সময়ৰ নিয়ন্ত্ৰণ"</string>
-    <!-- no translation found for accessibility_tap_assistance_subtext (1805279944665087799) -->
-    <skip />
+    <string name="accessibility_tap_assistance_subtext" msgid="1805279944665087799">"স্পৰ্শ কৰি ধৰি ৰখাৰ বিলম্ব, কাৰ্যব্যৱস্থা গ্ৰহণ কৰাৰ সময়"</string>
     <string name="accessibility_system_controls_title" msgid="6403287349518987624">"ছিষ্টেমৰ নিয়ন্ত্ৰণ"</string>
-    <!-- no translation found for accessibility_system_controls_subtext (2722046038429586174) -->
-    <skip />
-    <!-- no translation found for accessibility_system_controls_subtext_one_handed_not_supported (4973507525360793402) -->
-    <skip />
+    <string name="accessibility_system_controls_subtext" msgid="2722046038429586174">"নেভিগেশ্বন ম’ড, এখন হাতেৰে ব্যৱহাৰ কৰা ম’ড, স্ক্ৰীনৰ ঘূৰ্ণন"</string>
+    <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"নেভিগেশ্বন ম’ড, স্ক্ৰীনৰ ঘূৰ্ণন"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"মতামত পঠিয়াওক"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"সমীক্ষাত ভাগ লওক"</string>
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"বিশেষভাৱে সক্ষম লোকৰ বাবে Googleৰ সহায় দলৰ সৈতে যোগাযোগ কৰক"</string>
@@ -2479,10 +2475,8 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"শ্বৰ্টকাটৰ দ্বাৰা বিৱৰ্ধিত কৰক"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"শ্বৰ্টকাটৰ দ্বাৰা আৰু তিনিবাৰ টিপি বিৱৰ্ধিত কৰক"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"<xliff:g id="SERVICE">%1$s</xliff:g>ৰ বিষয়ে"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
-    <!-- no translation found for accessibility_text_reading_options_subtext (3480489973093251705) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"স্ক্ৰীনৰ আকাৰ আৰু পাঠ"</string>
+    <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"ফণ্টৰ আকাৰ, স্ক্ৰীনৰ আকাৰ, ব’ল্ড কৰা পাঠ, পাঠৰ ৰূপৰেখা"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"পাঠ কেনেকৈ প্ৰদৰ্শিত হয় সেয়া সলনি কৰক"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"বিষয়: গৰম বতাহ থকা বেলুনৰ ডিজাইন"</string>
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"প্ৰেৰক: বিল"</string>
@@ -2656,10 +2650,8 @@
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"নেভিগেশ্বনৰ ছেটিং"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"কম্পন আৰু হেপ্‌টিক"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"বিভিন্ন ব্যৱহাৰৰ বাবে কম্পনৰ ক্ষমতাটো নিয়ন্ত্ৰণ কৰক"</string>
-    <!-- no translation found for accessibility_vibration_settings_state_on (3316037269092584284) -->
-    <skip />
-    <!-- no translation found for accessibility_vibration_settings_state_off (113565506991847845) -->
-    <skip />
+    <string name="accessibility_vibration_settings_state_on" msgid="3316037269092584284">"অন আছে / কল, জাননী আৰু এলাৰ্মৰ বাবে কম্পনৰ স্তৰ নিয়ন্ত্ৰণ কৰক"</string>
+    <string name="accessibility_vibration_settings_state_off" msgid="113565506991847845">"অফ আছে / কল, জাননী আৰু এলাৰ্মৰ বাবে কম্পনৰ স্তৰ নিয়ন্ত্ৰণ কৰক"</string>
     <string name="accessibility_vibration_setting_disabled_for_silent_mode_summary" msgid="3982701772953323190">"ডিভাইচটো নীৰৱ হিচাপে ছেট কৰি থোৱাৰ কাৰণে ছেটিং অক্ষম হৈ আছে"</string>
     <string name="accessibility_call_vibration_category_title" msgid="2545607568768192318">"কল"</string>
     <string name="accessibility_notification_alarm_vibration_category_title" msgid="2683635252414849417">"জাননী আৰু এলাৰ্ম"</string>
@@ -2679,8 +2671,7 @@
     <string name="accessibility_color_correction_qs_tooltip_content" msgid="3258628434235475205">"আপুনি নিজৰ স্ক্ৰীনখনৰ একেবাৰে ওপৰৰ অংশৰ পৰা ক্ষিপ্ৰ ছেটিঙত ৰং শুধৰণী যোগ দিব পাৰে"</string>
     <string name="accessibility_color_inversion_auto_added_qs_tooltip_content" msgid="7267618234972101725">"ক্ষিপ্ৰ ছেটিঙত ৰং বিপৰীতকৰণ যোগ দিয়া হৈছে। যিকোনো সময়ত এইটোক অন অথবা অফ কৰিবলৈ তললৈ ছোৱাইপ কৰক।"</string>
     <string name="accessibility_color_inversion_qs_tooltip_content" msgid="5046332142185711869">"আপুনি নিজৰ স্ক্ৰীনখনৰ একেবাৰে ওপৰৰ অংশৰ পৰা ক্ষিপ্ৰ ছেটিঙত ৰং বিপৰীতকৰণ যোগ দিব পাৰে"</string>
-    <!-- no translation found for reduce_bright_colors_preference_summary (8112736110942731246) -->
-    <skip />
+    <string name="reduce_bright_colors_preference_summary" msgid="8112736110942731246">"স্ক্ৰীনখনৰ উজ্জ্বলতা ন্যূনতম উজ্জ্বলতাতকৈ কম কৰক"</string>
     <string name="accessibility_reduce_bright_colors_auto_added_qs_tooltip_content" msgid="1906588335786328512">"ক্ষিপ্ৰ ছেটিঙত অতিৰিক্তভাৱে পোহৰ কমোৱাৰ সুবিধা যোগ দিয়া হৈছে। যিকোনো সময়ত এইটো অন অথবা অফ কৰিবলৈ তললৈ ছোৱাইপ কৰক।"</string>
     <string name="accessibility_reduce_bright_colors_qs_tooltip_content" msgid="7522121299176176785">"আপুনি নিজৰ স্ক্ৰীনখনৰ একেবাৰে ওপৰৰ অংশৰ পৰা ক্ষিপ্ৰ ছেটিঙত অতিৰিক্তভাৱে পোহৰ কমোৱাৰ সুবিধাও যোগ দিব পাৰে"</string>
     <string name="accessibility_one_handed_mode_auto_added_qs_tooltip_content" msgid="7914554254280416532">"ক্ষিপ্ৰ ছেটিঙত এখন হাতেৰে ব্যৱহাৰ কৰা ম’ডটো যোগ দিয়া হৈছে। যিকোনো সময়ত এইটোক অন অথবা অফ কৰিবলৈ তললৈ ছোৱাইপ কৰক।"</string>
@@ -2746,8 +2737,7 @@
     <string name="accessibility_found_all_devices" msgid="7817834722148556520">"আপোনাৰ শুনাৰ ডিভাইচটো দেখা নাই নেকি?"</string>
     <string name="accessibility_list_all_devices_title" msgid="161495343959211216">"অধিক ডিভাইচ চাওক"</string>
     <string name="accessibility_audio_adjustment_title" msgid="1332113739136802997">"অডিঅ’ মিলোৱা"</string>
-    <!-- no translation found for accessibility_audio_adjustment_subtext (2190523175597700025) -->
-    <skip />
+    <string name="accessibility_audio_adjustment_subtext" msgid="2190523175597700025">"ম’ন’ অডিঅ’, অডিঅ’ বেলেঞ্চ"</string>
     <string name="accessibility_toggle_audio_description_preference_title" msgid="8916473886256061220">"অডিঅ’ৰ বিৱৰণ"</string>
     <string name="accessibility_audio_description_summary" msgid="2554789094873781056">"সমৰ্থিত চলচ্চিত্ৰ আৰু শ্ব’ত স্ক্ৰীনত কি ঘটি আছে তাৰ এটা বিৱৰণ শুনক"</string>
     <string name="keywords_audio_description" msgid="6202816411593281252">"অডিঅ’ৰ বিৱৰণ, অডিঅ’, বিৱৰণ, কম দৃষ্টিশক্তি,"</string>
@@ -2758,8 +2748,7 @@
     <string name="accessibility_summary_state_stopped" msgid="2343602489802623424">"কাম কৰি থকা নাই। তথ্য়ৰ বাবে টিপক।"</string>
     <string name="accessibility_description_state_stopped" msgid="5364752492861199133">"এই সেৱাএ ভালকৈ কাম কৰা নাই।"</string>
     <string name="accessibility_shortcuts_settings_title" msgid="974740249671825145">"সাধ্য সুবিধাৰ শ্বৰ্টকাট"</string>
-    <!-- no translation found for accessibility_shortcuts_settings_subtext (3870836550836457943) -->
-    <skip />
+    <string name="accessibility_shortcuts_settings_subtext" msgid="3870836550836457943">"সাধ্য-সুবিধা বুটাম, ভলিউম কীৰ শ্বৰ্টকাট"</string>
     <string name="enable_quick_setting" msgid="6648073323202243604">"ক্ষিপ্ৰ ছেটিঙত দেখুৱাওক"</string>
     <string name="daltonizer_mode_deuteranomaly_title" msgid="3229433065035047931">"ৰঙা-সেউজীয়া, সেউজীয়া দুৰ্বল"</string>
     <string name="daltonizer_mode_protanomaly_title" msgid="2572040492905945405">"ৰঙা-সেউজীয়া, ৰঙা দুৰ্বল"</string>
@@ -3103,8 +3092,7 @@
     <string name="on_device_recognition_settings" msgid="6503160369314598069">"ডিভাইচত থকা চিনাক্তকৰণ সুবিধাটোৰ ছেটিং"</string>
     <string name="on_device_recognition_settings_title" msgid="7137599722039096545">"ডিভাইচত থকা চিনাক্তকৰণ সুবিধাটোৰ ছেটিং"</string>
     <string name="on_device_recognition_settings_summary" msgid="3292736423223499348">"ডিভাইচত থকা কথন চিনাক্তকৰণ সুবিধাটোৰ ছেটিং"</string>
-    <!-- no translation found for tts_subtext (8958790811881046789) -->
-    <skip />
+    <string name="tts_subtext" msgid="8958790811881046789">"কথা কোৱাৰ হাৰ আৰু পিটচ্ মিলাওক"</string>
     <string name="tts_engine_preference_title" msgid="7808775764174571132">"অগ্ৰাধিকাৰপ্ৰাপ্ত ইঞ্জিন"</string>
     <string name="tts_engine_settings_title" msgid="1298093555056321577">"ইঞ্জিনৰ ছেটিং"</string>
     <string name="tts_sliders_title" msgid="6901146958648426181">"কথা কোৱাৰ হাৰ আৰু পিটচ্"</string>
@@ -4845,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"আঙুলিৰ স্পৰ্শৰ নিৰ্দেশেৰে কৰা নেভিগেশ্বন"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"এটা ডেম’ ব্যৱহাৰ কৰি চাওক"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"বুটামেৰে কৰা নেভিগেশ্বন"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"আঙুলিৰ স্পৰ্শৰ নিৰ্দেশেৰে কৰা নেভিগেশ্বন, উভতি যোৱা নির্দেশৰ সংবেদনশীলতা, উভতি যোৱা নির্দেশ"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"নেভিগেশ্বন, গৃহপৃষ্ঠা বুটাম"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"এখন হাতেৰে ব্যৱহাৰ কৰা ম’ড"</string>
@@ -5491,8 +5487,7 @@
       <item quantity="other"><xliff:g id="FIRST_1">%1$s</xliff:g>, <xliff:g id="SECOND">%2$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"কল কৰি থকাৰ সময়ত যোগাযোগৰ বাবে পাঠ ব্যৱহাৰ কৰক"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5751,13 +5746,10 @@
     <string name="color_inversion_state_on" msgid="1160969033636440368">"অন আছে"</string>
     <string name="color_inversion_state_off" msgid="6925638668080451724">"অফ আছে"</string>
     <string name="color_inversion_feature_summary" msgid="1199876648549627647">"পাতল স্ক্ৰীনসমূহ গাঢ় আৰু গাঢ় স্ক্ৰীনসমূহ পাতল কৰি তোলে"</string>
-    <!-- no translation found for magnification_feature_summary (4403387702011660253) -->
-    <skip />
+    <string name="magnification_feature_summary" msgid="4403387702011660253">"আপোনাৰ স্ক্ৰীনৰ সমল ডাঙৰ কৰিবলৈ জুম ইন কৰক"</string>
     <string name="autoclick_disabled" msgid="3213396804955002120">"অফ আছে"</string>
-    <!-- no translation found for show_captions_disabled (924366862253349790) -->
-    <skip />
-    <!-- no translation found for show_captions_enabled (3495595825041704052) -->
-    <skip />
+    <string name="show_captions_disabled" msgid="924366862253349790">"অফ আছে / কেপশ্বনৰ আকাৰ আৰু শৈলী কাষ্টমাইজ কৰক"</string>
+    <string name="show_captions_enabled" msgid="3495595825041704052">"অন আছে / কেপশ্বনৰ আকাৰ আৰু শৈলী কাষ্টমাইজ কৰক"</string>
     <string name="live_caption_disabled" msgid="3562035026547887366">"অফ আছে"</string>
     <string name="live_caption_enabled" msgid="5269360946200718949">"অন আছে"</string>
     <string name="audio_seek_bar_state_left_first" msgid="1641359989891833888">"অডিঅ’ বাওঁফালে <xliff:g id="PERCENT_LEFT">%1$s</xliff:g>, সোঁফালে <xliff:g id="PERCENT_RIGHT">%2$s</xliff:g>"</string>
@@ -5968,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

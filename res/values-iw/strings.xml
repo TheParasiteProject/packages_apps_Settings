@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"הזזת העכבר בין מסכים"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"שימוש במסך החיצוני"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"רזולוציית המסך"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"התנהגות ברירת המחדל כשמחברים מסך חיצוני"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"שימוש כמסך נפרד"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"שיקוף המסך המובנה"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"הצגת תיבת הדו-שיח של החיבור"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"גלילה"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"גלילה מבוקרת"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"מהירות הגלילה"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"הגברת מהירות הגלילה"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"האטת הגלילה"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"הגברת מהירות הסמן"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"האטת מהירות הסמן"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"החלפת הכפתור הראשי של העכבר"</string>
@@ -2375,8 +2374,7 @@
     <string name="audio_category_title" msgid="5283853679967605826">"אודיו"</string>
     <string name="general_category_title" msgid="6298579528716834157">"הגדרות כלליות"</string>
     <string name="display_category_title" msgid="6638191682294461408">"תצוגה"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"צבע ותנועה"</string>
     <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"עיצוב כהה, תיקון צבע, הסרת אנימציות"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"הגדרות הנגישות של הסמן ולוח המגע"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"גודל, צבע, סוג"</string>
@@ -2417,13 +2415,13 @@
     <string name="user_installed_services_category_title" msgid="2639470729311439731">"אפליקציות שהורדת"</string>
     <string name="experimental_category_title" msgid="898904396646344152">"ניסיוני"</string>
     <string name="feature_flags_dashboard_title" msgid="348990373716658289">"סימוני תכונות"</string>
-    <string name="bt_stack_log_level" msgid="6527899271926969296">"‏הפעלת היומן של מקבץ Bluetooth"</string>
+    <string name="bt_stack_log_level" msgid="6527899271926969296">"‏הפעלת Bluetooth stack log"</string>
     <string name="bt_stack_log_level_summary" msgid="3769107713334448285">"‏שינוי רמת היומן של יומן מקבץ Bluetooth (החלפת המצב של ה-Bluetooth לאחר שינוי ההגדרה הזו)"</string>
-    <string name="bt_hci_snoop_log_filters_dashboard_title" msgid="401330708633716596">"‏סינון יומן snoop של Bluetooth HCI"</string>
+    <string name="bt_hci_snoop_log_filters_dashboard_title" msgid="401330708633716596">"‏סינון Bluetooth HCI Snoop Log"</string>
     <string name="bt_hci_snoop_log_filters_dashboard_summary" msgid="1319792184194176235">"הגדרת מסננים"</string>
     <string name="bt_hci_snoop_log_filters_dashboard_footer" msgid="4158945851818483666">"‏צריך להשבית ולהפעיל את ה-Bluetooth כדי שהשינויים ייכנסו לתוקף"</string>
-    <string name="bt_hci_snoop_log_filter_pbap_title" msgid="1735427364451634823">"‏סינון יומן snoop PBAP של Bluetooth HCI"</string>
-    <string name="bt_hci_snoop_log_filter_map_title" msgid="180092480793945544">"‏סינון יומן snoop MAP של Bluetooth HCI"</string>
+    <string name="bt_hci_snoop_log_filter_pbap_title" msgid="1735427364451634823">"‏סינון PBAP של Bluetooth HCI snoop log"</string>
+    <string name="bt_hci_snoop_log_filter_map_title" msgid="180092480793945544">"‏סינון MAP של Bluetooth HCI snoop log"</string>
     <string name="bt_hci_snoop_log_filter_summary" msgid="7217091930762522599">"‏הגדרת מצב הסינון. (צריך להשבית ולהפעיל את ה-Bluetooth כדי שהשינויים ייכנסו לתוקף)"</string>
     <string name="bt_hci_snoop_log_filtered_mode_disabled_summary" msgid="8824952559433361848">"‏צריך להגדיר את מצב יומן snoop של Bluetooth HCI ל\"מופעל\" ו\"מסונן\" כדי לשנות את האפשרות הזו"</string>
     <string name="talkback_title" msgid="8756080454514251327">"Talkback"</string>
@@ -2465,7 +2463,7 @@
     <string name="accessibility_magnification_mode_dialog_option_switch" msgid="561043521011229424">"מעבר בין מסך מלא למסך חלקי"</string>
     <string name="accessibility_magnification_area_settings_mode_switch_summary" msgid="2885238806099080966">"כדי לעבור בין שתי האפשרויות, יש ללחוץ על כפתור ההחלפה"</string>
     <string name="accessibility_magnification_triple_tap_warning_title" msgid="8484669851397296597">"הפעולה הזו עשויה להאט את פעילות המקלדת"</string>
-    <string name="accessibility_magnification_triple_tap_warning_message" msgid="2008671502848936410">"כשמשתמשים בלחיצה משולשת להגדלת חלק מהמסך, עלולות להיות בעיות במקלדת.\n\nכדי להימנע מכך, אפשר לשנות את קיצור הדרך להגדלה מלחיצה משולשת לאפשרות אחרת.\n"<annotation id="link">"לשינוי ההגדרה"</annotation></string>
+    <string name="accessibility_magnification_triple_tap_warning_message" msgid="2008671502848936410">"לחיצה משולשת להגדלת חלק מהמסך לפעמים גורמת לבעיות במקלדת.\n\nכדי להימנע מכך, אפשר לשנות את קיצור הדרך להגדלה מלחיצה משולשת לאפשרות אחרת.\n"<annotation id="link">"לשינוי ההגדרה"</annotation></string>
     <string name="accessibility_magnification_triple_tap_warning_positive_button" msgid="8712304035901450010">"אני רוצה להמשיך בכל זאת"</string>
     <string name="accessibility_magnification_triple_tap_warning_negative_button" msgid="2028849736366584733">"ביטול"</string>
     <string name="accessibility_magnification_service_settings_title" msgid="3531350704632316017">"הגדרות ההגדלה"</string>
@@ -2477,8 +2475,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"הגדלה בעזרת קיצור דרך"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"הגדלה בעזרת קיצור דרך ולחיצה שלוש פעמים"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"מידע על <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"גודל התצוגה והטקסט"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"גודל הגופן, גודל התצוגה, טקסט מודגש, טקסט בקווי מתאר"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"שינוי התצוגה של הטקסט"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"נושא: עיצובים של כדור פורח"</string>
@@ -3129,7 +3126,7 @@
     <string name="cellular_security_notifications_controller_title" msgid="4853056963523277847">"התראות רשת"</string>
     <string name="cellular_security_notifications_controller_summary" msgid="8339863845393759958">"‏קבלת התראה כשהמכשיר מתחבר לרשת לא מוצפנת, או כשרשת מתעדת את המזהה הייחודי של המכשיר או של כרטיס ה-SIM"</string>
     <string name="cellular_security_2G_network_generation_header" msgid="2892850064192939887">"סוג הרשת"</string>
-    <string name="cellular_security_2G_network_generation_summary" msgid="4041699962072749477">"‏התכונה \"הגנה ברשתות 2G\" מונעת חיבור לרשתות 2G שפחות מאובטחות. זה עלול להגביל את הקישוריות במקומות מסוימים. תמיד אפשר להשתמש ברשת 2G לשיחות חירום, אבל יכול להיות שלא תהיה אפשרות להתחבר לשיחות במצב \"נדידה\" כשנמצאים בחו\"ל."</string>
+    <string name="cellular_security_2G_network_generation_summary" msgid="4041699962072749477">"‏התכונה \"הגנה ברשתות 2G\" מונעת חיבור לרשתות 2G. אלה הן רשתות פחות מאובטחות. זה עלול להגביל את הקישוריות במקומות מסוימים. תמיד אפשר להשתמש ברשת 2G לשיחות חירום, אבל יכול להיות שלא תהיה אפשרות להתחבר לשיחות במצב \"נדידה\" כשנמצאים בחו\"ל."</string>
     <string name="cellular_security_2G_network_generation_title" msgid="706766676947606951">"‏הגנה ברשתות 2G"</string>
     <string name="cellular_security_settings_encryption_title" msgid="4013084091666375780">"הצפנה"</string>
     <string name="cellular_security_network_generations_title" msgid="2343026988833783854">"דורות של רשתות"</string>
@@ -3749,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"צלילים ורטט של המערכת"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"הצליל של פרופיל העבודה"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"כתוביות מיידיות"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"הצגת כתוביות לשיחות, לסרטונים ולמדיה אחרת"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"מופעל / הצגת כתוביות לשיחות, לסרטונים ולמדיה אחרת"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"כבוי / הצגת כתוביות לשיחות, לסרטונים ולמדיה אחרת"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"אוזניות חוטיות"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"אודיו שמגיע ממקורות מדיה תואמים יוצר חוויה עשירה יותר"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"התכונה כבויה"</string>
@@ -3900,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"כתבות מובילות, מאמרי דעה ועוד"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"לייקים, פוסטים ועוד"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"ניוזלטרים, המלצות על מדיה ועוד"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"כל האפליקציות משתמשות כרגע בכלי לארגון ההתראות"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"‏ניהול באמצעות AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"סיכומי התראות"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"קבלת תקצירים מהירים של הודעות ארוכות"</string>
@@ -3913,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"בלי האפליקציות האלה"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"סיכומי התראות"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"קבלת תקצירים מהירים של הודעות ארוכות"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"כל האפליקציות הרלוונטיות משתמשות כרגע בסיכומי התראות"</string>
     <string name="live_notifications" msgid="4650406646292963831">"התראות בזמן אמת"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"עדכונים בזמן אמת"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"הצגת התראות פעילות ותלויות-זמן בשורת הסטטוס ובמסך הנעילה"</string>
@@ -4397,14 +4389,10 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"בדיקת אפליקציות ששינו את האופן שבו הן עשויות לשתף את נתוני המיקום"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"סוכנים"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"סוכנים שיכולים לגשת למידע או לבצע פעולות באפליקציות"</string>
-    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
-    <skip />
-    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
-    <skip />
-    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
-    <skip />
-    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
-    <skip />
+    <string name="manage_agent_app_function_access_settings_title" msgid="2407736540086293094">"גישה לאפליקציות"</string>
+    <string name="manage_agent_app_function_access_settings_summary" msgid="5513761879561499076">"מתן הרשאה לסוכן הזה לגשת למידע או לבצע פעולות באפליקציות"</string>
+    <string name="manage_target_app_function_access_settings_title" msgid="6517416582918633839">"גישת סוכן"</string>
+    <string name="manage_target_app_function_access_settings_summary" msgid="3578937757835411954">"סוכנים שיכולים לגשת למידע או לבצע פעולות באפליקציה הזו"</string>
     <string name="tap_to_wake" msgid="3313433536261440068">"יש ללחוץ כדי להעיר"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"יש ללחוץ פעמיים בנקודה כלשהי במסך כדי להעיר את המכשיר"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"פתיחת קישורים"</string>
@@ -4660,7 +4648,7 @@
     <string name="data_used_template" msgid="8229342096562327646">"נעשה שימוש ב-<xliff:g id="ID_1">%1$s</xliff:g>"</string>
     <string name="set_data_warning" msgid="1685771882794205462">"הגדרת אזהרה לגבי שימוש בנתונים"</string>
     <string name="data_warning" msgid="2925054658166062884">"אזהרה לגבי שימוש בנתונים"</string>
-    <string name="data_warning_footnote" msgid="5991901765915710592">"במכשיר מתבצעת מדידה לצורך אזהרה לגבי שימוש בנתונים ומגבלת נתונים. ייתכן שהנתונים יהיו שונים מנתוני הספק."</string>
+    <string name="data_warning_footnote" msgid="5991901765915710592">"הנתונים של \"אזהרה לגבי שימוש בנתונים\" ו\"מגבלת נתונים\" נמדדים על ידי המכשיר עצמו. יכול להיות שתהיה אי התאמה עם הנתונים של הספק."</string>
     <string name="set_data_limit" msgid="9010326815874642680">"הגדרת מגבלה לחבילת הגלישה"</string>
     <string name="data_limit" msgid="8731731657513652363">"מגבלת נתונים"</string>
     <string name="data_usage_template" msgid="3822452362629968010">"השתמשת ב-<xliff:g id="ID_1">%1$s</xliff:g> בתאריכים <xliff:g id="ID_2">%2$s</xliff:g>"</string>
@@ -4841,6 +4829,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"ניווט באמצעות תנועות"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"צפייה בהדגמה"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"ניווט באמצעות כפתורים"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"ניווט באמצעות תנועות, רגישות פעולה החזרה, תנועת החזרה"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"ניווט, הכפתור הראשי"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"מצב שימוש ביד אחת"</string>
@@ -5050,8 +5046,8 @@
     <string name="angle_enabled_app" msgid="6044941043384239076">"‏בחירת אפליקציה המותאמת ל-ANGLE"</string>
     <string name="angle_enabled_app_not_set" msgid="4472572224881726067">"‏לא הוגדרה אפליקציה המותאמת ל-ANGLE"</string>
     <string name="angle_enabled_app_set" msgid="7811829383833353021">"‏אפליקציה המותאמת ל-ANGLE: <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
-    <string name="graphics_driver_dashboard_title" msgid="5661084817492587796">"העדפות של מנהל ההתקן לגרפיקה"</string>
-    <string name="graphics_driver_dashboard_summary" msgid="6348759885315793654">"שינוי ההגדרות של מנהל ההתקן לגרפיקה"</string>
+    <string name="graphics_driver_dashboard_title" msgid="5661084817492587796">"ההעדפות של הדרייבר הגרפי"</string>
+    <string name="graphics_driver_dashboard_summary" msgid="6348759885315793654">"שינוי ההגדרות של הדרייבר הגרפי"</string>
     <string name="graphics_driver_footer_text" msgid="5123754522284046790">"כשיש מספר מנהלי התקן לגרפיקה, ניתן לבחור להשתמש במנהל ההתקן המעודכן לגרפיקה עבור אפליקציות המותקנות במכשיר."</string>
     <string name="graphics_driver_all_apps_preference_title" msgid="1343065382898127360">"הפעלה לכל האפליקציות"</string>
     <string name="graphics_driver_app_preference_title" msgid="3133255818657706857">"בחירת מנהל ההתקן לגרפיקה"</string>
@@ -5067,7 +5063,7 @@
     <!-- no translation found for graphics_driver_app_preference_values:2 (5391218026495225599) -->
     <!-- no translation found for graphics_driver_app_preference_values:3 (2586045835780389650) -->
     <string name="enable_angle_as_system_driver" msgid="4648827560023949786">"‏ניסיוני: הפעלת ANGLE"</string>
-    <string name="enable_angle_as_system_driver_summary" msgid="2170215556348477481">"‏אזהרה: הפעלה של ANGLE כברירת מחדל של מנהל התקן OpenGL ES. התכונה הזו ניסיונית ויכול להיות שלא תתאים לחלק מאפליקציות המצלמה והסרטונים."</string>
+    <string name="enable_angle_as_system_driver_summary" msgid="2170215556348477481">"‏אזהרה: הפעלה של ANGLE כברירת מחדל של הדרייבר OpenGL ES. התכונה הזו ניסיונית ויכול להיות שלא תתאים לחלק מאפליקציות המצלמה והסרטונים."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="2619263039763150810">"‏צריך להפעיל מחדש כדי לשנות את מערכת OpenGL ES לנהג"</string>
     <string name="platform_compat_dashboard_title" msgid="1323980546791790236">"שינויים בתאימות האפליקציה"</string>
     <string name="platform_compat_dashboard_summary" msgid="4036546607938791337">"החלפת המצב של שינויים בתאימות של אפליקציות"</string>
@@ -5488,8 +5484,7 @@
       <item quantity="other"><xliff:g id="FIRST_1">%1$s</xliff:g>, <xliff:g id="SECOND">%2$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"אפשר להשתמש בטקסט כדי לתקשר במהלך שיחה"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5498,7 +5493,7 @@
     <string name="cached_apps_freezer" msgid="1057519579761550350">"השעיית הביצוע לאפליקציות שנשמרו במטמון"</string>
     <string name="blob_never_expires_text" msgid="7293376386620106623">"ללא תפוגה."</string>
     <string name="accessor_never_expires_text" msgid="4647624492147788340">"חכירה ללא תפוגה."</string>
-    <string name="overlay_settings_title" msgid="1032863083496396365">"אפשרות של שכבות-על במסכי \'הגדרות\'"</string>
+    <string name="overlay_settings_title" msgid="1032863083496396365">"אפשרות של שכבות-על במסכי \"הגדרות\""</string>
     <string name="overlay_settings_summary" msgid="2745336273786148166">"אפליקציות שיכולות להופיע מעל אפליקציות אחרות יוכלו ליצור שכבות-על במסכי ההגדרות"</string>
     <string name="allow_mock_modem" msgid="3832264806530479214">"הרשאה לשימוש במודם מדומה"</string>
     <string name="allow_mock_modem_summary" msgid="9097416612748005374">"הרשאה להפעלת שירות של מודם מדומה במכשיר הזה לצורך בדיקת אינסטרומנטציה. אין להעניק את ההרשאה הזו במהלך שימוש רגיל בטלפון"</string>
@@ -5604,7 +5599,7 @@
     <string name="smart_forwarding_missing_mdn_text" msgid="2907314684242542226">"חסר מספר טלפון."</string>
     <string name="smart_forwarding_missing_alert_dialog_text" msgid="7870419247987316112">"אישור"</string>
     <string name="enable_2g_title" msgid="5657132300321750181">"‏הגנה ברשתות 2G"</string>
-    <string name="enable_2g_summary" msgid="6194875539424151678">"‏התכונה מונעת חיבור לרשתות 2G שפחות מאובטחות. זה עלול להגביל את הקישוריות במקומות מסוימים. תמיד אפשר להשתמש ברשת 2G לשיחות חירום, אבל יכול להיות שלא תהיה אפשרות להתחבר לשיחות במצב \"נדידה\" כשנמצאים בחו\"ל."</string>
+    <string name="enable_2g_summary" msgid="6194875539424151678">"‏התכונה מונעת חיבור לרשתות 2G. אלה הן רשתות פחות מאובטחות. זה עלול להגביל את הקישוריות במקומות מסוימים. תמיד אפשר להשתמש ברשת 2G לשיחות חירום, אבל יכול להיות שלא תהיה אפשרות להתחבר לשיחות במצב \"נדידה\" כשנמצאים בחו\"ל."</string>
     <string name="enable_2g_summary_disabled_carrier" msgid="8141118453219482762">"‏לצורך זמינות ב-<xliff:g id="CARRIER_NAME_2G">%1$s</xliff:g> נדרשת רשת 2G"</string>
     <string name="require_cellular_encryption_title" msgid="6087085031703089235">"מתן הרשאה לרשתות מוצפנות בלבד"</string>
     <string name="require_cellular_encryption_summary" msgid="6090569065420631457">"ההגדרה הזו מאובטחת יותר אבל היא עלולה להוביל לבעיות קליטה במקומות מסוימים. תמיד אפשר לבצע שיחת חירום."</string>
@@ -5748,7 +5743,7 @@
     <string name="color_inversion_state_on" msgid="1160969033636440368">"מופעלת"</string>
     <string name="color_inversion_state_off" msgid="6925638668080451724">"מושבתת"</string>
     <string name="color_inversion_feature_summary" msgid="1199876648549627647">"התכונה משנה את הצבעים של מסכים בהירים לצבעים כהים ולהפך"</string>
-    <string name="magnification_feature_summary" msgid="4403387702011660253">"אפשר להגדיל את התוכן במסך באמצעות התקרבות"</string>
+    <string name="magnification_feature_summary" msgid="4403387702011660253">"אפשר להתקרב כדי להגדיל את התוכן במסך"</string>
     <string name="autoclick_disabled" msgid="3213396804955002120">"מושבת"</string>
     <string name="show_captions_disabled" msgid="924366862253349790">"התכונה מושבתת / אפשר להתאים אישית את הגודל והסגנון של הכתוביות"</string>
     <string name="show_captions_enabled" msgid="3495595825041704052">"התכונה מופעלת / אפשר להתאים אישית את הגודל והסגנון של הכתוביות"</string>
@@ -5959,8 +5954,18 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"אפשר למנוע מאחרים לפתוח אפליקציות שדורשות פתיחה בטביעת אצבע או בזיהוי פנים. כשמחוברים לשעון, ממשיכים להיות בטוחים גם כשעוברים ממקום למקום."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"שימוש בבדיקת הזהות ובשעון באפליקציות נוספות"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"אפשר להגן על הזהות שלך בכל האפליקציות שתומכות בפתיחה בטביעת אצבע או בזיהוי פנים במקומות בטוחים כמו הבית או המשרד. כדאי להשתמש בתכונה \"בדיקת הזהות\" בשעון כדי להרחיב את ההגנה גם מעבר למקומות הבטוחים."</string>
-    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <string name="more_security_privacy_category_title" msgid="6107292123094705732">"הגדרות אחרות"</string>
+    <string name="more_security_privacy_summary" msgid="8049801531406061219">"מילוי אוטומטי, התראות ועוד"</string>
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
     <skip />
-    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

@@ -978,7 +978,7 @@
     <string name="device_details_battery_charging" msgid="3464969346075775143">"ਬੈਟਰੀ ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"</string>
     <string name="device_details_key_missing_title" msgid="3568401701538114387">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਮੁੜ-ਸ਼ੁਰੂ ਕਰ ਕੇ ਦੇਖੋ। ਜੇ ਇਸ ਨਾਲ ਕੰਮ ਨਹੀਂ ਬਣਦਾ, ਤਾਂ ਡੀਵਾਈਸ ਨੂੰ ਅਣਜੋੜਾਬੱਧ ਕਰੋ। ਤੁਹਾਡੀ ਸੁਰੱਖਿਆ ਲਈ, ਇਸਨੂੰ ਸਿਰਫ਼ ਉਦੋਂ ਹੀ ਦੁਬਾਰਾ ਜੋੜਾਬੱਧ ਕਰੋ, ਜਦੋਂ ਤੁਸੀਂ ਕਿਸੇ ਜਨਤਕ ਥਾਂ \'ਤੇ ਨਾ ਹੋਵੋ।\n\nਜੇ ਇਹ ਡੀਵਾਈਸ ਨਜ਼ਦੀਕ ਨਹੀਂ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ ਕੁਝ ਵੀ ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ।"</string>
     <string name="verbose_printer_logging_title" msgid="6525634245166402031">"ਵਰਬੋਸ ਪ੍ਰਿੰਟ ਲੌਗਿੰਗ"</string>
-    <string name="verbose_printer_logging_summary" msgid="6558076303223667013">"ਵਧੀਕ ਡੀਬੱਗ ਲੌਗ, ਜਿਸ ਵਿੱਚ ਇੰਟਰਨੈੱਟ ਪ੍ਰਿੰਟਿੰਗ ਪ੍ਰੋਟੋਕੋਲ (IPP) ਸ਼ਾਮਲ ਹੈ, ਜਿਸ ਵਿੱਚ ਪ੍ਰਾਈਵੇਟ ਜਾਣਕਾਰੀ ਹੋ ਸਕਦੀ ਹੈ।"</string>
+    <string name="verbose_printer_logging_summary" msgid="6558076303223667013">"ਵਧੀਕ ਡੀਬੱਗ ਲੌਗ, ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਇੰਟਰਨੈੱਟ ਪ੍ਰਿੰਟਿੰਗ ਪ੍ਰੋਟੋਕੋਲ (IPP) ਸ਼ਾਮਲ ਹੈ, ਜਿਸ ਵਿੱਚ ਪ੍ਰਾਈਵੇਟ ਜਾਣਕਾਰੀ ਹੋ ਸਕਦੀ ਹੈ।"</string>
     <string name="bluetooth_unpair_dialog_forget_confirm_button" msgid="9184489424930549015">"ਡੀਵਾਈਸ ਨੂੰ ਭੁੱਲ ਜਾਓ"</string>
     <string name="bluetooth_companion_app_remove_association_confirm_button" msgid="76323555527926915">"ਐਪ ਡਿਸਕਨੈਕਟ ਕਰੋ"</string>
     <string name="device_details_more_settings" msgid="950302792331611271">"ਹੋਰ ਸੈਟਿੰਗਾਂ"</string>
@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"ਆਪਣੇ ਮਾਊਸ ਨੂੰ ਵੱਖ-ਵੱਖ ਡਿਸਪਲੇਆਂ \'ਤੇ ਲਿਜਾਓ"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"ਬਾਹਰੀ ਡਿਸਪਲੇ ਦੀ ਵਰਤੋਂ ਕਰੋ"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"ਡਿਸਪਲੇ ਰੈਜ਼ੋਲਿਊਸ਼ਨ"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਕਨੈਕਸ਼ਨ ਵਿਹਾਰ"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"ਵੱਖਰੀ ਡਿਸਪਲੇ ਵਜੋਂ ਵਰਤੋ"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"ਬਿਲਟ-ਇਨ ਡਿਸਪਲੇ ਨੂੰ ਪ੍ਰਤਿਬਿੰਬਿਤ ਕਰੋ"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"ਕਨੈਕਸ਼ਨ ਵਿੰਡੋ ਦਿਖਾਓ"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"ਸਕ੍ਰੋਲਿੰਗ"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"ਕੰਟਰੋਲ ਕੀਤੀ ਸਕ੍ਰੋਲਿੰਗ"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"ਸਕ੍ਰੋਲ ਕਰਨ ਦੀ ਗਤੀ"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"ਸਕ੍ਰੋਲਿੰਗ ਨੂੰ ਤੇਜ਼ ਕਰੋ"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"ਸਕ੍ਰੋਲਿੰਗ ਨੂੰ ਹੌਲੀ ਕਰੋ"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"ਪੁਆਇੰਟ ਨੂੰ ਜ਼ਿਆਦਾ ਤੇਜ਼ ਕਰੋ"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"ਪੁਆਇੰਟ ਨੂੰ ਜ਼ਿਆਦਾ ਹੌਲੀ ਕਰੋ"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"ਮਾਊਸ ਦੇ ਪ੍ਰਾਇਮਰੀ ਬਟਨ ਨੂੰ ਸਵੈਪ ਕਰੋ"</string>
@@ -2375,8 +2374,7 @@
     <string name="audio_category_title" msgid="5283853679967605826">"ਆਡੀਓ"</string>
     <string name="general_category_title" msgid="6298579528716834157">"ਸਧਾਰਨ"</string>
     <string name="display_category_title" msgid="6638191682294461408">"ਡਿਸਪਲੇ"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"ਰੰਗ ਅਤੇ ਮੋਸ਼ਨ"</string>
     <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"ਗੂੜ੍ਹਾ ਥੀਮ, ਰੰਗ ਸੁਧਾਈ, ਐਨੀਮੇਸ਼ਨ ਹਟਾਓ"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"ਕਰਸਰ ਅਤੇ ਟੱਚਪੈਡ ਦੀ ਪਹੁੰਚਯੋਗਤਾ"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"ਆਕਾਰ, ਰੰਗ, ਕਿਸਮ"</string>
@@ -2465,7 +2463,7 @@
     <string name="accessibility_magnification_mode_dialog_option_switch" msgid="561043521011229424">"ਪੂਰੀ ਅਤੇ ਅੰਸ਼ਕ ਸਕ੍ਰੀਨ ਵਿਚਾਲੇ ਸਵਿੱਚ ਕਰੋ"</string>
     <string name="accessibility_magnification_area_settings_mode_switch_summary" msgid="2885238806099080966">"ਦੋਵੇਂ ਵਿਕਲਪਾਂ ਵਿਚਾਲੇ ਇੱਧਰ-ਉੱਧਰ ਜਾਣ ਲਈ ਸਵਿੱਚ ਬਟਨ \'ਤੇ ਟੈਪ ਕਰੋ"</string>
     <string name="accessibility_magnification_triple_tap_warning_title" msgid="8484669851397296597">"ਇਸ ਨਾਲ ਸ਼ਾਇਦ ਤੁਹਾਡਾ ਕੀ-ਬੋਰਡ ਹੌਲੀ ਹੋ ਜਾਵੇ"</string>
-    <string name="accessibility_magnification_triple_tap_warning_message" msgid="2008671502848936410">"ਆਪਣੀ ਸਕ੍ਰੀਨ ਦੇ ਕਿਸੇ ਹਿੱਸੇ ਨੂੰ ਵੱਡਦਰਸ਼ੀ ਕਰਨ ਲਈ ਟ੍ਰਿਪਲ-ਟੈਪ ਵਰਤਦੇ ਸਮੇਂ, ਤੁਹਾਨੂੰ ਸ਼ਾਇਦ ਕੀ-ਬੋਰਡ \'ਤੇ ਕੁਝ ਸਮੱਸਿਆਵਾਂ ਦਿਸਣ।\n\nਇਸ ਤੋਂ ਬਚਣ ਲਈ, ਤੁਸੀਂ ਆਪਣੇ ਵੱਡਦਰਸ਼ੀਕਰਨ ਸ਼ਾਰਟਕੱਟ ਨੂੰ ਟ੍ਰਿਪਲ-ਟੈਪ ਤੋਂ ਕਿਸੇ ਹੋਰ ਵਿਕਲਪ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ।\n"<annotation id="link">"ਸੈਟਿੰਗ ਬਦਲੋ"</annotation></string>
+    <string name="accessibility_magnification_triple_tap_warning_message" msgid="2008671502848936410">"ਆਪਣੀ ਸਕ੍ਰੀਨ ਦੇ ਕਿਸੇ ਹਿੱਸੇ ਨੂੰ ਵੱਡਾ ਕਰਨ ਲਈ ਟ੍ਰਿਪਲ-ਟੈਪ ਵਰਤਦੇ ਸਮੇਂ, ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਤੁਹਾਨੂੰ ਕੀ-ਬੋਰਡ \'ਤੇ ਕੁਝ ਸਮੱਸਿਆਵਾਂ ਦਿਸਣ।\n\nਇਸ ਤੋਂ ਬਚਣ ਲਈ, ਤੁਸੀਂ ਆਪਣੇ ਵੱਡਦਰਸ਼ੀਕਰਨ ਸ਼ਾਰਟਕੱਟ ਨੂੰ ਟ੍ਰਿਪਲ-ਟੈਪ ਤੋਂ ਕਿਸੇ ਹੋਰ ਵਿਕਲਪ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ।\n"<annotation id="link">"ਸੈਟਿੰਗ ਬਦਲੋ"</annotation></string>
     <string name="accessibility_magnification_triple_tap_warning_positive_button" msgid="8712304035901450010">"ਫਿਰ ਵੀ ਜਾਰੀ ਰੱਖੋ"</string>
     <string name="accessibility_magnification_triple_tap_warning_negative_button" msgid="2028849736366584733">"ਰੱਦ ਕਰੋ"</string>
     <string name="accessibility_magnification_service_settings_title" msgid="3531350704632316017">"ਵੱਡਦਰਸ਼ੀਕਰਨ ਸੈਟਿੰਗਾਂ"</string>
@@ -2477,8 +2475,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"ਸ਼ਾਰਟਕੱਟ ਨਾਲ ਵੱਡਾ ਕਰੋ"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"ਸ਼ਾਰਟਕੱਟ ਅਤੇ ਤਿੰਨ-ਟੈਪ ਨਾਲ ਵੱਡਾ ਕਰੋ"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"<xliff:g id="SERVICE">%1$s</xliff:g> ਬਾਰੇ"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"ਡਿਸਪਲੇ ਸਾਈਜ਼ ਅਤੇ ਲਿਖਤ"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"ਫੌਂਟ ਸਾਈਜ਼, ਡਿਸਪਲੇ ਸਾਈਜ਼, ਬੋਲਡ ਲਿਖਤ, ਆਊਟਲਾਈਨ ਲਿਖਤ"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"ਲਿਖਤ ਦੇ ਦਿਸਣ ਦਾ ਤਰੀਕਾ ਬਦਲੋ"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"ਵਿਸ਼ਾ: ਗਰਮ ਹਵਾ ਦੇ ਗੁਬਾਰੇ ਦੇ ਡਿਜ਼ਾਈਨ"</string>
@@ -3749,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"ਸਿਸਟਮ ਧੁਨੀਆਂ ਅਤੇ ਥਰਥਰਾਹਟਾਂ"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਧੁਨੀ"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"ਲਾਈਵ ਸੁਰਖੀਆਂ"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"ਕਾਲਾਂ, ਵੀਡੀਓ ਅਤੇ ਹੋਰ ਮੀਡੀਆ ਲਈ ਸੁਰਖੀਆਂ ਪ੍ਰਾਪਤ ਕਰੋ"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"ਚਾਲੂ ਹੈ / ਕਾਲਾਂ, ਵੀਡੀਓ ਅਤੇ ਹੋਰ ਮੀਡੀਆ ਲਈ ਸੁਰਖੀਆਂ ਪ੍ਰਾਪਤ ਕਰੋ"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"ਬੰਦ ਹੈ / ਕਾਲਾਂ, ਵੀਡੀਓ ਅਤੇ ਹੋਰ ਮੀਡੀਆ ਲਈ ਸੁਰਖੀਆਂ ਪ੍ਰਾਪਤ ਕਰੋ"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"ਤਾਰ ਵਾਲੇ ਹੈੱਡਫ਼ੋਨ"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"ਅਨੁਰੂਪ ਮੀਡੀਆ ਤੋਂ ਆਡੀਓ ਵਧੇਰੇ ਇਮਰਸਿਵ ਬਣ ਜਾਂਦੀ ਹੈ"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"ਬੰਦ"</string>
@@ -3900,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"ਪ੍ਰਮੁੱਖ ਕਹਾਣੀਆਂ, ਸੰਪਾਦਕੀਆਂ ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"ਪਸੰਦਾਂ, ਪੋਸਟਾਂ ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"ਸੂਚਨਾ-ਪੱਤਰ, ਸਿਫ਼ਾਰਸ਼ੀ ਮੀਡੀਆ ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"ਫ਼ਿਲਹਾਲ ਸਾਰੀਆਂ ਐਪਾਂ ਸੂਚਨਾ ਪ੍ਰਬੰਧਕ ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੀਆਂ ਹਨ"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"AI ਨਾਲ ਪ੍ਰਬੰਧਨ ਕਰੋ"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"ਸੂਚਨਾ ਦੇ ਸਾਰਾਂਸ਼"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"ਲੰਬੇ ਸੁਨੇਹਿਆਂ ਦੇ ਤਤਕਾਲ ਰੀਕੈਪ ਪ੍ਰਾਪਤ ਕਰੋ"</string>
@@ -3913,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"ਇਨ੍ਹਾਂ ਐਪਾਂ ਨੂੰ ਸ਼ਾਮਲ ਨਾ ਕਰੋ"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"ਸੂਚਨਾ ਦੇ ਸਾਰਾਂਸ਼"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"ਲੰਬੇ ਸੁਨੇਹਿਆਂ ਦੇ ਤਤਕਾਲ ਰੀਕੈਪ ਪ੍ਰਾਪਤ ਕਰੋ"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"ਫ਼ਿਲਹਾਲ ਲਾਗੂ ਹੋਣ ਵਾਲੀਆਂ ਸਾਰੀਆਂ ਐਪਾਂ ਸੂਚਨਾ ਸਾਰਾਂਸ਼ਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੀਆਂ ਹਨ"</string>
     <string name="live_notifications" msgid="4650406646292963831">"ਲਾਈਵ ਸੂਚਨਾਵਾਂ"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"ਲਾਈਵ ਅੱਪਡੇਟ"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"ਸਥਿਤੀ ਪੱਟੀ ਅਤੇ ਲਾਕ ਸਕ੍ਰੀਨ \'ਤੇ ਨਿਰੰਤਰ, ਸਮਾਂ-ਸੰਵੇਦਨਸ਼ੀਲ ਸੂਚਨਾਵਾਂ ਦਿਖਾਓ"</string>
@@ -4442,7 +4434,7 @@
     <string name="high_power_prompt_body" msgid="8570446878622133298">"<xliff:g id="APP_NAME">%1$s</xliff:g> ਨੂੰ ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਹਮੇਸ਼ਾਂ ਚਾਲੂ ਰੱਖਣ ਨਾਲ ਬੈਟਰੀ ਲਾਈਫ਼ ਘੱਟ ਸਕਦੀ ਹੈ। \n\nਤੁਸੀਂ ਇਸਨੂੰ ਬਾਅਦ ਵਿੱਚ ਸੈਟਿੰਗਾਂ -&gt; ਐਪਾਂ ਵਿੱਚ ਜਾ ਕੇ ਬਦਲ ਸਕਦੇ ਹੋ।"</string>
     <string name="battery_summary" msgid="2491764359695671207">"ਪਿਛਲੀ ਵਾਰ ਪੂਰਾ ਚਾਰਜ ਕਰਨ ਤੋਂ ਬਾਅਦ ਬੈਟਰੀ ਦੀ <xliff:g id="PERCENTAGE">%1$s</xliff:g> ਵਰਤੋਂ ਹੋਈ"</string>
     <string name="battery_summary_24hr" msgid="7656033283282656551">"ਪਿਛਲੇ 24 ਘੰਟਿਆਂ ਵਿੱਚ <xliff:g id="PERCENTAGE">%1$s</xliff:g> ਵਰਤੀ ਗਈ"</string>
-    <string name="no_battery_summary" msgid="5769159953384122003">"ਪਿਛਲੀ ਵਾਰ ਪੂਰਾ ਚਾਰਜ ਕਰਨ ਤੋਂ ਬਾਅਦ ਬੈਟਰੀ ਦੀ ਕੋਈ ਵਰਤੋਂ ਨਹੀਂ"</string>
+    <string name="no_battery_summary" msgid="5769159953384122003">"ਪਿਛਲੀ ਵਾਰ ਪੂਰਾ ਚਾਰਜ ਕਰਨ ਤੋਂ ਬਾਅਦ ਬੈਟਰੀ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਹੋਈ"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="1575283098565582433">"ਕੀ ਬੱਗ ਰਿਪੋਰਟ ਸਾਂਝੀ ਕਰਨੀ ਹੈ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="4869053468609007680">"ਤੁਹਾਡੇ IT ਪ੍ਰਸ਼ਾਸਕ ਨੇ ਇਸ ਡੀਵਾਈਸ ਦੀ ਸਮੱਸਿਆ ਨੂੰ ਠੀਕ ਕਰਨ ਵਿੱਚ ਮਦਦ ਲਈ ਬੱਗ ਰਿਪੋਰਟ ਦੀ ਬੇਨਤੀ ਕੀਤੀ ਹੈ। ਐਪਾਂ ਅਤੇ ਡਾਟੇ ਨੂੰ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="8714439220818865391">"ਤੁਹਾਡੇ IT ਪ੍ਰਸ਼ਾਸਕ ਨੇ ਇਸ ਡੀਵਾਈਸ ਦੀ ਸਮੱਸਿਆ ਨੂੰ ਠੀਕ ਕਰਨ ਵਿੱਚ ਮਦਦ ਲਈ ਬੱਗ ਰਿਪੋਰਟ ਦੀ ਬੇਨਤੀ ਕੀਤੀ ਹੈ। ਐਪਾਂ ਅਤੇ ਡਾਟੇ ਨੂੰ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ, ਅਤੇ ਤੁਹਾਡਾ ਡੀਵਾਈਸ ਆਰਜ਼ੀ ਤੌਰ \'ਤੇ ਹੌਲੀ ਹੋ ਸਕਦਾ ਹੈ।"</string>
@@ -4636,7 +4628,7 @@
     <string name="color_temperature_desc" msgid="6713259535885669622">"ਵਧੇਰੇ ਠੰਡੇ ਡਿਸਪਲੇ ਰੰਗਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ"</string>
     <string name="color_temperature_toast" msgid="7611532183532407342">"ਰੰਗ ਬਦਲਾਅ ਲਾਗੂ ਕਰਨ ਲਈ, ਸਕ੍ਰੀਨ ਨੂੰ ਬੰਦ ਕਰੋ"</string>
     <string name="camera_laser_sensor_switch" msgid="7097842750947187671">"ਕੈਮਰਾ ਲੇਜ਼ਰ ਸੈਂਸਰ"</string>
-    <string name="ota_disable_automatic_update" msgid="1953894421412420231">"ਸਵੈਚਲਿਤ ਸਿਸਟਮ ਅੱਪਡੇਟ"</string>
+    <string name="ota_disable_automatic_update" msgid="1953894421412420231">"ਆਪਣੇ-ਆਪ ਹੋਣ ਵਾਲੇ ਸਿਸਟਮ ਅੱਪਡੇਟ"</string>
     <string name="ota_disable_automatic_update_summary" msgid="7803279951533276841">"ਡੀਵਾਈਸ ਮੁੜ-ਸ਼ੁਰੂ ਹੋਣ \'ਤੇ ਅੱਪਡੇਟ ਲਾਗੂ ਕਰੋ"</string>
     <string name="usage" msgid="287782903846013936">"ਵਰਤੋਂ"</string>
     <string name="cellular_data_usage" msgid="5874156338825285334">"ਮੋਬਾਈਲ ਡਾਟਾ ਵਰਤੋਂ"</string>
@@ -4841,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"ਇਸ਼ਾਰਾ ਨੈਵੀਗੇਸ਼ਨ"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"ਡੈਮੋ ਵਰਤ ਕੇ ਦੇਖੋ"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"ਬਟਨ ਨੈਵੀਗੇਸ਼ਨ"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"ਇਸ਼ਾਰਾ ਨੈਵੀਗੇਸ਼ਨ, \'ਪਿੱਛੇ\' ਸੰਬੰਧੀ ਸੰਵੇਦਨਸ਼ੀਲਤਾ, \'ਪਿੱਛੇ\' ਸੰਬੰਧੀ ਇਸ਼ਾਰਾ"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"ਨੈਵੀਗੇਸ਼ਨ, ਹੋਮ ਬਟਨ"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"ਇੱਕ ਹੱਥ ਮੋਡ"</string>
@@ -5487,8 +5487,7 @@
       <item quantity="other"><xliff:g id="FIRST_1">%1$s</xliff:g>, <xliff:g id="SECOND">%2$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"ਕਾਲ ਦੌਰਾਨ ਸੰਚਾਰ ਕਰਨ ਲਈ ਲਿਖਤ ਸੁਨੇਹੇ ਦੀ ਵਰਤੋਂ ਕਰੋ"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5961,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"Mausu displeylər arasında hərəkət etdirin"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"Xarici displeyi istifadə edin"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"Displeyin ayırdetmə dəqiqliyi"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"Defolt bağlantı fəaliyyəti"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"Ayrı displey kimi istifadə edin"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"Daxili displeyi əks etdirin"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"Bağlantı dialoqunu göstərin"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Sürüşdürmə"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"İdarə edilən sürüşdürmə"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Sürüşdürmə sürəti"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"Sürüşdürməni daha sürətli edin"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"Sürüşdürməni daha yavaş edin"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Poynteri sürətləndirin"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Poynteri yavaşladın"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Əsas maus düyməsini çəkin"</string>
@@ -2375,10 +2374,8 @@
     <string name="audio_category_title" msgid="5283853679967605826">"Audio"</string>
     <string name="general_category_title" msgid="6298579528716834157">"Ümumi"</string>
     <string name="display_category_title" msgid="6638191682294461408">"Ekran"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
-    <!-- no translation found for accessibility_color_and_motion_subtext (1150281881647191503) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"Rəng və hərəkət"</string>
+    <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"Tünd tema, rəng korreksiyası, animasiyalar silin"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"Kursor və taçped üzrə xüsusi imkanlar"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"Ölçü, rəng, növ"</string>
     <string name="accessibility_pointer_color_customization_title" msgid="2841888132681075999">"Kursor rəngi"</string>
@@ -2401,13 +2398,10 @@
     <string name="accessibility_turn_screen_darker_title" msgid="5986223133285858349">"Ekranı qaraldın"</string>
     <string name="interaction_control_category_title" msgid="2696474616743882372">"Qarşılıqlı əlaqə nəzarəti"</string>
     <string name="accessibility_tap_assistance_title" msgid="1058913033421048284">"Zamanlama üzrə idarə elementləri"</string>
-    <!-- no translation found for accessibility_tap_assistance_subtext (1805279944665087799) -->
-    <skip />
+    <string name="accessibility_tap_assistance_subtext" msgid="1805279944665087799">"Toxunun və saxlayın əməliyyatı üzrə gecikmə, tədbir görmək vaxtı"</string>
     <string name="accessibility_system_controls_title" msgid="6403287349518987624">"Sistem idarəçiliyi"</string>
-    <!-- no translation found for accessibility_system_controls_subtext (2722046038429586174) -->
-    <skip />
-    <!-- no translation found for accessibility_system_controls_subtext_one_handed_not_supported (4973507525360793402) -->
-    <skip />
+    <string name="accessibility_system_controls_subtext" msgid="2722046038429586174">"Naviqasiya rejimi, bir əlli rejim, ekran rotasiyası"</string>
+    <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Naviqasiya rejimi, ekran rotasiyası"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Rəy göndərin"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Sorğuda iştirak edin"</string>
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google Disability Dəstək ilə əlaqə saxlayın"</string>
@@ -2481,10 +2475,8 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"Qısayol ilə böyüdün"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"Qısayol &amp; üç toxunuşla böyüdün"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"<xliff:g id="SERVICE">%1$s</xliff:g> haqqında"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
-    <!-- no translation found for accessibility_text_reading_options_subtext (3480489973093251705) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Displey ölçüsü və mətn"</string>
+    <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Şrift ölçüsü, displey ölçüsü, qalın mətn, kontur mətni"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Mətnin necə göstərilməsini dəyişdirin"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Mövzu: Hava balonu dizaynları"</string>
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"Kimdən: Bill"</string>
@@ -2658,10 +2650,8 @@
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"Naviqasiya ayarları"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"Vibrasiya və taktil funksiyalar"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"Müxtəlif istifadələr üçün vibrasiya gücünü idarə edin"</string>
-    <!-- no translation found for accessibility_vibration_settings_state_on (3316037269092584284) -->
-    <skip />
-    <!-- no translation found for accessibility_vibration_settings_state_off (113565506991847845) -->
-    <skip />
+    <string name="accessibility_vibration_settings_state_on" msgid="3316037269092584284">"Aktiv/Zənglər, bildirişlər və zəngli saatlar üçün vibrasiya səviyyələrini idarə edin"</string>
+    <string name="accessibility_vibration_settings_state_off" msgid="113565506991847845">"Deaktiv/Zənglər, bildirişlər və zəngli saatlar üçün vibrasiya səviyyələrini idarə edin"</string>
     <string name="accessibility_vibration_setting_disabled_for_silent_mode_summary" msgid="3982701772953323190">"Cihaz səssizə ayarlandığına görə ayar deaktiv edilib"</string>
     <string name="accessibility_call_vibration_category_title" msgid="2545607568768192318">"Zənglər"</string>
     <string name="accessibility_notification_alarm_vibration_category_title" msgid="2683635252414849417">"Bildirişlər və siqnallar"</string>
@@ -2681,8 +2671,7 @@
     <string name="accessibility_color_correction_qs_tooltip_content" msgid="3258628434235475205">"Həmçinin ekranınızın yuxarı hissəsindən Sürətli Ayarlara rəng korreksiyası əlavə edə bilərsiniz"</string>
     <string name="accessibility_color_inversion_auto_added_qs_tooltip_content" msgid="7267618234972101725">"Sürətli Ayarlara rəng inversiyası əlavə edilib. İstənilən vaxt aktiv və ya deaktiv etmək üçün aşağı sürüşdürün."</string>
     <string name="accessibility_color_inversion_qs_tooltip_content" msgid="5046332142185711869">"Həmçinin ekranınızın yuxarı hissəsindən Sürətli Ayarlara rəng inversiyası əlavə edə bilərsiniz"</string>
-    <!-- no translation found for reduce_bright_colors_preference_summary (8112736110942731246) -->
-    <skip />
+    <string name="reduce_bright_colors_preference_summary" msgid="8112736110942731246">"Ekran parlaqlığını minimum səviyyədən daha da azaltmaq"</string>
     <string name="accessibility_reduce_bright_colors_auto_added_qs_tooltip_content" msgid="1906588335786328512">"Sürətli Ayarlara əlavə qaraltma əlavə edilib. İstənilən vaxt aktiv və ya deaktiv etmək üçün aşağı sürüşdürün."</string>
     <string name="accessibility_reduce_bright_colors_qs_tooltip_content" msgid="7522121299176176785">"Həmçinin ekranınızın yuxarı hissəsindən Sürətli Ayarlara əlavə qaraltma əlavə edə bilərsiniz"</string>
     <string name="accessibility_one_handed_mode_auto_added_qs_tooltip_content" msgid="7914554254280416532">"Sürətli Ayarlara tək əl rejimi əlavə edilib. İstənilən vaxt aktiv və ya deaktiv etmək üçün aşağı sürüşdürün."</string>
@@ -2748,8 +2737,7 @@
     <string name="accessibility_found_all_devices" msgid="7817834722148556520">"Eşitmə cihazınızı görmürsünüz?"</string>
     <string name="accessibility_list_all_devices_title" msgid="161495343959211216">"Digər cihazlara baxın"</string>
     <string name="accessibility_audio_adjustment_title" msgid="1332113739136802997">"Audiokorreksiya"</string>
-    <!-- no translation found for accessibility_audio_adjustment_subtext (2190523175597700025) -->
-    <skip />
+    <string name="accessibility_audio_adjustment_subtext" msgid="2190523175597700025">"Mono audio, audio balansı"</string>
     <string name="accessibility_toggle_audio_description_preference_title" msgid="8916473886256061220">"Audio təsvir"</string>
     <string name="accessibility_audio_description_summary" msgid="2554789094873781056">"Dəstəklənən film və şoularda ekranda baş verənlərin təsvirini eşidin"</string>
     <string name="keywords_audio_description" msgid="6202816411593281252">"audio təsvir, audio, təsvir, görmə imkanının pis olması,"</string>
@@ -2760,8 +2748,7 @@
     <string name="accessibility_summary_state_stopped" msgid="2343602489802623424">"İşləmir. Məlumat üçün klikləyin."</string>
     <string name="accessibility_description_state_stopped" msgid="5364752492861199133">"Xidmətdə problem var."</string>
     <string name="accessibility_shortcuts_settings_title" msgid="974740249671825145">"Xüsusi imkanlar qısayolları"</string>
-    <!-- no translation found for accessibility_shortcuts_settings_subtext (3870836550836457943) -->
-    <skip />
+    <string name="accessibility_shortcuts_settings_subtext" msgid="3870836550836457943">"Xüsusi imkanlar düyməsi, səs düymələri qısayolu"</string>
     <string name="enable_quick_setting" msgid="6648073323202243604">"Sürətli Ayarlarda Göstər"</string>
     <string name="daltonizer_mode_deuteranomaly_title" msgid="3229433065035047931">"Qırmızı-yaşıl, yaşıl zəif"</string>
     <string name="daltonizer_mode_protanomaly_title" msgid="2572040492905945405">"Qırmızı-yaşıl, qırmızı zəif"</string>
@@ -3105,8 +3092,7 @@
     <string name="on_device_recognition_settings" msgid="6503160369314598069">"Cihazda tanıma ayarları"</string>
     <string name="on_device_recognition_settings_title" msgid="7137599722039096545">"Cihazda tanıma"</string>
     <string name="on_device_recognition_settings_summary" msgid="3292736423223499348">"Cihazda nitqin tanınması"</string>
-    <!-- no translation found for tts_subtext (8958790811881046789) -->
-    <skip />
+    <string name="tts_subtext" msgid="8958790811881046789">"Nitq sürəti və səs tonunu tənzimləyin"</string>
     <string name="tts_engine_preference_title" msgid="7808775764174571132">"Defolt nitq sintezatoru"</string>
     <string name="tts_engine_settings_title" msgid="1298093555056321577">"Mühərrik ayarları"</string>
     <string name="tts_sliders_title" msgid="6901146958648426181">"Nitq sürəti və tonu"</string>
@@ -3760,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Sistem səsləri və vibrasiyaları"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"İş profili səsi"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Avtomatik subtitrlər"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"Zənglər, videolar və digər media üçün subtitrlər əldə edin"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"Aktiv/Zənglər, videolar və digər media üçün subtitrlər əldə edin"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"Deaktiv/Zənglər, videolar və digər media üçün subtitrlər əldə edin"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Simli qulaqlıq"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Uyğun mediadan gələn audio daha immersiv olur"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Deaktiv"</string>
@@ -3911,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Ən çox oxunan xəbərlər, redaksiya yazıları və s."</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Bəyənmələr, postlar və s."</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Xəbər bülletenləri, tövsiyə edilən media və s."</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"Bütün tətbiqlər hazırda bildiriş düzənləyicisindən istifadə edir"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Sİ ilə idarə edin"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Bildiriş xülasələri"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Daha uzun mesajların qısa icmalını əldə edin"</string>
@@ -3924,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Bu tətbiqləri daxil etməyin"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Bildiriş xülasələri"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Daha uzun mesajların qısa icmalını əldə edin"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"Bütün müvafiq tətbiqlər hazırda bildiriş xülasələrindən istifadə edir"</string>
     <string name="live_notifications" msgid="4650406646292963831">"Canlı bildirişlər"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Canlı güncəlləmələr"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Status panelində və kilid ekranında davam edən, zamana həssas bildirişlərin göstərilməsi"</string>
@@ -4852,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"Jest Naviqasiyası"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"Demonu sınayın"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"Düymə ilə naviqasiya"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"jest naviqasiyası, geri həssaslıq, geri jest"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"naviqasiya, əsas ekran düyməsi"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"Birəlli rejim"</string>
@@ -5498,8 +5487,7 @@
       <item quantity="one"><xliff:g id="FIRST_0">%1$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"Zəng zamanı ünsiyyət qurmaq üçün mətndən istifadə edin"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5758,13 +5746,10 @@
     <string name="color_inversion_state_on" msgid="1160969033636440368">"Aktiv"</string>
     <string name="color_inversion_state_off" msgid="6925638668080451724">"Deaktiv"</string>
     <string name="color_inversion_feature_summary" msgid="1199876648549627647">"İşıqlı ekranları tündləşdirir, tünd ekranları işıqlandırır"</string>
-    <!-- no translation found for magnification_feature_summary (4403387702011660253) -->
-    <skip />
+    <string name="magnification_feature_summary" msgid="4403387702011660253">"Ekranınızdakı kontenti böyütmək üçün yaxınlaşdırın"</string>
     <string name="autoclick_disabled" msgid="3213396804955002120">"Deaktiv"</string>
-    <!-- no translation found for show_captions_disabled (924366862253349790) -->
-    <skip />
-    <!-- no translation found for show_captions_enabled (3495595825041704052) -->
-    <skip />
+    <string name="show_captions_disabled" msgid="924366862253349790">"Deaktiv/Altyazı ölçüsünü və üslubunu fərdiləşdirin"</string>
+    <string name="show_captions_enabled" msgid="3495595825041704052">"Aktiv/Altyazı ölçüsünü və üslubunu fərdiləşdirin"</string>
     <string name="live_caption_disabled" msgid="3562035026547887366">"Deaktiv"</string>
     <string name="live_caption_enabled" msgid="5269360946200718949">"Aktiv"</string>
     <string name="audio_seek_bar_state_left_first" msgid="1641359989891833888">"Audio <xliff:g id="PERCENT_LEFT">%1$s</xliff:g> sol, <xliff:g id="PERCENT_RIGHT">%2$s</xliff:g> sağ"</string>
@@ -5975,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>
