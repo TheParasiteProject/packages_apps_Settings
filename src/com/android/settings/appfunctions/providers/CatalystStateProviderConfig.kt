@@ -34,6 +34,7 @@ import com.android.settings.applications.specialaccess.AllFilesAccessAppDetailSc
 import com.android.settings.applications.specialaccess.AllFilesAccessAppListScreen
 import com.android.settings.applications.specialaccess.AppInfoInstallUnknownAppsScreen
 import com.android.settings.applications.specialaccess.AppInfoManageWriteSettingsScreen
+import com.android.settings.applications.specialaccess.AppsFullScreenIntentScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen
 import com.android.settings.applications.specialaccess.SpecialAccessSettingsScreen
 import com.android.settings.applications.specialaccess.WifiControlAppDetailScreen
@@ -95,7 +96,6 @@ import com.android.settings.spa.app.catalyst.AppInfoInteractAcrossProfilesScreen
 import com.android.settings.spa.app.catalyst.AppInfoScreen
 import com.android.settings.spa.app.catalyst.AppInfoStorageScreen
 import com.android.settings.spa.app.catalyst.AppStorageAppListScreen
-import com.android.settings.spa.app.catalyst.AppsFullScreenIntentScreen
 import com.android.settings.supervision.SupervisionDashboardScreen
 import com.android.settings.supervision.SupervisionPinManagementScreen
 import com.android.settings.supervision.SupervisionWebContentFiltersScreen

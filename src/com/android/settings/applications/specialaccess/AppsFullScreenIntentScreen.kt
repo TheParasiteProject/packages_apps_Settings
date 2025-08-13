@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.android.settings.spa.app.catalyst
+package com.android.settings.applications.specialaccess
 
 import android.app.settings.SettingsEnums
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.android.settings.R
+import com.android.settings.applications.specialaccess.AppInfoFullScreenIntentScreen.Companion.hasFullScreenPermission
 import com.android.settings.contract.TAG_DEVICE_STATE_SCREEN
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.flags.Flags
 import com.android.settings.spa.SpaActivity
-import com.android.settings.spa.app.catalyst.AppInfoFullScreenIntentScreen.Companion.hasFullScreenPermission
 import com.android.settings.spa.app.specialaccess.UseFullScreenIntentAppListProvider
 import com.android.settingslib.metadata.PreferenceHierarchyGenerator
 import com.android.settingslib.metadata.PreferenceMetadata
