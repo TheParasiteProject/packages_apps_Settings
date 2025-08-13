@@ -24,7 +24,6 @@ import android.view.Display.DEFAULT_DISPLAY
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 
 /** Centralized data source to provide display updates for display preference fragments */
@@ -37,20 +36,15 @@ constructor(
 ) : AndroidViewModel(application) {
 
     data class DisplayUiState(
-        val enabledDisplays: Map<Int, DisplayDevice>,
-        val selectedDisplayId: Int,
-        val isMirroring: Boolean,
-        val includeDefaultDisplayInTopology: Boolean,
+        val enabledDisplays: Map<Int, DisplayDevice> = emptyMap(),
+        val selectedDisplayId: Int = -1,
+        val isMirroring: Boolean = false,
+        val includeDefaultDisplayInTopology: Boolean = false,
     )
 
     private val appContext = application.applicationContext
-    private val selectedDisplayId = MutableLiveData<Int>()
-    private val enabledDisplays = MutableLiveData<Map<Int, DisplayDevice>>()
-    private val isMirroring = MutableLiveData<Boolean>()
-    private val includeDefaultDisplayInTopology = MutableLiveData<Boolean>()
-
-    private val uiStateMediator = MediatorLiveData<DisplayUiState>()
-    val uiState: LiveData<DisplayUiState> = uiStateMediator
+    private val _uiState = MutableLiveData(DisplayUiState())
+    val uiState: LiveData<DisplayUiState> = _uiState
 
     private val displayListener =
         object : ExternalDisplaySettingsConfiguration.DisplayListener() {
@@ -76,25 +70,10 @@ constructor(
         }
 
     init {
-        val updateMediator = {
-            val displays = enabledDisplays.value ?: emptyMap()
-            val selectedId = selectedDisplayId.value ?: getDefaultDisplayId()
-            val mirroring = isMirroring.value ?: isDisplayInMirroringMode(appContext)
-            val includeDefaultDisplayInTopology =
-                includeDefaultDisplayInTopology.value ?: isIncludeDefaultDisplayInTopology()
-            uiStateMediator.value =
-                DisplayUiState(displays, selectedId, mirroring, includeDefaultDisplayInTopology)
-        }
-        uiStateMediator.addSource(enabledDisplays) { updateMediator() }
-        uiStateMediator.addSource(selectedDisplayId) { updateMediator() }
-        uiStateMediator.addSource(isMirroring) { updateMediator() }
-        uiStateMediator.addSource(includeDefaultDisplayInTopology) { updateMediator() }
-
         injector.registerDisplayListener(displayListener)
         registerMirrorModeObserver()
         registerIncludeDefaultDisplayInTopologyObserver()
 
-        updateSelectedDisplay(getDefaultDisplayId())
         updateEnabledDisplays()
         updateMirroringState()
         updateIncludeDefaultDisplayInTopology()
@@ -107,8 +86,8 @@ constructor(
     }
 
     fun updateSelectedDisplay(newDisplayId: Int) {
-        if (selectedDisplayId.value != newDisplayId) {
-            selectedDisplayId.value = newDisplayId
+        if (_uiState.value?.selectedDisplayId != newDisplayId) {
+            updateState { it.copy(selectedDisplayId = newDisplayId) }
         }
     }
 
@@ -121,11 +100,16 @@ constructor(
                         (it.id == DEFAULT_DISPLAY || it.isConnectedDisplay)
                 }
                 .associateBy { it.id }
-        enabledDisplays.value = enabledDisplaysMap
 
-        val currentSelectedId = selectedDisplayId.value
-        if (currentSelectedId == null || !enabledDisplaysMap.contains(currentSelectedId)) {
-            updateSelectedDisplay(getDefaultDisplayId())
+        updateState { currentState ->
+            val selectedId =
+                if (enabledDisplaysMap.contains(currentState.selectedDisplayId)) {
+                    currentState.selectedDisplayId
+                } else {
+                    // If the currently selected display is no longer available, reset to default.
+                    getDefaultDisplayId()
+                }
+            currentState.copy(enabledDisplays = enabledDisplaysMap, selectedDisplayId = selectedId)
         }
     }
 
@@ -133,8 +117,8 @@ constructor(
         // This doesn't need to trigger manual viewmodel updates for enabled displays as Display
         // and/or DisplayTopology callback will eventually be called following mirroring update
         val newMirroringState = isDisplayInMirroringMode(appContext)
-        if (isMirroring.value != newMirroringState) {
-            isMirroring.value = newMirroringState
+        if (_uiState.value?.isMirroring != newMirroringState) {
+            updateState { it.copy(isMirroring = newMirroringState) }
         }
     }
 
@@ -148,8 +132,8 @@ constructor(
 
     private fun updateIncludeDefaultDisplayInTopology() {
         val newState = isIncludeDefaultDisplayInTopology()
-        if (includeDefaultDisplayInTopology.value != newState) {
-            includeDefaultDisplayInTopology.value = newState
+        if (_uiState.value?.includeDefaultDisplayInTopology != newState) {
+            updateState { it.copy(includeDefaultDisplayInTopology = newState) }
         }
     }
 
@@ -170,5 +154,10 @@ constructor(
 
     private fun getDefaultDisplayId(): Int {
         return injector.displayTopology?.primaryDisplayId ?: DEFAULT_DISPLAY
+    }
+
+    private fun updateState(updateAction: (DisplayUiState) -> DisplayUiState) {
+        val currentState = _uiState.value ?: DisplayUiState()
+        _uiState.value = updateAction(currentState)
     }
 }
