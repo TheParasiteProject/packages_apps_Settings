@@ -14788,5 +14788,9 @@
     <string name="privacy_sources_title" >Privacy controls</string>
     <!-- Summary for privacy_sources_summary subpage in Safety Center [CHAR LIMIT=NONE] -->
     <string name="privacy_sources_summary">Permissions, controls</string>
+    <!-- The title of the subpage for safety settings relating to screen lock and biometrics [CHAR LIMIT=60] -->
+    <string name="device_unlock_subpage_title">Device unlock</string>
+    <!-- The default title of the setting for managing the screen lock on the device [CHAR LIMIT=60] -->
+    <string name="lock_screen_title">Screen lock</string>
 
 </resources>
