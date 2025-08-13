@@ -36,7 +36,7 @@ class NotificationsStateSource : DeviceStateSource {
     override suspend fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
-    ): PerScreenDeviceStates {
+    ): List<PerScreenDeviceStates> {
         val packageManager = context.packageManager
         val notificationManager =
             INotificationManager.Stub.asInterface(
@@ -89,10 +89,12 @@ class NotificationsStateSource : DeviceStateSource {
             )
         }
 
-        return PerScreenDeviceStates(
-            description =
-                "Notifications Settings Screen. Note that to get to the notification settings for a given package, the intent uri is intent:#Intent;action=android.settings.APP_NOTIFICATION_SETTINGS;S.android.provider.extra.APP_PACKAGE=\$packageName;end",
-            deviceStateItems = deviceStateItems,
+        return listOf(
+            PerScreenDeviceStates(
+                description =
+                    "Notifications Settings Screen. Note that to get to the notification settings for a given package, the intent uri is intent:#Intent;action=android.settings.APP_NOTIFICATION_SETTINGS;S.android.provider.extra.APP_PACKAGE=\$packageName;end",
+                deviceStateItems = deviceStateItems,
+            )
         )
     }
 

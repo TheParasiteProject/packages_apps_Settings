@@ -31,7 +31,7 @@ class AppsStorageStateSource : DeviceStateSource {
     override suspend fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
-    ): PerScreenDeviceStates {
+    ): List<PerScreenDeviceStates> {
         val storageStatsManager = context.getSystemService(StorageStatsManager::class.java)
         val bytesFormatter = BytesFormatter(context)
 
@@ -84,9 +84,8 @@ class AppsStorageStateSource : DeviceStateSource {
                 )
             )
         }
-        return PerScreenDeviceStates(
-            description = "App Storage",
-            deviceStateItems = deviceStateItems,
+        return listOf(
+            PerScreenDeviceStates(description = "App Storage", deviceStateItems = deviceStateItems)
         )
     }
 }

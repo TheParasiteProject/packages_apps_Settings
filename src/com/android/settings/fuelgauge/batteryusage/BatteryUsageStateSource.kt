@@ -52,10 +52,12 @@ class BatteryUsageStateSource :
     override suspend fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
-    ): PerScreenDeviceStates {
-        return PerScreenDeviceStates(
-            description = "Battery Usage",
-            deviceStateItems = getDeviceStateItems(context),
+    ): List<PerScreenDeviceStates> {
+        return listOf(
+            PerScreenDeviceStates(
+                description = "Battery Usage",
+                deviceStateItems = getDeviceStateItems(context),
+            )
         )
     }
 
