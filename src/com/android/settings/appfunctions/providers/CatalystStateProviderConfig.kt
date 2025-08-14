@@ -40,6 +40,7 @@ import com.android.settings.applications.specialaccess.WifiControlAppDetailScree
 import com.android.settings.applications.specialaccess.WifiControlAppListScreen
 import com.android.settings.applications.specialaccess.WriteSystemPreferencesAppDetailScreen
 import com.android.settings.applications.specialaccess.WriteSystemPreferencesAppListScreen
+import com.android.settings.applications.specialaccess.notificationaccess.AppsNotificationAccessScreen
 import com.android.settings.applications.specialaccess.pictureinpicture.PictureInPictureAppDetailScreen
 import com.android.settings.applications.specialaccess.pictureinpicture.PictureInPictureAppListScreen
 import com.android.settings.connecteddevice.AdvancedConnectedDeviceScreen
@@ -95,7 +96,6 @@ import com.android.settings.spa.app.catalyst.AppInfoScreen
 import com.android.settings.spa.app.catalyst.AppInfoStorageScreen
 import com.android.settings.spa.app.catalyst.AppStorageAppListScreen
 import com.android.settings.spa.app.catalyst.AppsFullScreenIntentScreen
-import com.android.settings.spa.app.catalyst.AppsNotificationAccessScreen
 import com.android.settings.supervision.SupervisionDashboardScreen
 import com.android.settings.supervision.SupervisionPinManagementScreen
 import com.android.settings.supervision.SupervisionWebContentFiltersScreen

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.spa.app.catalyst
+package com.android.settings.applications.specialaccess.notificationaccess
 
 import android.Manifest
 import android.app.ActivityManager
