@@ -14740,12 +14740,12 @@
     <string name="supervision_unavailable_learn_more_link" translatable="false">https://support.google.com/android?p=device_supervision_unavailable</string>
 
     <!-- Light theme customization for Face Education lottie illustration. Not translatable. -->
-    <string-array name="fac_education_illustration" translatable="false">
+    <string-array name="face_education_illustration" translatable="false">
         <item>.surfaceContainer:@sud_system_surface_container_light</item>
         <item>.primary:@sud_system_primary_light</item>
         <item>.primaryContainer:@sud_system_primary_container_light</item>
         <item>.outline:@sud_system_outline_light</item>
-        <item>.onSecondaryContainer:@sud_system_secondary_container_light</item>
+        <item>.onSecondaryContainer:@sud_system_on_secondary_container_light</item>
         <item>.tertiary:@sud_system_tertiary_light</item>
         <item>.inversePrimary:@sud_system_primary_inverse_light</item>
     </string-array>
