@@ -39,8 +39,10 @@ import com.android.server.accessibility.Flags
 import com.android.settings.R
 import com.android.settings.Utils.SETTINGS_PACKAGE_NAME
 import com.android.settings.accessibility.screenmagnification.ui.MagnificationPreferenceFragment.Companion.MAGNIFICATION_SURVEY_KEY
+import com.android.settings.accessibility.shared.ui.BaseSurveyButtonPreference.Companion.PREFERENCE_KEY
 import com.android.settings.overlay.SurveyFeatureProvider
 import com.android.settings.testutils.FakeFeatureFactory
+import com.android.settings.testutils.SettingsStoreRule
 import com.android.settings.testutils.inflateViewHolder
 import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.preference.createAndBindWidget
@@ -67,6 +69,7 @@ import org.robolectric.shadows.ShadowPackageManager
 @RunWith(RobolectricTestParameterInjector::class)
 class MagnificationSurveyButtonPreferenceTest {
     @get:Rule val setFlagsRule = SetFlagsRule()
+    @get:Rule val settingStoreRule = SettingsStoreRule()
     private lateinit var context: Context
     private lateinit var shadowPackageManager: ShadowPackageManager
     private lateinit var surveyFeatureProvider: SurveyFeatureProvider
@@ -95,8 +98,7 @@ class MagnificationSurveyButtonPreferenceTest {
     fun getKey() {
         val preference = createPreference()
 
-        assertThat(preference.key)
-            .isEqualTo(MagnificationSurveyButtonPreference.Companion.PREFERENCE_KEY)
+        assertThat(preference.key).isEqualTo(PREFERENCE_KEY)
     }
 
     @Test
@@ -155,7 +157,7 @@ class MagnificationSurveyButtonPreferenceTest {
         inSetupWizard: Boolean,
         expectedValue: Boolean,
     ) {
-        var newContext = createContext(inSetupWizard = inSetupWizard)
+        val newContext = createContext(inSetupWizard = inSetupWizard)
         setupSurveyAvailability(surveyAvailability)
 
         val preference = createPreference(newContext, hasShortcuts)
@@ -166,7 +168,7 @@ class MagnificationSurveyButtonPreferenceTest {
     @Test
     @DisableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     fun isAvailable_flagOff_returnFalse() {
-        var newContext = createContext(inSetupWizard = false)
+        val newContext = createContext(inSetupWizard = false)
         setupSurveyAvailability(available = true)
 
         val preference = createPreference(newContext, hasShortcuts = true)
@@ -177,7 +179,7 @@ class MagnificationSurveyButtonPreferenceTest {
     @Test
     @EnableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     fun buttonClick_callsSurveyMethodsAndHidesButton() {
-        var newContext = createContext(inSetupWizard = false)
+        val newContext = createContext(inSetupWizard = false)
         setupSurveyAvailability(available = true)
         createPreference(newContext, hasShortcuts = true)
         Shadows.shadowOf(context as Application?).clearBroadcastIntents()
@@ -198,7 +200,7 @@ class MagnificationSurveyButtonPreferenceTest {
     @Test
     @EnableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     fun onCreate_surveyIntentPresent_startsSurvey() {
-        var newContext = createContext(isStartSurveyIntent = true)
+        val newContext = createContext(isStartSurveyIntent = true)
 
         createPreference(newContext)
 
@@ -208,7 +210,7 @@ class MagnificationSurveyButtonPreferenceTest {
     @Test
     @EnableFlags(Flags.FLAG_ENABLE_LOW_VISION_HATS)
     fun onCreate_noSurveyIntentPresent_checksSurveyAvailability() {
-        var newContext = createContext(isStartSurveyIntent = false)
+        val newContext = createContext(isStartSurveyIntent = false)
 
         createPreference(newContext)
 
@@ -237,12 +239,7 @@ class MagnificationSurveyButtonPreferenceTest {
             preference.createAndBindWidget<ButtonPreference>(context, preferenceScreen)
         preferenceScreen.addPreference(buttonPreference!!)
         val preferenceLifecycleContext: PreferenceLifecycleContext = mock {
-            on {
-                    findPreference<ButtonPreference>(
-                        MagnificationSurveyButtonPreference.Companion.PREFERENCE_KEY
-                    )
-                }
-                .thenReturn(buttonPreference)
+            on { findPreference<ButtonPreference>(PREFERENCE_KEY) }.thenReturn(buttonPreference)
             on { baseContext }.thenReturn(context)
             on { lifecycleOwner }.thenReturn(lifecycleOwner)
             on { notifyPreferenceChange(anyString()) }
@@ -252,10 +249,7 @@ class MagnificationSurveyButtonPreferenceTest {
                 }
         }
         preference.onCreate(preferenceLifecycleContext)
-        preference.dataStore?.setBoolean(
-            MagnificationSurveyButtonPreference.Companion.PREFERENCE_KEY,
-            hasShortcuts,
-        )
+        preference.dataStore?.setBoolean(PREFERENCE_KEY, hasShortcuts)
         buttonPreference!!.inflateViewHolder()
         return preference
     }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.spa.app.catalyst
+package com.android.settings.applications.specialaccess
 
 import android.Manifest.permission.USE_FULL_SCREEN_INTENT
 import android.app.AppOpsManager

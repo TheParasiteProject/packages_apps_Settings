@@ -22,6 +22,7 @@ import android.hardware.display.ColorDisplayManager
 import androidx.fragment.app.Fragment
 import com.android.settings.R
 import com.android.settings.Settings.ColorAndMotionActivity
+import com.android.settings.accessibility.colorinversion.ui.ColorInversionScreen
 import com.android.settings.accessibility.shared.ui.FeedbackButtonPreference
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.display.darkmode.DarkModeScreenOnAccessibility
@@ -65,11 +66,11 @@ open class ColorAndMotionScreen : PreferenceScreenMixin {
             // LINT.IfChange(ui_hierarchy)
             if (ColorDisplayManager.isColorTransformAccelerated(context)) {
                 +DaltonizerPreference()
-                +ColorInversionPreference()
+                +ColorInversionScreen.KEY
                 +DarkModeScreenOnAccessibility.KEY
                 +RemoveAnimationsPreference()
             } else {
-                +ColorInversionPreference()
+                +ColorInversionScreen.KEY
                 +DarkModeScreenOnAccessibility.KEY
                 +PreferenceCategory(
                     "experimental_category",

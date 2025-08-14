@@ -191,7 +191,7 @@ class MagnificationSurveyButtonPreferenceControllerTest {
     }
 
     private fun createController(inSetupWizard: Boolean = false) {
-        var newContext: Context = createContext(inSetupWizard)
+        val newContext: Context = createContext(inSetupWizard)
         controller = MagnificationSurveyButtonPreferenceController(newContext, KEY)
         controller.initialize(surveyManager)
         controller.onCreate(lifecycleOwner)

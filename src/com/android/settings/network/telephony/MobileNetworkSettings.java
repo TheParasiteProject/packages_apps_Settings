@@ -554,5 +554,41 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
     public @Nullable String getPreferenceScreenBindingKey(@NonNull Context context) {
         return MobileNetworkScreen.KEY;
     }
+
+    @Override
+    public @Nullable Bundle getPreferenceScreenBindingArgs(@NonNull Context context) {
+        final Bundle bundle = new Bundle();
+        bundle.putInt(Settings.EXTRA_SUB_ID, getSubId());
+        return bundle;
+    }
+
+    private int getSubId() {
+        int retSubId = SubscriptionManager.INVALID_SUBSCRIPTION_ID;
+        if (getArguments() == null) {
+            Intent intent = getIntent();
+            if (intent != null) {
+                retSubId = intent.getIntExtra(Settings.EXTRA_SUB_ID,
+                        MobileNetworkUtils.getSearchableSubscriptionId(getContext()));
+            } else {
+                Log.d(LOG_TAG, "getSubId: intent is null, can not get subId " + retSubId
+                        + " from intent.");
+            }
+        } else {
+            retSubId = getArguments().getInt(Settings.EXTRA_SUB_ID,
+                    MobileNetworkUtils.getSearchableSubscriptionId(getContext()));
+        }
+        if (retSubId == SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
+            Log.d(LOG_TAG, "getSubId: Invalid subId, get the default subscription to show.");
+            SubscriptionInfo info = SubscriptionUtil.getSubscriptionOrDefault(getContext(),
+                    retSubId);
+            if (info == null) {
+                Log.d(LOG_TAG, "getSubId: Invalid subId request " + retSubId);
+            } else {
+                retSubId = info.getSubscriptionId();
+            }
+        }
+        Log.d(LOG_TAG, "getSubId: Result subId : " + retSubId);
+        return retSubId;
+    }
 }
 // LINT.ThenChange(MobileNetworkScreen.kt)

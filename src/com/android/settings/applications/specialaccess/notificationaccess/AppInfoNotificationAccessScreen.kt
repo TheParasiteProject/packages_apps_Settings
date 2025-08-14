@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.spa.app.catalyst
+package com.android.settings.applications.specialaccess.notificationaccess
 
 import android.app.NotificationManager
 import android.app.settings.SettingsEnums

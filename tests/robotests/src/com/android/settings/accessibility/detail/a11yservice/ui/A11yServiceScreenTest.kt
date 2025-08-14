@@ -32,6 +32,7 @@ import com.android.settings.accessibility.detail.a11yservice.A11yServicePreferen
 import com.android.settings.overlay.FeatureFactory.Companion.featureFactory
 import com.android.settings.testutils.AccessibilityTestUtils
 import com.android.settings.testutils.FakeFeatureFactory
+import com.android.settings.testutils.SettingsStoreRule
 import com.android.settings.testutils.shadow.ShadowAccessibilityManager
 import com.android.settings.testutils2.SettingsCatalystTestCase
 import com.android.settingslib.RestrictedPreference
@@ -40,6 +41,7 @@ import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.mockito.kotlin.whenever
 import org.robolectric.Shadows.shadowOf
@@ -48,6 +50,8 @@ import org.robolectric.shadows.ShadowPackageManager
 
 /** Tests for [A11yServiceScreen]. */
 class A11yServiceScreenTest : SettingsCatalystTestCase() {
+    @get:Rule val settingStoreRule = SettingsStoreRule()
+
     private val arguments =
         Bundle().apply {
             putParcelable(AccessibilitySettings.EXTRA_COMPONENT_NAME, A11Y_SERVICE_COMPONENT)
