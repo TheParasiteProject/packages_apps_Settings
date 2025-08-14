@@ -19,7 +19,6 @@ import static org.mockito.Mockito.mock;
 
 import android.content.Context;
 
-import com.android.settings.accessibility.AccessibilityDisabilitySupportFeatureProvider;
 import com.android.settings.accessibility.AccessibilityFeedbackFeatureProvider;
 import com.android.settings.accessibility.AccessibilityPageIdFeatureProvider;
 import com.android.settings.accessibility.AccessibilitySearchFeatureProvider;
@@ -111,8 +110,6 @@ public class FakeFeatureFactory extends FeatureFactory {
     public SyncAcrossDevicesFeatureProvider mSyncAcrossDevicesFeatureProvider;
     public AccessibilityFeedbackFeatureProvider mAccessibilityFeedbackFeatureProvider;
     public AudioSharingFeatureProvider mAudioSharingFeatureProvider;
-    public AccessibilityDisabilitySupportFeatureProvider
-            mAccessibilityDisabilitySupportFeatureProvider;
 
     /** Call this in {@code @Before} method of the test class to use fake factory. */
     public static FakeFeatureFactory setupForTest() {
@@ -373,11 +370,5 @@ public class FakeFeatureFactory extends FeatureFactory {
     @Override
     public AudioSharingFeatureProvider getAudioSharingFeatureProvider() {
         return mAudioSharingFeatureProvider;
-    }
-
-    @Override
-    public AccessibilityDisabilitySupportFeatureProvider
-            getAccessibilityDisabilitySupportFeatureProvider() {
-        return mAccessibilityDisabilitySupportFeatureProvider;
     }
 }
