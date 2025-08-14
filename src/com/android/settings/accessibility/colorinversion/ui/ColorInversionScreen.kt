@@ -69,7 +69,7 @@ open class ColorInversionScreen :
 
     override fun getMetricsCategory() = SettingsEnums.ACCESSIBILITY_COLOR_INVERSION_SETTINGS
 
-    override fun getSummary(context: Context) =
+    override fun getSummary(context: Context): CharSequence? =
         AccessibilityUtil.getSummary(
             context,
             SETTING_KEY,
