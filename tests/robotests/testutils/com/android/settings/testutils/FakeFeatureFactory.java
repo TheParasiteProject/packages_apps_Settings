@@ -19,7 +19,6 @@ import static org.mockito.Mockito.mock;
 
 import android.content.Context;
 
-import com.android.settings.accessibility.AccessibilityDisabilitySupportFeatureProvider;
 import com.android.settings.accessibility.AccessibilityFeedbackFeatureProvider;
 import com.android.settings.accessibility.AccessibilityPageIdFeatureProvider;
 import com.android.settings.accessibility.AccessibilitySearchFeatureProvider;
@@ -111,8 +110,6 @@ public class FakeFeatureFactory extends FeatureFactory {
     public SyncAcrossDevicesFeatureProvider mSyncAcrossDevicesFeatureProvider;
     public AccessibilityFeedbackFeatureProvider mAccessibilityFeedbackFeatureProvider;
     public AudioSharingFeatureProvider mAudioSharingFeatureProvider;
-    public AccessibilityDisabilitySupportFeatureProvider
-            mAccessibilityDisabilitySupportFeatureProvider;
     public RegionalCustomizationFeatureProvider mRegionalCustomizationFeatureProvider;
 
     /**
@@ -167,8 +164,6 @@ public class FakeFeatureFactory extends FeatureFactory {
         mDisplayFeatureProvider = mock(DisplayFeatureProvider.class);
         mSyncAcrossDevicesFeatureProvider = mock(SyncAcrossDevicesFeatureProvider.class);
         mAudioSharingFeatureProvider = mock(AudioSharingFeatureProvider.class);
-        mAccessibilityDisabilitySupportFeatureProvider =
-                mock(AccessibilityDisabilitySupportFeatureProvider.class);
     }
 
     @Override
@@ -370,12 +365,6 @@ public class FakeFeatureFactory extends FeatureFactory {
     @Override
     public AudioSharingFeatureProvider getAudioSharingFeatureProvider() {
         return mAudioSharingFeatureProvider;
-    }
-
-    @Override
-    public AccessibilityDisabilitySupportFeatureProvider
-            getAccessibilityDisabilitySupportFeatureProvider() {
-        return mAccessibilityDisabilitySupportFeatureProvider;
     }
 
     @Override
