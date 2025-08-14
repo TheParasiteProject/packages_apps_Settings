@@ -30,7 +30,7 @@ class NotificationHistoryStateSource : DeviceStateSource {
     override suspend fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
-    ): PerScreenDeviceStates {
+    ): List<PerScreenDeviceStates> {
         val isEnabled =
             Settings.Secure.getInt(context.contentResolver, NOTIFICATION_HISTORY_ENABLED, 0) == 1
 
@@ -41,9 +41,11 @@ class NotificationHistoryStateSource : DeviceStateSource {
                 jsonValue = isEnabled.toString(),
             )
 
-        return PerScreenDeviceStates(
-            description = "Notification history",
-            deviceStateItems = listOf(item),
+        return listOf(
+            PerScreenDeviceStates(
+                description = "Notification history",
+                deviceStateItems = listOf(item),
+            )
         )
     }
 }

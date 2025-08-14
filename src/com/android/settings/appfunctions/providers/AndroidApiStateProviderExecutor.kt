@@ -22,6 +22,7 @@ import android.util.Log
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.android.settings.appfunctions.DeviceStateProviderExecutorResult
 import com.android.settings.appfunctions.sources.AdaptiveBrightnessStateSource
+import com.android.settings.appfunctions.sources.AppsStateSource
 import com.android.settings.appfunctions.sources.AppsStorageStateSource
 import com.android.settings.appfunctions.sources.BatterySaverStateSource
 import com.android.settings.appfunctions.sources.BatteryStatusStateSource
@@ -75,6 +76,7 @@ class AndroidApiStateProviderExecutor(private val context: Context) : DeviceStat
             ScreenTimeoutStateSource(),
             WifiStatusStateSource(),
             ZenModesStateSource(),
+            AppsStateSource(),
             // Add other sources instances here
         )
 
@@ -104,7 +106,7 @@ class AndroidApiStateProviderExecutor(private val context: Context) : DeviceStat
                 .mapNotNull { it.await() }
         }
 
-        return DeviceStateProviderExecutorResult(states = states)
+        return DeviceStateProviderExecutorResult(states = states.flatten())
     }
 
     companion object {

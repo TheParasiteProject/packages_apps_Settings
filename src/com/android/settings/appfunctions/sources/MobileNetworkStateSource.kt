@@ -43,10 +43,12 @@ class MobileNetworkStateSource : DeviceStateSource {
     override suspend fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
-    ): PerScreenDeviceStates {
-        return PerScreenDeviceStates(
-            description = "Saved Networks",
-            deviceStateItems = getDeviceStateItems(context),
+    ): List<PerScreenDeviceStates> {
+        return listOf(
+            PerScreenDeviceStates(
+                description = "Saved Networks",
+                deviceStateItems = getDeviceStateItems(context),
+            )
         )
     }
 
