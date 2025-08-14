@@ -27,6 +27,7 @@ import com.android.settings.R
 import com.android.settings.Settings.DarkThemeSettingsActivity
 import com.android.settings.accessibility.FeedbackManager
 import com.android.settings.accessibility.Flags
+import com.android.settings.accessibility.ForceInvertSurveyButtonPreference
 import com.android.settings.accessibility.shared.ui.FeedbackButtonPreference
 import com.android.settings.contract.KEY_DARK_THEME
 import com.android.settings.core.PreferenceScreenMixin
@@ -109,6 +110,7 @@ abstract class BaseDarkModeScreen(context: Context) :
                 }
             }
             +FeedbackButtonPreference { FeedbackManager(context, metricsCategory) }
+            +ForceInvertSurveyButtonPreference(metricsCategory)
         }
 
     override fun storage(context: Context): KeyValueStore = darkModeStorage
