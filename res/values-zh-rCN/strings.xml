@@ -766,10 +766,10 @@
     <string name="encryption_settings_title" msgid="2848716008695618360">"加密"</string>
     <string name="encrypted_summary" msgid="545623487587251207">"已加密"</string>
     <string name="no_screen_lock_issue_title" msgid="1814109590692792891">"设置屏锁"</string>
-    <string name="no_screen_lock_issue_summary" msgid="2383217853510608406">"为了提高安全性，请为此设备设置 PIN 码、解锁图案或密码。"</string>
+    <string name="no_screen_lock_issue_summary" msgid="2383217853510608406">"为提升安全性，请为此设备设置 PIN 码、解锁图案或密码。"</string>
     <string name="no_screen_lock_issue_action_label" msgid="2691229130486382863">"设置屏锁"</string>
     <string name="no_screen_lock_issue_notification_title" msgid="1214876733592830628">"设置屏锁"</string>
-    <string name="no_screen_lock_issue_notification_text" msgid="8696194459170873345">"为了提高安全性，请为此设备设置 PIN 码、解锁图案或密码。"</string>
+    <string name="no_screen_lock_issue_notification_text" msgid="8696194459170873345">"为提升安全性，请为此设备设置 PIN 码、解锁图案或密码。"</string>
     <string name="suggested_lock_settings_title" msgid="7836065447159730217">"保护手机的安全"</string>
     <string name="suggested_fingerprint_lock_settings_title" msgid="3140266181874137984">"添加用于解锁的指纹"</string>
     <string name="lock_settings_picker_title" msgid="9219376327364915334">"选择屏锁"</string>
@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"在显示屏之间移动鼠标指针"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"使用外接显示器"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"显示分辨率"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"默认连接行为"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"用作单独的显示器"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"镜像内置显示器"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"显示连接对话框"</string>
@@ -1871,7 +1872,7 @@
     <string name="lockpassword_choose_your_pin_header" msgid="7754265746504679473">"设置 PIN 码"</string>
     <string name="lockpassword_choose_your_profile_pin_header" msgid="4581749963670819048">"设置工作资料 PIN 码"</string>
     <string name="lockpassword_choose_your_pattern_header" msgid="5674909390779586252">"设置解锁图案"</string>
-    <string name="lockpassword_choose_your_pattern_description" msgid="6808109256008481046">"为了提高安全性，请为此设备设置解锁图案"</string>
+    <string name="lockpassword_choose_your_pattern_description" msgid="6808109256008481046">"为提升安全性，请为此设备设置解锁图案"</string>
     <string name="lockpassword_choose_your_profile_pattern_header" msgid="3101811498330756641">"设置工作资料解锁图案"</string>
     <string name="lockpassword_choose_your_password_header_for_fingerprint" msgid="3167261267229254090">"要使用指纹，请设置密码"</string>
     <string name="lockpassword_choose_your_pattern_header_for_fingerprint" msgid="4707788269512303400">"要使用指纹，请设置解锁图案"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"滚动"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"受控滚动"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"滚动速度"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"加快滚动速度"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"减慢滚动速度"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"加快指针移动速度"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"减慢指针移动速度"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"切换鼠标主键"</string>
@@ -2375,8 +2374,7 @@
     <string name="audio_category_title" msgid="5283853679967605826">"音频"</string>
     <string name="general_category_title" msgid="6298579528716834157">"常规"</string>
     <string name="display_category_title" msgid="6638191682294461408">"显示"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"颜色和动画"</string>
     <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"深色主题，色彩校正，移除动画"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"光标和触控板无障碍功能"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"大小、颜色、类型"</string>
@@ -2465,7 +2463,7 @@
     <string name="accessibility_magnification_mode_dialog_option_switch" msgid="561043521011229424">"在全屏放大和局部放大之间切换"</string>
     <string name="accessibility_magnification_area_settings_mode_switch_summary" msgid="2885238806099080966">"点按切换按钮即可在二者之间切换"</string>
     <string name="accessibility_magnification_triple_tap_warning_title" msgid="8484669851397296597">"这样做可能会使键盘的响应速度变慢"</string>
-    <string name="accessibility_magnification_triple_tap_warning_message" msgid="2008671502848936410">"当您使用点按三次手势放大局部画面时，可能会发现键盘出现问题。\n\n若要避免发生这个问题，可以将放大功能的快捷方式从点按三次更改为其他选项。\n"<annotation id="link">"更改设置"</annotation></string>
+    <string name="accessibility_magnification_triple_tap_warning_message" msgid="2008671502848936410">"使用点按三次手势放大局部画面时，键盘可能会出现问题。\n\n若要避免此问题，您可以将放大功能的快捷方式从点按三次更改为其他选项。\n"<annotation id="link">"更改设置"</annotation></string>
     <string name="accessibility_magnification_triple_tap_warning_positive_button" msgid="8712304035901450010">"仍然继续"</string>
     <string name="accessibility_magnification_triple_tap_warning_negative_button" msgid="2028849736366584733">"取消"</string>
     <string name="accessibility_magnification_service_settings_title" msgid="3531350704632316017">"放大设置"</string>
@@ -2477,8 +2475,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"使用快捷手势进行放大"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"通过“快捷手势”和“点按屏幕三次”进行放大"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"<xliff:g id="SERVICE">%1$s</xliff:g>简介"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"显示大小和文字"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"字体大小，显示大小，粗体文字，为文字添加轮廓"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"更改文字显示方式"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"主题：热气球设计"</string>
@@ -3749,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"系统提示音和振动"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"工作资料提示音"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"实时字幕"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"为通话、视频和其他媒体内容生成字幕"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"已开启 / 为通话、视频和其他媒体内容生成字幕"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"已关闭 / 为通话、视频和其他媒体内容生成字幕"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"有线耳机"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"播放兼容的媒体内容时，音频更具沉浸感"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"已关闭"</string>
@@ -3900,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"热门报道、社论…"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"点赞、帖子…"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"简报、推荐的媒体…"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"所有应用目前都在使用通知整理工具"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"利用 AI 进行管理"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"通知摘要"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"快速掌握长消息的重点"</string>
@@ -3913,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"排除这些应用"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"通知摘要"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"快速掌握长消息的重点"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"所有适用的应用目前都在使用通知摘要"</string>
     <string name="live_notifications" msgid="4650406646292963831">"实时通知"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"实时动态"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"在状态栏和锁定的屏幕上显示具有时效性的持续性通知"</string>
@@ -4841,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"手势导航"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"查看演示"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"按钮导航"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"手势导航, 返回手势的灵敏度, 返回手势"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"导航, 主屏幕按钮, navigation, home button"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"单手模式"</string>
@@ -5487,8 +5487,7 @@
       <item quantity="one"><xliff:g id="FIRST_0">%1$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"在通话期间用文字交流"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5505,7 +5504,7 @@
     <string name="disable_screen_share_protections_for_apps_and_notifications_summary" msgid="5379583403909210858">"在接下来的屏幕共享会话中关闭针对敏感应用内容的系统防护功能"</string>
     <string name="media_controls_title" msgid="403271085636252597">"媒体"</string>
     <string name="media_controls_resume_title" msgid="855076860336652370">"固定媒体播放器"</string>
-    <string name="media_controls_resume_description" msgid="3163482266454802097">"为了方便您快速恢复播放，媒体播放器会在“快捷设置”中保持打开状态"</string>
+    <string name="media_controls_resume_description" msgid="3163482266454802097">"为便于快速恢复播放，媒体播放器会在“快捷设置”中保持开启状态"</string>
     <string name="media_controls_lockscreen_title" msgid="2188311721857512510">"在锁屏状态下显示媒体"</string>
     <string name="media_controls_lockscreen_description" msgid="3320333660404439510">"为便于快速恢复播放，媒体播放器会在锁屏状态下保持开启状态"</string>
     <string name="media_controls_hide_player" msgid="2751439192580884015">"隐藏播放器"</string>
@@ -5961,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

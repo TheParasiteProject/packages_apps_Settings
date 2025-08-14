@@ -439,7 +439,7 @@
     <string name="security_settings_face_remove_dialog_details_fingerprint" msgid="7609582230650860974">"顔モデルは安全かつ完全に削除されます。\n\n削除後に、スマートフォンのロック解除やアプリでの認証を行うには、指紋、PIN、パターン、パスワードのいずれかが必要になります。"</string>
     <string name="security_settings_face_remove_dialog_details_fingerprint_conv" msgid="2627374706274503259">"顔モデルは安全かつ完全に削除されます。\n\n削除後に、スマートフォンのロックを解除するには、指紋、PIN、パターン、パスワードのいずれかが必要になります。"</string>
     <string name="security_settings_face_settings_context_subtitle" msgid="8284262560781442403">"顔認証を使用して、スマートフォンのロックを解除します"</string>
-    <string name="security_settings_face_add" msgid="3118249538477856897">"顔の追加"</string>
+    <string name="security_settings_face_add" msgid="3118249538477856897">"顔を追加"</string>
     <string name="security_settings_fingerprint" msgid="6387775386189204201">"指紋"</string>
     <string name="security_settings_fingerprint_title" msgid="7564944192711394896">"指紋"</string>
     <string name="security_settings_fingerprint_description" msgid="629796299137157167"></string>
@@ -985,7 +985,7 @@
     <string name="bluetooth_max_connected_audio_devices_string" msgid="3114156958598821615">"接続できる Bluetooth オーディオ デバイスの上限"</string>
     <string name="bluetooth_max_connected_audio_devices_dialog_title" msgid="4056811727247312473">"接続できる Bluetooth オーディオ デバイス数の上限の選択"</string>
     <string name="nfc_verbose_vendor_log_title" msgid="5554505631122964628">"NFC ベンダーの詳細なデバッグログ"</string>
-    <string name="nfc_verbose_vendor_log_summary" msgid="3049128322855928507">"バグレポートには、その他のデバイス固有のベンダーログが含まれます。これには、非公開の情報が含まれることがあります。"</string>
+    <string name="nfc_verbose_vendor_log_summary" msgid="3049128322855928507">"バグレポートには、デバイス固有の詳細なベンダーログが含まれます。これには、非公開の情報が含まれることがあります。"</string>
     <string name="nfc_snoop_log_title" msgid="1576197495976952388">"フィルタされていない NFC NCI ログ"</string>
     <string name="nfc_snoop_log_summary" msgid="3988383328800163180">"NFC の詳細パケットをキャプチャします。これには、非公開の情報が含まれることがあります。"</string>
     <string name="nfc_reboot_dialog_title" msgid="2033983438635768169">"デバイスを再起動しますか？"</string>
@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"ディスプレイ間でマウスを移動する"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"外部ディスプレイを使用する"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"ディスプレイ解像度"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"デフォルトの接続動作"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"別のディスプレイとして使用"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"内蔵ディスプレイをミラーリングする"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"接続ダイアログを表示する"</string>
@@ -1045,7 +1046,7 @@
     <string name="wifi_ask_disable" msgid="1663208096020309639">"「<xliff:g id="REQUESTER">%s</xliff:g>」が Wi-Fi を OFF にしようとしています"</string>
     <string name="art_verifier_for_debuggable_title" msgid="1926445785190030479">"デバッグ可能なアプリのバイトコードを確認"</string>
     <string name="art_verifier_for_debuggable_summary" msgid="4802875841862652879">"デバッグ可能なアプリのバイトコードの確認を ART に許可します"</string>
-    <string name="show_refresh_rate" msgid="5742688821872354973">"リフレッシュ レートの表示"</string>
+    <string name="show_refresh_rate" msgid="5742688821872354973">"リフレッシュ レートを表示"</string>
     <string name="show_refresh_rate_summary" msgid="3558118122374609663">"現在のディスプレイ リフレッシュ レートを表示します"</string>
     <string name="show_hdr_sdr_ratio" msgid="4188007289024955585">"HDR/SDR 比を表示"</string>
     <string name="show_hdr_sdr_ratio_summary" msgid="986292785096013733">"現在の HDR/SDR 比を表示する"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"スクロール"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"制御付きスクロール"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"スクロール速度"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"スクロールを速くする"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"スクロールを遅くする"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"ポインタの速度を速くします"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"ポインタの速度を遅くします"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"マウスのメイン ボタンを右にする"</string>
@@ -2375,8 +2374,7 @@
     <string name="audio_category_title" msgid="5283853679967605826">"音声"</string>
     <string name="general_category_title" msgid="6298579528716834157">"全般"</string>
     <string name="display_category_title" msgid="6638191682294461408">"表示"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"色と動き"</string>
     <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"ダークモード、色補正、アニメーションを無効化"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"カーソルとタッチパッドのユーザー補助"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"サイズ、色、タイプ"</string>
@@ -2477,8 +2475,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"ショートカットで拡大"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"ショートカットとトリプルタップで拡大"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"<xliff:g id="SERVICE">%1$s</xliff:g>について"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"表示サイズとテキスト"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"フォントサイズ、表示サイズ、太字機能、アウトライン テキスト"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"テキストの表示方法を変更する"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"件名: 熱気球の設計"</string>
@@ -3303,8 +3300,8 @@
     <string name="data_usage_cycle_editor_title" msgid="2019035830921480941">"使用サイクルのリセット日"</string>
     <string name="data_usage_cycle_editor_subtitle" msgid="1026234456777365545">"毎月のリセット日:"</string>
     <string name="data_usage_cycle_editor_positive" msgid="6110165528024717527">"設定"</string>
-    <string name="data_usage_warning_editor_title" msgid="5252748452973120016">"データ使用量の警告の設定"</string>
-    <string name="data_usage_limit_editor_title" msgid="8826855902435008518">"データ使用量の上限の設定"</string>
+    <string name="data_usage_warning_editor_title" msgid="5252748452973120016">"データ使用量の警告を設定"</string>
+    <string name="data_usage_limit_editor_title" msgid="8826855902435008518">"データ使用量の上限を設定"</string>
     <string name="data_usage_limit_dialog_title" msgid="2053134451707801439">"データ使用量の上限の設定"</string>
     <string name="data_usage_sweep_warning" msgid="2072854703184614828"><font size="18">"<xliff:g id="NUMBER">^1</xliff:g>"</font>" "<font size="9">"<xliff:g id="UNIT">^2</xliff:g>"</font>\n<font size="12">"警告"</font></string>
     <string name="data_usage_sweep_limit" msgid="6947019190890086284"><font size="18">"<xliff:g id="NUMBER">^1</xliff:g>"</font>" "<font size="9">"<xliff:g id="UNIT">^2</xliff:g>"</font>\n<font size="12">"上限"</font></string>
@@ -3749,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"システムの音とバイブレーション"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"仕事用プロファイルの音"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"自動字幕起こし"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"通話、動画、その他のメディアの字幕を表示します"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"ON / 通話、動画、その他のメディアの字幕を表示します"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"OFF / 通話、動画、その他のメディアの字幕を表示します"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"有線ヘッドフォン"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"対応するメディアの臨場感を高めます"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"OFF"</string>
@@ -3900,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"トップニュース、論説など"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"高評価、投稿など"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"ニュースレター、おすすめのメディアなど"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"現在、すべてのアプリで通知オーガナイザーを使用しています"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"AI で管理"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"通知の要約"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"長いメッセージをすばやく要約できます"</string>
@@ -3913,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"これらのアプリを含めない"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"通知の要約"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"長いメッセージをすばやく要約できます"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"現在、該当するすべてのアプリで通知の要約を使用しています"</string>
     <string name="live_notifications" msgid="4650406646292963831">"ライブ通知"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"ライブ情報"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"時間的制約のある進行中の通知をステータスバーとロック画面に表示します"</string>
@@ -3963,7 +3955,7 @@
     <string name="lock_screen_notifications_summary_show" msgid="6540443483088311328">"すべての通知の内容を表示する"</string>
     <string name="lock_screen_notifications_summary_hide" msgid="7837303171531166789">"機密性の高いコンテンツはロック解除時にのみ表示する"</string>
     <string name="lock_screen_notifications_summary_disable" msgid="3388290397947365744">"通知を一切表示しない"</string>
-    <string name="lock_screen_notifications_interstitial_message" msgid="6326229471276829730">"ロック画面に何を表示しますか？"</string>
+    <string name="lock_screen_notifications_interstitial_message" msgid="6326229471276829730">"ロック画面の表示内容を選択"</string>
     <string name="lock_screen_notifications_interstitial_title" msgid="1360388192096354315">"ロック画面"</string>
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"仕事用のすべての通知の内容を表示する"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"機密性の高い仕事の内容を非表示"</string>
@@ -4397,14 +4389,10 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"ユーザーの位置情報を共有する方法が変更されたアプリを確認"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"エージェント"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"アプリで情報にアクセスし、操作できるエージェント"</string>
-    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
-    <skip />
-    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
-    <skip />
-    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
-    <skip />
-    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
-    <skip />
+    <string name="manage_agent_app_function_access_settings_title" msgid="2407736540086293094">"アプリのアクセス権"</string>
+    <string name="manage_agent_app_function_access_settings_summary" msgid="5513761879561499076">"アプリでの情報へのアクセスや操作をこのエージェントに許可します"</string>
+    <string name="manage_target_app_function_access_settings_title" msgid="6517416582918633839">"エージェントのアクセス権"</string>
+    <string name="manage_target_app_function_access_settings_summary" msgid="3578937757835411954">"このアプリで情報にアクセスし、操作できるエージェント"</string>
     <string name="tap_to_wake" msgid="3313433536261440068">"タップして復帰"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"画面をダブルタップするとデバイスが復帰します"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"リンクを開く"</string>
@@ -4493,7 +4481,7 @@
     <string name="average_memory_use" msgid="717313706368825388">"平均メモリ使用"</string>
     <string name="maximum_memory_use" msgid="2171779724001152933">"最大メモリ使用"</string>
     <string name="memory_usage" msgid="5594133403819880617">"メモリ使用量"</string>
-    <string name="app_list_memory_use" msgid="3178720339027577869">"アプリの使用状況"</string>
+    <string name="app_list_memory_use" msgid="3178720339027577869">"アプリによる使用状況"</string>
     <string name="memory_details" msgid="6133226869214421347">"詳細"</string>
     <string name="memory_use_summary" msgid="3915964794146424142">"過去3時間の平均メモリ使用量: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="no_memory_use_summary" msgid="6708111974923274436">"過去3時間のメモリ使用量: なし"</string>
@@ -4841,6 +4829,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"ジェスチャー ナビゲーション"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"デモを試す"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"ボタン ナビゲーション"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"ジェスチャー ナビゲーション, 「戻る」の感度, 「戻る」のジェスチャー"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"ナビゲーション, ホームボタン"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"片手モード"</string>
@@ -5487,8 +5483,7 @@
       <item quantity="one"><xliff:g id="FIRST_0">%1$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"通話中にテキストを使用して会話できます"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5583,7 +5578,7 @@
     <string name="multiple_users_main_switch_title" msgid="9158796544835843201">"ユーザーの切り替えを許可する"</string>
     <string name="multiple_users_main_switch_keywords" msgid="4845954458094134356">"許可, 複数, ユーザー, 認可, 大勢"</string>
     <string name="multiple_users_title_keywords" msgid="2395593167746225172">"複数、ユーザー、プロフィール、複数のユーザー、アカウント、切り替え、多数"</string>
-    <string name="wireless_debugging_main_switch_title" msgid="8463499572781441719">"ワイヤレス デバッグの使用"</string>
+    <string name="wireless_debugging_main_switch_title" msgid="8463499572781441719">"ワイヤレス デバッグを使用"</string>
     <string name="graphics_driver_main_switch_title" msgid="6125172901855813790">"グラフィックス ドライバの設定の使用"</string>
     <string name="night_light_main_switch_title" msgid="3428298022467805219">"夜間モードを使用"</string>
     <string name="nfc_main_switch_title" msgid="6295839988954817432">"NFC を使用"</string>
@@ -5958,8 +5953,18 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"指紋認証や顔認証が必要なアプリを他のユーザーが開けないようにします。スマートウォッチと接続することで、セキュリティを維持しつつ、さまざまな場所で作業できます。"</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"さまざまなアプリで ID チェックとスマートウォッチを利用できます"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"自宅やオフィスなどの信頼できる場所では、指紋認証と顔認証に対応しているアプリで、個人情報を強力に保護しましょう。信頼できる場所以外でも保護を強化するには、スマートウォッチを使った ID チェック機能を活用してください。"</string>
-    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <string name="more_security_privacy_category_title" msgid="6107292123094705732">"その他の設定"</string>
+    <string name="more_security_privacy_summary" msgid="8049801531406061219">"自動入力、通知など"</string>
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
     <skip />
-    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"अपने माउस को अलग-अलग डिसप्ले पर ले जाएं"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"बाहरी डिसप्ले का इस्तेमाल करें"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"डिसप्ले का रिज़ॉल्यूशन"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"कनेक्ट करने का डिफ़ॉल्ट तरीका"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"किसी अन्य डिसप्ले के तौर पर इस्तेमाल करें"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"पहले से मौजूद डिसप्ले की स्क्रीन शेयर करें"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"कनेक्शन डायलॉग दिखाएं"</string>
@@ -1738,7 +1739,7 @@
     <string name="reset_bluetooth_wifi_button_text" msgid="3974098137045963639">"रीसेट करें"</string>
     <string name="reset_bluetooth_wifi_complete_toast" msgid="5893439291030574365">"ब्लूटूथ और वाई-फ़ाई को रीसेट कर दिया गया है"</string>
     <string name="reset_esim_title" msgid="4194570573425902754">"ई-सिम का डेटा हमेशा के लिए मिटाएं"</string>
-    <string name="reset_esim_desc" msgid="6125192435907740751">"इससे, मोबाइल और इंटरनेट सेवा देने वाली कंपनी का आपका प्लान रद्द नहीं होगा. ई-सिम बदलने के लिए, मोबाइल और इंटरनेट सेवा देने वाली कंपनी से संपर्क करें."</string>
+    <string name="reset_esim_desc" msgid="6125192435907740751">"ऐसा करने से, मोबाइल और इंटरनेट सेवा देने वाली कंपनी का आपका प्लान रद्द नहीं होगा. दूसरा सिम पाने के लिए, मोबाइल और इंटरनेट सेवा देने वाली कंपनी से संपर्क करें."</string>
     <string name="reset_network_button_text" msgid="2281476496459610071">"सेटिंग रीसेट करें"</string>
     <string name="reset_network_final_desc" msgid="5304365082065278425">"नेटवर्क की सभी सेटिंग रीसेट करें? इस कार्रवाई को पहले जैसा नहीं किया जा सकेगा."</string>
     <string name="reset_network_final_desc_esim" msgid="1129251284212847939">"क्या आपको नेटवर्क की सभी सेटिंग को रीसेट करना है और ई-सिम का डेटा हमेशा के लिए मिटाना है? इस कार्रवाई को पहले जैसा नहीं किया जा सकता."</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"स्क्रॉलिंग"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"माउस से कंट्रोल की गई स्क्रोलिंग"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"स्क्रोल करने की स्पीड"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"स्क्रोल करने की स्पीड बढ़ाएं"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"स्क्रोल करने की स्पीड कम करें"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"पॉइंटर की स्पीड बढ़ाएं"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"पॉइंटर की स्पीड कम करें"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"माउस का मुख्य बटन स्वैप करें"</string>
@@ -2375,10 +2374,8 @@
     <string name="audio_category_title" msgid="5283853679967605826">"ऑडियो"</string>
     <string name="general_category_title" msgid="6298579528716834157">"सामान्य"</string>
     <string name="display_category_title" msgid="6638191682294461408">"डिसप्ले"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
-    <!-- no translation found for accessibility_color_and_motion_subtext (1150281881647191503) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"कलर और मोशन"</string>
+    <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"गहरे रंग वाली थीम, रंग में सुधार करने की सुविधा, ऐनिमेशन हटाने की सुविधा"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"कर्सर और टचपैड से जुड़ी सुलभता सुविधाएं"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"साइज़, कलर, टाइप"</string>
     <string name="accessibility_pointer_color_customization_title" msgid="2841888132681075999">"कर्सर का कलर"</string>
@@ -2401,13 +2398,10 @@
     <string name="accessibility_turn_screen_darker_title" msgid="5986223133285858349">"स्क्रीन की चमक को कम करें"</string>
     <string name="interaction_control_category_title" msgid="2696474616743882372">"इंटरैक्शन कंट्रोल"</string>
     <string name="accessibility_tap_assistance_title" msgid="1058913033421048284">"समय से जुड़े कंट्रोल"</string>
-    <!-- no translation found for accessibility_tap_assistance_subtext (1805279944665087799) -->
-    <skip />
+    <string name="accessibility_tap_assistance_subtext" msgid="1805279944665087799">"स्क्रीन को दबाकर रखने की अवधि, कार्रवाई करने से जुड़ी अवधि"</string>
     <string name="accessibility_system_controls_title" msgid="6403287349518987624">"सिस्टम से जुड़े कंट्रोल"</string>
-    <!-- no translation found for accessibility_system_controls_subtext (2722046038429586174) -->
-    <skip />
-    <!-- no translation found for accessibility_system_controls_subtext_one_handed_not_supported (4973507525360793402) -->
-    <skip />
+    <string name="accessibility_system_controls_subtext" msgid="2722046038429586174">"नेविगेशन मोड, एक हाथ से इस्तेमाल करने की सुविधा, स्क्रीन घुमाने की सुविधा"</string>
+    <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"नेविगेशन मोड, स्क्रीन घुमाने की सुविधा"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"सुझाव, राय या शिकायत भेजें"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"सर्वे में हिस्सा लें"</string>
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"दिव्यांगों के लिए Google सहायता टीम से संपर्क करें"</string>
@@ -2433,7 +2427,7 @@
     <string name="talkback_title" msgid="8756080454514251327">"TalkBack"</string>
     <string name="talkback_summary" msgid="5820927220378864281">"स्क्रीन रीडर खास तौर पर दृष्टिहीन और कमज़ोर नज़र वाले लोगों के लिए है"</string>
     <string name="select_to_speak_summary" msgid="1995285446766920925">"अपनी स्क्रीन पर दिए गए आइटम तेज़ आवाज़ में सुनने के लिए उन पर टैप करें"</string>
-    <string name="accessibility_captioning_title" msgid="4561871958958925225">"कैप्शन दिखने की सेटिंग"</string>
+    <string name="accessibility_captioning_title" msgid="4561871958958925225">"कैप्शन की सेटिंग"</string>
     <string name="accessibility_captioning_about_title" msgid="3542171637334191563">"कैप्शन की प्राथमिकताओं के बारे में जानकारी"</string>
     <string name="accessibility_captioning_footer_learn_more_content_description" msgid="5730040700677017706">"कैप्शन की सेटिंग के बारे में ज़्यादा जानें"</string>
     <string name="accessibility_screen_magnification_title" msgid="1211169976144629087">"ज़ूम करने की सुविधा"</string>
@@ -2481,10 +2475,8 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"शॉर्टकट की मदद से बड़ा करके देखें"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"तीन बार टैप और शॉर्टकट की मदद से बड़ा करके देखें"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"<xliff:g id="SERVICE">%1$s</xliff:g> के बारे में जानकारी"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
-    <!-- no translation found for accessibility_text_reading_options_subtext (3480489973093251705) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"डिसप्ले साइज़ और टेक्स्ट साइज़"</string>
+    <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"फ़ॉन्ट साइज़, डिसप्ले साइज़, टेक्स्ट को बोल्ड करने की सुविधा, आउटलाइन टेक्स्ट"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"डिवाइस पर टेक्स्ट दिखने का तरीका बदलें"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"विषय: गर्म हवा के गुब्बारे के डिज़ाइन"</string>
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"भेजने वाले: अशोक"</string>
@@ -2658,10 +2650,8 @@
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"नेविगेशन सेटिंग"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"वाइब्रेशन और हैप्टिक"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"वाइब्रेशन के स्तर को, अलग-अलग इस्तेमाल के हिसाब से कंट्रोल करें"</string>
-    <!-- no translation found for accessibility_vibration_settings_state_on (3316037269092584284) -->
-    <skip />
-    <!-- no translation found for accessibility_vibration_settings_state_off (113565506991847845) -->
-    <skip />
+    <string name="accessibility_vibration_settings_state_on" msgid="3316037269092584284">"चालू है / कॉल, सूचनाओं, और अलार्म के लिए वाइब्रेशन के लेवल कंट्रोल करें"</string>
+    <string name="accessibility_vibration_settings_state_off" msgid="113565506991847845">"बंद है / कॉल, सूचनाओं, और अलार्म के लिए वाइब्रेशन के लेवल कंट्रोल करें"</string>
     <string name="accessibility_vibration_setting_disabled_for_silent_mode_summary" msgid="3982701772953323190">"फ़ोन के साइलेंट मोड पर होने की वजह से, यह सेटिंग बंद कर दी गई है"</string>
     <string name="accessibility_call_vibration_category_title" msgid="2545607568768192318">"कॉल"</string>
     <string name="accessibility_notification_alarm_vibration_category_title" msgid="2683635252414849417">"सूचनाएं और अलार्म"</string>
@@ -2681,8 +2671,7 @@
     <string name="accessibility_color_correction_qs_tooltip_content" msgid="3258628434235475205">"स्क्रीन के सबसे ऊपरी हिस्से से भी, रंग में सुधार करने की सुविधा को \'फटाफट सेटिंग\' में जोड़ा जा सकता है"</string>
     <string name="accessibility_color_inversion_auto_added_qs_tooltip_content" msgid="7267618234972101725">"रंग बदलने की सुविधा को \'फटाफट सेटिंग\' में जोड़ा गया. इसे कभी भी चालू या बंद करने के लिए, स्क्रीन पर नीचे की ओर स्वाइप करें."</string>
     <string name="accessibility_color_inversion_qs_tooltip_content" msgid="5046332142185711869">"स्क्रीन के सबसे ऊपरी हिस्से से भी, रंग बदलने की सुविधा को \'फटाफट सेटिंग\' में जोड़ा जा सकता है"</string>
-    <!-- no translation found for reduce_bright_colors_preference_summary (8112736110942731246) -->
-    <skip />
+    <string name="reduce_bright_colors_preference_summary" msgid="8112736110942731246">"स्क्रीन की रोशनी को सामान्य सेटिंग के सबसे कम लेवल से भी कम करें"</string>
     <string name="accessibility_reduce_bright_colors_auto_added_qs_tooltip_content" msgid="1906588335786328512">"स्क्रीन की रोशनी को सामान्य लेवल से और कम करने की सुविधा को \'फटाफट सेटिंग\' में जोड़ा गया. इसे कभी भी चालू या बंद करने के लिए, स्क्रीन पर नीचे की ओर स्वाइप करें."</string>
     <string name="accessibility_reduce_bright_colors_qs_tooltip_content" msgid="7522121299176176785">"स्क्रीन के सबसे ऊपरी हिस्से से भी, स्क्रीन की रोशनी को सामान्य लेवल से और कम करने की सुविधा को \'फटाफट सेटिंग\' में जोड़ा जा सकता है"</string>
     <string name="accessibility_one_handed_mode_auto_added_qs_tooltip_content" msgid="7914554254280416532">"वन-हैंडेड मोड को क्विक सेटिंग में जोड़ा गया. नीचे की ओर स्वाइप करके, इसे कभी भी चालू या बंद करें."</string>
@@ -2748,8 +2737,7 @@
     <string name="accessibility_found_all_devices" msgid="7817834722148556520">"क्या आपको कान की मशीन नहीं दिख रही है?"</string>
     <string name="accessibility_list_all_devices_title" msgid="161495343959211216">"ज़्यादा डिवाइस देखें"</string>
     <string name="accessibility_audio_adjustment_title" msgid="1332113739136802997">"ऑडियो अडजस्टमेंट"</string>
-    <!-- no translation found for accessibility_audio_adjustment_subtext (2190523175597700025) -->
-    <skip />
+    <string name="accessibility_audio_adjustment_subtext" msgid="2190523175597700025">"मोनो ऑडियो, ऑडियो बैलेंस"</string>
     <string name="accessibility_toggle_audio_description_preference_title" msgid="8916473886256061220">"ऑडियो फ़ॉर्मैट में जानकारी"</string>
     <string name="accessibility_audio_description_summary" msgid="2554789094873781056">"स्क्रीन पर चल रही उन फ़िल्मों और शो की जानकारी सुनें जिनमें यह सुविधा मौजूद है"</string>
     <string name="keywords_audio_description" msgid="6202816411593281252">"जानकारी सुनने की सुविधा, ऑडियो, जानकारी, कम दृष्टि,"</string>
@@ -2760,8 +2748,7 @@
     <string name="accessibility_summary_state_stopped" msgid="2343602489802623424">"सेवा काम नहीं कर रही. जानकारी पाने के लिए टैप करें."</string>
     <string name="accessibility_description_state_stopped" msgid="5364752492861199133">"यह सेवा ठीक से काम नहीं कर रही है."</string>
     <string name="accessibility_shortcuts_settings_title" msgid="974740249671825145">"सुलभता सुविधाओं के शॉर्टकट की सेटिंग"</string>
-    <!-- no translation found for accessibility_shortcuts_settings_subtext (3870836550836457943) -->
-    <skip />
+    <string name="accessibility_shortcuts_settings_subtext" msgid="3870836550836457943">"सुलभता बटन, आवाज़ बटन का शॉर्टकट"</string>
     <string name="enable_quick_setting" msgid="6648073323202243604">"त्वरित सेटिंग में दिखाएं"</string>
     <string name="daltonizer_mode_deuteranomaly_title" msgid="3229433065035047931">"ऐसी समस्या जिसमें हरा रंग लाल दिखता है"</string>
     <string name="daltonizer_mode_protanomaly_title" msgid="2572040492905945405">"ऐसी समस्या जिसमें लाल रंग हरा दिखता है"</string>
@@ -3105,8 +3092,7 @@
     <string name="on_device_recognition_settings" msgid="6503160369314598069">"उपयोगकर्ता के डिवाइस पर, बोली पहचानने की सेटिंग"</string>
     <string name="on_device_recognition_settings_title" msgid="7137599722039096545">"डिवाइस पर बोली पहचानने की सेटिंग"</string>
     <string name="on_device_recognition_settings_summary" msgid="3292736423223499348">"उपयोगकर्ता के डिवाइस पर बोली पहचानने की सेटिंग"</string>
-    <!-- no translation found for tts_subtext (8958790811881046789) -->
-    <skip />
+    <string name="tts_subtext" msgid="8958790811881046789">"बोलने की स्पीड और पिच अडजस्ट करें"</string>
     <string name="tts_engine_preference_title" msgid="7808775764174571132">"पसंदीदा सॉफ़्टवेयर"</string>
     <string name="tts_engine_settings_title" msgid="1298093555056321577">"इंजन सेटिंग"</string>
     <string name="tts_sliders_title" msgid="6901146958648426181">"बोलने की दर और पिच"</string>
@@ -3760,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"सिस्टम की आवाज़ें और वाइब्रेशन"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"वर्क प्रोफ़ाइल की आवाज़"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"लाइव कैप्शन"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"कॉल, वीडियो, और अन्य मीडिया के लिए कैप्शन की सुविधा पाएं"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"चालू है / कॉल, वीडियो, और अन्य मीडिया के लिए कैप्शन की सुविधा पाएं"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"बंद है / कॉल, वीडियो, और अन्य मीडिया के लिए कैप्शन की सुविधा पाएं"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"वायर वाले हेडफ़ोन"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"इस डिवाइस के साथ काम करने वाले मीडिया के ऑडियो का भरपूर आनंद लें"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"बंद है"</string>
@@ -3911,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"लोकप्रिय खबरें, एडिटोरियल वगैरह"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"पसंद किए जाने की संख्या, पोस्ट वगैरह"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"न्यूज़लेटर, सुझाया गया मीडिया वगैरह"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"फ़िलहाल, सभी ऐप्लिकेशन सूचनाओं को व्यवस्थित करने की सेटिंग इस्तेमाल कर रहे हैं"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"एआई की मदद से मैनेज करें"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"सूचनाओं की खास जानकारी"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"लंबे मैसेज के रीकैप तुरंत पाएं"</string>
@@ -3924,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"ये ऐप्लिकेशन शामिल न करें"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"सूचनाओं की खास जानकारी पाने से जुड़ी सेटिंग"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"लंबे मैसेज के रीकैप तुरंत पाएं"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"फ़िलहाल, सभी ऐप्लिकेशन सूचनाओं की खास जानकारी पाने से जुड़ी सेटिंग इस्तेमाल कर रहे हैं"</string>
     <string name="live_notifications" msgid="4650406646292963831">"रीयल-टाइम में मिलने वाली सूचनाएं"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"लाइव अपडेट"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"स्टेटस बार और लॉक स्क्रीन पर, जारी गतिविधियों की सूचनाएं और अहम सूचनाएं दिखाएं"</string>
@@ -4422,7 +4403,7 @@
     <string name="domain_urls_summary_none" msgid="1132578967643384733">"काम करने वाले लिंक नहीं खोलता"</string>
     <string name="domain_urls_summary_one" msgid="3312008753802762892">"<xliff:g id="DOMAIN">%s</xliff:g> खोलता है"</string>
     <string name="domain_urls_summary_some" msgid="1197692164421314523">"<xliff:g id="DOMAIN">%s</xliff:g> और दूसरे यूआरएल खोल सकता है"</string>
-    <string name="app_link_open_always" msgid="9167065494930657503">"ऐप्लिकेशन को वे लिंक खोलने की अनुमति दें जो इसके साथ काम करते हैं"</string>
+    <string name="app_link_open_always" msgid="9167065494930657503">"ऐप्लिकेशन को मान्य फ़ॉर्मैट वाले लिंक खोलने की अनुमति दें"</string>
     <string name="app_link_open_ask" msgid="2422450109908936371">"हर बार पूछें"</string>
     <string name="app_link_open_never" msgid="5299808605386052350">"ऐप्लिकेशन को लिंक खोलने की अनुमति न दें"</string>
     <string name="app_link_open_always_summary" msgid="4524005594295855117">"{count,plural, =1{ऐप्लिकेशन, # लिंक को हैंडल करने का दावा करता है}one{ऐप्लिकेशन, # लिंक को हैंडल करने का दावा करता है}other{ऐप्लिकेशन, # लिंक को हैंडल करने का दावा करता है}}"</string>
@@ -4504,7 +4485,7 @@
     <string name="average_memory_use" msgid="717313706368825388">"औसत मेमोरी उपयोग"</string>
     <string name="maximum_memory_use" msgid="2171779724001152933">"अधिकतम मेमोरी उपयोग"</string>
     <string name="memory_usage" msgid="5594133403819880617">"मेमोरी का उपयोग"</string>
-    <string name="app_list_memory_use" msgid="3178720339027577869">"ऐप का उपयोग"</string>
+    <string name="app_list_memory_use" msgid="3178720339027577869">"ऐप्लिकेशन का इस्तेमाल"</string>
     <string name="memory_details" msgid="6133226869214421347">"विवरण"</string>
     <string name="memory_use_summary" msgid="3915964794146424142">"पिछले 3 घंटों में <xliff:g id="SIZE">%1$s</xliff:g> औसत मेमोरी का उपयोग किया गया"</string>
     <string name="no_memory_use_summary" msgid="6708111974923274436">"पिछले 3 घंटों में किसी मेमोरी का उपयोग नहीं किया गया"</string>
@@ -4852,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"जेस्चर वाला नेविगेशन"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"डेमो देखें"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"दो और तीन बटन वाले नेविगेशन की सभी सेटिंग"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"हाथ के जेस्चर (स्पर्श) वाला नेविगेशन, बैक सेंसिटिविटी, पीछे जाने का जेस्चर"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"नेविगेशन, होम बटन"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"एक हाथ से इस्तेमाल करने की सुविधा"</string>
@@ -5216,7 +5205,7 @@
     <string name="cdma_subscription_summary" msgid="7134032708555561334">"RUIM/सिम और NV में बदलाव करें"</string>
     <string name="cdma_subscription_dialogtitle" msgid="555971296756231647">"सदस्यता"</string>
     <string name="register_automatically" msgid="5208258089316657167">"अपने आप रजिस्ट्रेशन…"</string>
-    <string name="roaming_alert_title" msgid="9052791521868787985">"क्या आपको डेटा रोमिंग की अनुमति देनी है?"</string>
+    <string name="roaming_alert_title" msgid="9052791521868787985">"रोमिंग पर डेटा इस्तेमाल करने की अनुमति देनी है?"</string>
     <string name="roaming_check_price_warning" msgid="5876977438036791361">"कीमतों की जानकारी के लिए आपको नेटवर्क सेवा देने वाली कंपनी से संपर्क करें."</string>
     <string name="mobile_network_mode_error" msgid="9222056129897416074">"गलत नेटवर्क मोड <xliff:g id="NETWORKMODEID">%1$d</xliff:g>. अनदेखा करें."</string>
     <string name="satellite_setting" msgid="4650503806634496443">"सैटलाइट कनेक्टिविटी"</string>
@@ -5462,7 +5451,7 @@
     <string name="stop_app_dlg_text" msgid="4373849065005318901">"पेज साइज़ के साथ काम करने वाली सेटिंग लागू करने के लिए, ऐप्लिकेशन को बंद कर दिया जाएगा."</string>
     <string name="error_pending_updates" msgid="7196832772265874760">"कर्नेल अपडेट नहीं किया जा सका. यह देखें कि कोई अपडेट बाकी है या नहीं. अपडेट बाकी होने पर, उसे इंस्टॉल करें."</string>
     <string name="error_ota_failed" msgid="4762376085470989653">"कर्नेल अपडेट नहीं किया जा सका. ओटीए लागू करते समय कोई गड़बड़ी हुई."</string>
-    <string name="bug_report_handler_title" msgid="713439959113250125">"गड़बड़ी की रिपोर्ट हैंडल करने वाला"</string>
+    <string name="bug_report_handler_title" msgid="713439959113250125">"गड़बड़ी की रिपोर्ट मैनेज करने वाला ऐप"</string>
     <string name="bug_report_handler_picker_footer_text" msgid="4935758328366585673">"तय करें कि आपके डिवाइस पर कौनसा ऐप्लिकेशन गड़बड़ी की रिपोर्ट के शॉर्टकट का इस्तेमाल कर सकता है."</string>
     <string name="personal_profile_app_subtext" msgid="5586060806997067676">"निजी"</string>
     <string name="work_profile_app_subtext" msgid="5043419461440127879">"वर्क प्रोफ़ाइल"</string>
@@ -5498,8 +5487,7 @@
       <item quantity="other"><xliff:g id="FIRST_1">%1$s</xliff:g>, <xliff:g id="SECOND">%2$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"कॉल के दौरान, मैसेज के ज़रिए बातचीत करें"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5614,7 +5602,7 @@
     <string name="smart_forwarding_missing_mdn_text" msgid="2907314684242542226">"फ़ोन नंबर नहीं डाला गया."</string>
     <string name="smart_forwarding_missing_alert_dialog_text" msgid="7870419247987316112">"ठीक है"</string>
     <string name="enable_2g_title" msgid="5657132300321750181">"2G नेटवर्क से सुरक्षा"</string>
-    <string name="enable_2g_summary" msgid="6194875539424151678">"यह सुविधा डिवाइसों को 2G नेटवर्क से कनेक्ट होने से रोकती है, क्योंकि ये नेटवर्क कम सुरक्षित होते हैं. इसकी वजह से, कुछ जगहों पर आपको कनेक्टिविटी की समस्या का सामना करना पड़ सकता है. हालांकि आपातकालीन कॉल के लिए 2G नेटवर्क का कभी भी इस्तेमाल किया जा सकता है, लेकिन ऐसा हो सकता है कि अंतरराष्ट्रीय रोमिंग के दौरान कॉल कनेक्ट न हों."</string>
+    <string name="enable_2g_summary" msgid="6194875539424151678">"यह सुविधा डिवाइसों को 2G नेटवर्क से कनेक्ट होने से रोकती है, क्योंकि ये नेटवर्क कम सुरक्षित होते हैं. आपको इस वजह से, कुछ जगहों पर खराब कनेक्टिविटी का सामना करना पड़ सकता है. हालांकि, आपातकालीन कॉल के लिए 2G नेटवर्क का इस्तेमाल हमेशा किया जा सकता है. ऐसा हो सकता है कि अंतरराष्ट्रीय रोमिंग के दौरान कॉल कनेक्ट न हों."</string>
     <string name="enable_2g_summary_disabled_carrier" msgid="8141118453219482762">"<xliff:g id="CARRIER_NAME_2G">%1$s</xliff:g> के लिए 2G नेटवर्क होना ज़रूरी है"</string>
     <string name="require_cellular_encryption_title" msgid="6087085031703089235">"सुरक्षित किए गए नेटवर्क को ही अनुमति दें"</string>
     <string name="require_cellular_encryption_summary" msgid="6090569065420631457">"यह ज़्यादा सुरक्षित है, लेकिन इससे हो सकता है कि कुछ जगहों पर नेटवर्क कनेक्शन में समस्या आए. हालांकि, आपातकालीन कॉल हमेशा किए जा सकते हैं."</string>
@@ -5758,13 +5746,10 @@
     <string name="color_inversion_state_on" msgid="1160969033636440368">"चालू है"</string>
     <string name="color_inversion_state_off" msgid="6925638668080451724">"बंद है"</string>
     <string name="color_inversion_feature_summary" msgid="1199876648549627647">"इससे हल्के रंग की स्क्रीन गहरे रंग में और गहरे रंग की स्क्रीन हल्के रंग में बदल जाती है"</string>
-    <!-- no translation found for magnification_feature_summary (4403387702011660253) -->
-    <skip />
+    <string name="magnification_feature_summary" msgid="4403387702011660253">"स्क्रीन पर दिख रहे कॉन्टेंट को बड़ा करने के लिए ज़ूम इन करें"</string>
     <string name="autoclick_disabled" msgid="3213396804955002120">"बंद है"</string>
-    <!-- no translation found for show_captions_disabled (924366862253349790) -->
-    <skip />
-    <!-- no translation found for show_captions_enabled (3495595825041704052) -->
-    <skip />
+    <string name="show_captions_disabled" msgid="924366862253349790">"बंद है / कैप्शन के साइज़ और स्टाइल को पसंद के मुताबिक बनाएं"</string>
+    <string name="show_captions_enabled" msgid="3495595825041704052">"चालू है / कैप्शन के साइज़ और स्टाइल को पसंद के मुताबिक बनाएं"</string>
     <string name="live_caption_disabled" msgid="3562035026547887366">"बंद है"</string>
     <string name="live_caption_enabled" msgid="5269360946200718949">"चालू है"</string>
     <string name="audio_seek_bar_state_left_first" msgid="1641359989891833888">"बाईं ओर वाले चैनल का ऑडियो लेवल <xliff:g id="PERCENT_LEFT">%1$s</xliff:g> और दाईं ओर वाले चैनल का ऑडियो लेवल <xliff:g id="PERCENT_RIGHT">%2$s</xliff:g> है"</string>
@@ -5975,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

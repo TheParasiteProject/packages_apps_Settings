@@ -977,7 +977,7 @@
     <string name="device_details_battery" msgid="5466987755790847884">"Батарея"</string>
     <string name="device_details_battery_charging" msgid="3464969346075775143">"Батарея, зарядталып жатыр"</string>
     <string name="device_details_key_missing_title" msgid="3568401701538114387">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> құрылғысын өшіріп қосып көріңіз. Бұл жұмыс істемесе, құрылғыны өшіріңіз. Қауіпсіздік үшін оны тек қоғамдық орында болмаған кезде қайта жұптаңыз.\n\nБұл құрылғы маңайда болмаса, ештеңе жасаудың керегі жоқ."</string>
-    <string name="verbose_printer_logging_title" msgid="6525634245166402031">"Сөз мөлшерін басып шығару журналы"</string>
+    <string name="verbose_printer_logging_title" msgid="6525634245166402031">"Басып шығару туралы толық мәлімет журналы"</string>
     <string name="verbose_printer_logging_summary" msgid="6558076303223667013">"Қосымша түзету журналдары, соның ішінде құпия ақпаратты қамтитын Internet Printing Protocol (IPP) протоколы."</string>
     <string name="bluetooth_unpair_dialog_forget_confirm_button" msgid="9184489424930549015">"Құрылғыны ұмыту"</string>
     <string name="bluetooth_companion_app_remove_association_confirm_button" msgid="76323555527926915">"Қолданбаны ажырату"</string>
@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"Тінтуірді дисплейлер арасында жылжытыңыз"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"Сыртқы дисплейді пайдалану"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"Дисплей ажыратымдылығы"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"Әдепкі қосылу әрекеті"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"Бөлек дисплей ретінде пайдалану"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"Ендірілген дисплей көшірмесін көрсету"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"Қосылудың диалогтік терезесін көрсету"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Айналдыру"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Басқарылатын айналдыру параметрі"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Айналдыру жылдамдығы"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"Айналдыру жылдамдығын арттыру"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"Айналдыру жылдамдығын азайту"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Меңзер жылдамдығын арттыру"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Меңзер жылдамдығын азайту"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Негізгі тінтуір түймесін ауыстыру"</string>
@@ -3359,7 +3358,7 @@
     <string name="vpn_no_vpns_added" msgid="7387080769821533728">"VPN желілері қосылмаған."</string>
     <string name="vpn_always_on_summary" msgid="2171252372476858166">"VPN желісіне әрқашан қосулы болу"</string>
     <string name="vpn_always_on_summary_not_supported" msgid="9084872130449368437">"Бұл қолданбада қолдау көрсетілмейді"</string>
-    <string name="vpn_always_on_summary_active" msgid="175877594406330387">"Үнемі қосулы"</string>
+    <string name="vpn_always_on_summary_active" msgid="175877594406330387">"Әрдайым қосулы"</string>
     <string name="vpn_insecure_summary" msgid="4450920215186742859">"Қорғалмаған"</string>
     <string name="vpn_require_connection" msgid="1027347404470060998">"VPN желісінсіз байланыстарды бөгеу"</string>
     <string name="vpn_require_connection_title" msgid="4186758487822779039">"VPN байланысы қажет пе?"</string>
@@ -3747,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Жүйе дыбыстары және дірілдері"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Жұмыс профилінің дыбысы"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Автоматты субтитр"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"Қоңыраулардың, бейнелер мен басқа мультимедианың жазуын алу"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"Қосулы / Қоңыраулардың, бейнелер мен басқа мультимедианың жазуын алу"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"Өшірулі / Қоңыраулардың, бейнелер мен басқа мультимедианың жазуын алу"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Сымды құлақаспап"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Үйлесімді медиақұрылғылардан дыбыс барынша иммерсивті шығады."</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Өшірулі"</string>
@@ -3898,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Үздік сюжеттер, редакторлар таңдауы және т.б."</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Лайктар, посттар және т.б."</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Жаңалықтар хаттары, ұсынылған мультимедиа және т.б."</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"Қазіргі уақытта барлық қолданба хабарландыру ұйымдастырушысын пайдаланып жатыр"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Жасанды интеллект көмегімен басқару"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Хабарландыру қорытындылары"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Ұзақ хабарларды жылдам шолып шығу"</string>
@@ -3911,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Бұл қолданбаларды қоспау"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Хабарландырудың қысқаша мазмұндары"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Ұзақ хабарларды жылдам шолып шығу"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"Барлық тиісті қолданба қазіргі уақытта хабарландырудың қысқаша мазмұндарын пайдаланып жатыр"</string>
     <string name="live_notifications" msgid="4650406646292963831">"Нақты уақыттағы хабарландырулар"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Нақты уақыттағы жаңартулар"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Күй жолағы мен құлыптаулы экранда қазіргі жедел хабарландыруларды көрсету"</string>
@@ -4839,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"Қимылмен басқару"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"Демо нұсқасын пайдаланып көру"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"Түйме арқылы өту"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"қимылмен басқару, артқы сезгіштік, артқа қайту қимылы"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"өту, негізгі экран түймесі"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"Бір қолмен басқару режимі"</string>
@@ -5600,7 +5602,7 @@
     <string name="smart_forwarding_missing_mdn_text" msgid="2907314684242542226">"Телефон нөмірі енгізілмеген."</string>
     <string name="smart_forwarding_missing_alert_dialog_text" msgid="7870419247987316112">"Жарайды"</string>
     <string name="enable_2g_title" msgid="5657132300321750181">"2G желісінен қорғау"</string>
-    <string name="enable_2g_summary" msgid="6194875539424151678">"Қауіпсіздігі төменірек 2G желілеріне қосылуға жол бермейді. Осы себепті кейбір жерлерде қосылу мүмкіндігі шектелуі мүмкін. Құтқару қызметіне қоңырау шалу үшін 2G-ге әрқашан рұқсат етіледі, бірақ халықаралық роумингте қоңыраулар қосылмауы мүмкін."</string>
+    <string name="enable_2g_summary" msgid="6194875539424151678">"Қауіпсіздігі төменірек 2G желілеріне қосылуға жол бермейді. Осы себепті кейбір жерлерде байланыс шектелуі мүмкін. Құтқару қызметіне қоңырау шалу үшін 2G қолданыла береді, бірақ халықаралық роумингіде қоңыраулар қосылмауы мүмкін."</string>
     <string name="enable_2g_summary_disabled_carrier" msgid="8141118453219482762">"<xliff:g id="CARRIER_NAME_2G">%1$s</xliff:g> операторы 2G байланысының қолжетімді болуын талап етеді"</string>
     <string name="require_cellular_encryption_title" msgid="6087085031703089235">"Тек шифрланған желілерге рұқсат ету"</string>
     <string name="require_cellular_encryption_summary" msgid="6090569065420631457">"Бұл шифрлау әдісі әлдеқайда қауіпсіз, бірақ мобильдік желі байланысын кейбір аймақтарда шектеуі мүмкін. Құтқару қызметіне әрдайым қоңырау шалуға болады."</string>
@@ -5958,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

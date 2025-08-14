@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"ამოძრავეთ თქვენი მაუსი ეკრანებს შორის"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"გარე ეკრანის გამოყენება"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"ეკრანის გარჩევადობა"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"კავშირის ნაგულისხმევი ქცევა"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"ცალკე ეკრანად გამოყენება"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"ჩაშენებული ეკრანის არეკვლა"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"კავშირის დიალოგის ჩვენება"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"გადაადგილება"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"მართული გადაადგილება"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"გადაადგილების სიჩქარე"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"უფრო სწრაფად გადაადგილება"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"უფრო ნელა გადაადგილება"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"მანიშნებლის აჩქარება"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"მანიშნებლის შენელება"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"მაუსის ძირითადი ღილაკის შეცვლა"</string>
@@ -3747,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"სისტემური ხმები და ვიბრაციები"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"სამსახურის პროფილის ხმა"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"პირდაპირი სუბტიტრები"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"მიიღეთ ზარების, ვიდეოების და სხვა მედიის სუბტიტრები"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"ჩართული / მიიღეთ ზარების, ვიდეოების და სხვა მედიის სუბტიტრები"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"გამორთული / მიიღეთ ზარების, ვიდეოების და სხვა მედიის სუბტიტრები"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"სადენიანი ყურსასმენი"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"თავსებადი მედიის ხმა უფრო იმერსიული ხდება"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"გამორთული"</string>
@@ -3898,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"მთავარი ამბები, სარედაქციო სტატიები და სხვა"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"მოწონებები, პოსტები და სხვა"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"ნიუსლეთერები, რეკომენდებული მედია და სხვა"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"ამჟამად ყველა აპი იყენებს შეტყობინების ორგანიზატორს"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"ხელოვნური ინტელექტით მართვა"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"შეტყობინების შეჯამებები"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"გრძელი შეტყობინებების სწრაფი მიმოხილვების მიღება"</string>
@@ -3911,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"აპები, რომლებიც არ უნდა იქნას გამოყენებული"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"შეტყობინების შეჯამებები"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"გრძელი შეტყობინებების სწრაფი მიმოხილვების მიღება"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"ამჟამად ყველა შესაბამისი აპი იყენებს შეტყობინების შეჯამებას"</string>
     <string name="live_notifications" msgid="4650406646292963831">"პირდაპირი შეტყობინებები"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"განახლებები რეალურ დროში"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"მიმდინარე Display, დროზე დამოკიდებული შეტყობინებების ჩვენება სტატუსის ზოლსა და ჩაკეტილ ეკრანზე"</string>
@@ -4839,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"ჟესტებით ნავიგაცია"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"დემოს ცდა"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"ნავიგაცია ღილაკის მეშვეობით"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"ჟესტებით ნავიგაცია, უკან გადასვლის მგრძნობიარობა, უკან გადასვლის ჟესტი"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"ნავიგაცია, მთავარი ეკრანის ღილაკი"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"ცალი ხელის რეჟიმი"</string>
@@ -5958,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

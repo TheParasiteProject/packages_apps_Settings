@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"Перамяшчайце курсор мышы паміж дысплэямі"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"Выкарыстоўваць знешні дысплэй"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"Раздзяляльнасць дысплэя"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"Стандартныя паводзіны пры падключэнні"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"Выкарыстоўваць як асобны дысплэй"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"Адлюстроўваць убудаваны дысплэй"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"Паказаць дыялогавае акно падключэння"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Прагортванне"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Кантраляванае прагортванне"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Хуткасць прагортвання"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"Паскорыць гартанне"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"Запаволіць гартанне"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Паскорыць паказальнік мышы"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Запаволіць паказальнік мышы"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Змяніць асноўную кнопку мышы"</string>
@@ -2375,8 +2374,7 @@
     <string name="audio_category_title" msgid="5283853679967605826">"Аўдыя"</string>
     <string name="general_category_title" msgid="6298579528716834157">"Агульныя налады"</string>
     <string name="display_category_title" msgid="6638191682294461408">"Дысплэй"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"Колер і рух"</string>
     <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"Цёмная тэма, карэкцыя колераў, прыбраць анімацыю"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"Спецыяльныя магчымасці курсора і сэнсарнай панэлі"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"Памер, колер, тып"</string>
@@ -2477,8 +2475,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"Павялічваць спалучэннем клавіш"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"Павялічваць спалучэннем клавіш і трайным дотыкам"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"Інфармацыя пра службу \"<xliff:g id="SERVICE">%1$s</xliff:g>\""</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Памер элементаў і тэксту"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Памер шрыфту, памер элементаў, паўтлусты шрыфт, тэкст з контурам"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Змяніць налады паказу тэксту"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Тэма: Дызайн паветраных шароў"</string>
@@ -3749,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Сістэмныя гукі і вібрацыя"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Гук працоўнага профілю"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Аўтаматычныя субцітры"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"Дадаваць субцітры да выклікаў, відэа і да іншых мультымедыя"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"Уключана / Дадаваць субцітры да выклікаў, відэа і да іншых мультымедыя"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"Выключана / Дадаваць субцітры да выклікаў, відэа і да іншых мультымедыя"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Правадныя навушнікі"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Гук з сумяшчальных мультымедыйных прылад стварае больш глыбокі эфект прысутнасці"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Выключана"</string>
@@ -3900,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Папулярныя гісторыі, рэдактарскія артыкулы і іншае змесціва"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Адзнакі \"Падабаецца\", запісы ў сацыяльных сетках і іншая інфармацыя"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Рассылкі, рэкамендаваныя медыя і іншае змесціва"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"На гэты момант усе праграмы выкарыстоўваюць арганізатар апавяшчэнняў"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Кіраванне з дапамогай AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Зводкі апавяшчэнняў"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Кароткія зводкі па доўгіх паведамленнях"</string>
@@ -3913,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Не ўключаць гэтыя праграмы"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Зводкі апавяшчэнняў"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Кароткія зводкі па доўгіх паведамленнях"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"На гэты момант усе прымянімыя праграмы выкарыстоўваюць падсумоўванне апавяшчэнняў"</string>
     <string name="live_notifications" msgid="4650406646292963831">"Жывыя апавяшчэнні"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Навіны ў рэальным часе"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Паказваць бягучыя тэрміновыя апавяшчэнні на панэлі стану і экране блакіроўкі"</string>
@@ -4841,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"Навігацыя жэстамі"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"Паспрабаваць у дэмаверсіі"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"Кнопачная навігацыя"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"навігацыя жэстамі, адчувальнасць задняй часткі, жэст вяртання"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"навігацыя, кнопка галоўнага экрана"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"Рэжым кіравання адной рукой"</string>
@@ -5489,8 +5489,7 @@
       <item quantity="other"><xliff:g id="FIRST_1">%1$s</xliff:g>, <xliff:g id="SECOND">%2$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"Абменьвайцеся тэкставымі паведамленнямі падчас тэлефонных выклікаў"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5963,5 +5962,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>
