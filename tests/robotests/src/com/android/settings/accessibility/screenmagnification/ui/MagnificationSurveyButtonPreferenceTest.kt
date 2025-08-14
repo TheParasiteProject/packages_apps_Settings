@@ -42,6 +42,7 @@ import com.android.settings.accessibility.screenmagnification.ui.MagnificationPr
 import com.android.settings.accessibility.shared.ui.BaseSurveyButtonPreference.Companion.PREFERENCE_KEY
 import com.android.settings.overlay.SurveyFeatureProvider
 import com.android.settings.testutils.FakeFeatureFactory
+import com.android.settings.testutils.SettingsStoreRule
 import com.android.settings.testutils.inflateViewHolder
 import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.preference.createAndBindWidget
@@ -68,6 +69,7 @@ import org.robolectric.shadows.ShadowPackageManager
 @RunWith(RobolectricTestParameterInjector::class)
 class MagnificationSurveyButtonPreferenceTest {
     @get:Rule val setFlagsRule = SetFlagsRule()
+    @get:Rule val settingStoreRule = SettingsStoreRule()
     private lateinit var context: Context
     private lateinit var shadowPackageManager: ShadowPackageManager
     private lateinit var surveyFeatureProvider: SurveyFeatureProvider
