@@ -104,6 +104,7 @@ import com.android.settings.system.SystemDashboardScreen
 import com.android.settings.vpn2.VpnSettingsScreen
 import com.android.settings.wifi.ConfigureWifiScreen
 import com.android.settings.wifi.calling.WifiCallingScreen
+import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiScreen
 import com.android.settings.wifi.tether.WifiHotspotScreen
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.getPreferenceSummary
@@ -354,6 +355,11 @@ private fun getCatalystScreenConfigs() =
             enabled = true,
             screenKey = ButtonNavigationSettingsScreen.KEY,
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_UNCATEGORIZED),
+        ),
+        PerScreenCatalystConfig(
+            enabled = true,
+            screenKey = SavedAccessPointsWifiScreen.KEY,
+            appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_MOBILE_DATA),
         ),
     )
 
