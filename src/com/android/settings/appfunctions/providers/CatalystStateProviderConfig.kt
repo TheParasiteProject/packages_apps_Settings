@@ -21,6 +21,7 @@ import com.android.settings.accessibility.AccessibilityScreen
 import com.android.settings.accessibility.ColorAndMotionScreen
 import com.android.settings.accessibility.VibrationIntensityScreen
 import com.android.settings.accessibility.VibrationScreen
+import com.android.settings.accessibility.colorinversion.ui.ColorInversionScreen
 import com.android.settings.accessibility.detail.a11yactivity.ui.A11yActivityScreen
 import com.android.settings.accessibility.detail.a11yservice.ui.A11yServiceScreen
 import com.android.settings.accessibility.flashnotifications.ui.FlashNotificationsScreen
@@ -161,6 +162,7 @@ private fun getCatalystScreenConfigs() =
     listOf(
         PerScreenCatalystConfig(enabled = true, screenKey = DarkModeScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = ColorAndMotionScreen.KEY),
+        PerScreenCatalystConfig(enabled = true, screenKey = ColorInversionScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AdaptiveConnectivityScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AutoBrightnessScreen.KEY),
         PerScreenCatalystConfig(
