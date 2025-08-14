@@ -25,8 +25,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.android.settings.R;
+import com.android.settings.accessibility.colorinversion.ui.ColorInversionScreen;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
@@ -96,5 +98,10 @@ public class ToggleColorInversionPreferenceFragment extends BaseSupportFragment 
     @NonNull
     private ComponentName getFeatureComponentName() {
         return COLOR_INVERSION_COMPONENT_NAME;
+    }
+
+    @Override
+    public @Nullable String getPreferenceScreenBindingKey(@NonNull Context context) {
+        return ColorInversionScreen.KEY;
     }
 }
