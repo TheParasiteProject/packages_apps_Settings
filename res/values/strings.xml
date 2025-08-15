@@ -2267,6 +2267,16 @@
     <string name="external_display_resolution_change_dialog_description">If your display isn\u2019t working as you\u2019d like, you can revert to your previous settings</string>
     <!-- External Display settings. Dialog description to confirm to apply resolution change (change was first temporarily applied while showing dialog). -->
     <string name="external_display_resolution_change_dialog_confirm">Use settings</string>
+    <!-- External Display settings. Display topology a11y -->
+    <string name="external_display_topology_display_block_content_description">Display: %1$s. Double-tap and hold to drag or view actions to move.</string>
+    <!-- External Display settings. Display topology a11y -->
+    <string name="external_display_topology_a11y_action_move_up">Move up</string>
+    <!-- External Display settings. Display topology a11y -->
+    <string name="external_display_topology_a11y_action_move_down">Move down</string>
+    <!-- External Display settings. Display topology a11y -->
+    <string name="external_display_topology_a11y_action_move_left">Move left</string>
+    <!-- External Display settings. Display topology a11y -->
+    <string name="external_display_topology_a11y_action_move_right">Move right</string>
 
     <!-- Wifi Display settings. The title of the screen. [CHAR LIMIT=40] -->
     <string name="wifi_display_settings_title">Google Cast</string>
