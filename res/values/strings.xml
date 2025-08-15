@@ -3432,6 +3432,13 @@
     <!-- Title of toggle preference in screensaver "when to start" screen to restrict to starting only when charging wirelessly [CHAR LIMIT=NONE] -->
     <string name="screensaver_restrict_to_wireless_charging_title">Restrict to wireless charging</string>
 
+    <!-- Title of the toggle to turn off blur [CHAR LIMIT=NONE] -->
+    <string name="blur_switch">Reduce blur effects</string>
+    <!-- Summary string of the toggle to turn off blur [CHAR LIMIT=60] -->
+    <string name="blur_switch_summary">Make backgrounds and panels easier to see</string>
+    <!-- Summary string on blur switch explaining why the toggle is disabled [CHAR LIMIT=60]  -->
+    <string name="blur_switch_disabled_summary">Temporarily disabled due to Battery Saver</string>
+
     <!-- Title for the main switch to enable or disable the low light display behavior. [CHAR LIMIT=NONE] -->
     <string name="low_light_display_behavior_main_switch_title">Use Low Light mode</string>
     <!-- Category title for the settings to control what to show when in low light. [CHAR LIMIT=NONE] -->
@@ -8644,6 +8651,9 @@
     <string name="keywords_android_version">android security patch level, baseband version, kernel version</string>
     <!-- Search keywords for dark mode settings [CHAR LIMIT=NONE] -->
     <string name="keywords_dark_ui_mode">theme, light, dark, mode, light sensitivity, photophobia, make darker, darken, dark mode, migraine</string>
+
+    <!-- Search keyword for the blur toggle [CHAR LIMIT=NONE] -->
+    <string name="keywords_blur_switch">blur effects</string>
 
     <!-- Search keyword for Device Theme Settings [CHAR LIMIT=NONE] -->
     <string name="keywords_systemui_theme">dark theme</string>
