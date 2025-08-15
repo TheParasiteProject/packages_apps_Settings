@@ -53,7 +53,7 @@ import java.util.List;
 @RunWith(RobolectricTestRunner.class)
 public class ToggleColorInversionPreferenceFragmentTest extends
         BaseShortcutInteractionsTestCases<ToggleColorInversionPreferenceFragment> {
-    private static final String MAIN_SWITCH_PREF_KEY = "color_inversion_switch_preference_key";
+    private static final String MAIN_SWITCH_PREF_KEY = "accessibility_display_inversion_enabled";
     private static final String SHORTCUT_PREF_KEY = "color_inversion_shortcut_key";
     private final Context mContext = ApplicationProvider.getApplicationContext();
     private FragmentScenario<ToggleColorInversionPreferenceFragment> mFragScenario = null;
