@@ -22,15 +22,20 @@ import android.content.Intent
 import android.provider.Settings
 import android.provider.Settings.ACTION_COLOR_INVERSION_SETTINGS
 import androidx.fragment.app.Fragment
+import com.android.internal.accessibility.AccessibilityShortcutController.COLOR_INVERSION_COMPONENT_NAME
 import com.android.settings.R
 import com.android.settings.accessibility.AccessibilityUtil
+import com.android.settings.accessibility.FeedbackManager
 import com.android.settings.accessibility.Flags
 import com.android.settings.accessibility.ToggleColorInversionPreferenceFragment
+import com.android.settings.accessibility.shared.ui.AccessibilityShortcutPreference
+import com.android.settings.accessibility.shared.ui.FeedbackButtonPreference
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.utils.highlightPreference
 import com.android.settingslib.datastore.HandlerExecutor
 import com.android.settingslib.datastore.KeyedObserver
 import com.android.settingslib.datastore.SettingsSecureStore
+import com.android.settingslib.metadata.PreferenceCategory
 import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.metadata.PreferenceLifecycleProvider
 import com.android.settingslib.metadata.PreferenceMetadata
@@ -63,7 +68,7 @@ open class ColorInversionScreen :
     override fun fragmentClass(): Class<out Fragment>? =
         ToggleColorInversionPreferenceFragment::class.java
 
-    override fun hasCompleteHierarchy() = false
+    override fun isIndexable(context: Context) = true
 
     override fun isFlagEnabled(context: Context) = Flags.catalystColorInversion()
 
@@ -101,7 +106,27 @@ open class ColorInversionScreen :
         Intent(ACTION_COLOR_INVERSION_SETTINGS).apply { highlightPreference(metadata?.key) }
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
-        preferenceHierarchy(context) {}
+        preferenceHierarchy(context) {
+            +IntroPreference()
+            +ColorInversionIllustrationPreference()
+            +ColorInversionMainSwitchPreference(context)
+            +PreferenceCategory(
+                key = "general_categories",
+                title = R.string.accessibility_screen_option,
+            ) +=
+                {
+                    +AccessibilityShortcutPreference(
+                        context = context,
+                        key = "color_inversion_shortcut_key",
+                        title = R.string.accessibility_display_inversion_shortcut_title,
+                        componentName = COLOR_INVERSION_COMPONENT_NAME,
+                        featureName = R.string.accessibility_display_inversion_preference_title,
+                        metricsCategory = metricsCategory,
+                    )
+                }
+            +FooterPreference()
+            +FeedbackButtonPreference { FeedbackManager(context, metricsCategory) }
+        }
 
     companion object {
         const val KEY = "toggle_inversion_preference"
