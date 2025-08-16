@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"Pārvietojiet peli starp displejiem."</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"Izmantot ārējo displeju"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"Displeja izšķirtspēja"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"Noklusējuma savienojuma izveide"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"Izmantot kā atsevišķu displeju"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"Spoguļot iebūvēto displeju"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"Rādīt savienojuma dialoglodziņu"</string>
@@ -1732,7 +1733,7 @@
     <string name="reset_dashboard_title" msgid="7423200250697886918">"Atiestatīšanas opcijas"</string>
     <string name="reset_mobile_network_settings_title" msgid="5616713931258506842">"Atiestatīt mobilā tīkla iestatījumus"</string>
     <string name="reset_mobile_network_settings_desc" msgid="7292636387692165727">"Tādējādi tiks atiestatīti visi mobilā tīkla iestatījumi."</string>
-    <string name="reset_mobile_network_settings_confirm_title" msgid="7510965634669511241">"Vai atiestatīt mobilo tīklu?"</string>
+    <string name="reset_mobile_network_settings_confirm_title" msgid="7510965634669511241">"Vai atiestatīt mobilā tīkla iestatījumus?"</string>
     <string name="reset_bluetooth_wifi_title" msgid="4113071322344697317">"Atiestatīt Bluetooth un Wi‑Fi iestatījumus"</string>
     <string name="reset_bluetooth_wifi_desc" msgid="4030295669083059711">"Tādējādi tiks atiestatīti visi Wi‑Fi un Bluetooth iestatījumi. Šo darbību nevar atsaukt."</string>
     <string name="reset_bluetooth_wifi_button_text" msgid="3974098137045963639">"Atiestatīt"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Ritināšana"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Kontrolēta ritināšana"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Ritināšanas ātrums"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"Paātrināt ritināšanu"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"Palēnināt ritināšanu"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Paātrināt rādītāja darbību"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Palēnināt rādītāja darbību"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Apmainīt peles galveno pogu"</string>
@@ -2375,8 +2374,7 @@
     <string name="audio_category_title" msgid="5283853679967605826">"Audio"</string>
     <string name="general_category_title" msgid="6298579528716834157">"Vispārīgi"</string>
     <string name="display_category_title" msgid="6638191682294461408">"Attēlojums"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"Krāsa un kustība"</string>
     <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"Tumšais motīvs, krāsu korekcija, animāciju noņemšana"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"Kursora un skārienpaliktņa pieejamība"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"Lielums, krāsa, veids"</string>
@@ -2477,8 +2475,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"Palielināšana ar saīsni"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"Palieliniet, lietojot saīsni un trīskāršu skārienu"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"Par pakalpojumu <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Attēlojuma lielums un teksts"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Fonta lielums, attēlojuma lielums, teksts treknrakstā, teksts ar kontūru"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Mainīt teksta attēlojumu"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Temats: gaisa balonu dizaini"</string>
@@ -3749,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Sistēmas skaņas un vibrācijas"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Darba profila signāls"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Subtitri reāllaikā"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"Iegūstiet subtitrus zvaniem, videoklipiem un citam multivides saturam"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"Ieslēgti/iegūstiet subtitrus zvaniem, videoklipiem un citam multivides saturam"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"Izslēgti/iegūstiet subtitrus zvaniem, videoklipiem un citam multivides saturam"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Vadu austiņas"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Audio no saderīga multivides satura kļūst iekļaujošāks"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Izslēgts"</string>
@@ -3900,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Populārākie raksti, redakcionālie raksti u. c."</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Atzīmes Patīk, ziņas u. c."</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Informatīvie izdevumi, ieteiktais multivides saturs u. c."</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"Visās lietotnēs pašlaik tiek izmantots paziņojumu kārtotājs."</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Pārvaldība, izmantojot MI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Paziņojumu apkopojumi"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Saņemiet īsus kopsavilkumus par garākiem ziņojumiem."</string>
@@ -3913,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Neiekļaut šīs lietotnes"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Paziņojumu apkopojumi"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Varat saņemt garāku ziņojumu īsus apkopojumus"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"Visās atbilstošajās lietotnēs pašlaik tiek izmantoti paziņojumu apkopojumi."</string>
     <string name="live_notifications" msgid="4650406646292963831">"Paziņojumi reāllaikā"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Reāllaika atjauninājumi"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Rādīt aktīvus, laika ziņā svarīgus paziņojumus statusa joslā un bloķēšanas ekrānā"</string>
@@ -4841,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"Žestu navigācija"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"Izmēģināt demonstrācijas versiju"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"Pogu navigācija"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"žestu navigācija, malu jutīgums, žests Atpakaļ"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"navigācija, poga Sākums"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"Vienas rokas režīms"</string>
@@ -5488,8 +5488,7 @@
       <item quantity="other"><xliff:g id="FIRST_1">%1$s</xliff:g>, <xliff:g id="SECOND">%2$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"Izmantojiet tekstu saziņai zvana laikā"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5962,5 +5961,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

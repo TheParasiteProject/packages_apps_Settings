@@ -129,6 +129,7 @@ public class ForceInvertPreferenceController extends BasePreferenceController
         expanded.key = EXPANDED_DARK_THEME_KEY;
         expanded.title = mContext.getString(
                 R.string.accessibility_expanded_dark_theme_title_in_search);
+        expanded.keywords = mContext.getString(R.string.keywords_expanded_dark_theme);
         rawData.add(expanded);
     }
 

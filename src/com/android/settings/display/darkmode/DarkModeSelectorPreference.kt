@@ -92,6 +92,9 @@ class ExpandedDarkModeSelectorPreference(dataStore: DarkThemeModeStorage) :
     override val summary
         get() = R.string.accessibility_expanded_dark_theme_summary
 
+    override val keywords: Int
+        get() = R.string.keywords_expanded_dark_theme
+
     override fun getIndexableTitle(context: Context): CharSequence? =
         context.getText(R.string.accessibility_expanded_dark_theme_title_in_search)
 

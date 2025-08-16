@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"اپنے ماؤس کو ایک ڈسپلے سے دوسرے ڈسپلے پر منتقل کریں"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"بیرونی ڈسپلے استعمال کریں"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"ڈسپلے ریزولیوشن"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"ڈیفالٹ کنکشن کا برتاؤ"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"علیحدہ ڈسپلے کے بطور استعمال کریں"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"پہلے سے شامل ڈسپلے کو دو طرفہ مطابقت پذیر بنائیں"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"کنکشن کا ڈائیلاگ دکھائیں"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"اسکرولنگ"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"ماؤس کے زیر کنٹرول سکرولنگ"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"سکرول کرنے کی رفتار"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"اسکرولنگ کو تیز تر بنائیں"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"اسکرولنگ کو سست بنائیں"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"پوائنٹر کو تیز بنائیں"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"پوائنٹر کو سست بنائیں"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"بنیادی ماؤس بٹن سویپ کریں"</string>
@@ -3747,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"سسٹم کی آوازیں اور وائبریشنز"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"دفتری پروفائل کی آواز"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"لائیو کیپشن"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"کالز، ویڈیوز اور دیگر میڈیا کے لیے کیپشنز حاصل کریں"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"آن ہے / کالز، ویڈیوز اور دیگر میڈیا کے لیے کیپشنز حاصل کریں"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"آف ہے / کالز، ویڈیوز اور دیگر میڈیا کے لیے کیپشنز حاصل کریں"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"تار والے ہیڈ فونز"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"موافق میڈیا سے آڈیو کا مزید دلچسپ تجربہ فراہم ہوتا ہے"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"آف ہے"</string>
@@ -3898,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"اہم خبریں، اداریے اور مزید"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"پسندیدگیاں، پوسٹس اور مزید"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"نیوز لیٹرز، تجویز کردہ میڈیا اور مزید"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"تمام ایپس فی الحال نوٹیفیکیشن آرگنائزر استعمال کر رہی ہیں"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"‏‫AI کے ساتھ نظم کریں"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"اطلاع کے خلاصے"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"طویل پیغامات کے فوری خلاصے حاصل کریں"</string>
@@ -3911,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"ان ایپس کو شامل نہ کریں"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"نوٹیفیکیشن کے خلاصے"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"طویل پیغامات کے فوری خلاصے حاصل کریں"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"تمام قابل اطلاق ایپس فی الحال اطلاع کے خلاصے استعمال کر رہی ہیں"</string>
     <string name="live_notifications" msgid="4650406646292963831">"لائیو اطلاعات"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"لائیو اپ ڈیٹس"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"اسٹیٹس بار اور مقفل اسکرین پر جاری، وقت کے تئیں حساس اطلاعات ڈسپلے کریں"</string>
@@ -4839,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"اشاروں والی نیویگیشن"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"ایک ڈیمو آزمائیں"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"بٹن والی نیویگیشن"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"اشاروں والی نیویگیشن، پیچھے کی حساسیت، پیچھے کا اشارہ"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"نیویگیشن، ہوم بٹن"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"ایک ہاتھ کی وضع"</string>
@@ -5958,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"Kursorni displeylar orasida suring"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"Tashqi displeydan foydalanish"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"Ekran aniqlik darajasi"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"Birlamchi ulanish sozlamasi"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"Alohida ekran sifatida ishlatish"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"Ichki ekranni akslantirish"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"Aloqa oynasini chiqarish"</string>
@@ -4832,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"Ishorali navigatsiya"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"Demo rejim"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"Tugmali navigatsiya"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"ishorali navigatsiya, qaytarish sensori, qaytarish ishorasi"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"navigatsiya, asosiy tugma"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"Ixcham rejim"</string>
@@ -5951,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"Mova o rato entre ecrãs"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"Usar ecrã externo"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"Resolução do ecrã"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"Comportamento de ligação predefinido"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"Usar como ecrã separado"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"Espelhar ecrã integrado"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"Mostrar caixa de diálogo de ligação"</string>
@@ -4388,14 +4389,10 @@
     <string name="app_data_sharing_updates_summary" msgid="4465929918457739443">"Reveja apps que mudaram a forma como podem partilhar os seus dados de localização"</string>
     <string name="app_function_access_settings_title" msgid="1837117989202166166">"Agentes"</string>
     <string name="app_function_access_settings_summary" msgid="3654291845453799170">"Agentes que podem aceder a informações ou realizar ações em apps"</string>
-    <!-- no translation found for manage_agent_app_function_access_settings_title (2407736540086293094) -->
-    <skip />
-    <!-- no translation found for manage_agent_app_function_access_settings_summary (5513761879561499076) -->
-    <skip />
-    <!-- no translation found for manage_target_app_function_access_settings_title (6517416582918633839) -->
-    <skip />
-    <!-- no translation found for manage_target_app_function_access_settings_summary (3578937757835411954) -->
-    <skip />
+    <string name="manage_agent_app_function_access_settings_title" msgid="2407736540086293094">"Acesso a apps"</string>
+    <string name="manage_agent_app_function_access_settings_summary" msgid="5513761879561499076">"Permita que este agente aceda a informações ou realize ações em apps"</string>
+    <string name="manage_target_app_function_access_settings_title" msgid="6517416582918633839">"Acesso de agentes"</string>
+    <string name="manage_target_app_function_access_settings_summary" msgid="3578937757835411954">"Agentes que podem aceder a informações ou realizar ações nesta app"</string>
     <string name="tap_to_wake" msgid="3313433536261440068">"Tocar para ativar"</string>
     <string name="tap_to_wake_summary" msgid="6641039858241611072">"Tocar duas vezes em qualquer ponto do ecrã para ativar o dispositivo"</string>
     <string name="domain_urls_title" msgid="7012209752049678876">"Abertura de links"</string>
@@ -4832,6 +4829,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"Navegação por gestos"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"Experimente uma demonstração"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"Navegação com botões"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"navegação por gestos, sensibilidade do botão anterior, gesto para voltar"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"navegação, botão do ecrã principal"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"Modo para uma mão"</string>
@@ -5948,8 +5953,18 @@
     <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Impeça terceiros de abrir apps que requerem o Desbloqueio facial ou por impressão digital. Quando tiver ligação estabelecida ao relógio, a sua segurança é garantida com maior mobilidade."</string>
     <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Use a Verificação de identidade e veja conteúdo em mais apps"</string>
     <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Garanta a proteção da sua identidade em todas as apps compatíveis com o Desbloqueio facial ou por impressão digital em locais fidedignos, como a sua casa ou escritório. Use a Verificação de identidade com o relógio para aumentar a sua proteção, mesmo para além de locais fidedignos."</string>
-    <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
+    <string name="more_security_privacy_category_title" msgid="6107292123094705732">"Outras definições"</string>
+    <string name="more_security_privacy_summary" msgid="8049801531406061219">"Preenchimento automático, notificações e muito mais"</string>
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
     <skip />
-    <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

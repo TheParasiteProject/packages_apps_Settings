@@ -3432,6 +3432,13 @@
     <!-- Title of toggle preference in screensaver "when to start" screen to restrict to starting only when charging wirelessly [CHAR LIMIT=NONE] -->
     <string name="screensaver_restrict_to_wireless_charging_title">Restrict to wireless charging</string>
 
+    <!-- Title of the toggle to turn off blur [CHAR LIMIT=NONE] -->
+    <string name="blur_switch">Reduce blur effects</string>
+    <!-- Summary string of the toggle to turn off blur [CHAR LIMIT=60] -->
+    <string name="blur_switch_summary">Make backgrounds and panels easier to see</string>
+    <!-- Summary string on blur switch explaining why the toggle is disabled [CHAR LIMIT=60]  -->
+    <string name="blur_switch_disabled_summary">Temporarily disabled due to Battery Saver</string>
+
     <!-- Title for the main switch to enable or disable the low light display behavior. [CHAR LIMIT=NONE] -->
     <string name="low_light_display_behavior_main_switch_title">Use Low Light mode</string>
     <!-- Category title for the settings to control what to show when in low light. [CHAR LIMIT=NONE] -->
@@ -5873,6 +5880,8 @@
     <string name="accessibility_shortcut_edit_dialog_summary_software_floating"><annotation id="link">More options</annotation></string>
     <!-- Footer to show help link content description. [CHAR LIMIT=NONE] -->
     <string name="footer_learn_more_content_description">Learn more about <xliff:g id="service" example="Select to Speak">%1$s</xliff:g></string>
+    <!-- Link for accessibility disability support page. [CHAR LIMIT=NONE]-->
+    <string name="accessibility_disability_support_url" translatable="false">https://support.google.com/accessibility?p=android-A11Y_setting</string>
     <!-- Title for quick settings shortcut option in accessibility edit shortcut dialog. [CHAR LIMIT=NONE] -->
     <string name="accessibility_shortcut_edit_dialog_title_quick_settings">Quick Settings</string>
     <!-- Summary for quick settings shortcut option in accessibility edit shortcut dialog. [CHAR LIMIT=NONE] -->
@@ -5996,6 +6005,8 @@
     <string name="accessibility_expanded_dark_theme_title_in_search">Expanded Dark theme</string>
     <!-- Summary for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=100] -->
     <string name="accessibility_expanded_dark_theme_summary">Automatically applies Dark theme to more apps for improved accessibility</string>
+    <!-- Search keywords for the Expanded dark theme settings. [CHAR_LIMIT=NONE] -->
+    <string name="keywords_expanded_dark_theme">force invert, color inversion, contrast</string>
     <!-- Title for the accessibility preference for disabling animations. [CHAR LIMIT=35] -->
     <string name="accessibility_disable_animations">Remove animations</string>
     <!-- Summary for the accessibility preference for disabling animations. [CHAR LIMIT=60] -->
@@ -8640,6 +8651,9 @@
     <string name="keywords_android_version">android security patch level, baseband version, kernel version</string>
     <!-- Search keywords for dark mode settings [CHAR LIMIT=NONE] -->
     <string name="keywords_dark_ui_mode">theme, light, dark, mode, light sensitivity, photophobia, make darker, darken, dark mode, migraine</string>
+
+    <!-- Search keyword for the blur toggle [CHAR LIMIT=NONE] -->
+    <string name="keywords_blur_switch">blur effects</string>
 
     <!-- Search keyword for Device Theme Settings [CHAR LIMIT=NONE] -->
     <string name="keywords_systemui_theme">dark theme</string>

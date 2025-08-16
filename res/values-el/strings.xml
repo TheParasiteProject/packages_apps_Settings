@@ -794,7 +794,7 @@
     <string name="unlock_set_unlock_launch_picker_title" msgid="4981063601772605609">"Κλείδωμα οθόνης"</string>
     <string name="unlock_set_unlock_launch_picker_title_profile" msgid="7631371082326055429">"Κλείδ. προφίλ εργασίας"</string>
     <string name="unlock_set_unlock_off_title" msgid="2831957685685921667">"Κανένα"</string>
-    <string name="unlock_set_unlock_none_title" msgid="2844029875174409728">"Σύρετε"</string>
+    <string name="unlock_set_unlock_none_title" msgid="2844029875174409728">"Ολίσθηση"</string>
     <string name="unlock_set_unlock_pattern_title" msgid="8224895208452995332">"Μοτίβο"</string>
     <string name="unlock_set_unlock_pin_title" msgid="5283636759362880407">"PIN"</string>
     <string name="unlock_set_unlock_password_title" msgid="2559842616268607041">"Κωδικός πρόσβασης"</string>
@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"Μετακίνηση του ποντικιού μεταξύ οθονών"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"Χρήση εξωτερικής οθόνης"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"Ανάλυση οθόνης"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"Προεπιλεγμένη συμπεριφορά σύνδεσης"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"Χρήση ως ξεχωριστή οθόνη"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"Κατοπτρισμός ενσωματωμένης οθόνης"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"Εμφάνιση παραθύρου διαλόγου σύνδεσης"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"Κύλιση"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"Ελεγχόμενη κύλιση"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"Ταχύτητα κύλισης"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"Πιο γρήγορη κύλιση"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"Πιο αργή κύλιση"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"Αύξηση ταχύτητας δείκτη"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"Μείωση ταχύτητας δείκτη"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"Εναλλαγή κύριου κουμπιού ποντικιού"</string>
@@ -2375,8 +2374,7 @@
     <string name="audio_category_title" msgid="5283853679967605826">"Ήχος"</string>
     <string name="general_category_title" msgid="6298579528716834157">"Γενικά"</string>
     <string name="display_category_title" msgid="6638191682294461408">"Οθόνη"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"Χρώμα και κίνηση"</string>
     <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"Σκούρο θέμα, διόρθωση χρωμάτων, κατάργηση κινούμενων εικόνων"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"Προσβασιμότητα δείκτη και επιφάνειας αφής"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"Μέγεθος, χρώμα, τύπος"</string>
@@ -2477,8 +2475,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"Συντόμ. μεγέθυνσης"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"Μεγέθυνση με συντόμευση και τριπλό πάτημα"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"Σχετικά με <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Μέγεθος προβολής και κειμένου"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Μέγεθος γραμματοσειράς, μέγεθος προβολής, κείμενο με έντονη γραφή, περίγραμμα κειμένου"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Αλλαγή του τρόπου προβολής κειμένου"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Θέμα: Σχέδια αερόστατων"</string>
@@ -3749,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Ήχοι και δονήσεις συστήματος"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Ήχος προφίλ εργασίας"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Ζωντανοί υπότιτλοι"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"Προσθήκη υποτίτλων για κλήσεις, βίντεο και άλλα μέσα"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"Ενεργό / Προσθήκη υποτίτλων για κλήσεις, βίντεο και άλλα μέσα"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"Ανενεργό / Προσθήκη υποτίτλων για κλήσεις, βίντεο και άλλα μέσα"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"Ενσύρματα ακουστικά"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"Ο ήχος από συμβατά μέσα γίνεται πιο καθηλωτικός"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"Ανενεργό"</string>
@@ -3900,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"Κορυφαίες ειδήσεις, άρθρα και άλλα"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"Επισημάνσεις \"μου αρέσει\", αναρτήσεις και άλλα"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"Ενημερωτικά δελτία, προτεινόμενα μέσα και άλλα"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"Όλες οι εφαρμογές χρησιμοποιούν επί του παρόντος τον διοργανωτή ειδοποιήσεων"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"Διαχείριση με AI"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"Συνόψεις ειδοποιήσεων"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"Λήψη σύντομων ανασκοπήσεων για μεγαλύτερα μηνύματα"</string>
@@ -3913,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"Να μην συμπεριλαμβάνονται αυτές οι εφαρμογές"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"Συνόψεις ειδοποιήσεων"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"Λήψη σύντομων ανασκοπήσεων για μεγαλύτερα μηνύματα"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"Όλες οι σχετικές εφαρμογές χρησιμοποιούν επί του παρόντος συνόψεις ειδοποιήσεων"</string>
     <string name="live_notifications" msgid="4650406646292963831">"Ζωντανές ειδοποιήσεις"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"Ενημερώσεις σε πραγματικό χρόνο"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"Εμφάνιση συνεχών ειδοποιήσεων που εξαρτώνται από την ώρα στη γραμμή κατάστασης και στην οθόνη κλειδώματος"</string>
@@ -4841,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"Πλοήγηση με κινήσεις"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"Δοκιμάστε μια επίδειξη"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"Πλοήγηση με κουμπιά"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"πλοήγηση με κινήσεις, ευαισθησία κίνησης επιστροφής, κίνηση επιστροφής"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"πλοήγηση, κουμπί αρχικής οθόνης"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"Λειτουργία ενός χεριού"</string>
@@ -5487,8 +5487,7 @@
       <item quantity="one"><xliff:g id="FIRST_0">%1$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"Χρησιμοποιήστε κείμενο για να επικοινωνήσετε κατά τη διάρκεια μιας κλήσης"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5583,7 +5582,7 @@
     <string name="multiple_users_main_switch_title" msgid="9158796544835843201">"Να επιτρέπεται η εναλλαγή χρήστη"</string>
     <string name="multiple_users_main_switch_keywords" msgid="4845954458094134356">"επιτρέπεται, πολλαπλοί, χρήστες, άδεια, πολλοί"</string>
     <string name="multiple_users_title_keywords" msgid="2395593167746225172">"πολλά, χρήστες, προφίλ, άτομα, λογαριασμοί, αλλαγή, πολλοί"</string>
-    <string name="wireless_debugging_main_switch_title" msgid="8463499572781441719">"Χρήση ασύρματου αποσφαλμάτωσης"</string>
+    <string name="wireless_debugging_main_switch_title" msgid="8463499572781441719">"Χρήση ασύρματης αποσφαλμάτωσης"</string>
     <string name="graphics_driver_main_switch_title" msgid="6125172901855813790">"Χρήση προτιμήσεων προγράμματος οδήγησης γραφικών"</string>
     <string name="night_light_main_switch_title" msgid="3428298022467805219">"Χρήση Νυχτερινού φωτισμού"</string>
     <string name="nfc_main_switch_title" msgid="6295839988954817432">"Χρήση NFC"</string>
@@ -5961,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

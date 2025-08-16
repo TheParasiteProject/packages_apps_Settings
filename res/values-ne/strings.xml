@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"माउसलाई एउटा डिस्प्लेबाट सारेर अर्को डिस्प्लेमा लैजानुहोस्"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"बाह्य डिस्प्ले प्रयोग गर्नुहोस्"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"डिस्प्लेको रिजोल्युसन"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"कनेक्ट गर्ने डिफल्ट तरिका"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"छुट्टै डिस्प्लेका रूपमा प्रयोग गर्नुहोस्"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"अन्तर्निर्मित डिस्प्ले मिरर गर्नुहोस्"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"कनेक्सन डायलग देखाउनुहोस्"</string>
@@ -1468,7 +1469,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"आफ्नो स्क्रिन अझ सजिलैसँग हेर्न मिल्ने बनाउन र केही स्क्रिनमा ब्याट्रीको खपत कम गर्न अँध्यारो ब्याकग्राउन्ड प्रयोग गर्नुहोस्। तपाईंले समयतालिका तय गर्नुभएको छ भने स्क्रिन अफ भएका बेला थिम बदलिने छ।"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"अँध्यारो थिम हाल तपाईंको बेडटाइम मोडको समयतालिकाअनुसार चल्छ"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"बेडटाइम मोडसम्बन्धी सेटिङहरू"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{मोडहरूले अँध्यारो थिम पनि अन गर्न सक्छ।}=1{{mode_1} ले अँध्यारो थिम पनि अन गर्छ।}=2{{mode_1} र {mode_2} ले अँध्यारो थिम पनि अन गर्छन्।}=3{{mode_1}, {mode_2} र {mode_3} ले अँध्यारो थिम पनि अन गर्छन्।}other{{mode_1}, {mode_2} र थप # वटा मोडले अँध्यारो थिम पनि अन गर्छन्।}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{मोडहरूले पनि अँध्यारो थिम अन गर्न सक्छन्।}=1{{mode_1} ले पनि अँध्यारो थिम अन गर्छ।}=2{{mode_1} र {mode_2} ले पनि अँध्यारो थिम अन गर्छन्।}=3{{mode_1}, {mode_2} र {mode_3} ले पनि अँध्यारो थिम अन गर्छन्।}other{{mode_1}, {mode_2} र थप # वटा मोडले पनि अँध्यारो थिम अन गर्छन्।}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"मोडहरूसम्बन्धी सेटिङ"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"हाई डाइनामिक रेन्ज (HDR) फोटो र भिडियोहरूमा चमक बढाउनुहोस् र रङको दायरा तथा स्पष्टता बढाउनुहोस्। HDR सामग्री अझ चम्किलो देखिने छ।"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"स्क्रिन टाइम आउट हुने समय"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"स्क्रोल गर्ने तरिका"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"नियन्त्रित स्क्रोलिङ"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"स्क्रोल गर्ने गति"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"स्क्रोल हुने गति अझ छिटो बनाउनुहोस्"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"स्क्रोल हुने गति अझ ढिलो बनाउनुहोस्"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"पोइन्टरको गति अझ छिटो बनाउनुहोस्"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"पोइन्टरको गति अझ ढिलो बनाउनुहोस्"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"माउसको मुख्य बटन अदलबदल गर्नुहोस्"</string>
@@ -2375,10 +2374,8 @@
     <string name="audio_category_title" msgid="5283853679967605826">"अडियो"</string>
     <string name="general_category_title" msgid="6298579528716834157">"सामान्य"</string>
     <string name="display_category_title" msgid="6638191682294461408">"डिस्प्ले"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
-    <!-- no translation found for accessibility_color_and_motion_subtext (1150281881647191503) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"रङ र मोसन"</string>
+    <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"अँध्यारो थिम, रङ सच्याउने कार्य, एनिमेसनहरू हटाउनुहोस्"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"कर्सर र टचप्याडको एक्सेसिबिलिटी"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"आकार, रङ, प्रकार"</string>
     <string name="accessibility_pointer_color_customization_title" msgid="2841888132681075999">"कर्सरको रङ"</string>
@@ -2401,13 +2398,10 @@
     <string name="accessibility_turn_screen_darker_title" msgid="5986223133285858349">"स्क्रिन अझ अँध्यारो बनाउनुहोस्"</string>
     <string name="interaction_control_category_title" msgid="2696474616743882372">"अन्तर्क्रियासम्बन्धी सेटिङ"</string>
     <string name="accessibility_tap_assistance_title" msgid="1058913033421048284">"समयसम्बन्धी कन्ट्रोल"</string>
-    <!-- no translation found for accessibility_tap_assistance_subtext (1805279944665087799) -->
-    <skip />
+    <string name="accessibility_tap_assistance_subtext" msgid="1805279944665087799">"टच एण्ड होल्ड गर्नु पर्ने अवधि, कारबाही गर्न लाग्ने अवधि"</string>
     <string name="accessibility_system_controls_title" msgid="6403287349518987624">"सिस्टमसम्बन्धी सेटिङ"</string>
-    <!-- no translation found for accessibility_system_controls_subtext (2722046038429586174) -->
-    <skip />
-    <!-- no translation found for accessibility_system_controls_subtext_one_handed_not_supported (4973507525360793402) -->
-    <skip />
+    <string name="accessibility_system_controls_subtext" msgid="2722046038429586174">"नेभिगेसन मोड, एक हाते मोड, स्क्रिन रोटेसन"</string>
+    <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"नेभिगेसन मोड, स्क्रिन रोटेसन"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"प्रतिक्रिया पठाउनुहोस्"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"सर्वेक्षणमा भाग लिनुहोस्"</string>
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"अपाङ्गता भएका मान्छेका निम्ति Google को ग्राहक सेवा विभागमा सम्पर्क गर्नुहोस्"</string>
@@ -2481,10 +2475,8 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"सर्टकट प्रयोग गरी म्याग्निफाइ गर्नुहोस्"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"सर्टकट र तीन पटक ट्याप गरेर म्याग्निफाइ गर्नुहोस्"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"<xliff:g id="SERVICE">%1$s</xliff:g>का बारेमा"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
-    <!-- no translation found for accessibility_text_reading_options_subtext (3480489973093251705) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"डिस्प्ले साइज र टेक्स्ट"</string>
+    <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"फन्टको आकार, डिस्प्ले साइज, बोल्ड टेक्स्ट, आउटलाइन टेक्स्ट"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"टेक्स्ट देखिने शैली बदल्नुहोस्"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"विषय: हट एयर बेलुनका डिजाइनहरू"</string>
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"प्रेषक: Bill"</string>
@@ -2658,10 +2650,8 @@
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"नेभिगेसनसम्बन्धी सेटिङ"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"भाइब्रेसन र ह्याप्टिक्स"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"विभिन्न प्रयोगका लागि भाइब्रेसनको क्षमता नियन्त्रण गर्नुहोस्"</string>
-    <!-- no translation found for accessibility_vibration_settings_state_on (3316037269092584284) -->
-    <skip />
-    <!-- no translation found for accessibility_vibration_settings_state_off (113565506991847845) -->
-    <skip />
+    <string name="accessibility_vibration_settings_state_on" msgid="3316037269092584284">"अन छ / कल तथा नोटिफिकेसन प्राप्हुँदा र अलार्म बज्दा भाइब्रेसनको तीव्रता नियन्त्रण गर्नुहोस्"</string>
+    <string name="accessibility_vibration_settings_state_off" msgid="113565506991847845">"अफ छ / कल तथा नोटिफिकेसन प्राप्हुँदा र अलार्म बज्दा भाइब्रेसनको तीव्रता नियन्त्रण गर्नुहोस्"</string>
     <string name="accessibility_vibration_setting_disabled_for_silent_mode_summary" msgid="3982701772953323190">"डिभाइस साइलेन्ट मोडमा भएकाले सेटिङ अफ गरिएको छ"</string>
     <string name="accessibility_call_vibration_category_title" msgid="2545607568768192318">"कलहरू"</string>
     <string name="accessibility_notification_alarm_vibration_category_title" msgid="2683635252414849417">"सूचना र अलार्महरू"</string>
@@ -2681,8 +2671,7 @@
     <string name="accessibility_color_correction_qs_tooltip_content" msgid="3258628434235475205">"तपाईं स्क्रिनको सिरानबाट पनि द्रुत सेटिङको मेनुमा रङ सच्याउनेसम्बन्धी सुविधा हाल्न सक्नुहुन्छ"</string>
     <string name="accessibility_color_inversion_auto_added_qs_tooltip_content" msgid="7267618234972101725">"द्रुत सेटिङको मेनुमा कलर इन्भर्सन सुविधा हालियो। तपाईं जुनसुकै बेला तलतिर स्वाइप गरेर यो सेटिङ अन वा अफ गर्न सक्नुहुन्छ।"</string>
     <string name="accessibility_color_inversion_qs_tooltip_content" msgid="5046332142185711869">"तपाईं स्क्रिनको सिरानबाट पनि द्रुत सेटिङको मेनुमा कलर इन्भर्सन सुविधा हाल्न सक्नुहुन्छ"</string>
-    <!-- no translation found for reduce_bright_colors_preference_summary (8112736110942731246) -->
-    <skip />
+    <string name="reduce_bright_colors_preference_summary" msgid="8112736110942731246">"डिभाइसको स्क्रिन न्यूनतम चमकभन्दा पनि मधुरो पार्नुहोस्"</string>
     <string name="accessibility_reduce_bright_colors_auto_added_qs_tooltip_content" msgid="1906588335786328512">"द्रुत सेटिङको मेनुमा स्क्रिन अझै मधुरो बनाउने सुविधा हालियो। तपाईं जुनसुकै बेला तलतिर स्वाइप गरेर यो सेटिङ अन वा अफ गर्न सक्नुहुन्छ।"</string>
     <string name="accessibility_reduce_bright_colors_qs_tooltip_content" msgid="7522121299176176785">"तपाईं स्क्रिनको सिरानबाट पनि द्रुत सेटिङको मेनुमा स्क्रिन अझै मधुरो बनाउने सुविधा हाल्न सक्नुहुन्छ"</string>
     <string name="accessibility_one_handed_mode_auto_added_qs_tooltip_content" msgid="7914554254280416532">"द्रुत सेटिङको मेनुमा एक हाते मोड सुविधा हालियो। तपाईं जुनसुकै बेला तलतिर स्वाइप गरेर यो सेटिङ अन वा अफ गर्न सक्नुहुन्छ।"</string>
@@ -2748,8 +2737,7 @@
     <string name="accessibility_found_all_devices" msgid="7817834722148556520">"तपाईंले आफ्नो हियरिङ डिभाइस देख्नुभएन?"</string>
     <string name="accessibility_list_all_devices_title" msgid="161495343959211216">"अझ धेरै डिभाइसहरू हेर्नुहोस्"</string>
     <string name="accessibility_audio_adjustment_title" msgid="1332113739136802997">"अडियो समायोजन"</string>
-    <!-- no translation found for accessibility_audio_adjustment_subtext (2190523175597700025) -->
-    <skip />
+    <string name="accessibility_audio_adjustment_subtext" msgid="2190523175597700025">"मोनो अडियो, अडियो ब्यालेन्स"</string>
     <string name="accessibility_toggle_audio_description_preference_title" msgid="8916473886256061220">"अडियोको वर्णन"</string>
     <string name="accessibility_audio_description_summary" msgid="2554789094873781056">"हेर्न मिल्ने चलचित्र र सोहरू प्ले भइरहेका बेला स्क्रिनमा के भइरहेको छ भन्ने कुरा वर्णन गरिएको अडियो सुन्नुहोस्"</string>
     <string name="keywords_audio_description" msgid="6202816411593281252">"अडियोको वर्णन, अडियो, वर्णन, कमजोर दृष्टि"</string>
@@ -2760,8 +2748,7 @@
     <string name="accessibility_summary_state_stopped" msgid="2343602489802623424">"काम गर्दै छैन। जानकारीका लागि ट्याप गर्नुहोस्।"</string>
     <string name="accessibility_description_state_stopped" msgid="5364752492861199133">"यो सेवाले राम्ररी काम गरिरहेको छैन।"</string>
     <string name="accessibility_shortcuts_settings_title" msgid="974740249671825145">"एक्सेसिबिलिटी सर्टकट"</string>
-    <!-- no translation found for accessibility_shortcuts_settings_subtext (3870836550836457943) -->
-    <skip />
+    <string name="accessibility_shortcuts_settings_subtext" msgid="3870836550836457943">"एक्सेसिबिलिटी बटन, भोल्युम बटन प्रयोग गरिने सर्टकट"</string>
     <string name="enable_quick_setting" msgid="6648073323202243604">"द्रुत सेटिङमा देखाउनुहोस्"</string>
     <string name="daltonizer_mode_deuteranomaly_title" msgid="3229433065035047931">"रातो-हरियो, हरियो रङ हल्का"</string>
     <string name="daltonizer_mode_protanomaly_title" msgid="2572040492905945405">"रातो-हरियो, रातो रङ हल्का"</string>
@@ -3105,8 +3092,7 @@
     <string name="on_device_recognition_settings" msgid="6503160369314598069">"डिभाइसमै चल्ने पहिचानसम्बन्धी सेटिङ"</string>
     <string name="on_device_recognition_settings_title" msgid="7137599722039096545">"डिभाइसमै चल्ने पहिचान"</string>
     <string name="on_device_recognition_settings_summary" msgid="3292736423223499348">"डिभाइसमै चल्ने वाक् पहिचान"</string>
-    <!-- no translation found for tts_subtext (8958790811881046789) -->
-    <skip />
+    <string name="tts_subtext" msgid="8958790811881046789">"स्पिच रेट र पिच मिलाउनुहोस्"</string>
     <string name="tts_engine_preference_title" msgid="7808775764174571132">"रुचाइएको इन्जिन"</string>
     <string name="tts_engine_settings_title" msgid="1298093555056321577">"इन्जिन सम्बन्धी सेटिङहरू"</string>
     <string name="tts_sliders_title" msgid="6901146958648426181">"बोलीको तीव्रता र तीक्षणता"</string>
@@ -3760,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"सिस्टमका साउन्ड र भाइब्रेसन"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"कार्य प्रोफाइलको साउन्ड"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"लाइभ क्याप्सन"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"कल, भिडियो र अन्य मिडियामा प्रयोग गर्न क्याप्सनहरू प्राप्त गर्नुहोस्"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"अन छ / कल, भिडियो र अन्य मिडियामा प्रयोग गर्न क्याप्सनहरू प्राप्त गर्नुहोस्"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"अफ छ / कल, भिडियो र अन्य मिडियामा प्रयोग गर्न क्याप्सनहरू प्राप्त गर्नुहोस्"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"तारयुक्त हेडफोन"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"कम्प्याटिबल मिडियाको अडियो अझै इमर्सिभ हुन्छ"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"अफ छ"</string>
@@ -3911,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"लोकप्रिय समाचार, सम्पादकीय र अन्य सामग्री"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"लाइक, पोस्ट र अन्य कुरा"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"न्युजलेटर, सिफारिस गरिएका मिडिया र अन्य कुरा"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"सबै एपहरूले अहिले नोटिफिकेसन व्यवस्थापन गर्ने सुविधा प्रयोग गरिरहेका छन्"</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"AI प्रयोग गरेर व्यवस्थापन गर्नुहोस्"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"नोटिफिकेसनका सारांश"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"लामा म्यासेजहरूका छोटा रिक्याप प्राप्त गर्नुहोस्"</string>
@@ -3924,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"यी एपहरू समावेश नगर्नुहोस्"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"नोटिफिकेसनका सारांश"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"लामा म्यासेजहरूका छोटा रिक्याप प्राप्त गर्नुहोस्"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"प्रयोग गर्न मिल्ने सबै एपहरूले नोटिफिकेसनका सारांश बनाउने सुविधा प्रयोग गरिरहेका छन्"</string>
     <string name="live_notifications" msgid="4650406646292963831">"लाइभ नोटिफिकेसन"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"लाइभ अपडेट"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"जारी तथा तुरुन्तै सम्पन्न गर्नु पर्ने कार्यसम्बन्धी नोटिफिकेसनहरू स्ट्याटस बार र लक स्क्रिनमा देखाउनुहोस्"</string>
@@ -4852,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"जेस्चर नेभिगेसन"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"डेमो हेर्नुहोस्"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"बटन नेभिगेसन"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"जेस्चर नेभिगेसन, पृष्ठभागको संवेदनशीलता, पृष्ठभागको इसारा"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"नेभिगेसन, होम बटन"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"एक हाते मोड"</string>
@@ -5498,8 +5487,7 @@
       <item quantity="one"><xliff:g id="FIRST_0">%1$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"कुनै कल भइरहेका बेला कुराकानी गर्नका निम्ति टेक्स्ट प्रयोग गर्नुहोस्"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5758,13 +5746,10 @@
     <string name="color_inversion_state_on" msgid="1160969033636440368">"अन छ"</string>
     <string name="color_inversion_state_off" msgid="6925638668080451724">"अफ छ"</string>
     <string name="color_inversion_feature_summary" msgid="1199876648549627647">"उज्यालो स्क्रिनलाई अँध्यारो र अँध्यारो स्क्रिनलाई उज्यालो बनाउँछ"</string>
-    <!-- no translation found for magnification_feature_summary (4403387702011660253) -->
-    <skip />
+    <string name="magnification_feature_summary" msgid="4403387702011660253">"आफ्नो स्क्रिनमा भएको कन्टेन्ट अझ ठुलो बनाउन जुम इन गर्नुहोस्"</string>
     <string name="autoclick_disabled" msgid="3213396804955002120">"अफ छ"</string>
-    <!-- no translation found for show_captions_disabled (924366862253349790) -->
-    <skip />
-    <!-- no translation found for show_captions_enabled (3495595825041704052) -->
-    <skip />
+    <string name="show_captions_disabled" msgid="924366862253349790">"अफ छ / क्याप्सनको आकार र शैली कस्टमाइज गर्नुहोस्"</string>
+    <string name="show_captions_enabled" msgid="3495595825041704052">"अन छ / क्याप्सनको आकार र शैली कस्टमाइज गर्नुहोस्"</string>
     <string name="live_caption_disabled" msgid="3562035026547887366">"अफ छ"</string>
     <string name="live_caption_enabled" msgid="5269360946200718949">"अन छ"</string>
     <string name="audio_seek_bar_state_left_first" msgid="1641359989891833888">"अडियो <xliff:g id="PERCENT_LEFT">%1$s</xliff:g> बायाँ, <xliff:g id="PERCENT_RIGHT">%2$s</xliff:g> दायाँ"</string>
@@ -5975,5 +5960,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>

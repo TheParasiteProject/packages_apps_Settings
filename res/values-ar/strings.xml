@@ -999,7 +999,8 @@
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"تحريك الماوس بين الشاشات"</string>
     <string name="external_display_use_title" msgid="8198257340836261386">"استخدام الشاشة الخارجية"</string>
     <string name="external_display_resolution_settings_title" msgid="2446784716488289268">"دقة الشاشة"</string>
-    <string name="external_display_connection_preference" msgid="9158531639269299045">"السلوك التلقائي للاتصال بشاشة خارجية"</string>
+    <!-- no translation found for external_display_connection_preference (3337612335495542718) -->
+    <skip />
     <string name="external_display_connection_preference_desktop" msgid="1132935527002697518">"استخدام الشاشة كشاشة عرض منفصلة"</string>
     <string name="external_display_connection_preference_mirroring" msgid="7389135903725596964">"مزامنة محتوى الشاشة المُضمَّنة مع الشاشة الخارجية"</string>
     <string name="external_display_connection_preference_show_dialog" msgid="6797743658612540027">"عرض مربّع حوار الاتصال"</string>
@@ -1866,7 +1867,7 @@
     <string name="settings_license_activity_unavailable" msgid="9014803774391134570">"هناك مشكلة في تحميل التراخيص."</string>
     <string name="settings_license_activity_loading" msgid="1653151990366578827">"جارٍ التحميل…"</string>
     <string name="settings_safetylegal_activity_loading" msgid="1757860124583063395">"جارٍ التحميل…"</string>
-    <string name="lockpassword_choose_your_password_header" msgid="2407205113298094824">"ضبط كلمة مرور"</string>
+    <string name="lockpassword_choose_your_password_header" msgid="2407205113298094824">"اضبط كلمة مرور"</string>
     <string name="lockpassword_choose_your_profile_password_header" msgid="7038997227611893312">"ضبط كلمة مرور لملف العمل"</string>
     <string name="lockpassword_choose_your_pin_header" msgid="7754265746504679473">"يُرجى ضبط رقم تعريف شخصي"</string>
     <string name="lockpassword_choose_your_profile_pin_header" msgid="4581749963670819048">"ضبط رقم تعريف شخصي لملف العمل"</string>
@@ -1897,7 +1898,7 @@
     <string name="lockpassword_choose_your_password_header_for_face" msgid="622276003801157839">"ضبط كلمة مرور لاستخدام \"فتح الجهاز ببصمة الوجه\""</string>
     <string name="lockpassword_choose_your_pattern_header_for_face" msgid="7333603579958317102">"ضبط نقش لاستخدام \"فتح الجهاز ببصمة الوجه\""</string>
     <string name="lockpassword_choose_your_pin_header_for_face" msgid="704061826984851309">"‏ضبط رقم PIN لاستخدام \"فتح الجهاز ببصمة الوجه\""</string>
-    <string name="lockpassword_choose_your_password_header_for_biometrics" msgid="2053366309272487015">"يجب ضبط كلمة مرور لفتح جهازك ببصمة إصبعك أو وجهك"</string>
+    <string name="lockpassword_choose_your_password_header_for_biometrics" msgid="2053366309272487015">"اضبط كلمة مرور لفتح جهازك ببصمة إصبعك أو وجهك"</string>
     <string name="lockpassword_choose_your_pattern_header_for_biometrics" msgid="4038476475293734905">"يجب ضبط نقش لفتح جهازك ببصمة الإصبع أو بالتعرف على الوجه"</string>
     <string name="lockpassword_choose_your_pin_header_for_biometrics" msgid="9086039918921009380">"‏يجب ضبط رقم PIN لفتح جهازك ببصمة الإصبع أو الوجه"</string>
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"هل نسيت كلمة المرور؟"</string>
@@ -2185,10 +2186,8 @@
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"الانتقال"</string>
     <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"الانتقال المتناسب مع سرعة دوران العجلة"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"سرعة الانتقال للأعلى أو للأسفل"</string>
-    <!-- no translation found for mouse_scrolling_speed_make_faster_description (3542691986036109618) -->
-    <skip />
-    <!-- no translation found for mouse_scrolling_speed_make_slower_description (349335653732016736) -->
-    <skip />
+    <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"زيادة سرعة التمرير"</string>
+    <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"خفض سرعة التمرير"</string>
     <string name="mouse_pointer_speed_make_faster_desc" msgid="7665912663672314461">"زيادة سرعة المؤشر"</string>
     <string name="mouse_pointer_speed_make_slower_desc" msgid="116802579827902188">"خفض سرعة المؤشر"</string>
     <string name="mouse_swap_primary_button" msgid="4798006242525441304">"تبديل زر الماوس الرئيسي"</string>
@@ -2375,8 +2374,7 @@
     <string name="audio_category_title" msgid="5283853679967605826">"الصوت"</string>
     <string name="general_category_title" msgid="6298579528716834157">"الإعدادات العامة"</string>
     <string name="display_category_title" msgid="6638191682294461408">"العرض"</string>
-    <!-- no translation found for accessibility_color_and_motion_title (1085072332445818494) -->
-    <skip />
+    <string name="accessibility_color_and_motion_title" msgid="1085072332445818494">"اللون والحركة"</string>
     <string name="accessibility_color_and_motion_subtext" msgid="1150281881647191503">"المظهر الداكن وتصحيح الألوان وإزالة الصور المتحركة"</string>
     <string name="accessibility_pointer_and_touchpad_title" msgid="5703454643194245909">"تسهيل استخدام المؤشر ولوحة اللمس"</string>
     <string name="accessibility_pointer_and_touchpad_summary" msgid="8588221231953604340">"الحجم واللون والنوع"</string>
@@ -2477,8 +2475,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"التكبير باستخدام الاختصار"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"التكبير باستخدام الزر والنقر الثلاثي"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"لمحة عن <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
-    <!-- no translation found for accessibility_text_reading_options_title (2059907327364152763) -->
-    <skip />
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"حجم العرض والنص"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"حجم الخط وحجم العرض وتغميق النص والنص المفرَّغ"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"تغيير كيفية عرض النص"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"الموضوع: تصميمات منطاد الهواء الساخن"</string>
@@ -2782,7 +2779,7 @@
     <string name="captioning_standard_options_title" msgid="5360264497750980205">"خيارات عادية"</string>
     <string name="captioning_locale" msgid="5533303294290661590">"اللغة"</string>
     <string name="captioning_text_size" msgid="5764254558945371745">"حجم نص الترجمة والشرح"</string>
-    <string name="captioning_preset" msgid="4174276086501638524">"نمط الترجمة الشرح"</string>
+    <string name="captioning_preset" msgid="4174276086501638524">"نمط الترجمة والشرح"</string>
     <string name="captioning_custom_options_title" msgid="3858866498893566351">"خيارات مخصصة"</string>
     <string name="captioning_background_color" msgid="5231412761368883107">"لون الخلفية"</string>
     <string name="captioning_background_opacity" msgid="6453738649182382614">"تعتيم الخلفية"</string>
@@ -2793,7 +2790,7 @@
     <string name="captioning_edge_color" msgid="6035818279902597518">"لون الحافة"</string>
     <string name="captioning_edge_type" msgid="5281259280060811506">"نوع الحافة"</string>
     <string name="captioning_typeface" msgid="285325623518361407">"مجموعة الخطوط"</string>
-    <string name="captioning_preview_text" msgid="4973475065545995704">"سيظهر الشرح بهذا الشكل"</string>
+    <string name="captioning_preview_text" msgid="4973475065545995704">"ستظهر الترجمة والشرح بهذا الشكل"</string>
     <string name="captioning_preview_characters" msgid="7854812443613580460">"Aa"</string>
     <string name="locale_default" msgid="8948077172250925164">"تلقائي"</string>
     <string name="color_title" msgid="2511586788643787427">"اللون"</string>
@@ -3749,12 +3746,9 @@
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"أصوات النظام والاهتزاز"</string>
     <string name="work_profile_sound_category_title" msgid="1708926655170323454">"صوت ملف العمل"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"النسخ النصي التلقائي"</string>
-    <!-- no translation found for live_caption_summary (7290150167089515457) -->
-    <skip />
-    <!-- no translation found for live_caption_on_summary (8921561021882989495) -->
-    <skip />
-    <!-- no translation found for live_caption_off_summary (6761535729357010911) -->
-    <skip />
+    <string name="live_caption_summary" msgid="7290150167089515457">"الحصول على الترجمة والشرح للمكالمات والفيديوهات والوسائط الأخرى"</string>
+    <string name="live_caption_on_summary" msgid="8921561021882989495">"مفعَّلة / الحصول على الترجمة والشرح للمكالمات والفيديوهات والوسائط الأخرى"</string>
+    <string name="live_caption_off_summary" msgid="6761535729357010911">"غير مفعَّلة / الحصول على الترجمة والشرح للمكالمات والفيديوهات والوسائط الأخرى"</string>
     <string name="spatial_audio_wired_headphones" msgid="2237355789145828648">"سماعات الرأس السلكية"</string>
     <string name="spatial_audio_text" msgid="8201387855375146000">"يصبح الصوت الصادر من الوسائط المتوافقة أكثر غمرًا"</string>
     <string name="spatial_summary_off" msgid="8272678804629774378">"غير مفعّل"</string>
@@ -3900,8 +3894,7 @@
     <string name="notification_bundle_news_summary" msgid="2524877244105778120">"أهم الأخبار والمقالات التحريرية والمزيد"</string>
     <string name="notification_bundle_social_summary" msgid="1880042768055317701">"الإعجابات والمنشورات والمزيد"</string>
     <string name="notification_bundle_recs_summary" msgid="9200357300848343691">"النشرات الإخبارية والوسائط المقترَحة والمزيد"</string>
-    <!-- no translation found for notification_bundle_no_apps_desc (6357770877341582580) -->
-    <skip />
+    <string name="notification_bundle_no_apps_desc" msgid="6357770877341582580">"تستخدم جميع التطبيقات حاليًا ميزة \"منظّم الإشعارات\""</string>
     <string name="notification_ai_features_title" msgid="2241618579100257538">"إدارة الإشعارات باستخدام الذكاء الاصطناعي"</string>
     <string name="notification_summarization_title" msgid="1516039882005781529">"ملخّصات الإشعارات"</string>
     <string name="notification_summarization_summary" msgid="1963425736716175590">"الحصول على ملخّص سريع للرسائل الطويلة"</string>
@@ -3913,8 +3906,7 @@
     <string name="notification_excluded_apps" msgid="317898848790046528">"عدم تضمين هذه التطبيقات"</string>
     <string name="notification_app_level_summarize_title" msgid="488390574186154905">"ملخّصات الإشعارات"</string>
     <string name="notification_app_level_summarize_subtext" msgid="2064371198044287108">"الحصول على ملخّص سريع للرسائل الطويلة"</string>
-    <!-- no translation found for notification_summarization_no_apps_desc (6058658379217986963) -->
-    <skip />
+    <string name="notification_summarization_no_apps_desc" msgid="6058658379217986963">"تستخدم جميع التطبيقات المتوافقة حاليًا ميزة \"ملخّصات الإشعارات\""</string>
     <string name="live_notifications" msgid="4650406646292963831">"الإشعارات المباشرة"</string>
     <string name="live_notifications_switch" msgid="7745275403210881110">"تغطية مباشرة للأخبار"</string>
     <string name="live_notifications_desc" msgid="6857161077319125625">"عرض الإشعارات بنشاط مستمر في الخلفية والحساسة للوقت على شريط الحالة وشاشة القفل"</string>
@@ -4841,6 +4833,14 @@
     <string name="gesture_settings_activity_title" msgid="1882463161833981820">"التنقُّل بالإيماءات"</string>
     <string name="gesture_navigation_tutorial_title" msgid="1605955266131665429">"مشاهدة عرض توضيحي"</string>
     <string name="button_navigation_settings_activity_title" msgid="7335636045504461813">"التنقل باستخدام الأزرار"</string>
+    <!-- no translation found for button_navigation_settings_order_title (4256756895101424865) -->
+    <skip />
+    <!-- no translation found for navbar_back_button (6386920156044420082) -->
+    <skip />
+    <!-- no translation found for navbar_home_button (951459586446869883) -->
+    <skip />
+    <!-- no translation found for navbar_recent_button (6005580570601162420) -->
+    <skip />
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"التنقُّل بالإيماءات، حساسية الرجوع، إيماءة الرجوع"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"التنقل، زر الشاشة الرئيسية"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"وضع \"التصفح بيد واحدة\""</string>
@@ -5491,8 +5491,7 @@
       <item quantity="one"><xliff:g id="FIRST_0">%1$s</xliff:g></item>
     </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
-    <!-- no translation found for rtt_settings_summary (9011338875202712756) -->
-    <skip />
+    <string name="rtt_settings_summary" msgid="9011338875202712756">"يتيح الإعداد استخدام الرسائل النصية للتواصل أثناء مكالمة"</string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
@@ -5965,5 +5964,17 @@
     <!-- no translation found for more_security_privacy_category_title (6107292123094705732) -->
     <skip />
     <!-- no translation found for more_security_privacy_summary (8049801531406061219) -->
+    <skip />
+    <!-- no translation found for privacy_sources_title (7648842637181479352) -->
+    <skip />
+    <!-- no translation found for privacy_sources_summary (8795612902105833258) -->
+    <skip />
+    <!-- no translation found for device_unlock_subpage_title (8619367783572270468) -->
+    <skip />
+    <!-- no translation found for lock_screen_title (4701994278040604018) -->
+    <skip />
+    <!-- no translation found for location_settings (6833222354060094170) -->
+    <skip />
+    <!-- no translation found for location_settings_subtitle (8471780117911010030) -->
     <skip />
 </resources>
