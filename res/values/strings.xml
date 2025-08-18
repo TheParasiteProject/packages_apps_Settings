@@ -9506,6 +9506,9 @@
     <!-- Security > Choose PIN/PW/Pattern > Notification redaction interstitial: Message asking the user how they want their profile notifications to appear when the device is locked [CHAR LIMIT=NONE] -->
     <string name="lock_screen_notifications_interstitial_message_profile">When your device is locked, how do you want profile notifications to show?</string>
 
+    <!-- Notification Settings > Notifications on lock screen > Title for showing notifications on the lock screen main switch. [CHAR LIMIT=100] -->
+    <string name="lockscreen_notification_show_switch">Show on lock screen</string>
+
     <!-- Notification Settings > Notifications on lock screen > Title for showing notifications on the lock screen. [CHAR LIMIT=100] -->
     <string name="lockscreen_notification_what_to_show_title">What to show on lock screen</string>
 
