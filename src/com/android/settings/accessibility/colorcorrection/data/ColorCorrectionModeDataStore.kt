@@ -57,7 +57,8 @@ class ColorCorrectionModeDataStore(context: Context) :
 
         keys.zip(values.toTypedArray()).associate { (key, value) -> key to value }
     }
-    private val settingSecureStore = SettingsSecureStore.get(context)
+    private val settingSecureStore =
+        SettingsSecureStore.get(context).apply { setDefaultValue(KEY, DEFAULT_MODE) }
 
     override fun contains(key: String): Boolean = settingSecureStore.contains(KEY)
 
