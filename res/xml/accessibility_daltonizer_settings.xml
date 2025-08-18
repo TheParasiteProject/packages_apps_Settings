@@ -33,7 +33,7 @@
         settings:searchable="false"/>
 
     <com.android.settingslib.widget.MainSwitchPreference
-        android:key="daltonizer_switch_preference_key"
+        android:key="accessibility_display_daltonizer_enabled"
         android:title="@string/accessibility_daltonizer_primary_switch_title"
         settings:controller="com.android.settings.accessibility.DaltonizerMainSwitchPreferenceController" />
 
