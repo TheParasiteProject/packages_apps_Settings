@@ -3874,7 +3874,7 @@
     <!-- Title of Hub mode category [CHAR LIMIT=30] -->
     <string name="hub_mode_category_title">Hub mode</string>
     <!-- Title of the "widgets on lockscreen" settings page. [CHAR LIMIT=NONE] -->
-    <string name="widgets_on_lockscreen_title">Widgets on lock screen</string>
+    <string name="widgets_on_lockscreen_title">Widgets on lock screen (beta)</string>
 
     <!-- Title of a setting to control when to automatically show widgets on the lockscren. [CHAR LIMIT=NONE] -->
     <string name="when_to_auto_show_hubmode_title">When to automatically show</string>
@@ -9505,6 +9505,9 @@
 
     <!-- Security > Choose PIN/PW/Pattern > Notification redaction interstitial: Message asking the user how they want their profile notifications to appear when the device is locked [CHAR LIMIT=NONE] -->
     <string name="lock_screen_notifications_interstitial_message_profile">When your device is locked, how do you want profile notifications to show?</string>
+
+    <!-- Notification Settings > Notifications on lock screen > Title for showing notifications on the lock screen main switch. [CHAR LIMIT=100] -->
+    <string name="lockscreen_notification_show_switch">Show on lock screen</string>
 
     <!-- Notification Settings > Notifications on lock screen > Title for showing notifications on the lock screen. [CHAR LIMIT=100] -->
     <string name="lockscreen_notification_what_to_show_title">What to show on lock screen</string>
