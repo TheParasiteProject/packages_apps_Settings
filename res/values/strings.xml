@@ -3874,7 +3874,7 @@
     <!-- Title of Hub mode category [CHAR LIMIT=30] -->
     <string name="hub_mode_category_title">Hub mode</string>
     <!-- Title of the "widgets on lockscreen" settings page. [CHAR LIMIT=NONE] -->
-    <string name="widgets_on_lockscreen_title">Widgets on lock screen</string>
+    <string name="widgets_on_lockscreen_title">Widgets on lock screen (beta)</string>
 
     <!-- Title of a setting to control when to automatically show widgets on the lockscren. [CHAR LIMIT=NONE] -->
     <string name="when_to_auto_show_hubmode_title">When to automatically show</string>
