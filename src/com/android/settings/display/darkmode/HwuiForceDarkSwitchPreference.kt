@@ -17,7 +17,7 @@ import com.android.settingslib.metadata.SwitchPreference
 import lineageos.datastore.SystemPropertyStore
 
 class HwuiForceDarkSwitchPreference(private val hwuiForceDarkDataStore: KeyValueStore) :
-    SwitchPreference(KEY, R.string.hwui_force_dark_title, R.string.hwui_force_dark_summary),
+    SwitchPreference(KEY, R.string.force_dark_title, R.string.force_dark_summary),
     PreferenceAvailabilityProvider {
 
     override fun storage(context: Context) = hwuiForceDarkDataStore
