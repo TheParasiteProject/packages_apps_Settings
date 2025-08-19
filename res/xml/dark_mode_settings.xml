@@ -48,6 +48,11 @@
             settings:requiresPackage="org.lineageos.overlay.customization.blacktheme" />
 
         <SwitchPreferenceCompat
+            android:key="hwui_force_dark"
+            android:title="@string/hwui_force_dark_title"
+            android:summary="@string/hwui_force_dark_summary" />
+
+        <SwitchPreferenceCompat
             android:key="toggle_force_invert"
             android:summary="@string/accessibility_force_invert_summary"
             android:title="@string/accessibility_force_invert_title"
