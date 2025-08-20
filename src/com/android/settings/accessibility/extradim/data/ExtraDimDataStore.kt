@@ -21,6 +21,8 @@ import android.content.Context
 import android.hardware.display.ColorDisplayManager
 import android.provider.Settings
 import android.util.Log
+import com.android.internal.accessibility.AccessibilityShortcutController.REDUCE_BRIGHT_COLORS_COMPONENT_NAME
+import com.android.settings.accessibility.AccessibilityStatsLogUtils
 import com.android.settingslib.datastore.AbstractKeyedDataObservable
 import com.android.settingslib.datastore.HandlerExecutor
 import com.android.settingslib.datastore.KeyValueStore
@@ -52,7 +54,12 @@ class ExtraDimDataStore(private val context: Context) :
             Log.w(LOG_TAG, "Unsupported $valueType for $key: $value")
             return
         }
-        colorDisplayManager?.isReduceBrightColorsActivated = value as Boolean
+        value as Boolean
+        AccessibilityStatsLogUtils.logAccessibilityServiceEnabled(
+            REDUCE_BRIGHT_COLORS_COMPONENT_NAME,
+            value,
+        )
+        colorDisplayManager?.isReduceBrightColorsActivated = value
     }
 
     override fun onFirstObserverAdded() {
