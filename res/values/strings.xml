@@ -568,6 +568,8 @@
     <string name="preferred_locale_menu_down">Move down</string>
     <!-- Delete item in the preferred locale menu [CHAR LIMIT=NONE]-->
     <string name="preferred_locale_menu_remove">Remove</string>
+    <!-- Move item to the top in the preferred locale menu [CHAR LIMIT=NONE]-->
+    <string name="preferred_locale_menu_top">Move to top</string>
 
     <!-- Regional Preferences begin -->
     <!-- The title of the menu entry of regional preferences. [CHAR LIMIT=50] -->
