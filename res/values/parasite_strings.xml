@@ -113,4 +113,8 @@
     <string name="hdr_display_summary">Brighten and expand the color range and clarity in High Dynamic Range (HDR) images and videos. HDR content will appear brighter. This will increase battery usage</string>
     <string name="hdr_max_brightness_percent_title">HDR brightness intensity</string>
 
+    <!-- AOD wallpaper -->
+    <string name="doze_always_on_wallpaper_title">Show lock screen wallpaper</string>
+    <string name="doze_always_on_wallpaper_description">Show lock screen wallpaper when screen is off</string>
+
 </resources>

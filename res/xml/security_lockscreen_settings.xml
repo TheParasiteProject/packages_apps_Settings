@@ -105,6 +105,12 @@
             settings:controller="com.android.settings.display.AmbientDisplayAlwaysOnPreferenceController"
             settings:userRestriction="no_ambient_display" />
 
+        <lineageos.preference.SecureSettingSwitchPreference
+            android:key="doze_always_on_wallpaper_enabled"
+            android:title="@string/doze_always_on_wallpaper_title"
+            android:summary="@string/doze_always_on_wallpaper_description"
+            android:defaultValue="true" />
+
         <Preference
             android:key="ambient_display_tap"
             android:title="@string/ambient_display_tap_screen_title"
