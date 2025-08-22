@@ -134,6 +134,8 @@ public class UserSettings extends SettingsPreferenceFragment
     private static final String KEY_ADD_USER = "user_add";
     private static final String KEY_ADD_SUPERVISED_USER = "supervised_user_add";
     private static final String KEY_ADD_USER_WHEN_LOCKED = "user_settings_add_users_when_locked";
+    private static final String KEY_ADD_USER_FROM_SIGNIN = "add_users_from_signin";
+    private static final String KEY_ADD_USER_SETTINGS_CATEGORY = "add_user_settings_category";
     private static final String KEY_ENABLE_GUEST_TELEPHONY = "enable_guest_calling";
     private static final String KEY_MULTIUSER_TOP_INTRO = "multiuser_top_intro";
     private static final String KEY_TIMEOUT_TO_DOCK_USER = "timeout_to_dock_user_preference";
@@ -201,6 +203,9 @@ public class UserSettings extends SettingsPreferenceFragment
     PreferenceGroup mGuestUserCategory;
     @VisibleForTesting
     PreferenceGroup mGuestCategory;
+    @SuppressWarnings("NullAway")
+    @VisibleForTesting
+    PreferenceGroup mAddUserSettingsCategory;
     @VisibleForTesting
     Preference mGuestResetPreference;
     @VisibleForTesting
@@ -237,6 +242,8 @@ public class UserSettings extends SettingsPreferenceFragment
     private CreateUserDialogController mCreateUserDialogController =
             new CreateUserDialogController(Utils.FILE_PROVIDER_AUTHORITY);
     private AddUserWhenLockedPreferenceController mAddUserWhenLockedPreferenceController;
+    @SuppressWarnings("NullAway")
+    private AddUserFromSignInPreferenceController mAddUserFromSignInPreferenceController;
     private GuestTelephonyPreferenceController mGuestTelephonyPreferenceController;
     private RemoveGuestOnExitPreferenceController mRemoveGuestOnExitPreferenceController;
     private MultiUserTopIntroPreferenceController mMultiUserTopIntroPreferenceController;
@@ -322,6 +329,9 @@ public class UserSettings extends SettingsPreferenceFragment
         mAddUserWhenLockedPreferenceController = new AddUserWhenLockedPreferenceController(
                 activity, KEY_ADD_USER_WHEN_LOCKED);
 
+        mAddUserFromSignInPreferenceController = new AddUserFromSignInPreferenceController(
+                activity, KEY_ADD_USER_FROM_SIGNIN);
+
         mGuestTelephonyPreferenceController = new GuestTelephonyPreferenceController(
                 activity, KEY_ENABLE_GUEST_TELEPHONY);
 
@@ -339,6 +349,7 @@ public class UserSettings extends SettingsPreferenceFragment
 
         final PreferenceScreen screen = getPreferenceScreen();
         mAddUserWhenLockedPreferenceController.displayPreference(screen);
+        mAddUserFromSignInPreferenceController.displayPreference(screen);
         mGuestTelephonyPreferenceController.displayPreference(screen);
         mRemoveGuestOnExitPreferenceController.displayPreference(screen);
         mMultiUserTopIntroPreferenceController.displayPreference(screen);
@@ -348,6 +359,9 @@ public class UserSettings extends SettingsPreferenceFragment
 
         screen.findPreference(mAddUserWhenLockedPreferenceController.getPreferenceKey())
                 .setOnPreferenceChangeListener(mAddUserWhenLockedPreferenceController);
+
+        screen.findPreference(mAddUserFromSignInPreferenceController.getPreferenceKey())
+                .setOnPreferenceChangeListener(mAddUserFromSignInPreferenceController);
 
         screen.findPreference(mGuestTelephonyPreferenceController.getPreferenceKey())
                 .setOnPreferenceChangeListener(mGuestTelephonyPreferenceController);
@@ -406,6 +420,8 @@ public class UserSettings extends SettingsPreferenceFragment
         mAddSupervisedUser = findPreference(KEY_ADD_SUPERVISED_USER);
         mAddSupervisedUser.setOnPreferenceClickListener(this);
 
+        mAddUserSettingsCategory = findPreference(KEY_ADD_USER_SETTINGS_CATEGORY);
+
         activity.registerReceiverAsUser(
                 mUserChangeReceiver, UserHandle.ALL, USER_REMOVED_INTENT_FILTER, null, mHandler,
                 Context.RECEIVER_EXPORTED_UNAUDITED);
@@ -425,6 +441,8 @@ public class UserSettings extends SettingsPreferenceFragment
 
         mAddUserWhenLockedPreferenceController.updateState(screen.findPreference(
                 mAddUserWhenLockedPreferenceController.getPreferenceKey()));
+        mAddUserFromSignInPreferenceController.updateState(screen.findPreference(
+                mAddUserFromSignInPreferenceController.getPreferenceKey()));
         mGuestTelephonyPreferenceController.updateState(screen.findPreference(
                 mGuestTelephonyPreferenceController.getPreferenceKey()));
         mTimeoutToDockUserPreferenceController.updateState(screen.findPreference(
@@ -1380,6 +1398,10 @@ public class UserSettings extends SettingsPreferenceFragment
                 mAddUserWhenLockedPreferenceController.getPreferenceKey());
         mAddUserWhenLockedPreferenceController.updateState(addUserOnLockScreen);
 
+        final Preference addUserFromSignInScreen = getPreferenceScreen().findPreference(
+                mAddUserFromSignInPreferenceController.getPreferenceKey());
+        mAddUserFromSignInPreferenceController.updateState(addUserFromSignInScreen);
+
         final Preference guestCallPreference = getPreferenceScreen().findPreference(
                 mGuestTelephonyPreferenceController.getPreferenceKey());
         mGuestTelephonyPreferenceController.updateState(guestCallPreference);
@@ -1391,6 +1413,7 @@ public class UserSettings extends SettingsPreferenceFragment
         updateGuestCategory(context, users);
         updateAddUser(context);
         updateAddSupervisedUser(context);
+        updateAddUserSettingsCategory();
 
         for (UserPreference userPreference : userPreferences) {
             userPreference.setOrder(Preference.DEFAULT_ORDER);
@@ -1611,6 +1634,10 @@ public class UserSettings extends SettingsPreferenceFragment
         } else {
             addUser.setVisible(false);
         }
+    }
+
+    private void updateAddUserSettingsCategory() {
+        mAddUserSettingsCategory.setVisible(mAddUserFromSignInPreferenceController.isAvailable());
     }
 
     private Drawable centerAndTint(Drawable icon) {

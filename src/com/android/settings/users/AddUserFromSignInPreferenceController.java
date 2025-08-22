@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The Android Open Source Project
+ * Copyright (C) 2025 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,49 +15,43 @@
  */
 package com.android.settings.users;
 
+import static com.android.settings.flags.Flags.showAddUsersFromSigninToggle;
+
 import android.content.Context;
-import android.provider.Settings;
+import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.preference.Preference;
 
 import com.android.settings.R;
 import com.android.settings.core.TogglePreferenceController;
-import com.android.settingslib.RestrictedSwitchPreference;
 
-public class AddUserWhenLockedPreferenceController extends TogglePreferenceController {
+public class AddUserFromSignInPreferenceController extends TogglePreferenceController {
 
     private final UserCapabilities mUserCaps;
+    private UserManager mUserManager;
 
-    public AddUserWhenLockedPreferenceController(Context context, String key) {
+    public AddUserFromSignInPreferenceController(Context context, String key) {
         super(context, key);
         mUserCaps = UserCapabilities.create(context);
+        mUserManager = context.getSystemService(UserManager.class);
     }
 
     @Override
     public void updateState(Preference preference) {
         super.updateState(preference);
         mUserCaps.updateAddUserCapabilities(mContext);
-        final RestrictedSwitchPreference restrictedSwitchPreference =
-                (RestrictedSwitchPreference) preference;
-        if (!isAvailable()) {
-            restrictedSwitchPreference.setVisible(false);
-        } else {
-            restrictedSwitchPreference.setVisible(true);
-            if (mUserCaps.mDisallowAddUserSetByAdmin) {
-                restrictedSwitchPreference.setDisabledByAdmin(mUserCaps.mEnforcedAdmin);
-            }
-        }
     }
 
     @Override
     public int getAvailabilityStatus() {
-        if (mContext.getResources()
+        if (!showAddUsersFromSigninToggle()) {
+            return UNSUPPORTED_ON_DEVICE;
+        } else if (!mContext.getResources()
                 .getBoolean(
                         com.android.internal.R.bool.config_userSwitchingMustGoThroughLoginScreen)) {
             return UNSUPPORTED_ON_DEVICE;
         } else if (!mUserCaps.isAdmin()) {
-            return DISABLED_FOR_USER;
-        } else if (mUserCaps.mDisallowAddUser && !mUserCaps.mDisallowAddUserSetByAdmin) {
             return DISABLED_FOR_USER;
         } else {
             return AVAILABLE;
@@ -66,14 +60,14 @@ public class AddUserWhenLockedPreferenceController extends TogglePreferenceContr
 
     @Override
     public boolean isChecked() {
-        return Settings.Global.getInt(mContext.getContentResolver(),
-                Settings.Global.ADD_USERS_WHEN_LOCKED, 0) == 1;
+        return !mUserManager.hasUserRestriction(UserManager.DISALLOW_ADD_USER, UserHandle.SYSTEM);
     }
 
     @Override
     public boolean setChecked(boolean isChecked) {
-        return Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.ADD_USERS_WHEN_LOCKED, isChecked ? 1 : 0);
+        mUserManager.setUserRestriction(
+                UserManager.DISALLOW_ADD_USER, !isChecked, UserHandle.SYSTEM);
+        return true;
     }
 
     @Override
