@@ -51,6 +51,7 @@ import com.android.settings.SettingsActivity;
 import com.android.settings.Utils;
 import com.android.settings.datausage.BillingCyclePreferenceController;
 import com.android.settings.datausage.DataUsageSummaryPreferenceController;
+import com.android.settings.flags.Flags;
 import com.android.settings.network.CarrierWifiTogglePreferenceController;
 import com.android.settings.network.MobileNetworkRepository;
 import com.android.settings.network.SubscriptionUtil;
@@ -288,7 +289,9 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
 
         use(ApnPreferenceController.class).init(mSubId);
         use(CarrierPreferenceController.class).init(mSubId);
-        use(DataUsagePreferenceController.class).init(mSubId);
+        if (!isCatalystEnabled() || !Flags.deeplinkNetworkAndInternet25q4()) {
+            use(DataUsagePreferenceController.class).init(mSubId);
+        }
         use(PreferredNetworkModePreferenceController.class).init(mSubId);
         use(EnabledNetworkModePreferenceController.class).init(mSubId, getParentFragmentManager());
         use(DataServiceSetupPreferenceController.class).init(mSubId);
