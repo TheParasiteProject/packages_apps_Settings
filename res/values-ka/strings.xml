@@ -246,6 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"ზემოთ გადატანა"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"ქვემოთ გადატანა"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"ამოშლა"</string>
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"ზემოთ ატანა"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"რეგიონული პარამეტრები"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"რაოდენობის და საზომი ერთეულების პარამეტრების დაყენება"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"აცნობეთ აპებს თქვენი რეგიონული პარამეტრების შესახებ, რათა მათ თქვენი გამოცდილების პერსონალიზება შეძლოს."</string>
@@ -1019,6 +1020,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"გსურთ ახალი პარამეტრების გამოყენება?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"თუ თქვენი ეკრანი არ მუშაობს ისე, როგორც გსურთ, შეგიძლიათ დაუბრუნდეთ წინა პარამეტრებს"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"პარამეტრების გამოყენება"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"გამოსახულების ასლი"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"უსადენო ეკრანის ჩართვა"</string>
@@ -1678,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"საერთო"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"საერთო პარამეტრები"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"ჰაბის რეჟიმი"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"ვიჯეტები დაბლოკილ ეკრანზე (ბეტა)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"ავტომატურად ჩვენების გარემოებები"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"არასოდეს"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"დატენისას"</string>
@@ -3965,8 +3975,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"სამსახურის შეტყობინებების მთელი კონტენტის ჩვენება"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"სამსახურის სენსიტიური კონტენტის დამალვა"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"აირჩიეთ ჩაკეტილ მოწყობილობაზე პროფილის შეტყობინებების ჩვენების რეჟიმი."</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"დაბლოკილ ეკრანზე ჩვენება"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"ჩაკეტილ ეკრანზე გამოსაჩენი შეტყობინებები"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"ნანახი შეტყობინებების ჩვენება"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"ნანახი შეტყობინებს ხატულების ჩვენება"</string>
@@ -4069,8 +4078,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"შეტყობინების ორგანიზატორი"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"დაჯგუფებისა და დადუმების დაბალი პრიორიტეტის შეტყობინებები"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"აპების მართვა შეტყობინების ორგანიზატორისთვის"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"ყოველთვის გააფართოვეთ ნაკრებები"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"სამსახურის პროფილის აპებზე გავრცელება"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"ვირტ. რეალობის დამხმარე სერვისები"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"ვირტუალური რეალობის დამხმარე სერვისად გაშვება არცერთ დაინსტალირებულ აპს არ მოუთხოვია."</string>
@@ -5947,6 +5955,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"PIN-კოდის წაშლისას წარმოიშვა შეცდომა."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> ანიმაცია"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"მართვის საშუალებების ჩართვა ვერ ხერხდება"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"იდენტობის შემოწმება ხელმისაწვდომია უფრო მეტ აპში"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"შეგიძლიათ თქვენი ვინაობის დაცვა ნებისმიერ აპში, რომელიც გთავაზობთ თითის ანაბეჭდს ან სახით განბლოკვას ვინაობის დასადგენად"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"დეტალების ნახვა"</string>

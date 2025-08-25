@@ -50,11 +50,11 @@
     <string name="font_size_make_smaller_desc" msgid="9149663537989624487">"Kecilkan saiz fon"</string>
     <string name="font_size_make_larger_desc" msgid="5774611876657293550">"Besarkan saiz fon"</string>
     <string name="stay_awake_on_fold_title" msgid="6590454679898134221">"Sentiasa"</string>
-    <string name="stay_awake_on_fold_summary" msgid="1939963751585954262">"Paparan depan dihidupkan semasa anda melipatkan peranti anda"</string>
+    <string name="stay_awake_on_fold_summary" msgid="1939963751585954262">"Paparan depan dihidupkan apabila peranti dilipat"</string>
     <string name="stay_awake_on_lockscreen_title" msgid="8088456642083051068">"Leret ke atas untuk meneruskan tindakan"</string>
     <string name="stay_awake_on_lockscreen_summary" msgid="8825321939913726566">"Lipat telefon anda dan leret ke atas pada paparan depan untuk terus menggunakan apl atau tunggu beberapa saat sehingga skrin dikunci. Permainan dan apl video akan diteruskan secara automatik."</string>
     <string name="sleep_on_fold_title" msgid="7626123024330501411">"Jangan sekali-kali"</string>
-    <string name="sleep_on_fold_summary" msgid="4191753338303043456">"Paparan depan dimatikan dan dikunci apabila anda melipat peranti anda"</string>
+    <string name="sleep_on_fold_summary" msgid="4191753338303043456">"Paparan depan dimatikan dan dikunci apabila peranti dilipat"</string>
     <string name="auto_rotate_settings_primary_switch_title" msgid="3440951924928594520">"Gunakan autoputar"</string>
     <string name="smart_rotate_text_headline" msgid="5878008933992951904">"Pengesanan Wajah menggunakan kamera depan untuk meningkatkan ketepatan autoputar. Imej tidak sekali-kali disimpan atau dihantar kepada Google."</string>
     <string name="bluetooth" msgid="8898478620943459654">"Bluetooth"</string>
@@ -246,6 +246,8 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Alih ke atas"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Alih ke bawah"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Alih keluar"</string>
+    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"Tetapan wilayah"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Tetapkan pilihan unit dan nombor"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Beritahu apl tetapan wilayah anda supaya apl boleh memeribadikan pengalaman anda."</string>
@@ -659,7 +661,7 @@
     <string name="private_space_summary" msgid="2274405892301976238">"Pastikan apl peribadi kekal dikunci dan disembunyikan"</string>
     <string name="private_space_description" msgid="4059594203775816136">"Simpan apl peribadi dalam ruang berasingan yang boleh anda sembunyikan atau kunci"</string>
     <string name="private_space_lock_title" msgid="7230836881433350526">"Kunci ruang persendirian"</string>
-    <string name="private_space_one_lock_summary" msgid="2106513606571219068">"Anda boleh membuka kunci ruang privasi dengan cara yang sama seperti anda membuka kunci peranti atau memilih kunci yang lain"</string>
+    <string name="private_space_one_lock_summary" msgid="2106513606571219068">"Anda boleh membuka kunci ruang persendirian dengan cara yang sama seperti anda membuka kunci peranti, atau memilih kunci yang lain"</string>
     <string name="private_space_screen_lock_title" msgid="8679383894967823163">"Gunakan kunci skrin peranti"</string>
     <string name="private_space_biometric_title" msgid="3934339826674553174">"Buka Kunci Wajah &amp; Cap Jari"</string>
     <string name="private_space_fingerprint_title" msgid="5989254643211889931">"Buka Kunci Cap Jari"</string>
@@ -670,16 +672,16 @@
     <string name="private_space_face_unlock_title" msgid="462248384776453613">"Buka Kunci Wajah untuk ruang persendirian"</string>
     <string name="private_space_biometric_unlock_title" msgid="1978145237698659673">"Buka Kunci Wajah &amp; Cap Jari untuk ruang persendirian"</string>
     <string name="private_space_fingerprint_enroll_introduction_title" msgid="5187730641333680942">"Sediakan Buka Kunci Cap Jari untuk ruang privasi"</string>
-    <string name="private_space_fingerprint_enroll_introduction_message" msgid="9092068873421435300">"Gunakan cap jari anda untuk membuka kunci ruang privasi anda atau mengesahkan identiti anda, seperti ketika anda log masuk ke apl atau meluluskan pembelian"</string>
+    <string name="private_space_fingerprint_enroll_introduction_message" msgid="9092068873421435300">"Gunakan cap jari untuk membuka kunci ruang persendirian atau mengesahkan identiti anda, seperti ketika anda log masuk ke apl atau meluluskan pembelian"</string>
     <string name="private_space_fingerprint_enroll_introduction_footer_message" msgid="7125255484447984854">"Ruang privasi anda boleh dibuka kunci walaupun anda tidak bermaksud untuk berbuat demikian, seperti jika seseorang menghalakan telefon anda pada jari anda."</string>
-    <string name="private_space_fingerprint_enroll_finish_message" msgid="4754797926493316965">"Gunakan cap jari anda untuk membuka kunci ruang privasi anda atau untuk meluluskan pembelian"</string>
-    <string name="private_space_face_enroll_introduction_title" msgid="3717541082520006032">"Sediakan Buka Kunci Wajah untuk ruang privasi"</string>
+    <string name="private_space_fingerprint_enroll_finish_message" msgid="4754797926493316965">"Gunakan cap jari anda untuk membuka kunci ruang persendirian atau untuk meluluskan pembelian"</string>
+    <string name="private_space_face_enroll_introduction_title" msgid="3717541082520006032">"Sediakan Buka Kunci Wajah untuk ruang persendirian"</string>
     <string name="private_space_face_enroll_introduction_message" msgid="250239418499081821">"Gunakan wajah anda untuk membuka kunci ruang privasi anda atau mengesahkan identiti anda, seperti ketika anda log masuk ke apl atau meluluskan pembelian"</string>
-    <string name="private_space_face_enroll_introduction_info_looking" msgid="5694757845303924042">"Tindakan melihat telefon boleh membuka kunci ruang privasi walaupun anda tidak bermaksud untuk berbuat demikian. Ruang privasi anda juga boleh dibuka kunci oleh seseorang yang mirip anda, seperti adik-beradik berwajah seiras atau jika seseorang menghalakan peranti rapat ke wajah anda."</string>
+    <string name="private_space_face_enroll_introduction_info_looking" msgid="5694757845303924042">"Dengan melihat telefon, ruang persendirian boleh dibuka kunci walaupun anda tidak bermaksud untuk berbuat demikian. Ruang persendirian anda juga boleh dibuka kunci oleh seseorang yang mirip anda, seperti adik-beradik berwajah seiras, atau jika seseorang menghalakan peranti rapat ke wajah anda."</string>
     <string name="private_space_face_enroll_introduction_info_less_secure" msgid="8460719783943533172">"Penggunaan wajah anda untuk membuka kunci ruang privasi anda mungkin kurang selamat berbanding dengan corak, PIN atau kata laluan yang kukuh"</string>
-    <string name="private_space_face_settings_require_attention_details" msgid="2799569069549999689">"Untuk membuka kunci ruang privasi, mata anda mestilah dibuka. Untuk mendapatkan hasil terbaik, tanggalkan kaca mata hitam."</string>
-    <string name="private_space_face_settings_footer" msgid="7722256209563543711">"Gunakan wajah anda untuk membuka kunci ruang privasi anda.\n\nSentiasa ingat:\nAnda hanya boleh menyediakan satu wajah pada satu-satu masa. Untuk menambahkan wajah lain, padamkan wajah semasa.\n\nTindakan melihat telefon boleh membuka kunci telefon itu walaupun anda tidak bermaksud untuk berbuat sedemikian.\n\nRuang privasi anda boleh dibuka kunci oleh orang lain jika peranti anda dihalakan rapat ke wajah anda.\n\nRuang privasi anda boleh dibuka kunci oleh seseorang yang mirip anda, seperti adik-beradik yang berwajah seiras."</string>
-    <string name="private_space_face_settings_require_confirmation_details" msgid="5406498664903812249">"Apabila menggunakan Buka Kunci Wajah, sentiasa perlukan langkah pengesahan"</string>
+    <string name="private_space_face_settings_require_attention_details" msgid="2799569069549999689">"Untuk membuka kunci ruang persendirian, mata anda mestilah dibuka. Untuk mendapatkan hasil terbaik, tanggalkan kaca mata hitam."</string>
+    <string name="private_space_face_settings_footer" msgid="7722256209563543711">"Gunakan wajah anda untuk membuka kunci ruang persendirian.\n\nSentiasa ingat:\nAnda hanya boleh menyediakan satu wajah pada satu-satu masa. Untuk menambahkan wajah lain, padamkan wajah semasa.\n\nTelefon boleh dibuka kunci jika anda melihat telefon itu walaupun anda tidak bermaksud untuk berbuat sedemikian.\n\nOrang lain boleh membuka kunci ruang persendirian anda jika peranti dihalakan rapat ke wajah anda.\n\nRuang persendirian anda boleh dibuka kunci oleh seseorang yang mirip anda, seperti adik-beradik yang berwajah seiras."</string>
+    <string name="private_space_face_settings_require_confirmation_details" msgid="5406498664903812249">"Apabila menggunakan Buka Kunci Wajah, wajibkan langkah pengesahan"</string>
     <string name="private_space_category_ways_to_unlock" msgid="4356631225316950046">"Cara membuka kunci"</string>
     <string name="private_space_screen_lock_summary" msgid="394837965365561070">"Sama seperti kunci skrin peranti"</string>
     <string name="private_space_new_lock_title" msgid="9056139964133004094">"Pilih kunci baharu untuk ruang persendirian?"</string>
@@ -698,8 +700,8 @@
     <string name="private_space_unlock_description" msgid="5527228922778630361">"Buka kunci ruang persendirian anda"</string>
     <string name="private_space_hide_off_summary" msgid="8565973976602078315">"Mati"</string>
     <string name="private_space_hide_on_summary" msgid="3450844101901438867">"Hidup"</string>
-    <string name="private_space_hide_dialog_title" msgid="6439207708506990156">"Ruang privasi akan disembunyikan apabila dikunci selepas ini"</string>
-    <string name="private_space_hide_dialog_message" msgid="618693520130744836">"Untuk mengakses ruang privasi, taip ruang privasi dalam bar carian daripada senarai apl."</string>
+    <string name="private_space_hide_dialog_title" msgid="6439207708506990156">"Ruang persendirian akan disembunyikan apabila dikunci selepas ini"</string>
+    <string name="private_space_hide_dialog_message" msgid="618693520130744836">"Untuk mengakses ruang persendirian, taip ruang persendirian dalam bar carian daripada senarai apl."</string>
     <string name="private_space_hide_dialog_button" msgid="4157191429310035457">"OK"</string>
     <string name="private_space_category_system" msgid="1286843321867285700">"Sistem"</string>
     <string name="private_space_delete_title" msgid="636873505724100006">"Padamkan ruang persendirian"</string>
@@ -725,9 +727,9 @@
     <string name="private_space_install_apps_text" msgid="8072027796190028830"><b>"Pasang apl"</b>\n"Pasang apl yang mahu anda rahsiakan dalam ruang anda"</string>
     <string name="private_space_keep_in_mind_text" msgid="7721081172657563800">"Sentiasa ingat"</string>
     <string name="private_space_apps_stopped_text" msgid="4034574118911250169"><b>"Apl dihentikan apabila anda mengunci ruang anda"</b>\n"Apabila anda mengunci ruang anda, apl dalam ruang anda akan dihentikan dan anda tidak akan menerima pemberitahuan daripada apl itu"</string>
-    <string name="private_space_apps_permission_text" msgid="4416201648436201393">"Ruang privasi tidak sesuai untuk apl yang perlu dijalankan pada latar atau menghantar pemberitahuan genting seperti apl perubatan. Hal ini kerana pemberitahuan dan aktiviti latar dihentikan semasa ruang anda dikunci.\n\nApl dalam ruang privasi tidak akan dipaparkan dalam pengurus kebenaran, papan pemuka privasi dan tetapan lain apabila ruang privasi dikunci.\n\nRuang privasi anda tidak boleh dialihkan kepada peranti baharu. Anda perlu menyediakan ruang privasi lain jika anda mahu menggunakan ruang privasi itu pada peranti lain.\n\nSesiapa sahaja yang menyambungkan peranti anda kepada komputer atau memasang apl berbahaya pada peranti anda mungkin dapat mengakses ruang privasi anda."</string>
+    <string name="private_space_apps_permission_text" msgid="4416201648436201393">"Ruang persendirian tidak sesuai untuk apl yang perlu dijalankan pada latar atau menghantar pemberitahuan penting seperti apl perubatan kerana pemberitahuan dan aktiviti latar dihentikan semasa ruang anda dikunci.\n\nApl dalam ruang persendirian tidak akan dipaparkan dalam pengurus kebenaran, papan pemuka privasi dan tetapan lain apabila ruang persendirian dikunci.\n\nRuang persendirian anda tidak boleh dialihkan kepada peranti baharu. Anda perlu menyediakan ruang persendirian lain jika anda mahu menggunakan ruang persendirian itu pada peranti lain.\n\nSesiapa sahaja yang menyambungkan peranti anda kepada komputer atau memasang apl berbahaya pada peranti anda mungkin dapat mengakses ruang persendirian anda."</string>
     <string name="private_space_settings_footer_text" msgid="3742468470394835356">"Ruang persendirian tidak sesuai untuk apl yang perlu dijalankan pada latar atau menghantar pemberitahuan genting seperti apl perubatan. Hal ini kerana pemberitahuan dan aktiviti latar dihentikan semasa ruang anda dikunci.\n\nApl dalam ruang persendirian tidak akan dipaparkan dalam pengurus kebenaran, papan pemuka privasi dan tetapan lain apabila ruang persendirian dikunci.\n\nRuang persendirian anda tidak boleh dipulihkan pada peranti baharu. Anda perlu menyediakan ruang persendirian lain jika anda mahu menggunakan ruang persendirian pada peranti lain.\n\nSesiapa sahaja yang menyambungkan peranti anda kepada komputer atau memasang apl berbahaya pada peranti anda mungkin dapat mengakses ruang persendirian anda."</string>
-    <string name="private_space_learn_more_text" msgid="5314198983263277586">"Ketahui lebih lanjut tentang ruang persendirian"</string>
+    <string name="private_space_learn_more_text" msgid="5314198983263277586">"Ketahui ruang persendirian lebih lanjut"</string>
     <string name="private_space_few_moments_text" msgid="7166883272914424011">"Proses ini akan mengambil sedikit masa"</string>
     <string name="private_space_setting_up_text" msgid="8458035555212009528">"Menyediakan ruang persendirian…"</string>
     <string name="private_space_error_screen_title" msgid="739381738044418346">"Tidak dapat menyediakan ruang peribadi"</string>
@@ -749,7 +751,7 @@
     <string name="private_space_skip_login_label" msgid="7078019409056628192">"Bukan sekarang"</string>
     <string name="private_space_continue_login_label" msgid="7779965766333065391">"Teruskan"</string>
     <string name="private_space_lock_setup_title" msgid="6541564212199510787">"Pilih kunci untuk ruang persendirian"</string>
-    <string name="private_space_lock_setup_description" msgid="423405593476300918">"Anda boleh membuka kunci ruang privasi menggunakan cap jari. Untuk keselamatan, pilihan ini memerlukan kunci sandaran."</string>
+    <string name="private_space_lock_setup_description" msgid="423405593476300918">"Anda boleh membuka kunci ruang persendirian menggunakan cap jari. Untuk keselamatan, pilihan ini memerlukan kunci sandaran."</string>
     <string name="private_space_choose_your_pin_header" msgid="4560802934975898265">"Tetapkan PIN untuk ruang persendirian"</string>
     <string name="private_space_choose_your_password_header" msgid="7660259341095044434">"Tetapkan kata laluan ruang persendirian"</string>
     <string name="private_space_choose_your_pattern_header" msgid="2165607102459936724">"Tetapkan corak untuk ruang persendirian"</string>
@@ -1019,6 +1021,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Gunakan tetapan baharu?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Jika paparan anda tidak berfungsi seperti yang anda mahukan, anda boleh kembali kepada tetapan anda yang sebelumnya"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Gunakan tetapan"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"cermin"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Dayakan paparan wayarles"</string>
@@ -1577,16 +1589,14 @@
     <string name="storage_settings_title" msgid="486118156723194815">"Tetapan storan"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
     <string name="eid_multi_sim" msgid="6659492335576379274">"E​ID (slot SIM <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
-    <!-- no translation found for imei_multi_sim (6990044568468728075) -->
-    <skip />
+    <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"Untuk melihat, pilih rangkaian yang disimpan"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"IMEI SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"MIN"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"Versi PRL"</string>
-    <!-- no translation found for meid_multi_sim (3124054561186721453) -->
-    <skip />
+    <string name="meid_multi_sim" msgid="3124054561186721453">"MEID <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"Hidup"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"Mati"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -1680,8 +1690,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Umum"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Tetapan umum"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Mod hab"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Widget pada skrin kunci (beta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Waktu untuk paparkan secara automatik"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Tidak sekali-kali"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Semasa mengecas"</string>
@@ -2298,7 +2307,7 @@
     <string name="modifier_keys_picker_summary" msgid="739397232249560785">"Pilih kunci baharu untuk <xliff:g id="MODIFIER_KEY_DEFAULT_NAME">%1$s</xliff:g>:"</string>
     <string name="keyboard_a11y_settings" msgid="2564659018555385728">"Kebolehaksesan papan kekunci fizikal"</string>
     <string name="keyboard_a11y_settings_summary" msgid="1698531156574098722">"Kekunci lekit, Kekunci lantun, Kekunci tetikus"</string>
-    <string name="keyboard_repeat_keys_title" msgid="6346877755243280735">"Kekunci Berulang"</string>
+    <string name="keyboard_repeat_keys_title" msgid="6346877755243280735">"Pengulangan Kekunci"</string>
     <string name="keyboard_repeat_keys_timeout_title" msgid="3411871149974652293">"Lengah sebelum ulang"</string>
     <string name="keyboard_repeat_keys_increase_delay_desc" msgid="9131810864682287872">"Tingkat kelewatan"</string>
     <string name="keyboard_repeat_keys_decrease_delay_desc" msgid="6762794746507398346">"Kurangkan kelewatan"</string>
@@ -3967,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Tunjukkan semua kandungan pemberitahuan kerja"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Sembunyikan kandungan kerja yang sensitif"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Apabila peranti anda dikunci, bagaimanakah pemberitahuan profil harus dipaparkan?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Tunjukkan pada skrin kunci"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Perkara yang akan ditunjukkan pada skrin kunci"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Tunjukkan pemberitahuan yang dilihat"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Tunjukkan ikon pemberitahuan yang dilihat"</string>
@@ -4071,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Pengelola pemberitahuan"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Himpunkan dan senyapkan pemberitahuan keutamaan yang lebih rendah"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Urus apl untuk pengelola pemberitahuan"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Sentiasa kembangkan himpunan"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Gunakan pada apl profil kerja"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Perkhidmatan pembantu VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Tiada apl terpasang yang telah meminta untuk dijalankan sebagai perkhidmatan pembantu VR."</string>
@@ -4273,7 +4280,7 @@
     <string name="zen_mode_summary_alarms_only_by_hour" msgid="7400910210950788163">"{count,plural, =1{Tukar kepada penggera sahaja selama satu jam hingga {time}}other{Tukar kepada penggera sahaja selama # jam hingga {time}}}"</string>
     <string name="zen_mode_summary_alarms_only_by_time" msgid="8140619669703968810">"Tukar kepada penggera sahaja hingga <xliff:g id="FORMATTEDTIME">%1$s</xliff:g>"</string>
     <string name="zen_mode_summary_always" msgid="722093064250082317">"Tukar kepada sentiasa ganggu"</string>
-    <string name="zen_mode_rename_title" msgid="8146882272966214558">"Mod edit"</string>
+    <string name="zen_mode_rename_title" msgid="8146882272966214558">"Edit mod"</string>
     <string name="zen_mode_new_custom_title" msgid="7513785385574267851">"Buat mod"</string>
     <string name="zen_mode_new_custom_default_name" msgid="2778307946775085105">"Mod tersuai"</string>
     <string name="zen_mode_edit_name_hint" msgid="4584652062167540536">"Nama mod"</string>
@@ -4756,7 +4763,7 @@
     <string name="long_background_tasks_title" msgid="3272230637974707490">"Tugas latar yang panjang"</string>
     <string name="long_background_tasks_footer_title" msgid="9117342254914743097">"Benarkan apl ini menjalankan tugas latar yang panjang. Ini membolehkan apl menjalankan tugas yang mungkin mengambil masa lebih lama daripada beberapa minit untuk diselesaikan, seperti muat turun dan muat naik. \n\nJika kebenaran ini ditolak, sistem akan mengehadkan tempoh apl boleh melakukan tugas sedemikian di latar."</string>
     <string name="keywords_long_background_tasks" msgid="5788956269136054574">"pekerjaan panjang, pemindahan data, tugas latar"</string>
-    <string name="reset_shortcut_manager_throttling" msgid="2183940254903144298">"Tetapkan semula had kadar ShortcutManager"</string>
+    <string name="reset_shortcut_manager_throttling" msgid="2183940254903144298">"Tetapkan semula had panggilan ShortcutManager API"</string>
     <string name="reset_shortcut_manager_throttling_complete" msgid="8949943009096885470">"Had kadar ShortcutManager telah ditetapkan semula"</string>
     <string name="notification_suggestion_title" msgid="6309263655965785411">"Kawal maklumat pada skrin kunci"</string>
     <string name="notification_suggestion_summary" msgid="7615611244249276113">"Tunjukkan atau sembunyikan kandungan pemberitahuan"</string>
@@ -5028,7 +5035,7 @@
     <string name="credman_confirmation_message_positive_button" msgid="2812613187691345361">"Matikan"</string>
     <string name="debug_autofill_category" msgid="5998163555428196185">"Autolengkap"</string>
     <string name="autofill_logging_level_title" msgid="3733958845861098307">"Tahap pengelogan"</string>
-    <string name="autofill_max_partitions" msgid="7342195529574406366">"Permintaan maks per sesi"</string>
+    <string name="autofill_max_partitions" msgid="7342195529574406366">"Jumlah maksimum permintaan setiap sesi"</string>
     <string name="autofill_max_visible_datasets" msgid="4970201981694392229">"Set data maksimum yang kelihatan"</string>
     <string name="autofill_reset_developer_options" msgid="6425613608979498608">"Tetapkan semula kepada nilai lalai"</string>
     <string name="autofill_reset_developer_options_complete" msgid="1276741935956594965">"Ciri autolengkapkan pilihan pembangun telah ditetapkan semula"</string>
@@ -5371,8 +5378,8 @@
     <string name="enable_desktop_experience_features_summary_with_desktop" msgid="8586716390362684564">"Dayakan tetingkap desktop pada peranti dan pada paparan kedua."</string>
     <string name="enable_desktop_experience_features_summary_without_desktop" msgid="7567963048658976895">"Dayakan tetingkap desktop pada paparan kedua."</string>
     <string name="enable_desktop_mode_on_secondary_display" msgid="2609567824593768780">"Dayakan tetingkap bentuk bebas pada paparan kedua"</string>
-    <string name="enable_non_resizable_multi_window" msgid="6832903754625404477">"Dayakan tidak boleh diubah saiz dalam berbilang tetingkap"</string>
-    <string name="enable_non_resizable_multi_window_summary" msgid="3275763753261901999">"Benarkan apl tidak boleh diubah saiz dalam berbilang tetingkap"</string>
+    <string name="enable_non_resizable_multi_window" msgid="6832903754625404477">"Dayakan saiz tidak boleh diubah dalam berbilang tetingkap"</string>
+    <string name="enable_non_resizable_multi_window_summary" msgid="3275763753261901999">"Membenarkan apl yang saiznya tidak boleh diubah dalam berbilang tetingkap"</string>
     <string name="hwui_force_dark_title" msgid="4256904905631994219">"Batalkan paksa gelap"</string>
     <string name="hwui_force_dark_summary" msgid="6515748781487952769">"Membatalkan ciri paksa gelap supaya sentiasa hidup"</string>
     <string name="privacy_dashboard_title" msgid="6845403825611829558">"Privasi"</string>
@@ -5678,7 +5685,7 @@
     <string name="ingress_rate_limit_dialog_title" msgid="5359461052422633789">"Konfigurasikan had kadar muat turun rangkaian"</string>
     <string name="ingress_rate_limit_no_limit_entry" msgid="8741098826008012163">"Tiada had"</string>
     <string name="disable_phantom_process_monitor_title" msgid="8348108346706188771">"Lumpuhkan sekatan proses anak"</string>
-    <string name="disable_phantom_process_monitor_summary" msgid="3044464635550256985">"Lumpuhkan sekatan pada penggunaan sumber sistem oleh proses anak apl"</string>
+    <string name="disable_phantom_process_monitor_summary" msgid="3044464635550256985">"Lumpuhkan sekatan penggunaan sumber sistem pada proses anak apl"</string>
     <string name="enable_notes_role_title" msgid="7662702013496114763">"Dayakan peranan Nota secara paksa"</string>
     <string name="enable_notes_role_summary" msgid="5495721409392395089">"Dayakan penyepaduan sistem pengambilan nota melalui peranan Nota. Jika peranan Nota sudah didayakan, tiada apa-apa yang berlaku. Memerlukan but semula."</string>
     <string name="find_broadcast_password_dialog_title" msgid="3176988702535737484">"Masukkan kata laluan"</string>
@@ -5949,6 +5956,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Berlaku ralat semasa cuba memadamkan PIN."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animasi <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Tidak dapat menghidupkan kawalan"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"Semakan Identiti tersedia pada lebih banyak apl"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Anda boleh melindungi identiti anda pada mana-mana apl yang menawarkan Buka Kunci Wajah atau Cap Jari untuk mengenal pasti anda"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Lihat butiran"</string>

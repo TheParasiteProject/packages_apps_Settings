@@ -246,6 +246,8 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"הזזה למעלה"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"הזזה למטה"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"הסרה"</string>
+    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"העדפות פורמט ומידות"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"הגדרת העדפות של יחידות ומספרים"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"הרשאת גישה לאפליקציות להעדפות פורמט ומידות כדי שיתאימו אישית את חוויית המשתמש."</string>
@@ -660,7 +662,7 @@
     <string name="private_space_description" msgid="4059594203775816136">"כדאי לשמור אפליקציות פרטיות במרחב נפרד שאפשר להסתיר או לנעול"</string>
     <string name="private_space_lock_title" msgid="7230836881433350526">"נעילה של המרחב הפרטי"</string>
     <string name="private_space_one_lock_summary" msgid="2106513606571219068">"אפשר לפתוח את המרחב הפרטי באותה דרך שפותחים את המכשיר או לבחור בשיטת נעילה אחרת"</string>
-    <string name="private_space_screen_lock_title" msgid="8679383894967823163">"שימוש בשיטה לביטול נעילת המסך"</string>
+    <string name="private_space_screen_lock_title" msgid="8679383894967823163">"שימוש בשיטה לפתיחת נעילת המסך"</string>
     <string name="private_space_biometric_title" msgid="3934339826674553174">"פתיחה בזיהוי פנים ובטביעת אצבע"</string>
     <string name="private_space_fingerprint_title" msgid="5989254643211889931">"פתיחה בטביעת אצבע"</string>
     <string name="private_space_face_title" msgid="3290402865367663079">"פתיחה בזיהוי פנים"</string>
@@ -695,7 +697,7 @@
     <string name="private_space_access_header" msgid="1077082416567150819">"גישה למרחב הפרטי כשהוא מוסתר"</string>
     <string name="private_space_search_description" msgid="1538155187658429618">"בסרגל החיפוש, מזינים \"המרחב הפרטי\""</string>
     <string name="private_space_tap_tile_description" msgid="6173556870938267361">"לוחצים על "<b>"המרחב הפרטי"</b></string>
-    <string name="private_space_unlock_description" msgid="5527228922778630361">"ביטול הנעילה של המרחב הפרטי"</string>
+    <string name="private_space_unlock_description" msgid="5527228922778630361">"פותחים את הנעילה של המרחב הפרטי"</string>
     <string name="private_space_hide_off_summary" msgid="8565973976602078315">"מצב מושבת"</string>
     <string name="private_space_hide_on_summary" msgid="3450844101901438867">"מצב פעיל"</string>
     <string name="private_space_hide_dialog_title" msgid="6439207708506990156">"המרחב הפרטי יוסתר בפעם הבאה שהוא יינעל"</string>
@@ -736,8 +738,8 @@
     <string name="private_space_error_description" msgid="6591005734266923120">"המרחב הפרטי לא זמין.\nלהצגת סיבות אפשריות"</string>
     <string name="private_space_error_causes_text" msgid="1649162505129365620">"הצגת הגורמים האפשריים"</string>
     <string name="private_space_lockscreen_title" msgid="5785259588888586366">"רוצה לבחור שיטת נעילה חדשה למרחב הפרטי?"</string>
-    <string name="private_space_lockscreen_summary" msgid="3053836076639653805">"אפשר להגדיר שיטת נעילה חדשה למרחב הפרטי בלבד, או להשתמש באותה שיטה שמשמשת לביטול נעילת המכשיר"</string>
-    <string name="private_space_use_screenlock_label" msgid="9182153443192032782">"שימוש בביטול נעילת המסך"</string>
+    <string name="private_space_lockscreen_summary" msgid="3053836076639653805">"אפשר להגדיר שיטת נעילה חדשה למרחב הפרטי בלבד, או להשתמש באותה שיטה שמשמשת  לפתיחה של נעילת המכשיר"</string>
+    <string name="private_space_use_screenlock_label" msgid="9182153443192032782">"שימוש בנעילת המסך"</string>
     <string name="private_space_set_lock_label" msgid="1790408277477408475">"בחירת נעילה חדשה"</string>
     <string name="private_space_wait_screen_title" msgid="1535431437075585381">"רק רגע…"</string>
     <string name="private_space_success_title" msgid="4351904015352046118">"הכול מוכן!"</string>
@@ -1019,6 +1021,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"להמשיך עם ההגדרות החדשות?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"אם תצוגת המסך לא פועלת כמו שציפית, אפשר לחזור להגדרות הקודמות"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"שימוש בהגדרות"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"‏העברה (csat)"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"‏הפעלת תצוגת WiFi"</string>
@@ -1577,16 +1589,14 @@
     <string name="storage_settings_title" msgid="486118156723194815">"הגדרות אחסון"</string>
     <string name="status_eid" msgid="3588471107671992684">"EID"</string>
     <string name="eid_multi_sim" msgid="6659492335576379274">"‏‫EID (חריץ SIM ‏<xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
-    <!-- no translation found for imei_multi_sim (6990044568468728075) -->
-    <skip />
+    <string name="imei_multi_sim" msgid="6990044568468728075">"‫IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"כדי שתופיע כתובת, צריך לבחור רשת שמורה"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"IMEI SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"MIN"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"‏גרסת PRL"</string>
-    <!-- no translation found for meid_multi_sim (3124054561186721453) -->
-    <skip />
+    <string name="meid_multi_sim" msgid="3124054561186721453">"‫MEID <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"פועל"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"כבוי"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -1680,8 +1690,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"שיתופי"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"הגדרות שיתופיות"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"‏מצב Hub"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"ווידג\'טים במסך הנעילה (בטא)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"מתי להציג באופן אוטומטי"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"אף פעם"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"בזמן טעינה"</string>
@@ -2303,7 +2312,7 @@
     <string name="keyboard_repeat_keys_increase_delay_desc" msgid="9131810864682287872">"הארכת משך ההשהיה"</string>
     <string name="keyboard_repeat_keys_decrease_delay_desc" msgid="6762794746507398346">"הפחתת משך ההשהיה"</string>
     <string name="keyboard_repeat_keys_delay_title" msgid="5954595732341624638">"קצב החזרה"</string>
-    <string name="keyboard_repeat_keys_summary" msgid="8972905345211768313">"לוחצים לחיצה ארוכה על מקש כדי לחזור על התו שלו עד שמפסיקים ללחוץ על המקש"</string>
+    <string name="keyboard_repeat_keys_summary" msgid="8972905345211768313">"לחץ לחיצה ארוכה על מקש כדי לחזור על התו שלו. כדי לסיים, פשוט הפסק ללחוץ על המקש"</string>
     <string name="keyboard_repeat_keys_increase_rate_desc" msgid="1745229237083808184">"הגברת קצב החזרה"</string>
     <string name="keyboard_repeat_keys_decrease_rate_desc" msgid="31236959764168589">"הורדת קצב החזרה"</string>
     <string name="ime_label_title" msgid="8994569521516807168">"פריסה של <xliff:g id="IME_LABEL">%s</xliff:g>"</string>
@@ -3967,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"אפשר לראות את כל התוכן של התראות מהעבודה"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"הסתרה של תוכן עבודה רגיש"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"איך להציג התראות פרופיל כשהמכשיר נעול?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"הצגה במסך הנעילה"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"מה להציג במסך הנעילה"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"הצגת התראות שנקראו"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"סמלי התראות שנקראו"</string>
@@ -4071,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"הכלי לארגון התראות"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"קיבוץ והשתקה של התראות בעדיפות נמוכה"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"ניהול האפליקציות לכלי לארגון ההתראות"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"תמיד להרחיב חבילות"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"הפעלה באפליקציות של פרופיל העבודה"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"‏תשתיות ל-VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"‏לא התקבלו בקשות מאפליקציות מותקנות לפעול כשירותי סיוע של VR."</string>
@@ -4302,7 +4309,7 @@
     <string name="zen_mode_inspiration_schedule_time" msgid="5596540503159096153">"אפשר להגדיר מצב עם לוח זמנים קבוע"</string>
     <string name="zen_mode_inspiration_schedule_calendar" msgid="3678727180860212700">"שמירה על סנכרון המכשיר עם האירועים של היום"</string>
     <string name="zen_mode_inspiration_bedtime" msgid="6294822414181670666">"להתעורר באנרגיות מחודשות"</string>
-    <string name="zen_mode_inspiration_driving" msgid="8237825783857483135">"בטיחות לפני הכול בזמן הנהיגה"</string>
+    <string name="zen_mode_inspiration_driving" msgid="8237825783857483135">"קודם כל בטיחות בזמן הנהיגה"</string>
     <string name="zen_mode_inspiration_immersive" msgid="4062437428955782933">"מתרכזים ונכנסים לשוונג"</string>
     <string name="zen_mode_inspiration_theater" msgid="9194190183262761230">"לרגעים שבהם חשוב הנימוס"</string>
     <string name="zen_mode_inspiration_managed" msgid="4607010392213773917">"שימוש מודרך עוזר להישאר בידיים טובות"</string>
@@ -4318,10 +4325,10 @@
     <string name="screen_pinning_switch_on_text" msgid="6971386830247542552">"פועלת"</string>
     <string name="screen_pinning_switch_off_text" msgid="5032105155623003875">"מושבתת"</string>
     <string name="screen_pinning_title" msgid="6927227272780208966">"הצמדת אפליקציה"</string>
-    <string name="app_pinning_intro" msgid="6409063008733004245">"התכונה \'הצמדת אפליקציה\' מאפשרת לקבע את האפליקציה הנוכחית בתצוגה עד לביטול ההצמדה. אפשר להשתמש בתכונה, למשל, כשנותנים לחבר שסומכים עליו לשחק במשחק מסוים."</string>
+    <string name="app_pinning_intro" msgid="6409063008733004245">"התכונה \"הצמדת אפליקציה\" מאפשרת לקבע את האפליקציה הנוכחית בתצוגה עד לביטול ההצמדה. אפשר להשתמש בתכונה, למשל, כשנותנים לחבר שסומכים עליו לשחק במשחק מסוים."</string>
     <string name="screen_pinning_description" msgid="5822120806426139396">"‏לאחר הצמדת אפליקציה כלשהי, יכול להיות שייפתחו אפליקציות אחרות מאותה אפליקציה ושתתאפשר גישה למידע האישי. \n\nכדי להשתמש בהצמדת אפליקציה: 	\n{0,number,integer}. מפעילים את התכונה \'הצמדת האפליקציה\' 	\n{1,number,integer}. פותחים את הסקירה הכללית 	\n{2,number,integer}. לוחצים על סמל האפליקציה שמופיע בחלק העליון של המסך ואז לוחצים על \'הצמדה\'"</string>
     <string name="screen_pinning_guest_user_description" msgid="2307270321127139579">"‏לאחר הצמדת אפליקציה כלשהי, יכול להיות שייפתחו אפליקציות אחרות מאותה אפליקציה ושתתאפשר גישה למידע האישי. \n\nכדי לשתף את המכשיר באופן מאובטח עם אדם אחר, כדאי להשתמש במשתמש אורח במקום זאת. \n\nכדי להשתמש בהצמדת אפליקציה: 	\n{0,number,integer}. מפעילים את התכונה \'הצמדת האפליקציה\' 	\n{1,number,integer}. פותחים את הסקירה הכללית 	\n{2,number,integer}. לוחצים על סמל האפליקציה שמופיע בחלק העליון של המסך ואז לוחצים על \'הצמדה\'"</string>
-    <string name="screen_pinning_dialog_message" msgid="8144925258679476654">"לאחר שמצמידים אפליקציה: \n\n•	 ייתכן שתתאפשר גישה למידע אישי \n		(כמו אנשי קשר ותוכן מהאימייל) \n•	 האפליקציה שהוצמדה עשויה לפתוח אפליקציות אחרות \n\nיש להשתמש בהצמדת אפליקציה רק עם אנשים מהימנים."</string>
+    <string name="screen_pinning_dialog_message" msgid="8144925258679476654">"אחרי הצמדת אפליקציה: \n\n•	 יכול להיות שתתאפשר גישה למידע אישי \n		(כמו אנשי קשר ותוכן מהאימייל) \n•	 האפליקציה שהוצמדה עשויה לפתוח אפליקציות אחרות \n\nצריך להשתמש בהצמדת אפליקציה רק עם אנשים מהימנים."</string>
     <string name="screen_pinning_unlock_pattern" msgid="1345877794180829153">"בקשת קו ביטול נעילה לפני ביטול הצמדה"</string>
     <string name="screen_pinning_unlock_pin" msgid="8716638956097417023">"בקשת קוד גישה לפני ביטול הצמדה"</string>
     <string name="screen_pinning_unlock_password" msgid="4957969621904790573">"יש לבקש סיסמה לפני ביטול הצמדה"</string>
@@ -5049,7 +5056,7 @@
     <string name="disabled_feature" msgid="7151433782819744211">"התכונה לא זמינה"</string>
     <string name="disabled_feature_reason_slow_down_phone" msgid="5743569256308510404">"התכונה הזו הושבתה מפני שהיא מאטה את הטלפון שלך"</string>
     <string name="show_first_crash_dialog" msgid="1696584857732637389">"הצגת דו-שיח של קריסות תמיד"</string>
-    <string name="show_first_crash_dialog_summary" msgid="4692334286984681111">"הצגת דו-שיח בכל פעם שאפליקציה קורסת"</string>
+    <string name="show_first_crash_dialog_summary" msgid="4692334286984681111">"תיבת דו-שיח תופיע בכל פעם שאפליקציה קורסת"</string>
     <string name="angle_enabled_app" msgid="6044941043384239076">"‏בחירת אפליקציה המותאמת ל-ANGLE"</string>
     <string name="angle_enabled_app_not_set" msgid="4472572224881726067">"‏לא הוגדרה אפליקציה המותאמת ל-ANGLE"</string>
     <string name="angle_enabled_app_set" msgid="7811829383833353021">"‏אפליקציה המותאמת ל-ANGLE: <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -5679,9 +5686,9 @@
     <string name="ingress_rate_limit_dialog_title" msgid="5359461052422633789">"הגדרת הגבלה לקצב ההורדה ברשת"</string>
     <string name="ingress_rate_limit_no_limit_entry" msgid="8741098826008012163">"אין מגבלה"</string>
     <string name="disable_phantom_process_monitor_title" msgid="8348108346706188771">"השבתת ההגבלות על תהליכי הצאצא"</string>
-    <string name="disable_phantom_process_monitor_summary" msgid="3044464635550256985">"השבתת הגבלות השימוש במשאבי המערכת של תהליכי הצאצא של האפליקציה"</string>
+    <string name="disable_phantom_process_monitor_summary" msgid="3044464635550256985">"ההגבלות שחלות על השימוש במשאבי המערכת של תהליכי הצאצא של האפליקציה יושבתו"</string>
     <string name="enable_notes_role_title" msgid="7662702013496114763">"אילוץ הפעלה של פונקציית ההערות"</string>
-    <string name="enable_notes_role_summary" msgid="5495721409392395089">"הפעלת שילובי מערכת של כתיבת הערות דרך הפונקציה \'הערות\'. אם פונקציית ההערות כבר מופעלת, שום דבר לא יקרה. נדרשת הפעלה מחדש."</string>
+    <string name="enable_notes_role_summary" msgid="5495721409392395089">"הפעלת שילובי מערכת של כתיבת הערות דרך הפונקציה \"הערות\". אם פונקציית ההערות כבר מופעלת, שום דבר לא יקרה. נדרשת הפעלה מחדש."</string>
     <string name="find_broadcast_password_dialog_title" msgid="3176988702535737484">"זה המקום להזין סיסמה"</string>
     <string name="convert_to_esim_title" msgid="71037864129009206">"‏המרת eSIM"</string>
     <string name="transfer_esim_to_another_device_title" msgid="5286117866086383192">"‏העברת ה-eSIM למכשיר אחר"</string>
@@ -5950,6 +5957,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"הייתה שגיאה במהלך הניסיון למחוק את קוד האימות."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"אנימציה של <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"לא ניתן להפעיל את אמצעי הבקרה"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"בדיקת הזהות זמינה באפליקציות נוספות"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"יש לך אפשרות לאבטח את ההגנה על הזהות בכל אפליקציה שמציעה פתיחה בטביעת אצבע או בזיהוי פנים"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"עיון בפרטים"</string>

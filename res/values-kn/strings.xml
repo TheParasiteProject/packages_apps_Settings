@@ -246,6 +246,8 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"ಮೇಲಕ್ಕೆ ಸರಿಸಿ"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"ಕೆಳಗೆ ಸರಿಸಿ"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"ತೆಗೆದುಹಾಕಿ"</string>
+    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"ಪ್ರಾದೇಶಿಕ ಆದ್ಯತೆಗಳು"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"ಯೂನಿಟ್‌ಗಳು ಹಾಗೂ ಸಂಖ್ಯೆಯ ಆದ್ಯತೆಗಳನ್ನು ಸೆಟ್ ಮಾಡಿ"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"ನಿಮ್ಮ ಪ್ರಾದೇಶಿಕ ಆದ್ಯತೆಗಳನ್ನು ಆ್ಯಪ್‌ಗಳಿಗೆ ತಿಳಿಸಿ, ಇದರಿಂದ ಅವುಗಳು ನಿಮ್ಮ ಅನುಭವವನ್ನು ವೈಯಕ್ತೀಕರಿಸಬಹುದು."</string>
@@ -1019,6 +1021,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"ಹೊಸ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಬಳಸಬೇಕೆ?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"ನಿಮ್ಮ ಡಿಸ್‌ಪ್ಲೇ ನೀವು ಬಯಸಿದ ರೀತಿಯಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸದಿದ್ದರೆ, ನೀವು ಹಿಂದಿನ ಸೆಟ್ಟಿಂಗ್‌ಗೆ ಹಿಂತಿರುಗಬಹುದು"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಬಳಸಿ"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"ಕನ್ನಡಿ"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"ವೈರ್‌ಲೆಸ್ ಪ್ರದರ್ಶನ ಸಕ್ರಿಯಗೊಳಿಸಿ"</string>
@@ -1678,8 +1690,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"ಸಮುದಾಯ"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"ಸಮುದಾಯದ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"ಹಬ್ ಮೋಡ್"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"ಲಾಕ್ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿನ ವಿಜೆಟ್‌ಗಳು (ಬೀಟಾ)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"ಯಾವಾಗ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ತೋರಿಸಬೇಕು"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"ಎಂದಿಗೂ ಬೇಡ"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"ಚಾರ್ಜ್ ಮಾಡುವಾಗ"</string>
@@ -3965,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"ಎಲ್ಲಾ ಉದ್ಯೋಗದ ನೋಟಿಫಿಕೇಶನ್ ಕಂಟೆಂಟ್ ತೋರಿಸಿ"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"ಸೂಕ್ಷ್ಮ ಕೆಲಸದ ಕಂಟೆಂಟ್‍ ಅನ್ನು ಮರೆಮಾಡಿ"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"ನಿಮ್ಮ ಸಾಧನವು ಲಾಕ್‌ ಆಗಿರುವಾಗ, ನೀವು ಪ್ರೊಫೈಲ್‌ ಅಧಿಸೂಚನೆಗಳನ್ನು ಹೇಗೆ ತೋರಿಸಲು ಬಯಸುವಿರಿ?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"ಲಾಕ್ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ತೋರಿಸಿ"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"ಲಾಕ್ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಏನು ತೋರಿಸಬೇಕು"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"ವೀಕ್ಷಿಸಿದ ನೋಟಿಫಿಕೇಶನ್‌ಗಳನ್ನು ತೋರಿಸಿ"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"ವೀಕ್ಷಿಸಿದ ನೋಟಿಫಿಕೇಶನ್ ಐಕಾನ್‌ಗಳನ್ನು ತೋರಿಸಿ"</string>
@@ -5947,6 +5957,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"ಪಿನ್ ಅನ್ನು ಅಳಿಸಲು ಪ್ರಯತ್ನಿಸುವಾಗ ದೋಷ ಸಂಭವಿಸಿದೆ."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> ಆ್ಯನಿಮೇಶನ್"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"ಕಂಟ್ರೋಲ್‌ಗಳನ್ನು ಆನ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"ಐಡೆಂಟಿಟಿ ಚೆಕ್ ಹೆಚ್ಚಿನ ಆ್ಯಪ್‌ಗಳಲ್ಲಿ ಲಭ್ಯವಿದೆ"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"ನಿಮ್ಮನ್ನು ಗುರುತಿಸಲು ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅಥವಾ ಫೇಸ್ ಅನ್‌ಲಾಕ್ ನೀಡುವ ಯಾವುದೇ ಆ್ಯಪ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಗುರುತನ್ನು ನೀವು ರಕ್ಷಿಸಬಹುದು"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"ವಿವರಗಳನ್ನು ವೀಕ್ಷಿಸಿ"</string>

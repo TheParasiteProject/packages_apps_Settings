@@ -246,6 +246,8 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"上に移動"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"下に移動"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"削除"</string>
+    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"地域別の設定"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"使用する単位と数字を指定します"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"地域別の設定を行えば、アプリが機能をパーソナライズします。"</string>
@@ -1019,6 +1021,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"新しい設定を使用しますか？"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"ディスプレイが想定どおりに動作しない場合は、以前の設定に戻すことができます"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"設定を使用"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"ミラー"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"ワイヤレス ディスプレイの有効化"</string>
@@ -1678,8 +1690,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"共用"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"共用の設定"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"ハブモード"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"ロック画面のウィジェット（ベータ版）"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"自動的に表示するタイミング"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"なし"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"充電中"</string>
@@ -3965,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"仕事用のすべての通知の内容を表示する"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"機密性の高い仕事の内容を非表示"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"デバイスがロックされている場合、プロファイル通知をどのように表示しますか？"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"ロック画面に表示"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"ロック画面に表示する内容"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"既読の通知を表示"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"既読の通知のアイコンを表示"</string>
@@ -4069,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"通知オーガナイザー"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"優先度の低い通知をまとめてミュートします"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"通知オーガナイザーの対象アプリを管理する"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"バンドルを常に開く"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"仕事用プロファイルのアプリに適用する"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR ヘルパー サービス"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"VR ヘルパー サービスとしての実行権限をリクエストしたインストール済みアプリはありません。"</string>
@@ -5947,6 +5956,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"PIN の削除中にエラーが発生しました。"</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> のアニメーション"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"コントロールを有効にできません"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"ID チェックがより多くのアプリで利用できるようになりました"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"指紋認証や顔認証で本人確認を行うアプリで、個人情報を強力に保護できます"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"詳細を表示"</string>

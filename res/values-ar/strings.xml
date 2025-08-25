@@ -243,9 +243,11 @@
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"هل المطلوب تغيير المنطقة إلى <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g>؟"</string>
     <string name="body_change_system_locale_region" msgid="9064318449821043189">"سيحتفظ الجهاز باللغة <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g> كلغة نظام"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"يمكنك اختيار طريقة عرض الأرقام على جهازك والمواقع الإلكترونية والتطبيقات"</string>
-    <string name="preferred_locale_menu_up" msgid="4009560552099567485">"نقل للأعلى"</string>
+    <string name="preferred_locale_menu_up" msgid="4009560552099567485">"النقل للأعلى"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"نقل للأسفل"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"إزالة"</string>
+    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"الإعدادات المفضّلة لمنطقتك"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"يمكنك ضبط الإعدادات المفضّلة لوحدات القياس والأرقام"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"السماح للتطبيقات بمعرفة الإعدادات المفضّلة لمنطقتك لتتمكن من تخصيص تجربتك"</string>
@@ -751,7 +753,7 @@
     <string name="private_space_lock_setup_title" msgid="6541564212199510787">"اختيار قفل للمساحة الخاصة"</string>
     <string name="private_space_lock_setup_description" msgid="423405593476300918">"يمكنك فتح قفل المساحة الخاصة باستخدام بصمة إصبعك. ولأغراض تتعلق بالأمان، يتطلب هذا الخيار استخدام قفل احتياطي."</string>
     <string name="private_space_choose_your_pin_header" msgid="4560802934975898265">"اضبط رقم تعريف شخصي لمساحتك الخاصة"</string>
-    <string name="private_space_choose_your_password_header" msgid="7660259341095044434">"يُرجى ضبط كلمة مرور لمساحتك الخاصة"</string>
+    <string name="private_space_choose_your_password_header" msgid="7660259341095044434">"اضبط كلمة مرور لمساحتك الخاصة"</string>
     <string name="private_space_choose_your_pattern_header" msgid="2165607102459936724">"اضبط نقشًا لمساحتك الخاصة"</string>
     <string name="private_space_category_lock" msgid="1917657024358778169">"قفل"</string>
     <string name="private_space_category_hide" msgid="3236587591523126649">"إخفاء"</string>
@@ -1019,6 +1021,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"هل المطلوب استخدام الإعدادات الجديدة؟"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"إذا كانت طريقة العرض على الشاشة لا تناسبك، يمكنك الرجوع إلى الإعدادات السابقة"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"استخدام الإعدادات"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"انعكاس"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"تفعيل عرض شاشة لاسلكي"</string>
@@ -1678,8 +1690,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"الإعدادات المشتركة"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"الإعدادات المشتركة"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"وضع الإرساء"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"التطبيقات المصغّرة على شاشة القفل (إصدار تجريبي)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"وقت العرض التلقائي"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"أبدًا"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"أثناء الشحن"</string>
@@ -3150,7 +3161,7 @@
     <string name="credential_installed_for_wifi" msgid="2206050464844710099">"مثبَّتة لإعدادات <xliff:g id="SSID">%s</xliff:g>"</string>
     <string name="credential_using_for_wifi" msgid="6134471366188592845">"مستخدَمة لإعدادات <xliff:g id="SSID">%s</xliff:g>"</string>
     <string name="credential_for_wifi_in_use" msgid="7276290656840986618">"‏تم التثبيت للاستخدام بواسطة Wi-Fi (قيد الاستخدام)"</string>
-    <string name="credentials_reset_hint" msgid="4054601857203464867">"هل تريد إزالة جميع المحتوى؟"</string>
+    <string name="credentials_reset_hint" msgid="4054601857203464867">"هل تريد إزالة كل المحتوى؟"</string>
     <string name="credentials_erased" msgid="9121052044566053345">"تم مسح تخزين بيانات الاعتماد."</string>
     <string name="credentials_not_erased" msgid="3611058412683184031">"تعذر محو وحدة تخزين بيانات الاعتماد."</string>
     <string name="usage_access_title" msgid="8784394396356369568">"التطبيقات التي يمكنها الوصول إلى بيانات استخدام التطبيق"</string>
@@ -3965,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"عرض محتوى إشعارات العمل كاملاً"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"إخفاء محتوى العمل الحساس"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"كيف تريد أن يتم عرض إشعارات الملف الشخصي عندما يكون الجهاز مقفلاً؟"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"إظهار على شاشة القفل"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"الإشعارات التي ستظهر على شاشة القفل"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"إظهار الإشعارات التي تم الاطّلاع عليها"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"إظهار رموز الإشعارات التي تم الاطّلاع عليها"</string>
@@ -4008,7 +4018,7 @@
     <string name="allow_interruption" msgid="5237201780159482716">"السماح بالمقاطعات"</string>
     <string name="allow_interruption_summary" msgid="9044131663518112543">"السماح للتطبيق بإصدار صوت و/أو اهتزاز و/أو عرض إشعارات منبثقة على الشاشة"</string>
     <string name="notification_priority_title" msgid="5554834239080425229">"الأولوية"</string>
-    <string name="notification_channel_summary_priority" msgid="7225362351439076913">"تظهر في أعلى قسم المحادثات وتظهر كفقاعة عائمة وتعرض صورة الملف الشخصي على شاشة القفل"</string>
+    <string name="notification_channel_summary_priority" msgid="7225362351439076913">"تظهر في أعلى قسم المحادثات في شكل فقاعة عائمة وتعرض صورة الملف الشخصي على شاشة القفل"</string>
     <string name="convo_not_supported_summary" msgid="4285471045268268048">"لا يتوافق تطبيق \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" مع معظم ميزات المحادثات. لا يمكنك ضبط محادثة كأولوية ولن تظهر المحادثات كفقاعات عائمة."</string>
     <string name="notification_channel_summary_min" msgid="8823399508450176842">"في الظل المنسدل، يمكنك تصغير الإشعارات إلى سطر واحد"</string>
     <string name="notification_channel_summary_low" msgid="5549662596677692000">"بدون صوت أو اهتزاز"</string>
@@ -5504,7 +5514,7 @@
     <string name="allow_mock_modem" msgid="3832264806530479214">"السماح بخدمة مودم وهمي"</string>
     <string name="allow_mock_modem_summary" msgid="9097416612748005374">"يمكنك السماح لهذا الجهاز بتشغيل خدمة المودم الوهمي لتنفيذ اختبار لقياس حالة التطبيق. لا تفعِّل هذه الخدمة أثناء الاستخدام العادي للهاتف."</string>
     <string name="disable_screen_share_protections_for_apps_and_notifications" msgid="4987116103699222633">"إيقاف إجراءات الحماية المطبّقة أثناء مشاركة الشاشة"</string>
-    <string name="disable_screen_share_protections_for_apps_and_notifications_summary" msgid="5379583403909210858">"يمكنك إيقاف إجراءات حماية النظام بشأن محتوى التطبيق الحسّاس لجلسات مشاركة الشاشة القادمة."</string>
+    <string name="disable_screen_share_protections_for_apps_and_notifications_summary" msgid="5379583403909210858">"إيقاف إجراءات حماية النظام قبل جلسات مشاركة الشاشة القادمة للسماح بعرض محتوى التطبيقات الحسّاس"</string>
     <string name="media_controls_title" msgid="403271085636252597">"الوسائط"</string>
     <string name="media_controls_resume_title" msgid="855076860336652370">"تثبيت مشغّل الوسائط"</string>
     <string name="media_controls_resume_description" msgid="3163482266454802097">"لاستئناف التشغيل بسرعة، يظل مشغّل الوسائط مفتوحًا في \"الإعدادات السريعة\""</string>
@@ -5647,7 +5657,7 @@
     <string name="bluetooth_connect_access_dialog_negative" msgid="4944672755226375059">"عدم الاتصال"</string>
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"الاتصال"</string>
     <string name="dream_preview_button_title" msgid="6637456541851795952">"معاينة"</string>
-    <string name="dream_picker_category" msgid="7726447836872744867">"اختيار شاشة استراحة"</string>
+    <string name="dream_picker_category" msgid="7726447836872744867">"اختَر شاشة استراحة"</string>
     <string name="dream_complications_toggle_title" msgid="4273232303027449163">"إظهار معلومات إضافية"</string>
     <string name="dream_complications_toggle_summary" msgid="8088911054987524904">"عرض الوقت أو الطقس أو غير ذلك من المعلومات على شاشة الاستراحة"</string>
     <string name="dream_home_controls_toggle_title" msgid="706799741564479248">"عرض زر إدارة المنزل آليًّا"</string>
@@ -5951,6 +5961,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"حدث خطأ أثناء محاولة حذف رقم التعريف الشخصي."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"صورة متحركة لميزة \"<xliff:g id="FEATURE">%1$s</xliff:g>\""</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"يتعذّر تفعيل عناصر التحكّم"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"ميزة \"التحقّق من الهوية\" متاحة في المزيد من التطبيقات"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"يمكنك حماية هويتك في أي تطبيق يستخدم ميزتَي \"فتح الجهاز ببصمة الوجه\" أو \"فتح الجهاز ببصمة الإصبع\""</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"عرض التفاصيل"</string>

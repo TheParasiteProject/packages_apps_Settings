@@ -246,6 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Tepaga siljitish"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Pastga siljitish"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Olib tashlash"</string>
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Boshiga olish"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Hududiy sozlamalar"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Birliklar va raqamlar sozlamalarini belgilash"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Ilovalar ushbu hududiy sozlamalardan moslashtirish uchun foydalanadi."</string>
@@ -1019,6 +1020,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Yangi sozlamalardan foydalanilsinmi?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Agar displey siz istagandek ishlamasa, avvalgi sozlamalarga qaytishingiz mumkin"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Sozlamalardan foydalanish"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"koʻzgu"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Simsiz monitorni yoqish"</string>
@@ -5945,6 +5956,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"PIN kodni oʻchirish vaqtida xatolik yuz berdi."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> animatsiyasi"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Boshqaruv vositalarini yoqish imkonsiz"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"Identity Check boshqa ilovalarda ham ishlaydi"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Shaxsingizni aniqlash uchun Barmoq izi yoki Yuz bilan ochish imkoniyatini taklif qiluvchi istalgan ilovada shaxsingizni himoyalashi mumkin"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Tafsilotlar"</string>

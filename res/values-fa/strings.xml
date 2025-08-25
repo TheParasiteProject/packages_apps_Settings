@@ -246,6 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"انتقال به بالا"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"انتقال به پایین"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"برداشتن"</string>
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"انتقال به ابتدا"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"اولویت‌های منطقه‌ای"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"تنظیم اولویت‌های واحد و عدد"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"به برنامه‌ها اجازه می‌دهد اولویت‌های منطقه‌ای شما را بدانند تا بتوانند تجربه‌تان را شخصی‌سازی کنند."</string>
@@ -1019,6 +1020,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"از تنظیمات جدید استفاده شود؟"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"اگر نمایشگر طبق انتظار کار نمی‌کند، می‌توانید به تنظیمات قبلی برگردید"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"استفاده از تنظیمات"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"قرینه‌سازی"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"فعال کردن نمایش بی‌سیم"</string>
@@ -1500,12 +1511,9 @@
     <string name="screensaver_settings_low_light_mode" msgid="271972828076673743">"حالت کم‌نور"</string>
     <string name="lift_to_wake_title" msgid="8994218158737714046">"بیدار شدن با بالا بردن"</string>
     <string name="screensaver_restrict_to_wireless_charging_title" msgid="8016059995446029358">"محدود به شارژ بی‌سیم"</string>
-    <!-- no translation found for blur_switch (1391073945502754948) -->
-    <skip />
-    <!-- no translation found for blur_switch_summary (5025895302219948597) -->
-    <skip />
-    <!-- no translation found for blur_switch_disabled_summary (4664341513589412290) -->
-    <skip />
+    <string name="blur_switch" msgid="1391073945502754948">"کاهش جلوه‌های محو شدن"</string>
+    <string name="blur_switch_summary" msgid="5025895302219948597">"نمایش پس‌زمینه‌ها و پنل‌ها را آسان‌تر کنید"</string>
+    <string name="blur_switch_disabled_summary" msgid="4664341513589412290">"به‌دلیل روشن بودن «بهینه‌سازی باتری» موقتاً غیرفعال شده است"</string>
     <string name="low_light_display_behavior_main_switch_title" msgid="7138165032358139627">"استفاده از حالت «کم‌نور»"</string>
     <string name="low_light_display_behavior_subtitle" msgid="1833984014035605413">"انتخاب کنید در حالت «کم‌نور» چه چیزهایی نمایش داده شود"</string>
     <string name="low_light_display_behavior_screen_off" msgid="4203092158668290404">"صفحه‌نمایش خاموش شود"</string>
@@ -1580,16 +1588,14 @@
     <string name="storage_settings_title" msgid="486118156723194815">"تنظیمات ذخیره‌سازی"</string>
     <string name="status_eid" msgid="3588471107671992684">"‏سند شناسایی جاسازی‌شده (EID)"</string>
     <string name="eid_multi_sim" msgid="6659492335576379274">"‏‫EID (شیار سیم‌کارت <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
-    <!-- no translation found for imei_multi_sim (6990044568468728075) -->
-    <skip />
+    <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"برای مشاهده، شبکه ذخیره‌شده را انتخاب کنید"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"IMEI SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"MIN"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"‏نسخه PRL"</string>
-    <!-- no translation found for meid_multi_sim (3124054561186721453) -->
-    <skip />
+    <string name="meid_multi_sim" msgid="3124054561186721453">"MEID: <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"روشن"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"خاموش"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -2595,8 +2601,7 @@
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"ازهم بازکردن"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"«زمینه تیره» گسترش‌یافته"</string>
     <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"برای بهبود دسترس‌پذیری، «زمینه تیره» را به‌طور خودکار روی برنامه‌های بیشتری اعمال می‌کند"</string>
-    <!-- no translation found for keywords_expanded_dark_theme (8366925785183600306) -->
-    <skip />
+    <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"معکوس اجباری، وارونگی رنگ، کنتراست"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"برداشتن پویانمایی‌ها"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"کاهش حرکت در صفحه‌نمایش"</string>
     <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"چشمک زدن مکان‌نمای نوشتار"</string>
@@ -3681,8 +3686,7 @@
     <string name="keywords_battery_info" msgid="3319796850366687033">"اطلاعات باتری، تاریخ تولید، تعداد چرخه، اولین استفاده"</string>
     <string name="keywords_android_version" msgid="1629882125290323070">"‏سطح وصله امنیتی android، نسخه باند پایه، نسخه اصلی"</string>
     <string name="keywords_dark_ui_mode" msgid="6373999418195344014">"زمینه، روشن، تاریک، حالت، حساسیت به نور، نورهراسی، تاریک‌تر کردن، تاریک کردن، حالت تاریک، میگرن"</string>
-    <!-- no translation found for keywords_blur_switch (3482676740440346012) -->
-    <skip />
+    <string name="keywords_blur_switch" msgid="3482676740440346012">"جلوه‌های محو کردن"</string>
     <string name="keywords_systemui_theme" msgid="6341194275296707801">"زمینه تاریک"</string>
     <string name="keywords_device_feedback" msgid="5489930491636300027">"اشکال"</string>
     <string name="keywords_ambient_display_screen" msgid="661492302323274647">"نمایشگر محیطی. نمایشگر صفحه قفل"</string>
@@ -4985,7 +4989,7 @@
     <string name="storage_other" msgid="7922190148479988838">"موارد دیگر"</string>
     <string name="storage_apps" msgid="3564291603258795216">"برنامه‌ها"</string>
     <string name="storage_system" msgid="8472410119822911844">"سیستم"</string>
-    <string name="storage_os_name" msgid="4637680493234672410">"‏Android نسخه <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <string name="storage_os_name" msgid="4637680493234672410">"‏نسخه ‫<xliff:g id="VERSION">%s</xliff:g>: Android"</string>
     <string name="storage_temporary_files" msgid="8254109904032452219">"فایل‌های موقتی سیستم"</string>
     <string name="storage_trash" msgid="2807138998886084856">"حذف‌شده‌ها"</string>
     <string name="storage_trash_dialog_title" msgid="2296169576049935200">"حذف‌شده‌ها خالی شود؟"</string>
@@ -5957,6 +5961,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"هنگام حذف پین خطایی روی داد."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"پویانمایی <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"کنترل‌ها روشن نمی‌شود"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"«احراز هویت» در برنامه‌های بیشتری دردسترس است"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"می‌توانید از هویتتان در هر برنامه‌ای که ویژگی «اثر انگشت» یا «قفل‌گشایی با چهره» دارد محافظت کنید"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"مشاهده جزئیات"</string>
@@ -5974,10 +5984,7 @@
     <string name="lock_screen_title" msgid="4701994278040604018">"قفل صفحه"</string>
     <string name="location_settings" msgid="6833222354060094170">"دسترسی به مکان"</string>
     <string name="location_settings_subtitle" msgid="8471780117911010030">"دیدن برنامه‌ها و سرویس‌هایی که به مکان دسترسی دارند"</string>
-    <!-- no translation found for identity_check_notification_title (8004343932775654492) -->
-    <skip />
-    <!-- no translation found for identity_check_notification_summary (3762060079941053730) -->
-    <skip />
-    <!-- no translation found for identity_check_view_details (8752343542345818128) -->
-    <skip />
+    <string name="identity_check_notification_title" msgid="8004343932775654492">"احراز هویت در برنامه‌های بیشتر فعال است."</string>
+    <string name="identity_check_notification_summary" msgid="3762060079941053730">"احراز هویت دسترسی غیرمجاز به برنامه‌ها را مسدود می‌کند. اکنون برای تمام برنامه‌های دارای اثر انگشت یا باز کردن قفل‌گشایی با چهره فعال است."</string>
+    <string name="identity_check_view_details" msgid="8752343542345818128">"مشاهده جزئیات"</string>
 </resources>

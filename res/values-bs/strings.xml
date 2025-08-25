@@ -246,6 +246,8 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Pomjeri nagore"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Pomjeri nadolje"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Ukloni"</string>
+    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"Regionalne postavke"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Postavite preference za jedinice i brojeve"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Omogućite aplikacijama da znaju vaše regionalne postavke da mogu personalizirati vaše iskustvo."</string>
@@ -677,7 +679,7 @@
     <string name="private_space_face_enroll_introduction_message" msgid="250239418499081821">"Koristite lice da otključate privatni prostor ili potvrdite identitet, npr. prilikom prijavljivanja u aplikacije ili odobravanja kupovine"</string>
     <string name="private_space_face_enroll_introduction_info_looking" msgid="5694757845303924042">"Gledanjem u telefon možete otključati privatni prostor, čak i ako nemate namjeru. Privatni prostor također može otključati osoba koja liči na vas, kao što je identični blizanac, ili se može otključati ako neko prinese uređaj vašem licu."</string>
     <string name="private_space_face_enroll_introduction_info_less_secure" msgid="8460719783943533172">"Korištenje lica za otključavanje privatnog prostora može biti manje sigurno od jakog uzorka, PIN-a ili lozinke"</string>
-    <string name="private_space_face_settings_require_attention_details" msgid="2799569069549999689">"Da otključate privatni prostor, oči vam moraju biti otvorene. Da postignete najbolje rezultate, skinite sunčane naočale."</string>
+    <string name="private_space_face_settings_require_attention_details" msgid="2799569069549999689">"Da otključate privatni prostor, oči vam moraju biti otvorene. Za najbolje rezultate skinite sunčane naočale."</string>
     <string name="private_space_face_settings_footer" msgid="7722256209563543711">"Koristite lice da otključate privatni prostor.\n\nImajte na umu:\nu datom trenutku možete imati postavljeno samo jedno lice. Da dodate drugo lice, izbrišite postojeće.\n\nTelefon možete otključati ako pogledate u njega čak i ako vam to nije bila namjera.\n\nPrivatni prostor može otključati i neko drugi ako prinese uređaj vašem licu.\n\nPrivatni prostor može otključati osoba koja mnogo liči na vas, npr. identični blizanac."</string>
     <string name="private_space_face_settings_require_confirmation_details" msgid="5406498664903812249">"Za korištenje otključavanja licem uvijek se traži potvrda"</string>
     <string name="private_space_category_ways_to_unlock" msgid="4356631225316950046">"Načini otključavanja"</string>
@@ -965,7 +967,7 @@
     <string name="device_details_title" msgid="1155622417516195481">"Detalji o uređaju"</string>
     <string name="bluetooth_device_keyboard_settings_preference_title" msgid="3411693160917620519">"Postavke tastature"</string>
     <string name="bluetooth_device_more_settings_preference_title" msgid="6034482566541746500">"Više postavki"</string>
-    <string name="bluetooth_device_more_settings_preference_summary" msgid="7639584132778245426">"Ažuriranja firmvera, informacije i još mnogo toga"</string>
+    <string name="bluetooth_device_more_settings_preference_summary" msgid="7639584132778245426">"Ažuriranja firmvera, informacije i drugo"</string>
     <string name="bluetooth_device_tip_support" msgid="6072338493592606897">"Savjeti i podrška"</string>
     <string name="bluetooth_device_mac_address" msgid="4873325074786732703">"Bluetooth adresa uređaja: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_multuple_devices_mac_address" msgid="4974301550897923376">"Bluetooth adresa uređaja:\n<xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -1019,6 +1021,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Koristiti nove postavke?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Ako ekran ne radi kako želite, možete vratiti prethodne postavke"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Koristi postavke"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"preslikavanje"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Omogući bežični prikaz"</string>
@@ -1531,7 +1543,7 @@
     <string name="category_title_text_style" msgid="5905015084935695611">"Opcije stila"</string>
     <string name="sim_lock_settings" msgid="7331982427303002613">"Postavke zaključavanja SIM-a"</string>
     <string name="sim_lock_settings_category" msgid="6475255139493877786">"Zaključavanje SIM-a"</string>
-    <string name="sim_pin_toggle" msgid="6814489621760857328">"Zaključaj SIM"</string>
+    <string name="sim_pin_toggle" msgid="6814489621760857328">"Zaključavanje SIM-a"</string>
     <string name="sim_pin_change" msgid="5978881209990507379">"Promjena PIN-a SIM kartice"</string>
     <string name="sim_enter_pin" msgid="8235202785516053253">"PIN za SIM"</string>
     <string name="sim_enable_sim_lock" msgid="6486354334679225748">"Zaključavanje SIM-a"</string>
@@ -1577,16 +1589,14 @@
     <string name="storage_settings_title" msgid="486118156723194815">"Postavke za pohranu"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
     <string name="eid_multi_sim" msgid="6659492335576379274">"E​ID (utor za SIM <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
-    <!-- no translation found for imei_multi_sim (6990044568468728075) -->
-    <skip />
+    <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"Za prikaz odaberite sačuvanu mrežu"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"IMEI SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"MIN"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"Verzija PRL-a"</string>
-    <!-- no translation found for meid_multi_sim (3124054561186721453) -->
-    <skip />
+    <string name="meid_multi_sim" msgid="3124054561186721453">"MEID <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"Uključeno"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"Isključeno"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -1680,8 +1690,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Opće"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Opće postavke"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Način rada središta"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Vidžeti na zaključanom ekranu (beta verzija)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Vrijeme automatskog prikaza"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Nikada"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Tokom punjenja"</string>
@@ -2207,7 +2216,7 @@
     <string name="mouse_keys_acceleration_seekbar_title" msgid="2329098889930361504">"Ubrzanje"</string>
     <string name="mouse_keys_acceleration_fast_icon_desc" msgid="4426188473271579794">"Brzo"</string>
     <string name="mouse_keys_acceleration_slow_icon_desc" msgid="8370777074987200135">"Sporo"</string>
-    <string name="keyboard_shortcuts_helper" msgid="6934420811737731188">"Prikaži prečice na tastaturi"</string>
+    <string name="keyboard_shortcuts_helper" msgid="6934420811737731188">"Prikaz prečica na tastaturi"</string>
     <string name="keyboard_shortcuts_helper_summary" msgid="5979507677602559203">"Prikaz liste prečica"</string>
     <string name="language_and_input_for_work_category_title" msgid="2546950919124199743">"Tastatura i alati radnog profila"</string>
     <string name="virtual_keyboards_for_work_title" msgid="786459157034008675">"Tastatura na ekranu za posao"</string>
@@ -2229,7 +2238,7 @@
     <string name="trackpad_pointer_speed" msgid="7786579408631352625">"Brzina pokazivača"</string>
     <string name="trackpad_pointer_speed_make_faster_desc" msgid="2855950278314583596">"Ubrzavanje pokazivača"</string>
     <string name="trackpad_pointer_speed_make_slower_desc" msgid="6577850228762978827">"Usporavanje pokazivača"</string>
-    <string name="three_finger_tap_preference_title" msgid="1836080810837854140">"Koristi dodir s tri prsta"</string>
+    <string name="three_finger_tap_preference_title" msgid="1836080810837854140">"Korištenje dodira s tri prsta"</string>
     <string name="touchpad_acceleration_title" msgid="176627555191021888">"Ubrzanje na dodirnoj podlozi"</string>
     <string name="touchpad_acceleration_summary" msgid="8057075483967535793">"Brži pokreti na dodirnoj podlozi će pomjerati kursor dalje"</string>
     <string name="pointer_fill_style" msgid="8794616790175016092">"Boja pokazivača"</string>
@@ -2269,7 +2278,7 @@
     <string name="gesture_button_next" msgid="695288092704187356">"Naprijed"</string>
     <string name="gesture_button_restart" msgid="1895850891992530133">"Ponovo pokreni"</string>
     <string name="gesture_button_done" msgid="6387900351203032188">"Gotovo"</string>
-    <string name="action_corner_title" msgid="7411160165577367757">"Prilagodite prečice u uglovima"</string>
+    <string name="action_corner_title" msgid="7411160165577367757">"Prilagođavanje prečica u uglovima"</string>
     <string name="action_corner_summary" msgid="695618538930535335">"Koristite kursore da se krećete sistemom"</string>
     <string name="action_corner_intro" msgid="2170609118659718140">"Odaberite sljedeća područja da prilagodite prečice u uglovima"</string>
     <string name="action_corner_bottom_left_title" msgid="2857258272736432174">"Donji lijevi ugao"</string>
@@ -3157,7 +3166,7 @@
     <string name="credentials_not_erased" msgid="3611058412683184031">"Nije uspjelo bris. memorije vjerodaj."</string>
     <string name="usage_access_title" msgid="8784394396356369568">"Aplik. s pristupom podacima o korištenju"</string>
     <string name="ca_certificate" msgid="3076484307693855611">"CA certifikat"</string>
-    <string name="user_certificate" msgid="6897024598058566466">"Korisnički cert. za VPN i apl."</string>
+    <string name="user_certificate" msgid="6897024598058566466">"Korisnički certifikat za VPN i aplikacije"</string>
     <string name="wifi_certificate" msgid="8461905432409380387">"Certifikat za WiFi"</string>
     <string name="ca_certificate_warning_title" msgid="7951148441028692619">"Vaši podaci neće biti privatni"</string>
     <string name="ca_certificate_warning_description" msgid="8409850109551028774">"Web lokacije, aplikacije i VPN-ovi koriste CA certifikate za šifriranje. Instalirajte CA certifikate samo ako dolaze od organizacija kojima vjerujete. \n\nAko instalirate CA certifikat, vlasnik certifikata može pristupiti vašim podacima, kao što su lozinke ili detalji o kreditnoj kartici, s web lokacija koje posjećujete ili iz aplikacija koje koristite, čak i ako su ti podaci šifrirani."</string>
@@ -3967,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Prikaži sav sadržaj obavještenja radnog profila"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Sakrij osjetljivi sadržaj radnog profila"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Kada je uređaj zaključan, na koji način želite da se prikazuju obavještenja profila?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Prikaži na zaključanom ekranu"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Šta prikazivati na zaključanom ekranu"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Prikaži pregledana obavještenja"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Prikaži ikone pregledanih obavještenja"</string>
@@ -4756,7 +4764,7 @@
     <string name="long_background_tasks_title" msgid="3272230637974707490">"Dugi zadaci u pozadini"</string>
     <string name="long_background_tasks_footer_title" msgid="9117342254914743097">"Dozvolite ovoj aplikaciji da izvršava duge zadatke u pozadini. Ovo omogućava aplikaciji da izvršava zadatke za koje može biti potrebno više od nekoliko minuta, kao što su preuzimanja i otpremanja. \n\nAko se ovo odobrenje odbije, sistem će odrediti granicu za to koliko dugo aplikacija može izvršavati takve zadatke u pozadini."</string>
     <string name="keywords_long_background_tasks" msgid="5788956269136054574">"dugi zadaci, prenos podataka, zadaci u pozadini"</string>
-    <string name="reset_shortcut_manager_throttling" msgid="2183940254903144298">"Poništi ograničenje brzine ShortcutManagera"</string>
+    <string name="reset_shortcut_manager_throttling" msgid="2183940254903144298">"Poništavanje ograničenja brzine ShortcutManagera"</string>
     <string name="reset_shortcut_manager_throttling_complete" msgid="8949943009096885470">"Ograničenje brzine ShortcutManagera je poništeno"</string>
     <string name="notification_suggestion_title" msgid="6309263655965785411">"Kontrolirajte informacije na zaključanom ekranu"</string>
     <string name="notification_suggestion_summary" msgid="7615611244249276113">"Pokaži ili sakrij sadržaj obavještenja"</string>
@@ -5950,6 +5958,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Došlo je do greške prilikom pokušaja brisanja PIN-a."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animacija funkcije <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Nije moguće uključiti nadzor"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"Provjera identiteta je dostupna u više aplikacija"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Možete zaštititi svoj identitet u bilo kojoj aplikaciji koja nudi otključavanje otiskom prsta ili licem radi identifikacije"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Prikaži detalje"</string>

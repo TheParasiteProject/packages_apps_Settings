@@ -246,6 +246,8 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Дээш зөөх"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Доош зөөх"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Хасах"</string>
+    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"Бүс нутгийн тохиргоо"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Нэгж болон тооны сонголтыг тохируулна уу"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Аппуудад бүс нутгийн тохиргоогоо мэдэгдсэнээр тэд таны хэрэглээг хувийн болгох боломжтой."</string>
@@ -359,7 +361,7 @@
     <string name="location_settings_tooltip_text_for_chrome" msgid="5781821709250544575">"Өөрчлөхийн тулд ChromeOS-н Тохиргоо &gt; Нууцлал, аюулгүй байдал &gt; Нууцлалын тохиргоо &gt; Байршлын хандалт руу очно уу"</string>
     <string name="account_settings_title" msgid="9138880127246241885">"Бүртгэл"</string>
     <string name="security_settings_title" msgid="6710768415432791970">"Аюулгүй байдал"</string>
-    <string name="encryption_and_credential_settings_title" msgid="5856216318961482983">"Шифрлэлт, мандат үнэмлэх"</string>
+    <string name="encryption_and_credential_settings_title" msgid="5856216318961482983">"Шифрлэлт, нэвтрэх мэдээлэл"</string>
     <string name="lockscreen_settings_title" msgid="4086121748092341549">"Түгжээтэй дэлгэц"</string>
     <string name="lockscreen_settings_what_to_show_category" msgid="9205490627927741254">"Харуулах зүйл"</string>
     <string name="disabled_by_administrator_summary" msgid="5424846182313851124">"Боломжгүй"</string>
@@ -665,9 +667,9 @@
     <string name="private_space_fingerprint_title" msgid="5989254643211889931">"Хурууны хээгээр түгжээ тайлах"</string>
     <string name="private_space_face_title" msgid="3290402865367663079">"Царайгаар түгжээ тайлах"</string>
     <string name="private_space_biometric_summary" msgid="4403837276018724581">"Тохируулахын тулд товшино уу"</string>
-    <string name="private_space_fingerprint_unlock_title" msgid="3614016453395789051">"Хаалттай орон зайн Хурууны хээгээр түгжээ тайлах"</string>
+    <string name="private_space_fingerprint_unlock_title" msgid="3614016453395789051">"Хаалттай орон зайд Хурууны хээгээр түгжээ тайлах"</string>
     <string name="private_space_fingerprint_unlock_title_new" msgid="5524309056115678364">"Хаалттай орон зайд ашиглах хурууны хээ"</string>
-    <string name="private_space_face_unlock_title" msgid="462248384776453613">"Хаалттай орон зайн Царайгаар түгжээ тайлах"</string>
+    <string name="private_space_face_unlock_title" msgid="462248384776453613">"Хаалттай орон зайд Царайгаар түгжээ тайлах"</string>
     <string name="private_space_biometric_unlock_title" msgid="1978145237698659673">"Хаалттай орон зайн Царай, хурууны хээгээр түгжээ тайлах"</string>
     <string name="private_space_fingerprint_enroll_introduction_title" msgid="5187730641333680942">"Хаалттай орон зайд Хурууны хээгээр түгжээ тайлахыг тохируулах"</string>
     <string name="private_space_fingerprint_enroll_introduction_message" msgid="9092068873421435300">"Хаалттай орон зайнхаа түгжээг тайлах эсвэл аппуудад нэвтрэх, худалдан авалтыг зөвшөөрөх зэргээр өөрийгөө мөн болохыг баталгаажуулахад хурууныхаа хээг ашиглана уу"</string>
@@ -1019,6 +1021,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Шинэ тохиргоог ашиглах уу?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Хэрэв таны дэлгэц хүссэнээр тань ажиллахгүй байвал та өмнөх тохиргоо руугаа буцаах боломжтой"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Тохиргоог ашиглах"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"тусгал"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Утасгүй дэлгэцийг идэвхжүүлэх"</string>
@@ -1577,16 +1589,14 @@
     <string name="storage_settings_title" msgid="486118156723194815">"Хадгалах сангийн тохиргоо"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
     <string name="eid_multi_sim" msgid="6659492335576379274">"E​ID (SIM-н үүр <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
-    <!-- no translation found for imei_multi_sim (6990044568468728075) -->
-    <skip />
+    <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"Үзэхийн тулд хадгалсан сүлжээг сонгоно уу"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"IMEI SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"MIN"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"PRL хувилбар"</string>
-    <!-- no translation found for meid_multi_sim (3124054561186721453) -->
-    <skip />
+    <string name="meid_multi_sim" msgid="3124054561186721453">"MEID <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"Асаалттай"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"Унтраалттай"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -1680,8 +1690,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Нийтийн"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Нийтийн тохиргоо"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Hub горим"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Түгжээтэй дэлгэц дээрх виджет (бета)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Хэзээ автоматаар харуулах вэ?"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Хэзээ ч үгүй"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Цэнэглэж байхад"</string>
@@ -3139,12 +3148,12 @@
     <string name="cellular_security_network_generations_summary" msgid="139087814553929402">"Та суулгасан SIM карт бүрийг зөвхөн 3G, 4G болон 5G-г дэмждэг сүлжээнүүдэд холбогдохоор тохируулах боломжтой. SIM нь хуучин, аюултай 2G сүлжээнүүдэд холбогдохгүй. Боломжтой ганц сүлжээ нь 2G үед энэ тохиргоо таны холболтыг хязгаарлаж магадгүй. Яаралтай тусламжийн тохиолдолд 2G-г ашиглаж магадгүй."</string>
     <string name="credentials_title" msgid="7535942196886123656">"Мандат үнэмлэхийн сан"</string>
     <string name="credentials_install" msgid="3933218407598415827">"Cертификат суулгах"</string>
-    <string name="credentials_reset" msgid="4246628389366452655">"Мандат үнэмлэхийг арилгах"</string>
+    <string name="credentials_reset" msgid="4246628389366452655">"Нэвтрэх мэдээллийг арилгах"</string>
     <string name="credentials_reset_summary" msgid="5400585520572874255">"Бүх сертификатыг устгах"</string>
     <string name="trusted_credentials" msgid="2522784976058244683">"Итгэмжит мандат үнэмлэх"</string>
     <string name="trusted_credentials_summary" msgid="345822338358409468">"Итгэмжит CA сертификатуудыг харуулах"</string>
-    <string name="user_credentials" msgid="4044405430790970775">"Хэрэглэгчийн мандат үнэмлэх"</string>
-    <string name="user_credentials_summary" msgid="686471637627271856">"Хадгалсан мандат үнэмлэхийг харах, өөрчлөх"</string>
+    <string name="user_credentials" msgid="4044405430790970775">"Хэрэглэгчийн нэвтрэх мэдээлэл"</string>
+    <string name="user_credentials_summary" msgid="686471637627271856">"Хадгалсан нэвтрэх мэдээллийг харах, өөрчлөх"</string>
     <string name="advanced_security_title" msgid="7117581975877192652">"Дэлгэрэнгүй"</string>
     <string name="credentials_settings_not_available" msgid="7433088409177429600">"Энэ хэрэглэгчид итгэмжлэл байхгүй байна"</string>
     <string name="credential_for_vpn_and_apps" msgid="2208229692860871136">"VPN, апп-д суулгасан"</string>
@@ -3394,7 +3403,7 @@
     <string name="n_cacrts" msgid="5886462550192731627">"%d CA сертификат"</string>
     <string name="user_credential_title" msgid="4686178602575567298">"Мандат үнэмлэхийн дэлгэрэнгүй"</string>
     <string name="user_credential_removed" msgid="4087675887725394743">"Мэдээлэл устсан: <xliff:g id="CREDENTIAL_NAME">%s</xliff:g>"</string>
-    <string name="user_credential_none_installed" msgid="918620912366836994">"Ямар ч хэрэглэгчийн мандат үнэмлэх суулгаагүй байна"</string>
+    <string name="user_credential_none_installed" msgid="918620912366836994">"Ямар ч хэрэглэгчийн нэвтрэх мэдээлэл суулгаагүй байна"</string>
     <string name="spellcheckers_settings_title" msgid="2799021700580591443">"Зөв бичгийн алдаа шалгагч"</string>
     <string name="spellcheckers_settings_for_work_title" msgid="6471603934176062893">"Ажилд зориулсан зөв бичгийн алдаа шалгагч"</string>
     <string name="current_backup_pw_prompt" msgid="4962276598546381140">"Өөрийн бүрэн нөөцлөх нууц үгийг энд оруулна уу"</string>
@@ -3967,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Ажлын мэдэгдлийн бүх агуулгыг харуулах"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Ажлын эмзэг, хурц агуулгыг нуух"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Таны төхөөрөмж түгжээтэй үед та профайлын мэдэгдлээ хэрхэн харахыг хүсэж байна вэ?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Түгжээтэй дэлгэц дээр харуулах"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Түгжээтэй дэлгэцэд юу харуулах вэ?"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Үзсэн мэдэгдлийг харуулах"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Үзсэн мэдэгдлийн дүрс тэмдгийг харуулах"</string>
@@ -4922,7 +4930,7 @@
     <string name="enterprise_privacy_always_on_vpn_personal" msgid="8395903360175064841">"Тогтмол асаалттай VPN-г таны хувийн профайлд асаасан"</string>
     <string name="enterprise_privacy_always_on_vpn_work" msgid="2496961514592522377">"Тогтмол асаалттай VPN-г таны амжлын профайлд асаасан"</string>
     <string name="enterprise_privacy_global_http_proxy" msgid="4350347418068037051">"Дэлхий нийтийн HTTP прокси тохиргоо"</string>
-    <string name="enterprise_privacy_ca_certs_device" msgid="1816495877258727663">"Итгэмжит мандат үнэмлэх"</string>
+    <string name="enterprise_privacy_ca_certs_device" msgid="1816495877258727663">"Итгэмжит нэвтрэх мэдээлэл"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="1516422660828485795">"Таны хувийн профайлд суулгасан итгэмжит мандат үнэмлэх"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="4318941788592655561">"Таны ажлын профайлд суулгасан итгэмжит мандат үнэмлэх"</string>
     <string name="enterprise_privacy_number_ca_certs" msgid="4540897122831942658">"{count,plural, =1{Хамгийн багадаа # CA сертификат}other{Хамгийн багадаа # CA сертификат}}"</string>
@@ -5949,6 +5957,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"ПИН-г устгахаар оролдож байхад алдаа гарлаа."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g>-н хөдөлгөөнт зураг"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Тохиргоог асаах боломжгүй"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"Өөрөө мөн эсэхийг шалгах онцлогийг илүү олон апп дээр ашиглах боломжтой"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Таныг танихад Хурууны хээ, Царайгаар түгжээ тайлах онцлогуудыг санал болгодог дурын апп дээр та хувийн мэдээллийн хамгаалалтаа аюулгүй болгож болно"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Дэлгэрэнгүй үзэх"</string>
