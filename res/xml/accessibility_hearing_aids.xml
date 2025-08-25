@@ -84,5 +84,5 @@
         settings:searchable="false"
         settings:buttonPreferenceSize="normal"
         settings:buttonPreferenceType="tonal"
-        settings:controller="com.android.settings.accessibility.FeedbackButtonPreferenceController" />
+        settings:controller="com.android.settings.accessibility.HearingDevicesFeedbackButtonPreferenceController" />
 </PreferenceScreen>
