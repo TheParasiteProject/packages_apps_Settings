@@ -246,6 +246,8 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"माथि सार्नुहोस्"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"तल सार्नुहोस्"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"हटाउनुहोस्"</string>
+    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"क्षेत्रीय प्राथमिकताहरू"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"एकाइ तथा सङ्ख्यासम्बन्धी प्राथमिकताहरू तोक्नुहोस्"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"एपहरूले तपाईंलाई पर्सनलाइज गरिएका सुविधा प्रदान गर्न सकुन् भन्नाका लागि ती एपहरूलाई तपाईंका क्षेत्रीय प्राथमिकताहरू बारेमा जानकारी दिनुहोस्।"</string>
@@ -1019,6 +1021,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"नयाँ सेटिङ प्रयोग गर्ने हो?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"तपाईंको डिस्प्लेले तपाईंले चाहे जस्तो काम गरिरहेको छैन भने तपाईं आफ्ना हालका सेटिङ उल्ट्याएर पहिलेकै सेटिङ लागू गर्न सक्नुहुन्छ"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"प्रयोगकर्ताका सेटिङ"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"स्क्रिन मिरर गर्नुहोस्"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"वायरलेस प्रदर्शन सक्षम गर्नुहोस्"</string>
@@ -1500,12 +1512,9 @@
     <string name="screensaver_settings_low_light_mode" msgid="271972828076673743">"कम उज्यालो मोड"</string>
     <string name="lift_to_wake_title" msgid="8994218158737714046">"चालु गर्न उठाउनुहोस्"</string>
     <string name="screensaver_restrict_to_wireless_charging_title" msgid="8016059995446029358">"वायरलेस चार्जिङ गरिँदा मात्र"</string>
-    <!-- no translation found for blur_switch (1391073945502754948) -->
-    <skip />
-    <!-- no translation found for blur_switch_summary (5025895302219948597) -->
-    <skip />
-    <!-- no translation found for blur_switch_disabled_summary (4664341513589412290) -->
-    <skip />
+    <string name="blur_switch" msgid="1391073945502754948">"ब्लर इफेक्टहरू घटाउनुहोस्"</string>
+    <string name="blur_switch_summary" msgid="5025895302219948597">"ब्याकग्राउन्ड र प्यानलहरू अझ सजिलैसँग हेर्न सकिने बनाउनुहोस्"</string>
+    <string name="blur_switch_disabled_summary" msgid="4664341513589412290">"ब्याट्री सेभर अन भएकाले केही समयका लागि अफ गरिएको छ"</string>
     <string name="low_light_display_behavior_main_switch_title" msgid="7138165032358139627">"कम उज्यालो मोड प्रयोग गर्नुहोस्"</string>
     <string name="low_light_display_behavior_subtitle" msgid="1833984014035605413">"कम उज्यालो मोडमा देखाइनु पर्ने कुराहरू छनौट गर्नुहोस्"</string>
     <string name="low_light_display_behavior_screen_off" msgid="4203092158668290404">"स्क्रिन अफ छ"</string>
@@ -1580,16 +1589,14 @@
     <string name="storage_settings_title" msgid="486118156723194815">"भण्डारण सेटिङहरू"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
     <string name="eid_multi_sim" msgid="6659492335576379274">"E​ID (SIM स्लट <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
-    <!-- no translation found for imei_multi_sim (6990044568468728075) -->
-    <skip />
+    <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"हेर्नका लागि, सेभ गरिएको नेटवर्क छनौट गर्नुहोस्"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"IMEI SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"मिनेट"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"PRL संस्करण"</string>
-    <!-- no translation found for meid_multi_sim (3124054561186721453) -->
-    <skip />
+    <string name="meid_multi_sim" msgid="3124054561186721453">"MEID <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"अन छ"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"अफ छ"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -2592,8 +2599,7 @@
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"एक्स्पान्ड गरिएको"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"एक्स्पान्ड गरिएको अँध्यारो थिम"</string>
     <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"सर्वसुलभता बढाउनका निम्ति अझ धेरै एपहरूमा अँध्यारो थिम स्वतः लागू गर्छ"</string>
-    <!-- no translation found for keywords_expanded_dark_theme (8366925785183600306) -->
-    <skip />
+    <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"फोर्स इन्भर्ट, कलर इन्भर्सन, कन्ट्रास्ट"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"एनिमेसन हटाउनुहोस्"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"स्क्रिनमा चाल कम गर्नुहोस्"</string>
     <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"टेक्स्टको कर्सर पिलिक पिलिक हुने सुविधा"</string>
@@ -3678,8 +3684,7 @@
     <string name="keywords_battery_info" msgid="3319796850366687033">"ब्याट्रीसम्बन्धी जानकारी, बनेको मिति, चार्ज हुने र डिस्चार्ज हुने क्रमको गणना, पहिलो पटक प्रयोग गरिएको मिति"</string>
     <string name="keywords_android_version" msgid="1629882125290323070">"android को सुरक्षासम्बन्धी प्याचको स्तर, बेसब्यान्डको संस्करण, कर्नेलको संस्करण"</string>
     <string name="keywords_dark_ui_mode" msgid="6373999418195344014">"थिम, उज्यालो, अँध्यारो मोड, प्रकाशको संवेदनशीलता, फोटोफोबिया, अझ अँध्यारो बनाउनुहोस्, अँध्यारो बनाउनुहोस्, अँध्यारो मोड, माइग्रेन"</string>
-    <!-- no translation found for keywords_blur_switch (3482676740440346012) -->
-    <skip />
+    <string name="keywords_blur_switch" msgid="3482676740440346012">"ब्लर इफेक्टहरू"</string>
     <string name="keywords_systemui_theme" msgid="6341194275296707801">"अँध्यारो थिम"</string>
     <string name="keywords_device_feedback" msgid="5489930491636300027">"बग"</string>
     <string name="keywords_ambient_display_screen" msgid="661492302323274647">"परिवेशको प्रदर्शन, लक स्क्रिनको प्रदर्शन"</string>
@@ -5954,6 +5959,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"यो PIN मेटाउने प्रयास गर्दै गर्दा कुनै त्रुटि भयो।"</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> को एनिमेसन"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"कन्ट्रोलहरू अन गर्न सकिएनन्"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"पहिचान पुष्टि गर्ने सुविधा अझ धेरै एपहरूमा उपलब्ध छ"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"तपाईंको पहिचान गर्न फिंगरप्रिन्ट वा फेस अनलक सुविधा उपलब्ध गराउने जुनसुकै एपमा तपाईं आफ्नो पहिचान सुरक्षित राख्न सक्नुहुन्छ"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"विवरणहरू हेर्नुहोस्"</string>
@@ -5971,10 +5982,7 @@
     <string name="lock_screen_title" msgid="4701994278040604018">"स्क्रिन लक"</string>
     <string name="location_settings" msgid="6833222354060094170">"लोकेसनको एक्सेस"</string>
     <string name="location_settings_subtitle" msgid="8471780117911010030">"लोकेसनको एक्सेस दिइएका एप तथा सेवाहरू हेर्नुहोस्"</string>
-    <!-- no translation found for identity_check_notification_title (8004343932775654492) -->
-    <skip />
-    <!-- no translation found for identity_check_notification_summary (3762060079941053730) -->
-    <skip />
-    <!-- no translation found for identity_check_view_details (8752343542345818128) -->
-    <skip />
+    <string name="identity_check_notification_title" msgid="8004343932775654492">"पहिचान पुष्टि गर्ने सुविधा थुप्रै एपहरूमा प्रयोग गर्न मिल्छ"</string>
+    <string name="identity_check_notification_summary" msgid="3762060079941053730">"पहिचान पुष्टि गर्ने सुविधाले तपाईंका एपहरू अनावश्यक रूपमा एक्सेस गर्न दिँदैन। यो सुविधा अहिले फिंगरप्रिन्ट वा फेस अनलक प्रयोग गर्ने सबै एपमा उपलब्ध छ।"</string>
+    <string name="identity_check_view_details" msgid="8752343542345818128">"विवरणहरू हेर्नुहोस्"</string>
 </resources>

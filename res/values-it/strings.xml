@@ -246,6 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Sposta in alto"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Sposta in basso"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Rimuovi"</string>
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Sposta in alto"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Preferenze locali"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Imposta le preferenze per unità e numeri"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Consenti alle app di conoscere le tue preferenze locali affinché possano personalizzare la tua esperienza."</string>
@@ -1019,6 +1020,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Vuoi utilizzare le nuove impostazioni?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Se il display non funziona come vorresti, puoi ripristinare le impostazioni precedenti"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Impostazioni d\'uso"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"mirroring"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Attiva display wireless"</string>
@@ -1500,12 +1511,9 @@
     <string name="screensaver_settings_low_light_mode" msgid="271972828076673743">"Modalità Luce scarsa"</string>
     <string name="lift_to_wake_title" msgid="8994218158737714046">"Solleva per riattivare"</string>
     <string name="screensaver_restrict_to_wireless_charging_title" msgid="8016059995446029358">"Limita alla ricarica wireless"</string>
-    <!-- no translation found for blur_switch (1391073945502754948) -->
-    <skip />
-    <!-- no translation found for blur_switch_summary (5025895302219948597) -->
-    <skip />
-    <!-- no translation found for blur_switch_disabled_summary (4664341513589412290) -->
-    <skip />
+    <string name="blur_switch" msgid="1391073945502754948">"Riduci gli effetti di sfocatura"</string>
+    <string name="blur_switch_summary" msgid="5025895302219948597">"Rendi sfondi e riquadri più visibili"</string>
+    <string name="blur_switch_disabled_summary" msgid="4664341513589412290">"Opzione disattivata temporaneamente per risparmio energetico"</string>
     <string name="low_light_display_behavior_main_switch_title" msgid="7138165032358139627">"Usa la modalità Luce scarsa"</string>
     <string name="low_light_display_behavior_subtitle" msgid="1833984014035605413">"Scegli cosa mostrare in modalità Luce scarsa"</string>
     <string name="low_light_display_behavior_screen_off" msgid="4203092158668290404">"Schermo disattivato"</string>
@@ -1681,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Comuni"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Impostazioni comuni"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Modalità Hub"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Widget su schermata di blocco (beta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Quando mostrare automaticamente"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Mai"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Il dispositivo è in carica"</string>
@@ -2590,8 +2597,7 @@
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Esteso"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"Tema scuro espanso"</string>
     <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Applica automaticamente il tema scuro a più app per migliorare l\'accessibilità"</string>
-    <!-- no translation found for keywords_expanded_dark_theme (8366925785183600306) -->
-    <skip />
+    <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"forza inversione, inversione dei colori, contrasto"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Rimuovi le animazioni"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Riduci il movimento sullo schermo"</string>
     <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"Lampeggiamento del cursore di testo"</string>
@@ -3676,8 +3682,7 @@
     <string name="keywords_battery_info" msgid="3319796850366687033">"informazioni sulla batteria, data di produzione, conteggio dei cicli, primo utilizzo"</string>
     <string name="keywords_android_version" msgid="1629882125290323070">"livello patch di sicurezza android, versione banda di base, versione kernel"</string>
     <string name="keywords_dark_ui_mode" msgid="6373999418195344014">"tema, chiaro, buio, modalità, sensibilità alla luce, fotofobia, scurire, oscuramento, modalità Buio, emicrania"</string>
-    <!-- no translation found for keywords_blur_switch (3482676740440346012) -->
-    <skip />
+    <string name="keywords_blur_switch" msgid="3482676740440346012">"effetti di sfocatura"</string>
     <string name="keywords_systemui_theme" msgid="6341194275296707801">"tema scuro"</string>
     <string name="keywords_device_feedback" msgid="5489930491636300027">"bug"</string>
     <string name="keywords_ambient_display_screen" msgid="661492302323274647">"Display ambient, display della schermata di blocco"</string>
@@ -3970,8 +3975,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Mostra tutti i contenuti delle notifiche di lavoro"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Nascondi contenuti di lavoro sensibili"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Quando il dispositivo è bloccato, come vuoi visualizzare le notifiche del profilo?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Mostra nella schermata di blocco"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Cosa mostrare sulla schermata di blocco"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Mostra notifiche visualizzate"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Mostra icone di notifiche visualizzate"</string>
@@ -4074,8 +4078,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Organizzatore delle notifiche"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Raggruppa e silenzia le notifiche con priorità inferiore"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Gestisci le app per l\'organizzatore delle notifiche"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Espandi sempre i bundle"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Applica alle app del profilo di lavoro"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Servizi di supporto VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Nessuna app installata ha richiesto di essere eseguita come servizio di supporto VR."</string>
@@ -5376,8 +5379,8 @@
     <string name="enable_desktop_mode_on_secondary_display" msgid="2609567824593768780">"Attiva finestre forma libera su display secondario"</string>
     <string name="enable_non_resizable_multi_window" msgid="6832903754625404477">"Attiva app non ridimensionabili in multi-finestra"</string>
     <string name="enable_non_resizable_multi_window_summary" msgid="3275763753261901999">"Consente la presenza di app non ridimensionabili in modalità multi-finestra"</string>
-    <string name="hwui_force_dark_title" msgid="4256904905631994219">"Esegui override modalità Buio forzata"</string>
-    <string name="hwui_force_dark_summary" msgid="6515748781487952769">"Esegue l\'override della funzionalità di modalità Buio forzata in modo che sia sempre attiva"</string>
+    <string name="hwui_force_dark_title" msgid="4256904905631994219">"Esegui override tema scuro forzato"</string>
+    <string name="hwui_force_dark_summary" msgid="6515748781487952769">"Esegue l\'override della funzionalità di tema scuro forzato in modo che sia sempre attiva"</string>
     <string name="privacy_dashboard_title" msgid="6845403825611829558">"Privacy"</string>
     <string name="privacy_dashboard_summary" msgid="5775090172422786808">"Autorizzazioni, attività dell\'account, dati personali"</string>
     <string name="privacy_controls_title" msgid="1383047169455206604">"Controlli"</string>
@@ -5952,6 +5955,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Si è verificato un errore durante il tentativo di eliminazione del PIN."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animazione di <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Impossibile attivare i controlli"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"La Verifica dell\'identità è disponibile su più app"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Puoi proteggere la tua identità su qualsiasi app che offre lo Sblocco con l\'Impronta o con il Volto per identificarti"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Visualizza dettagli"</string>
@@ -5969,10 +5978,7 @@
     <string name="lock_screen_title" msgid="4701994278040604018">"Blocco schermo"</string>
     <string name="location_settings" msgid="6833222354060094170">"Accesso alla posizione"</string>
     <string name="location_settings_subtitle" msgid="8471780117911010030">"Visualizza le app e i servizi che hanno accesso alla posizione"</string>
-    <!-- no translation found for identity_check_notification_title (8004343932775654492) -->
-    <skip />
-    <!-- no translation found for identity_check_notification_summary (3762060079941053730) -->
-    <skip />
-    <!-- no translation found for identity_check_view_details (8752343542345818128) -->
-    <skip />
+    <string name="identity_check_notification_title" msgid="8004343932775654492">"La Verifica dell\'identità funziona con più app"</string>
+    <string name="identity_check_notification_summary" msgid="3762060079941053730">"La Verifica dell\'identità impedisce l\'accesso indesiderato alle tue app. Ora disponibile con qualsiasi app che utilizza lo Sblocco con l\'Impronta o con il Volto."</string>
+    <string name="identity_check_view_details" msgid="8752343542345818128">"Visualizza dettagli"</string>
 </resources>

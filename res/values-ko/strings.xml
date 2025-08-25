@@ -246,6 +246,8 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"위로 이동"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"아래로 이동"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"삭제"</string>
+    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"지역 설정"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"단위 및 숫자 환경설정"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"앱 환경을 맞춤설정할 수 있도록 지역 설정을 알려주세요."</string>
@@ -1019,6 +1021,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"새 설정을 사용하시겠습니까?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"디스플레이가 원하는 대로 작동하지 않으면 이전 설정으로 되돌릴 수 있습니다."</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"설정 사용"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"미러링"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"무선 디스플레이 사용"</string>
@@ -1500,12 +1512,9 @@
     <string name="screensaver_settings_low_light_mode" msgid="271972828076673743">"저조도 모드"</string>
     <string name="lift_to_wake_title" msgid="8994218158737714046">"기기를 들어 대기 모드 해제"</string>
     <string name="screensaver_restrict_to_wireless_charging_title" msgid="8016059995446029358">"무선 충전으로 제한"</string>
-    <!-- no translation found for blur_switch (1391073945502754948) -->
-    <skip />
-    <!-- no translation found for blur_switch_summary (5025895302219948597) -->
-    <skip />
-    <!-- no translation found for blur_switch_disabled_summary (4664341513589412290) -->
-    <skip />
+    <string name="blur_switch" msgid="1391073945502754948">"블러 효과 낮추기"</string>
+    <string name="blur_switch_summary" msgid="5025895302219948597">"배경 및 패널의 가시성이 높아집니다."</string>
+    <string name="blur_switch_disabled_summary" msgid="4664341513589412290">"절전 모드로 인해 일시적으로 사용 중지되었습니다."</string>
     <string name="low_light_display_behavior_main_switch_title" msgid="7138165032358139627">"저조도 모드 사용"</string>
     <string name="low_light_display_behavior_subtitle" msgid="1833984014035605413">"저조도 모드에서 표시할 항목 선택"</string>
     <string name="low_light_display_behavior_screen_off" msgid="4203092158668290404">"화면 꺼짐"</string>
@@ -1580,16 +1589,14 @@
     <string name="storage_settings_title" msgid="486118156723194815">"저장소 설정"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
     <string name="eid_multi_sim" msgid="6659492335576379274">"E​ID(SIM 슬롯 <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
-    <!-- no translation found for imei_multi_sim (6990044568468728075) -->
-    <skip />
+    <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"확인하려면 저장된 네트워크를 선택하세요."</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"IMEI SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"MIN"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"PRL 버전"</string>
-    <!-- no translation found for meid_multi_sim (3124054561186721453) -->
-    <skip />
+    <string name="meid_multi_sim" msgid="3124054561186721453">"MEID <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"사용"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"사용 안함"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -1683,8 +1690,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"커뮤니티"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"커뮤니티 설정"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"허브 모드"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"잠금 화면의 위젯(베타)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"자동으로 표시되는 경우"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"사용 안함"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"충전 중"</string>
@@ -2592,8 +2598,7 @@
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"확장형"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"확장형 어두운 테마"</string>
     <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"더 많은 앱에 어두운 테마를 자동으로 적용하여 접근성을 개선합니다"</string>
-    <!-- no translation found for keywords_expanded_dark_theme (8366925785183600306) -->
-    <skip />
+    <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"강제 반전, 색상 반전, 대비"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"애니메이션 삭제"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"화면상의 움직임을 줄임"</string>
     <string name="accessibility_text_cursor_blink_rate_title" msgid="2560387611012958520">"텍스트 커서 깜박임"</string>
@@ -3678,8 +3683,7 @@
     <string name="keywords_battery_info" msgid="3319796850366687033">"배터리 정보, 제조일자, 사이클 수, 최초 사용"</string>
     <string name="keywords_android_version" msgid="1629882125290323070">"Android 보안 패치 수준, 베이스밴드 버전, 커널 버전"</string>
     <string name="keywords_dark_ui_mode" msgid="6373999418195344014">"테마, 밝기, 어두운 모드, 광과민성, 광선공포증, 밝기 낮추기, 어둡게, 어두운 모드, 편두통"</string>
-    <!-- no translation found for keywords_blur_switch (3482676740440346012) -->
-    <skip />
+    <string name="keywords_blur_switch" msgid="3482676740440346012">"블러 효과"</string>
     <string name="keywords_systemui_theme" msgid="6341194275296707801">"어두운 테마"</string>
     <string name="keywords_device_feedback" msgid="5489930491636300027">"버그"</string>
     <string name="keywords_ambient_display_screen" msgid="661492302323274647">"절전 모드 자동 해제, 잠금 화면 표시"</string>
@@ -3972,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"모든 직장 알림 내용 표시"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"민감한 직장 콘텐츠 숨기기"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"기기가 잠겨 있을 때 프로필 알림 표시 방법을 선택하세요."</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"잠금 화면에 표시"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"잠금 화면에 표시할 항목"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"확인한 알림 표시"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"확인한 알림 아이콘 표시"</string>
@@ -5954,6 +5957,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"PIN을 삭제하는 중에 오류가 발생했습니다."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> 애니메이션"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"컨트롤을 사용 설정할 수 없음"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"더 많은 앱에서 본인 확인을 사용할 수 있습니다"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"지문 또는 얼굴 인식 잠금 해제를 제공하여 사용자를 식별하는 모든 앱에서 신원 보호를 강화할 수 있습니다."</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"세부정보 보기"</string>
@@ -5971,10 +5980,7 @@
     <string name="lock_screen_title" msgid="4701994278040604018">"화면 잠금"</string>
     <string name="location_settings" msgid="6833222354060094170">"위치 정보 액세스"</string>
     <string name="location_settings_subtitle" msgid="8471780117911010030">"위치에 액세스할 수 있는 앱과 서비스 보기"</string>
-    <!-- no translation found for identity_check_notification_title (8004343932775654492) -->
-    <skip />
-    <!-- no translation found for identity_check_notification_summary (3762060079941053730) -->
-    <skip />
-    <!-- no translation found for identity_check_view_details (8752343542345818128) -->
-    <skip />
+    <string name="identity_check_notification_title" msgid="8004343932775654492">"더 많은 앱에서 본인 확인 사용 가능"</string>
+    <string name="identity_check_notification_summary" msgid="3762060079941053730">"본인 확인은 앱에 대한 무단 액세스를 방지합니다. 이제 지문 또는 얼굴 인식 잠금 해제를 사용하는 모든 앱에서 본인 확인을 사용할 수 있습니다."</string>
+    <string name="identity_check_view_details" msgid="8752343542345818128">"세부정보 보기"</string>
 </resources>

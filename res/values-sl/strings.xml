@@ -54,7 +54,7 @@
     <string name="stay_awake_on_lockscreen_title" msgid="8088456642083051068">"Povlecite navzgor za nadaljevanje"</string>
     <string name="stay_awake_on_lockscreen_summary" msgid="8825321939913726566">"Zložite telefon in povlecite navzgor po sprednjem zaslonu, če želite aplikacijo uporabljati še naprej, ali počakajte nekaj sekund, da se zaslon zaklene. Igre in videoposnetki se bodo samodejno nadaljevali."</string>
     <string name="sleep_on_fold_title" msgid="7626123024330501411">"Nikoli"</string>
-    <string name="sleep_on_fold_summary" msgid="4191753338303043456">"Sprednji zaslon se izklopi in zaklene, ko zložite napravo"</string>
+    <string name="sleep_on_fold_summary" msgid="4191753338303043456">"Sprednji zaslon se izklopi in zaklene, ko zložite napravo."</string>
     <string name="auto_rotate_settings_primary_switch_title" msgid="3440951924928594520">"Uporabi samodejni zasuk"</string>
     <string name="smart_rotate_text_headline" msgid="5878008933992951904">"Zaznavanje obraza uporablja sprednji fotoaparat za izboljšanje natančnosti samodejnega zasuka. Slike se nikoli ne shranijo in ne pošljejo Googlu."</string>
     <string name="bluetooth" msgid="8898478620943459654">"Bluetooth"</string>
@@ -246,6 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Premakni navzgor"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Premakni navzdol"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Odstrani"</string>
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Premakni na vrh"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Regijske nastavitve"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Določite nastavitve za enote in številke."</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Aplikacijam sporočite svoje regijske nastavitve, da bodo lahko prilagodile izkušnjo za vas."</string>
@@ -1019,6 +1020,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Želite uporabiti nove nastavitve?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Če zaslon ne deluje, kot želite, lahko preklopite nazaj na prejšnje nastavitve"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Uporabi nastavitve"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"zrcaljenje"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Omogočanje brezžičnega zaslona"</string>
@@ -5949,6 +5960,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Pri poskusu brisanja kode PIN je prišlo do napake."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animacija funkcije <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Starševskega nadzora ni mogoče vklopiti"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"Preverjanje identitete je na voljo v več aplikacijah"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Svojo identiteto lahko zavarujete v kateri koli aplikaciji, ki za preverjanje identitete ponuja odklepanje s prstnim odtisom ali obrazom"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Prikaži podrobnosti"</string>
