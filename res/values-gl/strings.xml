@@ -246,6 +246,8 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Mover cara arriba"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Mover cara abaixo"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Quitar"</string>
+    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
+    <skip />
     <string name="regional_preferences_title" msgid="4304567374498629528">"Preferencias rexionais"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Configura as preferencias de números e unidades"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Permite que as aplicacións coñezan as túas preferencias rexionais para que poidan personalizar a túa experiencia."</string>
@@ -1019,6 +1021,16 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Queres usar a nova configuración?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Se a pantalla non funciona como queres, podes volver á configuración anterior"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Usar configuración"</string>
+    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
+    <skip />
+    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
+    <skip />
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"proxección"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Activar visualización sen fíos"</string>
@@ -5949,6 +5961,12 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Produciuse un erro ao tentar eliminar o PIN."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animación de <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Non se poden activar os controis"</string>
+    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <skip />
+    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
+    <skip />
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"A función de comprobación de identidade está dispoñible en máis aplicacións"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Podes protexer a túa identidade en calquera aplicación que ofreza a opción de usar o desbloqueo facial ou o dactilar como método de identificación"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Ver detalles"</string>

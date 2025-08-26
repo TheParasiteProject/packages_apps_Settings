@@ -17,9 +17,7 @@ package com.android.settings.network.telephony;
 
 import android.app.settings.SettingsEnums;
 import android.content.Context;
-import android.os.PersistableBundle;
 import android.os.UserManager;
-import android.telephony.CarrierConfigManager;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
@@ -31,7 +29,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
-import com.android.settings.flags.Flags;
 import com.android.settings.network.CarrierConfigCache;
 import com.android.settings.network.SubscriptionUtil;
 import com.android.settings.overlay.FeatureFactory;
@@ -137,28 +134,7 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
         if (preference == null || !SubscriptionManager.isUsableSubscriptionId(mSubId)) {
             return;
         }
-
-        // TODO: b/303411083 remove all dynamic logic and rely on summary in resource file once flag
-        //  is no longer needed
-        String summary;
-        if (Flags.removeKeyHideEnable2g()) {
-            summary = mContext.getString(R.string.enable_2g_summary);
-        } else {
-            final PersistableBundle carrierConfig = mCarrierConfigCache.getConfigForSubId(mSubId);
-            boolean isDisabledByCarrier =
-                    carrierConfig != null
-                            && carrierConfig.getBoolean(CarrierConfigManager.KEY_HIDE_ENABLE_2G);
-            preference.setEnabled(!isDisabledByCarrier);
-            if (isDisabledByCarrier) {
-                summary = mContext.getString(R.string.enable_2g_summary_disabled_carrier,
-                        getSimCardName());
-            } else {
-                summary = mContext.getString(R.string.enable_2g_summary);
-            }
-        }
-        if (!mShowSummaryAsSimName) {
-            preference.setSummary(summary);
-        }
+        preference.setSummary(mContext.getString(R.string.enable_2g_summary));
     }
 
     private String getSimCardName() {
@@ -181,8 +157,6 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
      * #CONDITIONALLY_UNAVAILABLE} otherwise.
      * <ul>
      *     <li>The subscription is usable {@link SubscriptionManager#isUsableSubscriptionId}</li>
-     *     <li>The carrier has not opted to disable this preference
-     *     {@link CarrierConfigManager#KEY_HIDE_ENABLE_2G}</li>
      *     <li>The device supports
      *     <a href="https://cs.android.com/android/platform/superproject/+/master:hardware/interfaces/radio/1.6/IRadio.hal">Radio HAL version 1.6 or greater</a> </li>
      * </ul>
