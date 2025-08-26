@@ -25,6 +25,7 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.settings.core.BasePreferenceController.AVAILABLE
 import com.android.settings.core.BasePreferenceController.CONDITIONALLY_UNAVAILABLE
+import com.android.settings.core.BasePreferenceController.UNSUPPORTED_ON_DEVICE
 import com.android.settings.network.telephony.MmsMessagePreferenceController.Companion.MmsMessageSearchItem
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
@@ -39,16 +40,21 @@ import org.mockito.kotlin.verify
 @RunWith(AndroidJUnit4::class)
 class MmsMessagePreferenceControllerTest {
     private val mockTelephonyManager1: TelephonyManager =
-        mock<TelephonyManager> { on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn true }
+        mock<TelephonyManager> {
+            on { isDeviceSmsCapable() } doReturn true
+            on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn true
+        }
 
     private val mockTelephonyManager2: TelephonyManager =
         mock<TelephonyManager> {
+            on { isDeviceSmsCapable() } doReturn true
             on { createForSubscriptionId(SUB_1_ID) } doReturn mockTelephonyManager1
             on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn true
         }
 
     private val mockTelephonyManager: TelephonyManager =
         mock<TelephonyManager> {
+            on { isDeviceSmsCapable() } doReturn true
             on { createForSubscriptionId(SUB_1_ID) } doReturn mockTelephonyManager1
             on { createForSubscriptionId(SUB_2_ID) } doReturn mockTelephonyManager2
             on { createForSubscriptionId(INVALID_SUBSCRIPTION_ID) } doReturn mock
@@ -81,6 +87,16 @@ class MmsMessagePreferenceControllerTest {
             key = CarrierConfigManager.KEY_MMS_MMS_ENABLED_BOOL,
             value = true,
         )
+    }
+
+    @Test
+    fun getAvailabilityStatus_noMessagingCapability_unavailable() {
+        mockTelephonyManager.stub { on { isDeviceSmsCapable() } doReturn false }
+        controller.init(SUB_1_ID)
+
+        val availabilityStatus = controller.getAvailabilityStatus()
+
+        assertThat(availabilityStatus).isEqualTo(UNSUPPORTED_ON_DEVICE)
     }
 
     @Test
