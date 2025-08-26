@@ -16,6 +16,8 @@
 
 package com.android.settings.connecteddevice.display
 
+import android.app.ActivityManager.LOCK_TASK_MODE_LOCKED
+import android.app.admin.EnforcingAdmin
 import android.app.settings.SettingsEnums
 import android.os.Bundle
 import android.provider.Settings
@@ -180,6 +182,9 @@ open class SelectedDisplayPreferenceFragment(
             selectedDisplayPreference
                 .findPreference<SwitchPreferenceCompat>(PrefInfo.INCLUDE_DEFAULT_DISPLAY.key)
                 ?.let { updateIncludeDefaultDisplayInTopologyPreference(it, state) }
+            selectedDisplayPreference
+                .findPreference<MirrorPreference>(PrefInfo.DISPLAY_MIRRORING.key)
+                ?.let { updateMirroringPreference(it, isMirroring, state.lockTaskPolicyInfo) }
         } else {
             selectedDisplayPreference
                 .findPreference<ExternalDisplaySizePreference>(
@@ -204,6 +209,22 @@ open class SelectedDisplayPreferenceFragment(
                 setTitle(PrefInfo.DISPLAY_MIRRORING.titleResource)
                 key = PrefInfo.DISPLAY_MIRRORING.key
             }
+    }
+
+    private fun updateMirroringPreference(
+        preference: MirrorPreference,
+        isMirroring: Boolean,
+        lockTaskPolicyInfo: DisplayPreferenceViewModel.LockTaskPolicyInfo,
+    ) {
+        preference.isChecked = isMirroring
+        if (lockTaskPolicyInfo.lockTaskMode == LOCK_TASK_MODE_LOCKED) {
+            preference.setDisabledByAdmin(lockTaskPolicyInfo.enforcingAdmin)
+        } else {
+            preference.setDisabledByAdmin(null as EnforcingAdmin?)
+            // Reset the pref state when it was previously disabled by lock task policy
+            preference.setEnabled(true)
+            preference.setSummary("")
+        }
     }
 
     private fun includeDefaultDisplayInTopologyPreference(): SwitchPreferenceCompat {

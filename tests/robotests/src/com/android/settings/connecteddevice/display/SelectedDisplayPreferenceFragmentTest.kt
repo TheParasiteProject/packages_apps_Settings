@@ -17,7 +17,9 @@
 
 package com.android.settings.connecteddevice.display
 
+import android.app.ActivityManager.LOCK_TASK_MODE_LOCKED
 import android.app.Application
+import android.app.TaskStackListener
 import android.content.Context
 import android.provider.Settings
 import android.view.Display.DEFAULT_DISPLAY
@@ -39,6 +41,8 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.ArgumentCaptor
+import org.mockito.Captor
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
 import org.mockito.kotlin.doReturn
@@ -52,6 +56,8 @@ class SelectedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
     private lateinit var application: Application
     private lateinit var viewModel: DisplayPreferenceViewModel
     private lateinit var fragment: TestableSelectedDisplayPreferenceFragment
+
+    @Captor private lateinit var taskStackListenerCaptor: ArgumentCaptor<TaskStackListener>
 
     @Before
     override fun setUp() {
@@ -69,6 +75,7 @@ class SelectedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
         setMirroringMode(false)
 
         fragment = initFragment()
+        verify(mActivityTaskManager).registerTaskStackListener(taskStackListenerCaptor.capture())
     }
 
     @Test
@@ -129,8 +136,26 @@ class SelectedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
     }
 
     @Test
+    fun testDefaultDisplaySelected_mirroringPreference_updateIsCheckedState() {
+        includeBuiltinDisplay()
+        viewModel.updateEnabledDisplays()
+        viewModel.updateSelectedDisplay(DEFAULT_DISPLAY)
+        setMirroringMode(true)
+
+        val category = mPreferenceScreen.getPreference(0) as PreferenceCategory
+        var preference = category.findPreference<MirrorPreference>(PrefInfo.DISPLAY_MIRRORING.key)!!
+        assertTrue(preference.isEnabled)
+        assertTrue(preference.isChecked)
+
+        setMirroringMode(false)
+        preference = category.findPreference(PrefInfo.DISPLAY_MIRRORING.key)!!
+        assertTrue(preference.isEnabled)
+        assertFalse(preference.isChecked)
+    }
+
+    @Test
     fun testDefaultDisplaySelected_notProjectedMode_hideIncludeDefaultDisplayInTopology() {
-        doReturn(false).`when`<ConnectedDisplayInjector?>(mMockedInjector).isProjectedModeEnabled()
+        doReturn(false).`when`(mMockedInjector).isProjectedModeEnabled()
         includeBuiltinDisplay()
         viewModel.updateEnabledDisplays()
         viewModel.updateSelectedDisplay(DEFAULT_DISPLAY)
@@ -146,6 +171,32 @@ class SelectedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
         viewModel.updateEnabledDisplays()
         viewModel.updateSelectedDisplay(DEFAULT_DISPLAY)
         setMirroringMode(true)
+
+        val category = mPreferenceScreen.getPreference(0) as PreferenceCategory
+        assertVisible(category, PrefInfo.INCLUDE_DEFAULT_DISPLAY.key, false)
+    }
+
+    @Test
+    fun testDefaultDisplaySelected_lockTaskLocked_setMirroringToggleAsChecked() {
+        includeBuiltinDisplay()
+        viewModel.updateEnabledDisplays()
+        viewModel.updateSelectedDisplay(DEFAULT_DISPLAY)
+        taskStackListenerCaptor.value.onLockTaskModeChanged(LOCK_TASK_MODE_LOCKED)
+        mHandler.flush()
+
+        val category = mPreferenceScreen.getPreference(0) as PreferenceCategory
+        val preference = category.findPreference<MirrorPreference>(PrefInfo.DISPLAY_MIRRORING.key)!!
+        assertTrue(preference.isChecked)
+        assertFalse(preference.isEnabled)
+    }
+
+    @Test
+    fun testDefaultDisplaySelected_lockTaskLocked_hideIncludeDefaultDisplayInTopology() {
+        includeBuiltinDisplay()
+        viewModel.updateEnabledDisplays()
+        viewModel.updateSelectedDisplay(DEFAULT_DISPLAY)
+        taskStackListenerCaptor.value.onLockTaskModeChanged(LOCK_TASK_MODE_LOCKED)
+        mHandler.flush()
 
         val category = mPreferenceScreen.getPreference(0) as PreferenceCategory
         assertVisible(category, PrefInfo.INCLUDE_DEFAULT_DISPLAY.key, false)
@@ -180,6 +231,18 @@ class SelectedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
         assertVisible(category, PrefInfo.EXTERNAL_DISPLAY_DENSITY.key, false)
         assertVisible(category, PrefInfo.DISPLAY_RESOLUTION.key, true)
         assertVisible(category, PrefInfo.DISPLAY_ROTATION.key, true)
+    }
+
+    @Test
+    fun testExternalDisplaySelected_lockTaskLocked_hideIncludeDefaultDisplayInTopology() {
+        val display = mDisplays.first { it.id == EXTERNAL_DISPLAY_ID }
+
+        viewModel.updateSelectedDisplay(display.id)
+        taskStackListenerCaptor.value.onLockTaskModeChanged(LOCK_TASK_MODE_LOCKED)
+        mHandler.flush()
+
+        val category = mPreferenceScreen.getPreference(0) as PreferenceCategory
+        assertVisible(category, PrefInfo.EXTERNAL_DISPLAY_DENSITY.key, false)
     }
 
     @Test
