@@ -38,32 +38,35 @@ import org.mockito.kotlin.verify
 
 @RunWith(AndroidJUnit4::class)
 class MmsMessagePreferenceControllerTest {
-    private val mockTelephonyManager1: TelephonyManager = mock<TelephonyManager> {
-        on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn true
-    }
+    private val mockTelephonyManager1: TelephonyManager =
+        mock<TelephonyManager> { on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn true }
 
-    private val mockTelephonyManager2: TelephonyManager = mock<TelephonyManager> {
-        on { createForSubscriptionId(SUB_1_ID) } doReturn mockTelephonyManager1
-        on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn true
-    }
+    private val mockTelephonyManager2: TelephonyManager =
+        mock<TelephonyManager> {
+            on { createForSubscriptionId(SUB_1_ID) } doReturn mockTelephonyManager1
+            on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn true
+        }
 
-    private val mockTelephonyManager: TelephonyManager = mock<TelephonyManager> {
-        on { createForSubscriptionId(SUB_1_ID) } doReturn mockTelephonyManager1
-        on { createForSubscriptionId(SUB_2_ID) } doReturn mockTelephonyManager2
-        on { createForSubscriptionId(INVALID_SUBSCRIPTION_ID) } doReturn mock
-    }
+    private val mockTelephonyManager: TelephonyManager =
+        mock<TelephonyManager> {
+            on { createForSubscriptionId(SUB_1_ID) } doReturn mockTelephonyManager1
+            on { createForSubscriptionId(SUB_2_ID) } doReturn mockTelephonyManager2
+            on { createForSubscriptionId(INVALID_SUBSCRIPTION_ID) } doReturn mock
+        }
 
-    private var context: Context = spy(ApplicationProvider.getApplicationContext()) {
-        on { getSystemService(TelephonyManager::class.java) } doReturn mockTelephonyManager
-    }
+    private var context: Context =
+        spy(ApplicationProvider.getApplicationContext()) {
+            on { getSystemService(TelephonyManager::class.java) } doReturn mockTelephonyManager
+        }
 
     private var defaultDataSubId = SUB_1_ID
 
-    private val controller = MmsMessagePreferenceController(
-        context = context,
-        key = KEY,
-        getDefaultDataSubId = { defaultDataSubId },
-    )
+    private val controller =
+        MmsMessagePreferenceController(
+            context = context,
+            key = KEY,
+            getDefaultDataSubId = { defaultDataSubId },
+        )
 
     @Before
     fun setUp() {
@@ -91,9 +94,7 @@ class MmsMessagePreferenceControllerTest {
 
     @Test
     fun getAvailabilityStatus_mobileDataOn_unavailable() {
-        mockTelephonyManager2.stub {
-            on { isDataEnabled } doReturn true
-        }
+        mockTelephonyManager2.stub { on { isDataEnabled } doReturn true }
         controller.init(SUB_2_ID)
 
         val availabilityStatus = controller.getAvailabilityStatus()
@@ -103,9 +104,7 @@ class MmsMessagePreferenceControllerTest {
 
     @Test
     fun getAvailabilityStatus_meteredOff_unavailable() {
-        mockTelephonyManager2.stub {
-            on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn false
-        }
+        mockTelephonyManager2.stub { on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn false }
         controller.init(SUB_2_ID)
 
         val availabilityStatus = controller.getAvailabilityStatus()
@@ -148,9 +147,7 @@ class MmsMessagePreferenceControllerTest {
     @Test
     fun getAvailabilityStatus_notDefaultDataAndDataOnAndAutoDataSwitchOn_unavailable() {
         defaultDataSubId = SUB_1_ID
-        mockTelephonyManager1.stub {
-            on { isDataEnabled } doReturn true
-        }
+        mockTelephonyManager1.stub { on { isDataEnabled } doReturn true }
         mockTelephonyManager2.stub {
             on {
                 isMobileDataPolicyEnabled(TelephonyManager.MOBILE_DATA_POLICY_AUTO_DATA_SWITCH)
@@ -166,9 +163,7 @@ class MmsMessagePreferenceControllerTest {
     @Test
     fun getAvailabilityStatus_notDefaultDataAndDataOffAndAutoDataSwitchOn_available() {
         defaultDataSubId = SUB_1_ID
-        mockTelephonyManager1.stub {
-            on { isDataEnabled } doReturn false
-        }
+        mockTelephonyManager1.stub { on { isDataEnabled } doReturn false }
         mockTelephonyManager2.stub {
             on {
                 isMobileDataPolicyEnabled(TelephonyManager.MOBILE_DATA_POLICY_AUTO_DATA_SWITCH)
@@ -204,9 +199,7 @@ class MmsMessagePreferenceControllerTest {
 
     @Test
     fun searchIsAvailable_notDefaultDataAndDataOnAndAutoDataSwitchOn_unavailable() {
-        mockTelephonyManager1.stub {
-            on { isDataEnabled } doReturn true
-        }
+        mockTelephonyManager1.stub { on { isDataEnabled } doReturn true }
         mockTelephonyManager2.stub {
             on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn true
             on {
@@ -222,9 +215,7 @@ class MmsMessagePreferenceControllerTest {
 
     @Test
     fun searchIsAvailable_notDefaultDataAndDataOffAndAutoDataSwitchOn_available() {
-        mockTelephonyManager1.stub {
-            on { isDataEnabled } doReturn false
-        }
+        mockTelephonyManager1.stub { on { isDataEnabled } doReturn false }
         mockTelephonyManager2.stub {
             on { isApnMetered(ApnSetting.TYPE_MMS) } doReturn true
             on {
@@ -293,9 +284,11 @@ class MmsMessagePreferenceControllerTest {
 
         controller.setChecked(true)
 
-        verify(mockTelephonyManager2).setMobileDataPolicyEnabled(
-            TelephonyManager.MOBILE_DATA_POLICY_MMS_ALWAYS_ALLOWED, true
-        )
+        verify(mockTelephonyManager2)
+            .setMobileDataPolicyEnabled(
+                TelephonyManager.MOBILE_DATA_POLICY_MMS_ALWAYS_ALLOWED,
+                true,
+            )
     }
 
     @Test
@@ -304,9 +297,11 @@ class MmsMessagePreferenceControllerTest {
 
         controller.setChecked(false)
 
-        verify(mockTelephonyManager2).setMobileDataPolicyEnabled(
-            TelephonyManager.MOBILE_DATA_POLICY_MMS_ALWAYS_ALLOWED, false
-        )
+        verify(mockTelephonyManager2)
+            .setMobileDataPolicyEnabled(
+                TelephonyManager.MOBILE_DATA_POLICY_MMS_ALWAYS_ALLOWED,
+                false,
+            )
     }
 
     private companion object {

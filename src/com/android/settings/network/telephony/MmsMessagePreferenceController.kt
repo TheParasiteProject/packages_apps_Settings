@@ -27,8 +27,8 @@ import androidx.preference.PreferenceScreen
 import com.android.settings.R
 import com.android.settings.Settings.MobileNetworkActivity.EXTRA_MMS_MESSAGE
 import com.android.settings.core.TogglePreferenceController
-import com.android.settings.network.telephony.MobileNetworkSettingsSearchIndex.MobileNetworkSettingsSearchResult
 import com.android.settings.network.telephony.MobileNetworkSettingsSearchIndex.MobileNetworkSettingsSearchItem
+import com.android.settings.network.telephony.MobileNetworkSettingsSearchIndex.MobileNetworkSettingsSearchResult
 import com.android.settingslib.spa.framework.util.collectLatestWithLifecycle
 import kotlinx.coroutines.flow.combine
 
@@ -55,13 +55,15 @@ constructor(
     }
 
     override fun getAvailabilityStatus() =
-        if (getAvailabilityStatus(
+        if (
+            getAvailabilityStatus(
                 telephonyManager,
                 subId,
                 getDefaultDataSubId,
-                carrierConfigRepository
+                carrierConfigRepository,
             )
-        ) AVAILABLE
+        )
+            AVAILABLE
         else CONDITIONALLY_UNAVAILABLE
 
     override fun displayPreference(screen: PreferenceScreen) {
@@ -84,7 +86,8 @@ constructor(
 
     override fun isChecked(): Boolean =
         telephonyManager.isMobileDataPolicyEnabled(
-            TelephonyManager.MOBILE_DATA_POLICY_MMS_ALWAYS_ALLOWED)
+            TelephonyManager.MOBILE_DATA_POLICY_MMS_ALWAYS_ALLOWED
+        )
 
     override fun setChecked(isChecked: Boolean): Boolean {
         telephonyManager.setMobileDataPolicyEnabled(
@@ -106,7 +109,9 @@ constructor(
                 telephonyManager.isApnMetered(ApnSetting.TYPE_MMS) &&
                 !isFallbackDataEnabled(telephonyManager, subId, getDefaultDataSubId()) &&
                 carrierConfigRepository.getBoolean(
-                    subId, CarrierConfigManager.KEY_MMS_MMS_ENABLED_BOOL)
+                    subId,
+                    CarrierConfigManager.KEY_MMS_MMS_ENABLED_BOOL,
+                )
         }
 
         private fun isFallbackDataEnabled(
@@ -117,7 +122,8 @@ constructor(
             return defaultDataSubId != subId &&
                 telephonyManager.createForSubscriptionId(defaultDataSubId).isDataEnabled &&
                 telephonyManager.isMobileDataPolicyEnabled(
-                    TelephonyManager.MOBILE_DATA_POLICY_AUTO_DATA_SWITCH)
+                    TelephonyManager.MOBILE_DATA_POLICY_AUTO_DATA_SWITCH
+                )
         }
 
         class MmsMessageSearchItem(
@@ -136,7 +142,7 @@ constructor(
                     telephonyManager.createForSubscriptionId(subId),
                     subId,
                     getDefaultDataSubId,
-                    carrierConfigRepository
+                    carrierConfigRepository,
                 )
 
             override fun getSearchResult(subId: Int): MobileNetworkSettingsSearchResult? {
