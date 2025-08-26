@@ -85,6 +85,7 @@ open class MobileNetworkScreen(override val arguments: Bundle) :
             if (Flags.deeplinkNetworkAndInternet25q4()) {
                 +UntitledPreferenceCategoryMetadata("enabled_state_container") += {
                     +(DataUsageListScreen.KEY args arguments)
+                    +MobileNetworkImeiPreference(context, subId)
                 }
             }
         }
