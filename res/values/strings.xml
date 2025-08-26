@@ -3370,11 +3370,11 @@
     <!-- Dark UI screen footer summary text shown to indicate Modes may turn on/off Dark theme automatically according to their triggers. [CHAR LIMIT=NONE] -->
     <string name="dark_ui_modes_footer_summary">
         {count, plural, offset:2
-        =0    {Modes can also turn on Dark theme.}
-        =1    {{mode_1} also turns on Dark theme.}
-        =2    {{mode_1} and {mode_2} also turn on Dark theme.}
-        =3    {{mode_1}, {mode_2}, and {mode_3} also turn on Dark theme.}
-        other {{mode_1}, {mode_2}, and # more also turn on Dark theme.}
+        =0    {Modes can also turn on dark theme}
+        =1    {{mode_1} also turns on dark theme}
+        =2    {{mode_1} and {mode_2} also turn on dark theme}
+        =3    {{mode_1}, {mode_2}, and {mode_3} also turn on dark theme}
+        other {{mode_1}, {mode_2}, and # more also turn on dark theme}
         }
     </string>
     <!-- Dark UI screen footer action text linking to Modes settings. [CHAR LIMIT=NONE] -->
@@ -6006,13 +6006,13 @@
     <!-- Title in the search result for standard dark theme mode. -->
     <string name="accessibility_standard_dark_theme_title_in_search">Standard Dark theme</string>
     <!-- Summary for the accessibility preference for applying the original dark theme. [CHAR LIMIT=100] -->
-    <string name="accessibility_standard_dark_theme_summary">Applies Dark theme across your device and supported apps</string>
+    <string name="accessibility_standard_dark_theme_summary">Turns on dark theme for your device and apps that support dark theme</string>
     <!-- Title for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=35] -->
     <string name="accessibility_expanded_dark_theme_title">Expanded</string>
     <!-- Title in the search result for expanded dark theme mode. -->
     <string name="accessibility_expanded_dark_theme_title_in_search">Expanded Dark theme</string>
     <!-- Summary for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=100] -->
-    <string name="accessibility_expanded_dark_theme_summary">Automatically applies Dark theme to more apps for improved accessibility</string>
+    <string name="accessibility_expanded_dark_theme_summary">Automatically applies dark theme to most apps that don\'t support it. This can improve accessibility and readability, but may cause some apps to display incorrectly.</string>
     <!-- Search keywords for the Expanded dark theme settings. [CHAR_LIMIT=NONE] -->
     <string name="keywords_expanded_dark_theme">force invert, color inversion, contrast</string>
     <!-- Title for the accessibility preference for disabling animations. [CHAR LIMIT=35] -->
@@ -6226,11 +6226,7 @@
     <!-- Color correction footer link content description [CHAR LIMIT=NONE] -->
     <string name="accessibility_color_inversion_footer_learn_more_content_description">Learn more about color inversion</string>
     <!-- Dark theme footer link text [CHAR LIMIT=NONE] -->
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link">Learn more about Dark theme</string>
-    <!-- Footer Content for the expanded dark theme. [CHAR LIMIT=NONE] -->
-    <string name="accessibility_dark_theme_preference_footer_content">
-        Some apps may not support Dark theme with the expanded option. If you experience appearance issues, use the standard option.
-    </string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link">Learn more about dark theme</string>
     <!-- Title for captioning settings screen to control turning on/off the feature entirely [CHAR LIMIT=60] -->
     <string name="accessibility_captioning_primary_switch_title">Show captions</string>
     <!-- Summary for captioning settings screen to control turning on/off the feature entirely [CHAR LIMIT=NONE] -->
@@ -13937,7 +13933,7 @@
     <!-- General category name [CHAR LIMIT=none] -->
     <string name="category_name_general">General</string>
     <!-- Title for Dark theme main switch preferences. [CHAR LIMIT=50] -->
-    <string name="dark_theme_main_switch_title">Use Dark theme</string>
+    <string name="dark_theme_main_switch_title">Use dark theme</string>
     <!-- Title for bluetooth main switch. [CHAR LIMIT=50] -->
     <string name="bluetooth_main_switch_title">Use Bluetooth</string>
     <!-- Title for HDR brightness main switch. [CHAR LIMIT=50] -->
