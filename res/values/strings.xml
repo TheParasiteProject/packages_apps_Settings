@@ -5541,7 +5541,7 @@
     <!-- Title of a survey notification about dark theme. [CHAR LIMIT=50] -->
     <string name="dark_theme_survey_notification_title">Share your feedback</string>
     <!-- Summary for a survey notification about dark theme. [CHAR LIMIT=100] -->
-    <string name="dark_theme_survey_notification_summary">How satisfied are you with Dark theme?</string>
+    <string name="dark_theme_survey_notification_summary">How satisfied are you with dark theme?</string>
     <!-- Action for a survey notification about dark theme. [CHAR LIMIT=50] -->
     <string name="dark_theme_survey_notification_action">Take survey</string>
     <!-- Title of a survey notification about magnification. [CHAR LIMIT=50] -->
