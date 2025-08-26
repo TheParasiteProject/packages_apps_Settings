@@ -69,7 +69,14 @@ class TabbedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
 
         includeBuiltinDisplay()
 
-        viewModel = DisplayPreferenceViewModel(application, mMockedInjector)
+        viewModel =
+            DisplayPreferenceViewModel(
+                application,
+                mMockedInjector,
+                mActivityManager,
+                mActivityTaskManager,
+                mDevicePolicyManager,
+            )
         topologyView = FakeDisplayTopologyPreferenceView(mMockedInjector)
         initFragment()
 

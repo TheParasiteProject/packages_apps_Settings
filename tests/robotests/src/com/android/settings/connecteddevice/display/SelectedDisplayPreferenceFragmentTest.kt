@@ -58,7 +58,14 @@ class SelectedDisplayPreferenceFragmentTest : ExternalDisplayTestBase() {
         super.setUp()
         application = ApplicationProvider.getApplicationContext() as Application
 
-        viewModel = DisplayPreferenceViewModel(application, mMockedInjector)
+        viewModel =
+            DisplayPreferenceViewModel(
+                application,
+                mMockedInjector,
+                mActivityManager,
+                mActivityTaskManager,
+                mDevicePolicyManager,
+            )
         setMirroringMode(false)
 
         fragment = initFragment()
