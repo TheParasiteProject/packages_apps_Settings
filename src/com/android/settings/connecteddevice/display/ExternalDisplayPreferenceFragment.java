@@ -540,7 +540,8 @@ public class ExternalDisplayPreferenceFragment extends SettingsPreferenceFragmen
         addResolutionPreference(refresh, display, position);
         addRotationPreference(refresh, display, displayRotation, position);
         if (DesktopExperienceFlags.ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT.isTrue()
-                && DesktopExperienceFlags.ENABLE_UPDATED_DISPLAY_CONNECTION_DIALOG.isTrue()) {
+                && DesktopExperienceFlags.ENABLE_UPDATED_DISPLAY_CONNECTION_DIALOG.isTrue()
+                && mInjector.isProjectedModeEnabled()) {
             addConnectionPreference(refresh, display, position);
         }
         if (mInjector.getFlags().resolutionAndEnableConnectedDisplaySetting()) {
