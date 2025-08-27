@@ -126,7 +126,6 @@ class DarkModeSchedulePreference(
 
         lifecycleContext.notifyPreferenceChange(StartTimePreference.KEY)
         lifecycleContext.notifyPreferenceChange(EndTimePreference.KEY)
-        lifecycleContext.notifyPreferenceChange(DarkModePendingLocationFooterPreference.KEY)
         return true
     }
 
