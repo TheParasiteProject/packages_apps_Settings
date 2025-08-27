@@ -20,6 +20,8 @@ import static com.android.settings.core.BasePreferenceController.CONDITIONALLY_U
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
@@ -253,6 +255,31 @@ public final class Enable2gPreferenceControllerTest {
         mController.updateState((Preference) mPreference);
 
         assertThat(mPreference.getSummary().toString()).isEqualTo(simName);
+    }
+
+    @Test
+    public void updateState_preferenceEnable() {
+        when2gIsDisabledByAdmin(false);
+        mockAllowedNetworkTypes(TelephonyManager.NETWORK_MODE_LTE_GSM_WCDMA);
+
+        mController.updateState((Preference) mPreference);
+
+        assertTrue(mPreference.isEnabled());
+    }
+
+    @Test
+    public void updateState_preferenceDisable() {
+        when2gIsDisabledByAdmin(false);
+        mockAllowedNetworkTypes(TelephonyManager.NETWORK_MODE_GSM_ONLY);
+
+        mController.updateState((Preference) mPreference);
+
+        assertFalse(mPreference.isEnabled());
+    }
+
+    private void mockAllowedNetworkTypes(long allowedNetworkType) {
+        doReturn(allowedNetworkType).when(mTelephonyManager).getAllowedNetworkTypesForReason(
+                TelephonyManager.ALLOWED_NETWORK_TYPES_REASON_USER);
     }
 
     private void when2gIsEnabledForReasonEnable2g() {

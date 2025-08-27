@@ -18,6 +18,7 @@ package com.android.settings.network.telephony;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.UserManager;
+import android.telephony.RadioAccessFamily;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
@@ -25,11 +26,13 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.DefaultLifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
-import com.android.settings.network.CarrierConfigCache;
+import com.android.settings.network.AllowedNetworkTypesListener;
 import com.android.settings.network.SubscriptionUtil;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.RestrictedSwitchPreference;
@@ -51,7 +54,8 @@ import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
  *     requested preference state. </li>
  * </ul>
  */
-public class Enable2gPreferenceController extends TelephonyTogglePreferenceController {
+public class Enable2gPreferenceController extends TelephonyTogglePreferenceController
+        implements DefaultLifecycleObserver {
 
     private static final String LOG_TAG = "Enable2gPreferenceController";
     private static final long BITMASK_2G = TelephonyManager.NETWORK_TYPE_BITMASK_GSM
@@ -62,12 +66,12 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
 
     private final MetricsFeatureProvider mMetricsFeatureProvider;
 
-    private CarrierConfigCache mCarrierConfigCache;
     private SubscriptionManager mSubscriptionManager;
     private TelephonyManager mTelephonyManager;
     private RestrictedSwitchPreference mRestrictedPreference;
     // This value will be set to true when used with the new Mobile Network Security page
     private boolean mShowSummaryAsSimName;
+    private AllowedNetworkTypesListener mAllowedNetworkTypesListener;
 
     /**
      * Class constructor of "Enable 2G" toggle.
@@ -77,7 +81,6 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
      */
     public Enable2gPreferenceController(Context context, String key) {
         super(context, key);
-        mCarrierConfigCache = CarrierConfigCache.getInstance(context);
         mMetricsFeatureProvider = FeatureFactory.getFeatureFactory().getMetricsFeatureProvider();
         mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
         mRestrictedPreference = null;
@@ -93,6 +96,15 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
         mSubId = subId;
         mTelephonyManager = mContext.getSystemService(TelephonyManager.class)
                 .createForSubscriptionId(mSubId);
+        if (mAllowedNetworkTypesListener == null) {
+            mAllowedNetworkTypesListener =
+                    new AllowedNetworkTypesListener(mContext.getMainExecutor());
+            mAllowedNetworkTypesListener.setAllowedNetworkTypesListener(() -> {
+                if (mRestrictedPreference != null) {
+                    updateState(mRestrictedPreference);
+                }
+            });
+        }
         return this;
     }
 
@@ -109,6 +121,20 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
     }
 
     @Override
+    public void onStart(@NonNull LifecycleOwner owner) {
+        if (mAllowedNetworkTypesListener != null) {
+            mAllowedNetworkTypesListener.register(mContext, mSubId);
+        }
+    }
+
+    @Override
+    public void onStop(@NonNull LifecycleOwner owner) {
+        if (mAllowedNetworkTypesListener != null) {
+            mAllowedNetworkTypesListener.unregister(mContext, mSubId);
+        }
+    }
+
+    @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
         mRestrictedPreference = screen.findPreference(getPreferenceKey());
@@ -120,7 +146,11 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
     @Override
     public void updateState(Preference preference) {
         super.updateState(preference);
+        if (preference == null) {
+            return;
+        }
 
+        preference.setEnabled(!is2gPreferredNetworkMode());
         if (mShowSummaryAsSimName) {
             preference.setSummary(getSimCardName());
             return;
@@ -131,7 +161,7 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
             return;
         }
 
-        if (preference == null || !SubscriptionManager.isUsableSubscriptionId(mSubId)) {
+        if (!SubscriptionManager.isUsableSubscriptionId(mSubId)) {
             return;
         }
         preference.setSummary(mContext.getString(R.string.enable_2g_summary));
@@ -249,5 +279,13 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
 
     private boolean isDisabledByAdmin() {
         return (mRestrictedPreference != null && mRestrictedPreference.isDisabledByAdmin());
+    }
+
+    private boolean is2gPreferredNetworkMode() {
+        int networkMode = RadioAccessFamily.getNetworkTypeFromRaf(
+                (int) mTelephonyManager.getAllowedNetworkTypesForReason(
+                        TelephonyManager.ALLOWED_NETWORK_TYPES_REASON_USER));
+        Log.i(LOG_TAG, "PreferredNetworkMode: " + networkMode);
+        return TelephonyManager.NETWORK_MODE_GSM_ONLY == networkMode;
     }
 }
