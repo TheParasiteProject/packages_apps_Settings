@@ -773,6 +773,24 @@ public class ExternalDisplayPreferenceFragmentTest extends ExternalDisplayTestBa
 
     @Test
     @UiThreadTest
+    @EnableFlags({
+            FLAG_ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT,
+            FLAG_ENABLE_UPDATED_DISPLAY_CONNECTION_DIALOG,
+    })
+    public void testAddConnectionPreference_notProjectedMode_notAdding() {
+        doReturn(false).when(mMockedInjector).isProjectedModeEnabled();
+        initFragment();
+        mHandler.flush();
+
+        var category = getExternalDisplayCategory(0);
+        var pref = category.findPreference(
+                PrefBasics.EXTERNAL_DISPLAY_CONNECTION.keyForNth(0));
+
+        assertThat(pref).isNull();
+    }
+
+    @Test
+    @UiThreadTest
     public void testLockTaskModeLocked_disableMirroringMode() {
         mFlags.setFlag(FLAG_DISPLAY_TOPOLOGY_PANE_IN_DISPLAY_LIST, true);
         ExternalDisplayPreferenceFragment fragment = initFragment();
