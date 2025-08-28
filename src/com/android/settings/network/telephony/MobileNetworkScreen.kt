@@ -83,8 +83,9 @@ open class MobileNetworkScreen(override val arguments: Bundle) :
         preferenceHierarchy(context) {
             if (Flags.deeplinkNetworkAndInternet25q4()) {
                 +EnabledStateUntitledCategory(subId) += {
-                    +(DataUsageListScreen.KEY args arguments)
+                    +MobileNetworkSpnPreference(context, subId)
                     +MobileNetworkImeiPreference(context, subId)
+                    +(DataUsageListScreen.KEY args arguments)
                 }
             }
         }
