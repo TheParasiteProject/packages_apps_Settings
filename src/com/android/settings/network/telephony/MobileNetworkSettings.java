@@ -263,9 +263,9 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
         use(DisableSimFooterPreferenceController.class).init(mSubId);
         use(NrDisabledInDsdsFooterPreferenceController.class).init(mSubId);
 
-        use(MobileNetworkSpnPreferenceController.class).init(this, mSubId);
         use(MobileNetworkPhoneNumberPreferenceController.class).init(mSubId);
         if (!isCatalystEnabled()) {
+            use(MobileNetworkSpnPreferenceController.class).init(this, mSubId);
             use(MobileNetworkImeiPreferenceController.class).init(this, mSubId);
         }
 
