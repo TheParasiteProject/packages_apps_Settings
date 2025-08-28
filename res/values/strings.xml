@@ -11899,7 +11899,10 @@
     <string name="double_tap_power_wallet_footer_title">Your current default wallet app does not support this gesture</string>
     <!-- Summary for footer explaining why wallet is not available for the double tap power gesture. [CHAR LIMIT=100]-->
     <string name="double_tap_power_wallet_footer_learn_more_text">Change default wallet</string>
-
+    <!-- Search keyword for double tap power button gesture [CHAR LIMIT=NONE] -->
+    <string name="keywords_double_tap_power">gestures, shortcut</string>
+    <!-- Search keyword for double tap power button gesture wallet launch action [CHAR LIMIT=NONE] -->
+    <string name="keywords_double_tap_power_wallet_action">pay, payments</string>
 
     <!-- Title text for double twist for camera mode [CHAR LIMIT=60]-->
     <string name="double_twist_for_camera_mode_title">Flip camera for selfie</string>
