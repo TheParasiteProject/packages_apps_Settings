@@ -123,9 +123,6 @@ class DarkModeSchedulePreference(
                 uiModeManager.nightModeCustomType = UiModeManager.MODE_NIGHT_CUSTOM_TYPE_BEDTIME
             }
         }
-
-        lifecycleContext.notifyPreferenceChange(StartTimePreference.KEY)
-        lifecycleContext.notifyPreferenceChange(EndTimePreference.KEY)
         return true
     }
 
