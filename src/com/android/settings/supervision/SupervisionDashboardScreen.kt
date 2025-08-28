@@ -48,22 +48,21 @@ open class SupervisionDashboardScreen : PreferenceScreenMixin, PreferenceLifecyc
     private var supervisionManager: SupervisionManager? = null
     private var lifeCycleContext: PreferenceLifecycleContext? = null
 
-    private val supervisionListener =
-        object : SupervisionManager.SupervisionListener() {
-            override fun onSupervisionEnabled(userId: Int) {
-                refreshPreferences()
-            }
-
-            override fun onSupervisionDisabled(userId: Int) {
-                refreshPreferences()
-            }
-
-            private fun refreshPreferences() {
-                lifeCycleContext?.notifyPreferenceChange(KEY)
-                lifeCycleContext?.notifyPreferenceChange(SupervisionMainSwitchPreference.KEY)
-                lifeCycleContext?.notifyPreferenceChange(SupervisionPinManagementScreen.KEY)
-            }
+    private val supervisionListener = object : SupervisionManager.SupervisionListener() {
+        override fun onSupervisionEnabled(userId: Int) {
+            refreshPreferences()
         }
+
+        override fun onSupervisionDisabled(userId: Int) {
+            refreshPreferences()
+        }
+
+        private fun refreshPreferences() {
+            lifeCycleContext?.notifyPreferenceChange(KEY)
+            lifeCycleContext?.notifyPreferenceChange(SupervisionMainSwitchPreference.KEY)
+            lifeCycleContext?.notifyPreferenceChange(SupervisionPinManagementScreen.KEY)
+        }
+    }
 
     override fun onCreate(context: PreferenceLifecycleContext) {
         this.lifeCycleContext = context
@@ -111,7 +110,6 @@ open class SupervisionDashboardScreen : PreferenceScreenMixin, PreferenceLifecyc
             val supervisionClient = getSupervisionClient(context)
             +SupervisionMainSwitchPreference(context, supervisionClient) order -200
             +UntitledPreferenceCategoryMetadata(SUPERVISION_DYNAMIC_GROUP_1) order -100 += {
-                +SupervisionAppStoreFiltersScreen.KEY order 50
                 +SupervisionWebContentFiltersScreen.KEY order 100
             }
             +UntitledPreferenceCategoryMetadata("pin_management_group") order 100 += {
