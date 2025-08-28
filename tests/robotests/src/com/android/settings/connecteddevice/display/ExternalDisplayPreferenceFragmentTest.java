@@ -820,6 +820,48 @@ public class ExternalDisplayPreferenceFragmentTest extends ExternalDisplayTestBa
     }
 
     @Test
+    @UiThreadTest
+    @EnableFlags({
+            FLAG_ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT,
+            FLAG_ENABLE_UPDATED_DISPLAY_CONNECTION_DIALOG,
+    })
+    public void testLockTaskModeLocked_disableConnectionPreference() {
+        mFlags.setFlag(FLAG_DISPLAY_TOPOLOGY_PANE_IN_DISPLAY_LIST, true);
+        ExternalDisplayPreferenceFragment fragment = initFragment();
+        mHandler.flush();
+
+        fragment.mLockTaskModeChangedListener.onLockTaskModeChanged(LOCK_TASK_MODE_LOCKED);
+        mHandler.flush();
+        var category = getExternalDisplayCategory(0);
+        ListPreference pref = category.findPreference(
+                PrefBasics.EXTERNAL_DISPLAY_CONNECTION.keyForNth(0));
+
+        assertThat(pref.isEnabled()).isEqualTo(false);
+    }
+
+    @Test
+    @UiThreadTest
+    @EnableFlags({
+            FLAG_ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT,
+            FLAG_ENABLE_UPDATED_DISPLAY_CONNECTION_DIALOG,
+    })
+    public void testLockTaskModeNone_enableConnectionPreference() {
+        mFlags.setFlag(FLAG_DISPLAY_TOPOLOGY_PANE_IN_DISPLAY_LIST, true);
+        ExternalDisplayPreferenceFragment fragment = initFragment();
+        mHandler.flush();
+
+        fragment.mLockTaskModeChangedListener.onLockTaskModeChanged(LOCK_TASK_MODE_LOCKED);
+        mHandler.flush();
+        fragment.mLockTaskModeChangedListener.onLockTaskModeChanged(LOCK_TASK_MODE_NONE);
+        mHandler.flush();
+        var category = getExternalDisplayCategory(0);
+        ListPreference pref = category.findPreference(
+                PrefBasics.EXTERNAL_DISPLAY_CONNECTION.keyForNth(0));
+
+        assertThat(pref.isEnabled()).isEqualTo(true);
+    }
+
+    @Test
     public void testSearchIndexProvider_getXmlResourcesToIndex() {
         final Indexable.SearchIndexProvider provider =
                 ExternalDisplayPreferenceFragment.SEARCH_INDEX_DATA_PROVIDER;
