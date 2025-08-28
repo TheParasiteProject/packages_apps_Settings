@@ -5575,8 +5575,6 @@
     <string name="accessibility_send_feedback_title">Send feedback</string>
     <!-- Title for button preference to start the survey process for the accessibility [CHAR LIMIT=30] -->
     <string name="accessibility_send_survey_title">Take survey</string>
-    <!-- Title for button preference to start the disability support for the accessibility [CHAR LIMIT=30] -->
-    <string name="accessibility_disability_support_title">Contact Google Disability Support</string>
     <!-- Channel name for the accessibility survey notification. [CHAR LIMIT=50] -->
     <string name="accessibility_send_survey_notification_channel">Accessibility Survey</string>
     <!-- Title of a survey notification about dark theme. [CHAR LIMIT=50] -->
@@ -5914,8 +5912,6 @@
     <string name="accessibility_shortcut_edit_dialog_summary_software_floating"><annotation id="link">More options</annotation></string>
     <!-- Footer to show help link content description. [CHAR LIMIT=NONE] -->
     <string name="footer_learn_more_content_description">Learn more about <xliff:g id="service" example="Select to Speak">%1$s</xliff:g></string>
-    <!-- Link for accessibility disability support page. [CHAR LIMIT=NONE]-->
-    <string name="accessibility_disability_support_url" translatable="false">https://support.google.com/accessibility?p=android-A11Y_setting</string>
     <!-- Title for quick settings shortcut option in accessibility edit shortcut dialog. [CHAR LIMIT=NONE] -->
     <string name="accessibility_shortcut_edit_dialog_title_quick_settings">Quick Settings</string>
     <!-- Summary for quick settings shortcut option in accessibility edit shortcut dialog. [CHAR LIMIT=NONE] -->
