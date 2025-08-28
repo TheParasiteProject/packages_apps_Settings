@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Utiliser les nouveaux paramètres?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Si votre écran ne fonctionne pas comme vous le souhaitez, vous pouvez rétablir vos paramètres précédents"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Utilisez les paramètres"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"Écran : %1$s. Touchez deux fois l\'élément et maintenez le doigt dessus pour le faire glisser ou afficher les actions pour le déplacer."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"Déplacer vers le haut"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"Déplacer vers le bas"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"Déplacer vers la gauche"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"Déplacer vers la droite"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"miroir"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Activer l\'affichage sans fil"</string>
@@ -1689,8 +1684,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Commun"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Paramètres communs"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Mode Console"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Widgets sur l\'écran de verrouillage (version bêta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Quand l\'afficher automatiquement"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Jamais"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Pendant la recharge"</string>
@@ -2419,7 +2413,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Assistance Google (handicapés)"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Sondage sur l\'accessibilité"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Envoyer vos commentaires"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Quel est votre degré de satisfaction à l\'égard du thème Sombre?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Répondre au sondage"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Envoyer vos commentaires"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Quel est votre degré de satisfaction à l\'égard de l\'agrandissement?"</string>
@@ -3976,8 +3971,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Affichez tout le contenu des notif. professionn."</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Masquez le contenu professionnel sensible"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Lorsque votre appareil est verrouillé, comment voulez-vous que les notifications de profil s\'affichent?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Afficher sur l\'écran de verrouillage"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Éléments à afficher sur l\'écran de verrouillage"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Afficher les notifications consultées"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Afficher les icônes de notifications consultées"</string>
@@ -4080,8 +4074,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Organisateur de notifications"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Groupez et désactivez le son des notifications ayant la priorité la plus basse"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Gérer les applis pour l\'organisateur de notifications"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Toujours développer les groupes de notifications"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Appliquer ce paramètre aux applis du profil professionnel"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Services d\'assistance pour la réalité virtuelle"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Aucune demande d\'exécution en tant que services d\'assistance pour la réalité virtuelle n\'a été envoyée pour les applis installées."</string>
@@ -5958,12 +5951,9 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Une erreur s\'est produite lors de la tentative de suppression du NIP."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animation <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Impossible d\'activer les contrôles"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Un problème est survenu"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Réessayer plus tard"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Retour"</string>
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"La Vérification d\'identité est offerte sur plus d\'applis"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Vous pouvez sécuriser votre protection de l\'identité sur n\'importe quelle appli qui propose le Déverrouillage par empreinte digitale ou par reconnaissance faciale pour vous identifier"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Afficher les détails"</string>

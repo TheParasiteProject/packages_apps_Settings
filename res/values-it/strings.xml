@@ -336,7 +336,7 @@
     <string name="zone_time_type_dst" msgid="9189689342265305808">"Ora legale"</string>
     <string name="zone_time_type_standard" msgid="6865420715430680352">"Ora solare"</string>
     <string name="zone_menu_by_region" msgid="2963565278710225652">"Selezione per regione"</string>
-    <string name="zone_menu_by_offset" msgid="543648951618438204">"Seleziona per differenza con fuso orario GMT"</string>
+    <string name="zone_menu_by_offset" msgid="543648951618438204">"Seleziona per differenza GMT"</string>
     <string name="time_feedback_category_title" msgid="5942621686512255208">"Feedback"</string>
     <string name="keywords_time_feedback_category" msgid="4553921538559830393">"feedback, bug, orario, area, fuso orario"</string>
     <string name="time_feedback_title" msgid="7720948068042783614">"Invia feedback sull\'orario"</string>
@@ -776,7 +776,7 @@
     <string name="lock_settings_picker_title" msgid="9219376327364915334">"Scegli blocco schermo"</string>
     <string name="lock_settings_picker_new_lock_title" msgid="3113042086804290919">"Scegli un blocco schermo"</string>
     <string name="lock_settings_picker_update_lock_title" msgid="536853138943415927">"Scegli un nuovo blocco schermo"</string>
-    <string name="lock_settings_picker_new_profile_lock_title" msgid="2270462215256413800">"Scegli un blocco per le app di lavoro"</string>
+    <string name="lock_settings_picker_new_profile_lock_title" msgid="2270462215256413800">"Scegli blocco per app di lavoro"</string>
     <string name="lock_settings_picker_update_profile_lock_title" msgid="5929068163516308927">"Scegli nuovo blocco per profilo lavoro"</string>
     <string name="lock_settings_picker_biometrics_added_security_message" msgid="1105247657304421299">"Per maggiore sicurezza, imposta un blocco schermo alternativo."</string>
     <string name="lock_settings_picker_biometric_message" msgid="2609666443527262781">"Scegli il metodo di blocco schermo alternativo"</string>
@@ -2418,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Contatta il team di assistenza per l\'accessibilità di Google"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Sondaggio sull\'accessibilità"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Condividi il tuo feedback"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Qual è il tuo livello di soddisfazione in merito al tema scuro?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Partecipa al sondaggio"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Condividi il tuo feedback"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Qual è il tuo livello di soddisfazione in merito all\'ingrandimento?"</string>
@@ -2486,15 +2487,15 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"Ingrandisci con scorciatoia"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"Ingrandisci con scorciatoia e triplo tocco"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"Informazioni su <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
-    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Dimensioni di visualizzazione e testo"</string>
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Dimensioni di visualizzazione/testo"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Dimensioni carattere, dimensioni di visualizzazione, testo in grassetto, testo a contrasto"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Cambia la modalità di visualizzazione del testo"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Oggetto: design mongolfiera"</string>
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"Da: Paolo"</string>
     <string name="accessibility_text_reading_preview_mail_content" msgid="8078152365771951802">"Buongiorno.\n\nVolevo solo controllare come stanno andando i progetti. Saranno pronti prima che inizi la realizzazione dei nuovi fumetti?"</string>
     <string name="accessibility_text_reading_reset_button_title" msgid="5960753279788187669">"Ripristina impostazioni"</string>
-    <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"Le impostazioni relative a dimensioni di visualiz. e testo sono state ripristinate"</string>
-    <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"Vuoi ripristinare le dimensioni di visualizzazione e testo?"</string>
+    <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"Le impostazioni di dimensioni di visualiz. e testo sono state ripristinate"</string>
+    <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"Ripristinare le dimensioni di visualizzazione e testo?"</string>
     <string name="accessibility_text_reading_confirm_dialog_reset_button" msgid="8215800137850243736">"Ripristina"</string>
     <string name="accessibility_text_reading_conversation_message_1" msgid="7883952203831957831">"Hai programmi per il fine settimana?"</string>
     <string name="accessibility_text_reading_conversation_message_2" msgid="8112160435318635856">"Vado al mare. Vuoi venire?"</string>
@@ -2537,7 +2538,7 @@
     <string name="accessibility_shortcut_edit_dialog_title_software_gesture" msgid="8078659880723370597">"Scorri verso l\'alto con due dita"</string>
     <string name="accessibility_shortcut_edit_dialog_title_software_gesture_talkback" msgid="7422753388389160524">"Scorri verso l\'alto con tre dita"</string>
     <string name="accessibility_shortcut_edit_dialog_title_software" msgid="6505512764022389951">"Pulsante Accessibilità"</string>
-    <string name="accessibility_shortcut_edit_dialog_summary_floating_button" msgid="6266489864614886247">"Tocca il pulsante mobile"</string>
+    <string name="accessibility_shortcut_edit_dialog_summary_floating_button" msgid="6266489864614886247">"Tocca il pulsante mobile."</string>
     <string name="accessibility_shortcut_edit_dialog_title_software_by_gesture" msgid="4775049370625630546">"Gesto di accessibilità"</string>
     <string name="accessibility_shortcut_edit_dialog_summary_software" msgid="8315934725362849788">"Tocca il pulsante Accessibilità <xliff:g id="ACCESSIBILITY_ICON">%s</xliff:g> nella parte inferiore dello schermo. Per spostarti tra le funzionalità, tocca e tieni premuto il pulsante Accessibilità."</string>
     <string name="accessibility_shortcut_edit_dialog_summary_gesture" msgid="2081123009255579884">"{count,plural, =1{Scorri verso l\'alto dalla parte inferiore dello schermo. Per spostarti tra le funzionalità, scorri verso l\'alto e tieni premuto.}other{Scorri verso l\'alto con # dita dalla parte inferiore dello schermo. Per spostarti tra le funzionalità, scorri verso l\'alto con # dita e tieni premuto.}}"</string>
@@ -2549,7 +2550,7 @@
     <string name="accessibility_feature_shortcut_setting_summary_quick_settings" msgid="7006526933552889373">"Impostazioni rapide"</string>
     <string name="accessibility_shortcut_edit_dialog_title_hardware" msgid="844089763968552142">"Tasti del volume"</string>
     <string name="accessibility_shortcut_hardware_keyword" msgid="2483152542320987022">"tasti del volume"</string>
-    <string name="accessibility_shortcut_edit_dialog_summary_hardware" msgid="2503134386397991634">"Tieni premuti entrambi i tasti del volume"</string>
+    <string name="accessibility_shortcut_edit_dialog_summary_hardware" msgid="2503134386397991634">"Tieni premuti entrambi i tasti del volume."</string>
     <string name="accessibility_shortcut_edit_screen_title_two_finger_double_tap" msgid="8952595692906527694">"Tocca due volte con %1$d dita"</string>
     <string name="accessibility_shortcut_edit_screen_summary_two_finger_double_tap" msgid="385404127425496362">"Tocca rapidamente lo schermo due volte con %1$d dita"</string>
     <string name="accessibility_shortcut_edit_screen_title_triple_tap" msgid="3314488747597058942">"Tocca tre volte"</string>
@@ -2628,7 +2629,7 @@
     <string name="accessibility_display_inversion_preference_intro_text" msgid="1159663288481145318">"La funzionalità di inversione dei colori rende scure le schermate chiare e chiare le schermate scure."</string>
     <string name="accessibility_display_inversion_preference_subtitle" msgid="4494767676482389509">"&lt;b&gt;Ricorda&lt;/b&gt;&lt;br/&gt; &lt;ol&gt; &lt;li&gt; I colori cambieranno nei contenuti multimediali e nelle immagini&lt;/li&gt; &lt;li&gt; L\'inversione dei colori funziona in tutte le app&lt;/li&gt; &lt;li&gt; Per visualizzare uno sfondo scuro, è possibile usare in alternativa il tema scuro&lt;/li&gt; &lt;/ol&gt;"</string>
     <string name="accessibility_action_label_panel_slice" msgid="1313725957071602932">"inserire impostazioni"</string>
-    <string name="accessibility_autoclick_preference_title" msgid="6755104969672994014">"Clic automatico (tempo di interazione)"</string>
+    <string name="accessibility_autoclick_preference_title" msgid="6755104969672994014">"Clic automatico (dwell time)"</string>
     <string name="accessibility_autoclick_about_title" msgid="152923024405552594">"Info su Clic aut. (tempo interaz.)"</string>
     <string name="accessibility_autoclick_footer_learn_more_content_description" msgid="7056189627042350691">"Scopri di più sul clic automatico (tempo di interazione)"</string>
     <string name="accessibility_autoclick_intro_text" msgid="8959680635470639347">"Puoi impostare un mouse collegato affinché faccia clic automaticamente quando il cursore rimane fermo per un determinato periodo di tempo"</string>
@@ -3460,7 +3461,7 @@
     <string name="user_enable_calling_sms" msgid="8546430559552381324">"Attiva chiamate e SMS"</string>
     <string name="user_grant_admin" msgid="5942118263054572074">"Imposta questo utente come amministratore"</string>
     <string name="user_remove_user" msgid="8468203789739693845">"Elimina utente"</string>
-    <string name="user_enable_calling_and_sms_confirm_title" msgid="4041510268838725520">"Vuoi attivare chiamate e SMS?"</string>
+    <string name="user_enable_calling_and_sms_confirm_title" msgid="4041510268838725520">"Attivare chiamate e SMS?"</string>
     <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"La cronologia chiamate e SMS verrà condivisa con questo utente."</string>
     <string name="user_revoke_admin_confirm_title" msgid="3057842401861731863">"Vuoi rimuovere i privilegi amministrativi?"</string>
     <string name="user_revoke_admin_confirm_message" msgid="9207187319308572958">"Se rimuovi i privilegi amministrativi per questo utente, tu o un altro amministratore potrete concederglieli di nuovo in un secondo momento."</string>
@@ -3871,7 +3872,7 @@
     <string name="work_notification_ringtone_title" msgid="2955312017013255515">"Suono notifiche di lavoro predefinito"</string>
     <string name="work_alarm_ringtone_title" msgid="3369293796769537392">"Suoneria sveglia di lavoro predefinita"</string>
     <string name="work_sound_same_as_personal" msgid="1836913235401642334">"Uguale al profilo personale"</string>
-    <string name="work_sync_dialog_title" msgid="7810248132303515469">"Vuoi usare i suoni del profilo personale?"</string>
+    <string name="work_sync_dialog_title" msgid="7810248132303515469">"Usare i suoni del profilo personale?"</string>
     <string name="work_sync_dialog_yes" msgid="5785488304957707534">"Conferma"</string>
     <string name="work_sync_dialog_message" msgid="5066178064994040223">"Per il tuo profilo di lavoro verranno usati gli stessi suoni usati per il tuo profilo personale"</string>
     <string name="configure_notification_settings" msgid="1492820231694314376">"Notifiche"</string>
@@ -4022,7 +4023,7 @@
     <string name="notification_channel_summary_min" msgid="8823399508450176842">"Comprimi le notifiche su una sola riga nell\'area a discesa"</string>
     <string name="notification_channel_summary_low" msgid="5549662596677692000">"Nessun suono o vibrazione"</string>
     <string name="notification_conversation_summary_low" msgid="6352818857388412326">"Nessun suono o vibrazione e appare più in basso nella sezione delle conversazioni"</string>
-    <string name="notification_channel_summary_default" msgid="1168420867670390611">"Potrebbero essere attivati lo squillo o la vibrazione in base alle impostazioni del dispositivo"</string>
+    <string name="notification_channel_summary_default" msgid="1168420867670390611">"Il dispositivo potrebbe suonare o vibrare in base alle impostazioni"</string>
     <string name="notification_channel_summary_high" msgid="3411637309360617621">"Quando il dispositivo è sbloccato, mostra le notifiche come banner in cima allo schermo"</string>
     <string name="notification_switch_label" msgid="8029371325967501557">"Tutte le notifiche di \"<xliff:g id="APP_NAME">%1$s</xliff:g>\""</string>
     <string name="notification_app_switch_label" msgid="4422902423925084193">"Tutte le notifiche di <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -4094,11 +4095,11 @@
     <string name="picture_in_picture_app_detail_switch" msgid="8544190716075624017">"Consenti Picture in picture"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="2503211101305358849">"Consenti a questa app di creare una finestra Picture in picture quando l\'app è aperta o dopo l\'uscita (ad esempio, per continuare a guardare un video). Questa finestra viene visualizzata sopra le altre app in uso."</string>
     <string name="interact_across_profiles_title" msgid="7285906999927669971">"App personali e di lavoro collegate"</string>
-    <string name="interact_across_profiles_summary_allowed" msgid="1365881452153799092">"Collegate"</string>
-    <string name="interact_across_profiles_summary_not_allowed" msgid="5802674212788171790">"Non collegate"</string>
+    <string name="interact_across_profiles_summary_allowed" msgid="1365881452153799092">"Collegata"</string>
+    <string name="interact_across_profiles_summary_not_allowed" msgid="5802674212788171790">"Non collegata"</string>
     <string name="interact_across_profiles_empty_text" msgid="419061031064397168">"Nessuna app connessa"</string>
     <string name="interact_across_profiles_keywords" msgid="5996472773111665049">"più profili app collegata app lavoro e personale"</string>
-    <string name="interact_across_profiles_switch_enabled" msgid="7294719120282287495">"Collegate"</string>
+    <string name="interact_across_profiles_switch_enabled" msgid="7294719120282287495">"Collegata"</string>
     <string name="interact_across_profiles_switch_disabled" msgid="4312196170211463988">"Collega queste app"</string>
     <string name="interact_across_profiles_summary_1" msgid="6093976896137600231">"Le app collegate condividono le autorizzazioni e possono accedere reciprocamente ai dati."</string>
     <string name="interact_across_profiles_summary_2" msgid="505748305453633885">"Collega le app soltanto se hai la certezza che non condividono dati personali con l\'amministratore IT."</string>
@@ -5764,7 +5765,7 @@
     <string name="about_phone_device_name_warning" msgid="3243226572404472381">"Il nome del tuo dispositivo è visibile alle app installate. Potrebbe essere visibile anche ad altre persone quando ti connetti a dispositivi Bluetooth, a una rete Wi-Fi o configuri un hotspot Wi-Fi."</string>
     <string name="grammatical_gender_title" msgid="8584242850477270828">"Genere grammaticale"</string>
     <string name="grammatical_gender_dialog_title" msgid="8754048592099871587">"Seleziona genere grammaticale"</string>
-    <string name="content_protection_preference_title" msgid="5069260032659193074">"Scansione delle app ingannevoli"</string>
+    <string name="content_protection_preference_title" msgid="5069260032659193074">"Scansione app ingannevoli"</string>
     <string name="content_protection_preference_summary" msgid="2252393849408445391">"Controlla l\'attività delle app per verificare la presenza di phishing"</string>
     <string name="content_protection_preference_user_consent_switch_title" msgid="1797782616799594426">"Usa la scansione delle app ingannevoli"</string>
     <string name="content_protection_preference_user_consent_work_profile_switch_title" msgid="3004347470520916069">"Usa la scansione delle app ingannevoli per il lavoro"</string>

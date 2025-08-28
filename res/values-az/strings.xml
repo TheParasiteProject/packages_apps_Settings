@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Yuxarı köçürün"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Aşağı köçürün"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Silin"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Yuxarıya köçürün"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Regional tərcihlər"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Vahidlər və nömrə tərcihlərini ayarlayın"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Tətbiqlərə regional tərcihlərinizi bildirin ki, təcrübənizi fərdiləşdirə bilsinlər."</string>
@@ -1021,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Yeni ayarlardan istifadə edilsin?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Displeyiniz istədiyiniz kimi işləmirsə, əvvəlki ayarlara qayıda bilərsiniz"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Ayarlardan istifadə edin"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"Displey: %1$s. Sürüşdürmək və ya köçürüləcək əməliyyatlara baxmaq üçün iki dəfə toxunun və saxlayın."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"Yuxarı köçürün"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"Aşağı köçürün"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"Sola köçürün"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"Sağa köçürün"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"güzgü"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Naqilsiz displeyi aktivləşdirin"</string>
@@ -2419,7 +2413,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google Disability Dəstək ilə əlaqə saxlayın"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Xüsusi imkanlar sorğusu"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Rəy bildirin"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Tünd temadan nə dərəcədə razısınız?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Sorğuda iştirak edin"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Rəy bildirin"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Böyütmədən nə dərəcədə razısınız?"</string>
@@ -4079,8 +4074,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Bildiriş düzənləyicisi"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Daha aşağı prioritetli bildirişləri qruplaşdırın və susdurun"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Bildiriş düzənləyicisi üçün tətbiqləri idarə edin"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Paketləri həmişə genişləndirin"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"İş profili tətbiqlərinə tətbiq edin"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR köməkçi xidmətləri"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Heç bir tətbiq VR köməkçi xidmətləri kimi çalışma sorğusu göndərməyib."</string>
@@ -5957,12 +5951,9 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"PIN-i silərkən xəta oldu."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> animasiyası"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Nizamlayıcıları aktivləşdirmək mümkün deyil"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Xəta oldu"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Sonra cəhd edin"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Geri qayıdın"</string>
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"Kimlik yoxlanılması daha çox tətbiqdə əlçatandır"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Barmaq izi və ya Üz ilə Kiliddən Açma funksiyası təklif edən hər hansı tətbiqdə kimlik qorumasını təmin edə bilərsiniz"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Təfərrüatlara baxın"</string>

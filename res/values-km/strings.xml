@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"ផ្លាស់ទី​ឡើង​លើ"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"ផ្លាស់ទី​ចុះ​ក្រោម"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"ដកចេញ"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"ផ្លាស់ទីទៅខាង​លើបំផុត"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"ចំណូលចិត្តតាមតំបន់"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"កំណត់​ចំណូលចិត្តលេខ និងខ្នាត"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"អនុញ្ញាតឱ្យ​កម្មវិធីដឹងពី​ចំណូលចិត្តតាមតំបន់​របស់អ្នក ដើម្បីឱ្យកម្មវិធីទាំងនោះ​អាចកំណត់​បទពិសោធន៍ប្រើប្រាស់របស់អ្នក​ឱ្យមានលក្ខណៈផ្ទាល់ខ្លួន។"</string>
@@ -777,7 +776,7 @@
     <string name="lock_settings_picker_title" msgid="9219376327364915334">"ជ្រើស​រើសការ​ចាក់សោ​អេក្រង់"</string>
     <string name="lock_settings_picker_new_lock_title" msgid="3113042086804290919">"ជ្រើសរើសការចាក់សោអេក្រង់"</string>
     <string name="lock_settings_picker_update_lock_title" msgid="536853138943415927">"ជ្រើសរើសការចាក់សោអេក្រង់ថ្មី"</string>
-    <string name="lock_settings_picker_new_profile_lock_title" msgid="2270462215256413800">"ជ្រើសរើសការចាក់សោសម្រាប់កម្មវិធីការងារ"</string>
+    <string name="lock_settings_picker_new_profile_lock_title" msgid="2270462215256413800">"រើសសោសម្រាប់កម្មវិធីការងារ"</string>
     <string name="lock_settings_picker_update_profile_lock_title" msgid="5929068163516308927">"ជ្រើសរើសការចាក់សោការងារថ្មី"</string>
     <string name="lock_settings_picker_biometrics_added_security_message" msgid="1105247657304421299">"ដើម្បី​ទទួលបាន​សុវត្ថិភាព​បន្ថែម សូម​កំណត់​ការចាក់​សោអេក្រង់​បម្រុងទុក"</string>
     <string name="lock_settings_picker_biometric_message" msgid="2609666443527262781">"ជ្រើសរើស​វិធីចាក់សោ​អេក្រង់បម្រុង​របស់អ្នក"</string>
@@ -1021,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"ប្រើការកំណត់ថ្មីៗឬ?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"ប្រសិនបើផ្ទាំងអេក្រង់របស់អ្នកមិនដំណើរការដូចដែលអ្នកចង់បានទេ អ្នកអាចត្រឡប់ទៅការកំណត់មុនរបស់អ្នកបាន"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"ប្រើការកំណត់"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"ផ្ទាំងអេក្រង់៖ %1$s។ ចុចពីរដង ហើយសង្កត់ឱ្យជាប់ ដើម្បីអូស ឬមើលសកម្មភាពដើម្បីផ្លាស់ទី។"</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"ផ្លាស់ទី​ឡើង​លើ"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"ផ្លាស់ទី​ចុះ​ក្រោម"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"ផ្លាស់ទី​ទៅ​ឆ្វេង"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"ផ្លាស់ទីទៅ​ស្ដាំ"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"កញ្ចក់"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"បើក​ការ​បង្ហាញ​ឥត​ខ្សែ"</string>
@@ -2419,7 +2413,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"ទាក់ទងទៅផ្នែកជំនួយពិការភាព Google"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"ការស្ទង់មតិអំពីភាពងាយស្រួល"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"ចែករំលែកមតិកែលម្អរបស់អ្នក"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"តើអ្នកពេញចិត្តនឹងទម្រង់រចនាងងឹតកម្រិតណា?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"ចូលរួមស្ទង់មតិ"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"ចែករំលែកមតិកែលម្អរបស់អ្នក"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"តើអ្នកពេញចិត្តនឹងការពង្រីកកម្រិតណា?"</string>
@@ -5956,12 +5951,9 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"មានបញ្ហាកើតឡើង ពេលព្យាយាមលុបកូដ PIN។"</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"រូបមានចលនា <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"មិនអាចបើកការគ្រប់គ្រងបានទេ"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"មានអ្វីមួយខុសប្រក្រតី"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"ព្យាយាម​ម្ដងទៀត​នៅពេលក្រោយ"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"ថយ​ក្រោយ"</string>
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"អាចប្រើការពិនិត្យអត្តសញ្ញាណនៅលើកម្មវិធីច្រើនទៀត"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"អ្នកអាចរក្សាការការពារអត្តសញ្ញាណរបស់អ្នកឱ្យមានសុវត្ថិភាពនៅលើកម្មវិធីណាមួយដែលផ្ដល់ជូនការដោះ​សោ​ដោយស្កេន​មុខ ឬការដោះសោដោយស្កេនស្នាមម្រាមដៃ ដើម្បីកំណត់អត្តសញ្ញាណអ្នក"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"មើលព័ត៌មានលម្អិត"</string>

@@ -370,7 +370,7 @@
     <string name="safety_center_summary" msgid="3554867379951053869">"Uygulama güvenliği, cihaz kilidi, izinler"</string>
     <string name="security_settings_face_preference_summary" msgid="6675126437396914838">"Yüz eklendi"</string>
     <string name="security_settings_face_preference_summary_none" msgid="523320857738436024">"Kurulum gerekiyor"</string>
-    <string name="security_settings_face_preference_summary_none_new" msgid="1963253146734002815">"Yüz ekle"</string>
+    <string name="security_settings_face_preference_summary_none_new" msgid="1963253146734002815">"Yüz ekleyin"</string>
     <string name="security_settings_face_preference_title_new" msgid="7680231874730796331">"Yüz"</string>
     <string name="security_settings_face_profile_preference_title_new" msgid="685550153608106166">"İş için yüz"</string>
     <string name="private_space_face_unlock_title_new" msgid="2079622608951402509">"Özel alan için yüz"</string>
@@ -2418,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google Engelliler İçin Destek Ekibi\'ne ulaşın"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Erişilebilirlik Anketi"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Görüşlerinizi paylaşın"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Koyu temadan ne kadar memnunsunuz?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Ankete katıl"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Görüşlerinizi paylaşın"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Büyütme özelliğinden ne kadar memnunsunuz?"</string>
@@ -4079,8 +4080,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Bildirim düzenleyici"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Düşük öncelikli bildirimleri gruplandır ve sessize al"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Bildirim düzenleyici için uygulamaları yönetin"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Paketleri her zaman genişlet"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"İş profili uygulamalarına uygula"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR yardımcı hizmetleri"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Yüklü hiçbir uygulama VR yardımcı hizmetleri olarak çalışma isteğinde bulunmadı."</string>

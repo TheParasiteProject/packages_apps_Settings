@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Օգտագործե՞լ նոր կարգավորումները"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Եթե էկրանի նոր կարգավորումները ձեզ դուր չեն գալիս, կարող եք վերադառնալ նախորդներին"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Կիրառել կարգավորումները"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"Էկրան՝ %1$s։ Կրկնակի հպեք և պահեք՝ քաշելու կամ տեղափոխման գործողությունները դիտելու համար։"</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"Տեղափոխել վերև"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"Տեղափոխել ներքև"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"Տեղափոխել ձախ"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"Տեղափոխել աջ"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"հայելապատճենում"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Միացնել անլար էկրանը"</string>
@@ -2418,7 +2413,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Կապվել Google-ի՝ հատուկ կարիքներով անձանց աջակցման թիմի հետ"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Հարցում հասանելիության վերաբերյալ"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Հայտնեք ձեր կարծիքը"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Որքանո՞վ եք գոհ մուգ թեմայից։"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Մասնակցել հարցմանը"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Հայտնեք ձեր կարծիքը"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Որքանո՞վ եք գոհ խոշորացումից։"</string>
@@ -4078,8 +4074,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Ծանուցումների կառավարիչ"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Խմբավորեք ոչ առաջնահերք ծանուցումներն ու անջատեք դրանց ձայնը"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Հավելվածների կառավարում ծանուցումների կառավարչի միջոցով"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Միշտ ծավալել խմբավորումները"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Կիրառել աշխատանքային պրոֆիլի հավելվածների նկատմամբ"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR օգնության ծառայություններ"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Տեղադրված հավելվածներից ոչ մեկը որպես VR օգնության ծառայություն գործարկվելու հարցում չի ուղարկել:"</string>
@@ -5956,12 +5951,9 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"PIN կոդը ջնջելիս սխալ առաջացավ։"</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> Անիմացիա"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Հնարավոր չէ միացնել ծնողական վերահսկողությունը"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Սխալ առաջացավ"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Փորձեք ավելի ուշ"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Վերադառնալ"</string>
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"Ինքնության ստուգումը հասանելի է ավելի շատ հավելվածներում"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Դուք կարող եք միացնել ինքնության ստուգումը բոլոր հավելվածներում, որոնք աջակցում են մատնահետքով կամ դեմքով ապակողպումը։"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Դիտել մանրամասները"</string>

@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Przenieś w górę"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Przenieś w dół"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Usuń"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Przenieś na początek"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Preferencje regionalne"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Ustaw preferencje dotyczące jednostek i liczb"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Powiadom aplikacje o swoich preferencjach regionalnych, aby mogły dokonać personalizacji."</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Wspólne"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Wspólne ustawienia"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Tryb centrali"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Widżety na ekranie blokady (beta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Kiedy automatycznie wyświetlać"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Nigdy"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Podczas ładowania"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Skontaktuj się z pomocą Google dla osób z niepełnosprawnością"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Ankieta dotycząca ułatwień dostępu"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Prześlij opinię"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Jak oceniasz ciemny motyw?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Wypełnij ankietę"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Prześlij opinię"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Jak oceniasz powiększenie?"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Pokazuj w całości powiadomienia związane z pracą"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Ukryj poufne informacje związane z pracą"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Jak mają pokazywać się powiadomienia z profilu, gdy urządzenie jest zablokowane?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Pokaż na ekranie blokady"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Co ma być wyświetlane na ekranie blokady"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Pokazuj wyświetlone powiadomienia"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Pokazuj ikony wyświetlonych powiadomień"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Narzędzie do porządkowania powiadomień"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Grupuj i wyciszaj powiadomienia o niższym priorytecie"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Zarządzaj aplikacjami w narzędziu do porządkowania powiadomień"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Zawsze rozwijaj pakiety"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Zastosuj w aplikacjach profilu służbowego"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Usługi pomocnicze rzeczywistości wirtualnej"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Żadne zainstalowane aplikacje nie prosiły o uruchomienie w trybie usług pomocniczych rzeczywistości wirtualnej."</string>

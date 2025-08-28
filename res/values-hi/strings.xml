@@ -189,7 +189,7 @@
     <string name="skip_label" msgid="6380034601349015895">"अभी नहीं"</string>
     <string name="next_label" msgid="1248293387735652187">"आगे बढ़ें"</string>
     <string name="region_picker_preference_title" msgid="9195149951917299277">"देश/इलाका"</string>
-    <string name="region_picker_title" msgid="6743800249134439329">"कोई इलाका चुनें"</string>
+    <string name="region_picker_title" msgid="6743800249134439329">"कोई देश या इलाका चुनें"</string>
     <string name="region_picker_sub_title" msgid="7092062110753164836">"आपके चुने गए इलाके के हिसाब से, डिवाइस पर समय, तारीख, तापमान वगैरह दिखते हैं."</string>
     <string name="suggested_region_title" msgid="2554129334404390153">"सुझाए गए"</string>
     <string name="all_supported_region_title" msgid="4817156933097703066">"सभी इलाके"</string>
@@ -219,8 +219,8 @@
     <string name="desc_introduction_of_language_picker" msgid="2164004945569753730">"आपके डिवाइस, ऐप्लिकेशन, और वेबसाइटों के लिए आपकी पसंदीदा भाषाओं की सूची में सबसे ऊपर मौजूद भाषा का इस्तेमाल होता है."</string>
     <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"अगर आपको हर ऐप्लिकेशन के लिए अलग भाषा चुननी है, तो ऐप्लिकेशन की भाषा सेटिंग पर जाएं."</string>
     <string name="desc_locale_helper_footer_general" msgid="6112153921151780303">"ऐप्लिकेशन की भाषाओं के बारे में ज़्यादा जानें"</string>
-    <string name="title_change_system_region" msgid="9196602029960380112">"क्या इलाके को बदलकर %s पर सेट करना है?"</string>
-    <string name="desc_notice_device_region_change" msgid="6702773189066944100">"सिस्टम भाषा के तौर पर, आपका डिवाइस %s का इस्तेमाल करेगा"</string>
+    <string name="title_change_system_region" msgid="9196602029960380112">"क्या देश या इलाके के तौर पर %s को चुनना है?"</string>
+    <string name="desc_notice_device_region_change" msgid="6702773189066944100">"आपके डिवाइस पर सिस्टम की भाषा %s ही रहेगी"</string>
     <string name="desc_notice_device_region_change_for_preferred_language" msgid="408517366942324267">"आपकी पसंदीदा भाषाओं में %2$s की जगह %1$s का इस्तेमाल किया जाएगा"</string>
     <string name="title_change_system_locale" msgid="4102991236063984803">"क्या सिस्टम की भाषा बदलकर %s करनी है?"</string>
     <string name="title_system_locale_addition" msgid="8218683660751479466">"क्या आपको पसंदीदा भाषाओं में %s को जोड़ना है?"</string>
@@ -240,8 +240,8 @@
     <string name="search_region_hint" msgid="1748708432568237552">"इलाके खोजें"</string>
     <string name="top_intro_region_title" msgid="2336323415395642117">"आपके फ़ोन पर समय, तारीख, तापमान वगैरह के दिखने का तरीका, आपके चुने गए इलाके के हिसाब से बदलता है"</string>
     <string name="more_language_settings_category" msgid="3669703092480725416">"भाषा से जुड़ी अन्य सेटिंग"</string>
-    <string name="title_change_system_locale_region" msgid="4401478579429442695">"क्या इलाके को बदलकर <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g> पर सेट करना है?"</string>
-    <string name="body_change_system_locale_region" msgid="9064318449821043189">"सिस्टम की भाषा के तौर पर, आपका डिवाइस <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g> का इस्तेमाल करेगा"</string>
+    <string name="title_change_system_locale_region" msgid="4401478579429442695">"क्या देश या इलाके के तौर पर <xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g> को चुनना है?"</string>
+    <string name="body_change_system_locale_region" msgid="9064318449821043189">"आपके डिवाइस पर सिस्टम की भाषा <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g> ही रहेगी"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"डिवाइस, वेबसाइट, और ऐप्लिकेशन पर नंबर दिखने का तरीका चुनें"</string>
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"ऊपर ले जाएं"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"नीचे ले जाएं"</string>
@@ -325,14 +325,14 @@
     <string name="date_time_set_timezone" msgid="2915125337941495746">"टाइम ज़ोन चुनें"</string>
     <string name="date_time_search_time_zone" msgid="7373967602009974399">"टाइम ज़ोन खोजें"</string>
     <string name="date_time_set_date_title" msgid="7624166157167528407">"तारीख"</string>
-    <string name="date_time_search_region" msgid="1364133854952610919">"क्षेत्र खोजें"</string>
-    <string name="date_time_select_region" msgid="5449345333305056072">"क्षेत्र"</string>
+    <string name="date_time_search_region" msgid="1364133854952610919">"देश या इलाका खोजें"</string>
+    <string name="date_time_select_region" msgid="5449345333305056072">"देश या इलाका"</string>
     <string name="date_time_select_fixed_offset_time_zones" msgid="2130108030162342594">"जीएमटी ऑफ़सेट"</string>
     <string name="zone_info_exemplar_location_and_offset" msgid="2186042522225153092">"<xliff:g id="EXEMPLAR_LOCATION">%1$s</xliff:g> (<xliff:g id="OFFSET">%2$s</xliff:g>)"</string>
     <string name="zone_info_offset_and_name" msgid="3960192548990990152">"<xliff:g id="TIME_TYPE">%2$s</xliff:g> (<xliff:g id="OFFSET">%1$s</xliff:g>)"</string>
     <string name="zone_info_footer_first_sentence" msgid="1326664252091302458">"<xliff:g id="OFFSET_AND_NAME">%1$s</xliff:g> का इस्तेमाल करता है. <xliff:g id="SECOND_SENTENCE">%2$s</xliff:g>"</string>
     <string name="zone_info_footer_second_sentence" msgid="6472889173541729110">"<xliff:g id="DST_TIME_TYPE">%1$s</xliff:g>, <xliff:g id="TRANSITION_DATE">%2$s</xliff:g> को शुरू होगा."</string>
-    <string name="zone_info_footer_no_dst" msgid="8399585343328811158">"फ़ोन <xliff:g id="OFFSET_AND_NAME">%1$s</xliff:g> का इस्तेमाल कर रहा है. डेलाइट सेविंग टाइम लागू नहीं होगा."</string>
+    <string name="zone_info_footer_no_dst" msgid="8399585343328811158">"<xliff:g id="OFFSET_AND_NAME">%1$s</xliff:g> का इस्तेमाल होता है. डेलाइट सेविंग टाइम लागू नहीं होता."</string>
     <string name="zone_time_type_dst" msgid="9189689342265305808">"डेलाइट सेविंग टाइम"</string>
     <string name="zone_time_type_standard" msgid="6865420715430680352">"मानक समय"</string>
     <string name="zone_menu_by_region" msgid="2963565278710225652">"क्षेत्र के हिसाब से चुनें"</string>
@@ -2164,7 +2164,7 @@
     <string name="physical_keyboard_title" msgid="3328134097512350958">"फ़िज़िकल कीबोर्ड"</string>
     <string name="physical_keyboard_layout_picker_title" msgid="4526600767648916256">"फ़िज़िकल कीबोर्ड का लेआउट पिकर"</string>
     <string name="bounce_keys" msgid="7419450970351743904">"बाउंस बटन"</string>
-    <string name="bounce_keys_summary" msgid="8890925059943636911">"एक ही बटन को लगातार दबाने पर, कोई कार्रवाई नहीं होगी"</string>
+    <string name="bounce_keys_summary" msgid="8890925059943636911">"एक ही बटन को लगातार दबाने पर कोई कार्रवाई नहीं होगी"</string>
     <string name="bounce_keys_dialog_title" msgid="1090578395028456023">"\'बाउंस बटन\' सुविधा के लिए समयसीमा"</string>
     <string name="bounce_keys_dialog_subtitle" msgid="6804676895876861863">"चुनें कि किसी बटन को कितने समय के अंदर, कई बार दबाने पर भी कीबोर्ड उसे एक बार के तौर पर ही दर्ज करे"</string>
     <string name="input_setting_keys_dialog_option_200" msgid="2785528287150314940">"0.2 सेकंड"</string>
@@ -2176,13 +2176,13 @@
     <string name="input_setting_bounce_keys_seekbar_desc" msgid="4575595566548124309">"बाउंस बटन का थ्रेशोल्ड समय"</string>
     <string name="input_setting_slow_keys_seekbar_desc" msgid="2171726970136563995">"स्लो बटन का थ्रेशोल्ड समय"</string>
     <string name="slow_keys" msgid="2891452895499690837">"स्लो बटन"</string>
-    <string name="slow_keys_summary" msgid="3852534180402969185">"यह तय करें कि किसी बटन को कितनी देर तक दबाने के बाद, कार्रवाई होगी"</string>
+    <string name="slow_keys_summary" msgid="3852534180402969185">"यह तय करें कि किसी बटन को कितनी देर तक दबाने के बाद कोई कार्रवाई होगी"</string>
     <string name="sticky_keys" msgid="7317317044898161747">"स्टिकी बटन"</string>
     <string name="sticky_keys_summary" msgid="1844953803625480623">"शॉर्टकट के लिए, कई कुंजियों को एक साथ दबाकर रखने के बजाय एक बार में एक कुंजी दबाएं"</string>
     <string name="mouse_keys" msgid="6237254627808525540">"कीबोर्ड पर माउस के लिए बटन"</string>
     <string name="mouse_keys_main_title" msgid="3570638931365221460">"माउस के लिए बटन का इस्तेमाल करें"</string>
     <string name="accessibility_mouse_keys_shortcut_title" msgid="7621635104533584115">"कीबोर्ड पर माउस के लिए बटन का शॉर्टकट"</string>
-    <string name="mouse_keys_summary" msgid="6512910710030108693">"कर्सर को कंट्रोल करने के लिए, कीबोर्ड का इस्तेमाल करें"</string>
+    <string name="mouse_keys_summary" msgid="6512910710030108693">"कर्सर को कंट्रोल करने के लिए कीबोर्ड का इस्तेमाल करें"</string>
     <string name="mouse_keys_max_speed_title" msgid="2651688711606971145">"स्पीड"</string>
     <string name="mouse_keys_seek_bar_decrease_button_description" msgid="9077624857206032509">"घटाएं"</string>
     <string name="mouse_keys_seek_bar_increase_button_description" msgid="2721662400858172203">"बढ़ाएं"</string>
@@ -2195,7 +2195,7 @@
     <string name="mouse_keys_numpad_keys_image_list_summary" msgid="2186017679302722178">"नंबर लॉक (Num Lock) चालू रहने पर, हमेशा न्यूमेरिक कीपैड का इस्तेमाल किया जाएगा"</string>
     <string name="mouse_reverse_vertical_scrolling_summary" msgid="3386655598642587942">"पेज में नीचे जाने के लिए, ऊपर की ओर स्क्रोल करें"</string>
     <string name="mouse_scrolling_category_title" msgid="2992126595687187296">"स्क्रॉलिंग"</string>
-    <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"माउस से कंट्रोल की गई स्क्रोलिंग"</string>
+    <string name="mouse_scrolling_acceleration" msgid="7119758828203396430">"माउस से स्क्रोलिंग कंट्रोल करने की सेटिंग"</string>
     <string name="mouse_scrolling_speed" msgid="3999483025392860903">"स्क्रोल करने की स्पीड"</string>
     <string name="mouse_scrolling_speed_make_faster_description" msgid="3542691986036109618">"स्क्रोल करने की स्पीड बढ़ाएं"</string>
     <string name="mouse_scrolling_speed_make_slower_description" msgid="349335653732016736">"स्क्रोल करने की स्पीड कम करें"</string>
@@ -2348,7 +2348,7 @@
     <string name="user_dict_settings_add_shortcut_option_name" msgid="5722204336242646866">"शॉर्टकट:"</string>
     <string name="user_dict_settings_add_locale_option_name" msgid="2117468247460253346">"भाषा:"</string>
     <string name="user_dict_settings_add_word_hint" msgid="4560494723256242785">"कोई शब्द लिखें"</string>
-    <string name="user_dict_settings_add_shortcut_hint" msgid="6209624157217434640">"वैकल्पिक शॉर्टकट"</string>
+    <string name="user_dict_settings_add_shortcut_hint" msgid="6209624157217434640">"शॉर्टकट ज़रूरी नहीं है"</string>
     <string name="user_dict_settings_edit_dialog_title" msgid="316493656442362284">"शब्‍द बदलें"</string>
     <string name="user_dict_settings_context_menu_edit_title" msgid="4909198741914531509">"बदलाव करें"</string>
     <string name="user_dict_settings_context_menu_delete_title" msgid="651550824433043545">"मिटाएं"</string>
@@ -2418,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"दिव्यांगों के लिए Google सहायता टीम से संपर्क करें"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"सुलभता सुविधाओं से जुड़ा सर्वे"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"सुझाव/राय दें या शिकायत करें"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"गहरे रंग वाली थीम से आप किस हद तक संतुष्ट हैं?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"सर्वे में हिस्सा लें"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"सुझाव/राय दें या शिकायत करें"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"ज़ूम करने की सुविधा से आप किस हद तक संतुष्ट हैं?"</string>
@@ -2490,14 +2491,14 @@
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"फ़ॉन्ट साइज़, डिसप्ले साइज़, टेक्स्ट को बोल्ड करने की सुविधा, आउटलाइन टेक्स्ट"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"डिवाइस पर टेक्स्ट दिखने का तरीका बदलें"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"विषय: गर्म हवा के गुब्बारे के डिज़ाइन"</string>
-    <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"भेजने वाले: अशोक"</string>
+    <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"भेजने वाले का नाम: अशोक"</string>
     <string name="accessibility_text_reading_preview_mail_content" msgid="8078152365771951802">"नमस्ते!\n\nमुझे बस यह पूछना था कि डिज़ाइन का काम कितना बचा है. क्या नए गुब्बारे बनाने से पहले ये डिज़ाइन तैयार हो जाएंगे?"</string>
     <string name="accessibility_text_reading_reset_button_title" msgid="5960753279788187669">"सेटिंग रीसेट करें"</string>
     <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"डिसप्ले साइज़ और टेक्स्ट की सेटिंग रीसेट हो गई हैं"</string>
     <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"क्या आपको डिसप्ले के साइज़ और टेक्स्ट को रीसेट करना है?"</string>
     <string name="accessibility_text_reading_confirm_dialog_reset_button" msgid="8215800137850243736">"रीसेट करें"</string>
     <string name="accessibility_text_reading_conversation_message_1" msgid="7883952203831957831">"वीकेंड का कोई प्लान है?"</string>
-    <string name="accessibility_text_reading_conversation_message_2" msgid="8112160435318635856">"बीच पर रहे हैं. क्या आपको आना है?"</string>
+    <string name="accessibility_text_reading_conversation_message_2" msgid="8112160435318635856">"बीच पर जा रहे हैं. क्या आपको भी चलना है?"</string>
     <string name="accessibility_screen_option" msgid="8465307075278878145">"विकल्प"</string>
     <string name="accessibility_preference_magnification_summary" msgid="2875518904115896888">"स्क्रीन पर ज़ूम इन करें"</string>
     <string name="accessibility_screen_magnification_short_summary" msgid="2207048420669939150">"ज़ूम करने के लिए तीन बार टैप करें"</string>
@@ -3435,7 +3436,7 @@
     <string name="user_add_on_lockscreen_menu" msgid="2539059062034644966">"लॉक स्क्रीन से उपयोगकर्ताओं को जोड़ें"</string>
     <string name="switch_to_dock_user_when_docked" msgid="2324395443311905635">"डिवाइस के डॉक होने पर एडमिन खाते पर जाएं"</string>
     <string name="user_confirm_remove_self_title" msgid="926265330805361832">"खुद को मिटाएं?"</string>
-    <string name="user_confirm_remove_title" msgid="3626559103278006002">"इस उपयोगकर्ता को मिटाएं?"</string>
+    <string name="user_confirm_remove_title" msgid="3626559103278006002">"उपयोगकर्ता को हटाना है?"</string>
     <string name="user_profile_confirm_remove_title" msgid="3131574314149375354">"इस प्रोफ़ाइल को निकालें?"</string>
     <string name="work_profile_confirm_remove_title" msgid="6229618888167176036">"वर्क प्रोफ़ाइल हटानी है?"</string>
     <string name="user_confirm_remove_message" msgid="362545924965977597">"सभी ऐप्लिकेशन और डेटा को मिटा दिया जाएगा."</string>
@@ -3457,11 +3458,11 @@
     <string name="remove_guest_on_exit_keywords" msgid="4961310523576166193">"मिटाएं, मेहमान, गतिविधि, हटाएं, डेटा, वेबसाइट पर आने या जाने वाले, हमेशा के लिए मिटाएं"</string>
     <string name="enable_guest_calling" msgid="4620657197834392094">"मेहमान को फ़ोन कॉल करने की अनुमति दें"</string>
     <string name="enable_guest_calling_summary" msgid="4748224917641204782">"कॉल का इतिहास, मेहमान के साथ शेयर किया जाएगा"</string>
-    <string name="user_enable_calling_sms" msgid="8546430559552381324">"फ़ोन कॉल और मैसेज (एसएमएस) चालू करें"</string>
+    <string name="user_enable_calling_sms" msgid="8546430559552381324">"फ़ोन कॉल और टेक्स्ट मैसेज की सुविधा चालू करें"</string>
     <string name="user_grant_admin" msgid="5942118263054572074">"इस व्यक्ति को एडमिन बनाएं"</string>
-    <string name="user_remove_user" msgid="8468203789739693845">"उपयोगकर्ता को मिटाएं"</string>
-    <string name="user_enable_calling_and_sms_confirm_title" msgid="4041510268838725520">"फ़ोन कॉल और मैसेज (एसएमएस) चालू करें?"</string>
-    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"कॉल और मैसेज (एसएमएस) का इतिहास इस उपयोगकर्ता के साथ शेयर किया जाएगा."</string>
+    <string name="user_remove_user" msgid="8468203789739693845">"उपयोगकर्ता प्रोफ़ाइल हटाएं"</string>
+    <string name="user_enable_calling_and_sms_confirm_title" msgid="4041510268838725520">"फ़ोन कॉल और एसएमएस की सुविधा चालू करनी है?"</string>
+    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"फ़ोन कॉल और एसएमएस का इतिहास इस उपयोगकर्ता के साथ शेयर किया जाएगा."</string>
     <string name="user_revoke_admin_confirm_title" msgid="3057842401861731863">"आपको एडमिन के खास अधिकार हटाने हैं?"</string>
     <string name="user_revoke_admin_confirm_message" msgid="9207187319308572958">"इस व्यक्ति के लिए एडमिन के खास अधिकार हटाए जाने के बाद, आप या कोई दूसरा एडमिन उसे सभी अधिकार वापस दे सकता है."</string>
     <string name="user_revoke_admin_for_self_confirm_title" msgid="5661292626700927475">"क्या आपको खुद को मिले एडमिन के खास अधिकार वाकई हटाने हैं?"</string>
@@ -3759,7 +3760,7 @@
     <string name="sound_patterns_category_title" msgid="4290495769747444271">"आवाज़ के पैटर्न"</string>
     <string name="sound_audio_category_title" msgid="3445871661303518618">"ऑडियो"</string>
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"सिस्टम की आवाज़ें और वाइब्रेशन"</string>
-    <string name="work_profile_sound_category_title" msgid="1708926655170323454">"वर्क प्रोफ़ाइल की आवाज़"</string>
+    <string name="work_profile_sound_category_title" msgid="1708926655170323454">"वर्क प्रोफ़ाइल पर सेट की गई आवाज़"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"लाइव कैप्शन"</string>
     <string name="live_caption_summary" msgid="7290150167089515457">"कॉल, वीडियो, और अन्य मीडिया के लिए कैप्शन की सुविधा पाएं"</string>
     <string name="live_caption_on_summary" msgid="8921561021882989495">"चालू है / कॉल, वीडियो, और अन्य मीडिया के लिए कैप्शन की सुविधा पाएं"</string>
@@ -3864,9 +3865,9 @@
     <string name="zen_category_apps" msgid="1167374545618451925">"ऐप्लिकेशन"</string>
     <string name="zen_category_exceptions" msgid="1316097981052752811">"अलार्म और दूसरी सूचनाएं/आवाज़ें"</string>
     <string name="zen_category_duration" msgid="7515850842082631460">"क्विक सेटिंग में, \'परेशान न करें\' मोड की अवधि"</string>
-    <string name="sound_work_settings" msgid="752627453846309092">"वर्क प्रोफ़ाइल से जुड़ी आवाज़ें"</string>
+    <string name="sound_work_settings" msgid="752627453846309092">"वर्क प्रोफ़ाइल पर सेट की गई आवाज़ें"</string>
     <string name="work_use_personal_sounds_title" msgid="7729428677919173609">"निजी प्रोफ़ाइल पर सेट की गई आवाज़ें इस्तेमाल करें"</string>
-    <string name="work_use_personal_sounds_summary" msgid="608061627969077231">"निजी प्रोफ़ाइल पर सेट की गई आवाज़ें इस्तेमाल करें"</string>
+    <string name="work_use_personal_sounds_summary" msgid="608061627969077231">"निजी प्रोफ़ाइल पर सेट की गई सूचनाओं की आवाज़ें इस्तेमाल करें"</string>
     <string name="work_ringtone_title" msgid="4810802758746102589">"वर्क प्रोफ़ाइल में इनकमिंग कॉल की रिंगटोन"</string>
     <string name="work_notification_ringtone_title" msgid="2955312017013255515">"वर्क प्रोफ़ाइल में सूचना की डिफ़ॉल्ट आवाज़"</string>
     <string name="work_alarm_ringtone_title" msgid="3369293796769537392">"वर्क प्रोफ़ाइल में अलार्म की डिफ़ॉल्ट आवाज़"</string>
@@ -3998,7 +3999,7 @@
     <string name="priority_conversation_count_zero" msgid="3862289535537564713">"कोई अहम बातचीत नहीं है"</string>
     <string name="priority_conversation_count" msgid="7291234530844412077">"{count,plural, =1{# अहम बातचीत}one{# अहम बातचीत}other{# अहम बातचीत}}"</string>
     <string name="important_conversations" msgid="1233893707189659401">"अहम बातचीत"</string>
-    <string name="important_conversations_summary_bubbles" msgid="614327166808117644">"बातचीत सेक्शन में सबसे ऊपर, फ्लोटिंग बबल्स के तौर पर दिखती है"</string>
+    <string name="important_conversations_summary_bubbles" msgid="614327166808117644">"यह सूचना, बातचीत सेक्शन में सबसे ऊपर फ्लोटिंग बबल के तौर पर दिखती है"</string>
     <string name="important_conversations_summary" msgid="3184022761562676418">"बातचीत सेक्शन में सबसे ऊपर दिखाएं"</string>
     <string name="other_conversations" msgid="551178916855139870">"अन्य बातचीत"</string>
     <string name="other_conversations_summary" msgid="3487426787901236273">"आपने जिन बातचीत की सेटिंग में बदलाव किए हैं"</string>
@@ -4078,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"सूचनाओं को व्यवस्थित करने की सेटिंग"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"जो सूचनाएं ज़्यादा अहम नहीं हैं उन्हें बंडल करें और उनकी आवाज़ बंद करें"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"सूचनाओं को व्यवस्थित करने के लिए, ऐप्लिकेशन मैनेज करें"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"सूचनाओं के बंडल को हमेशा बड़ा करके दिखाएं"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"वर्क प्रोफ़ाइल वाले ऐप्लिकेशन पर लागू करें"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"वीआर सुविधाओं के साथ काम करने वाली सेवाएं"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"डिवाइस पर मौजूद किसी भी ऐप्लिकेशन ने वीआर के साथ काम करने वाली सेवा के तौर पर चलाए जाने का अनुरोध नहीं किया है."</string>
@@ -4138,7 +4138,7 @@
     <string name="app_notification_fsi_permission_title" msgid="2260977598430154428">"फ़ुल-स्क्रीन पर सूचनाएं दिखाने की अनुमति दें"</string>
     <string name="app_notification_fsi_permission_summary" msgid="7673487977631068039">"डिवाइस के लॉक होने पर, सूचनाओं को फ़ुल स्क्रीन पर दिखाने की अनुमति दें"</string>
     <string name="notification_badge_title" msgid="6854537463548411313">"सूचनाएं बताने वाला डॉट चालू करें"</string>
-    <string name="notification_channel_badge_title" msgid="6505542437385640049">"सूचनाएं बताने वाला डॉट दिखाएं"</string>
+    <string name="notification_channel_badge_title" msgid="6505542437385640049">"सूचनाओं वाला डॉट दिखाएं"</string>
     <string name="app_notification_override_dnd_title" msgid="3769539356442226691">"\'परेशान न करें\' मोड को बायपास करें"</string>
     <string name="app_notification_override_dnd_summary" msgid="4894641191397562920">"\'परेशान न करें\' मोड चालू होने पर भी ये सूचनाएं दिखाना जारी रखें"</string>
     <string name="app_notification_visibility_override_title" msgid="7778628150022065920">"लॉक स्क्रीन पर दिखाएं"</string>
@@ -4661,7 +4661,7 @@
     <string name="cell_data_warning" msgid="5664921950473359634">"<xliff:g id="ID_1">^1</xliff:g> डेटा खर्च होने पर चेतावनी"</string>
     <string name="cell_data_limit" msgid="256855024790622112">"<xliff:g id="ID_1">^1</xliff:g> डेटा सीमा"</string>
     <string name="cell_data_warning_and_limit" msgid="8393200831986035724">"<xliff:g id="ID_1">^1</xliff:g> डेटा खर्च की चेतावनी / <xliff:g id="ID_2">^2</xliff:g> डेटा सीमा"</string>
-    <string name="operator_warning" msgid="5672761970087591211">"डेटा खर्च को लेकर मोबाइल और इंटरनेट सेवा देने वाली कंपनी का हिसाब आपके डिवाइस के हिसाब से अलग हो सकता है."</string>
+    <string name="operator_warning" msgid="5672761970087591211">"डेटा खर्च के लिहाज से, मोबाइल और इंटरनेट सेवा देने वाली कंपनी और आपके डिवाइस के हिसाब में फ़र्क़ हो सकता है"</string>
     <string name="non_carrier_data_usage_warning" msgid="4707184871368847697">"इसमें मोबाइल और इंटरनेट सेवा देने वाली कंपनी का डेटा शामिल नहीं है"</string>
     <string name="data_used_template" msgid="8229342096562327646">"<xliff:g id="ID_1">%1$s</xliff:g> का इस्तेमाल किया गया"</string>
     <string name="set_data_warning" msgid="1685771882794205462">"डेटा खर्च की चेतावनी सेट करें"</string>
@@ -4754,7 +4754,7 @@
     <string name="notification_log_details_ranking_none" msgid="2484105338466675261">"रैंकिंग ऑब्जेक्ट में यह कुंजी शामिल नहीं है."</string>
     <string name="display_cutout_emulation" msgid="1421648375408281244">"डिसप्ले कटआउट"</string>
     <string name="display_cutout_emulation_keywords" msgid="4506580703807358127">"डिसप्ले कटआउट, नॉच"</string>
-    <string name="overlay_option_device_default" msgid="7986355499809313848">"डिवाइस की डिफ़ॉल्ट सेटिंग"</string>
+    <string name="overlay_option_device_default" msgid="7986355499809313848">"डिवाइस डिफ़ॉल्ट"</string>
     <string name="overlay_toast_failed_to_apply" msgid="4839587811338164960">"ओवरले लागू नहीं किया जा सका"</string>
     <string name="special_access" msgid="1767980727423395147">"ऐप्लिकेशन के लिए खास अनुमतियां"</string>
     <string name="special_access_more" msgid="132919514147475846">"और देखें"</string>
@@ -4801,7 +4801,7 @@
     <string name="gesture_preference_title" msgid="8291899281322647187">"हाथ के जेस्चर"</string>
     <string name="double_tap_power_for_camera_title" msgid="7982364144330923683">"तुरंत कैमरा खोलने की सुविधा"</string>
     <string name="double_tap_power_for_camera_summary" msgid="1100926048598415509">"कैमरा तुरंत खोलने के लिए, पावर बटन को दो बार दबाएं. ऐसा किसी भी स्क्रीन से किया जा सकता है."</string>
-    <string name="double_tap_power_title" msgid="8129216801770589261">"\'पावर बटन दो बार दबाएं\' जेस्चर का इस्तेमाल करें"</string>
+    <string name="double_tap_power_title" msgid="8129216801770589261">"\'पावर बटन दो बार दबाएं\' जेस्चर"</string>
     <string name="double_tap_power_enabled" msgid="7609935047996304482">"\'दो बार दबाएं\' जेस्चर का इस्तेमाल करें"</string>
     <string name="double_tap_power_target_action_category" msgid="2568741597095863728">"इसे खोलने के लिए पावर बटन को दो बार दबाएं"</string>
     <string name="double_tap_power_camera_action_title" msgid="6641206739933181509">"कैमरा"</string>
@@ -5501,7 +5501,7 @@
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
     <string name="volte_5G_limited_title" msgid="5908052268836750629">"VoLTE बंद करें?"</string>
     <string name="volte_5G_limited_text" msgid="7150583768725182345">"इससे आपका 5G कनेक्शन भी बंद हो जाएगा.\nवॉइस कॉल के दौरान, आप इंटरनेट का इस्तेमाल नहीं कर सकते और कुछ ऐप्लिकेशन शायद काम न करें."</string>
-    <string name="cached_apps_freezer" msgid="1057519579761550350">"कैश किए गए ऐप्लिकेशन चलने से रोकना"</string>
+    <string name="cached_apps_freezer" msgid="1057519579761550350">"कैश मेमोरी में सेव ऐप को बैकग्राउंड में न चलने दें"</string>
     <string name="blob_never_expires_text" msgid="7293376386620106623">"शेयर किया गया डेटा, हमेशा ऐक्सेस किया जा सकता है."</string>
     <string name="accessor_never_expires_text" msgid="4647624492147788340">"शेयर किया गया ऐसा डेटा हमेशा ऐक्सेस किया जा सकता है जिसे लीज़ पर लिया गया है."</string>
     <string name="overlay_settings_title" msgid="1032863083496396365">"सेटिंग ऐप स्क्रीन पर ओवरले करने की अनुमति दें"</string>
@@ -5609,8 +5609,8 @@
     <string name="smart_forwarding_input_mdn_dialog_title" msgid="7542216086697868415">"फ़ोन नंबर डालें"</string>
     <string name="smart_forwarding_missing_mdn_text" msgid="2907314684242542226">"फ़ोन नंबर नहीं डाला गया."</string>
     <string name="smart_forwarding_missing_alert_dialog_text" msgid="7870419247987316112">"ठीक है"</string>
-    <string name="enable_2g_title" msgid="5657132300321750181">"2G नेटवर्क से सुरक्षा"</string>
-    <string name="enable_2g_summary" msgid="6194875539424151678">"यह सुविधा डिवाइसों को 2G नेटवर्क से कनेक्ट होने से रोकती है, क्योंकि ये नेटवर्क कम सुरक्षित होते हैं. आपको इस वजह से, कुछ जगहों पर खराब कनेक्टिविटी का सामना करना पड़ सकता है. हालांकि, आपातकालीन कॉल के लिए 2G नेटवर्क का इस्तेमाल हमेशा किया जा सकता है. ऐसा हो सकता है कि अंतरराष्ट्रीय रोमिंग के दौरान कॉल कनेक्ट न हों."</string>
+    <string name="enable_2g_title" msgid="5657132300321750181">"2G नेटवर्क से परहेज़"</string>
+    <string name="enable_2g_summary" msgid="6194875539424151678">"यह सुविधा डिवाइसों को 2G नेटवर्क से कनेक्ट होने से रोकती है, क्योंकि ये नेटवर्क कम सुरक्षित होते हैं. इस वजह से, कुछ जगहों पर कनेक्टिविटी खराब हो सकती है. इस सुविधा के चालू रहने पर, आपातकालीन कॉल के लिए कभी भी 2G नेटवर्क का इस्तेमाल किया जा सकता है. हालांकि, ऐसा हो सकता है कि अंतरराष्ट्रीय रोमिंग के दौरान कॉल कनेक्ट न हों."</string>
     <string name="enable_2g_summary_disabled_carrier" msgid="8141118453219482762">"<xliff:g id="CARRIER_NAME_2G">%1$s</xliff:g> के लिए 2G नेटवर्क होना ज़रूरी है"</string>
     <string name="require_cellular_encryption_title" msgid="6087085031703089235">"सुरक्षित किए गए नेटवर्क को ही अनुमति दें"</string>
     <string name="require_cellular_encryption_summary" msgid="6090569065420631457">"यह ज़्यादा सुरक्षित है, लेकिन इससे हो सकता है कि कुछ जगहों पर नेटवर्क कनेक्शन में समस्या आए. हालांकि, आपातकालीन कॉल हमेशा किए जा सकते हैं."</string>
@@ -5654,9 +5654,9 @@
     <string name="dream_preview_button_title" msgid="6637456541851795952">"झलक देखें"</string>
     <string name="dream_picker_category" msgid="7726447836872744867">"स्क्रीन सेवर चुनें"</string>
     <string name="dream_complications_toggle_title" msgid="4273232303027449163">"ज़्यादा जानकारी दिखाएं"</string>
-    <string name="dream_complications_toggle_summary" msgid="8088911054987524904">"स्क्रीन सेवर पर समय, मौसम या अन्य जानकारी दिखाएं"</string>
+    <string name="dream_complications_toggle_summary" msgid="8088911054987524904">"स्क्रीन सेवर पर समय, मौसम या अन्य जानकारी दिखेगी"</string>
     <string name="dream_home_controls_toggle_title" msgid="706799741564479248">"होम कंट्रोल बटन दिखाएं"</string>
-    <string name="dream_home_controls_toggle_summary" msgid="4102519907917430579">"स्क्रीन सेवर पर होम कंट्रोल बटन दिखाएं"</string>
+    <string name="dream_home_controls_toggle_summary" msgid="4102519907917430579">"स्क्रीन सेवर पर होम कंट्रोल बटन दिखेगा"</string>
     <string name="dream_more_settings_category" msgid="3119192146760773748">"ज़्यादा सेटिंग"</string>
     <string name="dream_setup_title" msgid="2458303874255396142">"अपना स्क्रीन सेवर चुनें"</string>
     <string name="dream_setup_description" msgid="7508547154038580296">"चुनें कि टैबलेट के डॉक से जुड़े होने के दौरान, आपको स्क्रीन पर क्या दिखे. स्क्रीन सेवर का इस्तेमाल करने पर, आपके डिवाइस की बैटरी ज़्यादा खर्च हो सकती है."</string>

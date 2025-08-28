@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"மேலே நகர்த்து"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"கீழே நகர்த்து"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"அகற்று"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"முதல் இடத்துக்கு நகர்த்து"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"பிராந்தியத்திற்கேற்ற விருப்பங்கள்"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"யூனிட்கள் மற்றும் எண் விருப்பத்தேர்வுகளை அமைக்கலாம்"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"உங்கள் பிராந்தியத்திற்கேற்ற விருப்பங்களை ஆப்ஸுக்குத் தெரிவியுங்கள். இதனால் உங்கள் அனுபவத்தை ஆப்ஸால் பிரத்தியேகமாக்க முடியும்."</string>
@@ -327,7 +326,7 @@
     <string name="date_time_search_time_zone" msgid="7373967602009974399">"நேர மண்டலத்தைத் தேடுங்கள்"</string>
     <string name="date_time_set_date_title" msgid="7624166157167528407">"தேதி"</string>
     <string name="date_time_search_region" msgid="1364133854952610919">"மண்டலம் தேடல்"</string>
-    <string name="date_time_select_region" msgid="5449345333305056072">"மண்டலம்"</string>
+    <string name="date_time_select_region" msgid="5449345333305056072">"பிராந்தியம்"</string>
     <string name="date_time_select_fixed_offset_time_zones" msgid="2130108030162342594">"GMT ஆஃப்செட்"</string>
     <string name="zone_info_exemplar_location_and_offset" msgid="2186042522225153092">"<xliff:g id="EXEMPLAR_LOCATION">%1$s</xliff:g> (<xliff:g id="OFFSET">%2$s</xliff:g>)"</string>
     <string name="zone_info_offset_and_name" msgid="3960192548990990152">"<xliff:g id="TIME_TYPE">%2$s</xliff:g> (<xliff:g id="OFFSET">%1$s</xliff:g>)"</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"சமூகம்"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"சமூக அமைப்புகள்"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"ஹப் பயன்முறை"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"பூட்டுத் திரை விட்ஜெட்கள் (பீட்டா)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"எப்போது தானாகக் காட்டுவது"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"ஒருபோதும் காட்டாதே"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"சார்ஜிங்கின்போது"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google உதவிமையத்தைத் தொடர்புகொள்க"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"மாற்றுத்திறன் வசதி குறித்த கருத்துக்கணிப்பு"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"உங்கள் கருத்தைப் பகிருங்கள்"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"டார்க் தீம் உங்களுக்கு எவ்வளவு திருப்திகரமாக உள்ளது?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"கருத்துக்கணிப்பைத் தொடங்கு"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"உங்கள் கருத்தைப் பகிருங்கள்"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"பெரிதாக்கல் அம்சம் உங்களுக்கு எவ்வளவு திருப்திகரமாக உள்ளது?"</string>
@@ -2539,7 +2538,7 @@
     <string name="accessibility_shortcut_edit_dialog_title_software_gesture" msgid="8078659880723370597">"இரண்டு விரல்கள் மூலம் மேல்நோக்கி ஸ்வைப் செய்தல்"</string>
     <string name="accessibility_shortcut_edit_dialog_title_software_gesture_talkback" msgid="7422753388389160524">"மூன்று விரல்கள் மூலம் மேல்நோக்கி ஸ்வைப் செய்தல்"</string>
     <string name="accessibility_shortcut_edit_dialog_title_software" msgid="6505512764022389951">"மாற்றுத்திறன் பட்டன்"</string>
-    <string name="accessibility_shortcut_edit_dialog_summary_floating_button" msgid="6266489864614886247">"மிதக்கும் பட்டனைத் தட்டுங்கள்"</string>
+    <string name="accessibility_shortcut_edit_dialog_summary_floating_button" msgid="6266489864614886247">"மிதக்கும் பட்டனைத் தட்டவும்"</string>
     <string name="accessibility_shortcut_edit_dialog_title_software_by_gesture" msgid="4775049370625630546">"மாற்றுத்திறன் சைகை"</string>
     <string name="accessibility_shortcut_edit_dialog_summary_software" msgid="8315934725362849788">"திரையின் கீழ்ப்பகுதியில் உள்ள அணுகல்தன்மை பட்டனை <xliff:g id="ACCESSIBILITY_ICON">%s</xliff:g> தட்டுங்கள். அம்சங்களுக்கு இடையே மாற, அணுகல்தன்மை பட்டனைத் தொட்டுப் பிடியுங்கள்."</string>
     <string name="accessibility_shortcut_edit_dialog_summary_gesture" msgid="2081123009255579884">"{count,plural, =1{திரையின் கீழிருந்து மேல்நோக்கி ஸ்வைப் செய்யவும். அம்சங்களுக்கு இடையே மாற, மேல்நோக்கி ஸ்வைப் செய்து பிடிக்கவும்.}other{உங்கள் திரையின் கீழ்ப்பகுதியில் இருந்து # விரல்களால் மேல்நோக்கி ஸ்வைப் செய்யவும். அம்சங்களுக்கு இடையே மாற, # விரல்களால் மேல்நோக்கி ஸ்வைப் செய்து பிடிக்கவும்.}}"</string>
@@ -2551,7 +2550,7 @@
     <string name="accessibility_feature_shortcut_setting_summary_quick_settings" msgid="7006526933552889373">"விரைவு அமைப்புகள்"</string>
     <string name="accessibility_shortcut_edit_dialog_title_hardware" msgid="844089763968552142">"ஒலியளவு பட்டன்கள்"</string>
     <string name="accessibility_shortcut_hardware_keyword" msgid="2483152542320987022">"ஒலியளவு பட்டன்கள்"</string>
-    <string name="accessibility_shortcut_edit_dialog_summary_hardware" msgid="2503134386397991634">"இரண்டு ஒலியளவு விசைகளையும் அழுத்திப் பிடியுங்கள்"</string>
+    <string name="accessibility_shortcut_edit_dialog_summary_hardware" msgid="2503134386397991634">"இரண்டு ஒலியளவு பட்டன்களையும் அழுத்திப் பிடியுங்கள்"</string>
     <string name="accessibility_shortcut_edit_screen_title_two_finger_double_tap" msgid="8952595692906527694">"%1$d விரல்களால் இருமுறை தட்டுதல்"</string>
     <string name="accessibility_shortcut_edit_screen_summary_two_finger_double_tap" msgid="385404127425496362">"%1$d விரல்களால் திரையில் இருமுறை விரைவாகத் தட்டுங்கள்"</string>
     <string name="accessibility_shortcut_edit_screen_title_triple_tap" msgid="3314488747597058942">"மூன்று முறை தட்டுதல்"</string>
@@ -2662,7 +2661,7 @@
     <string name="autoclick_revert_to_left_click_summary" msgid="9207568192335942225">"நீங்கள் வேறொரு செயலைப் பயன்படுத்தும்போது, ஆட்டோ கிளிக் தானாகவே இடது கிளிக் நிலைக்கு மாறிவிடும்"</string>
     <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"3-பட்டன் வழிசெலுத்தலில் ஆட்டோ கிளிக் சிறப்பாகச் செயல்படும்"</string>
     <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"ஆட்டோ கிளிக்கைப் பயன்படுத்தும்போது பின்செல்லுதல், முகப்புக்குச் செல்லுதல், ஆப்ஸுக்கிடையே மாறுதல் ஆகியவற்றை எளிதாகச் செய்ய சைகை வழிசெலுத்தலுக்குப் பதிலாக 3-பட்டன் வழிசெலுத்தலைப் பயன்படுத்தவும்"</string>
-    <string name="accessibility_autoclick_keep_gesture_navigation" msgid="5403212927837555942">"சைகை வழிசெலுத்தலை அமை"</string>
+    <string name="accessibility_autoclick_keep_gesture_navigation" msgid="5403212927837555942">"சைகை வழிசெலுத்தலை வைத்திரு"</string>
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"வழிசெலுத்தல் அமைப்புகள்"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"அதிர்வு &amp; ஹாப்டிக்ஸ்"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"வெவ்வேறு பயன்பாடுகளுக்கான அதிர்வின் வலிமையைக் கட்டுப்படுத்தலாம்"</string>
@@ -3443,7 +3442,7 @@
     <string name="user_confirm_remove_message" msgid="362545924965977597">"எல்லா ஆப்ஸும் டேட்டாவும் நீக்கப்படும்."</string>
     <string name="work_profile_confirm_remove_message" msgid="1037294114103024478">"தொடர்ந்தால், இந்தச் சுயவிவரத்தில் உள்ள எல்லா ஆப்ஸ் மற்றும் தகவல் நீக்கப்படும்."</string>
     <string name="work_profile_confirm_remove_message_with_esim" msgid="1169605178915445183">"தொடர்ந்தால், பணி eSIMகள் உட்பட இந்தக் கணக்கிலுள்ள அனைத்து ஆப்ஸும் தரவும் நீக்கப்படும்."</string>
-    <string name="user_profile_confirm_remove_message" msgid="3641289528179850718">"எல்லா ஆப்ஸும் டேட்டாவும் நீக்கப்படும்."</string>
+    <string name="user_profile_confirm_remove_message" msgid="3641289528179850718">"எல்லா ஆப்ஸும் தரவும் நீக்கப்படும்."</string>
     <string name="user_adding_new_user" msgid="7439602720177181412">"புதிய பயனரைச் சேர்க்கிறது…"</string>
     <string name="user_delete_user_description" msgid="7764153465503821011">"பயனரை நீக்கு"</string>
     <string name="user_delete_button" msgid="3833498650182594653">"நீக்கு"</string>
@@ -3463,7 +3462,7 @@
     <string name="user_grant_admin" msgid="5942118263054572074">"இந்தப் பயனரை நிர்வாகியாக்கு"</string>
     <string name="user_remove_user" msgid="8468203789739693845">"பயனரை நீக்குதல்"</string>
     <string name="user_enable_calling_and_sms_confirm_title" msgid="4041510268838725520">"ஃபோன் அழைப்புகள் &amp; SMSஐ இயக்கவா?"</string>
-    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"அழைப்பும் SMS வரலாறும் இவருடன் பகிரப்படும்."</string>
+    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"அழைப்பு மற்றும் SMS பதிவுகள் இவருடன் பகிரப்படும்."</string>
     <string name="user_revoke_admin_confirm_title" msgid="3057842401861731863">"நிர்வாகச் சிறப்புரிமைகளை அகற்றவா?"</string>
     <string name="user_revoke_admin_confirm_message" msgid="9207187319308572958">"இந்தப் பயனருக்கு நிர்வாகி சிறப்புரிமைகளை அகற்றினால் நீங்களோ பிற நிர்வாகியோ அவருக்கு அதை மீண்டும் வழங்கலாம்."</string>
     <string name="user_revoke_admin_for_self_confirm_title" msgid="5661292626700927475">"உங்கள் நிர்வாகி சிறப்புரிமைகளை அகற்றவா?"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"எல்லா பணி அறிவிப்பு விவரத்தையும் காட்டு"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"பாதுகாக்க வேண்டிய பணி உள்ளடக்கத்தை மறை"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"சாதனம் பூட்டப்பட்டிருக்கும் போது, சுயவிவர அறிவிப்புகளை எப்படிக் காட்ட வேண்டும்?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"பூட்டுத் திரையில் காட்டு"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"பூட்டுத் திரையில் எதைக் காட்ட வேண்டும்?"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"பார்க்கப்பட்ட அறிவிப்புகளைக் காட்டு"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"பார்க்கப்பட்ட அறிவிப்பு ஐகான்களைக் காட்டு"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"அறிவிப்பு ஒருங்கிணைப்பான்"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"குறைந்த முன்னுரிமை கொண்ட அறிவிப்புகளைத் தொகுத்து ஒலியடக்கலாம்"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"அறிவிப்பு ஒருங்கிணைப்பானுக்கான ஆப்ஸை நிர்வகித்தல்"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"தொகுப்புகளை எப்போதும் விரித்தல்"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"பணிக் கணக்கு ஆப்ஸுக்குப் பயன்படுத்துதல்"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR உதவிச் சேவைகள்"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"நிறுவப்பட்ட ஆப்ஸ்களில் எதுவும் VR உதவிச் சேவைகளாக இயங்குவதற்காகக் கோரவில்லை"</string>

@@ -241,13 +241,12 @@
     <string name="top_intro_region_title" msgid="2336323415395642117">"Вибір регіону впливає на те, як на телефоні відображаються час, дати, температура тощо"</string>
     <string name="more_language_settings_category" msgid="3669703092480725416">"Інші налаштування мови"</string>
     <string name="title_change_system_locale_region" msgid="4401478579429442695">"Змінити регіон на \"<xliff:g id="SYSTEM_LANGUAGE_REGION">%1$s</xliff:g>\"?"</string>
-    <string name="body_change_system_locale_region" msgid="9064318449821043189">"<xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g> збережеться на пристрої як мова системи"</string>
+    <string name="body_change_system_locale_region" msgid="9064318449821043189">"Як мова системи на пристрої збережеться <xliff:g id="SYSTEM_LANGUAGE">%1$s</xliff:g>"</string>
     <string name="top_intro_numbering_system_title" msgid="3962000662073238392">"Виберіть, як на пристрої, вебсайтах і в додатках відображатимуться числа"</string>
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Перемістити вгору"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Перемістити вниз"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Вилучити"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Перемістити вгору"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Регіональні налаштування"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Установіть параметри одиниць і чисел"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Укажіть регіональні налаштування, щоб додатки могли персоналізувати для вас свій інтерфейс."</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Для спільного використання"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Налаштування для спільного використання"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Режим центру керування"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Віджети на заблокованому екрані (бета-версія)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Коли показувати автоматично"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Ніколи"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Під час заряджання"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Зв’язатися зі службою підтримки Google із питань доступності"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Опитування щодо доступності"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Залиште відгук"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Наскільки Вам подобається темна тема?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Пройти опитування"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Залиште відгук"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Наскільки Вам подобається функція збільшення?"</string>
@@ -2660,7 +2659,7 @@
     <string name="autoclick_ignore_minor_cursor_movement_title" msgid="5038721995720529808">"Ігнорувати незначні рухи курсора"</string>
     <string name="autoclick_revert_to_left_click_title" msgid="6868866422993461739">"Використовувати натискання лівою кнопкою миші як дію за умовчанням"</string>
     <string name="autoclick_revert_to_left_click_summary" msgid="9207568192335942225">"Якщо ви виконаєте іншу дію, автоматичне натискання знову зміниться на натискання лівою кнопкою миші"</string>
-    <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"Автоматичне натискання краще працює в режимі навігації за допомогою трьох кнопок"</string>
+    <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"Автонатискання краще працює при навігації за допомогою 3 кнопок"</string>
     <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"Щоб легко повертатися, переходити на головний екран і перемикатися між додатками в режимі автоматичного натискання, використовуйте навігацію за допомогою трьох кнопок замість навігації жестами"</string>
     <string name="accessibility_autoclick_keep_gesture_navigation" msgid="5403212927837555942">"Залишити навігацію за допомогою жестів"</string>
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"Налаштування навігації"</string>
@@ -3868,7 +3867,7 @@
     <string name="zen_category_duration" msgid="7515850842082631460">"Тривалість дії швидких налаштувань"</string>
     <string name="sound_work_settings" msgid="752627453846309092">"Звуки робочого профілю"</string>
     <string name="work_use_personal_sounds_title" msgid="7729428677919173609">"Звуки особистого профілю"</string>
-    <string name="work_use_personal_sounds_summary" msgid="608061627969077231">"Виберіть цей параметр, щоб використовувати ті самі звуки, що й в особистому профілі"</string>
+    <string name="work_use_personal_sounds_summary" msgid="608061627969077231">"Використовувати ті самі звуки, що й в особистому профілі"</string>
     <string name="work_ringtone_title" msgid="4810802758746102589">"Сигнал робочого телефона"</string>
     <string name="work_notification_ringtone_title" msgid="2955312017013255515">"Стандартний сигнал робочих сповіщень"</string>
     <string name="work_alarm_ringtone_title" msgid="3369293796769537392">"Стандартний сигнал робочого будильника"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Показувати весь вміст робочих сповіщень"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Ховати конфіденційний робочий вміст"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Як показувати сповіщення профілю, коли пристрій заблоковано?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Показувати на заблокованому екрані"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Що показувати на заблокованому екрані"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Показувати переглянуті сповіщення"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Показувати значки переглянутих сповіщень"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Органайзер сповіщень"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Групувати сповіщення з низьким пріоритетом і вимкнути їх звук"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Керуйте додатками для органайзера сповіщень"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Завжди розгортати пакети"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Застосувати до додатків робочого профілю"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Допоміжні VR-сервіси"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Установлені додатки не запитували доступу для роботи в режимі допоміжних VR-сервісів."</string>
@@ -5432,7 +5429,7 @@
     <string name="sim_combination_warning_notification_title" msgid="1365401631492986487">"Виникли проблеми з комбінацією SIM-карт"</string>
     <string name="dual_cdma_sim_warning_notification_summary" msgid="2826474790710586487">"За використання операторів <xliff:g id="OPERATOR_NAMES">%1$s</xliff:g> можуть працювати не всі функції. Торкніться, щоб дізнатися більше."</string>
     <string name="dual_cdma_sim_warning_notification_channel_title" msgid="1049161096896074364">"Комбінація SIM-карт"</string>
-    <string name="work_policy_privacy_settings" msgid="2702644843505242596">"Інформація про правила роботи"</string>
+    <string name="work_policy_privacy_settings" msgid="2702644843505242596">"Інформація про правила організації"</string>
     <string name="work_policy_privacy_settings_summary" msgid="690118670737638405">"Налаштування, якими керує адміністратор вашої організації"</string>
     <string name="track_frame_time_keywords" msgid="7885340257945922239">"ГП"</string>
     <string name="enable_16k_pages" msgid="1758111531461408337">"Запустити з розміром сторінки 16 КБ"</string>

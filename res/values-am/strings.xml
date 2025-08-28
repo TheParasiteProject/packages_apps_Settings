@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"ወደላይ አንቀሳቅስ"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"ወደታች አንቀሳቅስ"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"አስወግድ"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"ወደ ራስጌ አንቀሳቅስ"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"ክልላዊ ምርጫዎች"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"አሃዶች እና የቁጥር ምርጫዎችን ያቀናብሩ"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"መተግበሪያዎች ተሞክሮዎን ግላዊነት ማላበስ ይችሉ ዘንድ የእርስዎን ክልላዊ ምርጫዎች ያሳውቋቸው።"</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"የጋራ"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"የጋራ ቅንብሮች"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"የመገናኛ ሁነታ"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"ማያ ገጽ ቁልፍ ላይ ያሉ ምግብሮች (ቅድመ ይሁንታ)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"መቼ በራሰ-ር እንደሚያሳዩ"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"በጭራሽ"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"ባትሪ በመሙላት ላይ ሳለ"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google የአካል ጉዳተኛ ድጋፍ ሰጪን ያነጋግሩ"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"የየተደራሽነት የዳሰሳ ጥናት"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"ግብረመልስዎን ያጋሩ"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"በጠቆር ያለ ገጽታ ምን ያህል ረክተዋል?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"የዳሰሳ ጥናት ላይ ይሳተፉ"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"ግብረመልስዎን ያጋሩ"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"በማጉላት ምን ያህል ረክተዋል?"</string>
@@ -2441,7 +2440,7 @@
     <string name="talkback_summary" msgid="5820927220378864281">"በዋነኝነት ማየት የተሳናቸው ወይም የማየት ችሎታቸው ዝቅተኛ ለሆኑ ሰዎች የሆነ የማያ ገፅ አንባቢ"</string>
     <string name="select_to_speak_summary" msgid="1995285446766920925">"በማያ ገጽዎ ላይ ያሉ ንጥሎች ጮክ ተብለው ሲነበቡ ለማዳመጥ መታ ያድርጓቸው"</string>
     <string name="accessibility_captioning_title" msgid="4561871958958925225">"የመግለጫ ጽሑፍ ምርጫዎች"</string>
-    <string name="accessibility_captioning_about_title" msgid="3542171637334191563">"ስለመግለጫ ጽሁፍ ምርጫዎች"</string>
+    <string name="accessibility_captioning_about_title" msgid="3542171637334191563">"ስለመግለጫ ጽሑፍ ምርጫዎች"</string>
     <string name="accessibility_captioning_footer_learn_more_content_description" msgid="5730040700677017706">"ስለመግለጫ ጽሑፍ ምርጫዎች የበለጠ ይወቁ"</string>
     <string name="accessibility_screen_magnification_title" msgid="1211169976144629087">"ማጉላት"</string>
     <string name="accessibility_screen_magnification_shortcut_title" msgid="2387963646377987780">"የማጉላት አቋራጭ"</string>
@@ -3866,8 +3865,8 @@
     <string name="zen_category_apps" msgid="1167374545618451925">"መተግበሪያዎች"</string>
     <string name="zen_category_exceptions" msgid="1316097981052752811">"ማንቂያዎች እና ሌሎች ረብሻዎች"</string>
     <string name="zen_category_duration" msgid="7515850842082631460">"የፈጣን ቅንብሮች የቆይታ ጊዜ"</string>
-    <string name="sound_work_settings" msgid="752627453846309092">"የስራ መገለጫ ድምጾች"</string>
-    <string name="work_use_personal_sounds_title" msgid="7729428677919173609">"የግል መገለጫ ድምጾችን ይጠቀሙ"</string>
+    <string name="sound_work_settings" msgid="752627453846309092">"የሥራ መገለጫ ድምፆች"</string>
+    <string name="work_use_personal_sounds_title" msgid="7729428677919173609">"የግል መገለጫ ድምፆችን ይጠቀሙ"</string>
     <string name="work_use_personal_sounds_summary" msgid="608061627969077231">"እንደ የግል መገለጫዎ ያለ ተመሳሳይ ድምፆችን ይጠቀሙ"</string>
     <string name="work_ringtone_title" msgid="4810802758746102589">"የስራ ማንቂያ ጥሪ ቅላጼ"</string>
     <string name="work_notification_ringtone_title" msgid="2955312017013255515">"ነባሪ የስራ ማሳወቂያ ድምፅ"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"ሚስጥራዊነት ያለው የስራ ማሳወቂያ ይዘት አሳይ"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"አደጋ ሊያስከትል የሚችል የሥራ ይዘትን ደብቅ"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"የእርስዎ መሣሪያ የተቆለፈ ሲሆን እንዴት ነው ማሳወቂያዎችዎ እንዲታዩ የሚፈልጉት?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"በቁልፍ ማያ ገጽ ላይ አሳይ"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"ማያ ገፅ ቁልፍ ላይ ምን እንደሚታይ"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"የታይቷል ማሳወቂያን አሳይ"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"የታይቷል ማሳወቂያ አዶዎች አሳይ"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"የማሳወቂያ አስተባባሪ"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"ዝቅተኛ ቅድሚያ የሚሰጣቸውን ማሳወቂያዎች ቅርቅብ ወይም ጸጥታ ላይ ያድርጉ"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"መተግበሪያዎችን ለማሳወቂያ አስተባባሪ ያስተዳድሩ"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"ሁልጊዜ ቅርቅቦችን ዘርጋ"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"ለሥራ መገለጫ መተግበሪያዎች ያመልክቱ"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"የምናባዊ ዕውነታ አጋዥ አገልግሎቶች"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"ምንም የተጫኑ መተግበሪያዎች እንደ የምናባዊ ዕውነታ አጋዥ አገልግሎቶች ሆነው እንዲሄዱ አልጠየቁም።"</string>
