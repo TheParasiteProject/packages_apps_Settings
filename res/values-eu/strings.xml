@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Eraman gora"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Eraman behera"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Kendu"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Eraman goraino"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Lurraldeko hobespenak"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Ezarri unitate- eta zenbaki-hobespenak"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Eman lurraldeko hobespenen berri aplikazioei zerbitzuak pertsonaliza ditzaten."</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Komunak"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Ezarpen komunak"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Kontrol-zentro modua"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Pantaila blokeatuko widgetak (beta-bertsioa)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Noiz erakutsi nahi duzu automatikoki?"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Inoiz ez"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Kargatzen ari denean"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Jarri Google-ren desgaitasuna duten pertsonentzako laguntza-taldearekin harremanetan"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Erabilerraztasunari buruzko inkesta"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Partekatu iritzia"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Zeinen gustura zaude gai ilunarekin?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Erantzun inkestari"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Partekatu iritzia"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Zeinen gustura zaude luparekin?"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Erakutsi eduki guztia laneko jakinarazpenetan"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Ezkutatu laneko kontuzko informazioa"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Gailua blokeatuta dagoenean, nola ikusi nahi dituzu profileko jakinarazpenak?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Erakutsi pantaila blokeatuan"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Zer erakutsi pantaila blokeatuan"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Erakutsi ikusitako jakinarazpenak"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Erakutsi ikusitako jakinarazpenen ikonoak"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Jakinarazpenen antolatzailea"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Multzokatu lehentasun txikiagoko jakinarazpenak eta desaktibatu haien audioa"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Kudeatu jakinarazpenen antolatzailearekin erabiltzeko aplikazioak"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Zabaldu multzoak beti"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Aplikatu laneko profileko aplikazioetan"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"EBko laguntza-zerbitzuak"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Ez dago EBko laguntza-zerbitzu gisa abiaraztea eskatu duen aplikaziorik instalatuta."</string>

@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Переместить вверх"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Переместить вниз"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Удалить"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Переместить в начало"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Региональные настройки"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Укажите предпочтительные единицы измерения и форматы отображения чисел"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Приложения используют эти параметры для персонализации."</string>
@@ -683,7 +682,7 @@
     <string name="private_space_face_settings_footer" msgid="7722256209563543711">"Используйте фейсконтроль, чтобы разблокировать частное пространство.\n\nВажно!\nДля фейсконтроля можно настроить только одну модель лица. Чтобы добавить новую, сначала удалите текущую.\n\nТелефон может случайно разблокироваться, когда вы на него посмотрите.\n\nЧастное пространство может быть разблокировано, если кто-то поднесет устройство к вашему лицу.\n\nТакже это может произойти, если телефоном воспользуется кто-то очень похожий на вас, например близнец."</string>
     <string name="private_space_face_settings_require_confirmation_details" msgid="5406498664903812249">"Всегда запрашивать подтверждение фейсконтроля"</string>
     <string name="private_space_category_ways_to_unlock" msgid="4356631225316950046">"Способы разблокировки"</string>
-    <string name="private_space_screen_lock_summary" msgid="394837965365561070">"Тот же способ блокировки, что и для экрана устройства"</string>
+    <string name="private_space_screen_lock_summary" msgid="394837965365561070">"Тот же способ разблокировки, что и для экрана"</string>
     <string name="private_space_new_lock_title" msgid="9056139964133004094">"Выбрать другой способ разблокировки частного пространства?"</string>
     <string name="private_space_new_lock_message" msgid="3117703578905489206">"Вам понадобится ввести PIN-код, графический ключ или пароль на следующем экране."</string>
     <string name="private_space_auto_lock_title" msgid="8663409382910601261">"Автоматически блокировать частное пространство"</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Совместные"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Совместные настройки"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Режим домашнего центра"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Виджеты на заблокированном экране (бета)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Когда показывать автоматически"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Никогда"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Во время зарядки"</string>
@@ -1980,14 +1978,14 @@
     <string name="activity_not_found" msgid="5464331414465894254">"Приложение не установлено на телефоне."</string>
     <string name="lock_settings_profile_title" msgid="103605580492566086">"Защита рабочего профиля"</string>
     <string name="lock_settings_profile_screen_lock_title" msgid="3776275029218681815">"Блокировка экрана рабочего профиля"</string>
-    <string name="lock_settings_profile_unification_title" msgid="5777961097706546513">"Использовать один способ блокировки"</string>
-    <string name="lock_settings_profile_unification_summary" msgid="1317553536289481654">"Использовать один способ блокировки для рабочего профиля и экрана устройства"</string>
-    <string name="lock_settings_profile_unification_dialog_title" msgid="5163178097464820825">"Использовать один способ блокировки?"</string>
+    <string name="lock_settings_profile_unification_title" msgid="5777961097706546513">"Использовать один способ разблокировки"</string>
+    <string name="lock_settings_profile_unification_summary" msgid="1317553536289481654">"Использовать один способ разблокировки для рабочего профиля и экрана устройства"</string>
+    <string name="lock_settings_profile_unification_dialog_title" msgid="5163178097464820825">"Использовать один способ разблокировки?"</string>
     <string name="lock_settings_profile_unification_dialog_body" msgid="1222905637428672355">"Ваш рабочий профиль и экран устройства будут использовать один способ блокировки. Он должен соответствовать требованиям вашей организации."</string>
     <string name="lock_settings_profile_unification_dialog_uncompliant_body" msgid="8844682343443755895">"Текущие настройки блокировки экрана не соответствуют правилам безопасности вашей организации. Вы можете установить для устройства и рабочего профиля один способ блокировки, главное, чтобы он отвечал требованиям организации."</string>
-    <string name="lock_settings_profile_unification_dialog_confirm" msgid="6276915393736137843">"Использовать один способ блокировки"</string>
-    <string name="lock_settings_profile_unification_dialog_uncompliant_confirm" msgid="8509287115116369677">"Использовать один способ блокировки"</string>
-    <string name="lock_settings_profile_unified_summary" msgid="777095092175037385">"Тот же способ блокировки, что и для экрана устройства"</string>
+    <string name="lock_settings_profile_unification_dialog_confirm" msgid="6276915393736137843">"Использовать один способ разблокировки"</string>
+    <string name="lock_settings_profile_unification_dialog_uncompliant_confirm" msgid="8509287115116369677">"Использовать один способ разблокировки"</string>
+    <string name="lock_settings_profile_unified_summary" msgid="777095092175037385">"Тот же способ разблокировки, что и для экрана устройства"</string>
     <string name="manageapplications_settings_title" msgid="9198876415524237657">"Управление приложениями"</string>
     <string name="applications_settings" msgid="1941993743933425622">"Сведения о приложениях"</string>
     <string name="applications_settings_header" msgid="3154670675856048015">"Настройки приложения"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Связаться со службой поддержки проекта \"Google Специальные возможности\""</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Опрос о доступности"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Поделитесь мнением"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Насколько вас устраивает тёмная тема?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Пройти опрос"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Поделитесь мнением"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Насколько вас устраивает функция \"Увеличение\"?"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Показывать рабочие уведомления полностью"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Скрыть конфиденциальные рабочие данные"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Выберите режим уведомлений профиля на заблокированном устройстве."</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Показывать на заблокированном экране"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Что показывать на заблокированном экране"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Показывать просмотренные уведомления"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Показывать значки просмотренных уведомлений"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Менеджер уведомлений"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Группируйте уведомления с низким приоритетом и отключайте их звук"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Управление приложениями, для которых настроен менеджер уведомлений"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Всегда разворачивать группу уведомлений"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Применить для приложений в рабочем профиле"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Вспомогательные VR-сервисы"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Установленные приложения не запрашивали доступ для работы в качестве вспомогательного VR-сервиса."</string>
@@ -4296,7 +4293,7 @@
     <string name="zen_mode_trigger_summary_settings_in_app" msgid="4860667191183702601">"Данные и настройки приложения \"<xliff:g id="APP_NAME">%1$s</xliff:g>\""</string>
     <string name="zen_mode_trigger_summary_managed_by_app" msgid="8631011868193102098">"Под управлением приложения \"<xliff:g id="APP_NAME">%1$s</xliff:g>\""</string>
     <string name="zen_mode_confirm_disable_mode_title" msgid="7314998098582325018">"Отключить <xliff:g id="MODE_NAME">%1$s</xliff:g>?"</string>
-    <string name="zen_mode_confirm_disable_message" msgid="2703882646066764140">"Если вы это сделаете, режим никогда не включится."</string>
+    <string name="zen_mode_confirm_disable_message" msgid="2703882646066764140">"Режим перестанет автоматически включаться."</string>
     <string name="zen_mode_action_disable" msgid="3552921561331044881">"Отключить"</string>
     <string name="zen_mode_confirm_enable_mode_title" msgid="6020902148457106017">"Включить <xliff:g id="MODE_NAME">%1$s</xliff:g>?"</string>
     <string name="zen_mode_confirm_enable_message" msgid="8707142927858064775">"Режим может включаться автоматически в зависимости от настроек."</string>

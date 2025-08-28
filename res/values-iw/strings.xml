@@ -190,7 +190,7 @@
     <string name="next_label" msgid="1248293387735652187">"הבא"</string>
     <string name="region_picker_preference_title" msgid="9195149951917299277">"אזור"</string>
     <string name="region_picker_title" msgid="6743800249134439329">"בחירת אזור"</string>
-    <string name="region_picker_sub_title" msgid="7092062110753164836">"לפי האזור שייבחר תוגדר התצוגה של השעה, התאריכים, הטמפרטורה ופרטים נוספים במכשיר."</string>
+    <string name="region_picker_sub_title" msgid="7092062110753164836">"האזור שייבחר יגדיר את התצוגה של השעה, התאריכים, הטמפרטורה ופרטים נוספים במכשיר."</string>
     <string name="suggested_region_title" msgid="2554129334404390153">"הצעות"</string>
     <string name="all_supported_region_title" msgid="4817156933097703066">"כל האזורים"</string>
     <string name="language_picker_title" msgid="4271307478263345133">"שפות"</string>
@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"הזזה למעלה"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"הזזה למטה"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"הסרה"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"העברה לראש הרשימה"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"העדפות פורמט ומידות"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"הגדרת העדפות של יחידות ומספרים"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"הרשאת גישה לאפליקציות להעדפות פורמט ומידות כדי שיתאימו אישית את חוויית המשתמש."</string>
@@ -351,7 +350,7 @@
     <string name="owner_info_settings_edit_text_hint" msgid="841926875876050274">"‏לדוגמה, ה-Android של יוסי."</string>
     <string name="location_settings_title" msgid="8375074508036087178">"מיקום"</string>
     <string name="location_settings_primary_switch_title" msgid="8849081766644685127">"שימוש במיקום"</string>
-    <string name="location_settings_summary_location_off" msgid="4797932754681162262">"כבוי"</string>
+    <string name="location_settings_summary_location_off" msgid="4797932754681162262">"כבויה"</string>
     <string name="location_settings_summary_location_on" msgid="4273299717586679786">"{count,plural, =1{ההגדרה פועלת / לאפליקציה אחת (#) יש גישה למיקום}one{ההגדרה פועלת / ל-# אפליקציות יש גישה למיקום}two{ההגדרה פועלת / ל-# אפליקציות יש גישה למיקום}other{ההגדרה פועלת / ל-# אפליקציות יש גישה למיקום}}"</string>
     <string name="location_settings_loading_app_permission_stats" msgid="6054103701535557342">"בטעינה…"</string>
     <string name="location_settings_footer_general" msgid="3447585552176173502">"אפליקציות עם ההרשאה \"מכשירים בקרבת מקום\" יכולות להעריך את המיקום היחסי של המכשירים המחוברים."</string>
@@ -685,7 +684,7 @@
     <string name="private_space_category_ways_to_unlock" msgid="4356631225316950046">"דרכים לפתיחת הנעילה"</string>
     <string name="private_space_screen_lock_summary" msgid="394837965365561070">"זהה לנעילת המסך במכשיר"</string>
     <string name="private_space_new_lock_title" msgid="9056139964133004094">"רוצה לבחור שיטת נעילה חדשה למרחב הפרטי?"</string>
-    <string name="private_space_new_lock_message" msgid="3117703578905489206">"יהיה עליך להזין את קוד האימות, קו ביטול הנעילה או הסיסמה של המכשיר שלך במסך הבא"</string>
+    <string name="private_space_new_lock_message" msgid="3117703578905489206">"במסך הבא יהיה עליך להזין את קוד האימות, קו פתיחת הנעילה או הסיסמה של המכשיר שלך"</string>
     <string name="private_space_auto_lock_title" msgid="8663409382910601261">"נעילת המרחב הפרטי באופן אוטומטי"</string>
     <string name="private_space_auto_lock_page_summary" msgid="8679844515655838654">"אפשר לנעול את המרחב הפרטי באופן אוטומטי אם לא משתמשים במכשיר במשך פרק זמן מסוים"</string>
     <string name="private_space_auto_lock_every_time" msgid="1215061855836002830">"בכל פעם שהמכשיר ננעל"</string>
@@ -1539,7 +1538,7 @@
     <string name="force_bold_text" msgid="4620929631102086716">"טקסט מודגש"</string>
     <string name="title_font_size" msgid="570613010306330622">"גודל הגופן"</string>
     <string name="short_summary_font_size" msgid="8444689613442419978">"הגדלה או הקטנה של הטקסט"</string>
-    <string name="category_title_display_text_size" msgid="4234285020731751694">"אפשרויות הגודל"</string>
+    <string name="category_title_display_text_size" msgid="4234285020731751694">"גדלים"</string>
     <string name="category_title_text_style" msgid="5905015084935695611">"אפשרויות הסגנון"</string>
     <string name="sim_lock_settings" msgid="7331982427303002613">"‏הגדרות נעילת כרטיס ה-SIM"</string>
     <string name="sim_lock_settings_category" msgid="6475255139493877786">"‏נעילת כרטיס SIM"</string>
@@ -1893,9 +1892,9 @@
     <string name="lockpassword_confirm_your_password_header" msgid="4988519671035171367">"צריך להזין את סיסמת המכשיר"</string>
     <string name="lockpassword_reenter_your_password_header" msgid="7257189484651655897">"צריך להזין את הסיסמה שוב"</string>
     <string name="lockpassword_reenter_your_profile_password_header" msgid="3812040127714827685">"צריך להזין מחדש את הסיסמה לפרופיל העבודה"</string>
-    <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"צריל להזין את הסיסמה של פרופיל העבודה"</string>
-    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"צריך להזין את קו ביטול הנעילה של המכשיר"</string>
-    <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"הזנת קו פתיחת הנעילה לעבודה"</string>
+    <string name="lockpassword_confirm_your_work_password_header" msgid="4647071231702288305">"צריך להזין את הסיסמה של פרופיל העבודה"</string>
+    <string name="lockpassword_confirm_your_pattern_header" msgid="2473024535487015289">"צריך להזין את קו פתיחת הנעילה של המכשיר"</string>
+    <string name="lockpassword_confirm_your_work_pattern_header" msgid="2668883108969165844">"צריך להזין את קו פתיחת הנעילה לעבודה"</string>
     <string name="lockpassword_confirm_your_pin_header" msgid="541025103892074808">"צריך להזין את קוד האימות של המכשיר"</string>
     <string name="lockpassword_reenter_your_pin_header" msgid="373337443492549650">"צריך להזין שוב את קוד האימות"</string>
     <string name="lockpassword_reenter_your_profile_pin_header" msgid="2890233614560435538">"צריך להזין מחדש את קוד האימות לעבודה"</string>
@@ -2228,7 +2227,7 @@
     <string name="trackpad_settings_summary" msgid="3369855644136760402">"מהירות המצביע, תנועות"</string>
     <string name="trackpad_tap_to_click" msgid="1938230946542070746">"נוגעים נגיעה קלה"</string>
     <string name="trackpad_tap_dragging_title" msgid="4198317837427535015">"לחיצה וגרירה כדי להזיז פריטים"</string>
-    <string name="trackpad_tap_dragging_summary" msgid="5605534150661601073">"כדי להזיז פריטים, אפשר יהיה ללחוץ לחיצה כפולה ולגרור את האצבע על לוח המגע"</string>
+    <string name="trackpad_tap_dragging_summary" msgid="5605534150661601073">"הזזת פריטים על ידי לחיצה כפולה וגרירה של האצבע על לוח המגע"</string>
     <string name="trackpad_touchpad_gesture_title" msgid="7568052847609914436">"תנועות בלוח המגע"</string>
     <string name="trackpad_touchpad_gesture_summary" msgid="6256074591395359124">"התאמה אישית של תנועות ניווט נפרדות בלוח המגע"</string>
     <string name="trackpad_reverse_scrolling_title" msgid="422877284529360866">"גלילה הפוכה"</string>
@@ -2348,7 +2347,7 @@
     <string name="user_dict_settings_add_word_option_name" msgid="2686051785623698231">"מילה:"</string>
     <string name="user_dict_settings_add_shortcut_option_name" msgid="5722204336242646866">"קיצור דרך:"</string>
     <string name="user_dict_settings_add_locale_option_name" msgid="2117468247460253346">"שפה:"</string>
-    <string name="user_dict_settings_add_word_hint" msgid="4560494723256242785">"יש להקליד מילה"</string>
+    <string name="user_dict_settings_add_word_hint" msgid="4560494723256242785">"צריך להקליד מילה"</string>
     <string name="user_dict_settings_add_shortcut_hint" msgid="6209624157217434640">"קיצור דרך אופציונלי"</string>
     <string name="user_dict_settings_edit_dialog_title" msgid="316493656442362284">"עריכת מילה"</string>
     <string name="user_dict_settings_context_menu_edit_title" msgid="4909198741914531509">"עריכה"</string>
@@ -2419,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"‏פנייה לתמיכה של Google באנשים עם מוגבלויות"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"סקר בנושא נגישות"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"שיתוף משוב"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"מה מידת שביעות הרצון שלך מהעיצוב הכהה?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"למילוי הסקר"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"שיתוף משוב"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"מה מידת שביעות הרצון שלך מההגדלה?"</string>
@@ -2505,9 +2505,9 @@
     <string name="accessibility_screen_magnification_navbar_short_summary" msgid="4885018322430052037">"לחיצה על כפתור כדי לשנות את מרחק התצוגה"</string>
     <string name="accessibility_screen_magnification_intro_text" msgid="3856180549393526339">"רוצה לראות טוב יותר את התוכן? התכונה הזו מגדילה את התצוגה"</string>
     <string name="accessibility_screen_magnification_summary" msgid="8267672508057326959">"‏&lt;b&gt;כדי להגדיל את התצוגה:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. משתמשים בקיצור הדרך כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על המסך&lt;br/&gt; {2,number,integer}. גוררים 2 אצבעות על המסך כדי לזוז בו&lt;br/&gt; {3,number,integer}. פותחים או סוגרים 2 אצבעות על המסך כדי לשנות את מרחק התצוגה&lt;br/&gt; {4,number,integer}. משתמשים בקיצור הדרך כדי להפסיק את ההגדלה&lt;br/&gt;&lt;br/&gt; &lt;b&gt;כדי להגדיל את התצוגה באופן זמני:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. מוודאים שסוג ההגדלה הוא \"מסך מלא\"&lt;br/&gt; {1,number,integer}. משתמשים בקיצור הדרך כדי להתחיל בהגדלה&lt;br/&gt; {2,number,integer}. לוחצים לחיצה ארוכה במקום כלשהו במסך&lt;br/&gt; {3,number,integer}. גוררים את האצבע על המסך כדי לזוז בו&lt;br/&gt; {4,number,integer}. כדי להפסיק את ההגדלה, מרימים את האצבע"</string>
-    <string name="accessibility_screen_magnification_keyboard_summary" msgid="5376202602229533488">"‏‫&lt;b&gt;כדי להגדיל את התצוגה:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. אפשר להשתמש בקיצור דרך או ללחוץ על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + M כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + מקשי החצים כדי לנוע במסך&lt;br/&gt; {2,number,integer}. כדי להתאים את מרחק התצוגה, לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; ואז על + או על -‏&lt;br/&gt; {3,number,integer}. כדי להפסיק את ההגדלה, אפשר להשתמש בקיצור דרך או ב-&lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + M"</string>
-    <string name="accessibility_screen_magnification_keyboard_shortcuts_flag_off_summary" msgid="4390658165464462006">"‏‫&lt;b&gt;כדי להגדיל את התצוגה:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. משתמשים בקיצור דרך כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + מקשי החצים כדי לנוע במסך&lt;br/&gt; {2,number,integer}. כדי להתאים את מרחק התצוגה, לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; ואז על + או על -‏&lt;br/&gt; {3,number,integer}. משתמשים בקיצור דרך כדי להפסיק את ההגדלה"</string>
-    <string name="accessibility_screen_magnification_keyboard_touch_summary" msgid="7623681880843239997">"‏‫&lt;b&gt;מקלדת&lt;/b&gt;&lt;br/&gt; {0,number,integer}. אפשר להשתמש בקיצור דרך או ללחוץ על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + M כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + מקשי החצים כדי לנוע במסך&lt;br/&gt; {2,number,integer}. כדי להתאים את מרחק התצוגה, לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; ואז על + או על -‏&lt;br/&gt; {3,number,integer}. אפשר להשתמש בקיצור דרך או ב-&lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + M כדי להפסיק את ההגדלה&lt;br/&gt;&lt;br/&gt; &lt;b&gt;מסך מגע&lt;/b&gt;&lt;br/&gt; כדי להגדיל את התצוגה:&lt;br/&gt; {0,number,integer}. משתמשים בקיצור דרך כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על המסך&lt;br/&gt; {2,number,integer}. גוררים 2 אצבעות על המסך כדי לזוז בו&lt;br/&gt; {3,number,integer}. עושים תנועת צביטה עם 2 אצבעות כדי לשנות את מרחק התצוגה&lt;br/&gt; {4,number,integer}. משתמשים בקיצור דרך כדי להפסיק את ההגדלה&lt;br/&gt;&lt;br/&gt; כדי להתקרב באופן זמני:&lt;br/&gt; {0,number,integer}. מוודאים שסוג ההגדלה הוא \"מסך מלא\"&lt;br/&gt; {1,number,integer}. משתמשים בקיצור דרך כדי להתחיל בהגדלה&lt;br/&gt; {2,number,integer}. לוחצים לחיצה ארוכה במקום כלשהו במסך&lt;br/&gt; {3,number,integer}. גוררים אצבע על המסך כדי לזוז בו&lt;br/&gt; {4,number,integer}. מרימים את האצבע כדי להפסיק את ההגדלה"</string>
+    <string name="accessibility_screen_magnification_keyboard_summary" msgid="5376202602229533488">"‏‫&lt;b&gt;כדי להגדיל את התצוגה:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. אפשר ללחוץ על מקש קיצור או על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + M כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + מקשי החצים כדי לנוע במסך&lt;br/&gt; {2,number,integer}. כדי לכוונן את מרחק התצוגה, לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; ואז על + או על -‏&lt;br/&gt; {3,number,integer}. כדי להפסיק את ההגדלה, אפשר ללחוץ על מקש קיצור או על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + M"</string>
+    <string name="accessibility_screen_magnification_keyboard_shortcuts_flag_off_summary" msgid="4390658165464462006">"‏‫&lt;b&gt;כדי להגדיל את התצוגה:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. לוחצים על מקש קיצור כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + מקשי החצים כדי לנוע במסך&lt;br/&gt; {2,number,integer}. כדי לכוונן את מרחק התצוגה, לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; ואז על + או על -‏&lt;br/&gt; {3,number,integer}. לוחצים על מקש קיצור כדי להפסיק את ההגדלה"</string>
+    <string name="accessibility_screen_magnification_keyboard_touch_summary" msgid="7623681880843239997">"‏‫&lt;b&gt;מקלדת&lt;/b&gt;&lt;br/&gt; {0,number,integer}. אפשר ללחוץ על מקש קיצור או על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + M כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + מקשי החצים כדי לנוע במסך&lt;br/&gt; {2,number,integer}. כדי לכוונן את מרחק התצוגה, לוחצים על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; ואז על + או על -‏&lt;br/&gt; {3,number,integer}. אפשר ללחוץ על מקש קיצור או על &lt;xliff:g id=meta&gt;%1$s&lt;/xliff:g&gt; + &lt;xliff:g id=alt&gt;%2$s&lt;/xliff:g&gt; + M כדי להפסיק את ההגדלה&lt;br/&gt;&lt;br/&gt; &lt;b&gt;מסך מגע&lt;/b&gt;&lt;br/&gt; כדי להגדיל את התצוגה:&lt;br/&gt; {0,number,integer}. לוחצים על מקש קיצור כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על המסך&lt;br/&gt; {2,number,integer}. גוררים 2 אצבעות על המסך כדי לזוז בו&lt;br/&gt; {3,number,integer}. עושים תנועת צביטה עם 2 אצבעות כדי לשנות את מרחק התצוגה&lt;br/&gt; {4,number,integer}. לוחצים על מקש קיצור כדי להפסיק את ההגדלה&lt;br/&gt;&lt;br/&gt; כדי להגדיל את התצוגה באופן זמני:&lt;br/&gt; {0,number,integer}. מוודאים שסוג ההגדלה הוא \"מסך מלא\"&lt;br/&gt; {1,number,integer}. לוחצים על מקש קיצור כדי להתחיל בהגדלה&lt;br/&gt; {2,number,integer}. לוחצים לחיצה ארוכה במקום כלשהו במסך&lt;br/&gt; {3,number,integer}. גוררים אצבע על המסך כדי לזוז בו&lt;br/&gt; {4,number,integer}. מרימים את האצבע כדי להפסיק את ההגדלה"</string>
     <string name="accessibility_screen_magnification_summary_one_finger_panning_off" msgid="1779959623535122324">"‏&lt;b&gt;כדי להגדיל את התצוגה:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. משתמשים במקש קיצור כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על המסך&lt;br/&gt; {2,number,integer}. גוררים 2 אצבעות על המסך כדי לזוז בו&lt;br/&gt; {3,number,integer}. עושים תנועת צביטה עם 2 אצבעות כדי לשנות את מרחק התצוגה&lt;br/&gt; {4,number,integer}. אפשר להשתמש במקש קיצור כדי לעצור את ההגדלה&lt;br/&gt;&lt;br/&gt; ניתן גם להגדיל את התצוגה באופן זמני ועוד."</string>
     <string name="accessibility_screen_magnification_summary_one_finger_panning_on" msgid="7323930759240678965">"‏&lt;b&gt;כדי להגדיל את התצוגה:&lt;/b&gt;&lt;br/&gt; {0,number,integer}. משתמשים במקש קיצור כדי להתחיל בהגדלה&lt;br/&gt; {1,number,integer}. לוחצים על המסך&lt;br/&gt; {2,number,integer}. גוררים אצבע אחת או שתיים על המסך כדי לזוז בו&lt;br/&gt; {3,number,integer}. עושים תנועת צביטה עם 2 אצבעות כדי לשנות את מרחק התצוגה&lt;br/&gt; {4,number,integer}. אפשר להשתמש במקש קיצור כדי לעצור את ההגדלה&lt;br/&gt;&lt;br/&gt; ניתן גם להגדיל את התצוגה באופן זמני ועוד."</string>
     <string name="accessibility_screen_magnification_navbar_summary" msgid="807985499898802296">"כשההגדלה מופעלת, ניתן להתקרב למסך.\n\n"<b>"כדי להתקרב,"</b>", מתחילים בהגדלה ולאחר מכן לוחצים במקום כלשהו במסך.\n"<ul><li>"גוררים שתי אצבעות או יותר כדי לגלול"</li>\n<li>"עושים תנועת צביטה עם שתי אצבעות או יותר כדי לשנות את מרחק התצוגה"</li></ul>\n\n<b>"כדי להתקרב באופן זמני"</b>", מתחילים בהגדלה ולאחר מכן, לוחצים לחיצה ארוכה במקום כלשהו במסך.\n"<ul><li>"גוררים כדי לנוע במסך"</li>\n<li>"מרימים את האצבע כדי להתרחק"</li></ul>\n\n"לא ניתן להתקרב באמצעות המקלדת או סרגל הניווט."</string>
@@ -2635,7 +2635,7 @@
     <string name="accessibility_autoclick_intro_text" msgid="8959680635470639347">"אפשר להגדיר קליק אוטומטי בעכבר מחובר כשהסמן מפסיק לזוז למשך זמן מסוים"</string>
     <string name="accessibility_autoclick_description" msgid="6695732131412361101">"הקליק האוטומטי עוזר אם קשה לך ללחוץ על העכבר"</string>
     <string name="accessibility_autoclick_default_title" msgid="2024730028293793490">"הקליק האוטומטי מושבת"</string>
-    <string name="accessibility_autoclick_short_title" msgid="7938302504358912984">"קצר"</string>
+    <string name="accessibility_autoclick_short_title" msgid="7938302504358912984">"לחיצה קצרה יחסית"</string>
     <string name="accessibility_autoclick_short_summary" msgid="4106953930081213514">"0.2 שניות"</string>
     <string name="accessibility_autoclick_medium_title" msgid="3134175117576834320">"בינוני"</string>
     <string name="accessibility_autoclick_medium_summary" msgid="1343390686514222871">"0.6 שניות"</string>
@@ -3462,7 +3462,7 @@
     <string name="user_grant_admin" msgid="5942118263054572074">"הגדרת המשתמש הזה כאדמין"</string>
     <string name="user_remove_user" msgid="8468203789739693845">"מחיקת המשתמש"</string>
     <string name="user_enable_calling_and_sms_confirm_title" msgid="4041510268838725520">"‏האם להפעיל שיחות טלפון ו-SMS?"</string>
-    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"‏יבוצע שיתוף של היסטוריית השיחות וה-SMS עם המשתמש הזה."</string>
+    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"‏היסטוריית השיחות וה-SMS תשותף עם המשתמש הזה."</string>
     <string name="user_revoke_admin_confirm_title" msgid="3057842401861731863">"להסיר את הרשאות האדמין?"</string>
     <string name="user_revoke_admin_confirm_message" msgid="9207187319308572958">"אם מסירים את הרשאות האדמין עבור המשתמש הזה, אחד מהאדמינים יוכל להחזיר אותן מאוחר יותר."</string>
     <string name="user_revoke_admin_for_self_confirm_title" msgid="5661292626700927475">"בחרת להסיר את הרשאות האדמין שלך. להמשיך?"</string>
@@ -3867,14 +3867,14 @@
     <string name="zen_category_duration" msgid="7515850842082631460">"כמה זמן פועלות ההגדרות המהירות"</string>
     <string name="sound_work_settings" msgid="752627453846309092">"צלילי פרופיל עבודה"</string>
     <string name="work_use_personal_sounds_title" msgid="7729428677919173609">"שימוש בצלילי הפרופיל האישי"</string>
-    <string name="work_use_personal_sounds_summary" msgid="608061627969077231">"שימוש באותם הצלילים מהפרופיל האישי"</string>
+    <string name="work_use_personal_sounds_summary" msgid="608061627969077231">"אותם צלילים כמו בפרופיל האישי"</string>
     <string name="work_ringtone_title" msgid="4810802758746102589">"הרינגטון של הטלפון לפרופיל העבודה"</string>
     <string name="work_notification_ringtone_title" msgid="2955312017013255515">"צליל ברירת המחדל להתראות של פרופיל העבודה"</string>
     <string name="work_alarm_ringtone_title" msgid="3369293796769537392">"צליל ברירת המחדל לשעון מעורר בפרופיל העבודה"</string>
     <string name="work_sound_same_as_personal" msgid="1836913235401642334">"אותו אחד כמו בפרופיל האישי"</string>
     <string name="work_sync_dialog_title" msgid="7810248132303515469">"להשתמש בצלילים מהפרופיל האישי?"</string>
     <string name="work_sync_dialog_yes" msgid="5785488304957707534">"אישור"</string>
-    <string name="work_sync_dialog_message" msgid="5066178064994040223">"בפרופיל העבודה שלך ייעשה שימוש באותם הצלילים מהפרופיל האישי"</string>
+    <string name="work_sync_dialog_message" msgid="5066178064994040223">"הצלילים בפרופיל העבודה שלך יהיו זהים לצלילים בפרופיל האישי"</string>
     <string name="configure_notification_settings" msgid="1492820231694314376">"התראות"</string>
     <string name="notification_dashboard_summary" msgid="7530169251902320652">"היסטוריית ההתראות, שיחות"</string>
     <string name="conversation_notifs_category" msgid="2549844862379963273">"שיחה"</string>
@@ -4104,7 +4104,7 @@
     <string name="interact_across_profiles_summary_1" msgid="6093976896137600231">"לאפליקציות מקושרות יש הרשאות משותפות, ויש להן גישה לנתונים שבכל אחת מהן."</string>
     <string name="interact_across_profiles_summary_2" msgid="505748305453633885">"‏כדאי לקשר רק אפליקציות מהימנות, שלא ישותף באמצעותן מידע אישי עם אדמין ממחלקת IT."</string>
     <string name="interact_across_profiles_summary_3" msgid="444428694843299854">"תמיד אפשר לנתק אפליקציות בהגדרות הפרטיות של המכשיר."</string>
-    <string name="interact_across_profiles_consent_dialog_title" msgid="8530621211216508681">"האם מקובל עליך לחשוף את המידע האישי שלך לאפליקציה <xliff:g id="NAME">%1$s</xliff:g>, שמיועדת לעבודה?"</string>
+    <string name="interact_across_profiles_consent_dialog_title" msgid="8530621211216508681">"אפשר לחשוף את המידע האישי שלך לאפליקציה <xliff:g id="NAME">%1$s</xliff:g>, שמיועדת לעבודה?"</string>
     <string name="interact_across_profiles_consent_dialog_summary" msgid="3949870271562055048">"‏כדאי לקשר רק אפליקציות מהימנות, שלא ישותף באמצעותן מידע אישי עם אדמין ממחלקת IT."</string>
     <string name="interact_across_profiles_consent_dialog_app_data_title" msgid="8436318876213958940">"נתוני האפליקציה"</string>
     <string name="interact_across_profiles_consent_dialog_app_data_summary" msgid="6057019384328088311">"האפליקציה הזו תוכל לגשת לנתונים של האפליקציה <xliff:g id="NAME">%1$s</xliff:g> בפרופיל האישי."</string>
@@ -4254,7 +4254,7 @@
     <string name="zen_mode_bypassing_apps_footer" msgid="1454862989340760124">"האנשים שבחרת יוכלו ליצור איתך קשר, גם אם לא אישרת לאפליקציות להפריע"</string>
     <string name="zen_mode_bypassing_apps_subtext" msgid="5258652366929842710">"{count,plural,offset:2 =0{אף אפליקציה לא יכולה להפריע}=1{האפליקציה {app_1} יכולה להפריע}=2{האפליקציות {app_1} וגם {app_2} יכולות להפריע}=3{האפליקציות {app_1}, {app_2} וגם {app_3} יכולות להפריע}one{האפליקציות {app_1}, {app_2} ועוד # יכולות להפריע}other{האפליקציות {app_1}, {app_2} ועוד # יכולות להפריע}}"</string>
     <string name="zen_mode_bypassing_apps_title" msgid="371050263563164059">"אפליקציות"</string>
-    <string name="zen_mode_bypassing_app_channels_header" msgid="4011017798712587373">"איזה התראות יכולות להפריע"</string>
+    <string name="zen_mode_bypassing_app_channels_header" msgid="4011017798712587373">"אילו התראות יכולות להפריע"</string>
     <string name="zen_mode_bypassing_app_channels_toggle_all" msgid="1449462656358219116">"אישור לכל ההתראות"</string>
     <string name="zen_mode_other_sounds_summary" msgid="8784400697494837032">"{count,plural,offset:2 =0{שום דבר לא יכול להפריע}=1{הקטגוריה {sound_category_1} יכולה להפריע}=2{הקטגוריות {sound_category_1} ו{sound_category_2} יכולות להפריע}=3{הקטגוריות {sound_category_1}, {sound_category_2} ו{sound_category_3} יכולות להפריע}one{הקטגוריות {sound_category_1}, {sound_category_2} ועוד # יכולות להפריע}other{הקטגוריות {sound_category_1}, {sound_category_2} ועוד # יכולות להפריע}}"</string>
     <string name="zen_mode_sounds_none" msgid="6557474361948269420">"שום דבר לא יכול להפריע"</string>
@@ -4293,7 +4293,7 @@
     <string name="zen_mode_trigger_summary_settings_in_app" msgid="4860667191183702601">"המידע וההגדרות של <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="zen_mode_trigger_summary_managed_by_app" msgid="8631011868193102098">"בניהול של <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="zen_mode_confirm_disable_mode_title" msgid="7314998098582325018">"להשבית את <xliff:g id="MODE_NAME">%1$s</xliff:g>?"</string>
-    <string name="zen_mode_confirm_disable_message" msgid="2703882646066764140">"המצב הזה אף פעם לא יופעל כשהוא מושבת"</string>
+    <string name="zen_mode_confirm_disable_message" msgid="2703882646066764140">"אם המצב הזה מושבת, הוא לא יופעל"</string>
     <string name="zen_mode_action_disable" msgid="3552921561331044881">"השבתה"</string>
     <string name="zen_mode_confirm_enable_mode_title" msgid="6020902148457106017">"להפעיל את <xliff:g id="MODE_NAME">%1$s</xliff:g>?"</string>
     <string name="zen_mode_confirm_enable_message" msgid="8707142927858064775">"יכול להיות שהמצב הזה יופעל באופן אוטומטי. תלוי בהגדרות שלו."</string>
@@ -4594,7 +4594,7 @@
     <string name="disabled_by_policy_title_parental_controls" msgid="2688144174399968452">"בקשת עזרה"</string>
     <string name="disabled_by_policy_content_parental_controls" msgid="7645416358554171082">"כדי לשנות את ההגדרה הזו, מי שהגדיר/ה את אמצעי הבקרה במכשיר או בחשבון שלך צריך/ה לשנות אותה עבורך."</string>
     <string name="disabled_by_policy_parental_consent" msgid="9166060049019018978">"צריך להעביר את הטלפון להורה כדי לאשר את שינוי ההגדרה הזו."</string>
-    <string name="default_admin_support_msg" msgid="8816296554831532033">"‏למידע נוסף, אפשר ליצור קשר עם מנהל ה-IT"</string>
+    <string name="default_admin_support_msg" msgid="8816296554831532033">"‏למידע נוסף, אפשר ליצור קשר עם האדמין ממחלקת ה-IT"</string>
     <string name="admin_support_more_info" msgid="8407433155725898290">"פרטים נוספים"</string>
     <string name="admin_profile_owner_message" msgid="8860709969532649195">"מנהל המכשיר יכול לפקח על אפליקציות ונתונים המשויכים לפרופיל העבודה שלך ולנהל אותם, כולל הגדרות, הרשאות, גישה ארגונית, פעילות הרשת ומידע על מיקום המכשיר."</string>
     <string name="admin_profile_owner_user_message" msgid="4929926887231544950">"מנהל המכשיר יכול לפקח על אפליקציות ונתונים המשויכים למשתמש זה ולנהל אותם, כולל הגדרות, הרשאות, גישה ארגונית, פעילות הרשת ומידע על מיקום המכשיר."</string>

@@ -2413,7 +2413,7 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Contact Google Disability Support"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Accessibility Survey"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Share your feedback"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"How satisfied are you with Dark theme?"</string>
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"How satisfied are you with dark theme?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Take survey"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Share your feedback"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"How satisfied are you with magnification?"</string>

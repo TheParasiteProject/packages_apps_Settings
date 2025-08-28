@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Премести нагоре"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Премести надолу"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Отстрани"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Премести најгоре"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Регионални поставки"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Одредете поставки за мерни единици и броеви"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Дозволете им на апликациите да пристапуваат до вашите регионални поставки за да ви овозможат персонализирано доживување."</string>
@@ -449,7 +448,7 @@
     <string name="security_settings_fingerprint_preference_title" msgid="2484965173528415458">"Отпечаток"</string>
     <string name="security_settings_fingerprint_settings_preferences_category" msgid="8975029409126780752">"При користење „Отклучување со отпечаток“"</string>
     <string name="security_settings_work_fingerprint_preference_title" msgid="2076006873519745979">"Отпечаток за работен профил"</string>
-    <string name="security_settings_work_fingerprint_preference_title_new" msgid="8967333987631878868">"Отпеч. за раб. профил"</string>
+    <string name="security_settings_work_fingerprint_preference_title_new" msgid="8967333987631878868">"Отпечаток за работен профил"</string>
     <string name="fingerprint_check_enrolled_title" msgid="1007921571704991108">"Проверете ги регистрираните отпечатоци"</string>
     <string name="fingerprint_add_title" msgid="1837610443487902050">"Додајте отпечаток"</string>
     <string name="security_settings_fingerprint_preference_summary" msgid="8486134175759676037">"{count,plural, =1{Додаден е отпечаток}one{Додадени се # отпечаток}other{Додадени се # отпечатоци}}"</string>
@@ -2419,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Контактирајте со службата за поддршка за лица со попреченост на Google"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Анкета за пристапност"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Споделете повратни информации"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Колку сте задоволни од „Темната тема“?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Пополнете ја анкетата"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Споделете повратни информации"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Колку сте задоволни од зголемувањето?"</string>
@@ -2490,7 +2490,7 @@
     <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Големина на приказот и текстот"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Големина на фонт, големина на приказ, текст во болд, истакнат текст"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Променете како се прикажува текстот"</string>
-    <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Предмет: дизајни на балони на топол воздух"</string>
+    <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Предмет: Дизајни за балони на топол воздух"</string>
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"Од: Бил"</string>
     <string name="accessibility_text_reading_preview_mail_content" msgid="8078152365771951802">"Добро утро!\n\nСамо сакав да проверам како оди со дизајните. Дали ќе бидат готови пред да почнеме да ги правиме новите балони?"</string>
     <string name="accessibility_text_reading_reset_button_title" msgid="5960753279788187669">"Ресетирај поставки"</string>
@@ -4079,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Организатор за известувања"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Групирајте ги и исклучете им го звукот на известувањата со понизок приоритет"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Управувајте со апликации за „Организатор за известувања“"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Секогаш проширувај ги пакетите"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Примени на апликациите во работниот профил"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Помошни услуги за VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Ниедна инсталирана апликација не побара извршување како помошна услуга за VR."</string>

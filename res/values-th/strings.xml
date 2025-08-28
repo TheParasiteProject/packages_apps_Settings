@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"ย้ายขึ้น"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"ย้ายลง"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"นำออก"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"ย้ายไปด้านบนสุด"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"ค่ากำหนดตามพื้นที่"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"ตั้งค่ากำหนดหน่วยและตัวเลข"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"บอกให้แอปทราบค่ากำหนดตามพื้นที่เพื่อให้แอปปรับเปลี่ยนประสบการณ์การใช้งานให้เหมาะกับคุณ"</string>
@@ -1021,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"ใช้การตั้งค่าใหม่ใช่ไหม"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"หากจอแสดงผลไม่ทำงานตามที่คุณต้องการ คุณสามารถเปลี่ยนกลับไปใช้การตั้งค่าก่อนหน้าได้"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"ใช้การตั้งค่า"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"จอแสดงผล: %1$s แตะสองครั้งค้างไว้เพื่อลากหรือดูการดำเนินการที่จะย้าย"</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"ย้ายขึ้น"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"ย้ายลง"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"ย้ายไปทางซ้าย"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"ย้ายไปทางขวา"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"มิเรอร์"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"เปิดใช้การแสดงผลแบบไร้สาย"</string>
@@ -2177,7 +2171,7 @@
     <string name="input_setting_bounce_keys_seekbar_desc" msgid="4575595566548124309">"เวลาเกณฑ์ของ Bounce Key"</string>
     <string name="input_setting_slow_keys_seekbar_desc" msgid="2171726970136563995">"เวลาเกณฑ์ของการเพิ่มระยะเวลาในการกดปุ่ม"</string>
     <string name="slow_keys" msgid="2891452895499690837">"เพิ่มระยะเวลาในการกดปุ่ม"</string>
-    <string name="slow_keys_summary" msgid="3852534180402969185">"เปลี่ยนระยะเวลาที่ต้องกดแป้นค้างไว้ก่อนที่จะลงทะเบียน"</string>
+    <string name="slow_keys_summary" msgid="3852534180402969185">"เปลี่ยนระยะเวลาที่ต้องกดแป้นค้างไว้ก่อนที่ระบบจะนับการกดนั้น"</string>
     <string name="sticky_keys" msgid="7317317044898161747">"คีย์ติดหนึบ"</string>
     <string name="sticky_keys_summary" msgid="1844953803625480623">"กดทีละปุ่มเพื่อใช้แป้นพิมพ์ลัดแทนการกดปุ่มค้างไว้พร้อมกัน"</string>
     <string name="mouse_keys" msgid="6237254627808525540">"แป้นเมาส์"</string>
@@ -2419,7 +2413,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"ติดต่อทีมสนับสนุนคนพิการของ Google"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"แบบสำรวจเกี่ยวกับการช่วยเหลือพิเศษ"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"แชร์ความคิดเห็น"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"คุณพอใจกับธีมมืดมากน้อยเพียงใด"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"ตอบแบบสำรวจ"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"แชร์ความคิดเห็น"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"คุณพอใจกับการขยายมากน้อยเพียงใด"</string>
@@ -2660,7 +2655,7 @@
     <string name="autoclick_revert_to_left_click_title" msgid="6868866422993461739">"ใช้คลิกซ้ายเป็นการดำเนินการเริ่มต้น"</string>
     <string name="autoclick_revert_to_left_click_summary" msgid="9207568192335942225">"เมื่อคุณใช้การดำเนินการอื่น การคลิกอัตโนมัติจะเปลี่ยนกลับไปเป็นการคลิกซ้ายโดยอัตโนมัติ"</string>
     <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"การคลิกอัตโนมัติจะทำงานได้ดีขึ้นเมื่อใช้การไปยังส่วนต่างๆ แบบ 3 ปุ่ม"</string>
-    <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"หากต้องการย้อนกลับไปที่หน้าแรกอย่างง่ายๆ และสลับแอปเมื่อใช้การคลิกอัตโนมัติ ให้ใช้การไปยังส่วนต่างๆ แบบ 3 ปุ่มแทนการไปยังส่วนต่างๆ ด้วยท่าทางสัมผัส"</string>
+    <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"หากต้องการย้อนกลับ ไปที่หน้าแรก และสลับแอปอย่างง่ายๆ เมื่อใช้การคลิกอัตโนมัติ ให้ใช้การไปยังส่วนต่างๆ แบบ 3 ปุ่มแทนการไปยังส่วนต่างๆ ด้วยท่าทางสัมผัส"</string>
     <string name="accessibility_autoclick_keep_gesture_navigation" msgid="5403212927837555942">"ใช้การไปยังส่วนต่างๆ ด้วยท่าทางสัมผัสต่อไป"</string>
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"การตั้งค่าไปยังส่วนต่างๆ"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"การสั่นและการโต้ตอบการสัมผัส"</string>
@@ -5366,7 +5361,7 @@
     <string name="bluetooth_middle_name" msgid="3909371955137442319">"เคส"</string>
     <string name="bluetooth_left_name_expressive" msgid="7849821379224902789">"ซ้าย: <xliff:g id="BATTERY_PERCENTAGE">%1$s</xliff:g>"</string>
     <string name="bluetooth_right_name_expressive" msgid="4275494318479565567">"ขวา: <xliff:g id="BATTERY_PERCENTAGE">%1$s</xliff:g>"</string>
-    <string name="bluetooth_middle_name_expressive" msgid="1370173488986566538">"เคส: <xliff:g id="BATTERY_PERCENTAGE">%1$s</xliff:g>"</string>
+    <string name="bluetooth_middle_name_expressive" msgid="1370173488986566538">"กล่อง: <xliff:g id="BATTERY_PERCENTAGE">%1$s</xliff:g>"</string>
     <string name="bluetooth_left_content_description_expressive" msgid="6614501337897763068">"ซ้าย แบตเตอรี่: <xliff:g id="BATTERY_PERCENTAGE">%1$s</xliff:g>"</string>
     <string name="bluetooth_right_content_description_expressive" msgid="5612624028099845252">"ขวา แบตเตอรี่: <xliff:g id="BATTERY_PERCENTAGE">%1$s</xliff:g>"</string>
     <string name="bluetooth_middle_content_description_expressive" msgid="5331036693430634851">"เคส แบตเตอรี่: <xliff:g id="BATTERY_PERCENTAGE">%1$s</xliff:g>"</string>
@@ -5956,12 +5951,9 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"เกิดข้อผิดพลาดขณะพยายามลบ PIN"</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"ภาพเคลื่อนไหวสำหรับฟีเจอร์<xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"เปิดการควบคุมไม่ได้"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"เกิดข้อผิดพลาด"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"ลองอีกครั้งในภายหลัง"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"ย้อนกลับ"</string>
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"การตรวจสอบตัวตนพร้อมใช้งานในแอปเพิ่มเติม"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"คุณรักษาความปลอดภัยให้กับการปกป้องข้อมูลระบุตัวตนได้ในแอปที่เสนอการปลดล็อกด้วยลายนิ้วมือหรือใบหน้าเพื่อระบุตัวตนของคุณ"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"ดูรายละเอียด"</string>

@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Дээш зөөх"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Доош зөөх"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Хасах"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Дээд хэсэг рүү зөөх"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Бүс нутгийн тохиргоо"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Нэгж болон тооны сонголтыг тохируулна уу"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Аппуудад бүс нутгийн тохиргоогоо мэдэгдсэнээр тэд таны хэрэглээг хувийн болгох боломжтой."</string>
@@ -2164,7 +2163,7 @@
     <string name="keyboard_a11y_category" msgid="8230758278046841469">"Хандалт"</string>
     <string name="physical_keyboard_title" msgid="3328134097512350958">"Биет гар"</string>
     <string name="physical_keyboard_layout_picker_title" msgid="4526600767648916256">"Биет гарын бүдүүвч сонгогч"</string>
-    <string name="bounce_keys" msgid="7419450970351743904">"Ойх түлхүүрүүд"</string>
+    <string name="bounce_keys" msgid="7419450970351743904">"Ойх товч"</string>
     <string name="bounce_keys_summary" msgid="8890925059943636911">"Нэг товчны давтагдсан шуурхай даралтыг үл хэрэгсэнэ"</string>
     <string name="bounce_keys_dialog_title" msgid="1090578395028456023">"Ойх товчны саатал"</string>
     <string name="bounce_keys_dialog_subtitle" msgid="6804676895876861863">"Гар давтагдсан товч даралтыг хэр удаан үл хэрэгсэхийг сонгоно уу"</string>
@@ -2178,8 +2177,8 @@
     <string name="input_setting_slow_keys_seekbar_desc" msgid="2171726970136563995">"Удаан товчны босгын хугацаа"</string>
     <string name="slow_keys" msgid="2891452895499690837">"Удаан товчнууд"</string>
     <string name="slow_keys_summary" msgid="3852534180402969185">"Товчийг бүртгэхээс өмнө та тухайн товчийг хэр удаан дарах шаардлагатайг өөрчилнө"</string>
-    <string name="sticky_keys" msgid="7317317044898161747">"Бэхэлсэн түлхүүрүүд"</string>
-    <string name="sticky_keys_summary" msgid="1844953803625480623">"Товчлолд товчлууруудыг хамтад нь удаан дарахын оронд нэг удаад нэг товчлуур дарна уу"</string>
+    <string name="sticky_keys" msgid="7317317044898161747">"Бэхэлсэн товч"</string>
+    <string name="sticky_keys_summary" msgid="1844953803625480623">"Товчлолд товчнуудыг хамтад нь удаан дарахын оронд нэг удаад нэг товч дарна уу"</string>
     <string name="mouse_keys" msgid="6237254627808525540">"Хулганын товч"</string>
     <string name="mouse_keys_main_title" msgid="3570638931365221460">"Хулганын товчийг ашиглах"</string>
     <string name="accessibility_mouse_keys_shortcut_title" msgid="7621635104533584115">"Хулганын товчнуудын товчлол"</string>
@@ -2346,10 +2345,10 @@
     <string name="user_dict_settings_add_dialog_less_options" msgid="100432503633458156">"Цөөн сонголт"</string>
     <string name="user_dict_settings_add_dialog_confirm" msgid="1866751313790655088">"OK"</string>
     <string name="user_dict_settings_add_word_option_name" msgid="2686051785623698231">"Үг:"</string>
-    <string name="user_dict_settings_add_shortcut_option_name" msgid="5722204336242646866">"Товчилбор:"</string>
+    <string name="user_dict_settings_add_shortcut_option_name" msgid="5722204336242646866">"Товчлол:"</string>
     <string name="user_dict_settings_add_locale_option_name" msgid="2117468247460253346">"Хэл:"</string>
     <string name="user_dict_settings_add_word_hint" msgid="4560494723256242785">"Үг оруулна уу"</string>
-    <string name="user_dict_settings_add_shortcut_hint" msgid="6209624157217434640">"Зайлшгүй биш товчилбор"</string>
+    <string name="user_dict_settings_add_shortcut_hint" msgid="6209624157217434640">"Зайлшгүй биш товчлол"</string>
     <string name="user_dict_settings_edit_dialog_title" msgid="316493656442362284">"Үг засах"</string>
     <string name="user_dict_settings_context_menu_edit_title" msgid="4909198741914531509">"Засах"</string>
     <string name="user_dict_settings_context_menu_delete_title" msgid="651550824433043545">"Устгах"</string>
@@ -2419,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google Disability Support-той холбогд"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Хүртээмжтэй байдлын судалгаа"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Санал хүсэлтээ хуваалцах"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Та Бараан загварт хэр сэтгэл хангалуун байна вэ?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Судалгаа бөглөх"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Санал хүсэлтээ хуваалцах"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Та томруулахад хэр сэтгэл хангалуун байна вэ?"</string>
@@ -2494,8 +2494,8 @@
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"Хэнээс: Билл"</string>
     <string name="accessibility_text_reading_preview_mail_content" msgid="8078152365771951802">"Өглөөний мэнд!\n\nБи зүгээр л загвар ямар болж байгааг мэдэхийг хүссэн юм. Бид шинэ бөмбөлөг барьж эхлэхээс өмнө тэд бэлэн болох уу?"</string>
     <string name="accessibility_text_reading_reset_button_title" msgid="5960753279788187669">"Тохиргоог шинэчлэх"</string>
-    <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"Дэлгэцийн хэмжээ болон текстийн тохиргоог шинэчилсэн"</string>
-    <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"Дэлгэцийн хэмжээ болон текстийг шинэчлэх үү?"</string>
+    <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"Үзүүлэх хэмжээ болон текстийн тохиргоог шинэчилсэн"</string>
+    <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"Үзүүлэх хэмжээ болон текстийг шинэчлэх үү?"</string>
     <string name="accessibility_text_reading_confirm_dialog_reset_button" msgid="8215800137850243736">"Шинэчлэх"</string>
     <string name="accessibility_text_reading_conversation_message_1" msgid="7883952203831957831">"Амралтын өдрүүдээр ямар нэг төлөвлөгөө байна уу?"</string>
     <string name="accessibility_text_reading_conversation_message_2" msgid="8112160435318635856">"Далайн эрэг рүү явна. Цуг явах уу?"</string>
@@ -3760,7 +3760,7 @@
     <string name="sound_patterns_category_title" msgid="4290495769747444271">"Дууны загвар"</string>
     <string name="sound_audio_category_title" msgid="3445871661303518618">"Аудио"</string>
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Системийн дуу, чичиргээ"</string>
-    <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Ажлын профайлын дуу чимээ"</string>
+    <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Ажлын профайлын ая"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Шууд тайлбар"</string>
     <string name="live_caption_summary" msgid="7290150167089515457">"Дуудлага, видео болон бусад медиад тайлбар авна"</string>
     <string name="live_caption_on_summary" msgid="8921561021882989495">"Асаалттай / Дуудлага, видео болон бусад медиад тайлбар авна"</string>
@@ -4079,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Мэдэгдэл цэгцлэгч"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Чухал биш мэдэгдлүүдийг багцалж, чимээгүй болгоорой"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Мэдэгдэл цэгцлэгчийн аппыг удирдах"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Багцуудыг үргэлж дэлгэх"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Ажлын профайлын аппад ашиглах"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR туслагч үйлчилгээ"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Суулгасан апп-с VR туслагч үйлчилгээгээр ажиллах хүсэлт гаргаагүй байна."</string>
@@ -4567,7 +4566,7 @@
     <string name="external_source_switch_title" msgid="101571983954849473">"Энэ эх сурвалжаас зөвшөөрөх"</string>
     <string name="camera_gesture_title" msgid="5559439253128696180">"Камер нээхийн тулд бугуйгаа 2 удаа эргүүлэх"</string>
     <string name="camera_gesture_desc" msgid="7557645057320805328">"Бугуйгаа 2 удаа эргүүлэн камерын аппыг нээгээрэй"</string>
-    <string name="screen_zoom_title" msgid="6928045302654960559">"Дэлгэцийн хэмжээ"</string>
+    <string name="screen_zoom_title" msgid="6928045302654960559">"Үзүүлэх хэмжээ"</string>
     <string name="screen_zoom_short_summary" msgid="756254364808639194">"Бүгдийг илүү том эсвэл жижиг болгоно уу"</string>
     <string name="screen_zoom_keywords" msgid="5964023524422386592">"дэлгэцийн нягтрал, дэлгэцийг томруулах, хэмжих, хэмжээс"</string>
     <string name="screen_zoom_preview_title" msgid="5288355628444562735">"Урьдчилж харах"</string>
@@ -5430,7 +5429,7 @@
     <string name="sim_combination_warning_notification_title" msgid="1365401631492986487">"SIM хослолд асуудал гарлаа"</string>
     <string name="dual_cdma_sim_warning_notification_summary" msgid="2826474790710586487">"<xliff:g id="OPERATOR_NAMES">%1$s</xliff:g>-г ашигласнаар функцийг хязгаарлаж болзошгүй. Нэмэлт мэдээлэл авахын тулд товшино уу."</string>
     <string name="dual_cdma_sim_warning_notification_channel_title" msgid="1049161096896074364">"SIM хослол"</string>
-    <string name="work_policy_privacy_settings" msgid="2702644843505242596">"Таны ажлын удирдамжийн мэдээлэл"</string>
+    <string name="work_policy_privacy_settings" msgid="2702644843505242596">"Таны ажлын бодлогын мэдээлэл"</string>
     <string name="work_policy_privacy_settings_summary" msgid="690118670737638405">"Танай IT админы удирддаг тохиргоо"</string>
     <string name="track_frame_time_keywords" msgid="7885340257945922239">"GPU"</string>
     <string name="enable_16k_pages" msgid="1758111531461408337">"16 кБ хуудасны хэмжээтэй ачаалах"</string>

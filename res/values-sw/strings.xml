@@ -326,7 +326,7 @@
     <string name="date_time_search_time_zone" msgid="7373967602009974399">"Tafuta saa za eneo"</string>
     <string name="date_time_set_date_title" msgid="7624166157167528407">"Tarehe"</string>
     <string name="date_time_search_region" msgid="1364133854952610919">"Tafuta eneo"</string>
-    <string name="date_time_select_region" msgid="5449345333305056072">"Ukanda"</string>
+    <string name="date_time_select_region" msgid="5449345333305056072">"Eneo"</string>
     <string name="date_time_select_fixed_offset_time_zones" msgid="2130108030162342594">"Tofauti ya saa za GMT"</string>
     <string name="zone_info_exemplar_location_and_offset" msgid="2186042522225153092">"<xliff:g id="EXEMPLAR_LOCATION">%1$s</xliff:g> (<xliff:g id="OFFSET">%2$s</xliff:g>)"</string>
     <string name="zone_info_offset_and_name" msgid="3960192548990990152">"<xliff:g id="TIME_TYPE">%2$s</xliff:g> (<xliff:g id="OFFSET">%1$s</xliff:g>)"</string>
@@ -1520,8 +1520,8 @@
     <string name="low_light_display_behavior_low_light_clock_dream" msgid="2235561363691252383">"Saa yenye mwangaza hafifu"</string>
     <string name="low_light_display_behavior_summary_on" msgid="4218678742261840224">"Imewashwa / <xliff:g id="LOW_LIGHT_MODE">%1$s</xliff:g>"</string>
     <string name="low_light_display_behavior_summary_off" msgid="4565368094992120316">"Imezimwa"</string>
-    <string name="low_light_display_behavior_screen_off_full_summary" msgid="6671607843870561892">"Skrini itazima wakati uko katika mazingira yenye giza"</string>
-    <string name="low_light_display_behavior_low_light_clock_dream_full_summary" msgid="1145914465090731721">"Saa yenye Mwangaza Hafifu itaonekana wakati uko katika mazingira yenye giza"</string>
+    <string name="low_light_display_behavior_screen_off_full_summary" msgid="6671607843870561892">"Skrini itazima kwenye mazingira yenye giza"</string>
+    <string name="low_light_display_behavior_low_light_clock_dream_full_summary" msgid="1145914465090731721">"Saa yenye Mwangaza Hafifu itaonekana katika mazingira yenye giza"</string>
     <string name="ambient_display_screen_title" msgid="8615947016991429325">"Onyesho tulivu"</string>
     <string name="ambient_display_category_triggers" msgid="1216640141609270011">"Wakati wa kuonyesha"</string>
     <string name="doze_title" msgid="1523090408230862316">"Skrini iwake arifa zinapoingia"</string>
@@ -2176,7 +2176,7 @@
     <string name="input_setting_bounce_keys_seekbar_desc" msgid="4575595566548124309">"Muda wa upeo wa mibofyo inayopuuzwa"</string>
     <string name="input_setting_slow_keys_seekbar_desc" msgid="2171726970136563995">"Muda wa upeo wa mibofyo inayocheleweshwa"</string>
     <string name="slow_keys" msgid="2891452895499690837">"Vitufe vya polepole"</string>
-    <string name="slow_keys_summary" msgid="3852534180402969185">"Badilisha muda ambao unahitaji kubonyeza na kushikilia kitufe kabla ya kuchapisha"</string>
+    <string name="slow_keys_summary" msgid="3852534180402969185">"Badilisha muda ambao unahitaji kubonyeza na kushikilia kitufe kabla kitambuliwe"</string>
     <string name="sticky_keys" msgid="7317317044898161747">"Vitufe vinavyonata"</string>
     <string name="sticky_keys_summary" msgid="1844953803625480623">"Bonyeza kitufe kimoja baada ya kingine ili upate njia za mkato badala ya kubonyeza na kushikilia vitufe kwa pamoja"</string>
     <string name="mouse_keys" msgid="6237254627808525540">"Vitufe vya kipanya"</string>
@@ -2418,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Wasiliana na Timu ya Google ya Usaidizi kwa Watu wenye Ulemavu"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Utafiti wa Ufikivu"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Tuma maoni yako"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Umeridhika kwa kiasi gani na Mandhari meusi?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Shiriki katika utafiti"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Tuma maoni yako"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Umeridhika kwa kiasi gani na kipengele cha ukuzaji?"</string>
@@ -2658,9 +2659,9 @@
     <string name="autoclick_ignore_minor_cursor_movement_title" msgid="5038721995720529808">"Puuza usogeaji wa kiteuzi usio wa kimakusudi"</string>
     <string name="autoclick_revert_to_left_click_title" msgid="6868866422993461739">"Tumia kubofya kushoto kama kitendo chaguomsingi"</string>
     <string name="autoclick_revert_to_left_click_summary" msgid="9207568192335942225">"Unapotekeleza kitendo kingine, kipengele cha kubofya kiotomatiki kitarejea kiotomatiki kuwa kubofya kushoto"</string>
-    <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"Kipengele cha kubofya kiotomatiki hufanya kazi vizuri zaidi unapotumia mipangilio ya usogezaji kwa kutumia vitufe 3"</string>
-    <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"Sogeza kwa kutumia vitufe 3 badala ya kutumia ishara ili urudi nyuma kwa urahisi, uende kwenye Ukurasa wa Kwanza na ubadilishe programu unapotumia kipengele cha kubofya kiotomatiki"</string>
-    <string name="accessibility_autoclick_keep_gesture_navigation" msgid="5403212927837555942">"Endelea na usogezaji kwa kutumia ishara"</string>
+    <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"Kubofya kiotomatiki hufanya kazi vizuri zaidi unaposogeza kwa kutumia vitufe 3"</string>
+    <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"Sogeza kwa kutumia vitufe 3 badala ya miguso ili urudi nyuma kwa urahisi, uende Mwanzo na ubadilishe programu unapotumia kipengele cha kubofya kiotomatiki"</string>
+    <string name="accessibility_autoclick_keep_gesture_navigation" msgid="5403212927837555942">"Endelea na usogezaji kwa mguso"</string>
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"Mipangilio ya usogezaji"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"Mtetemo na miguso"</string>
     <string name="accessibility_vibration_settings_summary" msgid="3690308537483465527">"Dhibiti uthabiti wa mtetemo katika matumizi tofauti"</string>
@@ -3461,7 +3462,7 @@
     <string name="user_grant_admin" msgid="5942118263054572074">"Mruhusu mtumiaji huyu awe msimamizi"</string>
     <string name="user_remove_user" msgid="8468203789739693845">"Futa mtumiaji"</string>
     <string name="user_enable_calling_and_sms_confirm_title" msgid="4041510268838725520">"Ungependa kuwasha SMS na kupiga simu?"</string>
-    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"Rekodi ya simu zilizopigwa na SMS zilizopokelewa itashirikiwa na mtumiaji huyu."</string>
+    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"Rekodi ya simu zilizopigwa na SMS zilizopokelewa itafikiwa na mtumiaji huyu."</string>
     <string name="user_revoke_admin_confirm_title" msgid="3057842401861731863">"Ungependa kuondoa haki za msimamizi?"</string>
     <string name="user_revoke_admin_confirm_message" msgid="9207187319308572958">"Ukimwondolea mtumiaji huyu ruhusa za msimamizi, wewe au msimamizi mwingine anaweza kumrejeshea ruhusa hizo baadaye."</string>
     <string name="user_revoke_admin_for_self_confirm_title" msgid="5661292626700927475">"Una uhakika ungependa kuondoa ruhusa za msimamizi ulizo nazo?"</string>
@@ -4078,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Kipanga arifa"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Weka katika kifurushi na uzime arifa zenye kipaumbele cha chini"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Dhibiti programu za kipanga arifa"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Panua sehemu kila wakati"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Tumia kwenye programu za wasifu wa kazini"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Huduma za kisaidizi cha Uhalisia Pepe"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Hakuna programu zilizosakinishwa ambazo zinaweza kutekeleza huduma za kisaidizi cha Uhalisia Pepe."</string>
@@ -5507,7 +5507,7 @@
     <string name="overlay_settings_title" msgid="1032863083496396365">"Ruhusu programu zinazowekelewa juu ya nyingine kwenye Mipangilio"</string>
     <string name="overlay_settings_summary" msgid="2745336273786148166">"Ruhusu programu zinazoweza kuonyeshwa juu ya programu nyingine ziwekelewe juu ya skrini za Mipangilio"</string>
     <string name="allow_mock_modem" msgid="3832264806530479214">"Ruhusu Modemu ya Majaribio"</string>
-    <string name="allow_mock_modem_summary" msgid="9097416612748005374">"Ruhusu kifaa hiki kiendeshe huduma ya Modemu ya Majaribio kwa ajili ya majaribio ya vifaa. Usiwezeshe kipengele hiki wakati wa matumizi ya kawaida ya simu"</string>
+    <string name="allow_mock_modem_summary" msgid="9097416612748005374">"Ruhusu kifaa hiki kiendeshe huduma ya Modemu ya Majaribio ya majaribio ya vifaa. Usiwashe kipengele hiki wakati wa matumizi ya kawaida ya simu"</string>
     <string name="disable_screen_share_protections_for_apps_and_notifications" msgid="4987116103699222633">"Zima mipangilio ya ulinzi wa kuruhusu skrini ifikiwe"</string>
     <string name="disable_screen_share_protections_for_apps_and_notifications_summary" msgid="5379583403909210858">"Zima ulinzi wa mfumo wa maudhui nyeti ya programu katika vipindi vijavyo vya kuonyesha skrini kwa wengine"</string>
     <string name="media_controls_title" msgid="403271085636252597">"Maudhui"</string>
@@ -5654,7 +5654,7 @@
     <string name="dream_preview_button_title" msgid="6637456541851795952">"Onyesho la kukagua"</string>
     <string name="dream_picker_category" msgid="7726447836872744867">"Chagua taswira ya skrini"</string>
     <string name="dream_complications_toggle_title" msgid="4273232303027449163">"Onyesha maelezo ya ziada"</string>
-    <string name="dream_complications_toggle_summary" msgid="8088911054987524904">"Onyesha vitu kama vile saa, hali ya hewa au taarifa zingine kwenye taswira ya skrini"</string>
+    <string name="dream_complications_toggle_summary" msgid="8088911054987524904">"Onyesha vitu kama vile saa, hali ya hewa au taarifa nyingine kwenye taswira ya skrini"</string>
     <string name="dream_home_controls_toggle_title" msgid="706799741564479248">"Onyesha vidhibiti vya vifaa nyumbani"</string>
     <string name="dream_home_controls_toggle_summary" msgid="4102519907917430579">"Onyesha vidhibiti vya vifaa nyumbani kwenye taswira ya skrini"</string>
     <string name="dream_more_settings_category" msgid="3119192146760773748">"Mipangilio zaidi"</string>

@@ -190,7 +190,7 @@
     <string name="next_label" msgid="1248293387735652187">"આગળ"</string>
     <string name="region_picker_preference_title" msgid="9195149951917299277">"પ્રદેશ"</string>
     <string name="region_picker_title" msgid="6743800249134439329">"પ્રદેશ પસંદ કરો"</string>
-    <string name="region_picker_sub_title" msgid="7092062110753164836">"તમે પસંદ કરેલો પ્રદેશ તમારા ડિવાઇસની સમય, તારીખો, તાપમાન અને વધુ માહિતી બતાવવાની રીતને અસર કરે છે."</string>
+    <string name="region_picker_sub_title" msgid="7092062110753164836">"તમે પસંદ કરેલો પ્રદેશ તમારા ડિવાઇસની સમય, તારીખો, તાપમાન અને વધુ માહિતી ડિસ્પ્લે કરવાની રીતને અસર કરે છે."</string>
     <string name="suggested_region_title" msgid="2554129334404390153">"સૂચવેલા"</string>
     <string name="all_supported_region_title" msgid="4817156933097703066">"બધા પ્રદેશો"</string>
     <string name="language_picker_title" msgid="4271307478263345133">"ભાષાઓ"</string>
@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"ઉપર ખસેડો"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"નીચે ખસેડો"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"કાઢી નાખો"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"સૌથી ઉપર ખસેડો"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"પ્રાદેશિક પસંદગીઓ"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"એકમો અને સંખ્યાની પસંદગીઓ સેટ કરો"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"તમારા અનુભવને મનગમતો બનાવી શકે તે માટે ઍપને તમારી પ્રાદેશિક પસંદગીઓ જણાવો."</string>
@@ -2348,7 +2347,7 @@
     <string name="user_dict_settings_add_word_option_name" msgid="2686051785623698231">"શબ્દ:"</string>
     <string name="user_dict_settings_add_shortcut_option_name" msgid="5722204336242646866">"શૉર્ટકટ:"</string>
     <string name="user_dict_settings_add_locale_option_name" msgid="2117468247460253346">"ભાષા:"</string>
-    <string name="user_dict_settings_add_word_hint" msgid="4560494723256242785">"એક શબ્દ લખો"</string>
+    <string name="user_dict_settings_add_word_hint" msgid="4560494723256242785">"કોઈ શબ્દ ટાઇપ કરો"</string>
     <string name="user_dict_settings_add_shortcut_hint" msgid="6209624157217434640">"વૈકલ્પિક શૉર્ટકટ"</string>
     <string name="user_dict_settings_edit_dialog_title" msgid="316493656442362284">"શબ્દ સંપાદિત કરો"</string>
     <string name="user_dict_settings_context_menu_edit_title" msgid="4909198741914531509">"ફેરફાર કરો"</string>
@@ -2419,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Googleની વિકલાંગતા માટેની સપોર્ટ ટીમનો સંપર્ક કરો"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"ઍક્સેસિબિલિટીનું સર્વેક્ષણ"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"તમારો પ્રતિસાદ શેર કરો"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"ડાર્ક થીમથી તમે કેટલા સંતુષ્ટ છો?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"સર્વેક્ષણમાં ભાગ લો"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"તમારો પ્રતિસાદ શેર કરો"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"મોટું કરવાની સુવિધાથી તમે કેટલા સંતુષ્ટ છો?"</string>
@@ -2494,8 +2494,8 @@
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"મોકલનાર: બિલ"</string>
     <string name="accessibility_text_reading_preview_mail_content" msgid="8078152365771951802">"ગુડ મોર્નિંગ!\n\nમારે તો બસ એટલું જ ચેક કરવું હતું કે ડિઝાઇનની રચના કેવી થઈ રહી છે. શું આપણે નવા બલૂન બનાવવાનું શરૂ કરીએ એના પહેલાં તે તૈયાર થઈ જશે?"</string>
     <string name="accessibility_text_reading_reset_button_title" msgid="5960753279788187669">"સેટિંગ રીસેટ કરો"</string>
-    <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"ડિસ્પ્લેનું કદ અને ટેક્સ્ટના સેટિંગ રીસેટ કરવામાં આવ્યા છે"</string>
-    <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"શું ડિસ્પ્લેનું કદ અને ટેક્સ્ટ રીસેટ કરીએ?"</string>
+    <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"ડિસ્પ્લે સાઇઝ અને ટેક્સ્ટના સેટિંગ રીસેટ કરવામાં આવ્યા છે"</string>
+    <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"શું ડિસ્પ્લે સાઇઝ અને ટેક્સ્ટ રીસેટ કરીએ?"</string>
     <string name="accessibility_text_reading_confirm_dialog_reset_button" msgid="8215800137850243736">"રીસેટ કરો"</string>
     <string name="accessibility_text_reading_conversation_message_1" msgid="7883952203831957831">"શું વીકએન્ડ માટે કોઈ પ્લાન છે?"</string>
     <string name="accessibility_text_reading_conversation_message_2" msgid="8112160435318635856">"દરિયાકિનારે જઈ રહ્યાં છીએ. જોડાવા માગો છો?"</string>
@@ -3998,8 +3998,8 @@
     <string name="promote_conversation_summary" msgid="3890724115743515035">"વાતચીત વિભાગમાં ઉમેરો"</string>
     <string name="priority_conversation_count_zero" msgid="3862289535537564713">"પ્રાધાન્યતા ધરાવતી કોઈ વાતચીત નથી"</string>
     <string name="priority_conversation_count" msgid="7291234530844412077">"{count,plural, =1{# પ્રાધાન્યતા ધરાવતી વાતચીત}one{# પ્રાધાન્યતા ધરાવતી વાતચીતો}other{# પ્રાધાન્યતા ધરાવતી વાતચીતો}}"</string>
-    <string name="important_conversations" msgid="1233893707189659401">"પ્રાધાન્યવાળી વાતચીત"</string>
-    <string name="important_conversations_summary_bubbles" msgid="614327166808117644">"વાતચીત વિભાગની ટોચ પર અને ફ્લોટિંગ બબલ તરીકે બતાવો"</string>
+    <string name="important_conversations" msgid="1233893707189659401">"પ્રાધાન્યવાળી વાતચીતો"</string>
+    <string name="important_conversations_summary_bubbles" msgid="614327166808117644">"વાતચીત વિભાગની ટોચ પર અને તરતા બબલ તરીકે બતાવો"</string>
     <string name="important_conversations_summary" msgid="3184022761562676418">"વાતચીત વિભાગની ટોચ પર બતાવો"</string>
     <string name="other_conversations" msgid="551178916855139870">"ગૌણ વાતચીતો"</string>
     <string name="other_conversations_summary" msgid="3487426787901236273">"તમે જેમાં ફેરફારો કર્યા છે તેવી વાતચીતો"</string>
@@ -4018,7 +4018,7 @@
     <string name="allow_interruption" msgid="5237201780159482716">"વિક્ષેપોને મંજૂરી આપો"</string>
     <string name="allow_interruption_summary" msgid="9044131663518112543">"ઍપ્લિકેશનને ધ્વનિ, વાઇબ્રેટ અને/અથવા સ્ક્રીન પર સૂચનાઓ હાઇલાઇટ કરવા દો"</string>
     <string name="notification_priority_title" msgid="5554834239080425229">"પ્રાધાન્યતા"</string>
-    <string name="notification_channel_summary_priority" msgid="7225362351439076913">"એને વાતચીત વિભાગની ટોચ પર બતાવે છે, તરતા બબલ તરીકે દેખાય છે, લૉક સ્ક્રીન પર પ્રોફાઇલ ફોટા તરીકે બતાવે છે"</string>
+    <string name="notification_channel_summary_priority" msgid="7225362351439076913">"વાતચીત વિભાગની ટોચ પર તરતા બબલ તરીકે દેખાય છે, લૉક સ્ક્રીન પર પ્રોફાઇલ ફોટો ડિસ્પ્લે કરે છે"</string>
     <string name="convo_not_supported_summary" msgid="4285471045268268048">"<xliff:g id="APP_NAME">%1$s</xliff:g> મોટાભાગની વાતચીતની સુવિધાઓને સપોર્ટ આપતી નથી. તમે વાતચીતને પ્રાધાન્યતા તરીકે સેટ કરી શકશો નહીં તેમજ વાતચીતો તરતા બબલ તરીકે પણ દેખાઈ શકશે નહીં."</string>
     <string name="notification_channel_summary_min" msgid="8823399508450176842">"નોટિફિકેશન શેડમાં, નોટિફિકેશનને નાના કરીને એક લાઇનમાં બતાવો"</string>
     <string name="notification_channel_summary_low" msgid="5549662596677692000">"કોઈપણ સાઉન્ડ અથવા વાઇબ્રેશન નથી"</string>
@@ -4079,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"નોટિફિકેશન ઑર્ગેનાઇઝર"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"ઓછી પ્રાધાન્યતા ધરાવતા નોટિફિકેશનને બંડલ કરો અને સાઇલન્ટ કરો"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"નોટિફિકેશન ઑર્ગેનાઇઝર માટે ઍપ મેનેજ કરો"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"બંડલને હંમેશાં મોટું કરો"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"ઑફિસની પ્રોફાઇલ ઍપ પર લાગુ કરો"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR સહાયક સેવાઓ"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"કોઇ ઇન્સ્ટૉલ કરેલી ઍપએ VR સહાયક સેવાઓ તરીકે શરૂ કરવાની વિનંતી કરી નથી."</string>
@@ -4110,9 +4109,9 @@
     <string name="interact_across_profiles_consent_dialog_app_data_title" msgid="8436318876213958940">"ઍપનો ડેટા"</string>
     <string name="interact_across_profiles_consent_dialog_app_data_summary" msgid="6057019384328088311">"આ ઍપ તમારી વ્યક્તિગત <xliff:g id="NAME">%1$s</xliff:g> ઍપમાં રહેલા ડેટાને ઍક્સેસ કરી શકે છે."</string>
     <string name="interact_across_profiles_consent_dialog_permissions_title" msgid="2316852600280487055">"પરવાનગીઓ"</string>
-    <string name="interact_across_profiles_consent_dialog_permissions_summary" msgid="995051542847604039">"આ ઍપ, સ્થાન, સ્ટોરેજ અથવા સંપર્કો જેવી તમારી વ્યક્તિગત <xliff:g id="NAME">%1$s</xliff:g> ઍપની પરવાનગીઓનો ઉપયોગ કરી શકે છે."</string>
+    <string name="interact_across_profiles_consent_dialog_permissions_summary" msgid="995051542847604039">"આ ઍપ લોકેશન, સ્ટોરેજ અથવા સંપર્કો જેવી તમારી વ્યક્તિગત <xliff:g id="NAME">%1$s</xliff:g> ઍપની પરવાનગીઓનો ઉપયોગ કરી શકે છે."</string>
     <string name="interact_across_profiles_number_of_connected_apps_none" msgid="8573289199942092964">"કોઈ ઍપ કનેક્ટ થયેલી નથી"</string>
-    <string name="interact_across_profiles_number_of_connected_apps" msgid="4000424798291479207">"{count,plural, =1{# ઍપ કનેક્ટ કરી}one{# ઍપ કનેક્ટ કરી}other{# ઍપ કનેક્ટ કરી}}"</string>
+    <string name="interact_across_profiles_number_of_connected_apps" msgid="4000424798291479207">"{count,plural, =1{# ઍપ કનેક્ટેડ છે}one{# ઍપ કનેક્ટેડ છે}other{# ઍપ કનેક્ટેડ છે}}"</string>
     <string name="interact_across_profiles_install_work_app_title" msgid="2821669067014436056">"આ ઍપ કનેક્ટ કરવા માટે, તમારી ઑફિસની પ્રોફાઇલમાં <xliff:g id="NAME">%1$s</xliff:g> ઇન્સ્ટૉલ કરો"</string>
     <string name="interact_across_profiles_install_personal_app_title" msgid="4790651223324866344">"આ ઍપ કનેક્ટ કરવા માટે, તમારી વ્યક્તિગત પ્રોફાઇલમાં <xliff:g id="NAME">%1$s</xliff:g> ઇન્સ્ટૉલ કરો"</string>
     <string name="interact_across_profiles_install_app_summary" msgid="7715324358034968657">"ઍપ મેળવવા માટે ટૅપ કરો"</string>
@@ -4662,7 +4661,7 @@
     <string name="cell_data_warning" msgid="5664921950473359634">"<xliff:g id="ID_1">^1</xliff:g> ડેટા સંબંધી ચેતવણી"</string>
     <string name="cell_data_limit" msgid="256855024790622112">"ડેટા મર્યાદા <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="8393200831986035724">"ડેટા ચેતવણી <xliff:g id="ID_1">^1</xliff:g> / ડેટા મર્યાદા <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <string name="operator_warning" msgid="5672761970087591211">"કૅરિઅર ડેટા ગણતરી, ડિવાઇસ ગણતરીથી અલગ હોઈ શકે છે"</string>
+    <string name="operator_warning" msgid="5672761970087591211">"મોબાઇલ ઑપરેટર તરફથી ડેટાની ગણતરી, ડિવાઇસ ગણતરીથી અલગ હોઈ શકે છે"</string>
     <string name="non_carrier_data_usage_warning" msgid="4707184871368847697">"મોબાઇલ ઑપરેટરના નેટવર્ક દ્વારા વપરાયેલો ડેટા શામેલ નથી"</string>
     <string name="data_used_template" msgid="8229342096562327646">"<xliff:g id="ID_1">%1$s</xliff:g> ઉપયોગ થયો"</string>
     <string name="set_data_warning" msgid="1685771882794205462">"ડેટા ચેતવણી સેટ કરો"</string>
@@ -5655,7 +5654,7 @@
     <string name="dream_preview_button_title" msgid="6637456541851795952">"પ્રીવ્યૂ કરો"</string>
     <string name="dream_picker_category" msgid="7726447836872744867">"કોઈ સ્ક્રીન સેવર પસંદ કરો"</string>
     <string name="dream_complications_toggle_title" msgid="4273232303027449163">"વધારાની માહિતી બતાવો"</string>
-    <string name="dream_complications_toggle_summary" msgid="8088911054987524904">"સ્ક્રીન સેવર પર સમય, હવામાન અથવા અન્ય માહિતી જેવી બાબતો બતાવો"</string>
+    <string name="dream_complications_toggle_summary" msgid="8088911054987524904">"સ્ક્રીન સેવર પર સમય, હવામાન અથવા અન્ય માહિતી જેવી બાબતો ડિસ્પ્લે કરો"</string>
     <string name="dream_home_controls_toggle_title" msgid="706799741564479248">"ઘરેલું સાધનોના નિયંત્રણો બતાવો"</string>
     <string name="dream_home_controls_toggle_summary" msgid="4102519907917430579">"સ્ક્રીન સેવર પરથી ઘરેલું સાધનોનાં નિયંત્રણો બટન બતાવો"</string>
     <string name="dream_more_settings_category" msgid="3119192146760773748">"વધુ સેટિંગ"</string>

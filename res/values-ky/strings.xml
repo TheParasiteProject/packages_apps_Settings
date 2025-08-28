@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Жогору жылдыруу"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Төмөн жылдыруу"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Өчүрүү"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Башына жылдыруу"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Аймактык параметрлер"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Бирдик жана сан параметрлерин тууралайсыз"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Колдонмолор ушул параметрлер аркылуу кызматты жекелештиришет."</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Жалпы"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Жалпы параметрлер"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Hub режими"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Кулпуланган экрандагы виджеттер (бета)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Автоматтык түрдө качан көрсөтүлөт"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Эч качан"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Кубатталып жатканда"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google Disability кызматынын колдоосуна кайрылыңыз"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Атайын мүмкүнчүлүктөр сурамжылоосу"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Пикир билдириңиз"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Караңгы тема сизге канчалык деңгээлде жакты?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Сурамжылоого катышуу"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Пикир билдириңиз"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Чоңойтуу сизге канчалык деңгээлде жакты?"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Жумуш билдирмелери толугу менен көрүнөт"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Жумушка байланыштуу купуя нерселер жашырылат"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Түзмөгүңүз кулпуланып турганда, профиль билдирмелери кандайча көрүнсүн?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Кулпуланган экранда көрүнсүн"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Кулпуланган экранда эмнелер көрүнөт"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Көрүлгөн билдирмелерди көрсөтүү"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Көрүлгөн билдирменин сүрөтчөлөрүн көрсөтүү"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Билдирмелерди иреттегич"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Маанилүү эмес билдирмелерди топтоштуруп, үнүн басыңыз"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Билдирмелерди иреттегич үчүн колдонмолорду тескөө"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Топтомдор ар дайым жайылып көрсөтүлсүн"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Жумуш профилинин колдонмолоруна пайдалануу"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR көмөкчү кызматтары"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Орнотулган колдонмолор көмөкчү VR кызматы катары иштөөгө уруксат сураган жок."</string>

@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Преместване нагоре"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Преместване надолу"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Премахване"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Преместване в горната част"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Регионални предпочитания"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Задаване на предпочитания за мерните единици и цифрите"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Разрешете на приложенията да осъществяват достъп до регионалните ви предпочитания, за да могат да персонализират практическата ви работа."</string>
@@ -2419,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Екип за хора с уврежд.: Свързв."</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Анкета за достъпност"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Споделяне на отзиви"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Доколко сте доволни от тъмната тема?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Участие в анкетата"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Споделяне на отзиви"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Доколко сте доволни от функцията за увеличение?"</string>
@@ -4079,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Инструмент за организиране на известията"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Групиране и заглушаване на известията с по-нисък приоритет"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Управление на приложенията за инструмента за организиране на известията"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Групите да се разгъват винаги"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Прилагане за приложенията в служебния потребителски профил"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Помощни услуги за VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Никое инсталирано приложение не е заявило да се изпълнява като помощна услуга за VR."</string>

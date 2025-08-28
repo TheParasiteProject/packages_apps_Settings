@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Μετακίνηση προς τα επάνω"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Μετακίνηση προς τα κάτω"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Κατάργηση"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Μετακίνηση στην κορυφή"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Προτιμήσεις περιοχής"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Ορισμός προτιμήσεων μονάδων και αριθμών"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Επιτρέψτε στις εφαρμογές να γνωρίζουν τις προτιμήσεις περιοχής, ώστε να εξατομικεύουν την εμπειρία σας"</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Κοινόχρηστες"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Κοινόχρηστες ρυθμίσεις"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Λειτουργία Hub"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Γραφικά στοιχεία στην οθόνη κλειδώματος (beta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Πότε να εμφανίζεται αυτόματα"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Ποτέ"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Κατά τη φόρτιση"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Επικ. με Υποσ. Google για ΑΜΕΑ"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Έρευνα προσβασιμότητας"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Μοιραστείτε τα σχόλιά σας"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Πόσο ικανοποιημένοι είστε με το Σκούρο θέμα;"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Συμμετοχή στην έρευνα"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Μοιραστείτε τα σχόλιά σας"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Πόσο ικανοποιημένοι είστε με τη μεγιστοποίηση;"</string>
@@ -3463,7 +3462,7 @@
     <string name="user_grant_admin" msgid="5942118263054572074">"Εκχώρηση δικαιωμ. διαχειριστή στον χρήστη"</string>
     <string name="user_remove_user" msgid="8468203789739693845">"Διαγραφή χρήστη"</string>
     <string name="user_enable_calling_and_sms_confirm_title" msgid="4041510268838725520">"Ενεργοποίηση τηλεφωνικών κλήσεων και SMS;"</string>
-    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"Θα γίνει κοινή χρήση του ιστορικού κλήσεων και SMS με αυτόν το χρήστη."</string>
+    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"Θα γίνει κοινή χρήση του ιστορικού κλήσεων και SMS με αυτόν τον χρήστη."</string>
     <string name="user_revoke_admin_confirm_title" msgid="3057842401861731863">"Κατάργηση προνομίων διαχειριστή;"</string>
     <string name="user_revoke_admin_confirm_message" msgid="9207187319308572958">"Εάν καταργήσετε τα δικαιώματα διαχειριστή αυτού του χρήστη, εσείς ή κάποιος άλλος διαχειριστής μπορείτε αργότερα να του εκχωρήσετε ξανά αυτά τα δικαιώματα."</string>
     <string name="user_revoke_admin_for_self_confirm_title" msgid="5661292626700927475">"Θέλετε να καταργήσετε τα προνόμια διαχειριστή;"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Εμφάνιση όλου του περιεχομ. ειδοποιήσεων εργασίας"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Απόκρυψη ευαίσθητου περιεχομένου εργασίας"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Πώς θέλετε να εμφανίζονται οι ειδοποιήσεις προφίλ στη συσκευή σας, όταν η συσκευή σας είναι κλειδωμένη;"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Εμφάνιση στην οθόνη κλειδώματος"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Τι θα εμφανίζεται στην οθόνη κλειδώματος"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Εμφάνιση ειδοποιήσεων που έχουν προβληθεί"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Εμφάνιση εικονιδίων ειδοποιήσεων που έχουν προβληθεί"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Διοργανωτής ειδοποιήσεων"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Ομαδοποίηση και σίγαση ειδοποιήσεων χαμηλότερης προτεραιότητας"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Διαχείριση εφαρμογών για τον διοργανωτή ειδοποιήσεων"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Να αναπτύσσονται πάντα τα πακέτα"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Εφαρμογή σε εφαρμογές του προφίλ εργασίας"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Βοηθητικές υπηρεσίες Εικονικής Πραγματικότητας"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Δεν έχει ζητηθεί η εκτέλεση εγκατεστημένων εφαρμογών ως βοηθητικών υπηρεσιών Εικονικής Πραγματικότητας."</string>

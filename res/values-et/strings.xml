@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Teisalda üles"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Teisalda alla"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Eemalda"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Teisalda kõige üles"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Piirkondlikud eelistused"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Ühikute ja numbrite eelistuste määramine"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Esitage rakendustele oma piirkondlikud eelistused, et need saaks teie kasutuskogemust isikupärastada."</string>
@@ -536,7 +535,7 @@
     <string name="security_settings_remoteauth_enroll_enrolling_disagree" msgid="1670201454188049863">"Tühista"</string>
     <string name="security_settings_remoteauth_enroll_enrolling_agree" msgid="7048336252635730908">"Kinnita"</string>
     <string name="security_settings_remoteauth_enroll_finish_title" msgid="3807372930755413112">"Valmis!"</string>
-    <string name="security_settings_remoteauth_enroll_finish_description" msgid="4876209907275244653">"Saate nüüd kasutada oma kella selle telefoni avamiseks, kui pühite lukustuskuval üles või puudutate märguannet"</string>
+    <string name="security_settings_remoteauth_enroll_finish_description" msgid="4876209907275244653">"Saate nüüd kasutada oma kella selle telefoni avamiseks, kui pühite lukustuskuval üles või puudutate märguannet."</string>
     <string name="security_settings_remoteauth_enroll_finish_btn_next" msgid="8072138423143889592">"Valmis"</string>
     <string name="security_settings_remoteauth_settings_title" msgid="1564912618737165129">"Kellaga avamine"</string>
     <string name="security_settings_remoteauth_settings_description" msgid="2758239650119457964">"Saate kasutada oma kella selle telefoni avamiseks, kui pühite lukustuskuval üles või puudutate märguannet."</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Ühised"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Ühised seaded"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Dokirežiim"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Vidinad lukustuskuval (beeta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Automaatne kuvamine"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Mitte kunagi"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Laadimise ajal"</string>
@@ -1917,10 +1915,10 @@
     <string name="lockpassword_forgot_password" msgid="5730587692489737223">"Kas unustasite parooli?"</string>
     <string name="lockpassword_forgot_pattern" msgid="1196116549051927516">"Kas unustasite mustri?"</string>
     <string name="lockpassword_forgot_pin" msgid="7164232234705747672">"Kas unustasite PIN-koodi?"</string>
-    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Teie muster kinnitab teie isikut"</string>
+    <string name="lockpassword_confirm_your_pattern_generic" msgid="4983618652824112610">"Teie muster kinnitab teie isikut."</string>
     <string name="lockpassword_confirm_your_pin_generic" msgid="45398445305933355">"Teie PIN-kood kinnitab teie isikut"</string>
     <string name="lockpassword_confirm_your_password_generic" msgid="1263500907003586594">"Teie parool kinnitab teie isikut"</string>
-    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Teie töökoha muster kinnitab teie isikut"</string>
+    <string name="lockpassword_confirm_your_pattern_generic_profile" msgid="2552062474449423029">"Teie töökoha muster kinnitab teie isikut."</string>
     <string name="lockpassword_confirm_your_pin_generic_profile" msgid="6556640367641079244">"Teie töökoha PIN-kood kinnitab teie isikut"</string>
     <string name="lockpassword_confirm_your_password_generic_profile" msgid="5700270644291633820">"Teie töökoha parool kinnitab teie isikut"</string>
     <string name="lockpassword_strong_auth_required_device_pattern" msgid="113817518413715557">"Lisaturvalisuse jaoks kasutage seadme mustrit"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Võtke ühendust Google\'i puuetega inimeste tugitiimiga"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Juurdepääsetavuse küsitlus"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Andke tagasisidet"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Kui rahul te tumeda teemaga olete?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Osalege küsitluses"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Andke tagasisidet"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Kui rahul te suurendusega olete?"</string>
@@ -2495,7 +2494,7 @@
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"Saatja: Toomas"</string>
     <string name="accessibility_text_reading_preview_mail_content" msgid="8078152365771951802">"Tere hommikust!\n\nSoovisin lihtsalt uurida, kuidas joonised edenevad. Kas need saavad selleks ajaks valmis, kui me hakkame uusi õhupalle ehitama?"</string>
     <string name="accessibility_text_reading_reset_button_title" msgid="5960753279788187669">"Lähtesta seaded"</string>
-    <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"Kuvamissuuruse ja teksti seaded on lähtestatud"</string>
+    <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"Kuvamissuuruse ja teksti seaded on lähtestatud."</string>
     <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"Kas lähtestada kuvamissuurus ja tekst?"</string>
     <string name="accessibility_text_reading_confirm_dialog_reset_button" msgid="8215800137850243736">"Lähtesta"</string>
     <string name="accessibility_text_reading_conversation_message_1" msgid="7883952203831957831">"Mida nädalavahetusel teed?"</string>
@@ -3875,7 +3874,7 @@
     <string name="work_sound_same_as_personal" msgid="1836913235401642334">"Sama mis isiklikul profiilil"</string>
     <string name="work_sync_dialog_title" msgid="7810248132303515469">"Kas kasutada isikliku profiili helisid?"</string>
     <string name="work_sync_dialog_yes" msgid="5785488304957707534">"Kinnita"</string>
-    <string name="work_sync_dialog_message" msgid="5066178064994040223">"Teie tööprofiil kasutab teie isikliku profiiliga samu helisid"</string>
+    <string name="work_sync_dialog_message" msgid="5066178064994040223">"Teie tööprofiil kasutab teie isikliku profiiliga samu helisid."</string>
     <string name="configure_notification_settings" msgid="1492820231694314376">"Märguanded"</string>
     <string name="notification_dashboard_summary" msgid="7530169251902320652">"Märguannete ajalugu, vestlused"</string>
     <string name="conversation_notifs_category" msgid="2549844862379963273">"Vestlus"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Kuva tööprofiili märguannete kogu sisu"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Peida tundlik töösisu"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Kuidas tuleks profiili märguanded kuvada siis, kui seade on lukus?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Kuva lukustuskuval"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Mida kuvada lukustuskuval?"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Kuva nähtud märguanded"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Kuva nähtud märguannete ikoonid"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Märguannete korrastaja"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Vähemprioriteetsete märguannete koondamine ja vaigistamine"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Rakenduste haldamine märguannete korrastaja jaoks"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Laienda paketid alati"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Rakenda tööprofiili rakendustele"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR-abilise teenused"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Ükski installitud rakendus pole taotlenud VR-abilise teenusena käitamist."</string>
@@ -4597,7 +4594,7 @@
     <string name="disabled_by_policy_title_parental_controls" msgid="2688144174399968452">"Küsi abi"</string>
     <string name="disabled_by_policy_content_parental_controls" msgid="7645416358554171082">"Selle seade muutmiseks peab selle teie eest muutma inimene, kes teie seadme või konto järelevalve seadistas."</string>
     <string name="disabled_by_policy_parental_consent" msgid="9166060049019018978">"Anna telefon vanemale, et ta saaks seda seadet muuta."</string>
-    <string name="default_admin_support_msg" msgid="8816296554831532033">"Lisateabe saamiseks võtke ühendust IT-administraatoriga"</string>
+    <string name="default_admin_support_msg" msgid="8816296554831532033">"Lisateabe saamiseks võtke ühendust IT-administraatoriga."</string>
     <string name="admin_support_more_info" msgid="8407433155725898290">"Rohkem üksikasju"</string>
     <string name="admin_profile_owner_message" msgid="8860709969532649195">"Teie administraator saab jälgida ja hallata teie tööprofiiliga seotud rakendusi ning andmeid, sh seadeid, lube, ettevõtte juurdepääsu, võrgutegevusi ja seadme asukohateavet."</string>
     <string name="admin_profile_owner_user_message" msgid="4929926887231544950">"Teie administraator saab jälgida ja hallata selle kasutajaga seotud rakendusi ning andmeid, sh seadeid, lube, ettevõtte juurdepääsu, võrgutegevusi ja seadme asukohateavet."</string>

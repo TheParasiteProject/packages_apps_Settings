@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Mover hacia arriba"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Mover hacia abajo"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Quitar"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Mover al principio"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Preferencias regionales"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Define preferencias de unidades y números"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Permite que las apps sepan tus preferencias regionales para que puedan personalizar tu experiencia."</string>
@@ -350,7 +349,7 @@
     <string name="owner_info_settings_summary" msgid="347238313388083297">"Ninguno"</string>
     <string name="owner_info_settings_edit_text_hint" msgid="841926875876050274">"P. ej., Android de Juan."</string>
     <string name="location_settings_title" msgid="8375074508036087178">"Ubicación"</string>
-    <string name="location_settings_primary_switch_title" msgid="8849081766644685127">"Usar Ubicación"</string>
+    <string name="location_settings_primary_switch_title" msgid="8849081766644685127">"Usar ubicación"</string>
     <string name="location_settings_summary_location_off" msgid="4797932754681162262">"Desactivada"</string>
     <string name="location_settings_summary_location_on" msgid="4273299717586679786">"{count,plural, =1{Activada / # app tiene acceso a la ubicación}other{Activada / # apps tienen acceso a la ubicación}}"</string>
     <string name="location_settings_loading_app_permission_stats" msgid="6054103701535557342">"Cargando…"</string>
@@ -777,7 +776,7 @@
     <string name="lock_settings_picker_title" msgid="9219376327364915334">"Elige un bloqueo de pantalla"</string>
     <string name="lock_settings_picker_new_lock_title" msgid="3113042086804290919">"Elige un bloqueo de pantalla"</string>
     <string name="lock_settings_picker_update_lock_title" msgid="536853138943415927">"Elige un nuevo bloqueo de pantalla"</string>
-    <string name="lock_settings_picker_new_profile_lock_title" msgid="2270462215256413800">"Bloqueo de aplicaciones de trabajo"</string>
+    <string name="lock_settings_picker_new_profile_lock_title" msgid="2270462215256413800">"Bloqueo de apps de trabajo"</string>
     <string name="lock_settings_picker_update_profile_lock_title" msgid="5929068163516308927">"Elige un nuevo método de bloqueo para el trabajo"</string>
     <string name="lock_settings_picker_biometrics_added_security_message" msgid="1105247657304421299">"Para mayor seguridad, crea un bloqueo de pantalla alternativo"</string>
     <string name="lock_settings_picker_biometric_message" msgid="2609666443527262781">"Selecciona un método de bloqueo de pantalla alternativo"</string>
@@ -1522,7 +1521,7 @@
     <string name="low_light_display_behavior_summary_on" msgid="4218678742261840224">"Activado / <xliff:g id="LOW_LIGHT_MODE">%1$s</xliff:g>"</string>
     <string name="low_light_display_behavior_summary_off" msgid="4565368094992120316">"Desactivado"</string>
     <string name="low_light_display_behavior_screen_off_full_summary" msgid="6671607843870561892">"La pantalla se apagará cuando el entorno esté oscuro"</string>
-    <string name="low_light_display_behavior_low_light_clock_dream_full_summary" msgid="1145914465090731721">"El reloj de poca luz se mostrará cuando el entorno esté oscuro"</string>
+    <string name="low_light_display_behavior_low_light_clock_dream_full_summary" msgid="1145914465090731721">"El reloj de poca luz se mostrará cuando te encuentres en un sitio oscuro"</string>
     <string name="ambient_display_screen_title" msgid="8615947016991429325">"Pantalla ambiente"</string>
     <string name="ambient_display_category_triggers" msgid="1216640141609270011">"Cuándo debe mostrarse"</string>
     <string name="doze_title" msgid="1523090408230862316">"Activar pantalla si hay notificaciones"</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Comunes"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Ajustes comunes"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Modo Base"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Widgets en la pantalla de bloqueo (beta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Cuándo mostrar automáticamente"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Nunca"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Mientras esté cargándose"</string>
@@ -2086,7 +2084,7 @@
     <string name="app_disable_dlg_positive" msgid="1414218905322009505">"Inhabilitar app"</string>
     <string name="app_disable_dlg_text" msgid="2449382902751908916">"Si inhabilitas esta aplicación, es posible que Android y otras aplicaciones no funcionen como deberían. Recuerda que no puedes eliminar esta aplicación, ya que estaba preinstalada en tu dispositivo. Al inhabilitarla, desactivas la aplicación y la ocultas en tu dispositivo."</string>
     <string name="app_install_details_group_title" msgid="1172114479073704677">"Tienda"</string>
-    <string name="app_install_details_title" msgid="7783556181897142187">"Detalles de la aplicación"</string>
+    <string name="app_install_details_title" msgid="7783556181897142187">"Detalles de la app"</string>
     <string name="app_install_details_summary" msgid="2013043219249992373">"Aplicación instalada desde <xliff:g id="APP_STORE">%1$s</xliff:g>"</string>
     <string name="app_install_details_different_initiating_package_summary" msgid="6093306593167176688">"Aplicación instalada desde <xliff:g id="APP_STORE1">%1$s</xliff:g> (a través de <xliff:g id="APP_STORE2">%2$s</xliff:g>)"</string>
     <string name="instant_app_details_summary" msgid="417197491598208216">"Más información en <xliff:g id="APP_STORE">%1$s</xliff:g>"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Asistencia (personas con discapacidad)"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Encuesta sobre accesibilidad"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Comparte tu opinión"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"¿Cuál es tu nivel de satisfacción con el tema oscuro?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Responder encuesta"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Comparte tu opinión"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"¿Cuál es tu nivel de satisfacción con la ampliación?"</string>
@@ -2495,7 +2494,7 @@
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"De: Juan"</string>
     <string name="accessibility_text_reading_preview_mail_content" msgid="8078152365771951802">"¡Buenos días!\n\nSolo quería saber cómo van los diseños. ¿Estarán listos antes de que empecemos a hacer los nuevos globos?"</string>
     <string name="accessibility_text_reading_reset_button_title" msgid="5960753279788187669">"Restablecer ajustes"</string>
-    <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"La configuración del tamaño de visualización y del texto se ha restablecido"</string>
+    <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"Configuración de tamaño de visualización y texto restablecida"</string>
     <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"¿Restablecer el tamaño de visualización y del texto?"</string>
     <string name="accessibility_text_reading_confirm_dialog_reset_button" msgid="8215800137850243736">"Restablecer"</string>
     <string name="accessibility_text_reading_conversation_message_1" msgid="7883952203831957831">"¿Tienes algún plan este fin de semana?"</string>
@@ -3319,7 +3318,7 @@
     <string name="data_usage_warning_editor_title" msgid="5252748452973120016">"Establece la advertencia de uso de datos"</string>
     <string name="data_usage_limit_editor_title" msgid="8826855902435008518">"Limitar uso de datos"</string>
     <string name="data_usage_limit_dialog_title" msgid="2053134451707801439">"Limitar uso de datos"</string>
-    <string name="data_usage_sweep_warning" msgid="2072854703184614828"><font size="18">"<xliff:g id="NUMBER">^1</xliff:g>"</font>" "<font size="9">"<xliff:g id="UNIT">^2</xliff:g>"</font>\n<font size="12">"aviso"</font></string>
+    <string name="data_usage_sweep_warning" msgid="2072854703184614828"><font size="18">"Aviso: <xliff:g id="NUMBER">^1</xliff:g>"</font>" "<font size="9">"<xliff:g id="UNIT">^2</xliff:g>"</font>\n<font size="12"></font></string>
     <string name="data_usage_sweep_limit" msgid="6947019190890086284"><font size="18">"<xliff:g id="NUMBER">^1</xliff:g>"</font>" "<font size="9">"<xliff:g id="UNIT">^2</xliff:g>"</font>\n<font size="12">"límite"</font></string>
     <string name="data_usage_uninstalled_apps" msgid="9065885396147675694">"Aplicaciones eliminadas"</string>
     <string name="data_usage_uninstalled_apps_users" msgid="1262228664057122983">"Usuarios y aplicaciones eliminados"</string>
@@ -3527,7 +3526,7 @@
     <string name="enhanced_4g_lte_mode_summary" msgid="1067066329756036427">"Usar servicios LTE para mejorar las llamadas de voz (recomendado)"</string>
     <string name="enhanced_4g_lte_mode_summary_4g_calling" msgid="2575004054914178405">"Usa servicios 4G para mejorar las llamadas de voz (recomendado)"</string>
     <string name="nr_advanced_calling_title" msgid="6106286679535355939">"Vo5G"</string>
-    <string name="nr_advanced_calling_summary" msgid="6926192539172030330">"Usar 5G en las llamadas de voz"</string>
+    <string name="nr_advanced_calling_summary" msgid="6926192539172030330">"Usa 5G en las llamadas de voz"</string>
     <string name="contact_discovery_opt_in_title" msgid="8708034790649773814">"Enviar contactos al operador"</string>
     <string name="contact_discovery_opt_in_summary" msgid="6539010458256667300">"Envía los números de teléfono de tus contactos para tener acceso a funciones mejoradas"</string>
     <string name="contact_discovery_opt_in_dialog_title" msgid="2230536282911854114">"¿Enviar contactos a <xliff:g id="CARRIER">%1$s</xliff:g>?"</string>
@@ -3790,7 +3789,7 @@
     <string name="zen_mode_select_schedule_calendar" msgid="8098396764270136497">"Eventos del calendario"</string>
     <string name="zen_modes_summary_some_active" msgid="4780578487747956559">"{count,plural,offset:2 =0{}=1{{mode_1} está activo}=2{{mode_1} y {mode_2} están activos}=3{{mode_1}, {mode_2} y {mode_3} están activos}other{{mode_1}, {mode_2} y # más están activos}}"</string>
     <string name="zen_modes_summary" msgid="2576893588489258390">"{count,plural, =0{No molestar}=1{{mode_1}}=2{{mode_1}, {mode_2}}other{{mode_1}, {mode_2}, {mode_3}}}"</string>
-    <string name="zen_mode_active_text" msgid="5002406772481439437">"ACTIVADO"</string>
+    <string name="zen_mode_active_text" msgid="5002406772481439437">"Activado"</string>
     <string name="zen_mode_disabled_needs_setup" msgid="389269759040103728">"Sin definir"</string>
     <string name="zen_mode_disabled_by_user" msgid="138592173630683253">"Inhabilitado"</string>
     <string name="zen_mode_new_title" msgid="4934720193004330740">"Crear un modo"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Mostrar todo (notificaciones de trabajo)"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Ocultar contenido de trabajo sensible"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"¿Cómo quieres que se muestren las notificaciones del perfil cuando el dispositivo esté bloqueado?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Mostrar en la pantalla de bloqueo"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Qué mostrar en la pantalla de bloqueo"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Mostrar notificaciones ya vistas"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Mostrar iconos de notificaciones ya vistas"</string>
@@ -4063,7 +4061,7 @@
     <string name="notif_type_silent_summary" msgid="7820923063105060844">"Notificaciones que nunca hacen que el dispositivo suene o vibre"</string>
     <string name="notification_listener_allowed" msgid="5536962633536318551">"Permitido"</string>
     <string name="notification_listener_not_allowed" msgid="3352962779597846538">"No permitido"</string>
-    <string name="notif_listener_excluded_app_title" msgid="6679316209330349730">"Ver todas las aplicaciones"</string>
+    <string name="notif_listener_excluded_app_title" msgid="6679316209330349730">"Ver todas las apps"</string>
     <string name="notif_listener_excluded_app_summary" msgid="2914567678047195396">"Cambia los ajustes de cada aplicación que envía notificaciones"</string>
     <string name="notif_listener_excluded_app_screen_title" msgid="8636196723227432994">"Aplicaciones que se muestran en el dispositivo"</string>
     <string name="notif_listener_not_migrated" msgid="6265206376374278226">"Esta aplicación no admite la configuración avanzada"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Organizador de notificaciones"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Agrupa y silencia las notificaciones de menor prioridad"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Gestionar apps para el organizador de notificaciones"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Desplegar siempre las agrupaciones"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Aplicar a las apps del perfil de trabajo"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Servicios de ayuda de RV"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Ninguna aplicación instalada ha solicitado ejecutarse como servicio de ayuda de RV."</string>
@@ -4097,7 +4094,7 @@
     <string name="picture_in_picture_app_detail_title" msgid="4442235098255164650">"Imagen en imagen"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8544190716075624017">"Permitir imagen en imagen"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="2503211101305358849">"Permite que la aplicación cree una ventana imagen en imagen mientras esté abierta o después de que hayas salido de ella (por ejemplo, para seguir viendo un vídeo). La ventana se muestra sobre otras aplicaciones que estés utilizando."</string>
-    <string name="interact_across_profiles_title" msgid="7285906999927669971">"Aplicaciones de trabajo y personales conectadas"</string>
+    <string name="interact_across_profiles_title" msgid="7285906999927669971">"Apps de trabajo y personales conectadas"</string>
     <string name="interact_across_profiles_summary_allowed" msgid="1365881452153799092">"Conectada"</string>
     <string name="interact_across_profiles_summary_not_allowed" msgid="5802674212788171790">"No conectada"</string>
     <string name="interact_across_profiles_empty_text" msgid="419061031064397168">"No hay aplicaciones conectadas"</string>
@@ -4109,7 +4106,7 @@
     <string name="interact_across_profiles_summary_3" msgid="444428694843299854">"Puedes desconectar aplicaciones cuando quieras en los ajustes de privacidad de tu dispositivo."</string>
     <string name="interact_across_profiles_consent_dialog_title" msgid="8530621211216508681">"¿Dar acceso a la aplicación de trabajo <xliff:g id="NAME">%1$s</xliff:g> a tus datos personales?"</string>
     <string name="interact_across_profiles_consent_dialog_summary" msgid="3949870271562055048">"Conecta aplicaciones solo si confías en que no compartirán datos personales con tu administrador de TI."</string>
-    <string name="interact_across_profiles_consent_dialog_app_data_title" msgid="8436318876213958940">"Datos de la aplicación"</string>
+    <string name="interact_across_profiles_consent_dialog_app_data_title" msgid="8436318876213958940">"Datos de la app"</string>
     <string name="interact_across_profiles_consent_dialog_app_data_summary" msgid="6057019384328088311">"Esta aplicación puede acceder a los datos de tu aplicación personal <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="interact_across_profiles_consent_dialog_permissions_title" msgid="2316852600280487055">"Permisos"</string>
     <string name="interact_across_profiles_consent_dialog_permissions_summary" msgid="995051542847604039">"Esta aplicación puede utilizar los permisos de tu aplicación personal <xliff:g id="NAME">%1$s</xliff:g>, como el acceso a la ubicación, el almacenamiento o los contactos."</string>
@@ -4430,7 +4427,7 @@
     <string name="default_digital_assistant_title" msgid="5654663086385490838">"Aplicación de asistente digital predeterminada"</string>
     <string name="assistant_security_warning_agree" msgid="9013334158753473359">"Aceptar"</string>
     <string name="default_browser_title" msgid="8342074390782390458">"Aplicación de navegador"</string>
-    <string name="default_phone_title" msgid="7616730756650803827">"Aplicación de teléfono"</string>
+    <string name="default_phone_title" msgid="7616730756650803827">"Aplicación Teléfono"</string>
     <string name="system_app" msgid="1863291702508355041">"(Sistema)"</string>
     <string name="apps_storage" msgid="643866814746927111">"Almacenamiento de aplicaciones"</string>
     <string name="usage_access" msgid="640680494210288246">"Datos de uso de apps"</string>
@@ -4539,7 +4536,7 @@
     <string name="allow_media_routing_control" msgid="4907036637509360616">"Permitir que cambie la salida multimedia"</string>
     <string name="allow_media_routing_description" msgid="8343709701298051207">"Permitir que esta app elija qué dispositivo conectado reproduce audio o vídeo desde otras apps. Si se permite, esta app puede acceder a una lista de dispositivos disponibles, como auriculares y altavoces, y elegir qué dispositivo de salida se utiliza para transmitir o enviar audio o vídeo."</string>
     <string name="manage_external_storage_title" msgid="8024521099838816100">"Acceso a todos los archivos"</string>
-    <string name="permit_manage_external_storage" msgid="6928847280689401761">"Dar acceso para gestionar todos los archivos"</string>
+    <string name="permit_manage_external_storage" msgid="6928847280689401761">"Permitir gestionar todos los archivos"</string>
     <string name="allow_manage_external_storage_description" msgid="5707948153603253225">"Permite que esta aplicación lea, modifique y elimine todos los archivos de este dispositivo o de cualquier volumen de almacenamiento conectado. Si le das permiso, podrá acceder a archivos sin avisarte expresamente."</string>
     <string name="filter_manage_external_storage" msgid="6751640571715343804">"Puede acceder a todos los archivos"</string>
     <string name="full_screen_intent_title" msgid="5888548315628268674">"Notificaciones a pantalla completa"</string>
@@ -4857,7 +4854,7 @@
     <string name="keywords_gesture_navigation_settings" msgid="667561222717238931">"navegación por gestos, sensibilidad del gesto para volver, gesto para volver"</string>
     <string name="keywords_button_navigation_settings" msgid="7888812253110553920">"navegación, botón de inicio"</string>
     <string name="one_handed_title" msgid="2584414010282746195">"Modo Una mano"</string>
-    <string name="one_handed_mode_enabled" msgid="3396864848786359651">"Usar Modo Una mano"</string>
+    <string name="one_handed_mode_enabled" msgid="3396864848786359651">"Usar modo Una mano"</string>
     <string name="one_handed_mode_shortcut_title" msgid="1847871530184067369">"Acceso directo al modo Una mano"</string>
     <string name="keywords_one_handed" msgid="969440592493034101">"fácil alcance"</string>
     <string name="one_handed_mode_swipe_down_category" msgid="110178629274462484">"Desliza hacia abajo para"</string>
@@ -5504,7 +5501,7 @@
     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
     <string name="volte_5G_limited_title" msgid="5908052268836750629">"¿Quieres desactivar VoLTE?"</string>
     <string name="volte_5G_limited_text" msgid="7150583768725182345">"También se desactivará tu conexión 5G.\nDurante las llamadas de voz, no podrás utilizar Internet y es posible que algunas aplicaciones no funcionen."</string>
-    <string name="cached_apps_freezer" msgid="1057519579761550350">"Suspender ejecución de aplicaciones en caché"</string>
+    <string name="cached_apps_freezer" msgid="1057519579761550350">"Suspender ejecución de apps en caché"</string>
     <string name="blob_never_expires_text" msgid="7293376386620106623">"Nunca caduca."</string>
     <string name="accessor_never_expires_text" msgid="4647624492147788340">"La concesión no caduca nunca."</string>
     <string name="overlay_settings_title" msgid="1032863083496396365">"Permitir superposiciones de pantalla en Ajustes"</string>
@@ -5593,13 +5590,13 @@
     <string name="multiple_users_main_switch_title" msgid="9158796544835843201">"Permitir cambiar de usuario"</string>
     <string name="multiple_users_main_switch_keywords" msgid="4845954458094134356">"permitir, varios, usuarios, habilitar, muchos"</string>
     <string name="multiple_users_title_keywords" msgid="2395593167746225172">"múltiples, usuarios, perfiles, personas, cuentas, cambiar, muchos"</string>
-    <string name="wireless_debugging_main_switch_title" msgid="8463499572781441719">"Usar Depuración inalámbrica"</string>
+    <string name="wireless_debugging_main_switch_title" msgid="8463499572781441719">"Usar depuración inalámbrica"</string>
     <string name="graphics_driver_main_switch_title" msgid="6125172901855813790">"Usar preferencias del controlador de gráficos"</string>
     <string name="night_light_main_switch_title" msgid="3428298022467805219">"Usar Luz nocturna"</string>
     <string name="nfc_main_switch_title" msgid="6295839988954817432">"Usar NFC"</string>
     <string name="adaptive_brightness_main_switch_title" msgid="2681666805191642737">"Usar Brillo adaptativo"</string>
     <string name="wifi_calling_main_switch_title" msgid="4070224008346815634">"Usar Llamada por Wi-Fi"</string>
-    <string name="default_see_all_apps_title" msgid="7481113230662612178">"Ver todas las aplicaciones"</string>
+    <string name="default_see_all_apps_title" msgid="7481113230662612178">"Ver todas las apps"</string>
     <string name="smart_forwarding_title" msgid="8368634861971949799">"Desvío inteligente"</string>
     <string name="smart_forwarding_summary_enabled" msgid="3341062878373185604">"Desvío inteligente habilitado"</string>
     <string name="smart_forwarding_summary_disabled" msgid="5033880700091914809">"Desvío inteligente inhabilitado"</string>
