@@ -14815,24 +14815,24 @@
     </string-array>
 
     <!-- Title on issue card for Identity Check in Safety Center [CHAR LIMIT=NONE] -->
-    <string name="identity_check_issue_card_title">Identity Check is available on more apps</string>
+    <string name="identity_check_issue_card_title">Identity Check works with more apps</string>
     <!-- Summary on issue card for Identity Check in Safety Center [CHAR LIMIT=NONE] -->
-    <string name="identity_check_issue_card_summary">You can secure your identity protection on any app that offers Fingerprint or Face Unlock to identify you</string>
+    <string name="identity_check_issue_card_summary">Identity Check prevents unwanted access to your apps. Now available with any app that uses Fingerprint or Face Unlock.</string>
     <!-- Button text for Identity Check issue card in Safety Center [CHAR LIMIT=NONE] -->
     <string name="identity_check_issue_card_button_text">View details</string>
     <!-- Title for Identity Check promo card in Safety Center [CHAR LIMIT=NONE] -->
-    <string name="identity_check_promo_card_title">Use Identity Check to secure more apps</string>
+    <string name="identity_check_promo_card_title">Identity Check works with more apps</string>
     <!-- Summary for Identity Check promo card in Safety Center [CHAR LIMIT=NONE] -->
-    <string name="identity_check_promo_card_summary">When you use Identity Check for all apps that support Fingerprint and Face Unlock, you ensure stronger protection and a more consistent experience – without extra setup</string>
+    <string name="identity_check_promo_card_summary">Updates:\n<ul><li>Identity Check adds protection to any app that uses Fingerprint or Face Unlock</li>\n<li>Over time, Identity Check may add more ways to verify it\'s you and secure apps on your device. <a href="https://support.google.com/android?p=identity_check">Learn more about when and where you’\re protected</a></li></ul></string>
 
     <!-- Title on issue card for Identity Check in Safety Center (watch-specific) [CHAR LIMIT=NONE] -->
-    <string name="identity_check_watch_issue_card_title">Identity Check works with your watch</string>
+    <string name="identity_check_watch_issue_card_title">Identity Check and Watch</string>
     <!-- Summary on issue card for Identity Check in Safety Center (watch-specific) [CHAR LIMIT=NONE] -->
-    <string name="identity_check_watch_issue_card_summary">Prevent others from opening apps that require Fingerprint or Face Unlock. When connected to your watch, your security is assured with greater mobility.</string>
+    <string name="identity_check_watch_issue_card_summary">With a connected watch, Identity Check adds more ways to verify it’s you to prevent unwanted access to apps</string>
     <!-- Title for Identity Check promo card in Safety Center (watch-specific) [CHAR LIMIT=NONE] -->
-    <string name="identity_check_watch_promo_card_title">Use Identity Check and watch on more apps</string>
+    <string name="identity_check_watch_promo_card_title">Identity Check and Watch</string>
     <!-- Summary for Identity Check promo card in Safety Center (watch-specific) [CHAR LIMIT=NONE] -->
-    <string name="identity_check_promo_card_watch_summary">Ensure your identity protection on all apps that support Fingerprint and Face Unlock in trusted places like your home or office. Use Identity Check with your watch to extend your protection even beyond trusted places.</string>
+    <string name="identity_check_promo_card_watch_summary">Updates:\n<ul><li>By connecting a watch, you can use either biometrics or your PIN to access apps when you’re not in a trusted place</li>\n<li>Over time, Identity Check may add more ways to verify it\'s you and secure apps on your device. <a href="https://support.google.com/android?p=identity_check">Learn more about when and where you’\re protected</a></li></ul></string>
 
     <!-- Title for Other settings category in Safety Center [CHAR LIMIT=60] -->
     <string name="more_security_privacy_category_title">Other settings</string>
