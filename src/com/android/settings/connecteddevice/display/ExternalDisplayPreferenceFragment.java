@@ -481,8 +481,12 @@ public class ExternalDisplayPreferenceFragment extends SettingsPreferenceFragmen
     }
 
     private void updateScreen(final PrefRefresh screen) {
-        final var displaysToShow = mInjector.getDisplays().stream().filter(
+        var displaysToShow = mInjector.getDisplays().stream().filter(
                 DisplayDevice::isConnectedDisplay).toList();
+        if (mInjector.getFlags().displayTopologyPaneInDisplayList()) {
+            displaysToShow = displaysToShow.stream().filter(
+                    display -> display.isEnabled() == DisplayIsEnabled.YES).toList();
+        }
 
         if (displaysToShow.isEmpty()) {
             showTextWhenNoDisplaysToShow(screen, /* position= */ 0);
