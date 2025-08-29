@@ -14,15 +14,16 @@
  * limitations under the License.
  */
 
-package com.android.settings.appfunctions.sources
+package com.android.settings.appfunctions.providersources
 
 import android.content.Context
-import android.provider.Settings
+import android.os.UserManager
+import com.android.settings.Utils
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
 
-class AdaptiveBrightnessStateSource : DeviceStateSource {
+class ManagedProfileStateSource : DeviceStateSource {
     override val appFunctionType: DeviceStateAppFunctionType =
         DeviceStateAppFunctionType.GET_UNCATEGORIZED
 
@@ -30,25 +31,18 @@ class AdaptiveBrightnessStateSource : DeviceStateSource {
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): List<PerScreenDeviceStates> {
-        val isAdaptiveBrightnessEnabled =
-            Settings.System.getInt(
-                context.contentResolver,
-                Settings.System.SCREEN_BRIGHTNESS_MODE,
-                Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL,
-            ) != Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL
+        val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
+        val hasManagedProfile = Utils.getManagedProfile(userManager) != null
 
         val item =
             DeviceStateItem(
-                key = "auto_brightness_entry",
-                purpose = "auto_brightness_entry",
-                jsonValue = isAdaptiveBrightnessEnabled.toString(),
+                key = "has_managed_profile",
+                purpose = "has_managed_profile",
+                jsonValue = hasManagedProfile.toString(),
             )
 
         return listOf(
-            PerScreenDeviceStates(
-                description = "Adaptive brightness",
-                deviceStateItems = listOf(item),
-            )
+            PerScreenDeviceStates(description = "Managed profile", deviceStateItems = listOf(item))
         )
     }
 }

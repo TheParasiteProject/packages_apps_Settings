@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.appfunctions.sources
+package com.android.settings.appfunctions.providersources
 
 import android.bluetooth.BluetoothDevice
 import android.content.Context
