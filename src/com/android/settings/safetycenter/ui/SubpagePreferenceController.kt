@@ -23,7 +23,9 @@ import android.safetycenter.SafetyCenterData
 import android.safetycenter.SafetyCenterEntry
 import android.safetycenter.SafetyCenterIssue
 import android.util.Log
+import android.view.ContextThemeWrapper
 import androidx.annotation.StringRes
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.lifecycle.LifecycleOwner
 import androidx.preference.Preference
 import androidx.preference.PreferenceScreen
@@ -215,7 +217,12 @@ class SubpagePreferenceController(context: Context, preferenceKey: String) :
                     null
                 }
             }
-        return iconResId?.let { mContext.getDrawable(it) }
+        return iconResId?.let {
+            AppCompatResources.getDrawable(
+                ContextThemeWrapper(mContext, R.style.ThemeOverlay_SafetyCenterColors),
+                it,
+            )
+        }
     }
 
     private fun selectSeverityUnspecifiedIconResId(severityUnspecifiedIconType: Int?): Int? {
