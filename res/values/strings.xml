@@ -3228,6 +3228,8 @@
     <string name="hdr_brightness_hdr_image_label">HDR image</string>
     <!-- HDR brightness screen warning. -->
     <string name="hdr_brightness_warning">This setting only affects images and videos that support High Dynamic Range (HDR).</string>
+    <!-- HDR brightness slider description for screen reader. -->
+    <string name="hdr_brightness_slider_description">Intensity, make the intensity dimmer or brighter.</string>
 
     <!-- Display settings screen, display white balance settings title [CHAR LIMIT=30] -->
     <string name="display_white_balance_title">Display white balance</string>
