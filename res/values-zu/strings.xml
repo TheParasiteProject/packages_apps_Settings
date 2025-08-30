@@ -1689,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Okomphakathi"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Amasethingi omphakathi"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Imodi yehabhu"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Amawijethi ekukhiyeni isikrini (beta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Lapho kufanele kuboniswe ngokuzenzekelayo"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Akusoze"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Ngenkathi ishaja"</string>
@@ -2420,7 +2419,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Thinta iGoogle Disability Support"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Inhlolovo Yokufinyeleleka"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Yabelana ngempendulo yakho"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Ugculiseke kangakanani ngetimu Emnyama?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Yenza inhlolovo"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Yabelana ngempendulo yakho"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Ugculiseke kangakanani ngokukhuliswa?"</string>
@@ -3979,8 +3979,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Bonisa konke okuqukethwe kwesaziso somsebenzi"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Fihla okuqukethwe komsebenzi okuzwelayo"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Uma idivayisi yakho ikhiyiwe, ufuna ukuthi izaziso zephrofayela zivele kanjani?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Bonisa kusikrini esikhiyiwe"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Okufanele kubonwe kusikrini esikhiyiwe"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Bonisa izaziso ezibukiwe"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Bonisa izithonjana zesaziso ezibukiwe"</string>
@@ -4083,8 +4082,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Umhleli wesaziso"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Nqwabelanisa futhi uthulise izaziso ezingabalulekile kakhulu"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Lawula ama-app esihleli sesaziso"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Uboyinweba njalo inqwaba"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Kusebenzise kuma-app ephrofayela yomsebenzi"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Amasevisi omsizi we-VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Azikho izinhlelo zokusebenza ezifakiwe ezicele ukusetshenziswa njengamasevisi wesisizi se-VR."</string>

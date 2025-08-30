@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Færa upp"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Færa niður"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Fjarlægja"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Færa efst"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Kjörstillingar svæðis"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Stilla mælieininga- og númeraval"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Veittu forritum aðgang að kjörstillingum svæðisins svo þau geti sérsniðið upplifun þína."</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Sameiginlegt"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Sameiginlegar stillingar"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Dokkustilling"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Græjur á lásskjá (beta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Veldu hvenær þær birtast sjálfkrafa"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Aldrei"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Þegar tækið er í hleðslu"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Hafa samband við notendaþjónustu aðgengis- og hjálpartækni Google"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Könnun um aðgengi"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Deildu ábendingum"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Hversu ánægð(ur) ertu með Dökkt þema?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Svara könnun"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Deildu ábendingum"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Hversu ánægð(ur) ertu með stækkun?"</string>
@@ -3866,16 +3865,16 @@
     <string name="zen_category_apps" msgid="1167374545618451925">"Forrit"</string>
     <string name="zen_category_exceptions" msgid="1316097981052752811">"Vekjarar &amp; aðrar truflanir"</string>
     <string name="zen_category_duration" msgid="7515850842082631460">"Tímalengd flýtistillinga"</string>
-    <string name="sound_work_settings" msgid="752627453846309092">"Hljóð vinnuprófils"</string>
-    <string name="work_use_personal_sounds_title" msgid="7729428677919173609">"Nota hljóð úr eigin sniði"</string>
+    <string name="sound_work_settings" msgid="752627453846309092">"Hljóð vinnusniðs"</string>
+    <string name="work_use_personal_sounds_title" msgid="7729428677919173609">"Nota hljóð úr einkasniði"</string>
     <string name="work_use_personal_sounds_summary" msgid="608061627969077231">"Nota sömu hljóð og eigið snið þitt"</string>
     <string name="work_ringtone_title" msgid="4810802758746102589">"Vinnuhringitónn"</string>
     <string name="work_notification_ringtone_title" msgid="2955312017013255515">"Sjálfgefið hljóð vinnutilkynninga"</string>
     <string name="work_alarm_ringtone_title" msgid="3369293796769537392">"Sjálfgefið hljóð í vekjara fyrir vinnu"</string>
     <string name="work_sound_same_as_personal" msgid="1836913235401642334">"Sama og í eigin sniði"</string>
-    <string name="work_sync_dialog_title" msgid="7810248132303515469">"Nota hljóð úr eigin sniði?"</string>
+    <string name="work_sync_dialog_title" msgid="7810248132303515469">"Nota hljóð úr einkasniði?"</string>
     <string name="work_sync_dialog_yes" msgid="5785488304957707534">"Staðfesta"</string>
-    <string name="work_sync_dialog_message" msgid="5066178064994040223">"Vinnuprófíllinn mun nota sömu hljóð og persónulegur prófíll"</string>
+    <string name="work_sync_dialog_message" msgid="5066178064994040223">"Vinnusniðið mun nota sömu hljóð og einkasnið"</string>
     <string name="configure_notification_settings" msgid="1492820231694314376">"Tilkynningar"</string>
     <string name="notification_dashboard_summary" msgid="7530169251902320652">"Tilkynningaferill, samtöl"</string>
     <string name="conversation_notifs_category" msgid="2549844862379963273">"Samtal"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Sýna innihald allra vinnutilkynninga"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Fela viðkvæmt vinnutengt efni"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Hvernig viltu að tilkynningar frá sniði birtist þegar tækið er læst?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Sýna á lásskjá"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Hvað á að sýna á lásskjá"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Sýna lesnar tilkynningar"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Sýna tákn lesinna tilkynninga"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Tilkynningaskipuleggjandi"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Flokka og þagga tilkynningar með minni forgang"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Stjórna forritum fyrir tilkynningaskipuleggjanda"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Alltaf stækka pakka"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Nota í forritum á vinnusniði"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Hjálparþjónusta sýndarveruleika"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Engin uppsett forrit hafa óskað eftir að vera keyrð sem sýndarveruleikaþjónusta."</string>

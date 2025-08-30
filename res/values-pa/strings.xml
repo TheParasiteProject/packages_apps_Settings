@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"ਉੱਪਰ ਲਿਜਾਓ"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"ਹੇਠਾਂ ਲਿਜਾਓ"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"ਹਟਾਓ"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"ਸਿਖਰ \'ਤੇ ਲਿਜਾਓ"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"ਖੇਤਰੀ ਤਰਜੀਹਾਂ"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"ਇਕਾਈਆਂ ਅਤੇ ਨੰਬਰ ਸੰਬੰਧੀ ਤਰਜੀਹਾਂ ਨੂੰ ਸੈੱਟ ਕਰੋ"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"ਐਪਾਂ ਨੂੰ ਤੁਹਾਡੀਆਂ ਖੇਤਰੀ ਤਰਜੀਹਾਂ ਜਾਣਨ ਦਿਓ ਤਾਂ ਜੋ ਉਹ ਤੁਹਾਡੇ ਅਨੁਭਵ ਨੂੰ ਵਿਅਕਤੀਗਤ ਬਣਾ ਸਕਣ।"</string>
@@ -800,7 +799,7 @@
     <string name="unlock_set_unlock_pattern_title" msgid="8224895208452995332">"ਪੈਟਰਨ"</string>
     <string name="unlock_set_unlock_pin_title" msgid="5283636759362880407">"ਪਿੰਨ"</string>
     <string name="unlock_set_unlock_password_title" msgid="2559842616268607041">"ਪਾਸਵਰਡ"</string>
-    <string name="unlock_set_do_later_title" msgid="6565575303676064364">"ਅਜੇ ਨਹੀਂ"</string>
+    <string name="unlock_set_do_later_title" msgid="6565575303676064364">"ਹੁਣੇ ਨਹੀਂ"</string>
     <string name="current_screen_lock" msgid="1367883977261098017">"ਮੌਜੂਦਾ ਸਕ੍ਰੀਨ ਲਾਕ"</string>
     <string name="unlock_accessibility_pin_area" msgid="437104569661316525">"ਪਿੰਨ ਖੇਤਰ"</string>
     <string name="unlock_accessibility_password" msgid="5404713613573232309">"ਡੀਵਾਈਸ ਦਾ ਪਾਸਵਰਡ"</string>
@@ -1537,9 +1536,9 @@
     <string name="doze_always_on_wallpaper_title" msgid="975186604007325364">"ਲਾਕ ਸਕ੍ਰੀਨ ਵਾਲਪੇਪਰ ਦਿਖਾਓ"</string>
     <string name="doze_always_on_wallpaper_description" msgid="7797570713499410605">"ਹਮੇਸ਼ਾਂ-ਚਾਲੂ ਡਿਸਪਲੇ ਨਾਲ ਲਾਕ ਸਕ੍ਰੀਨ ਵਾਲਪੇਪਰ ਦਿਖਣਯੋਗ ਹੁੰਦੇ ਹਨ"</string>
     <string name="force_bold_text" msgid="4620929631102086716">"ਬੋਲਡ ਲਿਖਤ"</string>
-    <string name="title_font_size" msgid="570613010306330622">"ਫੌਂਟ ਦਾ ਆਕਾਰ"</string>
+    <string name="title_font_size" msgid="570613010306330622">"ਫ਼ੌਂਟ ਸਾਈਜ਼"</string>
     <string name="short_summary_font_size" msgid="8444689613442419978">"ਲਿਖਤ ਨੂੰ ਵੱਡਾ ਜਾਂ ਛੋਟਾ ਕਰੋ"</string>
-    <string name="category_title_display_text_size" msgid="4234285020731751694">"ਆਕਾਰ ਲਈ ਵਿਕਲਪ"</string>
+    <string name="category_title_display_text_size" msgid="4234285020731751694">"ਸਾਈਜ਼ ਲਈ ਵਿਕਲਪ"</string>
     <string name="category_title_text_style" msgid="5905015084935695611">"ਸਟਾਈਲ ਲਈ ਵਿਕਲਪ"</string>
     <string name="sim_lock_settings" msgid="7331982427303002613">"ਸਿਮ ਲਾਕ ਸੈਟਿੰਗਾਂ"</string>
     <string name="sim_lock_settings_category" msgid="6475255139493877786">"ਸਿਮ ਲਾਕ"</string>
@@ -2348,7 +2347,7 @@
     <string name="user_dict_settings_add_word_option_name" msgid="2686051785623698231">"ਸ਼ਬਦ:"</string>
     <string name="user_dict_settings_add_shortcut_option_name" msgid="5722204336242646866">"ਸ਼ਾਰਟਕੱਟ:"</string>
     <string name="user_dict_settings_add_locale_option_name" msgid="2117468247460253346">"ਭਾਸ਼ਾ:"</string>
-    <string name="user_dict_settings_add_word_hint" msgid="4560494723256242785">"ਇੱਕ ਸ਼ਬਦ ਟਾਈਪ ਕਰੋ"</string>
+    <string name="user_dict_settings_add_word_hint" msgid="4560494723256242785">"ਕੋਈ ਸ਼ਬਦ ਟਾਈਪ ਕਰੋ"</string>
     <string name="user_dict_settings_add_shortcut_hint" msgid="6209624157217434640">"ਵਿਕਲਪਿਕ ਸ਼ਾਰਟਕੱਟ"</string>
     <string name="user_dict_settings_edit_dialog_title" msgid="316493656442362284">"ਸ਼ਬਦ ਦਾ ਸੰਪਾਦਨ ਕਰੋ"</string>
     <string name="user_dict_settings_context_menu_edit_title" msgid="4909198741914531509">"ਸੰਪਾਦਨ ਕਰੋ"</string>
@@ -2419,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google Disability ਸਹਾਇਤਾ ਟੀਮ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"ਪਹੁੰਚਯੋਗਤਾ ਸਰਵੇਖਣ"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"ਆਪਣਾ ਵਿਚਾਰ ਸਾਂਝਾ ਕਰੋ"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"ਤੁਸੀਂ ਗੂੜ੍ਹੇ ਥੀਮ ਨਾਲ ਕਿੰਨੇ ਕੁ ਸੰਤੁਸ਼ਟ ਹੋ?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"ਸਰਵੇਖਣ ਪੂਰਾ ਕਰੋ"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"ਆਪਣਾ ਵਿਚਾਰ ਸਾਂਝਾ ਕਰੋ"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"ਤੁਸੀਂ ਵੱਡਦਰਸ਼ੀਕਰਨ ਨਾਲ ਕਿੰਨੇ ਕੁ ਸੰਤੁਸ਼ਟ ਹੋ?"</string>
@@ -2495,7 +2495,7 @@
     <string name="accessibility_text_reading_preview_mail_content" msgid="8078152365771951802">"ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ!\n\nਮੇਰੀ ਸਿਰਫ਼ ਇਹ ਜਾਣਨ ਦੀ ਇੱਛਾ ਹੈ ਕਿ ਡਿਜ਼ਾਈਨ ਦਾ ਕੰਮ ਕਿੰਨਾ ਕੁ ਹੋ ਗਿਆ ਹੈ। ਕੀ ਸਾਡੇ ਵੱਲੋਂ ਨਵੇਂ ਗੁਬਾਰੇ ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕੀਤੇ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ ਉਹ ਤਿਆਰ ਹੋ ਜਾਣਗੇ?"</string>
     <string name="accessibility_text_reading_reset_button_title" msgid="5960753279788187669">"ਸੈਟਿੰਗਾਂ ਰੀਸੈੱਟ ਕਰੋ"</string>
     <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"ਡਿਸਪਲੇ ਦੇ ਆਕਾਰ ਅਤੇ ਲਿਖਤ ਸੈਟਿੰਗਾਂ ਨੂੰ ਰੀਸੈੱਟ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ"</string>
-    <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"ਕੀ ਡਿਸਪਲੇ ਦੇ ਆਕਾਰ ਅਤੇ ਲਿਖਤ ਨੂੰ ਰੀਸੈੱਟ ਕਰਨਾ ਹੈ?"</string>
+    <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"ਕੀ ਡਿਸਪਲੇ ਸਾਈਜ਼ ਅਤੇ ਲਿਖਤ ਨੂੰ ਰੀਸੈੱਟ ਕਰਨਾ ਹੈ?"</string>
     <string name="accessibility_text_reading_confirm_dialog_reset_button" msgid="8215800137850243736">"ਰੀਸੈੱਟ ਕਰੋ"</string>
     <string name="accessibility_text_reading_conversation_message_1" msgid="7883952203831957831">"ਕੀ ਵੀਕੈਂਡ ਲਈ ਕੋਈ ਪਲਾਨ ਹੈ?"</string>
     <string name="accessibility_text_reading_conversation_message_2" msgid="8112160435318635856">"ਬੀਚ \'ਤੇ ਜਾ ਰਹੇ ਹਾਂ। ਨਾਲ ਆਓਗੇ?"</string>
@@ -3446,7 +3446,7 @@
     <string name="user_adding_new_user" msgid="7439602720177181412">"ਨਵਾਂ ਉਪਭੋਗਤਾ ਜੋੜ ਰਿਹਾ ਹੈ…"</string>
     <string name="user_delete_user_description" msgid="7764153465503821011">"ਵਰਤੋਂਕਾਰ ਨੂੰ ਮਿਟਾਓ"</string>
     <string name="user_delete_button" msgid="3833498650182594653">"ਮਿਟਾਓ"</string>
-    <string name="user_exit_guest_confirm_message" msgid="8995296853928816554">"ਇਸ ਸੈਸ਼ਨ ਵਿਚਲੀਆਂ ਸਾਰੀਆਂ ਐਪਾਂ ਅਤੇ ਡਾਟਾ ਨੂੰ ਮਿਟਾ ਦਿੱਤਾ ਜਾਏਗਾ।"</string>
+    <string name="user_exit_guest_confirm_message" msgid="8995296853928816554">"ਇਸ ਸੈਸ਼ਨ ਵਿਚਲੀਆਂ ਸਾਰੀਆਂ ਐਪਾਂ ਅਤੇ ਡਾਟੇ ਨੂੰ ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ।"</string>
     <string name="user_exit_guest_dialog_remove" msgid="7067727314172605181">"ਹਟਾਓ"</string>
     <string name="guest_category_title" msgid="5562663588315329152">"ਮਹਿਮਾਨ (ਤੁਸੀਂ)"</string>
     <string name="user_category_title" msgid="4368580529662699083">"ਵਰਤੋਂਕਾਰ"</string>
@@ -4079,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"ਸੂਚਨਾ ਪ੍ਰਬੰਧਕ"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"ਘੱਟ ਤਰਜੀਹ ਵਾਲੀਆਂ ਸੂਚਨਾਵਾਂ ਨੂੰ ਬੰਡਲ ਕਰੋ ਅਤੇ ਖਮੋਸ਼ ਕਰੋ"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"ਸੂਚਨਾ ਪ੍ਰਬੰਧਕ ਲਈ ਐਪਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"ਹਮੇਸ਼ਾਂ ਬੰਡਲਾਂ ਦਾ ਵਿਸਤਾਰ ਕਰੋ"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"ਕੰਮ ਸੰਬੰਧੀ ਪ੍ਰੋਫਾਈਲ ਦੀਆਂ ਐਪਾਂ \'ਤੇ ਲਾਗੂ ਕਰੋ"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR ਮਦਦਗਾਰ ਸੇਵਾਵਾਂ"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"ਕਿਸੇ ਵੀ ਸਥਾਪਤ ਐਪ ਵੱਲੋਂ VR ਮਦਦਗਾਰ ਸੇਵਾਵਾਂ ਵਜੋਂ ਚਲਾਉਣ ਦੀ ਬੇਨਤੀ ਨਹੀਂ ਕੀਤੀ ਗਈ।"</string>
@@ -4297,7 +4296,7 @@
     <string name="zen_mode_confirm_disable_message" msgid="2703882646066764140">"ਬੰਦ ਹੋਣ \'ਤੇ ਇਹ ਮੋਡ ਕਦੇ ਵੀ ਚਾਲੂ ਨਹੀਂ ਹੋਵੇਗਾ"</string>
     <string name="zen_mode_action_disable" msgid="3552921561331044881">"ਬੰਦ ਕਰੋ"</string>
     <string name="zen_mode_confirm_enable_mode_title" msgid="6020902148457106017">"ਕੀ <xliff:g id="MODE_NAME">%1$s</xliff:g> ਚਾਲੂ ਕਰਨਾ ਹੈ?"</string>
-    <string name="zen_mode_confirm_enable_message" msgid="8707142927858064775">"ਇਹ ਮੋਡ ਇਸਦੀਆਂ ਸੈਟਿੰਗਾਂ ਦੇ ਆਧਾਰ \'ਤੇ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ ਚਾਲੂ ਹੋ ਸਕਦਾ ਹੈ"</string>
+    <string name="zen_mode_confirm_enable_message" msgid="8707142927858064775">"ਇਹ ਮੋਡ ਇਸਦੀਆਂ ਸੈਟਿੰਗਾਂ ਦੇ ਆਧਾਰ \'ਤੇ ਆਪਣੇ-ਆਪ ਚਾਲੂ ਹੋ ਸਕਦਾ ਹੈ"</string>
     <string name="zen_mode_action_enable" msgid="1161480633223176531">"ਚਾਲੂ ਕਰੋ"</string>
     <string name="zen_mode_blurb_schedule_time" msgid="8223898702097484009">"ਨਿਯਮਿਤ ਸਮਾਂ-ਸੂਚੀ ਦੀ ਪਾਲਣਾ ਕਰਨ ਵਾਲਾ ਮੋਡ ਸੈੱਟ ਕਰੋ"</string>
     <string name="zen_mode_blurb_schedule_calendar" msgid="382177907856065945">"ਕੈਲੰਡਰ ਇਵੈਂਟਾਂ ਅਤੇ ਸੱਦੇ ਸੰਬੰਧੀ ਜਵਾਬਾਂ ਨਾਲ ਸਿੰਕ ਕਰਨ ਲਈ ਮੋਡ ਸੈੱਟ ਕਰੋ"</string>
@@ -4582,7 +4581,7 @@
     <string name="users_summary" msgid="8473589474976307510">"<xliff:g id="USER_NAME">%1$s</xliff:g> ਵਜੋਂ ਸਾਈਨ ਇਨ ਕੀਤਾ ਗਿਆ"</string>
     <string name="android_version_summary" msgid="7818952662015042768">"Android <xliff:g id="VERSION">%1$s</xliff:g> ਵਿੱਚ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ"</string>
     <string name="android_version_pending_update_summary" msgid="5404532347171027730">"ਅੱਪਡੇਟ ਉਪਲਬਧ ਹੈ"</string>
-    <string name="disabled_by_policy_title" msgid="6852347040813204503">"ਕਾਰਜ ਨੀਤੀ ਮੁਤਾਬਕ ਬਲਾਕ ਕੀਤਾ ਗਿਆ"</string>
+    <string name="disabled_by_policy_title" msgid="6852347040813204503">"ਕੰਮ ਸੰਬੰਧੀ ਨੀਤੀ ਮੁਤਾਬਕ ਬਲਾਕ ਕੀਤਾ ਗਿਆ"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="1669689058213728099">"ਤੁਸੀਂ ਅਵਾਜ਼ ਨੂੰ ਬਦਲ ਨਹੀਂ ਸਕਦੇ"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="400089720689494562">"ਕਾਲਾਂ ਨਹੀਂ ਕਰ ਸਕਦੇ"</string>
     <string name="disabled_by_policy_title_sms" msgid="8951840850778406831">"SMS ਸੁਨੇਹੇ ਨਹੀਂ ਭੇਜ ਸਕਦੇ"</string>
@@ -4595,7 +4594,7 @@
     <string name="disabled_by_policy_title_parental_controls" msgid="2688144174399968452">"ਮਦਦ ਮੰਗੋ"</string>
     <string name="disabled_by_policy_content_parental_controls" msgid="7645416358554171082">"ਇਸ ਸੈਟਿੰਗ ਨੂੰ ਬਦਲਣ ਲਈ, ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਜਾਂ ਖਾਤੇ ਲਈ ਕੰਟਰੋਲਾਂ ਦਾ ਸੈੱਟ ਅੱਪ ਕਰਨ ਵਾਲੇ ਵਿਅਕਤੀ ਨੂੰ ਤੁਹਾਡੇ ਲਈ ਇਸਨੂੰ ਬਦਲਣਾ ਪਵੇਗਾ।"</string>
     <string name="disabled_by_policy_parental_consent" msgid="9166060049019018978">"ਇਸ ਸੈਟਿੰਗ ਨੂੰ ਬਦਲਣ ਦੀ ਆਗਿਆ ਦੇਣ ਲਈ ਫ਼ੋਨ ਨੂੰ ਆਪਣੇ ਮਾਂ-ਪਿਓ ਦੇ ਹਵਾਲੇ ਕਰੋ।"</string>
-    <string name="default_admin_support_msg" msgid="8816296554831532033">"ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ, ਆਪਣੇ ਆਈ.ਟੀ. ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਸੰਪਰਕ ਕਰੋ"</string>
+    <string name="default_admin_support_msg" msgid="8816296554831532033">"ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ, ਆਪਣੇ ਆਈ.ਟੀ. ਪ੍ਰਸ਼ਾਸਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"</string>
     <string name="admin_support_more_info" msgid="8407433155725898290">"ਹੋਰ ਵੇਰਵੇ"</string>
     <string name="admin_profile_owner_message" msgid="8860709969532649195">"ਤੁਹਾਡਾ ਪ੍ਰਸ਼ਾਸਕ ਸੈਟਿੰਗਾਂ, ਇਜਾਜ਼ਤਾਂ, ਕਾਰਪੋਰੇਟ ਪਹੁੰਚ, ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ, ਅਤੇ ਡੀਵਾਈਸ ਦੀ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਸਮੇਤ ਤੁਹਾਡੇ ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਨਾਲ ਸਬੰਧਿਤ ਐਪਾਂ ਅਤੇ ਡਾਟੇ ਦੀ ਨਿਗਰਾਨੀ ਅਤੇ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦਾ ਹੈ।"</string>
     <string name="admin_profile_owner_user_message" msgid="4929926887231544950">"ਤੁਹਾਡਾ ਪ੍ਰਸ਼ਾਸਕ ਸੈਟਿੰਗਾਂ, ਇਜਾਜ਼ਤਾਂ, ਕਾਰਪੋਰੇਟ ਪਹੁੰਚ, ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ, ਅਤੇ ਡੀਵਾਈਸ ਦੀ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਸਮੇਤ ਇਸ ਵਰਤੋਂਕਾਰ ਨਾਲ ਸਬੰਧਿਤ ਐਪਾਂ ਅਤੇ ਡਾਟੇ ਦੀ ਨਿਗਰਾਨੀ ਅਤੇ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦਾ ਹੈ।"</string>
@@ -4863,7 +4862,7 @@
     <string name="one_handed_mode_intro_text" msgid="7921988617828924342">"ਆਪਣੀ ਸਕ੍ਰੀਨ ਦੇ ਸਿਖਰਲੇ ਅੱਧ ਨੂੰ ਹੇਠਾਂ ਖਿੱਚੋ ਤਾਂ ਜੋ ਇੱਕ ਹੱਥ ਨਾਲ ਫੋਨ ਦੀ ਵਰਤੋਂ ਕਰਨਾ ਆਸਾਨ ਹੋ ਜਾਵੇ"</string>
     <string name="one_handed_mode_footer_text" msgid="6336209800330679840">" "<b>"ਇੱਕ ਹੱਥ ਮੋਡ ਵਰਤਣ ਦਾ ਤਰੀਕਾ"</b>\n" • ਪੱਕਾ ਕਰੋ ਕਿ ਸਿਸਟਮ ਨੈਵੀਗੇਸ਼ਨ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਸ਼ਾਰਾ ਨੈਵੀਗੇਸ਼ਨ ਚੁਣਿਆ ਗਿਆ ਹੈ\n • ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਲੇ ਕਿਨਾਰੇ ਨੇੜੇ ਹੇਠਾਂ ਵੱਲ ਸਵਾਈਪ ਕਰੋ"</string>
     <string name="one_handed_action_pull_down_screen_title" msgid="9187194533815438150">"ਸਕ੍ਰੀਨ ਖਿੱਚ ਕੇ ਆਪਣੇ ਅੰਗੂਠੇ ਦੇ ਦਾਇਰੇ ਵਿੱਚ ਲਿਆਓ"</string>
-    <string name="one_handed_action_pull_down_screen_summary" msgid="7582432473450036628">"ਸਕ੍ਰੀਨ ਦਾ ਆਕਾਰ ਛੋਟਾ ਹੋ ਜਾਵੇਗਾ ਤਾਂ ਜੋ ਤੁਹਾਡਾ ਅੰਗੂਠਾ ਇਸਦੇ ਉੱਪਰਲੇ ਹਿੱਸੇ ਤੱਕ ਆਸਾਨੀ ਨਾਲ ਪਹੁੰਚ ਸਕੇ।"</string>
+    <string name="one_handed_action_pull_down_screen_summary" msgid="7582432473450036628">"ਸਕ੍ਰੀਨ ਦਾ ਆਕਾਰ ਛੋਟਾ ਹੋ ਜਾਵੇਗਾ, ਤਾਂ ਜੋ ਤੁਹਾਡਾ ਅੰਗੂਠਾ ਇਸਦੇ ਉੱਪਰਲੇ ਹਿੱਸੇ ਤੱਕ ਆਸਾਨੀ ਨਾਲ ਪਹੁੰਚ ਸਕੇ।"</string>
     <string name="one_handed_action_show_notification_title" msgid="8789305491485437130">"ਸੂਚਨਾਵਾਂ ਦਿਖਾਓ"</string>
     <string name="one_handed_action_show_notification_summary" msgid="8281689861222000436">"ਸੂਚਨਾਵਾਂ ਅਤੇ ਸੈਟਿੰਗਾਂ ਦਿਸਣਗੀਆਂ।"</string>
     <string name="ambient_display_summary" msgid="2650326740502690434">"ਸਮਾਂ, ਸੂਚਨਾਵਾਂ ਅਤੇ ਹੋਰ ਜਾਣਕਾਰੀ ਦੇਖਣ ਲਈ ਆਪਣੀ ਸਕ੍ਰੀਨ \'ਤੇ ਡਬਲ ਟੈਪ ਕਰੋ।"</string>
@@ -5430,7 +5429,7 @@
     <string name="sim_combination_warning_notification_title" msgid="1365401631492986487">"ਸਿਮ ਦੇ ਸੁਮੇਲ ਵਿੱਚ ਸਮੱਸਿਆ ਆਈ"</string>
     <string name="dual_cdma_sim_warning_notification_summary" msgid="2826474790710586487">"<xliff:g id="OPERATOR_NAMES">%1$s</xliff:g> ਵਰਤਣ ਨਾਲ ਪ੍ਰਕਾਰਜਾਤਮਕਤਾ ਸੀਮਤ ਹੋ ਸਕਦੀ ਹੈ। ਹੋਰ ਜਾਣਨ ਲਈ ਟੈਪ ਕਰੋ।"</string>
     <string name="dual_cdma_sim_warning_notification_channel_title" msgid="1049161096896074364">"ਸਿਮ ਦਾ ਸੁਮੇਲ"</string>
-    <string name="work_policy_privacy_settings" msgid="2702644843505242596">"ਤੁਹਾਡੀ ਕਾਰਜ ਨੀਤੀ ਸੰਬੰਧੀ ਜਾਣਕਾਰੀ"</string>
+    <string name="work_policy_privacy_settings" msgid="2702644843505242596">"ਤੁਹਾਡੀ ਕੰਮ ਸੰਬੰਧੀ ਨੀਤੀ ਦੀ ਜਾਣਕਾਰੀ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="690118670737638405">"ਤੁਹਾਡੇ ਆਈ.ਟੀ. ਪ੍ਰਸ਼ਾਸਕ ਵੱਲੋਂ ਸੈਟਿੰਗਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"</string>
     <string name="track_frame_time_keywords" msgid="7885340257945922239">"GPU"</string>
     <string name="enable_16k_pages" msgid="1758111531461408337">"16 KB ਦੇ ਪੰਨੇ ਦੇ ਆਕਾਰ ਨਾਲ ਬੂਟ ਕਰੋ"</string>

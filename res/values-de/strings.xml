@@ -1689,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Gemeinschaftlich"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Gemeinschaftliche Einstellungen"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Hub-Modus"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Widgets auf dem Sperrbildschirm (Beta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Wann werden Widgets automatisch angezeigt?"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Nie"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Wenn Gerät geladen wird"</string>
@@ -2278,9 +2277,9 @@
     <string name="gesture_button_next" msgid="695288092704187356">"Weiter"</string>
     <string name="gesture_button_restart" msgid="1895850891992530133">"Neustart"</string>
     <string name="gesture_button_done" msgid="6387900351203032188">"Fertig"</string>
-    <string name="action_corner_title" msgid="7411160165577367757">"Verknüpfungen in Ecken anpassen"</string>
+    <string name="action_corner_title" msgid="7411160165577367757">"Kurzbefehle für Ecken anpassen"</string>
     <string name="action_corner_summary" msgid="695618538930535335">"System mit Cursorn bedienen"</string>
-    <string name="action_corner_intro" msgid="2170609118659718140">"Wähle die Ecke aus, für die du die Verknüpfung anpassen möchtest"</string>
+    <string name="action_corner_intro" msgid="2170609118659718140">"Wähle die Ecke aus, für die du den Kurzbefehl anpassen möchtest"</string>
     <string name="action_corner_bottom_left_title" msgid="2857258272736432174">"Linke untere Ecke"</string>
     <string name="action_corner_bottom_right_title" msgid="7222233500548465684">"Rechte untere Ecke"</string>
     <string name="action_corner_top_left_title" msgid="4633975226092344210">"Linke obere Ecke"</string>
@@ -2419,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Support für Barrierefreiheit bei Google-Produkten kontaktieren"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Umfrage zu Bedienungshilfen"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Feedback geben"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Wie zufrieden bist du mit dem dunklen Design?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Zur Umfrage"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Feedback geben"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Wie zufrieden bist du mit der Vergrößerung?"</string>
@@ -2487,7 +2487,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"Mit Tastenkombination vergrößern"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"Mit Tastenkombination und 3-mal Tippen vergrößern"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"Die Bedienungshilfe „<xliff:g id="SERVICE">%1$s</xliff:g>“"</string>
-    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Anzeigegröße &amp; Textgröße"</string>
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Anzeigegröße &amp; Text"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Schriftgröße, Anzeigegröße, Fettdruck, Text mit Kontur"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Einstellungen für Textanzeige ändern"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Betreff: Designs für Heißluftballons"</string>
@@ -2659,7 +2659,7 @@
     <string name="autoclick_ignore_minor_cursor_movement_title" msgid="5038721995720529808">"Geringfügige Cursorbewegung ignorieren"</string>
     <string name="autoclick_revert_to_left_click_title" msgid="6868866422993461739">"Linksklick als Standardaktion verwenden"</string>
     <string name="autoclick_revert_to_left_click_summary" msgid="9207568192335942225">"Wenn du eine andere Aktion verwendest, wird der automatische Klick automatisch wieder zum Linksklick"</string>
-    <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"Die Bedienungshilfe „Automatischer Klick“ funktioniert mit der Bedienung über 3 Schaltflächen besser"</string>
+    <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"„Automatischer Klick“ funktioniert besser mit der Bedienung über 3 Schaltflächen"</string>
     <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"Wenn du bei der Verwendung der Bedienungshilfe „Automatischer Klick“ einfach zurückgehen, den Startbildschirm aufrufen oder die App wechseln möchtest, verwende die Bedienung über 3 Schaltflächen anstelle der Bedienung über Gesten"</string>
     <string name="accessibility_autoclick_keep_gesture_navigation" msgid="5403212927837555942">"Bedienung über Gesten beibehalten"</string>
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"Navigationseinstellungen"</string>
@@ -3871,7 +3871,7 @@
     <string name="work_ringtone_title" msgid="4810802758746102589">"Klingelton für Arbeitsprofil"</string>
     <string name="work_notification_ringtone_title" msgid="2955312017013255515">"Standard-Benachrichtigungston für Arbeitsprofil"</string>
     <string name="work_alarm_ringtone_title" msgid="3369293796769537392">"Standard-Weckton für Arbeitsprofil"</string>
-    <string name="work_sound_same_as_personal" msgid="1836913235401642334">"Dieselben wie beim persönlichen Profil"</string>
+    <string name="work_sound_same_as_personal" msgid="1836913235401642334">"Derselbe wie beim persönlichen Profil"</string>
     <string name="work_sync_dialog_title" msgid="7810248132303515469">"Töne des privaten Profils verwenden?"</string>
     <string name="work_sync_dialog_yes" msgid="5785488304957707534">"Bestätigen"</string>
     <string name="work_sync_dialog_message" msgid="5066178064994040223">"Für dein Arbeitsprofil werden dieselben Töne verwendet wie bei deinem privaten Profil."</string>
@@ -3976,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Alle geschäftlichen Benachrichtigungen anzeigen"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Vertrauliche geschäftliche Inhalte ausblenden"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Wie sollen Profilbenachrichtigungen angezeigt werden, wenn dein Gerät gesperrt ist?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Auf Sperrbildschirm zeigen"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Was auf dem Sperrbildschirm angezeigt werden soll"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Angesehene Benachrichtigungen anzeigen"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Symbol „Angesehene Benachrichtigungen anzeigen“"</string>
@@ -4080,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Benachrichtigungs­organisator"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Benachrichtigungen mit niedriger Priorität bündeln und stummschalten"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Apps für den Benachrichtigungsorganisator verwalten"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Bundles immer erweitern"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Auf Apps im Arbeitsprofil anwenden"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR-Hilfsdienste"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Keine installierte App hat die Ausführung als VR-Hilfsdienst angefordert."</string>
@@ -4097,8 +4095,8 @@
     <string name="picture_in_picture_app_detail_switch" msgid="8544190716075624017">"Bild im Bild zulassen"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="2503211101305358849">"Während die App geöffnet ist oder nachdem du sie verlässt (z. B. um ein Video weiter anzusehen), öffnet die App ein Bild-im-Bild-Fenster. Das Fenster wird über anderen Apps eingeblendet, die du gerade verwendest."</string>
     <string name="interact_across_profiles_title" msgid="7285906999927669971">"Verbundene private &amp; geschäftliche Apps"</string>
-    <string name="interact_across_profiles_summary_allowed" msgid="1365881452153799092">"Verknüpft"</string>
-    <string name="interact_across_profiles_summary_not_allowed" msgid="5802674212788171790">"Nicht verknüpft"</string>
+    <string name="interact_across_profiles_summary_allowed" msgid="1365881452153799092">"Verbunden"</string>
+    <string name="interact_across_profiles_summary_not_allowed" msgid="5802674212788171790">"Nicht verbunden"</string>
     <string name="interact_across_profiles_empty_text" msgid="419061031064397168">"Keine verknüpften Apps"</string>
     <string name="interact_across_profiles_keywords" msgid="5996472773111665049">"profilübergreifend verknüpfte App geschäftliche und private Apps"</string>
     <string name="interact_across_profiles_switch_enabled" msgid="7294719120282287495">"Verknüpft"</string>

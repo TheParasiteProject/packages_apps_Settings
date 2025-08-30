@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"გსურთ ახალი პარამეტრების გამოყენება?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"თუ თქვენი ეკრანი არ მუშაობს ისე, როგორც გსურთ, შეგიძლიათ დაუბრუნდეთ წინა პარამეტრებს"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"პარამეტრების გამოყენება"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"ეკრანი: %1$s. ჩავლებით გადასატანად ან გადასაადგილებელი მოქმედებების სანახავად შეეხეთ ორმაგად და ხანგრძლივად."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"ზემოთ გადატანა"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"ქვემოთ გადატანა"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"მარცხნივ გადატანა"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"მარჯვნივ გადატანა"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"გამოსახულების ასლი"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"უსადენო ეკრანის ჩართვა"</string>
@@ -2418,7 +2413,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google-ის შშმ პირთა მხარდაჭერის გუნდთან დაკავშირება"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"მარტივი წვდომის გამოკითხვა"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"გაგვიზიარეთ გამოხმაურება"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"რამდენად კმაყოფილი ხართ მუქი თემით?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"გამოკითხვაში მონაწილეობის მიღება"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"გაგვიზიარეთ გამოხმაურება"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"რამდენად კმაყოფილი ხართ გადიდებით?"</string>
@@ -5955,12 +5951,9 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"PIN-კოდის წაშლისას წარმოიშვა შეცდომა."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> ანიმაცია"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"მართვის საშუალებების ჩართვა ვერ ხერხდება"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"წარმოიქმნა შეფერხება"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"ცადეთ მოგვიანებით"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"უკან დაბრუნება"</string>
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"იდენტობის შემოწმება ხელმისაწვდომია უფრო მეტ აპში"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"შეგიძლიათ თქვენი ვინაობის დაცვა ნებისმიერ აპში, რომელიც გთავაზობთ თითის ანაბეჭდს ან სახით განბლოკვას ვინაობის დასადგენად"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"დეტალების ნახვა"</string>

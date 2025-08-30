@@ -1689,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"عمومی"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"تنظیمات عمومی"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"حالت متصل"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"ویجت‌ها روی صفحه قفل (بتا)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"شرایط نمایش خودکار"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"هرگز"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"هنگام شارژ شدن"</string>
@@ -2419,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"‏تماس با «تیم پشتیبانی از ناتوانان در Google»"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"نظرسنجی دسترس‌پذیری"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"هم‌رسانی بازخورد"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"چقدر از «زمینه تیره» راضی هستید؟"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"شرکت در نظرسنجی"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"هم‌رسانی بازخورد"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"چقدر از درشت‌نمایی راضی هستید؟"</string>
@@ -3979,8 +3979,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"نمایش همه محتوای اعلان کاری"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"پنهان کردن محتوای کاری حساس"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"وقتی دستگاه قفل است، می‌خواهید اعلان‌های نمایه چگونه نشان داده شوند؟"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"نمایش روی صفحه در صفحه قفل"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"چه چیزی در صفحه قفل نشان داده شود"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"نمایش اعلان‌های مشاهده‌شده"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"نماد نمایش اعلان‌های مشاهده‌شده"</string>
@@ -4083,8 +4082,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"سازمان‌دهنده اعلان"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"دسته‌ای و بی‌صدا کردن اعلان‌های با اولویت پایین"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"مدیریت برنامه‌ها برای سازمان‌دهنده اعلان"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"بسته ها را همیشه گسترش دهید"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"اعمال کردن برای برنامه‌های نمایه کاری"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"‏خدمات یاور VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"‏هیچ برنامه نصب‌شده‌ای درخواست نکرده به‌عنوان خدمات یاور VR اجرا شود."</string>

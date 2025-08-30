@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Lëviz lart"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Lëviz poshtë"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Hiq"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Zhvendos në krye"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Preferencat rajonale"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Cakto njësitë dhe preferencat e numrave"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Tregoju aplikacioneve preferencat e tua rajonale në mënyrë që të personalizojnë përvojën tënde."</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Të përbashkëta"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Cilësimet e përbashkëta"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Modaliteti Hub"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Miniaplikacionet në ekranin e kyçjes (beta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Kur të shfaqen automatikisht"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Asnjëherë"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Gjatë karikimit"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Kontakto mbështetjen për aftësi të kufizuara"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Anketa për qasshmërinë"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Ndaj komentet e tua"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Sa i kënaqur je me \"Temën e errët\"?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Plotëso anketën"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Ndaj komentet e tua"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Sa i kënaqur je me zmadhimin?"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Shfaq të gjitha përmbajtjet e njoftimeve të punës"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Fshih përmbajtjet delikate të punës"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Kur pajisja jote të jetë e kyçur, si dëshiron të shfaqen njoftimet e profilit?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Shfaq në ekranin e kyçjes"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Çfarë të shfaqet në ekranin e kyçjes"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Shfaq njoftimet e shikuara"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Shfaq ikonat e njoftimeve të shikuara"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Organizuesi i njoftimeve"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Grupo dhe vendos në heshtje njoftimet me përparësi të ulët"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Menaxho aplikacionet për organizuesin e njoftimeve"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Zgjero gjithmonë paketat"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Zbato për aplikacionet e profilit të punës"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Shërbimet e ndihmësit VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Asnjë aplikacion i instaluar nuk ka kërkuar të ekzekutohet si shërbim ndihmësi VR."</string>
@@ -4545,7 +4542,7 @@
     <string name="full_screen_intent_title" msgid="5888548315628268674">"Njoftimet në ekran të plotë"</string>
     <string name="permit_full_screen_intent" msgid="2414307667550523630">"Të lejohen njoftimet në ekran të plotë nga ky aplikacion"</string>
     <string name="footer_description_full_screen_intent" msgid="7716518411349225528">"Lejo këtë aplikacion të shfaqë njoftime që zënë ekranin e plotë kur pajisja është e kyçur. Aplikacionet mund t’i përdorin këto për të vendosur në fokus alarmet, telefonatat hyrëse apo njoftimet e tjera urgjente."</string>
-    <string name="write_system_preferences_page_title" msgid="4775435310385611055">"Të shkruajë preferencat për sistemin"</string>
+    <string name="write_system_preferences_page_title" msgid="4775435310385611055">"Shkruaj preferencat për sistemin"</string>
     <string name="write_system_preferences_switch_title" msgid="213522354119233085">"Lejo që ky aplikacion të modifikojë preferencat e sistemit në emrin tënd"</string>
     <string name="write_system_preferences_footer_description" msgid="8645052087619752514">"Kjo leje e lejon një aplikacion të modifikojë preferencat për sistemin thelbësor."</string>
     <string name="media_management_apps_title" msgid="8222942355578724582">"Aplikacionet e menaxhimit të medias"</string>

@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Pomeri nagore"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Pomeri nadole"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Ukloni"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Premesti na vrh"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Regionalna podešavanja"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Izaberite podešavanja jedinica i brojeva"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Omogućite aplikacijama da saznaju vaša regionalna podešavanja kako bi mogle da personalizuju vaš doživljaj."</string>
@@ -540,7 +539,7 @@
     <string name="security_settings_remoteauth_enroll_finish_btn_next" msgid="8072138423143889592">"Gotovo"</string>
     <string name="security_settings_remoteauth_settings_title" msgid="1564912618737165129">"Otključavanje satom"</string>
     <string name="security_settings_remoteauth_settings_description" msgid="2758239650119457964">"Možete da koristite sat da biste otključali ovaj telefon kada prevučete nagore na zaključanom ekranu ili dodirnete obaveštenje"</string>
-    <string name="security_settings_remoteauth_settings_info_footer" msgid="795894033901478120">"Da biste koristili otključavanje satom, sat mora da bude otključan, na zglobu, u dometu i povezan sa ovim telefonom. Ako se veza prekine, moraćete da otključate telefon da biste mogli da koristite otključavanje satom.\n\nImajte na umu:\nU jednom navratu možete da podesite samo jedan sat. Da biste dodali drugi sat, prvo uklonite aktuelni sat."</string>
+    <string name="security_settings_remoteauth_settings_info_footer" msgid="795894033901478120">"Da biste koristili otključavanje satom, sat mora da bude otključan, na zglobu, u dometu i povezan sa ovim telefonom. Ako se veza prekine, moraćete da otključate telefon da biste mogli da koristite otključavanje satom.\n\nImajte na umu:\nMožete da podesite samo jedan sat. Da biste dodali drugi sat, prvo uklonite aktuelni sat."</string>
     <string name="security_settings_remoteauth_settings_learn_more" msgid="5653556124819260050">"Saznajte više o otključavanju sata"</string>
     <string name="security_settings_remoteauth_settings_register_new_authenticator" msgid="9191331738306527887">"Dodaj sat"</string>
     <string name="security_settings_remoteauth_settings_remove_device" msgid="2436226120578851282">"Ukloni sat"</string>
@@ -1021,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Želite da koristite nova podešavanja?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Ako ekran ne radi onako kako želite, možete da ga vratite na prethodna podešavanja"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Koristi podešavanja"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"Ekran: %1$s. Dvaput dodirnite i zadržite da biste prevukli ili pregledali radnje za premeštanje."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"Pomeri nagore"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"Pomeri nadole"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"Pomeri nalevo"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"Pomeri nadesno"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"preslikati"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Omogući bežični prikaz"</string>
@@ -2419,7 +2413,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Obratite se Google timu za podršku osobama sa invaliditetom"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Anketa o pristupačnosti"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Delite povratne informacije"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Koliko ste zadovoljni tamnom temom?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Popunite anketu"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Delite povratne informacije"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Koliko ste zadovoljni uvećanjem?"</string>
@@ -3872,7 +3867,7 @@
     <string name="work_notification_ringtone_title" msgid="2955312017013255515">"Podrazumevani zvuk obaveštenja za posao"</string>
     <string name="work_alarm_ringtone_title" msgid="3369293796769537392">"Podrazumevani zvuk alarma za posao"</string>
     <string name="work_sound_same_as_personal" msgid="1836913235401642334">"Isto kao i za lični profil"</string>
-    <string name="work_sync_dialog_title" msgid="7810248132303515469">"Želite da koristite zvuke ličnog profila?"</string>
+    <string name="work_sync_dialog_title" msgid="7810248132303515469">"Želite da koristite zvukove ličnog profila?"</string>
     <string name="work_sync_dialog_yes" msgid="5785488304957707534">"Potvrdi"</string>
     <string name="work_sync_dialog_message" msgid="5066178064994040223">"Poslovni profil će koristiti iste zvukove kao lični profil"</string>
     <string name="configure_notification_settings" msgid="1492820231694314376">"Obaveštenja"</string>
@@ -4079,8 +4074,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Organizator obaveštenja"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Grupišite obaveštenja nižeg prioriteta i isključite im zvuk"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Upravljajte aplikacijama za organizator obaveštenja"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Uvek proširuj skupove"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Primeni na aplikacije poslovnog profila"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Usluge pomagača za virtuelnu realnost"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Nijedna instalirana aplikacija nije zahtevala da se pokrene kao usluga pomagača za virtuelnu realnost."</string>
@@ -4804,7 +4798,7 @@
     <string name="double_tap_power_for_camera_summary" msgid="1100926048598415509">"Da biste brzo otvorili kameru, dvaput pritisnite dugme za uključivanje. Ovo funkcioniše na svakom ekranu."</string>
     <string name="double_tap_power_title" msgid="8129216801770589261">"Dvaput pritisnite dugme za uključivanje"</string>
     <string name="double_tap_power_enabled" msgid="7609935047996304482">"Koristi dvostruki pritisak"</string>
-    <string name="double_tap_power_target_action_category" msgid="2568741597095863728">"Dvaput pritisnite dugme za uključivanje da biste otvorili"</string>
+    <string name="double_tap_power_target_action_category" msgid="2568741597095863728">"Dvaput pritisnite dugme za uključivanje da biste otvorili:"</string>
     <string name="double_tap_power_camera_action_title" msgid="6641206739933181509">"Kamera"</string>
     <string name="double_tap_power_camera_action_summary" msgid="4942585540579590444">"Otvorite Kameru"</string>
     <string name="double_tap_power_wallet_action_title" msgid="2460162990983117189">"Novčanik"</string>
@@ -5958,12 +5952,9 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Došlo je do greške pri brisanju PIN-a."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animacija za: <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Uključivanje kontrola nije uspelo"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
-    <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Došlo je do greške"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Probajte ponovo kasnije"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Nazad"</string>
     <string name="identity_check_issue_card_title" msgid="864543931965445926">"Provera identiteta je dostupna u više aplikacija"</string>
     <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Možete da zaštitite identitet u bilo kojoj aplikaciji koja nudi Otključavanje otiskom prsta ili Otključavanje licem radi identifikacije"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Prikaži detalje"</string>

@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Жоғары жылжыту"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Төмен жылжыту"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Өшіру"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Басына жылжыту"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Аймақтық параметрлер"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Бірліктер мен сан параметрлерін орнату"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Қолданбалар сізге арнайы бейімделуі үшін, оларға аймақтық параметрлер туралы ақпарат алуға мүмкіндік беріңіз."</string>
@@ -337,7 +336,7 @@
     <string name="zone_time_type_dst" msgid="9189689342265305808">"Жазғы уақыт"</string>
     <string name="zone_time_type_standard" msgid="6865420715430680352">"Қысқы уақыт"</string>
     <string name="zone_menu_by_region" msgid="2963565278710225652">"Аймақ бойынша таңдау"</string>
-    <string name="zone_menu_by_offset" msgid="543648951618438204">"GMT ауытқуы арқылы таңдау"</string>
+    <string name="zone_menu_by_offset" msgid="543648951618438204">"GMT айырмашылығымен таңдау"</string>
     <string name="time_feedback_category_title" msgid="5942621686512255208">"Пікір"</string>
     <string name="keywords_time_feedback_category" msgid="4553921538559830393">"пікір, қате, уақыт, белдеу, уақыт белдеуі"</string>
     <string name="time_feedback_title" msgid="7720948068042783614">"Уақыт туралы пікір жіберу"</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Жалпы"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Жалпы параметрлер"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Хаб режимі"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Құлып экранындағы виджеттер (бета)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Қашан автоматты түрде көрсету керек"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Ешқашан"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Зарядтау кезінде"</string>
@@ -2347,7 +2345,7 @@
     <string name="user_dict_settings_add_dialog_less_options" msgid="100432503633458156">"Аз опциялар"</string>
     <string name="user_dict_settings_add_dialog_confirm" msgid="1866751313790655088">"Жарайды"</string>
     <string name="user_dict_settings_add_word_option_name" msgid="2686051785623698231">"Сөз:"</string>
-    <string name="user_dict_settings_add_shortcut_option_name" msgid="5722204336242646866">"Пернелер тіркесімі:"</string>
+    <string name="user_dict_settings_add_shortcut_option_name" msgid="5722204336242646866">"Жылдам пәрмен:"</string>
     <string name="user_dict_settings_add_locale_option_name" msgid="2117468247460253346">"Тіл:"</string>
     <string name="user_dict_settings_add_word_hint" msgid="4560494723256242785">"Сөзді теріңіз"</string>
     <string name="user_dict_settings_add_shortcut_hint" msgid="6209624157217434640">"Міндетті емес"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google мүгедектік қолдау ұжымы"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Арнайы мүмкіндіктер сауалнамасы"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Пікіріңізді бөлісіңіз"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Қараңғы режим көңіліңізден шыға ма?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Сауалнамаға қатысу"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Пікіріңізді бөлісіңіз"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Ұлғайту функциясы көңіліңізден шыға ма?"</string>
@@ -2488,7 +2487,7 @@
     <string name="accessibility_screen_magnification_navbar_title" msgid="480853328665484528">"Таңбашамен үлкейту"</string>
     <string name="accessibility_screen_magnification_state_navbar_gesture" msgid="8067042663897802231">"Таңбашамен және үш рет түртіп үлкейту"</string>
     <string name="accessibility_introduction_title" msgid="8834950581512452348">"<xliff:g id="SERVICE">%1$s</xliff:g> туралы ақпарат"</string>
-    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Экрандағы элементтер мен мәтін өлшемі"</string>
+    <string name="accessibility_text_reading_options_title" msgid="2059907327364152763">"Масштаб пен мәтін"</string>
     <string name="accessibility_text_reading_options_subtext" msgid="3480489973093251705">"Қаріп өлшемі, экрандағы элементтердің өлшемі, жуан қаріпті мәтін, мәтінді ерекшелеу"</string>
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Мәтіннің көрсетілу жолын өзгерту"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Тақырып: Әуе шарларының дизайны"</string>
@@ -2587,7 +2586,7 @@
     <string name="accessibility_notification_high_contrast_text_body_message" msgid="6846453833480117658">"Контурлық мәтін жоғары контрастылы мәтінді алмастырды. Оны <xliff:g id="SETTINGS">%1$s</xliff:g> бөлімінде қоса аласыз."</string>
     <string name="accessibility_notification_high_contrast_text_action_open_settings" msgid="5945069315472850294">"<xliff:g id="SETTINGS">%1$s</xliff:g> бөліміне өту"</string>
     <string name="accessibility_toggle_maximize_text_contrast_preference_title" msgid="8848579943445806659">"Контурлы мәтін"</string>
-    <string name="accessibility_toggle_maximize_text_contrast_preference_summary" msgid="8200408691846666900">"Контрасты жақсарту үшін мәтіннің айналасына қара немесе ақ фон қосыңыз."</string>
+    <string name="accessibility_toggle_maximize_text_contrast_preference_summary" msgid="8200408691846666900">"Контрасты жақсарту үшін мәтіннің айналасына қара немесе ақ фон қосылады."</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_title" msgid="4987009529235165664">"Экранды ұлғайтуды авто жаңарту"</string>
     <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary" msgid="9034532513972547720">"Қолданба ауысуларындағы экран ұлғайту функциясын жаңарту"</string>
     <string name="accessibility_power_button_ends_call_prerefence_title" msgid="8187306131979612144">"Қуат түймесі арқылы қоңырауды үзу"</string>
@@ -3463,7 +3462,7 @@
     <string name="user_grant_admin" msgid="5942118263054572074">"Осы пайдаланушыны әкімші ету"</string>
     <string name="user_remove_user" msgid="8468203789739693845">"Пайдаланушыны жою"</string>
     <string name="user_enable_calling_and_sms_confirm_title" msgid="4041510268838725520">"Телефон қоңырауларын және SMS қосу керек пе?"</string>
-    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"Қоңыраулар және SMS тарихы осы пайдаланушымен бөлісіледі."</string>
+    <string name="user_enable_calling_and_sms_confirm_message" msgid="367792286597449922">"Бұл пайдаланушы қоңыраулар мен SMS хабарларының тарихын көре алатын болады."</string>
     <string name="user_revoke_admin_confirm_title" msgid="3057842401861731863">"Әкімші өкілеттерін алып тастау керек пе?"</string>
     <string name="user_revoke_admin_confirm_message" msgid="9207187319308572958">"Бұл пайдаланушының әкімші өкілеттігін алып тастасаңыз, сіз не басқа әкімші оларды кейін қайтарып бере алады."</string>
     <string name="user_revoke_admin_for_self_confirm_title" msgid="5661292626700927475">"Жеке әкімші өкілеттеріңізді өшіресіз бе?"</string>
@@ -3780,7 +3779,7 @@
     <string name="zen_mode_settings_schedules_summary" msgid="2047688589286811617">"{count,plural, =0{Жоқ}=1{1 кесте қойылған}other{# кесте қойылған}}"</string>
     <string name="zen_mode_settings_title" msgid="682676757791334259">"Мазаламау"</string>
     <string name="zen_modes_list_title" msgid="4796033710444068729">"Режимдер"</string>
-    <string name="zen_modes_list_intro" msgid="1879511587535247228">"Алаңдататын факторларды азайтып, ұйқыға, жұмысқа, көлік жүргізуге және басқа да әрекеттерге арналған режимдер көмегімен зейініңізді қадағалаңыз"</string>
+    <string name="zen_modes_list_intro" msgid="1879511587535247228">"Алаңдататын факторларды азайтып, ұйқыға, жұмысқа, көлік жүргізуге және басқа да әрекеттерге арналған режимдер көмегімен зейініңізді қадағалаңыз."</string>
     <string name="zen_modes_add_mode" msgid="5926457160307593664">"Өз режиміңізді жасау"</string>
     <string name="zen_mode_settings_summary" msgid="6040862775514495191">"Хабарландыруды маңызды адамдардан және қолданбалардан ғана алу"</string>
     <string name="zen_mode_select_schedule" msgid="663163931596092952">"Кесте құру"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Жұмыс хабарландыруын толық көрсету"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Маңызды жұмыс контентін жасыру"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Құрылғы бекітілген болса, профиль хабарландырулары қалай көрсетілуі керек?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Құлып экранында көрсету"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Құлыптаулы экранда көрсетілетіндер"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Қаралған хабарландыруларды көрсету"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Қаралған хабарландыру белгішелерін көрсету"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Хабарландыру ұйымдастырушысы"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Маңыздылығы төмен хабарландыруларды топтау және дыбысын өшіру"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Хабарландыру ұйымдастырушысындағы қолданбаларды басқару"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Пакеттерді үнемі жаю"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Жұмыс профиліндегі қолданбаларға қолдану"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Көмекші VR қызметтері"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Орнатылған қолданбалар көмекші VR қызметі ретінде қосылуға рұқсат сұраған жоқ."</string>
@@ -4107,7 +4104,7 @@
     <string name="interact_across_profiles_summary_1" msgid="6093976896137600231">"Байланыстырылған қолданбалар рұқсаттарды бөліседі және бір-бірінің деректерін пайдалана алады."</string>
     <string name="interact_across_profiles_summary_2" msgid="505748305453633885">"Жеке деректеріңізді әкімшімен бөліспейтін сенімді қолданбаларды ғана байланыстырыңыз."</string>
     <string name="interact_across_profiles_summary_3" msgid="444428694843299854">"Қолданбаларды құрылғының құпиялық параметрлерінен кез келген уақытта ажырата аласыз."</string>
-    <string name="interact_across_profiles_consent_dialog_title" msgid="8530621211216508681">"Жеке деректеріңізді пайдаланатын <xliff:g id="NAME">%1$s</xliff:g> жұмыс қолданбасына рұқсат бересіз бе?"</string>
+    <string name="interact_across_profiles_consent_dialog_title" msgid="8530621211216508681">"<xliff:g id="NAME">%1$s</xliff:g> жұмыс қолданбасына жеке деректеріңізді пайдалануға рұқсат бересіз бе?"</string>
     <string name="interact_across_profiles_consent_dialog_summary" msgid="3949870271562055048">"Жеке деректеріңізді әкімшімен бөліспейтін сенімді қолданбаларды ғана байланыстырыңыз."</string>
     <string name="interact_across_profiles_consent_dialog_app_data_title" msgid="8436318876213958940">"Қолданба деректері"</string>
     <string name="interact_across_profiles_consent_dialog_app_data_summary" msgid="6057019384328088311">"Бұл қолданба жеке <xliff:g id="NAME">%1$s</xliff:g> қолданбасындағы деректерді пайдалана алады."</string>
@@ -4584,7 +4581,7 @@
     <string name="users_summary" msgid="8473589474976307510">"<xliff:g id="USER_NAME">%1$s</xliff:g> болып кірдіңіз"</string>
     <string name="android_version_summary" msgid="7818952662015042768">"Android <xliff:g id="VERSION">%1$s</xliff:g> нұсқасына жаңартылды"</string>
     <string name="android_version_pending_update_summary" msgid="5404532347171027730">"Жаңартылған нұсқа қолжетімді"</string>
-    <string name="disabled_by_policy_title" msgid="6852347040813204503">"Жұмыс саясатына сәйкес бөгелді"</string>
+    <string name="disabled_by_policy_title" msgid="6852347040813204503">"Компания саясатына сәйкес блокталды"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="1669689058213728099">"Дыбыс деңгейі өзгертілмейді"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="400089720689494562">"Қоңырау шалу мүмкін емес"</string>
     <string name="disabled_by_policy_title_sms" msgid="8951840850778406831">"SMS хабарын жіберу мүмкін емес"</string>

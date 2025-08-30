@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Pārvietot uz augšu"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Pārvietot uz leju"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Noņemt"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Pārvietot uz sākumu"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Reģionālās preferences"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Iestatiet vienību un skaitļu preferences."</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Atklājiet lietotnēm savas reģionālās preferences, lai lietotnes varētu personalizēt jums pieejamās iespējas."</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Kopīgie"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Kopīgie iestatījumi"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Centra režīms"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Logrīki bloķēšanas ekrānā (beta versija)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"Kad automātiski parādīt"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Nekad"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Uzlādes laikā"</string>
@@ -1881,7 +1879,7 @@
     <string name="settings_license_activity_loading" msgid="1653151990366578827">"Notiek ielāde…"</string>
     <string name="settings_safetylegal_activity_loading" msgid="1757860124583063395">"Notiek ielāde…"</string>
     <string name="lockpassword_choose_your_password_header" msgid="2407205113298094824">"Paroles iestatīšana"</string>
-    <string name="lockpassword_choose_your_profile_password_header" msgid="7038997227611893312">"Darba paroles iestatīšana"</string>
+    <string name="lockpassword_choose_your_profile_password_header" msgid="7038997227611893312">"Iestatiet darba paroli"</string>
     <string name="lockpassword_choose_your_pin_header" msgid="7754265746504679473">"PIN iestatīšana"</string>
     <string name="lockpassword_choose_your_profile_pin_header" msgid="4581749963670819048">"Darba PIN iestatīšana"</string>
     <string name="lockpassword_choose_your_pattern_header" msgid="5674909390779586252">"Iestatiet kombināciju"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Sazināties ar Google atbalsta dienestu lietotājiem ar invaliditāti"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Pieejamības aptauja"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Sniedziet atsauksmes"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Cik apmierināts esat ar tumšo motīvu?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Piedalīties aptaujā"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Sniedziet atsauksmes"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Cik apmierināts esat ar palielinājumu?"</string>
@@ -3761,7 +3760,7 @@
     <string name="sound_patterns_category_title" msgid="4290495769747444271">"Skaņu modeļi"</string>
     <string name="sound_audio_category_title" msgid="3445871661303518618">"Audio"</string>
     <string name="system_sounds_and_vibrations_category_title" msgid="4162079598490981456">"Sistēmas skaņas un vibrācijas"</string>
-    <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Darba profila signāls"</string>
+    <string name="work_profile_sound_category_title" msgid="1708926655170323454">"Darba profila skaņa"</string>
     <string name="live_caption_title" msgid="8617086825712756983">"Subtitri reāllaikā"</string>
     <string name="live_caption_summary" msgid="7290150167089515457">"Iegūstiet subtitrus zvaniem, videoklipiem un citam multivides saturam"</string>
     <string name="live_caption_on_summary" msgid="8921561021882989495">"Ieslēgti/iegūstiet subtitrus zvaniem, videoklipiem un citam multivides saturam"</string>
@@ -3866,16 +3865,16 @@
     <string name="zen_category_apps" msgid="1167374545618451925">"Lietotnes"</string>
     <string name="zen_category_exceptions" msgid="1316097981052752811">"Modinātāja signāli un citi signāli"</string>
     <string name="zen_category_duration" msgid="7515850842082631460">"Ilgums, ieslēdzot izvēlnē Ātrie iestatījumi"</string>
-    <string name="sound_work_settings" msgid="752627453846309092">"Darba profila signāli"</string>
-    <string name="work_use_personal_sounds_title" msgid="7729428677919173609">"Personiskā profila signāli"</string>
-    <string name="work_use_personal_sounds_summary" msgid="608061627969077231">"Izmantot tos pašus skaņas signālus, kas tiek lietoti personīgajā profilā"</string>
+    <string name="sound_work_settings" msgid="752627453846309092">"Darba profila skaņas"</string>
+    <string name="work_use_personal_sounds_title" msgid="7729428677919173609">"Personiskā profila skaņas"</string>
+    <string name="work_use_personal_sounds_summary" msgid="608061627969077231">"Izmantot tās pašas skaņas, kas tiek lietotas personīgajā profilā"</string>
     <string name="work_ringtone_title" msgid="4810802758746102589">"Darba tālruņa zvana signāls"</string>
     <string name="work_notification_ringtone_title" msgid="2955312017013255515">"Noklusējuma darba paziņojuma skaņa"</string>
     <string name="work_alarm_ringtone_title" msgid="3369293796769537392">"Darba modinātāja signāla noklusējuma skaņa"</string>
-    <string name="work_sound_same_as_personal" msgid="1836913235401642334">"Tādi paši signāli kā personiskajā profilā"</string>
-    <string name="work_sync_dialog_title" msgid="7810248132303515469">"Vai lietot personīgā profila signālus?"</string>
+    <string name="work_sound_same_as_personal" msgid="1836913235401642334">"Tādas pašas skaņas kā personiskajā profilā"</string>
+    <string name="work_sync_dialog_title" msgid="7810248132303515469">"Vai lietot personīgā profila skaņas?"</string>
     <string name="work_sync_dialog_yes" msgid="5785488304957707534">"Apstiprināt"</string>
-    <string name="work_sync_dialog_message" msgid="5066178064994040223">"Jūsu darba profilam un personīgajam profilam tiks izmantoti vieni un tie paši skaņas signāli"</string>
+    <string name="work_sync_dialog_message" msgid="5066178064994040223">"Jūsu darba profilam un personīgajam profilam tiks izmantotas vienas un tās pašas skaņas"</string>
     <string name="configure_notification_settings" msgid="1492820231694314376">"Paziņojumi"</string>
     <string name="notification_dashboard_summary" msgid="7530169251902320652">"Paziņojumu vēsture un sarunas"</string>
     <string name="conversation_notifs_category" msgid="2549844862379963273">"Saruna"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Rādīt visu saturu darba profila paziņojumos"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Paslēpt sensitīvu darba profila saturu"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Kā ierīcē rādīt profila paziņojumus, kad tā ir bloķēta?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Rādīt bloķēšanas ekrānā"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Ko rādīt bloķēšanas ekrānā"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Rādīt skatītos paziņojumus"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Rādīt skatīto paziņojumu ikonas"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Paziņojumu kārtotājs"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Varat grupēt zemākas prioritātes paziņojumus un izslēgt tiem skaņu"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Lietotņu pārvaldība paziņojumu kārtotājam"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Vienmēr izvērst komplektus"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Lietot darba profila lietotnēm"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"VR palīga pakalpojumi"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Nevienai instalētajai lietotnei nav pieprasīta palaišana kā VR palīga pakalpojumam."</string>

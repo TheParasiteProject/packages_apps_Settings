@@ -246,8 +246,7 @@
     <string name="preferred_locale_menu_up" msgid="4009560552099567485">"Flytta uppåt"</string>
     <string name="preferred_locale_menu_down" msgid="1033373887552535585">"Flytta nedåt"</string>
     <string name="preferred_locale_menu_remove" msgid="8547483341987864590">"Ta bort"</string>
-    <!-- no translation found for preferred_locale_menu_top (9110819342909557531) -->
-    <skip />
+    <string name="preferred_locale_menu_top" msgid="9110819342909557531">"Flytta högst upp"</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Regionsinställningar"</string>
     <string name="regional_preferences_summary" msgid="1189876997389469650">"Anger inställningar för enheter och siffror"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Ge appar åtkomst till dina regionsinställningar så att din upplevelse kan anpassas."</string>
@@ -1690,8 +1689,7 @@
     <string name="communal_settings_title" msgid="2845678473945902115">"Allmänt"</string>
     <string name="communal_settings_summary" msgid="4923914136953940317">"Allmänna inställningar"</string>
     <string name="hub_mode_category_title" msgid="5290081595872103974">"Hubbläge"</string>
-    <!-- no translation found for widgets_on_lockscreen_title (1492206992134138952) -->
-    <skip />
+    <string name="widgets_on_lockscreen_title" msgid="1492206992134138952">"Widgetar på låsskärmen (beta)"</string>
     <string name="when_to_auto_show_hubmode_title" msgid="2307148913387518369">"När de ska visas automatiskt"</string>
     <string name="when_to_show_hubmode_never" msgid="976644329215156021">"Aldrig"</string>
     <string name="when_to_show_hubmode_charging" msgid="1874391105066805128">"Vid laddning"</string>
@@ -2420,7 +2418,8 @@
     <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Kontakta Googles support för användare med funktionsnedsättning"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Enkät om tillgänglighet"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Dela din feedback"</string>
-    <string name="dark_theme_survey_notification_summary" msgid="2893701785229702405">"Hur nöjd är du med mörkt tema?"</string>
+    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
+    <skip />
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Svara på enkäten"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Dela din feedback"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Hur nöjd är du med förstoring?"</string>
@@ -2493,7 +2492,7 @@
     <string name="accessibility_text_reading_options_suggestion_title" msgid="2492155642665312733">"Ändra hur text visas"</string>
     <string name="accessibility_text_reading_preview_mail_subject" msgid="4597374768612733616">"Ämne: Utformning av varmluftsballonger"</string>
     <string name="accessibility_text_reading_preview_mail_from" msgid="1797499780365288020">"Från: Kalle"</string>
-    <string name="accessibility_text_reading_preview_mail_content" msgid="8078152365771951802">"God morgon!\n\nJag ville bara kolla hur det går med designerna. Blir de färdiga innan vi börjar bygga de nya bubblorna?"</string>
+    <string name="accessibility_text_reading_preview_mail_content" msgid="8078152365771951802">"God morgon!\n\nJag ville bara kolla hur det går med designerna. Blir de färdiga innan vi börjar bygga de nya ballongerna?"</string>
     <string name="accessibility_text_reading_reset_button_title" msgid="5960753279788187669">"Återställ inställningar"</string>
     <string name="accessibility_text_reading_reset_message" msgid="824644303661026712">"Inställningarna för skärmstorlek och text har återställts"</string>
     <string name="accessibility_text_reading_confirm_dialog_title" msgid="2865331351355690389">"Vill du återställa skärmstorlek och text?"</string>
@@ -2661,7 +2660,7 @@
     <string name="autoclick_revert_to_left_click_title" msgid="6868866422993461739">"Använd vänsterklick som standardåtgärd"</string>
     <string name="autoclick_revert_to_left_click_summary" msgid="9207568192335942225">"När du använder en annan åtgärd återgår automatiskt klick till vänsterklick"</string>
     <string name="accessibility_autoclick_navigation_title" msgid="1577786826651016069">"Automatiskt klick fungerar bättre med navigering med tre knappar"</string>
-    <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"För att enkelt gå tillbaka, öppna startskärmen och byta appar när du använder automatiskt klick, måste du använda navigering med tre knappar i stället för navigering med rörelser"</string>
+    <string name="accessibility_autoclick_navigation_message" msgid="4985375526457764240">"För att enkelt gå tillbaka, öppna startskärmen och byta appar när du använder automatiskt klick måste du använda navigering med tre knappar i stället för navigering med rörelser"</string>
     <string name="accessibility_autoclick_keep_gesture_navigation" msgid="5403212927837555942">"Behåll navigering med rörelser"</string>
     <string name="accessibility_autoclick_navigation_settings" msgid="26376319288642658">"Navigeringsinställningar"</string>
     <string name="accessibility_vibration_settings_title" msgid="936301142478631993">"Vibration och haptik"</string>
@@ -3977,8 +3976,7 @@
     <string name="lock_screen_notifications_summary_show_profile" msgid="8373401288962523946">"Visa allt innehåll i jobbaviseringarna"</string>
     <string name="lock_screen_notifications_summary_hide_profile" msgid="2183455323048921579">"Dölj känsligt jobbinnehåll"</string>
     <string name="lock_screen_notifications_interstitial_message_profile" msgid="1456262034599029028">"Hur vill du att profilaviseringar visas när enheten är låst?"</string>
-    <!-- no translation found for lockscreen_notification_show_switch (7324668881962101312) -->
-    <skip />
+    <string name="lockscreen_notification_show_switch" msgid="7324668881962101312">"Visa på låsskärmen"</string>
     <string name="lockscreen_notification_what_to_show_title" msgid="707880305538256400">"Vad som ska visas på låsskärmen"</string>
     <string name="lock_screen_notification_show_viewed_notifs" msgid="4104703346314965171">"Visa visade aviseringar"</string>
     <string name="lock_screen_notification_show_viewed_notif_icons" msgid="1197681203638927375">"Visa ikoner för aviseringar som har visats"</string>
@@ -4081,8 +4079,7 @@
     <string name="notification_app_level_bundle_title" msgid="2154075763770894707">"Organisera aviseringar"</string>
     <string name="notification_app_level_bundle_subtext" msgid="8652218688050450291">"Gruppera och stäng av ljudet för aviseringar med lägre prioritet"</string>
     <string name="notification_bundle_manage_excluded_apps_title" msgid="6825808714530730009">"Hantera appar för Organisera aviseringar"</string>
-    <!-- no translation found for notification_bundle_expand_always_title (3647586646644565332) -->
-    <skip />
+    <string name="notification_bundle_expand_always_title" msgid="3647586646644565332">"Utöka alltid paket"</string>
     <string name="notification_adjustment_work_switch_title" msgid="5858034709870660002">"Tillämpa på jobbprofilappar"</string>
     <string name="vr_listeners_title" msgid="4960357292472540964">"Hjälptjänster för VR"</string>
     <string name="no_vr_listeners" msgid="8442646085375949755">"Inga installerade appar har begärt att få köras som hjälptjänster för VR."</string>
@@ -5510,7 +5507,7 @@
     <string name="overlay_settings_title" msgid="1032863083496396365">"Tillåt skärmöverlagring på Inställningar"</string>
     <string name="overlay_settings_summary" msgid="2745336273786148166">"Tillåt att appar som får visas ovanpå andra appar överlagras på skärmar med inställningar"</string>
     <string name="allow_mock_modem" msgid="3832264806530479214">"Tillåt skenmodem"</string>
-    <string name="allow_mock_modem_summary" msgid="9097416612748005374">"Tillåt att en skenmodemtjänst körs på enheten för instrumenteringstest. Aktivera inte detta under normal användning av telefonen"</string>
+    <string name="allow_mock_modem_summary" msgid="9097416612748005374">"Tillåt att en skenmodemtjänst körs på enheten för instrumenteringstest. Aktivera inte detta under normal användning av telefonen."</string>
     <string name="disable_screen_share_protections_for_apps_and_notifications" msgid="4987116103699222633">"Inaktivera skärmdelningsskydd"</string>
     <string name="disable_screen_share_protections_for_apps_and_notifications_summary" msgid="5379583403909210858">"Inaktivera systemskydd för känsligt appinnehåll för kommande skärmdelningssessioner"</string>
     <string name="media_controls_title" msgid="403271085636252597">"Media"</string>
