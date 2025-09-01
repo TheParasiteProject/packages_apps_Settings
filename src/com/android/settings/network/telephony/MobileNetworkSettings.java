@@ -269,6 +269,10 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
             use(MobileNetworkImeiPreferenceController.class).init(this, mSubId);
         }
 
+        if (!isCatalystEnabled() || !Flags.deeplinkNetworkAndInternet25q4()) {
+            use(ApnPreferenceController.class).init(mSubId);
+        }
+
         final MobileDataPreferenceController mobileDataPreferenceController =
                 use(MobileDataPreferenceController.class);
         if (mobileDataPreferenceController != null) {

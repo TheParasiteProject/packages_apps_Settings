@@ -30,6 +30,8 @@ import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.datausage.DataUsageListScreen
 import com.android.settings.flags.Flags
 import com.android.settings.network.SubscriptionUtil
+import com.android.settings.network.apn.ApnSettings
+import com.android.settings.network.apn.ApnSettingsScreen
 import com.android.settings.restriction.PreferenceRestrictionMixin
 import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
@@ -37,6 +39,7 @@ import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.PreferenceTitleProvider
 import com.android.settingslib.metadata.ProvidePreferenceScreen
 import com.android.settingslib.metadata.preferenceHierarchy
+import com.android.settingslib.widget.UntitledPreferenceCategoryMetadata
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
@@ -86,6 +89,10 @@ open class MobileNetworkScreen(override val arguments: Bundle) :
                     +MobileNetworkSpnPreference(context, subId)
                     +MobileNetworkImeiPreference(context, subId)
                     +(DataUsageListScreen.KEY args arguments)
+                    +UntitledPreferenceCategoryMetadata("apn_and_protection_container") += {
+                        val bundle = Bundle(1).also { it.putInt(ApnSettings.SUB_ID, subId) }
+                        +(ApnSettingsScreen.KEY args bundle)
+                    }
                 }
             }
         }

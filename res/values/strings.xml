@@ -14492,8 +14492,8 @@
     <string name="audio_sharing_stream_compatibility_title">Improve compatibility</string>
     <!-- Description for stream compatibility on audio sharing page [CHAR LIMIT=none]-->
     <string name="audio_sharing_stream_compatibility_description">Helps some devices, like hearing aids, connect by reducing audio quality</string>
-    <!-- Description for stream compatibility on audio sharing page when audio sharing is on [CHAR LIMIT=none]-->
-    <string name="audio_sharing_stream_compatibility_disabled_description">Turns off the audio sharing to config the compatibility</string>
+    <!-- Description for stream compatibility on audio sharing page when audio sharing is on [CHAR LIMIT=none] [BACKUP_MESSAGE_ID=2586408353546825682] -->
+    <string name="audio_sharing_stream_compatibility_disabled_description">Turn off the audio sharing to change settings</string>
     <!-- Title for nearby audio group on audio sharing page [CHAR LIMIT=none]-->
     <string name="audio_sharing_nearby_audio_title">Listen to nearby audio</string>
     <!-- Description for audio sharing page footer [CHAR LIMIT=none]-->
