@@ -65,6 +65,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
+import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.android.internal.annotations.GuardedBy;
 import com.android.internal.app.UnlaunchableAppActivity;
@@ -663,7 +664,13 @@ public class TrustedCredentialsFragment extends ObservableFragment
             Drawable groupIndicator = a.getDrawable(
                     com.android.internal.R.styleable.ExpandableListView_groupIndicator);
             a.recycle();
-            return groupIndicator;
+
+            int tint = Utils.getColorAttrDefaultColor(
+                    getActivity(), android.R.attr.colorControlNormal);
+            var wrapped = DrawableCompat.wrap(groupIndicator);
+            DrawableCompat.setTint(wrapped.mutate(), tint);
+
+            return wrapped;
         }
 
         private Bundle saveState() {
