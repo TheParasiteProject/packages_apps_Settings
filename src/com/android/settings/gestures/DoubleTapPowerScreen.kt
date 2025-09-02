@@ -62,6 +62,9 @@ open class DoubleTapPowerScreen(context: Context) :
     override val key: String
         get() = KEY
 
+    override val indexable
+        get() = false
+
     override val highlightMenuKey: Int
         get() = R.string.menu_key_system
 
@@ -70,8 +73,6 @@ open class DoubleTapPowerScreen(context: Context) :
     override fun isFlagEnabled(context: Context) = Flags.deeplinkSystem25q4()
 
     override fun hasCompleteHierarchy() = false
-
-    override fun isIndexable(context: Context) = false
 
     override fun fragmentClass(): Class<out Fragment>? = DoubleTapPowerSettings::class.java
 

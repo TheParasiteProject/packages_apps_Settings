@@ -72,6 +72,9 @@ open class HearingDevicesScreen(context: Context) :
     override val highlightMenuKey: Int
         get() = R.string.menu_key_accessibility
 
+    override val indexable
+        get() = true
+
     override val keywords: Int
         get() = R.string.keywords_hearing_aids
 
@@ -146,8 +149,6 @@ open class HearingDevicesScreen(context: Context) :
             }
             +HearingDevicesFooterPreference(context)
         }
-
-    override fun isIndexable(context: Context): Boolean = true
 
     override fun isAvailable(context: Context): Boolean = hearingAidHelper.isHearingAidSupported
 

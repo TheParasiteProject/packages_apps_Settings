@@ -86,6 +86,9 @@ open class SupervisionDashboardScreen : PreferenceScreenMixin, PreferenceLifecyc
     override val icon: Int
         get() = R.drawable.ic_account_child_invert
 
+    override val indexable
+        get() = true
+
     override val keywords: Int
         get() = R.string.keywords_supervision_settings
 
@@ -104,8 +107,6 @@ open class SupervisionDashboardScreen : PreferenceScreenMixin, PreferenceLifecyc
             this.supervisionManager = null
         }
     }
-
-    override fun isIndexable(context: Context) = true
 
     override fun hasCompleteHierarchy() = true
 
