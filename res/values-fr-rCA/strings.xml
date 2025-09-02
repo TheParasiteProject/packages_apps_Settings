@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"À propos de la sortie audio"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Acheminez les sons vers votre appareil auditif ou le haut-parleur de votre téléphone"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Connexes"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"Envoyer plus rapidement avec <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"Pour partager du contenu avec des appareils Android et des ordinateurs à proximité, essayez <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> pour Windows"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"Envoyer plus rapidement avec <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"Pour partager du contenu avec des appareils Android et des ordinateurs à proximité, essayez <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> pour Windows"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Sonnerie et alarmes"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"Sortie audio des appels"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Sons des médias et du système"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"Image standard"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"Image HDR"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"Ce paramètre n\'a d\'incidence que sur les images et les vidéos prenant en charge l\'imagerie à grande gamme dynamique (HDR)."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"Afficher la balance des blancs"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"Continuer à utiliser les applis lorsque l\'appareil est plié"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Utilisez un arrière-plan sombre pour rendre votre écran plus agréable à regarder et réduire l\'utilisation de la pile sur certains écrans. Votre thème changera si vous avez un programme, lorsque l\'écran est éteint."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"L\'activation du thème sombre suit actuellement votre horaire de mode Nuit"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Paramètres du mode Nuit"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Les modes peuvent également activer le thème sombre.}=1{{mode_1} active également le thème sombre.}=2{{mode_1} et {mode_2} activent également le thème sombre.}=3{{mode_1}, {mode_2} et {mode_3} activent également le thème sombre.}one{{mode_1}, {mode_2} et # autre mode activent également le thème sombre.}other{{mode_1}, {mode_2} et # autres modes activent également le thème sombre.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{Les modes peuvent également activer le thème Sombre}=1{{mode_1} active également le thème Sombre}=2{{mode_1} et {mode_2} activent également le thème Sombre}=3{{mode_1}, {mode_2} et {mode_3} activent également le thème Sombre}one{{mode_1}, {mode_2} et # autre mode activent également le thème Sombre}other{{mode_1}, {mode_2} et # autres modes activent également le thème Sombre}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Paramètres des modes"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Améliorez la luminosité, la gamme de couleurs et la clarté des images et des vidéos avec imagerie à grande gamme dynamique (HDR). Le contenu HDR apparaîtra plus lumineux."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Délai de mise en veille de l\'écran"</string>
@@ -2410,7 +2412,6 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Mode de navigation, rotation de l\'écran"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Envoyer des commentaires"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Répondre au sondage"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Assistance Google (handicapés)"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Sondage sur l\'accessibilité"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Envoyer vos commentaires"</string>
     <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
@@ -2589,10 +2590,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"Horaire"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Standard"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"Thème sombre standard"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Applique le thème Sombre à votre appareil et aux applis prises en charge"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"Active le thème Sombre pour votre appareil et les applis qui le prennent en charge"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Étendu"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"Thème sombre étendu"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Applique automatiquement le thème Sombre à plus d\'applis pour améliorer l\'accessibilité"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"Applique automatiquement le thème Sombre à la plupart des applis qui ne le prennent pas en charge. Cela peut améliorer l\'accessibilité et la lisibilité, mais peut entraîner un affichage incorrect de certaines applis."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"forcer l\'inversion, inversion des couleurs, contraste"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Retirer les animations"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Réduisez les mouvements sur l\'écran"</string>
@@ -2694,8 +2695,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"En savoir plus sur la correction des couleurs"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"À propos de l\'inversion des couleurs"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"En savoir plus sur l\'inversion des couleurs"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"En savoir plus sur le thème Sombre"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"Certaines applis peuvent ne pas prendre en charge le thème Sombre étendu. Si vous rencontrez des problèmes d\'affichage, utilisez le thème Sombre standard."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"En savoir plus sur le thème Sombre"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Afficher les sous-titres"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"Pour l\'appli prise en charge seulement"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Taille et style des sous-titres"</string>
@@ -5574,7 +5574,7 @@
     <string name="category_name_color" msgid="937514550918977151">"Couleur"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"Autres paramètres d\'affichage"</string>
     <string name="category_name_general" msgid="7737273712848115886">"Général"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"Utiliser le thème Sombre"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"Utiliser le thème Sombre"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"Utiliser le Bluetooth"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"Utiliser la luminosité HDR améliorée"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"Utiliser le blocage de la sonnerie"</string>
@@ -5790,7 +5790,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Mot de passe"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Améliorer la compatibilité"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Aide certains appareils, comme les prothèses auditives, à se connecter en réduisant la qualité audio"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"Désactive le partage audio pour configurer la compatibilité"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Écouter l\'audio à proximité"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Le partage audio prend en charge Auracast🅪"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Nom du flux audio"</string>
@@ -5931,6 +5932,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Supprimer le NIP"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Ajouter une adresse courriel de récupération"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Valider votre adresse courriel"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Filtres de contenu de site Web"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Filtres de sites Web, bloquer les sites, filtres de navigateur, bloquer les sites explicites, filtrer les sites, bloquer les résultats de recherche, filtrer les résultats de recherche explicites, restrictions liées au contenu"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Aide à filtrer le contenu explicite sur certaines applis et certains navigateurs sur ce téléphone. Le contenu explicite peut toujours s\'afficher sur d\'autres applis, appareils ou navigateurs."</string>
@@ -5954,15 +5957,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Un problème est survenu"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Réessayer plus tard"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Retour"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"La Vérification d\'identité est offerte sur plus d\'applis"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Vous pouvez sécuriser votre protection de l\'identité sur n\'importe quelle appli qui propose le Déverrouillage par empreinte digitale ou par reconnaissance faciale pour vous identifier"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Afficher les détails"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"Utiliser la Vérification d\'identité pour sécuriser plus d\'applis"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"Lorsque vous utilisez la Vérification d\'identité pour toutes les applis qui prennent en charge le Déverrouillage par empreinte digitale et par reconnaissance faciale, vous assurez une protection plus forte et une expérience plus cohérente, sans configuration supplémentaire"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"La Vérification d\'identité fonctionne avec votre montre"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Empêchez d\'autres personnes d\'ouvrir des applis qui nécessitent le Déverrouillage par empreinte digitale ou par reconnaissance faciale. Lorsque vous êtes connecté à votre montre, votre sécurité est assurée avec une plus grande mobilité."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Utilisez la Vérification d\'identité et votre montre sur plus d\'applis"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Assurez la protection de votre identité sur toutes les applis qui prennent en charge le Déverrouillage par empreinte digitale et par reconnaissance faciale dans des endroits de confiance, comme votre domicile ou votre bureau. Utilisez la Vérification d\'identité avec votre montre pour étendre votre protection même au-delà des endroits de confiance."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"Autres paramètres"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"Remplissage automatique, notifications, etc."</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"Paramètres de confidentialité"</string>

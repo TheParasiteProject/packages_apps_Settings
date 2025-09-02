@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"О выводе звука"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Выводить звук на слуховой аппарат или динамик телефона"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Похожие"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"\"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>\" – просто и удобно"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"Попробуйте приложение \"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>\" на Windows, чтобы удобно обмениваться контентом между устройствами Android и ПК поблизости."</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"\"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>\" – просто и удобно"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"Попробуйте приложение \"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>\" на Windows, чтобы удобно обмениваться контентом между устройствами Android и ПК поблизости."</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Рингтон и будильники"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"Звук во время звонков"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Медиа и системные звуки"</string>
@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Использовать новые настройки?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Если вам не нравятся новые настройки экрана, вы можете вернуться к предыдущим."</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Применить настройки"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"Дисплей: %1$s. Чтобы перетащить его или перейти к действиям перемещения, нажмите дважды и удерживайте."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"Переместить вверх"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"Переместить вниз"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"Переместить влево"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"Переместить вправо"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"дублирование"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Включить"</string>
@@ -1412,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"Обычное изображение"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"Изображение с HDR"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"Этот параметр влияет только на изображения и видео с поддержкой HDR."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"Баланс белого на экране"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"Продолжать работу с при­ло­же­ни­я­ми при складывании"</string>
@@ -1479,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Темный фон меньше нагружает глаза и помогает снизить расход заряда батареи на некоторых устройствах. Если настроено расписание, тема изменится после отключения экрана."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Тёмная тема сейчас используется в соответствии с вашим расписанием ночного режима."</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Настройки ночного режима"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Режимы также могут включать тёмную тему.}=1{Режим \"{mode_1}\" также включает тёмную тему.}=2{Режимы \"{mode_1}\" и \"{mode_2}\" также включают тёмную тему.}=3{Режимы \"{mode_1}\", \"{mode_2}\" и \"{mode_3}\" также включают тёмную тему.}one{Режимы \"{mode_1}\", \"{mode_2}\" и ещё # также включают тёмную тему.}few{Режимы \"{mode_1}\", \"{mode_2}\" и ещё # также включают тёмную тему.}many{Режимы \"{mode_1}\", \"{mode_2}\" и ещё # также включают тёмную тему.}other{Режимы \"{mode_1}\", \"{mode_2}\" и ещё # также включают тёмную тему.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{Режимы также могут включать тёмную тему.}=1{Режим \"{mode_1}\" также включает тёмную тему.}=2{Режимы \"{mode_1}\" и \"{mode_2}\" также включают тёмную тему.}=3{Режимы \"{mode_1}\", \"{mode_2}\" и \"{mode_3}\" также включают тёмную тему.}one{Режимы \"{mode_1}\", \"{mode_2}\" и ещё # также включают тёмную тему.}few{Режимы \"{mode_1}\", \"{mode_2}\" и ещё # также включают тёмную тему.}many{Режимы \"{mode_1}\", \"{mode_2}\" и ещё # также включают тёмную тему.}other{Режимы \"{mode_1}\", \"{mode_2}\" и ещё # также включают тёмную тему.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Настройки режимов"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Увеличивает яркость, расширяет цветовой диапазон и повышает четкость изображений и видео в формате HDR. Такой контент будет выглядеть ярче."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Время отключения экрана"</string>
@@ -2415,11 +2412,9 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Режим навигации, поворот экрана"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Отправить отзыв"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Пройти опрос"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Связаться со службой поддержки проекта \"Google Специальные возможности\""</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Опрос о доступности"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Поделитесь мнением"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"Насколько вас устраивает тёмная тема?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Пройти опрос"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Поделитесь мнением"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Насколько вас устраивает функция \"Увеличение\"?"</string>
@@ -2594,10 +2589,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"Расписание"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Стандартная"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"Стандартная тёмная тема"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Включать тёмную тему для системы и поддерживаемых приложений"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"Включать тёмную тему на устройстве и в приложениях, которые ее поддерживают"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Расширенная"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"Тёмная тема с расширенными параметрами"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Автоматически включать тёмную тему во всех приложениях для улучшения доступности"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"Включать тёмную тему в приложениях без ее поддержки. Возможно, использовать приложения и читать текст станет проще. Интерфейс может показываться некорректно."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"принудительная инверсия, инверсия цветов, контрастность"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Убрать анимации"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Уменьшить количество движений на экране"</string>
@@ -2699,8 +2694,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"Подробнее о коррекции цвета…"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"Об инверсии цветов"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"Подробнее об инверсии цветов…"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"Подробнее о тёмной теме…"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"Некоторые приложения могут не поддерживать расширенную тёмную тему. Если она показывается неправильно, используйте стандартную."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"Подробнее о тёмной теме"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Субтитры"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"Только в поддерживаемых приложениях"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Размер и стиль субтитров"</string>
@@ -5581,7 +5575,7 @@
     <string name="category_name_color" msgid="937514550918977151">"Цвет"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"Другие настройки экрана"</string>
     <string name="category_name_general" msgid="7737273712848115886">"Общие"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"Установить тёмную тему"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"Использовать тёмную тему"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"Использовать Bluetooth"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"Улучшенная яркость HDR"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"Отключение звука звонка"</string>
@@ -5797,7 +5791,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Пароль"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Улучшить совместимость"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Снизить качество звука, чтобы некоторым устройствам, например слуховым аппаратам, было проще подключаться"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"Отключить передачу аудио, чтобы задать настройки совместимости"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Аудио поблизости"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Функция \"Отправка аудио\" поддерживает технологию Auracast™."</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Название аудиопотока"</string>
@@ -5938,6 +5933,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Удалить PIN-код"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Добавить резервный адрес электронной почты"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Подтвердить адрес электронной почты"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Фильтры для контента сайтов"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Фильтры сайтов, заблокировать сайты, фильтры браузера, заблокировать сайты для взрослых, отфильтровать сайты, заблокировать результаты поиска, отфильтровать результаты поиска для взрослых, ограничения на контент"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Помогите отфильтровывать контент для взрослых в некоторых приложениях и браузерах на этом телефоне. Возможно, такие материалы будут по-прежнему показываться в других приложениях, браузерах и на других устройствах."</string>
@@ -5958,21 +5955,26 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"При удалении произошла ошибка."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> (анимация)"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Не удается включить родительский контроль"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Что-то пошло не так"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Повторите попытку позже."</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Назад"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"Проверка личности доступна в других приложениях"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Вы можете включить проверку личности во всех приложениях, которые поддерживают разблокировку по отпечатку пальца или фейсконтроль."</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Подробнее"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"Защитите данные в других приложениях, включив проверку личности"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"Если включить проверку личности во всех приложениях, поддерживающих разблокировку по отпечатку пальца и фейсконтроль, ваша важная информация будет надежнее защищена. Кроме того, вам будет удобнее пользоваться приложениями. Достаточно настроить одну функцию."</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"Проверка личности доступна на часах"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Запретите другим пользователям открывать приложения, которые поддерживают разблокировку по отпечатку пальца или фейсконтроль. При подключении к часам безопасность обеспечивается за счет большей мобильности."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Используйте проверку личности и часы для работы с другими приложениями"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Включите проверку личности во всех приложениях, которые поддерживают разблокировку по отпечатку пальца или фейсконтроль, в таких безопасных местах, как дом или офис. А чтобы расширить область защиты за пределы безопасных мест, используйте проверку личности на часах."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"Другие настройки"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"Автозаполнение, уведомления и другие параметры"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"Настройки конфиденциальности"</string>

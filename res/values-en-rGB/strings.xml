@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"About audio output"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Route sounds to your hearing device or phone speaker"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Related"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"Send faster with <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"For the fastest way to share with nearby Android and PCs, try <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> for Windows"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"Send faster with <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"For the fastest way to share with nearby Android and PCs, try <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> for Windows"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Ringtone and alarms"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"Audio during calls"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Media and system sounds"</string>
@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Use new settings?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"If your display isn\'t working as you\'d like, you can revert to your previous settings"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Use settings"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"Display: %1$s. Double-tap and hold to drag or view actions to move."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"Move up"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"Move down"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"Move left"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"Move right"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"mirror"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Enable wireless display"</string>
@@ -1412,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"Standard image"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR image"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"This setting only affects images and videos that support high dynamic range (HDR)."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"Display white balance"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"Continue using apps on fold"</string>
@@ -1479,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Use a dark background to make your screen more comfortable to view and reduce battery usage on some screens. Your theme will change if you have a schedule, when the screen is off."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Dark theme is currently following your Bedtime mode schedule"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Bedtime mode settings"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Modes can also turn on Dark theme.}=1{{mode_1} also turns on Dark theme.}=2{{mode_1} and {mode_2} also turn on Dark theme.}=3{{mode_1}, {mode_2} and {mode_3} also turn on Dark theme.}other{{mode_1}, {mode_2} and # more also turn on Dark theme.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{Modes can also turn on Dark theme}=1{{mode_1} also turns on Dark theme}=2{{mode_1} and {mode_2} also turn on Dark theme}=3{{mode_1}, {mode_2} and {mode_3} also turn on Dark theme}other{{mode_1}, {mode_2} and # more also turn on Dark theme}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Modes settings"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Brighten and expand the colour range and clarity in high dynamic range (HDR) images and videos. HDR content will appear brighter."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Screen timeout"</string>
@@ -2415,7 +2412,6 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Navigation mode, screen rotation"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Send feedback"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Take survey"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Contact Google Disability Support"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Accessibility survey"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Share your feedback"</string>
     <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
@@ -2594,10 +2590,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"Timing"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Standard"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"Standard Dark theme"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Applies Dark theme across your device and supported apps"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"Turns on Dark theme for your device and apps that support Dark theme"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Expanded"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"Expanded Dark theme"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Automatically applies Dark theme to more apps for improved accessibility"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"Automatically applies Dark theme to most apps that don\'t support it. This can improve accessibility and readability, but may cause some apps to display incorrectly."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"force invert, colour inversion, contrast"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Remove animations"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Reduce movement on the screen"</string>
@@ -2699,8 +2695,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"Learn more about colour correction"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"About colour inversion"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"Learn more about colour inversion"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"Learn more about Dark theme"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"Some apps may not support Dark theme with the expanded option. If you experience appearance issues, use the standard option."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"Learn more about Dark theme"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Show captions"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"For supported app only"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Caption size and style"</string>
@@ -5579,7 +5574,7 @@
     <string name="category_name_color" msgid="937514550918977151">"Colour"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"Other display controls"</string>
     <string name="category_name_general" msgid="7737273712848115886">"General"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"Use Dark theme"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"Use Dark theme"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"Use Bluetooth"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"Use enhanced HDR brightness"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"Use prevent ringing"</string>
@@ -5795,7 +5790,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Password"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Improve compatibility"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Helps some devices, like hearing aids, connect by reducing audio quality"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"Turns off the audio sharing to config the compatibility"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Listen to nearby audio"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Audio sharing supports Auracast™"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Audio stream name"</string>
@@ -5936,6 +5932,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Delete PIN"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Add recovery email"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Verify your email"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Website content filters"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Website filters, Block sites, Browser filters, Block explicit sites, Filter sites, Block search results, Filter explicit search results, content restrictions"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Help filter explicit content on some apps and browsers on this phone. Explicit content may still show on other apps, devices or browsers."</string>
@@ -5956,21 +5954,26 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"An error occurred while trying to delete the PIN."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> animation"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Can\'t turn on controls"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Something went wrong"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Try again later"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Go back"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"Identity Check is available on more apps"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"You can secure your identity protection on any app that offers Fingerprint or Face Unlock to identify you"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"View details"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"Use Identity Check to secure more apps"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"When you use Identity Check for all apps that support Fingerprint and Face Unlock, you ensure stronger protection and a more consistent experience – without extra setup"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"Identity Check works with your watch"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Prevent others from opening apps that require Fingerprint or Face Unlock. When connected to your watch, your security is assured with greater mobility."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Use Identity Check and watch on more apps"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Ensure your identity protection on all apps that support Fingerprint and Face Unlock in trusted places like your home or office. Use Identity Check with your watch to extend your protection even beyond trusted places."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"Other settings"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"Autofill, notifications and more"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"Privacy controls"</string>

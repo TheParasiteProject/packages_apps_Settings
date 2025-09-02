@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"अडियो आउटपुटका बारेमा"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"आफ्नो हियरिङ डिभाइस वा फोनको स्पिकरबाट आवाज सुन्नुहोस्"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"सम्बन्धित"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> प्रयोग गरेर अझ छिटो सामग्री सेयर गर्नुहोस्"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"नजिकैका Android र PC हरूसँग सबैभन्दा द्रुत रूपमा सामग्री सेयर गर्न Windows का लागि बनाइएको <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> प्रयोग गरी हेर्नुहोस्"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> प्रयोग गरेर अझ छिटो सामग्री सेयर गर्नुहोस्"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"नजिकैका Android र PC हरूसँग सबैभन्दा द्रुत रूपमा सामग्री सेयर गर्न Windows का लागि बनाइएको <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> प्रयोग गरी हेर्नुहोस्"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"रिङटोन र अलार्महरू"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"कलमा सुनिने अडियो"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"मिडिया र सिस्टमका आवाजहरू"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"स्ट्यान्डर्ड फोटो"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR फोटो"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"यो सेटिङले हाई डाइनामिक रेन्ज (HDR) प्रयोग गर्न मिल्ने फोटो र भिडियोहरूमा मात्र प्रभाव पार्ने छ।"</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"श्वेत सन्तुलन देखाउनुहोस्"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"फोल्ड गर्दा पनि एपहरू प्रयोग गरिराख्नुहोस्"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"आफ्नो स्क्रिन अझ सजिलैसँग हेर्न मिल्ने बनाउन र केही स्क्रिनमा ब्याट्रीको खपत कम गर्न अँध्यारो ब्याकग्राउन्ड प्रयोग गर्नुहोस्। तपाईंले समयतालिका तय गर्नुभएको छ भने स्क्रिन अफ भएका बेला थिम बदलिने छ।"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"अँध्यारो थिम हाल तपाईंको बेडटाइम मोडको समयतालिकाअनुसार चल्छ"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"बेडटाइम मोडसम्बन्धी सेटिङहरू"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{मोडहरूले पनि अँध्यारो थिम अन गर्न सक्छन्।}=1{{mode_1} ले पनि अँध्यारो थिम अन गर्छ।}=2{{mode_1} र {mode_2} ले पनि अँध्यारो थिम अन गर्छन्।}=3{{mode_1}, {mode_2} र {mode_3} ले पनि अँध्यारो थिम अन गर्छन्।}other{{mode_1}, {mode_2} र थप # वटा मोडले पनि अँध्यारो थिम अन गर्छन्।}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{मोडहरूले पनि अँध्यारो थिम अन गर्न सक्छन्}=1{{mode_1} ले पनि अँध्यारो थिम अन गर्छ}=2{{mode_1} र {mode_2} ले पनि अँध्यारो थिम अन गर्छन्}=3{{mode_1}, {mode_2} र {mode_3} ले पनि अँध्यारो थिम अन गर्छन्}other{{mode_1}, {mode_2} र थप # वटा मोडले पनि अँध्यारो थिम अन गर्छन्}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"मोडहरूसम्बन्धी सेटिङ"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"हाई डाइनामिक रेन्ज (HDR) फोटो र भिडियोहरूमा चमक बढाउनुहोस् र रङको दायरा तथा स्पष्टता बढाउनुहोस्। HDR सामग्री अझ चम्किलो देखिने छ।"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"स्क्रिन टाइम आउट हुने समय"</string>
@@ -2410,7 +2412,6 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"नेभिगेसन मोड, स्क्रिन रोटेसन"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"प्रतिक्रिया पठाउनुहोस्"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"सर्वेक्षणमा भाग लिनुहोस्"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"अपाङ्गता भएका मान्छेका निम्ति Google को ग्राहक सेवा विभागमा सम्पर्क गर्नुहोस्"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Accessibility Survey"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"प्रतिक्रिया दिनुहोस्"</string>
     <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
@@ -2589,10 +2590,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"समय"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"डिफल्ट"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"डिफल्ट अँध्यारो थिम"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"तपाईंका विभिन्न डिभाइस तथा यो सुविधा चल्ने एपहरूमा अँध्यारो थिम लागू गर्छ"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"तपाईंको डिभाइस र अँध्यारो थिम प्रयोग गर्न मिल्ने एपहरूमा अँध्यारो थिम अन गर्छ"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"एक्स्पान्ड गरिएको"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"एक्स्पान्ड गरिएको अँध्यारो थिम"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"सर्वसुलभता बढाउनका निम्ति अझ धेरै एपहरूमा अँध्यारो थिम स्वतः लागू गर्छ"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"अँध्यारो थिम प्रयोग गर्न नमिल्ने अधिकांश एपहरूमा अँध्यारो थिम स्वतः लागू गर्छ। यसले सर्वसुलभता र पठनीयताको गुणस्तर सुधार गर्न सक्छ तर केही एपहरू सही तरिकाले नदेखिन सक्छन्।"</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"फोर्स इन्भर्ट, कलर इन्भर्सन, कन्ट्रास्ट"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"एनिमेसन हटाउनुहोस्"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"स्क्रिनमा चाल कम गर्नुहोस्"</string>
@@ -2694,8 +2695,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"कलर करेक्सनका बारेमा थप जान्नुहोस्"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"कलर इन्भर्सनका बारेमा"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"कलर इन्भर्सनका बारेमा थप जान्नुहोस्"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"अँध्यारो थिमका बारेमा थप जान्नुहोस्"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"एक्स्पान्ड गरिएको विकल्प अन भएका केही एपहरूमा अँध्यारो थिम नचल्न सक्छ। तपाईंले स्वरूपसम्बन्धी समस्याहरू झेल्नुभयो भने डिफल्ट विकल्प प्रयोग गर्नुहोस्।"</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"अँध्यारो थिमका बारेमा थप जान्नुहोस्"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"क्याप्सनहरू देखाउनुहोस्"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"यो सुविधा चल्ने एपमा मात्र"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"क्याप्सनको आकार र शैली"</string>
@@ -5574,7 +5574,7 @@
     <string name="category_name_color" msgid="937514550918977151">"रङ"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"डिस्प्लेसम्बन्धी अन्य नियन्त्रणहरू"</string>
     <string name="category_name_general" msgid="7737273712848115886">"सामान्य"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"अँध्यारो थिम प्रयोग गर्नुहोस्"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"अँध्यारो थिम प्रयोग गर्नुहोस्"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"ब्लुटुथ प्रयोग गर्नुहोस्"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"परिष्कृत HDR ब्राइटनेस प्रयोग गर्नुहोस्"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"घन्टी बज्न नदिने सुविधा प्रयोग गर्नुहोस्"</string>
@@ -5790,7 +5790,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"पासवर्ड"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"कम्प्याटिबिलिटी बढाउनुहोस्"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"अडियोको गुणस्तर कम गरेर हियरिङ डिभाइस जस्ता केही डिभाइसहरू कनेक्ट गर्न मद्दत गर्छ"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"कम्प्याटिबिलिटी कन्फिगर गर्न अडियो सेयरिङ अफ गर्छ"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"नजिकैको अडियो सुन्नुहोस्"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"अडियो सेयर गर्ने सुविधामा Auracast™ प्रयोग गर्न मिल्छ"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"अडियो स्ट्रिमको नाम"</string>
@@ -5931,6 +5932,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"PIN मेटाउनुहोस्"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"रिकभरी इमेल ठेगाना हाल्नुहोस्"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"आफ्नो इमेल ठेगाना पुष्टि गर्नुहोस्"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"वेबसाइटका कन्टेन्टसम्बन्धी फिल्टरहरू"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"वेबसाइटसम्बन्धी फिल्टरहरू, साइटहरू ब्लक गर्नुहोस्, ब्राउजरसम्बन्धी फिल्टरहरू, अश्लील साइटहरू ब्लक गर्नुहोस्, साइटहरू फिल्टर गर्नुहोस्, खोज परिणामहरू ब्लक गर्नुहोस्, अश्लील खोज परिणामहरू फिल्टर गर्नुहोस्, कन्टेन्टसम्बन्धी प्रतिबन्धहरू"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"यो फोनमा भएका केही एप र ब्राउजरहरूमा अश्लील कन्टेन्ट फिल्टर गर्न मद्दत गर्छ। अन्य एप, डिभाइस वा ब्राउजरहरूमा भने अझै पनि अश्लील कन्टेन्ट देखिन सक्छ।"</string>
@@ -5954,15 +5957,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"कुनै समस्या आयो"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"पछि फेरि प्रयास गर्नुहोस्"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"पछाडि जानुहोस्"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"पहिचान पुष्टि गर्ने सुविधा अझ धेरै एपहरूमा उपलब्ध छ"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"तपाईंको पहिचान गर्न फिंगरप्रिन्ट वा फेस अनलक सुविधा उपलब्ध गराउने जुनसुकै एपमा तपाईं आफ्नो पहिचान सुरक्षित राख्न सक्नुहुन्छ"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"विवरणहरू हेर्नुहोस्"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"अझ धेरै एपहरू सुरक्षित राख्न पहिचान पुष्टि गर्ने सुविधा प्रयोग गर्नुहोस्"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"तपाईंले फिंगरप्रिन्ट र फेस अनलक सुविधा उपलब्ध भएका सबै एपहरूमा पहिचान पुष्टि गर्ने सुविधा प्रयोग गर्दा तपाईं अन्य कुराहरू सेटअप नगरिकनै अझ भरपर्दो सुरक्षा तथा अझ एकनासको अनुभव प्राप्त गर्नुहुन्छ"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"तपाईंको स्मार्ट वाचमार्फत पहिचान पुष्टि गर्ने सुविधा प्रयोग गर्न मिल्छ"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"अरूलाई फिंगरप्रिन्ट वा फेस अनलक प्रयोग गर्नु पर्ने एपहरू खोल्नबाट रोक्नुहोस्। तपाईंको स्मार्ट वाचमा कनेक्ट गरिएका बेला तपाईं जहाँ भए पनि तपाईंको सुरक्षा सुनिश्चित गर्न सकिन्छ।"</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"थप एपहरूमा स्मार्ट वाचमार्फत पहिचान पुष्टि गर्ने सुविधा प्रयोग गर्नुहोस्"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"तपाईं घर वा कार्यालय जस्ता विश्वसनीय ठाउँहरूमा भएका बेला फिंगरप्रिन्ट र फेस अनलक प्रयोग गर्न मिल्ने सबै एपमा आफ्नो पहिचानको सुरक्षा सुनिश्चित गर्नुहोस्। तपाईं विश्वसनीय ठाउँहरूमा नभएका बेला पनि आफ्नो पहिचान सुरक्षित राख्न आफ्नो स्मार्ट वाचमार्फत पहिचान पुष्टि गर्ने सुविधा प्रयोग गर्नुहोस्।"</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"अन्य सेटिङ"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"अटोफिल, नोटिफिकेसन र अन्य कुराहरू"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"गोपनीयतासम्बन्धी सेटिङ"</string>
