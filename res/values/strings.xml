@@ -2268,7 +2268,7 @@
     <!-- External Display settings. More resolution options -->
     <string name="external_display_more_options_title">More options</string>
     <!-- External Display settings. -->
-    <string name="external_display_topology_hint">Hold and drag to rearrange displays.</string>
+    <string name="external_display_topology_hint">Hold and drag to rearrange displays</string>
     <!-- External Display settings. -->
     <string name="external_display_mirroring_title">Mirror built-in display</string>
     <!-- External Display settings. Dialog title to confirm if resolution change wants to be applied (change was first temporarily applied while showing dialog). -->
@@ -3642,7 +3642,7 @@
     <!-- About phone, title of EID -->
     <string name="status_eid">E&#x200B;ID</string>
     <!-- About phone, title of EID for multi-sim devices -->
-    <string name="eid_multi_sim">E&#x200B;ID (SIM slot <xliff:g id="eid_slot_id">%1$d</xliff:g>)</string>
+    <string name="eid_multi_sim">E&#x200B;ID <xliff:g id="eid_slot_id">%1$d</xliff:g></string>
     <!-- About phone screen, title for IMEI for multi-sim devices -->
     <string name="imei_multi_sim">IMEI <xliff:g id="imei_id">%1$d</xliff:g></string>
     <!-- About phone screen, summary of the MAC address [CHAR LIMIT=80] -->
@@ -6035,7 +6035,7 @@
     <string name="accessibility_expanded_dark_theme_title">Expanded</string>
     <!-- Title in the search result for expanded dark theme mode. -->
     <string name="accessibility_expanded_dark_theme_title_in_search">Expanded Dark theme</string>
-    <!-- Summary for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=100] -->
+    <!-- Summary for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=NONE] -->
     <string name="accessibility_expanded_dark_theme_summary">Automatically applies dark theme to most apps that don\'t support it. This can improve accessibility and readability, but may cause some apps to display incorrectly.</string>
     <!-- Search keywords for the Expanded dark theme settings. [CHAR_LIMIT=NONE] -->
     <string name="keywords_expanded_dark_theme">force invert, color inversion, contrast</string>
@@ -8521,7 +8521,7 @@
     <!-- SIM status title  [CHAR LIMIT=40] -->
     <string name="sim_status_title">SIM status</string>
     <!-- SIM status title  [CHAR LIMIT=40] -->
-    <string name="sim_status_title_sim_slot">SIM status (SIM slot %1$d)</string>
+    <string name="sim_status_title_sim_slot">SIM %1$d status</string>
     <!-- Summary text describing signal strength to the user.  [CHAR LIMIT=60] -->
     <string name="sim_signal_strength"><xliff:g id="dbm">%1$d</xliff:g> dBm <xliff:g id="asu">%2$d</xliff:g> asu</string>
     <!-- Title for SIM notification.  [CHAR LIMIT=40] -->
