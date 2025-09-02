@@ -282,7 +282,7 @@ class TrustedCredentialsDialogBuilder extends AlertDialog.Builder {
             if (certificates != null) {
                 for (X509Certificate certificate : certificates) {
                     SslCertificate sslCert = new SslCertificate(certificate);
-                    views.add(sslCert.inflateCertificateView(mActivity));
+                    views.add(sslCert.inflateCertificateView(mDialog.getContext()));
                     titles.add(sslCert.getIssuedTo().getCName());
                 }
             }
