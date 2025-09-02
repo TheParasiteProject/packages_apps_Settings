@@ -88,12 +88,16 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
         get() = R.string.menu_key_supervision
 
     override fun onCreate(context: PreferenceLifecycleContext) {
-        supervisionClient = getSupervisionClient(context)
-        addSupportedApps(context)
+        if (isContainer(context)) {
+            supervisionClient = getSupervisionClient(context)
+            addSupportedApps(context)
+        }
     }
 
     override fun onDestroy(context: PreferenceLifecycleContext) {
-        supervisionClient?.close()
+        if (isContainer(context)) {
+            supervisionClient?.close()
+        }
     }
 
     override fun isIndexable(context: Context) = true

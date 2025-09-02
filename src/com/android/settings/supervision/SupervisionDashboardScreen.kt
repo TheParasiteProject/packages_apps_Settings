@@ -66,9 +66,11 @@ open class SupervisionDashboardScreen : PreferenceScreenMixin, PreferenceLifecyc
         }
 
     override fun onCreate(context: PreferenceLifecycleContext) {
-        this.lifeCycleContext = context
-        supervisionManager = context.getSystemService(SupervisionManager::class.java)
-        supervisionManager?.registerSupervisionListener(supervisionListener)
+        if (isContainer(context)) {
+            this.lifeCycleContext = context
+            supervisionManager = context.getSystemService(SupervisionManager::class.java)
+            supervisionManager?.registerSupervisionListener(supervisionListener)
+        }
     }
 
     override fun isFlagEnabled(context: Context) = Flags.enableSupervisionSettingsScreen()
@@ -96,10 +98,12 @@ open class SupervisionDashboardScreen : PreferenceScreenMixin, PreferenceLifecyc
         get() = R.string.menu_key_supervision
 
     override fun onDestroy(context: PreferenceLifecycleContext) {
-        supervisionClient?.close()
-        supervisionManager?.unregisterSupervisionListener(supervisionListener)
-        this.lifeCycleContext = null
-        this.supervisionManager = null
+        if (isContainer(context)) {
+            supervisionClient?.close()
+            supervisionManager?.unregisterSupervisionListener(supervisionListener)
+            this.lifeCycleContext = null
+            this.supervisionManager = null
+        }
     }
 
     override fun isIndexable(context: Context) = true
