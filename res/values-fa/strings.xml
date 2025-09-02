@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"درباره خروجی صوتی"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"انتقال صدا به دستگاه کمک‌شنوایی یا بلندگوی تلفن"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"مرتبط شده"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"ارسال سریع‌تر با «<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>»"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"‏برای تجربه سریع‌ترین روش هم‌رسانی با رایانه‌های شخصی و دستگاه‌های Android اطراف، «<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>» ویژه Windows را امتحان کنید"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"ارسال سریع‌تر با «<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>»"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"‏برای تجربه سریع‌ترین روش هم‌رسانی با رایانه‌های شخصی و دستگاه‌های Android اطراف، «<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>» ویژه Windows را امتحان کنید"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"آهنگ زنگ و هشدار"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"صدا درطول تماس"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"صداهای رسانه و سیستم"</string>
@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"از تنظیمات جدید استفاده شود؟"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"اگر نمایشگر طبق انتظار کار نمی‌کند، می‌توانید به تنظیمات قبلی برگردید"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"استفاده از تنظیمات"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"‏نمایشگرها:%1$s. برای کشیدن یا مشاهده کنش‌ها برای جابه‌جایی، دو تک ضربه سریع بزنید و نگه دارید."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"حرکت به بالا"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"حرکت به پایین"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"حرکت به چپ"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"حرکت به راست"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"قرینه‌سازی"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"فعال کردن نمایش بی‌سیم"</string>
@@ -1412,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"تصویر استاندارد"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"‏تصویر HDR"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"‏این تنظیم فقط بر تصاویر و ویدیوهایی تأثیر می‌گذارد که از دامنه پویای بالا (HDR) پشتیبانی می‌کنند."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"تعادل سفیدی نمایشگر"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"ادامه دادن به استفاده از برنامه‌ها درحالت تاخوردگی"</string>
@@ -1479,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"برای مشاهده راحت‌تر صفحه‌نمایش و کاهش مصرف باتری در برخی‌از صفحه‌ها، از پس‌زمینه تیره استفاده کنید. اگر برنامه زمانی داشته باشید، وقتی صفحه‌نمایش خاموش باشد زمینه شما تغییر خواهد کرد."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"درحال‌حاضر، «زمینه تاریک» از زمان‌بندی «حالت وقت خواب» پیروی می‌کند"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"تنظیمات «حالت وقت خواب»"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{«حالت‌ها» نیز می‌توانند «زمینه تیره» را روشن کنند.}=1{{mode_1} نیز «زمینه تیره» را روشن می‌کند.}=2{{mode_1} و {mode_2} نیز «زمینه تیره» را روشن می‌کنند.}=3{{mode_1}، {mode_2}، و {mode_3} نیز «زمینه تیره» را روشن می‌کنند.}one{{mode_1}، {mode_2}، و # حالت دیگر نیز «زمینه تیره» را روشن می‌کنند.}other{{mode_1}، {mode_2}، و # حالت دیگر نیز «زمینه تیره» را روشن می‌کنند.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{حالت‌ها نیز می‌توانند زمینه تیره را روشن کنند}=1{‫{mode_1} نیز «زمینه تیره» را روشن می‌کند}=2{‫{mode_1} و {mode_2} نیز زمینه تیره را روشن می‌کنند}=3{‫{mode_1}،‏ {mode_2}، و {mode_3} نیز زمینه تیره را روشن می‌کنند}one{‫{mode_1}،‏ {mode_2}، و # حالت دیگر نیز زمینه تیره را روشن می‌کنند}other{‫{mode_1}،‏ {mode_2}، و # حالت دیگر نیز زمینه تیره را روشن می‌کنند}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"تنظیمات حالت‌ها"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"‏محدوده رنگ و وضوح در تصاویر و ویدیوهای دامنه پویای بالا (HDR) را روشن و گسترده می‌کند. محتوای HDR روشن‌تر می‌شود."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"زمان خاموش شدن صفحه"</string>
@@ -1930,7 +1927,7 @@
     <string name="lockpassword_confirm_your_pattern_header_frp" msgid="5641858015891896427">"تأیید الگو"</string>
     <string name="lockpassword_confirm_your_pin_header_frp" msgid="8285647793164729982">"تأیید پین"</string>
     <string name="lockpassword_confirm_your_password_header_frp" msgid="7932240547542564033">"تأیید گذرواژه"</string>
-    <string name="lockpassword_remote_validation_header" msgid="4992647285784962073">"هویتتان را تأیید کنید"</string>
+    <string name="lockpassword_remote_validation_header" msgid="4992647285784962073">"هویتتان را درستی‌سنجی کنید"</string>
     <string name="lockpassword_remote_validation_pattern_details" msgid="4655537780358707983">"‏برای منتقل کردن «حساب‌های Google»، تنظیمات، و موارد دیگر، الگوی دستگاه دیگر را وارد کنید. الگوی شما رمزگذاری می‌شود."</string>
     <string name="lockpassword_remote_validation_pin_details" msgid="2373654227583206297">"‏برای منتقل کردن «حساب‌های Google»، تنظیمات، و موارد دیگر، پین دستگاه دیگر را وارد کنید. پین شما رمزگذاری می‌شود."</string>
     <string name="lockpassword_remote_validation_password_details" msgid="3482328925925888340">"‏برای منتقل کردن «حساب‌های Google»، تنظیمات، و موارد دیگر، گذرواژه دستگاه دیگر را وارد کنید. گذرواژه شما رمزگذاری می‌شود."</string>
@@ -2415,7 +2412,6 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"حالت پیمایش، چرخش صفحه"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"ارسال بازخورد"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"شرکت در نظرسنجی"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"‏تماس با «تیم پشتیبانی از ناتوانان در Google»"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"نظرسنجی دسترس‌پذیری"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"هم‌رسانی بازخورد"</string>
     <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
@@ -2597,10 +2593,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"زمان‌بندی"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"استاندارد"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"«زمینه تیره» استاندارد"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"«زمینه تیره» را در سراسر دستگاه و برنامه‌های پشتیبانی‌شده‌تان اعمال می‌کند"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"زمینه تیره را برای دستگاه و برنامه‌هایی که از زمینه تیره پشتیبانی می‌کنند، روشن می‌کند"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"ازهم بازکردن"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"«زمینه تیره» گسترش‌یافته"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"برای بهبود دسترس‌پذیری، «زمینه تیره» را به‌طور خودکار روی برنامه‌های بیشتری اعمال می‌کند"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"به‌صورت خودکار زمینه تیره را روی اکثر برنامه‌هایی که از آن پشتیبانی نمی‌کنند، اعمال می‌کند. این امر می‌تواند دسترس‌پذیری و خوانایی را بهبود بخشد، اما ممکن است باعث شود برخی‌از برنامه‌ها به‌صورت نادرست نمایش داده شوند."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"معکوس اجباری، وارونگی رنگ، کنتراست"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"برداشتن پویانمایی‌ها"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"کاهش حرکت در صفحه‌نمایش"</string>
@@ -2702,8 +2698,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"درباره تصحیح رنگ بیشتر بدانید"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"درباره وارونگی رنگ"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"درباره وارونگی رنگ بیشتر بدانید"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"درباره «زمینه تیره» بیشتر بدانید"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"برخی‌از برنامه‌ها ممکن است از «زمینه تیره» با گزینه گسترش‌یافته پشتیبانی نکنند. اگر مشکلی در نمایش دارید، از گزینه استاندارد استفاده کنید."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"درباره زمینه تیره بیشتر بدانید"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"نشان دادن زیرنویس ناشنوایان"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"فقط برای برنامه پشتیبانی‌شده"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"اندازه و سبک زیرنویس ناشنوایان"</string>
@@ -5582,7 +5577,7 @@
     <string name="category_name_color" msgid="937514550918977151">"رنگ"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"دیگر کنترل‌های نمایشگر"</string>
     <string name="category_name_general" msgid="7737273712848115886">"کلی"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"استفاده از «زمینه تاریک»"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"استفاده از زمینه تیره"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"استفاده از بلوتوث"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"‏استفاده کردن از روشنایی HDR بهبودیافته"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"استفاده از جلوگیری از زنگ زدن"</string>
@@ -5798,7 +5793,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"گذرواژه"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"بهبود سازگاری"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"به برخی دستگاه‌ها (مثل سمعک) کمک می‌کند با کاهش کیفیت صدا متصل شوند"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"اشتراک صدا را برای پیکربندی سازگاری خاموش می‌کند"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"گوش دادن به صدای اطراف"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"‏«اشتراک صدا» از Auracast™‎ پشتیبانی می‌کند"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"نام جاری‌سازی صوتی"</string>
@@ -5939,6 +5935,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"حذف پین"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"افزودن ایمیل بازیابی"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"درستی‌سنجی کردن ایمیل"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"فیلترهای محتوای وب‌سایت"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"فیلترهای وب‌سایت، مسدود کردن سایت‌ها، فیلترهای مرورگر، مسدود کردن سایت‌های صریح، فیلتر کردن سایت‌ها، مسدود کردن نتایج جستجو، فیلتر کردن نتایج جستجوی صریح، محدودیت‌های محتوا"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"به فیلتر کردن محتوای صریح در برخی‌از برنامه‌ها و مرورگرهای این تلفن کمک می‌کند. ممکن است محتوای صریح همچنان در سایر برنامه‌ها، دستگاه‌ها، یا مرورگرها نمایش داده شود."</string>
@@ -5959,21 +5957,26 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"هنگام حذف پین خطایی روی داد."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"پویانمایی <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"کنترل‌ها روشن نمی‌شود"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"مشکلی پیش آمد"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"بعداً دوباره امتحان کنید"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"برگشتن"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"«احراز هویت» در برنامه‌های بیشتری دردسترس است"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"می‌توانید از هویتتان در هر برنامه‌ای که ویژگی «اثر انگشت» یا «قفل‌گشایی با چهره» دارد محافظت کنید"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"مشاهده جزئیات"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"از «احراز هویت» برای ایمن کردن برنامه‌های بیشتری استفاده کنید"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"وقتی از «احراز هویت» برای همه برنامه‌هایی که از «اثر انگشت» و «قفل‌گشایی با چهره» پشتیبانی می‌کنند استفاده کنید، محافظت قوی‌تر و تجربه‌ای یکپارچه‌تر بدون نیاز به راه‌اندازی بیشتر خواهید داشت"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"«احراز هویت» با ساعت شما سازگار است"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"از باز کردن برنامه‌هایی که نیاز به «اثر انگشت» و «قفل‌گشایی با چهره» دارند توسط دیگران جلوگیری کنید. وقتی به ساعت خود متصل هستید، امنیتتان حفظ می‌شود و درعین‌حال آزادی حرکت بیشتری خواهید داشت."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"از «احراز هویت» و ساعت در برنامه‌های بیشتری استفاده کنید"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"از هویتتان در همه برنامه‌هایی که از «اثر انگشت» و «قفل‌گشایی با چهره» پشتیبانی می‌کنند در جاهای مطمئن مانند خانه یا دفتر کار محافظت کنید. بااستفاده از «احراز هویت» در ساعتتان، محافظت خود را حتی به فراتر از جاهای مطمئن گسترش دهید."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"تنظیمات دیگر"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"تکمیل خودکار، اعلان‌ها، و موارد دیگر"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"کنترل‌های حریم خصوصی"</string>

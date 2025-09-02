@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"Аудио шығысы туралы"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Дыбысты есту құрылғысына немесе телефон динамигіне бағыттау"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Ұқсас"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> көмегімен лезде жіберіңіз"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"Маңайдағы Android-пен және дербес компьютермен жылдам бөлісу үшін Windows-қа арналған <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> функциясын байқап көріңіз."</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> көмегімен лезде жіберіңіз"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"Маңайдағы Android-пен және дербес компьютермен жылдам бөлісу үшін Windows-қа арналған <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> функциясын байқап көріңіз."</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Рингтон және оятқыштар"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"Қоңырау шалу кезіндегі аудио"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Медиа және жүйе дыбыстары"</string>
@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Жаңа параметрлерді пайдалану қажет пе?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Дисплей ойдағыдай істемесе, алдыңғы параметрлерге қайтаруға болады."</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Пайдалану параметрлері"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"Дисплей: %1$s. Қозғалту әрекеттерін сүйреу немесе көру үшін екі рет түртіп, басып тұрыңыз."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"Жоғары жылжыту"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"Төмен жылжыту"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"Солға жылжыту"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"Оңға жылжыту"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"айна"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Сымсыз дисплейді қосу"</string>
@@ -1412,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"Стандартты сурет"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR әсері бар сурет"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"Бұл параметр High Dynamic Range (HDR) әсеріне қолдау көрсететін суреттер мен бейнелерге ғана әсер етеді."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"Дисплейдің ақ түс балансы"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"Қолданбаларды құрылғының бүктелген күйінде пайдалана беру"</string>
@@ -1479,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Кейбір экрандарда батарея шығынын азайту және экранды көруге ыңғайлырақ ету үшін қараңғы фонды пайдаланыңыз. Егер сізде кесте болса, экран өшірулі кезде режим өзгереді."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Қараңғы режим қазір \"Ұйқы\" режимінің кестесіне қолданылып жатыр."</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Ұйқы режимі параметрлері"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Режимдер қараңғы режимді қоса алады.}=1{{mode_1} қараңғы режимді қоса алады.}=2{{mode_1}, {mode_2} және қараңғы режимді қоса алады.}=3{{mode_1}, {mode_2} және {mode_3} қараңғы режимді қоса алады.}other{{mode_1}, {mode_2} және тағы # режим қараңғы режимді қоса алады.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{Режимдер қараңғы режимді қоса алады.}=1{{mode_1} қараңғы режимді қоса алады.}=2{{mode_1} және {mode_2} қараңғы режимді қоса алады.}=3{{mode_1}, {mode_2} және {mode_3} қараңғы режимді қоса алады.}other{{mode_1}, {mode_2} және тағы # режим қараңғы режимді қоса алады.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Режим параметрлері"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"High Dynamic Range (HDR) әсері бар суреттер мен бейнелерді ашық, қанық әрі анық етуге болады. HDR әсері бар контент ашығырақ болады."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Экранның өшуі"</string>
@@ -2415,11 +2412,9 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Навигация режимі, экранды бұру"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Пікір жіберу"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Сауалнамаға қатысу"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google мүгедектік қолдау ұжымы"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Арнайы мүмкіндіктер сауалнамасы"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Пікіріңізді бөлісіңіз"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"Қараңғы режим көңіліңізден шыға ма?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Сауалнамаға қатысу"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Пікіріңізді бөлісіңіз"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Ұлғайту функциясы көңіліңізден шыға ма?"</string>
@@ -2594,10 +2589,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"Уақыт"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Стандартты"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"Стандартты қараңғы режим"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Құрылғы мен қолдау көрсетілетін қолданбаларды қараңғы режимге қояды."</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"Құрылғыңызда және қараңғы режим қолданылатын қолданбаларда қараңғы режимді қосады."</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Кеңейтілген"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"Кеңейтілген қараңғы режим"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Арнайы мүмкіндіктерді жақсарту үшін көбірек қолданбаға қараңғы режимді автоматты түрде қолданады."</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"Қараңғы режим қолданылмайтын көптеген қолданбаға оны автоматты түрде қолданады. Бұл қолжетімділік пен оқу ыңғайлылығын жақсартқанымен, кейбір қолданбалар дұрыс көрсетілмеуі мүмкін."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"мәжбүрлі инверсия, түс инверсиясы, контраст"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Анимацияны өшіру"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Экрандағы қозғалысты азайту"</string>
@@ -2699,8 +2694,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"Түсті түзету туралы толық ақпарат"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"Түс инверсиясы туралы"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"Түс инверсиясы туралы толық ақпарат"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"Қараңғы режим туралы толық ақпарат"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"Кейбір қолданбалар \"Кеңейтілген\" опциясында қараңғы режимге қолдау көрсетпеуі мүмкін. Дұрыс көрсетілмесе, \"Стандартты\" опциясын таңдаңыз."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"Қараңғы режим туралы толық ақпарат"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Субтитрді көрсету"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"Тек қолдау көрсетілетін қолданба үшін"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Субтитр өлшемі мен стилі"</string>
@@ -5579,7 +5573,7 @@
     <string name="category_name_color" msgid="937514550918977151">"Түс"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"Дисплейдің өзге басқару элементтері"</string>
     <string name="category_name_general" msgid="7737273712848115886">"Жалпы"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"Қараңғы режимді пайдалану"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"Қараңғы режимді пайдалану"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"Bluetooth-ты пайдалану"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"HDR әсері бар жақсартылған жарықтықты пайдалану"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"Қоңырау дыбысын өшіру"</string>
@@ -5795,7 +5789,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Құпия сөз"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Үйлесімділікті жақсарту"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Дыбыс сапасын азайту арқылы есту аппараттары сияқты кейбір құрылғыларды жалғауға көмектеседі."</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"Үйлесімділікті конфигурациялау үшін аудио бөлісу функциясын өшіреді."</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Жақын жердегі аудионы тыңдаңыз"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Аудио бөлісу Auracast™ технологиясына қолдау көрсетеді."</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Аудио трансляция атауы"</string>
@@ -5936,6 +5931,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"PIN кодын жою"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Қалпына келтіру электрондық мекенжайын қосу"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Электрондық мекенжайды растаңыз"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Веб-сайттың контент сүзгілері"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Веб-сайт сүзгілері, сайттарды блоктау, браузер сүзгілері, цензурасыз сайттарды блоктау, сайттарды іріктеу, іздеу нәтижелерін блоктау, цензурасыз іздеу нәтижелерін іріктеу, контент шектеулері"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Осы телефондағы кейбір қолданбалар мен браузерлердегі цензурасыз контентті жасыруға көмектеседі. Бірақ мұндай контент басқа қолданбаларда, құрылғыларда немесе браузерлерде көрсетілуі мүмкін."</string>
@@ -5956,21 +5953,26 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"PIN кодын жою кезінде қате пайда болды."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> анимациясы"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Басқару элементтері қосылмады"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Бірдеңе дұрыс болмады"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Кейінірек қайталап көріңіз."</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Артқа"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"Жеке басты тексеру функциясы көп қолданбада бар"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Жеке басыңызды анықтау үшін саусақ ізі немесе бет тану функциясын ұсынатын кез келген қолданбада жеке бас қорғанысын қосуға болады"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Мәліметтерді көру"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"Көбірек қолданбаны қорғау үшін жеке басты тексеру функциясын пайдаланыңыз"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"Саусақ ізі мен бет тану функцияларына қолдау көрсететін барлық қолданбада жеке басты тексеру функциясын пайдалансаңыз, жоғары дәрежедегі қорғаныс пен біркелкі қызметтер ұсынылады, қосымша реттеу қажет емес"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"Жеке басты тексеру функциясы сағатта істейді"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Басқа біреулердің саусақ ізін немесе бет тануды қажет ететін қолданбаларды ашуына жол бермеңіз. Сағатқа жалғанған кезде, қауіпсіздікке қатысты көбірек таңдау беріледі."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Жеке басты тексеру функциясы мен сағатты көбірек қолданбада пайдаланыңыз"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Үй немесе кеңсе сияқты сенімді орындарда саусақ ізі мен бет тану функциясына қолдау көрсететін барлық қолданбада жеке бас қорғанысын қамтамасыз етіңіз. Қорғанысты көбірек сенімді орынға қосу үшін жеке басты тексеру функциясын сағатпен пайдаланыңыз."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"Басқа параметрлер"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"Автотолтыру, хабарландырулар және тағы басқалар"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"Құпиялық параметрлері"</string>

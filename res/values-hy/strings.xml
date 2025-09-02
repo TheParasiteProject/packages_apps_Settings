@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"Աուդիո ելքի մասին"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Փոխանցել ձայները լսողական սարքին կամ հեռախոսի բարձրախոսին"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Նմանատիպ"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> հավելվածի օգնությամբ ուղարկեք ավելի արագ"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"Փորձեք <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> հավելվածը Windows-ում, որպեսզի ավելի հեշտությամբ փոխանակվեք բովանդակությամբ մոտակա Android սարքերի և համակարգիչների միջև։"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> հավելվածի օգնությամբ ուղարկեք ավելի արագ"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"Փորձեք <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> հավելվածը Windows-ում, որպեսզի ավելի հեշտությամբ փոխանակվեք բովանդակությամբ մոտակա Android սարքերի և համակարգիչների միջև։"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Զանգերանգ և զարթուցիչներ"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"Ձայնը զանգերի ժամանակ"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Մեդիա և համակարգի ձայներ"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"Սովորական պատկեր"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR պատկեր"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"Այս կարգավորումը կիրառվում է միայն այն պատկերների և տեսանյութերի համար, որոնք աջակցում են Բարձր դինամիկական ընդգրկույթ (HDR) տեխնոլոգիան։"</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"Էկրանի սպիտակի բալանս"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"Շարունակել օգտագործել հավելվածները ծալված սարքում"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Օգտագործեք մուգ ֆոն՝ որոշ էկրանների վրա ձեր էկրանն ավելի հարմարավետ դարձնելու և մարտկոցի օգտագործումը նվազեցնելու համար։ Ձեր թեման կփոխվի, եթե ունեք ժամանակացույց, երբ էկրանն անջատված է։"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Մուգ թեման այժմ օգտագործվում է «Քնելու ժամ» ռեժիմի ժամանակացույցի համաձայն"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"«Քնելու ժամ» ռեժիմի կարգավորումներ"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Ռեժիմները կարող են նաև միացնել մուգ թեման։}=1{{mode_1} ռեժիմը նաև միացնում է մուգ թեման։}=2{{mode_1} և {mode_2} ռեժիմները նաև միացնում են մուգ թեման։}=3{{mode_1}, {mode_2} և {mode_3} ռեժիմները նաև միացնում են մուգ թեման։}one{{mode_1} և {mode_2} ռեժիմներն ու ևս # ռեժիմ նաև միացնում են մուգ թեման։}other{{mode_1} և {mode_2} ռեժիմներն ու ևս # ռեժիմ նաև միացնում են մուգ թեման}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{Ռեժիմները կարող են նաև միացնել մուգ թեման}=1{{mode_1} ռեժիմը նաև միացնում է մուգ թեման}=2{{mode_1} և {mode_2} ռեժիմները նաև միացնում են մուգ թեման}=3{{mode_1}, {mode_2} և {mode_3} ռեժիմները նաև միացնում են մուգ թեման}one{{mode_1} և {mode_2} ռեժիմներն ու ևս # ռեժիմ նաև միացնում են մուգ թեման}other{{mode_1} և {mode_2} ռեժիմներն ու ևս # ռեժիմ նաև միացնում են մուգ թեման}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Ռեժիմների կարգավորումներ"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Պայծառացրեք և ընդլայնեք գունային ընդգրկույթն ու պարզությունը Բարձր դինամիկական ընդգրկույթով (HDR) պատկերներում և տեսանյութերում։ HDR բովանդակությունն ավելի պայծառ կլինի։"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Էկրանի անջատում"</string>
@@ -2410,7 +2412,6 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Նավիգացիայի ռեժիմ, էկրանի պտտում"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Կարծիք հայտնել"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Մասնակցել հարցմանը"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Կապվել Google-ի՝ հատուկ կարիքներով անձանց աջակցման թիմի հետ"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Հարցում հասանելիության վերաբերյալ"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Հայտնեք ձեր կարծիքը"</string>
     <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
@@ -2589,10 +2590,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"Ժամադրոշմներ"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Ստանդարտ"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"Ստանդարտ մուգ թեմա"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Կիրառում է մուգ թեման համակարգում և աջակցվող հավելվածներում"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"Միացնում է մուգ թեման ձեր սարքում և հավելվածներում, որոնք աջակցում են այն։"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Ծավալված է"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"Ծավալված մուգ թեմա"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Ավտոմատ կերպով միացնում է մուգ թեման բոլոր հավելվածներում՝ հատուկ գործառույթները բարելավելու համար"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"Ավտոմատ միացնում է մուգ թեման գրեթե բոլոր հավելվածներում, որոնք չեն աջակցում այն։ Բարելավում է օգտագործումն ու ընթեռնելիությունը, սակայն կարող են սխալներ առաջանալ։"</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"ստիպողաբար գունաշրջել, գունաշրջում, կոնտրաստ"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Հեռացնել անիմացիաները"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Նվազեցնել շարժումն էկրանին"</string>
@@ -2694,8 +2695,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"Իմացեք ավելին գունաշտկման մասին"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"Գունաշրջում"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"Իմացեք ավելին գունաշրջման մասին"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"Իմանալ ավելին մուգ թեմայի մասին"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"Որոշ հավելվածներ կարող են չաջակցել մուգ թեման ընդլայնված տարբերակում։ Եթե ցուցադրման հետ կապված խնդիրներ են առաջացել, օգտագործեք կանխադրված տարբերակը։"</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"Իմանալ ավելին մուգ թեմայի մասին"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Ցույց տալ ենթագրերը"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"Միայն աջակցվող հավելվածի համար"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Ենթագրերի չափսը և ոճը"</string>
@@ -5574,7 +5574,7 @@
     <string name="category_name_color" msgid="937514550918977151">"Գույն"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"Էկրանի այլ կարգավորումներ"</string>
     <string name="category_name_general" msgid="7737273712848115886">"Ընդհանուր"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"Օգտագործել մուգ թեման"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"Օգտագործել մուգ թեման"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"Օգտագործել Bluetooth-ը"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"Օգտագործել բարելավված HDR պայծառությունը"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"Օգտագործել զանգի ձայնի անջատումը"</string>
@@ -5790,7 +5790,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Գաղտնաբառ"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Բարելավել համատեղելիությունը"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Օգնում է որոշ սարքերին (օր․՝ լսողական սարքերին) միանալ՝ նվազեցնելով ձայնի որակը"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"Անջատում է աուդիոյի փոխանցումը՝ համատեղելիությունը կազմաձևելու համար"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Լսեք մոտակայքում նվագարկվող աուդիո"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Աուդիոյի փոխանցումն աջակցում է Auracast™"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Աուդիո հոսքի անվանումը"</string>
@@ -5931,6 +5932,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Ջնջել PIN կոդը"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Ավելացրեք հաշվի վերականգնման հասցե"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Հաստատեք ձեր էլ․ հասցեն"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Կայքի բովանդակության զտիչներ"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Կայքերի զտիչներ, արգելափակել կայքեր, դիտարկիչի զտիչներ, արգելափակել մեծահասակների համար նախատեսված կայքերը, զտել կայքերը, արգելափակել որոնման արդյունքները, զտել մեծահասակների համար նախատեսված որոնման արդյունքները, բովանդակության սահմանափակումներ"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Օգնեք ձեր հեռախոսում զտել մեծահասակների համար նախատեսված բովանդակությունը որոշ հավելվածներում և դիտարկիչներում։ Մեծահասակների համար նախատեսված բովանդակությունը նախկինի պես կարող է ցուցադրվել այլ հավելվածներում, սարքերում և դիտարկիչներում։"</string>
@@ -5954,15 +5957,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Սխալ առաջացավ"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Փորձեք ավելի ուշ"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Վերադառնալ"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"Ինքնության ստուգումը հասանելի է ավելի շատ հավելվածներում"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Դուք կարող եք միացնել ինքնության ստուգումը բոլոր հավելվածներում, որոնք աջակցում են մատնահետքով կամ դեմքով ապակողպումը։"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Դիտել մանրամասները"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"Միացրեք ինքնության ստուգումը և պաշտպանեք տվյալներն այլ հավելվածներում"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"Եթե միացնեք ինքնության ստուգումը բոլոր հավելվածներում, որոնք աջակցում են մատնահետքով կամ դեմքով ապակողպումը, ձեր կարևոր տվյալները հուսալիորեն պաշտպանված կլինեն։ Բացի այդ, հավելվածներից ավելի հեշտությամբ կօգտվեք՝ առանց լրացուցիչ կարգավորումների։"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"Ինքնության ստուգումը հասանելի է ձեր ժամացույցում"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Կանխեք ուրիշների կողմից մատնահետքով կամ դեմքով ապակողպում պահանջող հավելվածների բացումը։ Ժամացույցին միացած լինելու դեպքում անվտանգությունն ավելի շատ շարժունակություն է ապահոովում։"</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Օգտագործեք ինքնության ստուգումը և ժամացույցն ավելի շատ հավելվածներում"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Միացրեք ինքնության ստուգումը բոլոր հավելվածներում, որոնք աջակցում են մատնահետքով կամ դեմքով ապակողպումը վստահելի վայրերում, օրինակ՝ ձեր տանը կամ աշխատավայրում։ Օգտագործեք ինքնության ստուգումը ձեր ժամացույցի միջոցով՝ ընդլայնելու պաշտպանությունը վստահելի սարքերից դուրս։"</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"Այլ կարգավորումներ"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"Ինքնալրացում, ծանուցումներ և ավելին"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"Գաղտնիության կարգավորումներ"</string>

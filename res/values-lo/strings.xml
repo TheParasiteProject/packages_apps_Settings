@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"ກ່ຽວກັບເອົ້າພຸດສຽງ"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"ກຳນົດເສັ້ນທາງສຽງໄປຫາອຸປະກອນຊ່ວຍຟັງ ຫຼື ລຳໂພງໂທລະສັບຂອງທ່ານ"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"ກ່ຽວຂ້ອງກັນ"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"ສົ່ງໄດ້ໄວຂຶ້ນດ້ວຍ <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"ວິທີທີ່ໄວທີ່ສຸດໃນການແບ່ງປັນກັບ Android ແລະ PC ທີ່ຢູ່ໃກ້ຄຽງ, ລອງໃຊ້ <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ສຳລັບ Windows"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"ສົ່ງໄດ້ໄວຂຶ້ນດ້ວຍ <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"ວິທີທີ່ໄວທີ່ສຸດໃນການແບ່ງປັນກັບ Android ແລະ PC ທີ່ຢູ່ໃກ້ຄຽງ, ລອງໃຊ້ <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ສຳລັບ Windows"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"ສຽງຣິງໂທນ ແລະ ການປຸກ"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"ສຽງໃນລະຫວ່າງການໂທ"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"ສຽງມີເດຍ ແລະ ລະບົບ"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"ຮູບມາດຕະຖານ"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"ຮູບ HDR"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"ການຕັ້ງຄ່ານີ້ມີຜົນກະທົບກັບຮູບ ແລະ ວິດີໂອທີ່ຮອງຮັບຂອບ​ເຂດ​ໄດ​ນາ​ມິກ​ສູງ (HDR) ເທົ່ານັ້ນ."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"ສະແດງສົມດຸນສີຂາວ"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"ສືບຕໍ່ໃຊ້ແອັບເມື່ອພັບຢູ່"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"ໃຊ້ພາບພື້ນຫຼັງມືດເພື່ອເຮັດໃຫ້ໜ້າຈໍຂອງທ່ານເບິ່ງສະດວກສະບາຍຍິ່ງຂຶ້ນ ແລະ ຫຼຸດການໃຊ້ແບັດເຕີຣີຢູ່ບາງໜ້າຈໍ. ຮູບແບບສີສັນຂອງທ່ານຈະປ່ຽນຫາກທ່ານມີກຳນົດເວລາ, ເມື່ອໜ້າຈໍປິດ."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"ຕອນນີ້ຮູບແບບສີສັນມືດກຳລັງປະຕິບັດຕາມກຳນົດເວລາໂໝດເວລານອນຂອງທ່ານ"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"ການຕັ້ງຄ່າໂໝດເວລານອນ"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{ໂໝດຍັງສາມາດເປີດໃຊ້ຮູບແບບສີສັນມືດໄດ້ນຳ.}=1{{mode_1} ຍັງສາມາດເປີດໃຊ້ຮູບແບບສີສັນມືດໄດ້ນຳ.}=2{{mode_1} ແລະ {mode_2} ຍັງສາມາດເປີດໃຊ້ຮູບແບບສີສັນມືດໄດ້ນຳ.}=3{{mode_1}, {mode_2} ແລະ {mode_3} ຍັງສາມາດເປີດໃຊ້ຮູບແບບສີສັນມືດໄດ້ນຳ.}other{{mode_1}, {mode_2} ແລະ ອີກ # ໂໝດຍັງສາມາດເປີດໃຊ້ຮູບແບບສີສັນມືດໄດ້ນຳ.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{ໂໝດຍັງສາມາດເປີດໃຊ້ຮູບແບບສີສັນມືດໄດ້ນຳ}=1{{mode_1} ຍັງສາມາດເປີດໃຊ້ຮູບແບບສີສັນມືດໄດ້ນຳ}=2{{mode_1} ແລະ {mode_2} ຍັງສາມາດເປີດໃຊ້ຮູບແບບສີສັນມືດໄດ້ນຳ}=3{{mode_1}, {mode_2} ແລະ {mode_3} ຍັງສາມາດເປີດໃຊ້ຮູບແບບສີສັນມືດໄດ້ນຳ}other{{mode_1}, {mode_2} ແລະ ອີກ # ໂໝດຍັງສາມາດເປີດໃຊ້ຮູບແບບສີສັນມືດໄດ້ນຳ}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"ການຕັ້ງຄ່າໂໝດ"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"ເພີ່ມຄວາມສະຫວ່າງ ແລະ ຂະຫຍາຍໄລຍະສີ ແລະ ຄວາມຄົມຊັດໃນຮູບພາບ ແລະ ວິດີໂອທີ່ມີຂອບ​ເຂດ​ໄດ​ນາ​ມິກ​ສູງ (HDR). ເນື້ອຫາ HDR ຈະປາກົດແຈ້ງຂຶ້ນ."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"ໄລຍະໝົດເວລາໜ້າຈໍ"</string>
@@ -2410,11 +2412,9 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"ໂໝດການນຳທາງ, ການໝຸນໜ້າຈໍ"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"ສົ່ງຄຳຕິຊົມ"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"ເຮັດແບບສຳຫຼວດ"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອຄົນພິການຂອງ Google"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"ແບບສຳຫຼວດກ່ຽວກັບການຊ່ວຍເຂົ້າເຖິງ"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"ແບ່ງປັນຄຳຕິຊົມຂອງທ່ານ"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"ທ່ານພໍໃຈກັບຮູບແບບສີສັນມືດຫຼາຍໜ້ອຍປານໃດ?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"ເຮັດແບບສຳຫຼວດ"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"ແບ່ງປັນຄຳຕິຊົມຂອງທ່ານ"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"ທ່ານພໍໃຈກັບການຂະຫຍາຍຫຼາຍໜ້ອຍເທົ່າໃດ?"</string>
@@ -2589,10 +2589,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"ຊ່ວງເວລາ"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"ມາດຕະຖານ"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"ຮູບແບບສີສັນມືດມາດຕະຖານ"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"ນຳໃຊ້ຮູບແບບສີສັນມືດໃນທົ່ວອຸປະກອນຂອງທ່ານ ແລະ ແອັບທີ່ຮອງຮັບ"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"ເປີດໃຊ້ຮູບແບບສີສັນມືດສຳລັບອຸປະກອນ ແລະ ແອັບຂອງທ່ານທີ່ຮອງຮັບຮູບແບບສີສັນມືດ"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"ຂະຫຍາຍແລ້ວ"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"ຮູບແບບສີສັນມືດແບບຂະຫຍາຍ"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"ນຳໃຊ້ຮູບແບບສີສັນມືດໂດຍອັດຕະໂນມັດກັບແອັບເພີ່ມເຕີມເພື່ອການຊ່ວຍເຂົ້າເຖິງທີ່ປັບປຸງແລ້ວ"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"ນຳໃຊ້ຮູບແບບສີສັນມືດກັບແອັບສ່ວນໃຫຍ່ທີ່ບໍ່ຮອງຮັບໂດຍອັດຕະໂນມັດ. ເຊິ່ງນີ້ຈະຊ່ວຍໃຫ້ເຂົ້າເຖິງ ແລະ ອ່ານເນື້ອຫາໄດ້ງ່າຍຂຶ້ນ, ແຕ່ກໍອາດເຮັດໃຫ້ບາງແອັບສະແດງຜົນບໍ່ຖືກຕ້ອງ."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"ບັງຄັບໃຫ້ປີ້ນສີ, ການປີ້ນສີ, ຄອນທຣາສ"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"ລຶບການເຄື່ອນໄຫວອອກ"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"ຫຼຸດການເຄື່ອນໄຫວຢູ່ໜ້າຈໍ"</string>
@@ -2694,8 +2694,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"ສຶກສາເພີ່ມເຕີມກ່ຽວກັບການແກ້ໄຂສີ"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"ກ່ຽວກັບການປີ້ນສີ"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"ສຶກສາເພີ່ມເຕີມກ່ຽວກັບການປີ້ນສີ"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຮູບແບບສີສັນມືດ"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"ບາງແອັບອາດບໍ່ຮອງຮັບຮູບແບບສີສັນມືດເມື່ອຂະຫຍາຍຕົວເລືອກແລ້ວ. ຫາກທ່ານພົບບັນຫາກ່ຽວກັບລັກສະນະທີ່ປາກົດ, ໃຫ້ໃຊ້ຕົວເລືອກມາດຕະຖານ."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຮູບແບບສີສັນມືດ"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"ສະແດງຄຳບັນຍາຍ"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"ສຳລັບແອັບທີ່ຮອງຮັບເທົ່ານັ້ນ"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"ຂະໜາດ ແລະ ຮູບແບບຄຳບັນຍາຍ"</string>
@@ -5574,7 +5573,7 @@
     <string name="category_name_color" msgid="937514550918977151">"ສີ"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"ການຄວບຄຸມການສະແດງຜົນອື່ນໆ"</string>
     <string name="category_name_general" msgid="7737273712848115886">"ທົ່ວໄປ"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"ໃຊ້ຮູບແບບສີສັນມືດ"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"ໃຊ້ຮູບແບບສີສັນມືດ"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"ໃຊ້ Bluetooth"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"ໃຊ້ຄວາມແຈ້ງ HDR ທີ່ປັບປຸງໃຫ້ດີຂຶ້ນ"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"ໃຊ້ການປ້ອງກັນການສົ່ງສຽງ"</string>
@@ -5790,7 +5789,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"ລະຫັດຜ່ານ"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"ປັບປຸງຄວາມເຂົ້າກັນໄດ້"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"ຊ່ວຍໃຫ້ອຸປະກອນບາງຢ່າງ ເຊັ່ນ: ເຄື່ອງຊ່ວຍຟັງ, ເຊື່ອມຕໍ່ໂດຍການຫຼຸດຄຸນນະພາບສຽງ"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"ປິດການແບ່ງປັນສຽງເພື່ອຕັ້ງຄ່າຄວາມເຂົ້າກັນໄດ້"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"ຟັງສຽງໃກ້ຄຽງ"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"ການແບ່ງປັນສຽງຮອງຮັບ Auracast™"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"ຊື່ສະຕຣີມສຽງ"</string>
@@ -5931,6 +5931,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"ລຶບ PIN"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"ເພີ່ມອີເມວກູ້ຂໍ້ມູນ"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"ຢັ້ງຢືນອີເມວຂອງທ່ານ"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"ຕົວກັ່ນຕອງເນື້ອຫາເວັບໄຊ"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"ຕົວກັ່ນຕອງເວັບໄຊ, ບລັອກເວັບໄຊ, ຕົວກັ່ນຕອງໂປຣແກຣມທ່ອງເວັບ, ບລັອກເວັບໄຊທີ່ອາດບໍ່ເໝາະສົມ, ກັ່ນຕອງເວັບໄຊ, ບລັອກຜົນການຊອກຫາ, ກັ່ນຕອງຜົນການຊອກຫາທີ່ອາດບໍ່ເໝາະສົມ, ການຈຳກັດເນື້ອຫາ"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"ຊ່ວຍກັ່ນຕອງເນື້ອຫາທີ່ບໍ່ເໝາະສົມຢູ່ແອັບ ແລະ ໂປຣແກຣມທ່ອງເວັບບາງລາຍການໃນໂທລະສັບເຄື່ອງນີ້. ເນື້ອຫາທີ່ບໍ່ເໝາະສົມອາດຍັງຄົງສະແດງຢູ່ແອັບ, ອຸປະກອນ ຫຼື ໂປຣແກຣມທ່ອງເວັບອື່ນໆ."</string>
@@ -5954,15 +5956,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"ມີບາງຢ່າງຜິດພາດເກີດຂຶ້ນ"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"ກະລຸນາລອງໃໝ່ໃນພາຍຫຼັງ"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"ກັບຄືນ"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"ການກວດສອບຕົວຕົນພ້ອມນຳໃຊ້ໃນແອັບອື່ນໆ"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"ທ່ານສາມາດຮັກສາຄວາມປອດໄພຂອງການປົກປ້ອງຕົວຕົນຂອງທ່ານໃນແອັບໃດກໍໄດ້ທີ່ມີການປົດລັອກດ້ວຍລາຍນິ້ວມື ຫຼື ການປົດລັອກດ້ວຍໜ້າເພື່ອລະບຸຕົວຕົນຂອງທ່ານ"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"ເບິ່ງລາຍລະອຽດ"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"ໃຊ້ການກວດສອບຕົວຕົນເພື່ອຮັກສາຄວາມປອດໄພຂອງແອັບເພີ່ມເຕີມ"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"ເມື່ອທ່ານໃຊ້ການກວດສອບຕົວຕົນສຳລັບແອັບທັງໝົດທີ່ຮອງຮັບການປົດລັອກດ້ວຍລາຍນິ້ວມື ແລະ ການປົດລັອກດ້ວຍໜ້າ, ທ່ານຈະໝັ້ນໃຈໄດ້ເຖິງການປົກປ້ອງທີ່ແຂງແກ່ນຍິ່ງຂຶ້ນ ແລະ ປະສົບການໃນການນຳໃຊ້ທີ່ສະໝ່ຳສະເໝີຫຼາຍຂຶ້ນ – ໂດຍບໍ່ຕ້ອງຕັ້ງຄ່າເພີ່ມເຕີມ"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"ການກວດສອບຕົວຕົນເຮັດວຽກໄດ້ກັບໂມງຂອງທ່ານ"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"ປ້ອງກັນບໍ່ໃຫ້ຄົນອື່ນເປີດແອັບທີ່ຕ້ອງໃຊ້ການປົດລັອກດ້ວຍລາຍນິ້ວມື ຫຼື ປົດລັອກດ້ວຍໜ້າ. ເມື່ອເຊື່ອມຕໍ່ໂມງຂອງທ່ານແລ້ວ, ທ່ານຈະໝັ້ນໃຈໄດ້ໃນຄວາມປອດໄພພ້ອມກັບຄວາມຄ່ອງຕົວທີ່ຫຼາຍຂຶ້ນ."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"ໃຊ້ການກວດສອບຕົວຕົນ ແລະ ໂມງຢູ່ແອັບເພີ່ມເຕີມ"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"ຮັບຮອງການປົກປ້ອງຕົວຕົນຂອງທ່ານຢູ່ແອັບທັງໝົດທີ່ຮອງຮັບລາຍນິ້ວມື ແລະ ການປົດລັອກດ້ວຍໜ້າໃນສະຖານທີ່ທີ່ເຊື່ອຖືໄດ້ ເຊັ່ນ: ເຮືອນ ຫຼື ຫ້ອງການຂອງທ່ານ. ໃຊ້ການກວດສອບຕົວຕົນກັບໂມງຂອງທ່ານເພື່ອເພີ່ມການປົກປ້ອງໃຫ້ເກີນກວ່າສະຖານທີ່ທີ່ເຊື່ອຖືໄດ້."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"ການຕັ້ງຄ່າອື່ນໆ"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"ການຕື່ມຂໍ້ມູນອັດຕະໂນມັດ, ການແຈ້ງເຕືອນ ແລະ ອື່ນໆ"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"ການຄວບຄຸມຄວາມເປັນສ່ວນຕົວ"</string>

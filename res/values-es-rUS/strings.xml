@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"Info. sobre salida de audio"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Enruta sonidos a tu dispositivo auditivo o bocina del teléfono"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Relacionado"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"Envía más rápido con <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"Para compartir contenido con Android y PCs cercanas, prueba <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> para Windows"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"Envía más rápido con <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"Para compartir contenido con Android y PCs cercanas, prueba <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> para Windows"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Tono y alarmas"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"Audio durante las llamadas"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Sonidos del sist. y multimedia"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"Imagen estándar"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"Imagen HDR"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"Este parámetro de configuración solo afecta a las imágenes y los videos que admiten alto rango dinámico (HDR)."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"Mostrar balance de blancos"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"Continuar usando apps con el dispositivo plegado"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Usa un fondo oscuro para que la pantalla sea más fácil de ver y reducir el uso de batería en algunas pantallas. El tema cambiará si tienes un programa, cuando la pantalla está apagada."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"El tema oscuro se activa o desactiva a partir del horario para dormir"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Configuración del Modo hora de dormir"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Los modos también pueden activar el tema oscuro.}=1{{mode_1} también activa el tema oscuro.}=2{{mode_1} y {mode_2} también activan el tema oscuro.}=3{{mode_1}, {mode_2} y {mode_3} también activan el tema oscuro.}other{{mode_1}, {mode_2} y # más también activan el tema oscuro.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{Los modos también pueden activar el tema oscuro}=1{{mode_1} también activa el tema oscuro}=2{{mode_1} y {mode_2} también activan el tema oscuro}=3{{mode_1}, {mode_2} y {mode_3} también activan el tema oscuro}other{{mode_1}, {mode_2} y # más también activan el tema oscuro}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Configuración de los modos"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Aumenta el brillo y expande el rango de color y la claridad de las imágenes y los videos con alto rango dinámico (HDR). El contenido HDR se verá más brillante."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Tiempo de espera de la pantalla"</string>
@@ -2410,7 +2412,6 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Modo de navegación, rotación de pantalla"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Enviar comentarios"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Completar la encuesta"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Comunícate con la Asistencia de Google para Personas con Discapacidad"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Encuesta sobre accesibilidad"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Comparte tus comentarios"</string>
     <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
@@ -2589,10 +2590,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"Horarios"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Estándar"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"Tema oscuro estándar"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Aplica el tema oscuro en el dispositivo y las apps compatibles"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"Activa el tema oscuro para tu dispositivo y las apps que lo admiten"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Expandido"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"Tema oscuro expandido"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Aplica automáticamente el tema oscuro a más apps para mejorar la accesibilidad"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"Aplica automáticamente el tema oscuro a la mayoría de las apps que no lo admiten. Esto puede mejorar la accesibilidad y la legibilidad, pero es posible que algunas apps se muestren de forma incorrecta."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"forzar inversión, inversión de colores, contraste"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Quitar animaciones"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Reduce el movimiento de la pantalla"</string>
@@ -2694,8 +2695,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"Más información sobre la corrección de colores"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"Acerca de la inversión de colores"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"Más información sobre la inversión de colores"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"Más información sobre el tema oscuro"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"Es posible que algunas apps no sean compatibles con el tema oscuro expandido. Si tienes problemas con la apariencia, usa la opción estándar."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"Más información sobre el tema oscuro"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Mostrar subtítulos"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"Solo para apps compatibles"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Tamaño y estilo de los subtítulos"</string>
@@ -5574,7 +5574,7 @@
     <string name="category_name_color" msgid="937514550918977151">"Color"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"Otros controles de pantalla"</string>
     <string name="category_name_general" msgid="7737273712848115886">"General"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"Usar tema oscuro"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"Usar tema oscuro"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"Usar Bluetooth"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"Usar brillo HDR mejorado"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"Usar Silenciar sonidos"</string>
@@ -5790,7 +5790,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Contraseña"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Mejorar compatibilidad"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Reduce la calidad de audio para permitir que algunos dispositivos, como audífonos, puedan conectarse"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"Desactiva el uso compartido de audio para configurar la compatibilidad"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Escucha audio cercano"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"El uso compartido de audio admite Auracast™"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Nombre de la reproducción de audio"</string>
@@ -5931,6 +5932,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Borrar PIN"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Agrega un correo de recuperación"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Verifica tu correo electrónico"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Filtros de contenido de sitios web"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Filtros de sitios web, Bloquear sitios, Filtros del navegador, Bloquear sitios explícitos, Filtrar sitios, Bloquear resultados de la búsqueda, Filtrar resultados de la búsqueda explícitos, restricciones de contenido"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Ayuda a filtrar contenido explícito en algunos navegadores y apps de este teléfono. Es posible que el contenido explícito se siga mostrando en otras apps, dispositivos o navegadores."</string>
@@ -5954,15 +5957,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Se produjo un error"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Vuelve a intentarlo más tarde"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Atrás"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"Verificación de identidad está disponible en más apps"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Puedes proteger tu identidad en cualquier app que ofrezca el Desbloqueo facial o con huellas dactilares para identificarte"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Ver detalles"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"Usa Verificación de identidad para proteger más apps"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"Cuando usas Verificación de identidad en todas las apps que admiten el Desbloqueo con huellas dactilares y el Desbloqueo facial, garantizas una protección más sólida y una experiencia más coherente, sin necesidad de realizar una configuración adicional"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"La Verificación de identidad funciona con tu reloj"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Impide que otras personas abran apps que requieren el Desbloqueo con huellas dactilares y el Desbloqueo facial. Cuando está conectada a tu reloj, tu seguridad está garantizada con mayor movilidad."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Usa la Verificación de identidad y el reloj en más apps"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Protege tu identidad en todas las apps que admiten el Desbloqueo con huellas dactilares y el Desbloqueo facial en lugares de confianza, como tu casa o tu oficina. Usa la Verificación de identidad con tu reloj para extender tu protección incluso más allá de los lugares de confianza."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"Otros parámetros de configuración"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"Autocompletar, notificaciones y más"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"Controles de privacidad"</string>

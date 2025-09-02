@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"音频输出简介"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"将声音路由到助听装置或手机扬声器"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"相关工具"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"使用“<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>”更快地发送内容"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"要想以最快方式与附近的 Android 设备和 PC 分享内容，请尝试使用 Windows 版“<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>”"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"使用“<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>”更快地发送内容"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"要想以最快方式与附近的 Android 设备和 PC 分享内容，请尝试使用 Windows 版“<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>”"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"铃声和闹钟"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"通话期间的音频"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"媒体和系统提示音"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"标准图片"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR 图片"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"此设置仅会影响支持高动态范围 (HDR) 的图片和视频。"</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"显示屏白平衡"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"折叠时继续使用应用"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"深色背景能够带来更舒适的屏幕观看体验，同时还能降低部分屏幕的电池用量。如果您设置了时间表，屏幕关闭时主题就会发生变化。"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"深色主题目前会按照睡眠模式时间表开启/关闭"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"睡眠模式设置"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{某些模式也可以开启深色主题。}=1{“{mode_1}”也会开启深色主题。}=2{“{mode_1}”和“{mode_2}”也会开启深色主题。}=3{“{mode_1}”“{mode_2}”和“{mode_3}”也会开启深色主题。}other{“{mode_1}”“{mode_2}”和另外 # 种模式也会开启深色主题。}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{某些模式也可以开启深色主题}=1{“{mode_1}”也会开启深色主题}=2{“{mode_1}”和“{mode_2}”也会开启深色主题}=3{“{mode_1}”“{mode_2}”和“{mode_3}”也会开启深色主题}other{“{mode_1}”“{mode_2}”和另外 # 种模式也会开启深色主题}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"模式设置"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"为高动态范围 (HDR) 图片和视频增强亮度、扩展颜色范围并提高清晰度。HDR 内容会看起来更明亮。"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"自动熄屏"</string>
@@ -2410,11 +2412,9 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"导航模式，屏幕旋转"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"发送反馈"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"填写调查问卷"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"联系 Google 残障人士支持团队"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"无障碍功能调查问卷"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"分享反馈"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"您对深色主题的满意度如何？"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"填写问卷"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"分享反馈"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"您对放大功能的满意度如何？"</string>
@@ -2589,10 +2589,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"时间"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"标准"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"标准版深色主题"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"在您的设备和支持的应用中应用深色主题"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"为支持深色主题的设备和应用开启深色主题"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"扩展版"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"扩展版深色主题"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"自动将深色主题应用于更多应用，改善无障碍功能"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"自动将深色主题应用于大多数不支持深色主题的应用。这样做可以提升无障碍体验和可读性，但可能会导致某些应用无法正常显示。"</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"强制反转、颜色反转、对比"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"移除动画"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"减少屏幕动画"</string>
@@ -2694,8 +2694,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"详细了解色彩校正"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"关于颜色反转"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"详细了解颜色反转"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"详细了解深色主题"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"部分应用可能不支持扩展版深色主题。如果遇到外观方面的问题，请使用标准版。"</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"详细了解深色主题"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"显示字幕"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"仅限支持的应用"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"字幕大小和样式"</string>
@@ -5574,7 +5573,7 @@
     <string name="category_name_color" msgid="937514550918977151">"颜色"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"其他显示控件"</string>
     <string name="category_name_general" msgid="7737273712848115886">"常规"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"启用深色主题"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"使用深色主题"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"启用蓝牙"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"启用 HDR 亮度增强"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"使用“阻止响铃”"</string>
@@ -5626,8 +5625,8 @@
     <string name="uwb_settings_summary_airplane_mode" msgid="1328864888135086484">"会关闭飞行模式，以使用超宽带 (UWB)"</string>
     <string name="uwb_settings_summary_no_uwb_regulatory" msgid="3465456428217979428">"UWB 在当前位置不可用"</string>
     <string name="thread_network_settings_title" msgid="4212301030523859220">"Thread"</string>
-    <string name="thread_network_settings_main_switch_title" msgid="3859168481929323474">"使用 Thread"</string>
-    <string name="thread_network_settings_footer_title" msgid="7385600318850220927">"Thread 可连接智能家居设备，从而提升效率和性能。\n\n启用此设置后，这部设备便可以加入 Thread 网络，这样你就能通过这部手机控制支持 Matter 的设备。"</string>
+    <string name="thread_network_settings_main_switch_title" msgid="3859168481929323474">"启用 Thread"</string>
+    <string name="thread_network_settings_footer_title" msgid="7385600318850220927">"Thread 有助于连接智能家居设备，从而提升效率和性能。\n\n启用此设置后，此手机便可加入 Thread 网络，可用于控制支持 Matter 的设备。"</string>
     <string name="thread_network_settings_learn_more" msgid="8278498005848565050">"详细了解 Thread"</string>
     <string name="camera_toggle_title" msgid="8952668677727244992">"相机权限"</string>
     <string name="mic_toggle_title" msgid="265145278323852547">"麦克风权限"</string>
@@ -5790,7 +5789,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"密码"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"提高兼容性"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"通过降低音频质量，帮助某些设备（如助听器）进行连接。"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"关闭“音频分享”功能以配置兼容性"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"收听附近的音频"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"“音频分享”功能支持 Auracast™"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"音频流名称"</string>
@@ -5931,6 +5931,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"删除 PIN 码"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"添加辅助邮箱"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"验证您的邮箱"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"网站内容过滤器"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"网站过滤器, 屏蔽网站, 浏览器过滤器, 屏蔽含露骨内容的网站, 过滤网站, 屏蔽搜索结果, 过滤含露骨内容的搜索结果, 内容限制, Website filters, Block sites, Browser filters, Block explicit sites, Filter sites, Block search results, Filter explicit search results, content restrictions"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"帮助滤除此手机上某些应用和浏览器中的露骨内容。其他应用、设备或浏览器中仍可能会显示此类内容。"</string>
@@ -5954,15 +5956,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"出了点问题"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"请稍后重试"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"返回"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"更多应用现已支持身份检查功能"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"您可以通过支持指纹或人脸解锁功能的任意应用，安全地进行身份验证，保护个人身份信息"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"查看详情"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"使用身份检查，保护更多应用"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"在所有支持指纹和人脸解锁功能的应用上使用身份检查功能，无需额外设置即可获得更强大的保护和更一致的体验"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"“身份检查”可与手表搭配使用"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"防止他人打开需要使用“指纹解锁”或“人脸解锁”的应用。连接手表后，您便可随时随地享受身份保护。"</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"在更多应用内使用“身份检查”与手表"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"在住宅或办公室等可信地点，“身份检查”可通过所有支持“指纹解锁”和“人脸解锁”的应用确保您的身份安全。如果将“身份检查”与手表搭配使用，即使您位于可信地点之外也能获享身份保护。"</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"其他设置"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"自动填充、通知等"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"隐私控制"</string>

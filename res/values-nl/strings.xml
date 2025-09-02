@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"Over audio-uitvoer"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Leid geluiden naar je hoortoestel of telefoonspeaker"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Gerelateerd"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"Sneller sturen met <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"Probeer <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> voor Windows voor de snelste manier om te delen met Android-apparaten en pc\'s in de buurt"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"Sneller sturen met <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"Probeer <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> voor Windows voor de snelste manier om te delen met Android-apparaten en pc\'s in de buurt"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Ringtone en wekkers"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"Audio tijdens gesprekken"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Media- en systeemgeluiden"</string>
@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Nieuwe instellingen gebruiken?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Als je scherm niet werkt zoals je wilt, kun je teruggaan naar je vorige instellingen"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Instellingen gebruiken"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"Scherm: %1$s. Dubbeltik en houd vast om te slepen of bekijk acties om te verplaatsen."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"Omhoog verplaatsen"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"Omlaag verplaatsen"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"Naar links verplaatsen"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"Naar rechts verplaatsen"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"mirroren"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Draadloze weergave aanzetten"</string>
@@ -1412,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"Standaardafbeelding"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR-afbeelding"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"Deze instelling heeft alleen invloed op afbeeldingen en video\'s die High Dynamic Range (HDR) ondersteunen."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"Witbalans van scherm"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"Apps blijven gebruiken bij dichtvouwen"</string>
@@ -1479,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Gebruik een donkere achtergrond om je scherm beter leesbaar te maken en het batterijgebruik te verminderen op bepaalde schermen. Je thema wordt gewijzigd als je een schema hebt en het scherm uitstaat."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Het donkere thema volgt op dit moment je schema voor de Bedtijdmodus"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Instellingen voor Bedtijdmodus"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Modi kunnen ook het donkere thema aanzetten.}=1{{mode_1} zet ook het donkere thema aan.}=2{{mode_1} en {mode_2} zetten ook het donkere thema aan.}=3{{mode_1}, {mode_2} en {mode_3} zetten ook het donkere thema aan.}other{{mode_1}, {mode_2} en nog # zetten ook het donkere thema aan.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{Modi kunnen ook het donkere thema aanzetten}=1{{mode_1} zet ook het donkere thema aan}=2{{mode_1} en {mode_2} zetten ook het donkere thema aan}=3{{mode_1}, {mode_2} en {mode_3} zetten ook het donkere thema aan}other{{mode_1}, {mode_2} en nog # zetten ook het donkere thema aan.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Instellingen voor modi"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Je kunt het kleurbereik en de helderheid van High Dynamic Range (HDR)-beelden en -video\'s vergroten en uitbreiden. HDR-content wordt helderder weergegeven."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Time-out voor scherm"</string>
@@ -2415,11 +2412,9 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Navigatiemodus, schermrotatie"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Feedback sturen"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Enquête invullen"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Contact opnemen met Google-supportteam voor gebruikers met een beperking"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Enquête over toegankelijkheid"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Je feedback delen"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"Hoe tevreden ben je met het donkere thema?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Enquête invullen"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Je feedback delen"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Hoe tevreden ben je over de vergroting?"</string>
@@ -2594,10 +2589,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"Timing"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Standaard"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"Standaard donker thema"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Het donkere thema wordt toegepast op je apparaat en ondersteunde apps"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"Zet het donkere thema aan voor je apparaat en apps die het donkere thema ondersteunen"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Uitgebreid"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"Uitgebreid donker thema"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Het donkere thema wordt automatisch toegepast op meer apps voor betere toegankelijkheid"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"Past automatisch het donkere thema toe op de meeste apps die dit niet ondersteunen. Dit kan de toegankelijkheid en leesbaarheid verbeteren, maar kan ertoe leiden dat sommige apps niet correct worden getoond."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"inversie afdwingen, kleurinversie, contrast"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Animaties verwijderen"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Minder beweging op het scherm"</string>
@@ -2699,8 +2694,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"Meer informatie over kleurcorrectie"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"Over kleurinversie"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"Meer informatie over kleurinversie"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"Meer informatie over het donkere thema"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"Sommige apps ondersteunen het donkere thema misschien niet met de uitgebreide optie. Als je problemen met de weergave hebt, gebruik je de standaardoptie."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"Meer informatie over het donkere thema"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Ondertiteling tonen"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"Alleen voor ondersteunde apps"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Grootte en stijl van ondertiteling"</string>
@@ -5579,7 +5573,7 @@
     <string name="category_name_color" msgid="937514550918977151">"Kleur"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"Andere weergaveopties"</string>
     <string name="category_name_general" msgid="7737273712848115886">"Algemeen"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"Donker thema gebruiken"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"Donker thema gebruiken"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"Bluetooth gebruiken"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"Verbeterde HDR-helderheid gebruiken"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"Ringtone uitzetten gebruiken"</string>
@@ -5795,7 +5789,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Wachtwoord"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Compatibiliteit verbeteren"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Dit helpt sommige apparaten, zoals hoortoestellen, verbinding te maken door de audiokwaliteit te verminderen"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"Het delen van audio wordt uitgezet om de compatibiliteit in te stellen"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Luisteren naar audio in de buurt"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Audio delen ondersteunt Auracast™"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Naam van audiostream"</string>
@@ -5936,6 +5931,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Pincode verwijderen"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Herstelmailadres toevoegen"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Je e-mailadres laten verifiëren"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Contentfilters voor websites"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Websitefilters, Sites blokkeren, Browserfilters, Expliciete sites blokkeren, Sites filteren, Zoekresultaten blokkeren, Expliciete zoekresultaten filteren, Contentbeperkingen"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Help expliciete content te filteren in bepaalde apps en browsers op deze telefoon. Expliciete content kan nog steeds worden getoond in andere apps, op andere apparaten of in andere browsers."</string>
@@ -5956,21 +5953,26 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Er is een fout opgetreden bij het verwijderen van de pincode."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Animatie voor <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Kan bedieningselementen niet aanzetten"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Er ging iets mis"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Probeer het later opnieuw"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Terug"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"Identiteitscontrole is beschikbaar in meer apps"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Je kunt je identiteit beveiligen in elke app die Ontgrendelen met vingerafdruk of Ontgrendelen via gezichtsherkenning biedt om je te identificeren"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Details bekijken"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"Gebruik Identiteitscontrole om meer apps te beveiligen"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"Als je Identiteitscontrole gebruikt voor alle apps die Ontgrendelen met vingerafdruk en Ontgrendelen via gezichtsherkenning ondersteunen, zorg je voor betere beveiliging en een consistentere functionaliteit, zonder extra instellingen"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"Identiteitscontrole werkt met je smartwatch"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Voorkom dat anderen apps openen die Ontgrendelen met vingerafdruk of Ontgrendelen via gezichtsherkenning vereisen. Als je verbonden bent met je smartwatch, is je beveiliging gewaarborgd met meer mobiliteit."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Gebruik Identiteitscontrole en je smartwatch met meer apps"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Zorg dat je identiteit beschermd blijft in alle apps die Ontgrendelen met vingerafdruk en Ontgrendelen via gezichtsherkenning ondersteunen op veilige plaatsen zoals je huis of kantoor. Gebruik Identiteitscontrole met je smartwatch om je bescherming uit te breiden, zelfs als je niet op een veilige plaats bent."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"Overige instellingen"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"Automatisch invullen, meldingen en meer"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"Privacyopties"</string>

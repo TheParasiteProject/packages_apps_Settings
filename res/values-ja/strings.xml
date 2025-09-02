@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"音声出力について"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"補聴器またはスマートフォンのスピーカーに音を転送します"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"関連ツール"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>ですばやく送信"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"近くの Android デバイスや PC とすばやく共有するには、Windows の<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>をお試しください"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>ですばやく送信"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"近くの Android デバイスや PC とすばやく共有するには、Windows の<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>をお試しください"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"着信音とアラーム"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"通話中の音声"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"メディア、システム音"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"標準画像"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR 画像"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"この設定は、ハイ ダイナミック レンジ（HDR）に対応している画像と動画にのみ適用されます。"</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"ディスプレイのホワイト バランス"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"折りたたみ時もアプリの使用を継続"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"一部の画面で暗い背景を使用することで、目に優しい表示になり、バッテリーの使用量を減らせます。スケジュールを設定すると、画面が OFF のときにテーマが変更されます。"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"ダークモードは現在、おやすみ時間モードのスケジュールに合わせた設定になっています"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"おやすみ時間モードの設定"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{モードを設定すると、ダークモードも ON になる場合があります。}=1{{mode_1} に設定すると、ダークモードも ON になります。}=2{{mode_1} と {mode_2} に設定すると、ダークモードも ON になります。}=3{{mode_1}、{mode_2}、{mode_3} に設定すると、ダークモードも ON になります。}other{{mode_1}、{mode_2}、他 # 個のモードに設定すると、ダークモードも ON になります。}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{モードを設定すると、ダークモードも ON になる場合があります}=1{{mode_1} に設定すると、ダークモードも ON になります}=2{{mode_1} と {mode_2} に設定すると、ダークモードも ON になります}=3{{mode_1}、{mode_2}、{mode_3} に設定すると、ダークモードも ON になります}other{{mode_1}、{mode_2}、他 # 個のモードに設定すると、ダークモードも ON になります}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"モードの設定"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"ハイ ダイナミック レンジ（HDR）の画像や動画の明るさを補正し、色範囲を広げ、より鮮明にできます。HDR コンテンツがより明るく表示されます。"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"画面自動消灯"</string>
@@ -2410,11 +2412,9 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"ナビゲーション モード、画面の回転"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"フィードバックを送信"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"アンケートに回答"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google Disability Support への問い合わせ"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"ユーザー補助に関するアンケート"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"フィードバックをお寄せください"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"ダークモードにどの程度満足していますか？"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"アンケートに回答"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"フィードバックをお寄せください"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"拡大にどの程度満足していますか？"</string>
@@ -2589,10 +2589,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"タイミング"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"標準"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"標準ダークモード"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"デバイスと対応アプリすべてにダークモードを適用します"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"デバイスとダークモードに対応しているアプリでダークモードをオンにします"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"拡張"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"拡張ダークモード"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"アクセシビリティ向上のため、より多くのアプリに自動的にダークモードを適用します"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"ダークモードに対応していないほとんどのアプリに自動的にダークモードを適用します。これにより、アクセシビリティと読みやすさが向上しますが、一部のアプリは正しく表示されないことがあります。"</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"強制反転, 色反転, コントラスト"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"アニメーションを無効化"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"画面上の動きを軽減できます"</string>
@@ -2694,8 +2694,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"色補正の詳細"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"色反転について"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"色反転の詳細"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"ダークモードの詳細"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"アプリによっては、拡張オプションのダークモードに対応していない場合があります。表示に問題がある場合は、標準オプションを使用してください。"</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"ダークモードの詳細"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"字幕を表示"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"対応アプリでのみ利用可能です"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"字幕のサイズとスタイル"</string>
@@ -5574,7 +5573,7 @@
     <string name="category_name_color" msgid="937514550918977151">"カラー"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"その他のディスプレイ コントロール"</string>
     <string name="category_name_general" msgid="7737273712848115886">"全般"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"ダークモードを使用"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"ダークモードの使用"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"Bluetooth を使用"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"HDR 輝度補正を使用する"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"着信音ミュート用のショートカットを使用する"</string>
@@ -5790,7 +5789,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"パスワード"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"互換性の向上"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"音質を下げることで、補聴器などのデバイスを接続できるようになります"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"音声の共有を OFF にして互換性を設定します"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"近くの音声を聴く"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"音声の共有は Auracast™ に対応しています"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"音声ストリームの名前"</string>
@@ -5931,6 +5931,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"PIN を削除する"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"再設定用のメールアドレスの追加"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"メールアドレスの確認"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"ウェブサイトのコンテンツ フィルタ"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"ウェブサイト フィルタ, サイトのブロック, ブラウザ フィルタ, 露骨な表現を含むサイトのブロック, サイトのフィルタ, 検索結果のブロック, 露骨な表現を含む検索結果のフィルタ, コンテンツの制限"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"このスマートフォンの一部のアプリとブラウザで露骨な表現を含むコンテンツが除外されやすくなります。他のアプリ、デバイス、ブラウザでは、露骨な表現を含むコンテンツが引き続き表示される場合があります。"</string>
@@ -5954,15 +5956,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"エラーが発生しました"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"しばらくしてからもう一度お試しください"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"戻る"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"ID チェックがより多くのアプリで利用できるようになりました"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"指紋認証や顔認証で本人確認を行うアプリで、個人情報を強力に保護できます"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"詳細を表示"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"ID チェックを使用してアプリのセキュリティを強化しましょう"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"指紋認証と顔認証に対応しているすべてのアプリで ID チェックを使用することで、追加の設定なしに、より強力な保護と一貫性のあるエクスペリエンスを実現できます"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"スマートウォッチで ID チェックを利用できます"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"指紋認証や顔認証が必要なアプリを他のユーザーが開けないようにします。スマートウォッチと接続することで、セキュリティを維持しつつ、さまざまな場所で作業できます。"</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"さまざまなアプリで ID チェックとスマートウォッチを利用できます"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"自宅やオフィスなどの信頼できる場所では、指紋認証と顔認証に対応しているアプリで、個人情報を強力に保護しましょう。信頼できる場所以外でも保護を強化するには、スマートウォッチを使った ID チェック機能を活用してください。"</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"その他の設定"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"自動入力、通知など"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"プライバシー管理"</string>
