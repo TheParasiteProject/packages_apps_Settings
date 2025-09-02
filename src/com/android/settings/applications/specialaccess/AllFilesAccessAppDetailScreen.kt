@@ -20,11 +20,12 @@ import android.Manifest.permission.MANAGE_EXTERNAL_STORAGE
 import android.app.AppOpsManager
 import android.app.settings.SettingsEnums
 import android.content.Context
+import android.content.Intent
 import android.content.pm.ApplicationInfo
 import android.os.Bundle
+import android.provider.Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
 import androidx.core.net.toUri
 import com.android.settings.R
-import com.android.settings.Settings.ManageExternalStorageActivity
 import com.android.settings.applications.CatalystAppListFragment.Companion.DEFAULT_SHOW_SYSTEM
 import com.android.settings.applications.getPackageInfoWithPermissions
 import com.android.settings.applications.isPermissionRequested
@@ -32,7 +33,6 @@ import com.android.settings.contract.TAG_DEVICE_STATE_PREFERENCE
 import com.android.settings.contract.TAG_DEVICE_STATE_SCREEN
 import com.android.settings.flags.Flags
 import com.android.settings.utils.highlightPreference
-import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.ProvidePreferenceScreen
 
@@ -88,7 +88,7 @@ open class AllFilesAccessAppDetailScreen(private val context: Context, arguments
         }
 
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?) =
-        makeLaunchIntent(context, ManageExternalStorageActivity::class.java, metadata?.key).apply {
+        Intent(ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION).apply {
             data = "package:$packageName".toUri()
             highlightPreference(arguments, metadata?.bindingKey)
         }

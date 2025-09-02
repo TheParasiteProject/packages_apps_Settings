@@ -23,17 +23,17 @@ import android.app.AppOpsManager
 import android.app.compat.CompatChanges
 import android.app.settings.SettingsEnums
 import android.content.Context
+import android.content.Intent
 import android.content.pm.ApplicationInfo
 import android.os.Bundle
 import android.os.PowerExemptionManager
+import android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM
 import androidx.core.net.toUri
-import com.android.settings.Settings.AlarmsAndRemindersActivity
 import com.android.settings.applications.CatalystAppListFragment.Companion.DEFAULT_SHOW_SYSTEM
 import com.android.settings.applications.getPackageInfoWithPermissions
 import com.android.settings.applications.isPermissionRequested
 import com.android.settings.flags.Flags
 import com.android.settings.utils.highlightPreference
-import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.R
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.ProvidePreferenceScreen
@@ -83,7 +83,7 @@ open class AlarmsAndRemindersAppDetailScreen(context: Context, arguments: Bundle
     override fun isFlagEnabled(context: Context) = Flags.deeplinkApps25q4()
 
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?) =
-        makeLaunchIntent(context, AlarmsAndRemindersActivity::class.java, metadata?.key).apply {
+        Intent(ACTION_REQUEST_SCHEDULE_EXACT_ALARM).apply {
             data = "package:$packageName".toUri()
             highlightPreference(arguments, metadata?.bindingKey)
         }
