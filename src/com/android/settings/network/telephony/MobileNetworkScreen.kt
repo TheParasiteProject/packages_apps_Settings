@@ -82,8 +82,10 @@ open class MobileNetworkScreen(override val arguments: Bundle) :
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
         preferenceHierarchy(context) {
             if (Flags.deeplinkNetworkAndInternet25q4()) {
+                val data = MobileNetworkData(context, coroutineScope, subId)
                 +EnabledStateUntitledCategory(subId) += {
                     +MobileNetworkSpnPreference(context, subId)
+                    +MobileNetworkPhoneNumberPreference(data)
                     +MobileNetworkImeiPreference(context, subId)
                     +(DataUsageListScreen.KEY args arguments)
                 }
