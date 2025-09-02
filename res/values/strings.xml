@@ -6035,7 +6035,7 @@
     <string name="accessibility_expanded_dark_theme_title">Expanded</string>
     <!-- Title in the search result for expanded dark theme mode. -->
     <string name="accessibility_expanded_dark_theme_title_in_search">Expanded Dark theme</string>
-    <!-- Summary for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=100] -->
+    <!-- Summary for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=NONE] -->
     <string name="accessibility_expanded_dark_theme_summary">Automatically applies dark theme to most apps that don\'t support it. This can improve accessibility and readability, but may cause some apps to display incorrectly.</string>
     <!-- Search keywords for the Expanded dark theme settings. [CHAR_LIMIT=NONE] -->
     <string name="keywords_expanded_dark_theme">force invert, color inversion, contrast</string>
