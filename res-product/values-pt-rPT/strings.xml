@@ -164,10 +164,14 @@
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="tablet" msgid="8772005555323461143">"O utilizador e a criança podem eliminar o modelo e as imagens da impressão digital ou desativar o Desbloqueio por impressão digital em qualquer altura nas Definições. Os modelos e as imagens da impressão digital são armazenados no tablet até serem eliminados."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="device" msgid="7254955922685507093">"O utilizador e a criança podem eliminar o modelo e as imagens da impressão digital ou desativar o Desbloqueio por impressão digital em qualquer altura nas Definições. Os modelos e as imagens da impressão digital são armazenados no dispositivo até serem eliminados."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="desktop" msgid="7254955922685507093">"O utilizador e a criança podem eliminar o modelo e as imagens da impressão digital ou desativar o Desbloqueio por impressão digital em qualquer altura nas Definições. Os modelos e as imagens da impressão digital são armazenados no dispositivo até serem eliminados."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="default" msgid="6272159089589340181">"O telemóvel pode ser desbloqueado involuntariamente (por exemplo, se alguém o encostar ao seu dedo)."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="tablet" msgid="2420109998272019149">"O tablet pode ser desbloqueado involuntariamente (por exemplo, se alguém o encostar ao seu dedo)."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="device" msgid="5915844445830045866">"O dispositivo pode ser desbloqueado involuntariamente (por exemplo, se alguém o encostar ao seu dedo)."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="desktop" msgid="5915844445830045866">"O dispositivo pode ser desbloqueado involuntariamente (por exemplo, se alguém o encostar ao seu dedo)."</string>
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (6838578698434849838) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (7796353046744228477) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (5075445491909690772) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (5075445491909690772) -->
+    <skip />
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="default" msgid="6556725426776167791">"O telemóvel da criança pode ser desbloqueado involuntariamente, como se alguém o encostar ao dedo da criança."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="tablet" msgid="5156581794964551571">"O tablet da criança pode ser desbloqueado involuntariamente, como se alguém o encostar ao dedo da criança."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="device" msgid="8309101436391515400">"O dispositivo da criança pode ser desbloqueado involuntariamente, como se alguém o encostar ao dedo da criança."</string>
