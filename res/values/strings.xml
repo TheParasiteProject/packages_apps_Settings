@@ -2268,7 +2268,7 @@
     <!-- External Display settings. More resolution options -->
     <string name="external_display_more_options_title">More options</string>
     <!-- External Display settings. -->
-    <string name="external_display_topology_hint">Hold and drag to rearrange displays.</string>
+    <string name="external_display_topology_hint">Hold and drag to rearrange displays</string>
     <!-- External Display settings. -->
     <string name="external_display_mirroring_title">Mirror built-in display</string>
     <!-- External Display settings. Dialog title to confirm if resolution change wants to be applied (change was first temporarily applied while showing dialog). -->
