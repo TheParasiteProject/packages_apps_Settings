@@ -138,7 +138,7 @@ abstract class AbstractDeviceStateAppFunctionService : AppFunctionService() {
                     appFunctionType,
                     request.parameters,
                     applicationContext.getLocale().toString(),
-                )
+                    )
             val response = buildResponse(responseData)
             callback.onResult(response)
             Log.d(TAG, "app function ${request.functionIdentifier} fulfilled.")

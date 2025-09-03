@@ -23,6 +23,7 @@ import android.util.Log
 import com.android.settings.appfunctions.CatalystConfig
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.android.settings.appfunctions.DeviceStateProviderExecutorResult
+import com.android.settings.flags.Flags
 import com.android.settingslib.metadata.PersistentPreference
 import com.android.settingslib.metadata.PreferenceHierarchyNode
 import com.android.settingslib.metadata.PreferenceScreenMetadata
@@ -36,6 +37,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.sync.Semaphore
+import kotlinx.coroutines.sync.withPermit
 
 /* A [DeviceStateProvider] that provides device state information for Settings that are
 exposed using Catalyst framework. Configured in [CatalystStateProviderConfig]. */
@@ -54,14 +57,34 @@ class CatalystStateProviderExecutor(
     ): DeviceStateProviderExecutorResult {
         val perScreenDeviceStatesList = mutableListOf<PerScreenDeviceStates>()
         coroutineScope {
+            val semaphore = Semaphore(MAX_PARALLELISM)
             val deferredList =
                 screenKeyList.map { screenKey ->
-                    async {
-                        try {
-                            buildPerScreenDeviceStates(screenKey, appFunctionType)
-                        } catch (e: Exception) {
-                            Log.e(TAG, "Error building per screen device states for $screenKey", e)
-                            null
+                    async{
+                        if (Flags.parameterisedScreensInAppFunctions()) {
+                            semaphore.withPermit {
+                                try {
+                                    buildPerScreenDeviceStates(screenKey, appFunctionType)
+                                } catch (e: Exception) {
+                                    Log.e(
+                                        TAG,
+                                        "Error building per screen device states for $screenKey",
+                                        e
+                                    )
+                                    null
+                                }
+                            }
+                        } else {
+                            try {
+                                buildPerScreenDeviceStates(screenKey, appFunctionType)
+                            } catch (e: Exception) {
+                                Log.e(
+                                    TAG,
+                                    "Error building per screen device states for $screenKey",
+                                    e
+                                )
+                                null
+                            }
                         }
                     }
                 }
@@ -131,5 +154,6 @@ class CatalystStateProviderExecutor(
 
     companion object {
         private const val TAG = "CatalystStateProviderExecutor"
+        private const val MAX_PARALLELISM = 5
     }
 }
