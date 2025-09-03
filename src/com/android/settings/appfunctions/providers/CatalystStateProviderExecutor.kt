@@ -24,6 +24,8 @@ import com.android.settings.appfunctions.CatalystConfig
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.android.settings.appfunctions.DeviceStateProviderExecutorResult
 import com.android.settingslib.metadata.PersistentPreference
+import com.android.settingslib.metadata.PreferenceHierarchyNode
+import com.android.settingslib.metadata.PreferenceScreenMetadata
 import com.android.settingslib.metadata.getPreferenceScreenTitle
 import com.android.settingslib.metadata.getPreferenceSummary
 import com.android.settingslib.metadata.getPreferenceTitle
@@ -64,7 +66,7 @@ class CatalystStateProviderExecutor(
                     }
                 }
             val results = deferredList.awaitAll()
-            perScreenDeviceStatesList.addAll(results.filterNotNull())
+            perScreenDeviceStatesList.addAll(results.filterNotNull().flatten())
         }
         return DeviceStateProviderExecutorResult(states = perScreenDeviceStatesList)
     }
@@ -72,11 +74,20 @@ class CatalystStateProviderExecutor(
     private suspend fun CoroutineScope.buildPerScreenDeviceStates(
         screenKey: String,
         appFunctionType: DeviceStateAppFunctionType,
-    ): PerScreenDeviceStates? {
+    ): List<PerScreenDeviceStates> {
         Log.v(TAG, "Building per screen device states for $screenKey")
-        val (screenMetaData, preferencesHierarchy) =
-            getEnabledPreferencesHierarchy(config, context, appFunctionType, screenKey)
-                ?: return null
+        val hierarchy = getEnabledPreferencesHierarchy(config, context, appFunctionType, screenKey)
+
+        return hierarchy.map { entry ->
+            val screenMetaData = entry.key
+            val preferencesHierarchy = entry.value
+            val states = buildPerScreenDeviceStates(screenMetaData, preferencesHierarchy)
+            Log.v(TAG, "Built per screen device states for $screenKey")
+            states
+        }
+    }
+
+    private suspend fun CoroutineScope.buildPerScreenDeviceStates(screenMetaData: PreferenceScreenMetadata, preferencesHierarchy: List<PreferenceHierarchyNode>): PerScreenDeviceStates {
         val deviceStateItemList = mutableListOf<DeviceStateItem>()
         preferencesHierarchy.forEach {
             val metadata = it.metadata
@@ -115,7 +126,6 @@ class CatalystStateProviderExecutor(
                 deviceStateItems = deviceStateItemList,
                 intentUri = launchingIntent?.toUri(Intent.URI_INTENT_SCHEME),
             )
-        Log.v(TAG, "Built per screen device states for $screenKey")
         return states
     }
 
