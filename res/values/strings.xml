@@ -4525,6 +4525,8 @@
     <string name="lockpattern_recording_intro_footer">Press Menu for help.</string>
     <!-- Security & location settings screen, change unlock pattern screen instruction on top of screen while drawing pattern -->
     <string name="lockpattern_recording_inprogress">Release finger when done</string>
+    <!-- Security & location settings screen, change unlock pattern screen instruction on top of screen while clicking pattern -->
+    <string name="lockpattern_recording_inprogress_click">Connect at least <xliff:g id="number">%d</xliff:g> dots</string>
     <!-- Security & location settings screen, change unlock pattern screen instruction on top of screen if user doesn't connect enough dots -->
     <string name="lockpattern_recording_incorrect_too_short">Connect at least <xliff:g id="number">%d</xliff:g> dots. Try again.</string>
     <!-- Security & location settings screen, change unlock pattern screen message on top of screen after drawing pattern -->
