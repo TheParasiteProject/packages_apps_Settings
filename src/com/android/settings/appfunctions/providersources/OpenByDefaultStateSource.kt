@@ -17,7 +17,6 @@
 package com.android.settings.appfunctions.providersources
 
 import android.content.Context
-import android.content.pm.PackageManager
 import android.content.pm.verify.domain.DomainVerificationManager
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.android.settings.applications.intentpicker.IntentPickerUtils
@@ -32,20 +31,16 @@ class OpenByDefaultStateSource : DeviceStateSource {
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): List<PerScreenDeviceStates> {
-        val packageManager = context.packageManager
-        val installedApplications =
-            packageManager.getInstalledApplications(PackageManager.MATCH_DISABLED_COMPONENTS)
-
         val deviceStateItems = mutableListOf<DeviceStateItem>()
-        for (app in installedApplications) {
-            val appName = packageManager.getApplicationLabel(app.applicationInfo)
-            val packageName = app.packageName
+        for (app in sharedDeviceStateData.installedApplications) {
+            val appName = app.label
+            val packageName = app.info.packageName
             val domainVerificationManager =
                 context.getSystemService(DomainVerificationManager::class.java)
             val userState =
                 IntentPickerUtils.getDomainVerificationUserState(
                     domainVerificationManager,
-                    app.packageName,
+                    app.info.packageName,
                 )
             val isEnabled = userState?.isLinkHandlingAllowed ?: false
             deviceStateItems.add(

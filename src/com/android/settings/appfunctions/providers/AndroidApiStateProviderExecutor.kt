@@ -53,6 +53,7 @@ import kotlinx.coroutines.coroutineScope
  * @param context The application context.
  */
 class AndroidApiStateProviderExecutor(private val context: Context) : DeviceStateExecutor {
+    private val sharedDeviceStateData = SharedDeviceStateData(context)
 
     // List of all active DeviceStateSource
     private val settingStates: List<DeviceStateSource> =
@@ -84,7 +85,7 @@ class AndroidApiStateProviderExecutor(private val context: Context) : DeviceStat
         appFunctionType: DeviceStateAppFunctionType,
         params: GenericDocument?,
     ): DeviceStateProviderExecutorResult {
-        val sharedDeviceStateData = SharedDeviceStateData(context)
+        sharedDeviceStateData.initialize()
 
         val states = coroutineScope {
             settingStates
