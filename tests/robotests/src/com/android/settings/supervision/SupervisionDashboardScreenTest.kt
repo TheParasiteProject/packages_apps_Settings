@@ -66,6 +66,7 @@ class SupervisionDashboardScreenTest {
     @Before
     fun setUp() {
         mockLifeCycleContext.stub {
+            on { preferenceScreenKey } doReturn preferenceScreenCreator.bindingKey
             on { getSystemService(SupervisionManager::class.java) } doReturn mockSupervisionManager
         }
     }
