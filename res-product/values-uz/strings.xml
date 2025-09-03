@@ -164,10 +164,14 @@
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="tablet" msgid="8772005555323461143">"Siz va farzandingiz istalgan payt Sozlamalarda barmoq izi modelini oʻchirib tashlash yoki barmoq izi bilan ochish funksiyasini faolsizlantirishingiz mumkin. Barmoq izi rasmlari va modellari oʻchirib tashlamaguniga qadar planshetda saqlanadi."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="device" msgid="7254955922685507093">"Siz va farzandingiz istalgan payt Sozlamalarda barmoq izi modelini oʻchirib tashlash yoki barmoq izi bilan ochish funksiyasini faolsizlantirishingiz mumkin. Barmoq izi rasmlari va modellari oʻchirib tashlamaguniga qadar qurilmada saqlanadi."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="desktop" msgid="7254955922685507093">"Siz va farzandingiz istalgan payt Sozlamalarda barmoq izi modelini oʻchirib tashlash yoki barmoq izi bilan ochish funksiyasini faolsizlantirishingiz mumkin. Barmoq izi rasmlari va modellari oʻchirib tashlamaguniga qadar qurilmada saqlanadi."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="default" msgid="6272159089589340181">"Telefonni sizning ixtiyoringizsiz kimdir uni barmogʻingizga tutgan holda qulfdan chiqarib olishi mumkin."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="tablet" msgid="2420109998272019149">"Planshetni sizning ixtiyoringizsiz kimdir uni barmogʻingizga tutgan holda qulfdan chiqarib olishi mumkin."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="device" msgid="5915844445830045866">"Qurilmani sizning ixtiyoringizsiz kimdir uni barmogʻingizga tutgan holda qulfdan chiqarib olishi mumkin."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="desktop" msgid="5915844445830045866">"Qurilmani sizning ixtiyoringizsiz kimdir uni barmogʻingizga tutgan holda qulfdan chiqarib olishi mumkin."</string>
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (6838578698434849838) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (7796353046744228477) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (5075445491909690772) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (5075445491909690772) -->
+    <skip />
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="default" msgid="6556725426776167791">"Telefonni farzandingiz ixtiyorisiz kimdir uning barmogʻiga tutgan holda qulfdan chiqarib olishi mumkin."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="tablet" msgid="5156581794964551571">"Farzandingiz planshetining qulfi barmoq izidan uning roziligisiz foydalangan holda boshqalar tomonidan ochilishi mumkin."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="device" msgid="8309101436391515400">"Farzandingiz qurilmasining qulfi barmoq izidan uning roziligisiz foydalangan holda boshqalar tomonidan ochilishi mumkin."</string>

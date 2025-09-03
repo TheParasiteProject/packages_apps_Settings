@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"အသံထွက်မည့် ကိရိယာအကြောင်း"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"အသံများကို သင့်နားကြားကိရိယာ (သို့) ဖုန်းစပီကာသို့ ပို့သည်"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"ဆက်စပ်သည်များ"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ဖြင့် လျင်မြန်စွာ ပို့ခြင်း"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"အနီးနားရှိ Android၊ PC တို့နှင့် အမြန်ဆုံး မျှဝေနိုင်ရန် Windows အတွက်<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ကို စမ်းကြည့်ပါ"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ဖြင့် လျင်မြန်စွာ ပို့ခြင်း"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"အနီးနားရှိ Android၊ PC တို့နှင့် အမြန်ဆုံး မျှဝေနိုင်ရန် Windows အတွက်<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ကို စမ်းကြည့်ပါ"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"ဖုန်းမြည်သံနှင့် နှိုးစက်"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"ဖုန်းခေါ်မှုအတွင်း အသံ"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"မီဒီယာ၊ စနစ်အသံများ"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"ပုံမှန် ပုံ"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR ပုံ"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"ဤဆက်တင်သည် High Dynamic Range (HDR) ကို ပံ့ပိုးသော ပုံနှင့် ဗီဒီယိုများအတွက်သာ သက်ရောက်မှုရှိသည်။"</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"ဖန်သားပြင် အဖြူ ချိန်ညှိခြင်း"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"ခေါက်ထားချိန် အက်ပ်ဆက်သုံးရန်"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"သင့်စခရင်ကို ကြည့်ရှုရာတွင် ပိုမိုသက်သောင့်သက်သာဖြစ်စေရန်နှင့် စခရင်အချို့၌ ဘက်ထရီအသုံးပြုမှု လျှော့ချရန် အမှောင်နောက်ခံ သုံးပါ။ စခရင် ပိတ်ထားချိန်တွင် အချိန်ဇယားရှိပါက သင့်အပြင်အဆင် ပြောင်းပါမည်။"</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"အမှောင်နောက်ခံသည် လက်ရှိတွင် သင့်အိပ်ချိန်မုဒ် အချိန်ဇယားအတိုင်း လုပ်ဆောင်နေသည်"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"အိပ်ချိန်မုဒ် ဆက်တင်များ"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{မုဒ်များက ‘အမှောင်နောက်ခံ’ ကိုလည်း ဖွင့်နိုင်သည်}=1{{mode_1} က ‘အမှောင်နောက်ခံ’ ကိုလည်း ဖွင့်နိုင်သည်}=2{{mode_1} နှင့် {mode_2} တို့က ‘အမှောင်နောက်ခံ’ ကိုလည်း ဖွင့်နိုင်သည်}=3{{mode_1}၊ {mode_2} နှင့် {mode_3} တို့က ‘အမှောင်နောက်ခံ’ ကိုလည်း ဖွင့်နိုင်သည်}other{{mode_1}၊ {mode_2} နှင့် နောက်ထပ် # ခုတို့က ‘အမှောင်နောက်ခံ’ ကိုလည်း ဖွင့်နိုင်သည်}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{မုဒ်များကလည်း အမှောင်အပြင်အဆင်ကို ဖွင့်နိုင်သည်}=1{{mode_1} ကလည်း အမှောင်အပြင်အဆင်ကို ဖွင့်သည်}=2{{mode_1} နှင့် {mode_2} ကလည်း အမှောင်အပြင်အဆင်ကို ဖွင့်သည်}=3{{mode_1}၊ {mode_2} နှင့် {mode_3} တို့ကလည်း အမှောင်အပြင်အဆင်ကို ဖွင့်သည်}other{{mode_1}၊ {mode_2} နှင့် နောက်ထပ် # ခုတို့ကလည်း အမှောင်အပြင်အဆင်ကို ဖွင့်သည်}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"မုဒ်ဆက်တင်များ"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"High Dynamic Range (HDR) ပုံနှင့် ဗီဒီယိုများတွင် အရောင်အသွေးနှင့် ကြည်လင်ပြတ်သားမှုကို တောက်ပစေပြီး ချဲ့ပေးသည်။ HDR အကြောင်းအရာကို ပိုမိုတောက်ပစွာ မြင်ရပါမည်။"</string>
     <string name="screen_timeout" msgid="7709947617767439410">"ဖန်သားပြင် အချိန်ကုန်သွားခြင်း"</string>
@@ -2410,11 +2412,9 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"လမ်းညွှန်မုဒ်၊ စခရင်လှည့်ခြင်း"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"အကြံပြုချက်ပို့ရန်"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"စစ်တမ်းစတင်ရန်"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google မသန်စွမ်းသူ အကူအညီထံ ဆက်သွယ်ရန်"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"အများသုံးနိုင်မှု စစ်တမ်း"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"သင့်အကြံပြုချက်ကို မျှဝေပါ"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"အမှောင်အပြင်အဆင်ကို မည်မျှစိတ်တိုင်းကျသလဲ။"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"စစ်တမ်းဖြေရန်"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"သင့်အကြံပြုချက်ကို မျှဝေပါ"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"ချဲ့ခြင်းကို မည်မျှစိတ်တိုင်းကျသလဲ။"</string>
@@ -2589,10 +2589,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"အချိန်ကိုက်ခြင်း"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"ပုံမှန်"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"ပုံမှန် ‘အမှောင်နောက်ခံ’"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"သင့်စက်နှင့် ပံ့ပိုးပေးသောအက်ပ်များတွင် ‘အမှောင်နောက်ခံ’ အသုံးပြုသည်"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"အမှောင်အပြင်အဆင်ပံ့ပိုးသော သင့်စက်နှင့် အက်ပ်များအတွက် အမှောင်အပြင်အဆင်ဖွင့်သည်"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"တိုးချဲ့ထားသည်"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"‘အမှောင်နောက်ခံ’ ချဲ့ထားသည်"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"အများသုံးနိုင်မှု ပိုကောင်းစေရန် နောက်ထပ်အက်ပ်များတွင် ‘အမှောင်နောက်ခံ’ အလိုအလျောက်အသုံးပြုသည်"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"အမှောင်အပြင်အဆင် မပံ့ပိုးသောအက်ပ်အများစုတွင် ယင်းနောက်ခံကို အလိုအလျောက်အသုံးပြုသည်။ ၎င်းသည် အများသုံးနိုင်မှုနှင့် ဖတ်ရှုနိုင်မှု ပိုကောင်းစေသော်လည်း အက်ပ်အချို့တွင် မှန်ကန်စွာမပြခြင်း ဖြစ်စေနိုင်သည်။"</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"မဖြစ်မနေ ပြောင်းပြန်လုပ်ခြင်း၊ အရောင်ပြောင်းပြန်ပြုလုပ်ခြင်း၊ အရောင်ခြားနားမှု"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"လှုပ်ရှားသက်ဝင်ပုံ ဖယ်ရှားရန်"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"ဖန်သားပြင်တွင် လှုပ်ရှားမှုလျှော့ချသည်"</string>
@@ -2694,8 +2694,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"အရောင် အမှန်ပြင်ခြင်း အကြောင်း ပိုမိုလေ့လာရန်"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"အရောင်ပြောင်းပြန်လုပ်ခြင်း အကြောင်း"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"အရောင်ပြောင်းပြန်ပြုလုပ်ခြင်း အကြောင်း ပိုမိုလေ့လာရန်"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"‘အမှောင်နောက်ခံ’ အကြောင်း ပိုမိုလေ့လာရန်"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"အချို့အက်ပ်များသည် အဆင့်မြင့် ‘အမှောင်နောက်ခံ’ အပြင်အဆင်ကို ပံ့ပိုးမထားသည့်အတွက် ကြည့်ရှုရာတွင် အဆင်မပြေပါက ပုံမှန်အပြင်အဆင်ကို သုံးပါ။"</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"အမှောင်အပြင်အဆင်အကြောင်း ပိုလေ့လာရန်"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"စာတန်းများ ပြရန်"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"ပံ့ပိုးထားသည့် အက်ပ်အတွက်သာ"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"စာတန်းအရွယ်နှင့် ပုံစံ"</string>
@@ -5574,7 +5573,7 @@
     <string name="category_name_color" msgid="937514550918977151">"အရောင်"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"အခြား ဖန်သားပြင်ထိန်းချုပ်မှုများ"</string>
     <string name="category_name_general" msgid="7737273712848115886">"အထွေထွေ"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"အမှောင်နောက်ခံ သုံးရန်"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"အမှောင်အပြင်အဆင် သုံးရန်"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"ဘလူးတုသ်သုံးရန်"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"အရည်အသွေးမြင့် HDR တောက်ပမှုသုံးရန်"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"ဖုန်းသံမမြည်အောင်လုပ်ပါ"</string>
@@ -5790,7 +5789,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"စကားဝှက်"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"တွဲဖက်အသုံးပြုနိုင်မှု ပိုကောင်းအောင်လုပ်ခြင်း"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"အသံအရည်အသွေး လျှော့ချခြင်းဖြင့် နားကြားကိရိယာများ၊ကဲ့သို့ စက်အချို့ကို ကူညီချိတ်ဆက်နိုင်သည်"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"တွဲဖက်အသုံးပြုနိုင်မှုကို စီစဉ်သတ်မှတ်ရန် အော်ဒီယို မျှဝေခြင်း ပိတ်နိုင်သည်"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"အနီးတစ်ဝိုက်ရှိ အသံကို နားထောင်ခြင်း"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"အော်ဒီယို မျှဝေခြင်းသည် Auracast™ ကို ပံ့ပိုးသည်"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"အသံ ထုတ်လွှင့်ခြင်း အမည်"</string>
@@ -5931,6 +5931,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"ပင်နံပါတ်ဖျက်ရန်"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"ပြန်လည်ရယူရေးအီးမေးလ် ထည့်ပါ"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"သင့်အီးမေးလ်ကို အတည်ပြုပါ"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"ဝဘ်ဆိုက် အကြောင်းအရာဖီလ်တာ"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"ဝဘ်ဆိုက်ဖီလ်တာ၊ ဝဘ်ဆိုက်များပိတ်ထားရန်၊ ဘရောင်ဇာဖီလ်တာများ၊ မဖွယ်မရာဝဘ်ဆိုက်များ ပိတ်ထားရန်၊ ဝဘ်ဆိုက်များကို စစ်ထုတ်ရန်၊ ရှာဖွေမှုရလဒ်များ ပိတ်ထားရန်၊ မဖွယ်မရာ ရှာဖွေမှုရလဒ်များကို စစ်ထုတ်ရန်၊ အကြောင်းအရာ ကန့်သတ်ချက်များ"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"ဤဖုန်းရှိ အက်ပ်နှင့် ဘရောင်ဇာအချို့တွင် မဖွယ်မရာအကြောင်းအရာကို ကူညီစစ်ထုတ်ပေးသည်။ အခြားအက်ပ်၊ စက် (သို့) ဘရောင်ဇာများတွင် မဖွယ်မရာအကြောင်းအရာကို ဆက်မြင်ရနိုင်သည်။"</string>
@@ -5954,15 +5956,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"တစ်ခုခုမှားသွားသည်"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"နောက်မှထပ်စမ်းပါ"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"နောက်သို့"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"Identity Check ကို နောက်ထပ်အက်ပ်များတွင် ရနိုင်သည်"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"သင်၏ အထောက်အထားကို ခွဲခြားဖော်ထုတ်ရန် ‘လက်ဗွေ’ (သို့) ‘မျက်နှာပြ လော့ခ်ဖွင့်ခြင်း’ ကို ပံ့ပိုးသည့် မည်သည့်အက်ပ်တွင်မဆို သင်၏ အထောက်အထား လုံခြုံအောင် ကာကွယ်ပေးနိုင်သည်"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"အသေးစိတ်ကြည့်ရန်"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"နောက်ထပ်အက်ပ်များ ပိုမိုလုံခြုံစေရန် Identity Check ကို သုံးခြင်း"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"လက်ဗွေ (သို့) ‘မျက်နှာပြ လော့ခ်ဖွင့်ခြင်း’ ကို ပံ့ပိုးသော အက်ပ်အားလုံးအတွက် Identity Check ကို သုံးသောအခါ ထပ်ဆောင်း စနစ်ထည့်သွင်းရန်မလိုဘဲ ပိုမိုခိုင်မာသော အကာအကွယ်ကို ပေးပြီး တစ်သမတ်တည်း ပိုမိုသုံးနိုင်စေသည်"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"Identity Check သည် နာရီဖြင့် အလုပ်လုပ်သည်"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"‘လက်ဗွေ’ (သို့) ‘မျက်နှာပြ လော့ခ်ဖွင့်ခြင်း’ လိုအပ်သောအက်ပ်များကို အခြားသူများက မဖွင့်နိုင်ရန် ကာကွယ်ပါ။ လက်ပတ်နာရီသို့ ချိတ်ဆက်သည့်အခါ ပိုမိုလှုပ်ရှားနိုင်မှုဖြင့် သင့်လုံခြုံရေးကို စိတ်ချနိုင်သည်။"</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"နောက်ထပ်အက်ပ်များတွင် Identity Check နှင့် လက်ပတ်နာရီသုံးပါ"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"သင်၏ အိမ် (သို့) ရုံးကဲ့သို့သော ယုံကြည်ရသည့်နေရာများ၌ ‘လက်ဗွေ’ နှင့် ‘မျက်နှာပြ လော့ခ်ဖွင့်ခြင်း’ ကို ပံ့ပိုးသော အက်ပ်အားလုံးတွင် သင့်အထောက်အထား ကာကွယ်ကြောင်း သေချာပါစေ။ ယုံကြည်ရသည့်နေရာများထက် ကျော်လွန်၍ပင် သင့်ကာကွယ်မှုကို တိုးချဲ့ရန် လက်ပတ်နာရီဖြင့် Identity Check သုံးပါ။"</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"အခြားဆက်တင်များ"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"အော်တိုဖြည့်၊ အကြောင်းကြားချက်များစသည်"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"ကိုယ်ရေးအချက်အလက်လုံခြုံမှု ဆက်တင်များ"</string>

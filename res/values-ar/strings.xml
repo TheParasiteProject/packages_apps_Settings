@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"لمحة عن إخراج الصوت"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"يمكنك توجيه الأصوات إلى سماعة الأذن الطبية أو مكبّر صوت الهاتف."</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"أدوات مشابهة"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"إرسال أسرع باستخدام ميزة \"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>\""</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"‏لمشاركة الملفات مع أجهزة Android وأجهزة الكمبيوتر القريبة بأسرع طريقة، يمكنك تجربة ميزة \"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>\" لنظام التشغيل Windows."</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"إرسال أسرع باستخدام ميزة \"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>\""</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"‏لمشاركة الملفات مع أجهزة Android وأجهزة الكمبيوتر القريبة بأسرع طريقة، يمكنك تجربة ميزة \"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>\" لنظام التشغيل Windows."</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"نغمة الرنين والمنبّهات"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"الصوت أثناء المكالمات"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"أصوات الوسائط والنظام"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"الصورة العادية"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"الصورة بالنطاق العالي الديناميكية"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"يؤثّر هذا الإعداد فقط في الصور والفيديوهات التي تدعم تكنولوجيا النطاق العالي الديناميكية."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"موازنة اللون الأبيض للشاشة"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"مواصلة استخدام التطبيقات أثناء طيّ الهاتف"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"يمكنك استخدام خلفية داكنة لجعل الشاشة أكثر راحةً للعين وتقليل استهلاك البطارية في بعض الشاشات. سيتغيّر المظهر إذا ضبطت جدولاً زمنيًا، وذلك عندما تكون الشاشة مغلقة."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"يتبع وضع \"المظهر الداكن\" حاليًا الجدول الزمني لوضع \"وقت النوم\"."</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"إعدادات وضع \"وقت النوم\""</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{يمكن للأوضاع تفعيل \"المظهر الداكن\" أيضًا.}=1{يمكن لوضع \"{mode_1}\" تفعيل \"المظهر الداكن\" أيضًا.}=2{يمكن لوضعَي \"{mode_1}\" و\"{mode_2}\" تفعيل \"المظهر الداكن\" أيضًا.}=3{يمكن لأوضاع \"{mode_1}\" و\"{mode_2}\" و\"{mode_3}\" تفعيل \"المظهر الداكن\" أيضًا.}few{يمكن لوضعَي \"{mode_1}\" و\"{mode_2}\" و# أوضاع أخرى تفعيل \"المظهر الداكن\" أيضًا.}many{يمكن لوضعَي \"{mode_1}\" و\"{mode_2}\" و# وضعًا آخر تفعيل \"المظهر الداكن\" أيضًا.}other{يمكن لوضعَي \"{mode_1}\" و\"{mode_2}\" و# وضع آخر تفعيل \"المظهر الداكن\" أيضًا.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{يمكن للأوضاع تفعيل \"المظهر الداكن\" أيضًا}=1{يمكن لوضع \"{mode_1}\" تفعيل \"المظهر الداكن\" أيضًا}=2{يمكن لوضعَي \"{mode_1}\" و\"{mode_2}\" تفعيل \"المظهر الداكن\" أيضًا}=3{يمكن لأوضاع \"{mode_1}\" و\"{mode_2}\" و\"{mode_3}\" تفعيل \"المظهر الداكن\" أيضًا}few{يمكن لوضعَي \"{mode_1}\" و\"{mode_2}\" و# أوضاع أخرى تفعيل \"المظهر الداكن\" أيضًا}many{يمكن لوضعَي \"{mode_1}\" و\"{mode_2}\" و# وضعًا آخر تفعيل \"المظهر الداكن\" أيضًا}other{يمكن لوضعَي \"{mode_1}\" و\"{mode_2}\" و# وضع آخر تفعيل \"المظهر الداكن\" أيضًا}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"إعدادات \"الأوضاع\""</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"توفّر هذه الميزة صورًا وفيديوهات أكثر سطوعًا مع نطاق ألوان أوسع ووضوح من خلال تكنولوجيا النطاق العالي الديناميكية. وسيظهر المحتوى بالنطاق العالي الديناميكية أكثر سطوعًا."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"المهلة قبل غلق الشاشة"</string>
@@ -2410,11 +2412,9 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"وضع التنقّل وتدوير الشاشة"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"إرسال ملاحظات"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"المشاركة في الاستطلاع"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"‏التواصل مع فريق الدعم في Google المخصّص لذوي الاحتياجات الخاصة"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"استطلاع تسهيل الاستخدام"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"ملاحظاتك تهمنا"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"ما مدى رضاك عن \"المظهر الداكن\"؟"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"المشاركة في الاستطلاع"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"ملاحظاتك تهمنا"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"ما مدى رضاك عن ميزة التكبير؟"</string>
@@ -2589,10 +2589,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"التوقيت"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"العادي"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"المظهر الداكن العادي"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"يتم تطبيق \"المظهر الداكن\" تلقائيًا على جهازك وعلى التطبيقات المتوافقة"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"يتم تفعيل وضع \"المظهر الداكن\" على جهازك وعلى التطبيقات التي تتوافق معه"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"الموسَّع"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"المظهر الداكن الموسَّع"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"يتم تطبيق \"المظهر الداكن\" تلقائيًا على مزيد من التطبيقات لتسهيل استخدامها"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"يتم تطبيق \"المظهر الداكن\" تلقائيًا على معظم التطبيقات التي لا تتوافق معه، ما يؤدي إلى تحسين تسهيل الاستخدام وإمكانية القراءة، ولكن قد يتسبب في عرض بعض التطبيقات بشكل غير صحيح."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"فرض قلب الألوان، قلب الألوان، التباين"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"إزالة الصور المتحركة"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"تقليل الحركة على الشاشة"</string>
@@ -2694,8 +2694,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"معرفة المزيد عن تصحيح الألوان"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"لمحة عن قلب الألوان"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"تعرّف على مزيد من المعلومات حول قلب الألوان"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"مزيد من المعلومات حول وضع \"المظهر الداكن\""</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"قد لا تتوافق بعض التطبيقات مع \"المظهر الداكن\" عند تفعيل خيار المظهر الموسَّع. إذا واجهْت مشاكل في المظهر، يمكنك استخدام خيار المظهر العادي."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"مزيد من المعلومات حول وضع \"المظهر الداكن\""</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"عرض الشرح"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"للتطبيقات المتوافقة فقط"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"حجم نص الترجمة والشرح ونمطه"</string>
@@ -4008,11 +4007,11 @@
     <string name="conversation_onboarding_summary" msgid="2484845363368486941">"لدى منح محادثة ما الأولوية أو إجراء أي تغييرات أخرى على المحادثات، ستظهر جميعها هنا. \n\nلتغيير إعدادات المحادثة: \nمرّر سريعًا من أعلى الشاشة إلى أسفلها لفتح مركز الإشعارات، ثم انقر مع الاستمرار على المحادثة."</string>
     <string name="notification_importance_min_title" msgid="7676541266705442501">"تصغير"</string>
     <string name="notification_importance_high_title" msgid="394129291760607808">"العرض على الشاشة"</string>
-    <string name="notification_silence_title" msgid="4085829874452944989">"الإشعارات الصامتة"</string>
+    <string name="notification_silence_title" msgid="4085829874452944989">"صامتة"</string>
     <string name="notification_alert_title" msgid="1632401211722199217">"تلقائية"</string>
     <string name="allow_interruption" msgid="5237201780159482716">"السماح بالمقاطعات"</string>
     <string name="allow_interruption_summary" msgid="9044131663518112543">"السماح للتطبيق بإصدار صوت و/أو اهتزاز و/أو عرض إشعارات منبثقة على الشاشة"</string>
-    <string name="notification_priority_title" msgid="5554834239080425229">"الأولوية"</string>
+    <string name="notification_priority_title" msgid="5554834239080425229">"ذات أولوية"</string>
     <string name="notification_channel_summary_priority" msgid="7225362351439076913">"تظهر في أعلى قسم المحادثات في شكل فقاعة عائمة وتعرض صورة الملف الشخصي على شاشة القفل"</string>
     <string name="convo_not_supported_summary" msgid="4285471045268268048">"لا يتوافق تطبيق \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" مع معظم ميزات المحادثات. لا يمكنك ضبط محادثة كأولوية ولن تظهر المحادثات كفقاعات عائمة."</string>
     <string name="notification_channel_summary_min" msgid="8823399508450176842">"في الظل المنسدل، يمكنك تصغير الإشعارات إلى سطر واحد"</string>
@@ -5578,7 +5577,7 @@
     <string name="category_name_color" msgid="937514550918977151">"اللون"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"عناصر أخرى للتحكّم في العرض"</string>
     <string name="category_name_general" msgid="7737273712848115886">"عام"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"استخدام \"المظهر الداكن\""</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"استخدام \"المظهر الداكن\""</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"استخدام البلوتوث"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"استخدام ميزة \"السطوع المحسّن بتكنولوجيا النطاق العالي الديناميكية\""</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"استخدام ميزة منع الرنين"</string>
@@ -5794,7 +5793,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"كلمة المرور"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"تحسين مدى التوافق"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"المساعدة في ربط بعض الأجهزة، مثل سماعة الأذن الطبية، بجهازك من خلال تقليل جودة الصوت"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"عند تفعيل هذا الخيار، ستتوقف مشاركة الصوت لضبط توافُق الأجهزة"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"الاستماع إلى الصوت القريب"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"‏تتوافق ميزة \"مشاركة الصوت\" مع تقنية Auracast™‎"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"اسم البث الصوتي"</string>
@@ -5935,6 +5935,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"حذف رقم التعريف الشخصي"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"إضافة عنوان البريد الإلكتروني المخصّص لاسترداد الحساب"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"تأكيد عنوان البريد الإلكتروني"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"فلاتر محتوى الموقع الإلكتروني"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"فلاتر المواقع الإلكترونية، حظر المواقع الإلكترونية، فلاتر المتصفّح، حظر المواقع الإلكترونية التي تتضمّن محتوى فاضحًا، فلترة المواقع الإلكترونية، حظر نتائج البحث، فلترة نتائج البحث الفاضحة، قيود المحتوى"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"تفلتر المحتوى الفاضح في بعض التطبيقات والمتصفّحات على هذا الهاتف. وقد يستمر ظهور المحتوى الفاضح على تطبيقات أو أجهزة أو متصفّحات أخرى."</string>
@@ -5958,15 +5960,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"حدث خطأ"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"يُرجى إعادة المحاولة لاحقًا"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"رجوع"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"ميزة \"التحقّق من الهوية\" متاحة في المزيد من التطبيقات"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"يمكنك حماية هويتك في أي تطبيق يستخدم ميزتَي \"فتح الجهاز ببصمة الوجه\" أو \"فتح الجهاز ببصمة الإصبع\""</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"عرض التفاصيل"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"استخدام ميزة \"التحقّق من الهوية\" لتأمين المزيد من التطبيقات"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"عند استخدام ميزة \"التحقّق من الهوية\" في جميع التطبيقات التي تتوافق مع ميزتَي \"فتح الجهاز ببصمة الإصبع\" و\"فتح الجهاز ببصمة الوجه\"، يمكنك ضمان حماية أقوى وتجربة أكثر اتساقًا بدون الحاجة إلى إعدادات إضافية"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"ميزة \"التحقّق من الهوية\" متوفرة الآن في ساعتك"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"يمكنك منع الآخرين من فتح التطبيقات التي تتطلب \"فتح الجهاز ببصمة الإصبع\" أو \"فتح الجهاز ببصمة الوجه\". وعند ربط هاتفك بساعتك، يتم تعزيز أمانك مع توفير حرية أكبر في التنقّل."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"يمكنك استخدام ميزة \"التحقّق من الهوية\" على الساعة مع مزيد من التطبيقات"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"يمكنك حماية هويتك في جميع التطبيقات التي تتوافق مع ميزتَي \"فتح الجهاز ببصمة الوجه\" و\"فتح الجهاز ببصمة الإصبع\" في الأماكن الموثوق بها مثل منزلك أو مكتبك. وبإمكانك استخدام ميزة \"التحقّق من الهوية\" في ساعتك لتوسيع نطاق الحماية حتى خارج تلك الأماكن."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"إعدادات أخرى"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"الملء التلقائي والإشعارات والمزيد"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"عناصر التحكّم في الخصوصية"</string>

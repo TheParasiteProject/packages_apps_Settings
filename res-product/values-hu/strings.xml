@@ -164,10 +164,14 @@
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="tablet" msgid="8772005555323461143">"Ön és gyermeke a Beállításokban bármikor törölheti gyermeke ujjlenyomatképeit és -modelljét, illetve kikapcsolhatja a Feloldás ujjlenyomattal funkciót. A táblagép addig tárolja az ujjlenyomatképeket és -modelleket, amíg Ön vagy gyermeke nem törli őket."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="device" msgid="7254955922685507093">"Ön és gyermeke a Beállításokban bármikor törölheti gyermeke ujjlenyomatképeit és -modelljét, illetve kikapcsolhatja a Feloldás ujjlenyomattal funkciót. Az eszköz addig tárolja az ujjlenyomatképeket és -modelleket, amíg Ön vagy gyermeke nem törli őket."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="desktop" msgid="7254955922685507093">"Ön és gyermeke a Beállításokban bármikor törölheti gyermeke ujjlenyomatképeit és -modelljét, illetve kikapcsolhatja a Feloldás ujjlenyomattal funkciót. Az eszköz addig tárolja az ujjlenyomatképeket és -modelleket, amíg Ön vagy gyermeke nem törli őket."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="default" msgid="6272159089589340181">"Telefonját az Ön szándéka ellenére más is feloldhatja, például ha valaki az Ön ujjához tartja."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="tablet" msgid="2420109998272019149">"Táblagépét az Ön szándéka ellenére más is feloldhatja, például ha valaki az Ön ujjához tartja."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="device" msgid="5915844445830045866">"Eszközét az Ön szándéka ellenére más is feloldhatja, például ha valaki az Ön ujjához tartja."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="desktop" msgid="5915844445830045866">"Eszközét az Ön szándéka ellenére más is feloldhatja, például ha valaki az Ön ujjához tartja."</string>
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (6838578698434849838) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (7796353046744228477) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (5075445491909690772) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (5075445491909690772) -->
+    <skip />
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="default" msgid="6556725426776167791">"Gyermeke telefonját az ő szándéka ellenére valaki más is feloldhatja, például ha valaki az Ön gyermeke ujjához tartja a telefont."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="tablet" msgid="5156581794964551571">"Gyermeke táblagépét az ő szándéka ellenére valaki más is feloldhatja, például ha valaki az Ön gyermeke ujjához tartja a táblagépet."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="device" msgid="8309101436391515400">"Gyermeke eszközét az ő szándéka ellenére valaki más is feloldhatja, például ha valaki az Ön gyermeke ujjához tartja az eszközt."</string>

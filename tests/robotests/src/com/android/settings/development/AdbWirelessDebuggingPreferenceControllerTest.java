@@ -49,7 +49,7 @@ import org.robolectric.util.ReflectionHelpers;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowUtils.class, ShadowWirelessDebuggingPreferenceController.class})
-public class WirelessDebuggingPreferenceControllerTest {
+public class AdbWirelessDebuggingPreferenceControllerTest {
 
     @Mock
     private PreferenceScreen mScreen;
@@ -60,7 +60,7 @@ public class WirelessDebuggingPreferenceControllerTest {
     @Mock
     private DevelopmentSettingsDashboardFragment mFragment;
 
-    private WirelessDebuggingPreferenceController mController;
+    private AdbWirelessDebuggingPreferenceController mController;
     private LifecycleOwner mLifecycleOwner;
     private Lifecycle mLifecycle;
     private Context mContext;
@@ -73,7 +73,7 @@ public class WirelessDebuggingPreferenceControllerTest {
         mContentResolver = mContext.getContentResolver();
         mLifecycleOwner = () -> mLifecycle;
         mLifecycle = new Lifecycle(mLifecycleOwner);
-        mController = spy(new WirelessDebuggingPreferenceController(mContext, mLifecycle));
+        mController = spy(new AdbWirelessDebuggingPreferenceController(mContext, mLifecycle));
         ReflectionHelpers.setField(mController, "mAdbManager", mAdbManager);
         when(mScreen.findPreference(mController.getPreferenceKey())).thenReturn(mPreference);
         Global.putInt(mContentResolver, Global.ADB_WIFI_ENABLED, 0);

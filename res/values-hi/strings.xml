@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"ऑडियो आउटपुट की जानकारी"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"साउंड को कान की मशीन या फ़ोन स्पीकर पर रूट करें"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"मिलते-जुलते टूल"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> की मदद से जल्दी फ़ाइलें भेजें"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"आस-पास मौजूद Android डिवाइसों और पीसी के साथ तेज़ी से फ़ाइलें शेयर करने के लिए, Windows में <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> का इस्तेमाल करें"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> की मदद से जल्दी फ़ाइलें भेजें"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"आस-पास मौजूद Android डिवाइसों और पीसी के साथ तेज़ी से फ़ाइलें शेयर करने के लिए, Windows में <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> का इस्तेमाल करें"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"रिंगटोन और अलार्म"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"कॉल में सुनाई देने वाला ऑडियो"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"मीडिया और सिस्टम की आवाज़ें"</string>
@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"क्या आपको नई सेटिंग इस्तेमाल करनी हैं?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"अगर डिसप्ले सही तरीके से काम नहीं कर रहा है, तो पिछली सेटिंग पर वापस जाएं"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"सेटिंग का इस्तेमाल करें"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"डिसप्ले: %1$s. किसी आइटम को मूव करने के लिए, उस पर दो बार टैप करके उसे खींचें और छोड़ें या कार्रवाइयां देखें."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"ऊपर ले जाएं"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"नीचे ले जाएं"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"बाईं ओर ले जाएं"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"दाईं ओर ले जाएं"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"स्क्रीन शेयर करें"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"बिना वायर के स्क्रीन दिखाना (वायरलेस डिसप्ले) चालू करें"</string>
@@ -1412,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"स्टैंडर्ड इमेज"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"एचडीआर इमेज"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"यह सेटिंग सिर्फ़ हाई डाइनैमिक रेंज (एचडीआर) इमेज और वीडियो पर लागू होती है."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"डिसप्ले का वाइट बैलेंस"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"फ़ोल्ड करने पर भी ऐप्लिकेशन का इस्तेमाल जारी रखें"</string>
@@ -1479,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"गहरे रंग वाले बैकग्राउंड का इस्तेमाल करें, ताकि अलग-अलग स्क्रीन पर बैटरी कम खर्च हो और स्क्रीन को आसानी से देखा जा सके. स्क्रीन बंद होने पर, शेड्यूल के हिसाब से थीम बदल जाएगी."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"फ़िलहाल, गहरे रंग वाली थीम आपके बेडटाइम मोड वाले शेड्यूल के हिसाब से लागू है"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"बेडटाइम मोड की सेटिंग"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{मोड से भी गहरे रंग वाली थीम चालू होती है.}=1{{mode_1} से भी गहरे रंग वाली थीम चालू होती है.}=2{{mode_1} और {mode_2} से भी गहरे रंग वाली थीम चालू होती है.}=3{{mode_1}, {mode_2}, और {mode_3} से भी गहरे रंग वाली थीम चालू होती है.}one{{mode_1}, {mode_2}, और # अन्य मोड से भी गहरे रंग वाली थीम चालू होती है.}other{{mode_1}, {mode_2}, और # अन्य मोड से भी गहरे रंग वाली थीम चालू होती है.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{मोड से भी गहरे रंग वाली थीम चालू की जा सकती है}=1{{mode_1} से भी गहरे रंग वाली थीम चालू की जा सकती है}=2{{mode_1} और {mode_2} से भी गहरे रंग वाली थीम चालू की जा सकती है}=3{{mode_1}, {mode_2}, और {mode_3} से भी गहरे रंग वाली थीम चालू की जा सकती है}one{{mode_1}, {mode_2}, और # अन्य मोड से भी गहरे रंग वाली थीम चालू की जा सकती है}other{{mode_1}, {mode_2}, और # अन्य मोड से भी गहरे रंग वाली थीम चालू की जा सकती है}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"मोड की सेटिंग"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"हाई डाइनैमिक रेंज (एचडीआर) इमेज और वीडियो की चमक, कलर रेंज, और क्वालिटी बढ़ाएं. एचडीआर कॉन्टेंट ज़्यादा चमकदार दिखता है."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"स्क्रीन टाइमआउट"</string>
@@ -2415,7 +2412,6 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"नेविगेशन मोड, स्क्रीन घुमाने की सुविधा"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"सुझाव, राय या शिकायत भेजें"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"सर्वे में हिस्सा लें"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"दिव्यांगों के लिए Google सहायता टीम से संपर्क करें"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"सुलभता सुविधाओं से जुड़ा सर्वे"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"सुझाव/राय दें या शिकायत करें"</string>
     <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
@@ -2594,10 +2590,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"समय"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"स्टैंडर्ड"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"गहरे रंग वाली स्टैंडर्ड थीम"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"आपके डिवाइस और उसके साथ काम करने वाले ऐप्लिकेशन पर, गहरे रंग वाली थीम लागू हो जाती है"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"यह सेटिंग, ऐसे डिवाइस और ऐप्लिकेशन के लिए गहरे रंग वाली थीम चालू करती है जिन पर यह थीम काम करती है"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"एक्सपैंडेड"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"एक्सपैंडेड"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"ज़्यादा ऐप्लिकेशन पर गहरे रंग वाली थीम अपने-आप लागू होती है, ताकि उन्हें आसानी से ऐक्सेस किया जा सके"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"इससे ऐसे ज़्यादातर ऐप पर गहरे रंग वाली थीम अपने-आप लागू हो जाती है जिन पर यह थीम काम नहीं करती. इससे ऐप ऐक्सेस करना और उनका कॉन्टेंट पढ़ना आसान हो सकता है, लेकिन मुमकिन है कि कुछ ऐप का कॉन्टेंट सही से न दिखे."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"फ़ोर्स इनवर्ट, रंग बदलने की सुविधा, कंट्रास्ट"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"ऐनिमेशन हटाएं"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"स्क्रीन पर ऐनिमेशन नहीं चलेंगे"</string>
@@ -2699,8 +2695,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"रंग में सुधार करने की सुविधा के बारे में ज़्यादा जानें"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"रंग बदलने की सुविधा के बारे में जानकारी"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"रंग बदलने की सुविधा के बारे में ज़्यादा जानें"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"गहरे रंग वाली थीम के बारे में ज़्यादा जानें"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"ऐसा हो सकता है कि कुछ ऐप्लिकेशन, एक्सपैंडेड मोड में गहरे रंग वाली थीम के साथ काम न करें. अगर आपको दिखने से जुड़ी समस्याएं आ रही हैं, तो स्टैंडर्ड विकल्प का इस्तेमाल करें."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"गहरे रंग वाली थीम के बारे में ज़्यादा जानें"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"कैप्शन दिखाएं"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"सिर्फ़ इस सुविधा के साथ काम करने वाले ऐप्लिकेशन के लिए उपलब्ध है"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"कैप्शन का साइज़ और स्टाइल"</string>
@@ -5579,7 +5574,7 @@
     <string name="category_name_color" msgid="937514550918977151">"रंग"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"डिसप्ले से जुड़े अन्य कंट्रोल"</string>
     <string name="category_name_general" msgid="7737273712848115886">"सामान्य"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"गहरे रंग वाली थीम का इस्तेमाल करें"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"गहरे रंग वाली थीम का इस्तेमाल करें"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"ब्लूटूथ का इस्तेमाल करें"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"बेहतर एचडीआर चमक का इस्तेमाल करें"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"घंटी बजने से रोकने की सुविधा का इस्तेमाल करें"</string>
@@ -5795,7 +5790,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"पासवर्ड"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"अन्य डिवाइसों के साथ काम करने की क्षमता को बेहतर बनाएं"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"ऑडियो क्वालिटी कम करके, कान की मशीन जैसे डिवाइसों को अपने फ़ोन से कनेक्ट करें"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"इससे, ऑडियो शेयर करने की सुविधा बंद हो जाती है, ताकि अन्य डिवाइसों के साथ काम करने की क्षमता को बेहतर बनाने के लिए सेटिंग कॉन्फ़िगर की जा सकें"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"आस-पास चलने वाला ऑडियो सुनें"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"ऑडियो शेयर करने की सुविधा, Auracast™ में काम करती है"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"ऑडियो स्ट्रीम का नाम"</string>
@@ -5936,6 +5932,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"पिन मिटाएं"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"खाता वापस पाने के लिए ईमेल पता जोड़ें"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"अपने ईमेल पते की पुष्टि करें"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"वेबसाइट के कॉन्टेंट के आधार पर फ़िल्टर"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"वेबसाइट फ़िल्टर, साइटें ब्लॉक करना, ब्राउज़र फ़िल्टर, अश्लील साइटें ब्लॉक करना, साइटें फ़िल्टर करना, खोज के नतीजे ब्लॉक करना, अश्लील कॉन्टेंट वाले खोज नतीजे फ़िल्टर करना, कॉन्टेंट से जुड़ी पाबंदियां"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"इस फ़ोन पर कुछ ऐप्लिकेशन और ब्राउज़र के लिए अश्लील कॉन्टेंट को फ़िल्टर करें. हालांकि, अन्य ऐप्लिकेशन, डिवाइसों या ब्राउज़र में अश्लील कॉन्टेंट फिर भी दिख सकता है."</string>
@@ -5956,21 +5954,26 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"पिन मिटाते समय कोई गड़बड़ी हुई."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> ऐनिमेशन"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"कंट्रोल चालू नहीं किए जा सकते"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"कोई गड़बड़ी हुई"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"कुछ देर बाद कोशिश करें"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"वापस जाएं"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"पहचान की पुष्टि करने की सुविधा, अब ज़्यादा ऐप्लिकेशन पर उपलब्ध है"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"आपके पास, फ़िंगरप्रिंट या फ़ेस अनलॉक की सुविधा वाले किसी भी ऐप्लिकेशन पर अपनी पहचान की जानकारी को सुरक्षित रखने का विकल्प होता है"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"जानकारी देखें"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"ज़्यादा ऐप्लिकेशन को सुरक्षित रखने के लिए, पहचान की पुष्टि करने की सुविधा का इस्तेमाल करें"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"फ़िंगरप्रिंट और फ़ेस अनलॉक की सुविधा वाले सभी ऐप्लिकेशन के लिए, पहचान की पुष्टि करने की सुविधा से आपको बेहतर सुरक्षा मिलती है और ज़्यादा आसान अनुभव मिलता है. इसके लिए, आपको किसी अतिरिक्त सेटअप की ज़रूरत नहीं होती"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"\'पहचान की पुष्टि करें\' सुविधा, आपकी स्मार्टवॉच पर काम करती है"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"अन्य लोगों को फ़िंगरप्रिंट और फ़ेस अनलॉक की सुविधा वाले ऐप्लिकेशन खोलने से रोकें. स्मार्टवॉच से कनेक्ट होने पर, घूमने-फिरने के दौरान ऐप्लिकेशन की सुरक्षा बनी रहती है."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"स्मार्टवॉच पर \'पहचान की पुष्टि करें\' सुविधा का इस्तेमाल करके, ज़्यादा ऐप्लिकेशन सुरक्षित रखें"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"फ़िंगरप्रिंट और फ़ेस अनलॉक की सुविधा वाले सभी ऐप्लिकेशन पर \'पहचान की पुष्टि करें\' सुविधा का इस्तेमाल करें. चाहे फिर आप घर या ऑफ़िस जैसी भरोसेमंद जगहों पर ही क्यों न हों. अन्य जगहों पर भी बेहतर सुरक्षा पाने के लिए अपनी स्मार्टवॉच पर इस सुविधा का इस्तेमाल करें."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"अन्य सेटिंग"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"ऑटोमैटिक तरीके से भरने की सुविधा, सूचनाएं वगैरह"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"निजता सेटिंग"</string>

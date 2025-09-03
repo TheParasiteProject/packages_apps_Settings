@@ -164,10 +164,14 @@
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="tablet" msgid="8772005555323461143">"Tu i el teu fill o filla podeu suprimir les imatges i el model de la seva empremta digital o desactivar Desbloqueig amb empremta digital en qualsevol moment a Configuració. Les imatges i els models d\'empremta digital s\'emmagatzemen a la tauleta fins que se suprimeixin."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="device" msgid="7254955922685507093">"Tu i el teu fill o filla podeu suprimir les imatges i el model de la seva empremta digital o desactivar Desbloqueig amb empremta digital en qualsevol moment a Configuració. Les imatges i els models d\'empremta digital s\'emmagatzemen al dispositiu fins que se suprimeixin."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="desktop" msgid="7254955922685507093">"Tu i el teu fill o filla podeu suprimir les imatges i el model de la seva empremta digital o desactivar Desbloqueig amb empremta digital en qualsevol moment a Configuració. Les imatges i els models d\'empremta digital s\'emmagatzemen al dispositiu fins que se suprimeixin."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="default" msgid="6272159089589340181">"El telèfon es pot desbloquejar sense voler, per exemple, si algú te l\'acosta al dit."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="tablet" msgid="2420109998272019149">"La tauleta es pot desbloquejar sense voler, per exemple, si algú te l\'acosta al dit."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="device" msgid="5915844445830045866">"El dispositiu es pot desbloquejar sense voler, per exemple, si algú te l\'acosta al dit."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="desktop" msgid="5915844445830045866">"El dispositiu es pot desbloquejar sense voler, per exemple, si algú te l\'acosta al dit."</string>
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (6838578698434849838) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (7796353046744228477) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (5075445491909690772) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (5075445491909690772) -->
+    <skip />
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="default" msgid="6556725426776167791">"El telèfon del teu fill o filla es pot desbloquejar sense voler, per exemple, si algú l\'hi acosta al dit."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="tablet" msgid="5156581794964551571">"La tauleta del teu fill o filla es pot desbloquejar sense voler, per exemple, si algú l\'hi acosta al dit."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="device" msgid="8309101436391515400">"El dispositiu del teu fill o filla es pot desbloquejar sense voler, per exemple, si algú l\'hi acosta al dit."</string>

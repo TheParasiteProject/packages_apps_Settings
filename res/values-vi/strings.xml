@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"Giới thiệu về đầu ra âm thanh"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Định tuyến âm thanh đến thiết bị trợ thính hoặc loa điện thoại của bạn"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Công cụ liên quan"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"Gửi nhanh hơn bằng <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"Để chia sẻ nhanh nhất với các thiết bị Android và máy tính ở gần, hãy dùng <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> dành cho Windows"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"Gửi nhanh hơn bằng <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"Để chia sẻ nhanh nhất với các thiết bị Android và máy tính ở gần, hãy dùng <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> dành cho Windows"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Nhạc chuông và chuông báo"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"Âm thanh trong cuộc gọi"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Âm thanh nội dung nghe nhìn và hệ thống"</string>
@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Sử dụng chế độ cài đặt mới?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Nếu màn hình không hoạt động như bạn mong muốn, bạn có thể quay lại các chế độ cài đặt trước đây"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"Sử dụng chế độ cài đặt"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"Màn hình: %1$s. Nhấn đúp và giữ để kéo hoặc xem các thao tác di chuyển."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"Di chuyển lên"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"Di chuyển xuống"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"Di chuyển sang trái"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"Di chuyển sang phải"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"phản chiếu"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"Bật hiển thị không dây"</string>
@@ -1412,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"Hình ảnh chuẩn"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"Hình ảnh HDR"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"Chế độ cài đặt này chỉ ảnh hưởng đến những hình ảnh và video hỗ trợ Dải động cao (HDR)."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"Cân bằng trắng của màn hình"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"Tiếp tục dùng ứng dụng sau khi gập điện thoại"</string>
@@ -1479,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Dùng một nền tối để màn hình dễ nhìn hơn và giảm mức sử dụng pin trên một số màn hình. Khi màn hình đang tắt, giao diện sẽ thay đổi nếu bạn có lịch biểu."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Giao diện tối đang tuân thủ lịch biểu của Chế độ giờ đi ngủ"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Cài đặt Chế độ giờ đi ngủ"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Các chế độ cũng có thể bật Giao diện tối.}=1{{mode_1} cũng bật Giao diện tối.}=2{{mode_1} và {mode_2} cũng bật Giao diện tối.}=3{{mode_1}, {mode_2} và {mode_3} cũng bật Giao diện tối.}other{{mode_1}, {mode_2} và # chế độ khác cũng bật Giao diện tối.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{Các chế độ cũng có thể bật giao diện tối}=1{{mode_1} cũng bật giao diện tối}=2{{mode_1} và {mode_2} cũng bật giao diện tối}=3{{mode_1}, {mode_2} và {mode_3} cũng bật giao diện tối}other{{mode_1}, {mode_2} và # chế độ khác cũng bật giao diện tối}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Cài đặt Chế độ"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Tăng độ sáng, mở rộng dải màu và cải thiện độ rõ nét cho hình ảnh và video có Dải động cao (HDR). Nội dung HDR sẽ hiển thị sáng hơn."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Thời gian chờ khóa màn hình"</string>
@@ -2415,7 +2412,6 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Chế độ thao tác, xoay màn hình"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Gửi phản hồi"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Tham gia khảo sát"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Liên hệ với Nhóm hỗ trợ người khuyết tật của Google"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Khảo sát về khả năng hỗ trợ tiếp cận"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Chia sẻ ý kiến phản hồi của bạn"</string>
     <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
@@ -2594,10 +2590,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"Hẹn giờ"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Tiêu chuẩn"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"Giao diện tối tiêu chuẩn"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Áp dụng Giao diện tối trên thiết bị và các ứng dụng được hỗ trợ"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"Bật giao diện tối cho thiết bị và các ứng dụng hỗ trợ giao diện tối"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Đã mở rộng"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"Giao diện tối mở rộng"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Tự động áp dụng Giao diện tối cho nhiều ứng dụng hơn để cải thiện khả năng hỗ trợ tiếp cận"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"Tự động áp dụng giao diện tối cho hầu hết các ứng dụng không hỗ trợ giao diện tối. Điều này có thể cải thiện khả năng tiếp cận và khả năng đọc, nhưng có thể khiến một số ứng dụng hiển thị không chính xác."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"buộc đảo ngược, đảo màu, độ tương phản"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Xóa hiệu ứng động"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Giảm chuyển động trên màn hình"</string>
@@ -2699,8 +2695,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"Tìm hiểu thêm về tính năng chỉnh màu"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"Giới thiệu về tính năng đảo màu"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"Tìm hiểu thêm về tính năng đảo màu"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"Tìm hiểu thêm về Giao diện tối"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"Một số ứng dụng có thể không hỗ trợ lựa chọn Giao diện tối mở rộng. Nếu bạn gặp vấn đề về giao diện, hãy dùng chế độ tiêu chuẩn."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"Tìm hiểu thêm về giao diện tối"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Hiện phụ đề"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"Chỉ dành cho ứng dụng được hỗ trợ"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Cỡ chữ và kiểu phụ đề"</string>
@@ -5579,7 +5574,7 @@
     <string name="category_name_color" msgid="937514550918977151">"Màu"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"Các chế độ điều khiển màn hình khác"</string>
     <string name="category_name_general" msgid="7737273712848115886">"Chung"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"Sử dụng Giao diện tối"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"Dùng giao diện tối"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"Bật Bluetooth"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"Sử dụng độ sáng HDR nâng cao"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"Sử dụng chế độ ngăn đổ chuông"</string>
@@ -5795,7 +5790,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Mật khẩu"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Cải thiện khả năng tương thích"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Giúp một số thiết bị (như thiết bị trợ thính) kết nối bằng cách giảm chất lượng âm thanh"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"Tắt tính năng chia sẻ âm thanh để định cấu hình khả năng tương thích"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Nghe âm thanh ở gần"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Tính năng chia sẻ âm thanh có hỗ trợ Auracast™"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Tên luồng âm thanh"</string>
@@ -5936,6 +5932,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Xoá mã PIN"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Thêm email khôi phục"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Xác minh email của bạn"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Bộ lọc nội dung trang web"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Bộ lọc trang web, Chặn trang web, Bộ lọc trình duyệt, Chặn trang web có nội dung phản cảm, Lọc trang web, Chặn kết quả tìm kiếm, Lọc kết quả tìm kiếm có nội dung phản cảm, giới hạn nội dung"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Giúp lọc nội dung phản cảm trên một số ứng dụng và trình duyệt trên điện thoại này. Nội dung phản cảm có thể vẫn hiển thị trên các ứng dụng, thiết bị hoặc trình duyệt khác."</string>
@@ -5956,21 +5954,26 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"Đã xảy ra lỗi khi cố gắng xoá mã PIN."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"Ảnh động <xliff:g id="FEATURE">%1$s</xliff:g>"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"Không bật được chế độ kiểm soát"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Đã xảy ra lỗi"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Hãy thử lại sau"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Quay lại"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"Tính năng Kiểm tra danh tính hiện có trên nhiều ứng dụng hơn"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Bạn có thể bảo vệ danh tính của mình trên mọi ứng dụng có tính năng Mở khoá bằng vân tay hoặc Mở khoá bằng khuôn mặt để nhận dạng bạn"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Xem chi tiết"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"Sử dụng tính năng Kiểm tra danh tính để bảo vệ nhiều ứng dụng hơn"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"Khi dùng tính năng Kiểm tra danh tính cho mọi ứng dụng hỗ trợ tính năng Mở khoá bằng vân tay và Mở khoá bằng khuôn mặt, bạn sẽ được bảo vệ tốt hơn và có trải nghiệm nhất quán mà không cần thiết lập thêm"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"Tính năng Kiểm tra danh tính hoạt động với đồng hồ"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Ngăn người khác mở các ứng dụng cần tính năng Mở khoá bằng vân tay hoặc Mở khoá bằng khuôn mặt. Khi kết nối với đồng hồ, bạn có thể di chuyển dễ dàng hơn mà vẫn đảm bảo an toàn."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Dùng tính năng Kiểm tra danh tính và đồng hồ trên nhiều ứng dụng hơn"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Nhớ bảo vệ danh tính của bạn trên mọi ứng dụng hỗ trợ tính năng Mở khoá bằng vân tay và Mở khoá bằng khuôn mặt ở những địa điểm đáng tin cậy như nhà riêng hoặc văn phòng. Hãy dùng tính năng Kiểm tra danh tính trên đồng hồ để tăng cường khả năng bảo vệ, ngay cả khi bạn ở ngoài địa điểm đáng tin cậy."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"Chế độ cài đặt khác"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"Tự động điền, thông báo và nhiều chế độ cài đặt khác"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"Chế độ kiểm soát quyền riêng tư"</string>

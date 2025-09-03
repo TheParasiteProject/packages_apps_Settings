@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-package com.android.settings.appfunctions.sources
+package com.android.settings.appfunctions.providersources
 
 import android.content.Context
-import android.os.UserManager
-import com.android.settings.Utils
+import android.provider.Settings
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
 
-class ManagedProfileStateSource : DeviceStateSource {
+class LockScreenStateSource : DeviceStateSource {
     override val appFunctionType: DeviceStateAppFunctionType =
         DeviceStateAppFunctionType.GET_UNCATEGORIZED
 
@@ -31,18 +30,22 @@ class ManagedProfileStateSource : DeviceStateSource {
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): List<PerScreenDeviceStates> {
-        val userManager = context.getSystemService(Context.USER_SERVICE) as UserManager
-        val hasManagedProfile = Utils.getManagedProfile(userManager) != null
+        val areNotificationsOnLockScreenEnabled =
+            Settings.Secure.getInt(
+                context.contentResolver,
+                Settings.Secure.LOCK_SCREEN_SHOW_NOTIFICATIONS,
+                0,
+            ) == 1
 
         val item =
             DeviceStateItem(
-                key = "has_managed_profile",
-                purpose = "has_managed_profile",
-                jsonValue = hasManagedProfile.toString(),
+                key = "lock_screen_notification_global_pref",
+                purpose = "lock_screen_notification_global_pref",
+                jsonValue = areNotificationsOnLockScreenEnabled.toString(),
             )
 
         return listOf(
-            PerScreenDeviceStates(description = "Managed profile", deviceStateItems = listOf(item))
+            PerScreenDeviceStates(description = "Lock screen", deviceStateItems = listOf(item))
         )
     }
 }

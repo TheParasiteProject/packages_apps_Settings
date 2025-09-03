@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.appfunctions.sources
+package com.android.settings.appfunctions.providersources
 
 import android.content.Context
 import android.provider.Settings
@@ -22,30 +22,30 @@ import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
 
-class LockScreenStateSource : DeviceStateSource {
+class BatterySaverStateSource : DeviceStateSource {
     override val appFunctionType: DeviceStateAppFunctionType =
-        DeviceStateAppFunctionType.GET_UNCATEGORIZED
+        DeviceStateAppFunctionType.GET_BATTERY
 
     override suspend fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): List<PerScreenDeviceStates> {
-        val areNotificationsOnLockScreenEnabled =
-            Settings.Secure.getInt(
-                context.contentResolver,
-                Settings.Secure.LOCK_SCREEN_SHOW_NOTIFICATIONS,
-                0,
+        val areRemindersEnabled =
+            Settings.Global.getInt(
+                context.getContentResolver(),
+                Settings.Global.LOW_POWER_MODE_REMINDER_ENABLED,
+                1,
             ) == 1
 
         val item =
             DeviceStateItem(
-                key = "lock_screen_notification_global_pref",
-                purpose = "lock_screen_notification_global_pref",
-                jsonValue = areNotificationsOnLockScreenEnabled.toString(),
+                key = "battery_saver_reminders",
+                purpose = "battery_saver_reminders",
+                jsonValue = areRemindersEnabled.toString(),
             )
 
         return listOf(
-            PerScreenDeviceStates(description = "Lock screen", deviceStateItems = listOf(item))
+            PerScreenDeviceStates(description = "Battery Saver", deviceStateItems = listOf(item))
         )
     }
 }

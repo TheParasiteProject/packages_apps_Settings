@@ -164,10 +164,14 @@
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="tablet" msgid="8772005555323461143">"Magagawa mo at ng iyong anak na i-delete ang mga larawan at modelo ng kanyang fingerprint, o i-off ang Pag-unlock Gamit ang Fingerprint anumang oras sa Mga Setting. Naka-store ang mga larawan at modelo ng fingerprint sa tablet hanggang sa i-delete ang mga ito."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="device" msgid="7254955922685507093">"Magagawa mo at ng iyong anak na i-delete ang mga larawan at modelo ng kanyang fingerprint, o i-off ang Pag-unlock Gamit ang Fingerprint anumang oras sa Mga Setting. Naka-store ang mga larawan at modelo ng fingerprint sa device hanggang sa i-delete ang mga ito."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4" product="desktop" msgid="7254955922685507093">"Magagawa mo at ng iyong anak na i-delete ang mga larawan at modelo ng kanyang fingerprint, o i-off ang Pag-unlock Gamit ang Fingerprint anumang oras sa Mga Setting. Naka-store ang mga larawan at modelo ng fingerprint sa device hanggang sa i-delete ang mga ito."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="default" msgid="6272159089589340181">"Puwedeng ma-unlock ang iyong telepono nang hindi sinasadya, gaya kung may magtapat nito sa daliri mo."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="tablet" msgid="2420109998272019149">"Puwedeng ma-unlock ang iyong tablet nang hindi sinasadya, gaya kung may magdikit nito sa daliri mo."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="device" msgid="5915844445830045866">"Puwedeng ma-unlock ang iyong device nang hindi sinasadya, gaya kung may magdikit nito sa daliri mo."</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_5" product="desktop" msgid="5915844445830045866">"Puwedeng ma-unlock ang iyong device nang hindi sinasadya, gaya kung may magdikit nito sa daliri mo."</string>
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (6838578698434849838) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (7796353046744228477) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (5075445491909690772) -->
+    <skip />
+    <!-- no translation found for security_settings_fingerprint_v2_enroll_introduction_footer_message_5 (5075445491909690772) -->
+    <skip />
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="default" msgid="6556725426776167791">"Puwedeng ma-unlock ang telepono ng iyong anak nang hindi niya sinasadya, gaya ng kapag may taong naglapat nito sa kanyang daliri."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="tablet" msgid="5156581794964551571">"Puwedeng ma-unlock ang tablet ng iyong anak nang hindi niya sinasadya, gaya ng kapag may taong naglapat nito sa kanyang daliri."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_5" product="device" msgid="8309101436391515400">"Puwedeng ma-unlock ang device ng iyong anak nang hindi niya sinasadya, gaya ng kapag may taong naglapat nito sa kanyang daliri."</string>

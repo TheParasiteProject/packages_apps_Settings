@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"ஆடியோ அவுட்புட் - அறிமுகம்"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"உங்கள் செவித்துணைக் கருவிக்கோ மொபைல் ஸ்பீக்கருக்கோ ஒலிகளை அனுப்பும்"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"தொடர்புடையவை"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> மூலம் விரைவாக அனுப்புங்கள்"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"அருகிலுள்ள Android மற்றும் PCகளுடன் விரைவாகப் பகிர, Windowsஸுக்கான <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ஆப்ஸைப் பயன்படுத்திப் பாருங்கள்"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> மூலம் விரைவாக அனுப்புங்கள்"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"அருகிலுள்ள Android மற்றும் PCகளுடன் விரைவாகப் பகிர, Windowsஸுக்கான <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ஆப்ஸைப் பயன்படுத்திப் பாருங்கள்"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"ரிங்டோன் மற்றும் அலாரங்கள்"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"அழைப்புகளின்போதான ஆடியோ"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"மீடியா மற்றும் சிஸ்டம் ஒலிகள்"</string>
@@ -670,7 +670,7 @@
     <string name="private_space_fingerprint_unlock_title_new" msgid="5524309056115678364">"ரகசிய இடத்திற்கான கைரேகை"</string>
     <string name="private_space_face_unlock_title" msgid="462248384776453613">"ரகசிய இடத்திற்கான முகம் காட்டித் திறத்தல்"</string>
     <string name="private_space_biometric_unlock_title" msgid="1978145237698659673">"ரகசிய இடத்திற்கான முகம் மற்றும் கைரேகை அன்லாக்"</string>
-    <string name="private_space_fingerprint_enroll_introduction_title" msgid="5187730641333680942">"ரகசிய இடத்திற்கு \'கைரேகை அன்லாக்\' அம்சத்தை அமைத்தல்"</string>
+    <string name="private_space_fingerprint_enroll_introduction_title" msgid="5187730641333680942">"ரகசிய இடத்திற்கு கைரேகை அன்லாக் அமைத்தல்"</string>
     <string name="private_space_fingerprint_enroll_introduction_message" msgid="9092068873421435300">"உங்கள் கைரேகையைப் பயன்படுத்தி ரகசிய இடத்தை அன்லாக் செய்யலாம் அல்லது ஆப்ஸில் உள்நுழைதல், பர்ச்சேஸை அங்கீகரித்தல் போன்ற செயல்பாடுகளின்போது அதைச் செய்வது நீங்கள்தான் என்பதை உறுதிப்படுத்தலாம்"</string>
     <string name="private_space_fingerprint_enroll_introduction_footer_message" msgid="7125255484447984854">"உங்கள் விரலுக்கு அருகே மொபைலை வேறொருவர் பிடித்திருப்பது போன்ற சூழல்களில், தற்செயலாக உங்கள் விரல்கள் மொபைலில் பட்டால்கூட உங்கள் ரகசிய இடம் அன்லாக் ஆகிவிடக்கூடும்."</string>
     <string name="private_space_fingerprint_enroll_finish_message" msgid="4754797926493316965">"உங்கள் கைரேகையைப் பயன்படுத்தி ரகசிய இடத்தை அன்லாக் செய்யலாம் அல்லது பர்ச்சேஸ்களை அங்கீகரிக்கலாம்"</string>
@@ -1020,16 +1020,11 @@
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"புதிய அமைப்புகளைப் பயன்படுத்தவா?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"உங்கள் டிஸ்ப்ளே நீங்கள் விரும்பியபடி வேலை செய்யவில்லை என்றால், முந்தைய அமைப்புகளுக்கு மாற்றியமைக்கலாம்"</string>
     <string name="external_display_resolution_change_dialog_confirm" msgid="8451683005995976984">"அமைப்புகளைப் பயன்படுத்து"</string>
-    <!-- no translation found for external_display_topology_display_block_content_description (4638018879987232608) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_up (5585023811277652685) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_down (497925070033309302) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_left (5207345941599286131) -->
-    <skip />
-    <!-- no translation found for external_display_topology_a11y_action_move_right (6258194449439072825) -->
-    <skip />
+    <string name="external_display_topology_display_block_content_description" msgid="4638018879987232608">"டிஸ்பிளே: %1$s. இழுக்கவோ நகர்த்துவதற்கான செயல்களைப் பார்க்கவோ இருமுறை தட்டிப் பிடிக்கவும்."</string>
+    <string name="external_display_topology_a11y_action_move_up" msgid="5585023811277652685">"மேலே நகர்த்தும்"</string>
+    <string name="external_display_topology_a11y_action_move_down" msgid="497925070033309302">"கீழே நகர்த்தும்"</string>
+    <string name="external_display_topology_a11y_action_move_left" msgid="5207345941599286131">"இடதுபுறம் நகர்த்தும்"</string>
+    <string name="external_display_topology_a11y_action_move_right" msgid="6258194449439072825">"வலதுபுறம் நகர்த்தும்"</string>
     <string name="wifi_display_settings_title" msgid="2622548133505158832">"Google Cast"</string>
     <string name="keywords_wifi_display_settings" msgid="5753883229564422679">"பிரதிபலித்தல்"</string>
     <string name="wifi_display_enable_menu_item" msgid="7391841780777318134">"வயர்லெஸ் காட்சியை இயக்கு"</string>
@@ -1412,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"இயல்பான படம்"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR படம்"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"ஹை டைனமிக் ரேஞ்சை (HDR) ஆதரிக்கும் படங்களிலும் வீடியோக்களிலும் மட்டுமே இந்த அமைப்பு மாற்றத்தை ஏற்படுத்தும்."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"வெண் சமநிலையை காட்சிப்படுத்தல்"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"மடக்கிய நிலையிலேயே தொடர்ந்து ஆப்ஸைப் பயன்படுத்துதல்"</string>
@@ -1479,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"உங்கள் திரையை மேலும் சௌகரியமாகப் பார்க்கவும் சில திரைகளில் பேட்டரி உபயோகத்தைக் குறைக்கவும் டார்க் பின்புலத்தைப் பயன்படுத்துங்கள். நீங்கள் திட்ட அட்டவணையை அமைத்திருந்தால், திரை ஆஃப் ஆகியிருக்கும்போது உங்கள் தீம் மாறும்."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"தற்போது உங்கள் உறக்கநேரப் பயன்முறையின் அட்டவணையை டார்க் தீம் பின்பற்றுகிறது"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"உறக்கநேரப் பயன்முறை அமைப்புகள்"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{பயன்முறைகளும் டார்க் தீமை ஆன் செய்யலாம்.}=1{{mode_1} டார்க் தீமை ஆன் செய்யும்.}=2{{mode_1}, {mode_2} பயன்முறைகளும் டார்க் தீமை ஆன் செய்யும்.}=3{{mode_1}, {mode_2}, {mode_3} பயன்முறைகளும் டார்க் தீமை ஆன் செய்யும்.}other{{mode_1}, {mode_2} மற்றும் # பயன்முறைகளும் டார்க் தீமை ஆன் செய்யும்.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{மோட்களும் டார்க் தீமை ஆன் செய்யலாம்}=1{{mode_1} மோடும் டார்க் தீமை ஆன் செய்யும்}=2{{mode_1}, {mode_2} ஆகிய மோட்களும் டார்க் தீமை ஆன் செய்யும்}=3{{mode_1}, {mode_2}, {mode_3} ஆகிய மோட்களும் டார்க் தீமை ஆன் செய்யும்}other{{mode_1}, {mode_2} மற்றும் # மோட்களும் டார்க் தீமை ஆன் செய்யும்}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"பயன்முறைகளுக்கான அமைப்புகள்"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"ஹை டைனமிக் ரேஞ்ச் (HDR) படங்களிலும் வீடியோக்களிலும் வண்ண அளவு மற்றும் தெளிவுத்தன்மையை அதிகரிக்கும். HDR உள்ளடக்கம் பிரகாசமாகத் தெரியும்."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"திரை அணைவு நேரம்"</string>
@@ -2415,7 +2412,6 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"நகர்தல் பயன்முறை, திரைச் சுழற்சி"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"கருத்தை அனுப்பு"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"கருத்துக்கணிப்பைத் தொடங்கு"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google உதவிமையத்தைத் தொடர்புகொள்க"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"மாற்றுத்திறன் வசதி குறித்த கருத்துக்கணிப்பு"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"உங்கள் கருத்தைப் பகிருங்கள்"</string>
     <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
@@ -2594,10 +2590,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"நேரம்"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"இயல்புநிலை"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"இயல்புநிலை டார்க் தீம்"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"உங்கள் சாதனம் மற்றும் ஆதரிக்கப்படும் ஆப்ஸ் முழுவதும் டார்க் தீம் அமைக்கப்படும்"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"உங்கள் சாதனத்திலும் டார்க் தீமை ஆதரிக்கும் ஆப்ஸிலும் டார்க் தீமை ஆன் செய்யும்"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"விரிவாக்கப்பட்டது"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"விரிவாக்கப்பட்ட டார்க் தீம்"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"மேம்படுத்தப்பட்ட மாற்றுத்திறன் வசதிக்காக அதிக ஆப்ஸில் டார்க் தீம் தானாகவே அமைக்கப்படும்"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"டார்க் தீமை ஆதரிக்காத பெரும்பாலான ஆப்ஸில் அந்தத் தீம் தானாகப் பயன்படுத்தப்படும். இது மாற்றுத்திறன் வசதி, வாசிப்புத்தன்மையை மேம்படுத்தலாம், ஆனால் சில ஆப்ஸ் தவறாகக் காட்டக்கூடும்."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"உடனே நெகடிவ் ஆக்குதல், கலர் இன்வெர்ஷன், வண்ண மாறுபாடு"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"அனிமேஷன்களை அகற்று"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"திரையில் அசைவைக் குறைக்கும்"</string>
@@ -2699,8 +2695,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"கலர் கரெக்‌ஷன் பற்றி மேலும் அறிந்துகொள்ளுங்கள்"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"கலர் இன்வெர்ஷன் பற்றிய அறிமுகம்"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"கலர் இன்வெர்ஷன் பற்றி மேலும் அறிந்துகொள்ளுங்கள்"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"டார்க் தீம் பற்றி மேலும் அறிக"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"சில ஆப்ஸ் விரிவாக்கப்பட்ட விருப்பத்தில் டார்க் தீமை ஆதரிக்காமல் இருக்கலாம். தோற்றம் தொடர்பான சிக்கல்களை எதிர்கொண்டால் இயல்புநிலை விருப்பத்தைப் பயன்படுத்தவும்."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"டார்க் தீம் பற்றி மேலும் அறிக"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"சப்டைட்டிலைக் காட்டுதல்"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"ஆதரிக்கும் ஆப்ஸுக்கு மட்டும்"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"வசனத்தின் எழுத்தளவு மற்றும் தோற்றம்"</string>
@@ -5579,7 +5574,7 @@
     <string name="category_name_color" msgid="937514550918977151">"வண்ணம்"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"பிற திரைக் கட்டுப்பாடுகள்"</string>
     <string name="category_name_general" msgid="7737273712848115886">"பொதுவானவை"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"டார்க் தீமைப் பயன்படுத்துதல்"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"டார்க் தீமைப் பயன்படுத்துதல்"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"புளூடூத்தைப் பயன்படுத்துதல்"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"மேம்பட்ட HDR ஒளிர்வைப் பயன்படுத்து"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"ஒலிக்காமல் தடுக்கும் அம்சத்தைப் பயன்படுத்துதல்"</string>
@@ -5795,7 +5790,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"கடவுச்சொல்"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"இணக்கத்தன்மையை மேம்படுத்துதல்"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"ஆடியோ தரத்தைக் குறைப்பதன் மூலம் செவித்துணைக் கருவிகள் போன்ற சில சாதனங்களை இணைக்க உதவுகிறது"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"இணக்கத்தன்மையை உள்ளமைக்க ஆடியோ பகிர்வை முடக்குகிறது"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"அருகிலுள்ள ஆடியோவைக் கேளுங்கள்"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"ஆடியோ பகிர்வு Auracast™ ஐ ஆதரிக்கிறது"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"ஆடியோ ஸ்ட்ரீமின் பெயர்"</string>
@@ -5936,6 +5932,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"பின்னை நீக்குதல்"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"மீட்பு மின்னஞ்சல் முகவரியைச் சேருங்கள்"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"மின்னஞ்சல் முகவரியை உறுதிப்படுத்துங்கள்"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"இணையதள உள்ளடக்க ஃபில்ட்டர்கள்"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"இணையதள ஃபில்டர்கள், தளங்களைத் தடுத்தல், பிரவுசர் ஃபில்டர்கள், வெளிப்படையான தளங்களைத் தடுத்தல், தளங்களை ஃபில்டர் செய்தல், தேடல் முடிவுகளைத் தடுத்தல், வெளிப்படையான தேடல் முடிவுகளை ஃபில்டர் செய்தல், உள்ளடக்கக் கட்டுப்பாடுகள்"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"இந்த மொபைலில் உள்ள சில ஆப்ஸிலும் பிரவுசர்களிலும் வெளிப்படையான உள்ளடக்கத்தை ஃபில்டர் செய்ய உதவும். வெளிப்படையான உள்ளடக்கம் பிற ஆப்ஸ், சாதனங்கள் அல்லது பிரவுசர்களில் இப்போதும் காட்டப்படலாம்."</string>
@@ -5956,21 +5954,26 @@
     <string name="supervision_delete_pin_error_message" msgid="3400536232973539259">"பின்னை நீக்க முயலும்போது பிழை ஏற்பட்டது."</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"<xliff:g id="FEATURE">%1$s</xliff:g> அனிமேஷன்"</string>
     <string name="supervision_multi_profile_error_title" msgid="5570178018386518727">"கட்டுப்பாடுகளை ஆன் செய்ய முடியவில்லை"</string>
-    <!-- no translation found for supervision_generic_error_page_title (1890873741445464953) -->
+    <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"ஏதோ தவறாகிவிட்டது"</string>
+    <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"பிறகு முயலவும்"</string>
+    <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"பின்செல்"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_message (1532001782155323205) -->
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
     <skip />
-    <!-- no translation found for supervision_generic_error_page_button_label (8972577027819946993) -->
-    <skip />
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"அடையாளச் சரிபார்ப்பு கூடுதல் ஆப்ஸில் கிடைக்கிறது"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"உங்களை அடையாளம் காண கைரேகை, முகம் காட்டித் திறத்தல் ஆகியவற்றை வழங்கும் எந்த ஆப்ஸிலும் உங்கள் அடையாளப் பாதுகாப்பை நீங்கள் பத்திரமாக வைத்திருக்கலாம்"</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"விவரங்களைக் காட்டு"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"கூடுதல் ஆப்ஸைப் பாதுகாக்க அடையாளச் சரிபார்ப்பைப் பயன்படுத்துங்கள்"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"கைரேகையையும் முகம் காட்டித் திறத்தலையும் ஆதரிக்கும் ஆப்ஸ் அனைத்திற்கும் அடையாளச் சரிபார்ப்பைப் பயன்படுத்தும்போது, கூடுதல் அமைவு எதுவுமின்றி உறுதியான பாதுகாப்பையும் இன்னும் சீரான அனுபவத்தையும் பெறுகிறீர்கள்"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"உங்கள் வாட்ச்சில் அடையாளச் சரிபார்ப்பு வேலை செய்கிறது"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"கைரேகை அல்லது முகம் காட்டித் திறத்தல் தேவைப்படும் ஆப்ஸை மற்றவர்கள் திறப்பதைத் தடுக்கலாம். உங்கள் வாட்ச்சுடன் இணைக்கப்படும்போது, கூடுதல் இணக்கத்தன்மையுடன் உங்கள் பாதுகாப்பு உறுதிசெய்யப்படும்."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"அடையாளச் சரிபார்ப்பு மற்றும் வாட்ச்சை மேலும் பல ஆப்ஸில் பயன்படுத்துங்கள்"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"உங்கள் வீடு, அலுவலகம் போன்ற நம்பகமான இடங்களில் கைரேகை மற்றும் முகம் காட்டித் திறத்தலை ஆதரிக்கும் அனைத்து ஆப்ஸிலும் உங்கள் அடையாளம் பாதுகாக்கப்படுவதை உறுதிசெய்துகொள்ளலாம். நம்பகமான இடங்களுக்கு வெளியே உங்கள் பாதுகாப்பை நீட்டிக்க உங்கள் வாட்ச்சில் அடையாளச் சரிபார்ப்பு அம்சத்தைப் பயன்படுத்தவும்."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"பிற அமைப்புகள்"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"தன்னிரப்பி, அறிவிப்புகள் மற்றும் பல"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"தனியுரிமைக் கட்டுப்பாடுகள்"</string>

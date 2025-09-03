@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"오디오 출력 정보"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"보청기 또는 휴대전화 스피커로 사운드 라우팅"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"관련 도구"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>을 사용해 더 빠르게 전송하세요"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"주변에 있는 Android 기기 및 PC와 공유하는 가장 빠른 방법인 Windows용 <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>을 사용해 보세요."</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>을 사용해 더 빠르게 전송하세요"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"주변에 있는 Android 기기 및 PC와 공유하는 가장 빠른 방법인 Windows용 <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>을 사용해 보세요."</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"벨소리 및 알람"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"통화 중 오디오"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"미디어 및 시스템 소리"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"표준 이미지"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR 이미지"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"이 설정은 HDR(High Dynamic Range)을 지원하는 이미지와 동영상에만 영향을 미칩니다."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"디스플레이 화이트 밸런스"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"접은 상태에서 앱 계속 사용"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"어두운 배경을 사용하면 화면을 더 편하게 볼 수 있으며 일부 화면에서 배터리 사용량을 줄일 수 있습니다. 일정을 설정해 둔 경우 화면이 꺼져 있을 때 테마가 변경됩니다."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"어두운 테마는 현재 취침 모드 일정을 따릅니다."</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"취침 모드 설정"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{모드에서도 어두운 테마를 사용 설정할 수 있습니다.}=1{{mode_1}에서도 어두운 테마가 사용 설정됩니다.}=2{{mode_1}, {mode_2}, 에서도 어두운 테마가 사용 설정됩니다.}=3{{mode_1}, {mode_2}, {mode_3}에서도 어두운 테마가 사용 설정됩니다.}other{{mode_1}, {mode_2} 외 #개 모드에서도 어두운 테마가 사용 설정됩니다.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{모드에서도 어두운 테마가 사용 설정됩니다.}=1{{mode_1}에서도 어두운 테마가 사용 설정됩니다.}=2{{mode_1}, {mode_2}에서도 어두운 테마가 사용 설정됩니다.}=3{{mode_1}, {mode_2}, {mode_3}에서도 어두운 테마가 사용 설정됩니다.}other{{mode_1}, {mode_2} 외 #개 모드에서도 어두운 테마가 사용 설정됩니다.}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"모드 설정"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"HDR(High Dynamic Range) 이미지 및 동영상의 색상 범위와 선명도를 확장하고 밝기를 향상시킵니다. HDR 콘텐츠가 더 밝게 표시됩니다."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"화면 자동 잠금 시간"</string>
@@ -2410,7 +2412,6 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"탐색 모드, 화면 회전"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"의견 보내기"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"설문조사 참여"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google 장애인 전담 지원팀에 문의하기"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"접근성 설문조사"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"의견 공유"</string>
     <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
@@ -2589,10 +2590,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"시간 설정"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"표준"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"표준 어두운 테마"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"기기 및 지원되는 앱에 어두운 테마를 적용합니다"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"어두운 테마를 지원하는 기기 및 앱에 어두운 테마를 사용 설정합니다."</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"확장형"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"확장형 어두운 테마"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"더 많은 앱에 어두운 테마를 자동으로 적용하여 접근성을 개선합니다"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"어두운 테마를 지원하지 않는 대부분의 앱에 어두운 테마를 자동으로 적용합니다. 이렇게 하면 접근성과 가독성이 개선될 수 있지만 일부 앱이 잘못 표시될 수 있습니다."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"강제 반전, 색상 반전, 대비"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"애니메이션 삭제"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"화면상의 움직임을 줄임"</string>
@@ -2694,8 +2695,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"색상 보정에 관해 자세히 알아보기"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"색상 반전 정보"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"색상 반전에 관해 자세히 알아보기"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"어두운 테마 자세히 알아보기"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"일부 앱은 확장형 옵션에서 어두운 테마를 지원하지 않을 수 있습니다. 표시되는 방식에 문제가 발생하면 표준 옵션을 사용하세요."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"어두운 테마 자세히 알아보기"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"자막 보기"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"지원되는 앱만 해당"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"자막 크기 및 스타일"</string>
@@ -5574,7 +5574,7 @@
     <string name="category_name_color" msgid="937514550918977151">"색상"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"기타 디스플레이 제어"</string>
     <string name="category_name_general" msgid="7737273712848115886">"일반"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"어두운 테마 사용"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"어두운 테마 사용"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"블루투스 사용"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"향상된 HDR 밝기 사용"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"벨 울림 방지 사용"</string>
@@ -5790,7 +5790,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"비밀번호"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"호환성 개선"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"음질을 낮춰 보청기와 같은 일부 기기의 연결을 지원합니다."</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"호환성 구성을 위해 오디오 공유를 사용 중지합니다."</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"주변 오디오 듣기"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"오디오 공유는 Auracast™를 지원합니다."</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"오디오 스트림 이름"</string>
@@ -5931,6 +5932,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"PIN 삭제"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"복구 이메일 추가"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"이메일을 확인하세요"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"웹사이트 콘텐츠 필터"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"웹사이트 필터, 사이트 차단, 브라우저 필터, 선정적인 사이트 차단, 사이트 필터링, 검색 결과 차단, 선정적인 검색 결과 필터링, 콘텐츠 제한"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"이 휴대전화의 일부 앱과 브라우저에서 선정적인 콘텐츠를 필터링하는 데 도움이 됩니다. 다른 앱, 기기 또는 브라우저에는 선정적인 콘텐츠가 계속 표시될 수 있습니다."</string>
@@ -5954,15 +5957,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"문제가 발생했습니다"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"나중에 다시 시도하세요."</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"뒤로"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"더 많은 앱에서 본인 확인을 사용할 수 있습니다"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"지문 또는 얼굴 인식 잠금 해제를 제공하여 사용자를 식별하는 모든 앱에서 신원 보호를 강화할 수 있습니다."</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"세부정보 보기"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"본인 확인을 사용하여 더 많은 앱을 보호하세요"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"지문 및 얼굴 인식 잠금 해제를 지원하는 모든 앱에 본인 확인을 사용하면 추가 설정 없이 더욱 안전한 보호 및 일관된 환경을 누릴 수 있습니다."</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"본인 확인은 워치와 연동됩니다"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"다른 사용자가 지문 또는 얼굴 인식 잠금 해제가 필요한 앱을 열지 못하도록 합니다. 워치와 연결하면 이동할 때에도 보안을 유지할 수 있습니다."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"더 많은 앱에서 본인 확인 기능 및 워치를 사용하세요"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"집이나 사무실과 같은 신뢰할 수 있는 장소에서 지문 및 얼굴 인식 잠금 해제를 지원하는 앱을 사용할 때 신원 보호를 강화하세요. 워치에서 본인 확인을 사용하면 신뢰할 수 있는 장소를 벗어났을 때도 보안을 유지할 수 있습니다."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"기타 설정"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"자동 완성, 알림 등"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"개인 정보 보호 설정"</string>

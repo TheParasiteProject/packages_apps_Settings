@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.appfunctions.sources
+package com.android.settings.appfunctions.providersources
 
 import android.app.INotificationManager
 import android.app.usage.IUsageStatsManager

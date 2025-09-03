@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"Apie garso išvestį"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Nukreipkite garsus į klausos įrenginį ar telefono garsiakalbį"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Susiję"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"Siųskite greičiau su „<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>“"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"Jei norite greičiausiai bendrinti su netoliese esančiais „Android“ įrenginiais ir asmeniniais kompiuteriais, išbandykite „<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>“ sistemoje „Windows“"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"Siųskite greičiau su „<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>“"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"Jei norite greičiausiai bendrinti su netoliese esančiais „Android“ įrenginiais ir asmeniniais kompiuteriais, išbandykite „<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g>“ sistemoje „Windows“"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Skambėjimo tonas ir signalai"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"Garsas vykstant skambučiams"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Medijos ir sistemos garsai"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"Standartinis vaizdas"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR vaizdas"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"Šis nustatymas taikomas tik vaizdams ir vaizdo įrašams, kuriuose palaikomas didelis dinaminis diapazonas (HDR)."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"Pateikti baltos spalv. balansą"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"Naudoti programas, kai įrenginys sulenktas"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"Naudokite tamsų foną, kad būtų lengviau žiūrėti į ekraną ir būtų suvartojama mažiau akumuliatoriaus energijos tam tikruose ekranuose. Jei esate nustatę tvarkaraštį, tema pasikeis, kai ekranas išjungtas."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"Tamsioji tema šiuo metu veikia pagal miego režimo tvarkaraštį"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"Miego režimo nustatymai"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{Režimai taip pat gali įjungti tamsiąją temą.}=1{Režimas „{mode_1}“ taip pat įjungia tamsiąją temą.}=2{Režimai „{mode_1}“ ir „{mode_2}“ taip pat įjungia tamsiąją temą.}=3{Režimai „{mode_1}“, „{mode_2}“ ir „{mode_3}“ taip pat įjungia tamsiąją temą.}one{Režimai „{mode_1}“, „{mode_2}“ ir dar # režimas taip pat įjungia tamsiąją temą.}few{Režimai „{mode_1}“, „{mode_2}“ ir dar # režimai taip pat įjungia tamsiąją temą.}many{Režimai „{mode_1}“, „{mode_2}“ ir dar # režimo taip pat įjungia tamsiąją temą.}other{Režimai „{mode_1}“, „{mode_2}“ ir dar # režimų taip pat įjungia tamsiąją temą.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{Režimai taip pat gali įjungti tamsiąją temą}=1{Režimas „{mode_1}“ taip pat įjungia tamsiąją temą}=2{Režimai „{mode_1}“ ir „{mode_2}“ taip pat įjungia tamsiąją temą}=3{Režimai „{mode_1}“, „{mode_2}“ ir „{mode_3}“ taip pat įjungia tamsiąją temą}one{Režimai „{mode_1}“, „{mode_2}“ ir dar # režimas taip pat įjungia tamsiąją temą.}few{Režimai „{mode_1}“, „{mode_2}“ ir dar # režimai taip pat įjungia tamsiąją temą}many{Režimai „{mode_1}“, „{mode_2}“ ir dar # režimo taip pat įjungia tamsiąją temą}other{Režimai „{mode_1}“, „{mode_2}“ ir dar # režimų taip pat įjungia tamsiąją temą}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"Režimų nustatymai"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"Pašviesinkite ir išplėskite didelio dinaminio diapazono (HDR) vaizdų ir vaizdo įrašų spalvų diapazoną bei aiškumą. HDR turinys bus ryškesnis."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"Ekrano skirtasis laikas"</string>
@@ -2410,11 +2412,9 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"Naršymo režimas, ekrano pasukimas"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"Siųsti atsiliepimą"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Dalyvauti apklausoje"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Susisiekite su „Google“ palaikymo neįgaliesiems komanda"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Pritaikomumo apklausa"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Bendrinkite atsiliepimą"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"Kiek esate patenkinti tamsiąja tema?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Dalyvauti apklausoje"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Bendrinkite atsiliepimą"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Kiek esate patenkinti didinimu?"</string>
@@ -2589,10 +2589,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"Laikas"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"Įprasta"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"Standartinė tamsioji tema"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"Tamsioji tema taikoma įrenginyje ir palaikomose programose"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"Įjungia tamsiąją temą įrenginyje ir programose, kurios ją palaiko"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"Išplėsta"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"Išplėstinė tamsioji tema"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"Automatiškai taiko tamsiąją temą daugiau programų, kad pasiekiamumas būtų patobulintas"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"Automatiškai taiko tamsiąją temą daugumai programų, kurios jos nepalaiko. Tai gali pagerinti pritaikomumą ir skaitymą, bet kai kurios programos gali būti rodomos netinkamai."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"priverstinė inversija, spalvų inversija, kontrastas"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"Pašalinti animacijas"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"Sumažinkite judėjimą ekrane"</string>
@@ -2694,8 +2694,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"Sužinokite daugiau apie spalvų taisymą"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"Apie spalvų inversiją"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"Sužinokite daugiau apie spalvų inversiją"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"Sužinokite daugiau apie tamsiąją temą"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"Kai kuriose programose gali būti nepalaikoma tamsioji tema su išplėstine parinktimi. Jei kyla išvaizdos problemų, naudokite standartinę parinktį."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"Sužinokite daugiau apie tamsiąją temą"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"Rodyti subtitrus"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"Tik palaikomai programai"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"Subtitrų dydis ir stilius"</string>
@@ -5576,7 +5575,7 @@
     <string name="category_name_color" msgid="937514550918977151">"Spalva"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"Kiti ekrano valdikliai"</string>
     <string name="category_name_general" msgid="7737273712848115886">"Bendrieji"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"Tamsiosios temos naudojimas"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"Naudoti tamsiąją temą"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"„Bluetooth“ naudojimas"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"Naudoti patobulintą HDR šviesumą"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"Skambėjimo stabdymo funkcijos naudojimas"</string>
@@ -5792,7 +5791,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Slaptažodis"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Suderinamumo didinimas"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Padedama tam tikriems įrenginiams, pvz., klausos aparatams, prisijungti sumažinant garso kokybę"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"Išjungiamas garso įrašų bendrinimas, kad būtų galima konfigūruoti suderinamumą"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Garso įrašo netoliese klausymas"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Garso įrašų bendrinimo funkcija palaiko „Auracast™“"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Garso srauto pavadinimas"</string>
@@ -5933,6 +5933,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Ištrinti PIN"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Atkūrimo el. pašto adreso pridėjimas"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"El. pašto adreso patvirtinimas"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Svetainės turinio filtrai"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Svetainių filtrai, blokuojamos svetainės, naršyklės filtrai, blokuoti nepadoraus turinio svetaines, filtruoti svetaines, blokuoti paieškos rezultatus, filtruoti nepadoraus turinio paieškos rezultatus, turinio apribojimai"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Padėkite filtruoti nepadorų turinį kai kuriose programose ir naršyklėse šiame telefone. Nepadorus turinys vis tiek gali būti rodomas kitose programose, įrenginiuose ar naršyklėse."</string>
@@ -5956,15 +5958,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"Kažkas nepavyko"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"Vėliau bandykite dar kartą"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"Grįžti"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"Tapatybės patikra pasiekiama daugiau programų"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"Galite apsaugoti savo tapatybę bet kurioje programoje, kurioje naudojamas tapatybės nustatymas pagal piršto atspaudą arba atrakinimas pagal veidą"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"Žr. išsamią informaciją"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"Apsaugokite daugiau programų naudodami Tapatybės patikrą"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"Kai naudojate Tapatybės patikros funkciją visose programose, kurios palaiko atrakinimą piršto atspaudu ir atrakinimą pagal veidą, užtikrinate patikimesnę apsaugą ir nuoseklesnę patirtį – be papildomos sąrankos"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"Tapatybės patikra veikia su laikrodžiu"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"Neleiskite kitiems atidaryti programų, kurioms reikia atrakinimo piršto atspaudu arba pagal veidą. Kai esate prisijungę prie laikrodžio, jūsų saugumas užtikrinamas didesniu mobilumu."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"Naudokite tapatybės patikrą ir žiūrėkite daugiau programų"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"Užtikrinkite tapatybės apsaugą visose programose, kurios palaiko atrakinimą piršto atspaudu ir pagal veidą patikimose vietose, pvz., namuose ar biure. Naudokite Tapatybės patikrą su laikrodžiu, kad išplėstumėte apsaugą net ir už patikimų vietų ribų."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"Kiti nustatymai"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"Automatinis pildymas, pranešimai ir kt."</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"Privatumo valdikliai"</string>

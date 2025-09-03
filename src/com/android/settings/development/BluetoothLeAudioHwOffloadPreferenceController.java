@@ -126,7 +126,7 @@ public class BluetoothLeAudioHwOffloadPreferenceController
                 && SystemProperties.getBoolean(LE_AUDIO_OFFLOAD_SUPPORTED_PROPERTY, false);
         final boolean offloadDisabled =
                     SystemProperties.getBoolean(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, false);
-        return offloadSupported ? offloadDisabled : true;
+        return offloadSupported ? !offloadDisabled : true;
     }
 
     /**

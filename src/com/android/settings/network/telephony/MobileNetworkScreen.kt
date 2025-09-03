@@ -35,6 +35,7 @@ import com.android.settings.network.apn.ApnSettingsScreen
 import com.android.settings.restriction.PreferenceRestrictionMixin
 import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
+import com.android.settingslib.metadata.PreferenceIndexableProvider
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.PreferenceTitleProvider
 import com.android.settingslib.metadata.ProvidePreferenceScreen
@@ -52,6 +53,7 @@ open class MobileNetworkScreen(override val arguments: Bundle) :
     PreferenceScreenMixin,
     PreferenceAvailabilityProvider,
     PreferenceTitleProvider,
+    PreferenceIndexableProvider,
     PreferenceRestrictionMixin {
 
     private val subId =

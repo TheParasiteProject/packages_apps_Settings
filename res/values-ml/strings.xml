@@ -103,8 +103,8 @@
     <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"ഓഡിയോ ഔട്ട്‌പുട്ടിനെ കുറിച്ച്"</string>
     <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"നിങ്ങളുടെ ശ്രവണ ഉപകരണത്തിലേക്കോ ഫോൺ സ്പീക്കറിലേക്കോ ശബ്‌ദങ്ങൾ റൂട്ട് ചെയ്യുക"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"ബന്ധപ്പെട്ടവ"</string>
-    <string name="bluetooth_try_nearby_share_title" msgid="2307943703595855441">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ഉപയോഗിച്ച് അതിവേഗം അയയ്ക്കുക"</string>
-    <string name="bluetooth_try_nearby_share_summary" msgid="2808932450696996548">"സമീപമുള്ള Android, PC-കൾ എന്നിവയുമായി പങ്കിടാൻ ഏറ്റവും വേഗതയുള്ള മാർഗത്തിന്, Windows-നുള്ള <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> പരീക്ഷിക്കുക"</string>
+    <string name="bluetooth_try_nearby_share_title" msgid="2228393576097141630">"<xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> ഉപയോഗിച്ച് അതിവേഗം അയയ്ക്കുക"</string>
+    <string name="bluetooth_try_nearby_share_summary" msgid="4026595293154711379">"സമീപമുള്ള Android, PC-കൾ എന്നിവയുമായി പങ്കിടാൻ ഏറ്റവും വേഗതയുള്ള മാർഗത്തിന്, Windows-നുള്ള <xliff:g id="NEARBY_SHARING_APP_LABEL">%s</xliff:g> പരീക്ഷിക്കുക"</string>
     <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"റിംഗ്‌ടോണുകളും അലാറങ്ങളും"</string>
     <string name="bluetooth_call_title" msgid="6851464952021874072">"കോളുകൾ ചെയ്യുന്ന സമയത്തെ ഓഡിയോ"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"മീഡിയ, സിസ്റ്റം ശബ്ദങ്ങൾ"</string>
@@ -1407,6 +1407,8 @@
     <string name="hdr_brightness_standard_image_label" msgid="8262353134660098785">"സ്‌റ്റാൻഡേർഡ് ചിത്രം"</string>
     <string name="hdr_brightness_hdr_image_label" msgid="8068442758910393158">"HDR ചിത്രം"</string>
     <string name="hdr_brightness_warning" msgid="2755151579539607928">"ഉയർന്ന ഡൈനാമിക് പരിധി (HDR) പിന്തുണയ്ക്കുന്ന ചിത്രങ്ങളെയും വീഡിയോകളെയും മാത്രമേ ഈ ക്രമീകരണം ബാധിക്കൂ."</string>
+    <!-- no translation found for hdr_brightness_slider_description (3743611389738391772) -->
+    <skip />
     <string name="display_white_balance_title" msgid="2624544323029364713">"വൈറ്റ് ബാലന്‍സ് പ്രദര്‍ശിപ്പിക്കുക"</string>
     <string name="display_white_balance_summary" msgid="7625456704950209050"></string>
     <string name="fold_lock_behavior_title" msgid="786228803694268449">"ഫോൾഡിൽ ആപ്പുകൾ ഉപയോഗിക്കുന്നത് തുടരുക"</string>
@@ -1474,7 +1476,7 @@
     <string name="dark_ui_text_force_invert" msgid="3776487375947497387">"നിങ്ങളുടെ സ്ക്രീൻ കാണുന്നത് കൂടുതൽ സൗകര്യപ്രദമാക്കുന്നതിനും ചില സ്ക്രീനുകളിൽ ബാറ്ററി ഉപയോഗം കുറയ്ക്കുന്നതിനും ഇരുണ്ട പശ്ചാത്തലം ഉപയോഗിക്കുക. നിങ്ങൾക്കൊരു ഷെഡ്യൂൾ ഉണ്ടെങ്കിൽ, സ്ക്രീൻ ഓഫാകുന്ന സമയത്ത് നിങ്ങളുടെ തീം മാറും."</string>
     <string name="dark_ui_bedtime_footer_summary" msgid="5576501833145170581">"ഡാർക്ക് തീം നിലവിൽ നിങ്ങളുടെ ഉറക്ക സമയ മോഡ് ഷെഡ്യൂൾ പിന്തുടരുന്നു"</string>
     <string name="dark_ui_bedtime_footer_action" msgid="1493095487994054339">"ഉറക്ക സമയ മോഡ് ക്രമീകരണം"</string>
-    <string name="dark_ui_modes_footer_summary" msgid="22160899184470368">"{count,plural,offset:2 =0{മോഡുകൾക്ക് ഡാർക്ക് തീം ഓണാക്കാനും കഴിയും.}=1{{mode_1}, ഡാർക്ക് തീം ഓണാക്കുകയും ചെയ്യുന്നു.}=2{{mode_1}, {mode_2}, എന്നിവ ഡാർക്ക് തീം ഓണാക്കുകയും ചെയ്യുന്നു.}=3{{mode_1}, {mode_2}, {mode_3} എന്നിവ ഡാർക്ക് തീം ഓണാക്കുകയും ചെയ്യുന്നു.}other{{mode_1}, {mode_2}, എന്നിവയും മറ്റ് # മോഡുകളും ഡാർക്ക് തീം ഓണാക്കുകയും ചെയ്യുന്നു.}}"</string>
+    <string name="dark_ui_modes_footer_summary" msgid="8005236983054795213">"{count,plural,offset:2 =0{മോഡുകൾക്കും ഡാർക്ക് തീം ഓണാക്കാൻ കഴിയും}=1{{mode_1} എന്നതും ഡാർക്ക് തീം ഓണാക്കുന്നു}=2{{mode_1}, {mode_2} എന്നിവയും ഡാർക്ക് തീം ഓണാക്കുന്നു}=3{{mode_1}, {mode_2}, {mode_3} എന്നിവയും ഡാർക്ക് തീം ഓണാക്കുന്നു}other{{mode_1}, {mode_2}, എന്നിവയും മറ്റ് # മോഡുകളും ഡാർക്ക് തീം ഓണാക്കുന്നു}}"</string>
     <string name="dark_ui_modes_footer_action" msgid="80671811848446248">"മോഡുകൾ ക്രമീകരണം"</string>
     <string name="hdr_brigtness_text" msgid="1912629316654528876">"ഹൈ ഡൈനാമിക് റേഞ്ചിലുള്ള (HDR) ചിത്രങ്ങളിലും വീഡിയോകളിലും വർണ്ണ പരിധിയും വ്യക്തതയും, തെളിച്ചമുള്ളതാക്കുകയും വിപുലീകരിക്കുകയും ചെയ്യുക. HDR ഉള്ളടക്കം കൂടുതൽ തെളിച്ചമുള്ളതാകും."</string>
     <string name="screen_timeout" msgid="7709947617767439410">"സ്ക്രീൻ തെളിഞ്ഞിരിക്കുന്ന സമയപരിധി"</string>
@@ -2410,11 +2412,9 @@
     <string name="accessibility_system_controls_subtext_one_handed_not_supported" msgid="4973507525360793402">"നാവിഗേഷൻ മോഡ്, സ്ക്രീൻ റൊട്ടേഷൻ"</string>
     <string name="accessibility_send_feedback_title" msgid="6455703838689943046">"ഫീഡ്ബാക്ക് അയയ്ക്കുക"</string>
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"സർവേയിൽ പങ്കെടുക്കുക"</string>
-    <string name="accessibility_disability_support_title" msgid="7934160403456751664">"Google ഭിന്നശേഷി പിന്തുണയെ ബന്ധപ്പെടൂ"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"ആക്‌സസിബിലിറ്റി സർവേ"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"നിങ്ങളുടെ ഫീഡ്ബാക്ക് പങ്കിടുക"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"ഡാർക്ക് തീമിൽ നിങ്ങൾക്ക് എത്രത്തോളം തൃപ്തിയുണ്ട്?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"സർവേയിൽ പങ്കെടുക്കുക"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"നിങ്ങളുടെ ഫീഡ്ബാക്ക് പങ്കിടുക"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"മാഗ്നിഫിക്കേഷനിൽ നിങ്ങൾക്ക് എത്രത്തോളം തൃപ്തിയുണ്ട്?"</string>
@@ -2589,10 +2589,10 @@
     <string name="dark_theme_timing_category" msgid="8115211396437085819">"സമയക്രമം"</string>
     <string name="accessibility_standard_dark_theme_title" msgid="7755139172613415921">"സ്‌റ്റാൻഡേർഡ്"</string>
     <string name="accessibility_standard_dark_theme_title_in_search" msgid="1374136983709402050">"സ്‌റ്റാൻഡേർഡ് ഡാർക്ക് തീം"</string>
-    <string name="accessibility_standard_dark_theme_summary" msgid="5462837198570089294">"നിങ്ങളുടെ ഉപകരണത്തിലും പിന്തുണയ്ക്കുന്ന ആപ്പുകളിലും ഉടനീളം ഡാർക്ക് തീം ബാധകമാക്കുന്നു"</string>
+    <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"നിങ്ങളുടെ ഉപകരണത്തിനും ഡാർക്ക് തീം പിന്തുണയ്ക്കുന്ന ആപ്പുകൾക്കുമായി ഡാർക്ക് തീം ഓണാക്കുന്നു"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"വിപുലമായത്"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"വിപുലീകരിച്ച ഡാർക്ക് തീം"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="7600947929245673753">"ഉപയോഗസഹായി മെച്ചപ്പെടുത്താൻ കൂടുതൽ ആപ്പുകളിൽ സ്വയമേവ ഡാർക്ക് തീം ബാധകമാക്കുന്നു"</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"ഡാർക്ക് തീം പിന്തുണയ്ക്കാത്ത മിക്ക ആപ്പുകളിലും സ്വയമേവ ബാധകമാക്കുന്നു. ഇത് ആപ്പുകൾ ആക്‌സസ് ചെയ്യാനും വായിക്കാനും എളുപ്പമാക്കുന്നു, എന്നാൽ ചില ആപ്പുകൾ തെറ്റായി ദൃശ്യമാകാൻ ഇത് ഇടയാക്കിയേക്കാം."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"ഫോഴ്‌സ് ഇൻവേർട്ട്, നിറം വിപരീതമാക്കൽ, കോൺട്രാസ്റ്റ്"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"ആനിമേഷനുകൾ നീക്കം ചെയ്യുക"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"സ്‌ക്രീനിലെ ചലനം കുറയ്‌ക്കുക"</string>
@@ -2694,8 +2694,7 @@
     <string name="accessibility_daltonizer_footer_learn_more_content_description" msgid="2091679253892040910">"നിറം ശരിയാക്കലിനെ കുറിച്ച് കൂടുതലറിയുക"</string>
     <string name="accessibility_color_inversion_about_title" msgid="8275754480247040136">"നിറം വിപരീതമാക്കലിനെ കുറിച്ച്"</string>
     <string name="accessibility_color_inversion_footer_learn_more_content_description" msgid="5382579548498952445">"നിറം വിപരീതമാക്കലിനെ കുറിച്ച് കൂടുതലറിയുക"</string>
-    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="7084955775821075280">"ഡാർക്ക് തീമിനെ കുറിച്ച് കൂടുതലറിയുക"</string>
-    <string name="accessibility_dark_theme_preference_footer_content" msgid="3162327942873394910">"\'വിപുലമായത്\' ഓപ്ഷൻ ഉപയോഗിക്കുന്ന ഡാർക്ക് തീം ചില ആപ്പുകളിൽ പിന്തുണച്ചേക്കില്ല. നിങ്ങൾക്ക് ദൃശ്യപരമായ പ്രശ്നങ്ങൾ അനുഭവപ്പെടുന്നുവെങ്കിൽ, സ്റ്റാൻഡേർഡ് ഓപ്ഷൻ ഉപയോഗിക്കുക."</string>
+    <string name="accessibility_dark_theme_footer_learn_more_helper_link" msgid="6728089199404860746">"ഡാർക്ക് തീമിനെ കുറിച്ച് കൂടുതലറിയുക"</string>
     <string name="accessibility_captioning_primary_switch_title" msgid="3663677340286206100">"അടിക്കുറിപ്പുകൾ കാണിക്കുക"</string>
     <string name="accessibility_captioning_primary_switch_summary" msgid="2544094070306830218">"പിന്തുണയുള്ള ആപ്പിന് മാത്രം"</string>
     <string name="captioning_appearance_title" msgid="3128792092290011408">"അടിക്കുറിപ്പിന്റെ വലുപ്പവും സ്‌റ്റെെലും"</string>
@@ -5574,7 +5573,7 @@
     <string name="category_name_color" msgid="937514550918977151">"നിറം"</string>
     <string name="category_name_display_controls" msgid="7046581691184725216">"മറ്റ് ഡിസ്പ്ലേ നിയന്ത്രണങ്ങൾ"</string>
     <string name="category_name_general" msgid="7737273712848115886">"പൊതുവായവ"</string>
-    <string name="dark_theme_main_switch_title" msgid="4045147031947562280">"ഡാർക്ക് തീം ഉപയോഗിക്കുക"</string>
+    <string name="dark_theme_main_switch_title" msgid="4570920398981775904">"ഡാർക്ക് തീം ഉപയോഗിക്കുക"</string>
     <string name="bluetooth_main_switch_title" msgid="8409835540311309632">"Bluetooth ഉപയോഗിക്കുക"</string>
     <string name="hdr_brightness_main_switch_title" msgid="1850974699921514297">"മെച്ചപ്പെടുത്തിയ HDR തെളിച്ചം ഉപയോഗിക്കുക"</string>
     <string name="prevent_ringing_main_switch_title" msgid="4726252811262086643">"റിംഗ് ചെയ്യുന്നത് തടയൽ ഉപയോഗിക്കുക"</string>
@@ -5790,7 +5789,8 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"പാസ്‌വേഡ്"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"അനുയോജ്യത മെച്ചപ്പെടുത്തുക"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"ഓഡിയോ നിലവാരം കുറയ്ക്കുന്നതിലൂടെ ശ്രവണ സഹായി പോലുള്ള ചില ഉപകരണങ്ങളെ കണക്റ്റ് ചെയ്യാൻ സഹായിക്കുന്നു"</string>
-    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="2586408353546825682">"അനുയോജ്യത കോൺഫിഗർ ചെയ്യുന്നതിനായി ഓഡിയോ പങ്കിടൽ ഓഫാക്കുക"</string>
+    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
+    <skip />
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"സമീപമുള്ള ഓഡിയോ കേൾക്കുക"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Auracast™-നെ ഓഡിയോ പങ്കിടൽ പിന്തുണയ്ക്കുന്നു"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"ഓഡിയോ സ്ട്രീമിന്റെ പേര്"</string>
@@ -5931,6 +5931,8 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"പിൻ ഇല്ലാതാക്കുക"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"വീണ്ടെടുക്കൽ ഇമെയിൽ ചേർക്കുക"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"നിങ്ങളുടെ ഇമെയിൽ പരിശോധിച്ചുറപ്പിക്കുക"</string>
+    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
+    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"വെബ്സൈറ്റ് ഉള്ളടക്ക ഫിൽട്ടറുകൾ"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"വെബ്സൈറ്റ് ഫിൽട്ടറുകൾ, സൈറ്റുകൾ ബ്ലോക്ക് ചെയ്യൽ, ബ്രൗസർ ഫിൽട്ടറുകൾ, പ്രായപൂർത്തിയായവർക്കുള്ള സെെറ്റുകൾ ബ്ലോക്ക് ചെയ്യൽ, സൈറ്റുകൾ ഫിൽട്ടർ ചെയ്യൽ, തിരയൽ ഫിൽട്ടറുകൾ ബ്ലോക്ക് ചെയ്യൽ, പ്രായപൂർത്തിയായവർക്കുള്ള തിരയൽ ഫലങ്ങൾ ഫിൽട്ടർ ചെയ്യൽ, ഉള്ളടക്ക നിയന്ത്രണങ്ങൾ"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"ഈ ഫോണിലെ ചില ആപ്പുകളിലും ബ്രൗസറുകളിലും പ്രായപൂർത്തിയായവർക്കുള്ള ഉള്ളടക്കം ഫിൽട്ടർ ചെയ്യാൻ സഹായിക്കുക. മറ്റ് ആപ്പുകളിലും ഉപകരണങ്ങളിലും ബ്രൗസറുകളിലും പ്രായപൂർത്തിയായവർക്കുള്ള ഉള്ളടക്കം തുടർന്നും കാണിച്ചേക്കാം."</string>
@@ -5954,15 +5956,23 @@
     <string name="supervision_generic_error_page_title" msgid="1890873741445464953">"എന്തോ കുഴപ്പമുണ്ടായി"</string>
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"പിന്നീട് വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"മടങ്ങുക"</string>
-    <string name="identity_check_issue_card_title" msgid="864543931965445926">"കൂടുതൽ ആപ്പുകളിൽ ഐഡന്റിറ്റി പരിശോധന ലഭ്യമാണ്"</string>
-    <string name="identity_check_issue_card_summary" msgid="5216214598056911479">"നിങ്ങളെ തിരിച്ചറിയാൻ ഫിംഗർപ്രിന്റോ ഫെയ്‌സ് അൺലോക്കോ വാഗ്ദാനം ചെയ്യുന്ന ഏതൊരു ആപ്പിലും നിങ്ങളുടെ ഐഡന്റിറ്റി പരിരക്ഷ ഉറപ്പാക്കാം"</string>
+    <!-- no translation found for identity_check_issue_card_title (1409291461773228899) -->
+    <skip />
+    <!-- no translation found for identity_check_issue_card_summary (2563597018905365665) -->
+    <skip />
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"വിശദാംശങ്ങൾ കാണുക"</string>
-    <string name="identity_check_promo_card_title" msgid="1495226082133610343">"കൂടുതൽ ആപ്പുകൾ സുരക്ഷിതമാക്കാൻ ഐഡന്റിറ്റി പരിശോധന ഉപയോഗിക്കുക"</string>
-    <string name="identity_check_promo_card_summary" msgid="5745161401829550512">"ഫിംഗർപ്രിന്‍റ്, ഫെയ്‌സ് അൺലോക്ക് എന്നിവ പിന്തുണയ്ക്കുന്ന എല്ലാ ആപ്പുകളിലും ഐഡന്റിറ്റി പരിശോധന ഉപയോഗിക്കുമ്പോൾ, അധിക സജ്ജീകരണമില്ലാതെ തന്നെ ശക്തമായ പരിരക്ഷയും കൂടുതൽ സ്ഥിരതയുള്ള അനുഭവവും നിങ്ങൾ ഉറപ്പാക്കുന്നു"</string>
-    <string name="identity_check_watch_issue_card_title" msgid="5620062865816820265">"ഐഡന്റിറ്റി പരിശോധന നിങ്ങളുടെ വാച്ചിൽ പ്രവർത്തിക്കുന്നു"</string>
-    <string name="identity_check_watch_issue_card_summary" msgid="4428268483778051478">"ഫിംഗർപ്രിന്റ് അല്ലെങ്കിൽ ഫെയ്‌സ് അൺലോക്ക് ആവശ്യമായ ആപ്പുകൾ തുറക്കുന്നതിൽ നിന്ന് മറ്റുള്ളവരെ തടയുക. നിങ്ങൾ വാച്ചിലേക്ക് കണക്‌റ്റ് ചെയ്‌തിരിക്കുമ്പോൾ, മികച്ച മൊബിലിറ്റി ഉപയോഗിച്ച് നിങ്ങളുടെ സുരക്ഷ ഉറപ്പുനൽകുന്നു."</string>
-    <string name="identity_check_watch_promo_card_title" msgid="2949028203850064175">"കൂടുതൽ ആപ്പുകളിൽ ഐഡന്റിറ്റി പരിശോധനയും വാച്ചും ഉപയോഗിക്കുക"</string>
-    <string name="identity_check_promo_card_watch_summary" msgid="1088786582274383831">"നിങ്ങളുടെ വീടോ ഓഫീസോ പോലുള്ള ട്രസ്റ്റഡ് പ്ലേസുകളിൽ ഫിംഗർപ്രിന്റ്, ഫെയ്‌സ് അൺലോക്ക് എന്നിവ പിന്തുണയ്ക്കുന്ന എല്ലാ ആപ്പുകളിലും നിങ്ങളുടെ ഐഡന്റിറ്റി പരിരക്ഷ ഉറപ്പാക്കുക. ട്രസ്റ്റഡ് പ്ലേസുകൾക്ക് പുറത്തും, പരിരക്ഷ വിപുലീകരിക്കാൻ നിങ്ങളുടെ വാച്ചിനൊപ്പം ഐഡന്റിറ്റി പരിശോധന ഉപയോഗിക്കുക."</string>
+    <!-- no translation found for identity_check_promo_card_title (4467736415491327717) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_summary (3363308846024080168) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_title (6381107354718121574) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_issue_card_summary (3887632285786695570) -->
+    <skip />
+    <!-- no translation found for identity_check_watch_promo_card_title (8159072228404620911) -->
+    <skip />
+    <!-- no translation found for identity_check_promo_card_watch_summary (830666785343476988) -->
+    <skip />
     <string name="more_security_privacy_category_title" msgid="6107292123094705732">"മറ്റ് ക്രമീകരണം"</string>
     <string name="more_security_privacy_summary" msgid="8049801531406061219">"സ്വയമേവ പൂരിപ്പിക്കൽ, അറിയിപ്പുകൾ എന്നിവയും മറ്റും"</string>
     <string name="privacy_sources_title" msgid="7648842637181479352">"സ്വകാര്യതാ നിയന്ത്രണങ്ങൾ"</string>
