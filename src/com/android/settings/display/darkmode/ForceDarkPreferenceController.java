@@ -32,6 +32,9 @@ public class ForceDarkPreferenceController extends DeveloperOptionsPreferenceCon
 
     private static final String HWUI_FORCE_DARK = "hwui_force_dark";
 
+    private static final String PROP_DEBUG_FORCE_DARK =
+            "persist.sys." + ThreadedRenderer.DEBUG_FORCE_DARK;
+
     public ForceDarkPreferenceController(Context context) {
         super(context);
     }
@@ -44,7 +47,7 @@ public class ForceDarkPreferenceController extends DeveloperOptionsPreferenceCon
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final boolean isEnabled = (Boolean) newValue;
-        SystemProperties.set(ThreadedRenderer.DEBUG_FORCE_DARK,
+        SystemProperties.set(PROP_DEBUG_FORCE_DARK,
                 isEnabled ? "true" : null);
         SystemPropPoker.getInstance().poke();
         return true;
@@ -53,14 +56,14 @@ public class ForceDarkPreferenceController extends DeveloperOptionsPreferenceCon
     @Override
     public void updateState(Preference preference) {
         final boolean isEnabled = SystemProperties.getBoolean(
-                ThreadedRenderer.DEBUG_FORCE_DARK, false /* default */);
+                PROP_DEBUG_FORCE_DARK, false /* default */);
         ((TwoStatePreference) mPreference).setChecked(isEnabled);
     }
 
     @Override
     protected void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
-        SystemProperties.set(ThreadedRenderer.DEBUG_FORCE_DARK, null);
+        SystemProperties.set(PROP_DEBUG_FORCE_DARK, null);
         ((TwoStatePreference) mPreference).setChecked(false);
     }
 }
