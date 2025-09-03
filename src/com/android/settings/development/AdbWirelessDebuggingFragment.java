@@ -60,10 +60,10 @@ import java.util.Map;
  * the developer options.
  */
 @SearchIndexable
-public class WirelessDebuggingFragment extends DashboardFragment
-        implements WirelessDebuggingEnabler.OnEnabledListener, DeveloperOptionAwareMixin {
+public class AdbWirelessDebuggingFragment extends DashboardFragment
+        implements AdbWirelessDebuggingEnabler.OnEnabledListener, DeveloperOptionAwareMixin {
 
-    private static final String TAG = "WirelessDebuggingFrag";
+    private static final String TAG = AdbWirelessDebuggingFragment.class.getSimpleName();
 
     // Activity result from clicking on a paired device.
     static final int PAIRED_DEVICE_REQUEST = 0;
@@ -89,7 +89,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
 
     private final PairingCodeDialogListener mPairingCodeDialogListener =
             new PairingCodeDialogListener();
-    private WirelessDebuggingEnabler mWifiDebuggingEnabler;
+    private AdbWirelessDebuggingEnabler mWifiDebuggingEnabler;
     private Preference mDeviceNamePreference;
     private Preference mIpAddrPreference;
     private PreferenceCategory mPairingMethodsCategory;
@@ -176,7 +176,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
         final SettingsMainSwitchBar switchBar = activity.getSwitchBar();
         switchBar.setTitle(getContext().getString(R.string.wireless_debugging_main_switch_title));
 
-        mWifiDebuggingEnabler =  new WirelessDebuggingEnabler(activity,
+        mWifiDebuggingEnabler =  new AdbWirelessDebuggingEnabler(activity,
                 new MainSwitchBarController(switchBar), this, getSettingsLifecycle());
     }
 
@@ -297,7 +297,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
     }
 
     private static List<AbstractPreferenceController> buildPreferenceControllers(
-            Context context, Activity activity, WirelessDebuggingFragment fragment,
+            Context context, Activity activity, AdbWirelessDebuggingFragment fragment,
             Lifecycle lifecycle) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         sAdbIpAddressPreferenceController =

@@ -185,7 +185,7 @@
                     android:title="@string/clear_adb_keys" />
 
         <com.android.settingslib.PrimarySwitchPreference
-            android:fragment="com.android.settings.development.WirelessDebuggingFragment"
+            android:fragment="com.android.settings.development.AdbWirelessDebuggingFragment"
             android:key="toggle_adb_wireless"
             android:title="@string/enable_adb_wireless"
             android:summary="@string/enable_adb_wireless_summary"
