@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-package com.android.settings.appfunctions.sources
+package com.android.settings.appfunctions.providersources
 
-import android.app.AutomaticZenRule
 import android.content.Context
+import android.nfc.NfcAdapter
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
-import com.android.settingslib.notification.modes.ZenModesBackend
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
 
-class ZenModesStateSource : DeviceStateSource {
+class NfcStateSource : DeviceStateSource {
     override val appFunctionType: DeviceStateAppFunctionType =
         DeviceStateAppFunctionType.GET_UNCATEGORIZED
 
@@ -31,35 +30,16 @@ class ZenModesStateSource : DeviceStateSource {
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): List<PerScreenDeviceStates> {
-        var isDndActive = false
-        var isBedtimeActive = false
-        for (mode in ZenModesBackend.getInstance(context).getModes()) {
-            if (mode.isActive()) {
-                when {
-                    mode.isManualDnd() -> isDndActive = true
-                    mode.type == AutomaticZenRule.TYPE_BEDTIME -> isBedtimeActive = true
-                }
-            }
-        }
+        val nfcAdapter = NfcAdapter.getDefaultAdapter(context)
+        val nfcEnabled = nfcAdapter?.isEnabled
 
-        val dndItem =
+        val item =
             DeviceStateItem(
-                key = "zen_mode_dnd_active",
-                purpose = "zen_mode_dnd_active",
-                jsonValue = isDndActive.toString(),
-            )
-        val bedtimeItem =
-            DeviceStateItem(
-                key = "zen_mode_bedtime_active",
-                purpose = "zen_mode_bedtime_active",
-                jsonValue = isBedtimeActive.toString(),
+                key = "toggle_nfc",
+                purpose = "toggle_nfc",
+                jsonValue = nfcEnabled.toString(),
             )
 
-        return listOf(
-            PerScreenDeviceStates(
-                description = "Modes",
-                deviceStateItems = listOf(dndItem, bedtimeItem),
-            )
-        )
+        return listOf(PerScreenDeviceStates(description = "NFC", deviceStateItems = listOf(item)))
     }
 }

@@ -14,38 +14,48 @@
  * limitations under the License.
  */
 
-package com.android.settings.appfunctions.sources
+package com.android.settings.appfunctions.providersources
 
 import android.content.Context
 import android.provider.Settings
-import android.provider.Settings.Secure.NOTIFICATION_HISTORY_ENABLED
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
+import java.util.concurrent.TimeUnit
 
-class NotificationHistoryStateSource : DeviceStateSource {
+class ScreenTimeoutStateSource : DeviceStateSource {
     override val appFunctionType: DeviceStateAppFunctionType =
-        DeviceStateAppFunctionType.GET_NOTIFICATIONS
+        DeviceStateAppFunctionType.GET_UNCATEGORIZED
 
     override suspend fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): List<PerScreenDeviceStates> {
-        val isEnabled =
-            Settings.Secure.getInt(context.contentResolver, NOTIFICATION_HISTORY_ENABLED, 0) == 1
+        val screenTimeoutMilliseconds =
+            Settings.System.getLong(
+                context.contentResolver,
+                Settings.System.SCREEN_OFF_TIMEOUT,
+                FALLBACK_SCREEN_TIMEOUT_VALUE,
+            )
+        val screenTimeoutSeconds = TimeUnit.MILLISECONDS.toSeconds(screenTimeoutMilliseconds)
 
         val item =
             DeviceStateItem(
-                key = "notification_history",
-                purpose = "notification_history",
-                jsonValue = isEnabled.toString(),
+                key = "screen_timeout",
+                purpose = "screen_timeout",
+                jsonValue = "$screenTimeoutSeconds s",
             )
 
         return listOf(
-            PerScreenDeviceStates(
-                description = "Notification history",
-                deviceStateItems = listOf(item),
-            )
+            PerScreenDeviceStates(description = "Screen timeout", deviceStateItems = listOf(item))
         )
+    }
+
+    private companion object {
+        /**
+         * This value comes from
+         * [com.android.settings.display.ScreenTimeoutSettings.FALLBACK_SCREEN_TIMEOUT_VALUE].
+         */
+        const val FALLBACK_SCREEN_TIMEOUT_VALUE = 30000L
     }
 }

@@ -14,38 +14,38 @@
  * limitations under the License.
  */
 
-package com.android.settings.appfunctions.sources
+package com.android.settings.appfunctions.providersources
 
 import android.content.Context
 import android.provider.Settings
+import android.provider.Settings.Secure.NOTIFICATION_HISTORY_ENABLED
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
 
-class BatterySaverStateSource : DeviceStateSource {
+class NotificationHistoryStateSource : DeviceStateSource {
     override val appFunctionType: DeviceStateAppFunctionType =
-        DeviceStateAppFunctionType.GET_BATTERY
+        DeviceStateAppFunctionType.GET_NOTIFICATIONS
 
     override suspend fun get(
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): List<PerScreenDeviceStates> {
-        val areRemindersEnabled =
-            Settings.Global.getInt(
-                context.getContentResolver(),
-                Settings.Global.LOW_POWER_MODE_REMINDER_ENABLED,
-                1,
-            ) == 1
+        val isEnabled =
+            Settings.Secure.getInt(context.contentResolver, NOTIFICATION_HISTORY_ENABLED, 0) == 1
 
         val item =
             DeviceStateItem(
-                key = "battery_saver_reminders",
-                purpose = "battery_saver_reminders",
-                jsonValue = areRemindersEnabled.toString(),
+                key = "notification_history",
+                purpose = "notification_history",
+                jsonValue = isEnabled.toString(),
             )
 
         return listOf(
-            PerScreenDeviceStates(description = "Battery Saver", deviceStateItems = listOf(item))
+            PerScreenDeviceStates(
+                description = "Notification history",
+                deviceStateItems = listOf(item),
+            )
         )
     }
 }

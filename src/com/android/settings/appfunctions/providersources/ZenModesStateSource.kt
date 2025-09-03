@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.android.settings.appfunctions.sources
+package com.android.settings.appfunctions.providersources
 
+import android.app.AutomaticZenRule
 import android.content.Context
-import android.provider.Settings
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
+import com.android.settingslib.notification.modes.ZenModesBackend
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
-import java.util.concurrent.TimeUnit
 
-class ScreenTimeoutStateSource : DeviceStateSource {
+class ZenModesStateSource : DeviceStateSource {
     override val appFunctionType: DeviceStateAppFunctionType =
         DeviceStateAppFunctionType.GET_UNCATEGORIZED
 
@@ -31,31 +31,35 @@ class ScreenTimeoutStateSource : DeviceStateSource {
         context: Context,
         sharedDeviceStateData: SharedDeviceStateData,
     ): List<PerScreenDeviceStates> {
-        val screenTimeoutMilliseconds =
-            Settings.System.getLong(
-                context.contentResolver,
-                Settings.System.SCREEN_OFF_TIMEOUT,
-                FALLBACK_SCREEN_TIMEOUT_VALUE,
-            )
-        val screenTimeoutSeconds = TimeUnit.MILLISECONDS.toSeconds(screenTimeoutMilliseconds)
+        var isDndActive = false
+        var isBedtimeActive = false
+        for (mode in ZenModesBackend.getInstance(context).getModes()) {
+            if (mode.isActive()) {
+                when {
+                    mode.isManualDnd() -> isDndActive = true
+                    mode.type == AutomaticZenRule.TYPE_BEDTIME -> isBedtimeActive = true
+                }
+            }
+        }
 
-        val item =
+        val dndItem =
             DeviceStateItem(
-                key = "screen_timeout",
-                purpose = "screen_timeout",
-                jsonValue = "$screenTimeoutSeconds s",
+                key = "zen_mode_dnd_active",
+                purpose = "zen_mode_dnd_active",
+                jsonValue = isDndActive.toString(),
+            )
+        val bedtimeItem =
+            DeviceStateItem(
+                key = "zen_mode_bedtime_active",
+                purpose = "zen_mode_bedtime_active",
+                jsonValue = isBedtimeActive.toString(),
             )
 
         return listOf(
-            PerScreenDeviceStates(description = "Screen timeout", deviceStateItems = listOf(item))
+            PerScreenDeviceStates(
+                description = "Modes",
+                deviceStateItems = listOf(dndItem, bedtimeItem),
+            )
         )
-    }
-
-    private companion object {
-        /**
-         * This value comes from
-         * [com.android.settings.display.ScreenTimeoutSettings.FALLBACK_SCREEN_TIMEOUT_VALUE].
-         */
-        const val FALLBACK_SCREEN_TIMEOUT_VALUE = 30000L
     }
 }
