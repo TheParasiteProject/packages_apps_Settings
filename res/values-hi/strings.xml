@@ -1015,7 +1015,8 @@
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"कोई डिसप्ले कनेक्ट नहीं है"</string>
     <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"शुरू करने के लिए, बाहरी डिसप्ले कनेक्ट करें या कोई दूसरे केबल का इस्तेमाल करें"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"ज़्यादा विकल्प"</string>
-    <string name="external_display_topology_hint" msgid="854973327795578470">"डिसप्ले का क्रम बदलने के लिए, उन्हें दबाकर रखें और खींचकर छोड़ें."</string>
+    <!-- no translation found for external_display_topology_hint (885396727047321347) -->
+    <skip />
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"पहले से मौजूद डिसप्ले की स्क्रीन शेयर करें"</string>
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"क्या आपको नई सेटिंग इस्तेमाल करनी हैं?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"अगर डिसप्ले सही तरीके से काम नहीं कर रहा है, तो पिछली सेटिंग पर वापस जाएं"</string>
@@ -1584,7 +1585,8 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"स्टोरेज और कैश मेमोरी"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"मेमोरी सेटिंग"</string>
     <string name="status_eid" msgid="3588471107671992684">"ईआईडी"</string>
-    <string name="eid_multi_sim" msgid="6659492335576379274">"ईआईडी (सिम स्लॉट <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <!-- no translation found for eid_multi_sim (3054468215477777096) -->
+    <skip />
     <string name="imei_multi_sim" msgid="6990044568468728075">"आईएमईआई <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"देखने के लिए, सेव किया गया नेटवर्क चुनें"</string>
     <string name="status_imei" msgid="5719752369250485007">"आईएमईआई"</string>
@@ -1950,6 +1952,8 @@
     <string name="lockpattern_recording_intro_header" msgid="8325736706877916560">"लॉक खोलने का पैटर्न बनाएं"</string>
     <string name="lockpattern_recording_intro_footer" msgid="2656868858594487197">"सहायता के लिए मेन्यू दबाएं."</string>
     <string name="lockpattern_recording_inprogress" msgid="7268008332694009191">"सेट अप के बाद उंगली हटा लें"</string>
+    <!-- no translation found for lockpattern_recording_inprogress_click (8502597789237564270) -->
+    <skip />
     <string name="lockpattern_recording_incorrect_too_short" msgid="3351522018450593723">"कम से कम <xliff:g id="NUMBER">%d</xliff:g> बिंदुओं को कनेक्‍ट करें. फिर से कोशिश करें."</string>
     <string name="lockpattern_pattern_entered_header" msgid="7709618312713127249">"पैटर्न रिकॉर्ड किया गया"</string>
     <string name="lockpattern_need_to_confirm" msgid="6489499109451714360">"पुष्टि करने के लिए फिर से पैटर्न बनाएं"</string>
@@ -2414,8 +2418,7 @@
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"सर्वे में हिस्सा लें"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"सुलभता सुविधाओं से जुड़ा सर्वे"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"सुझाव/राय दें या शिकायत करें"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"आप गहरे रंग वाली थीम से किस हद तक संतुष्ट हैं?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"सर्वे में हिस्सा लें"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"सुझाव/राय दें या शिकायत करें"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"ज़ूम करने की सुविधा से आप किस हद तक संतुष्ट हैं?"</string>
@@ -3136,7 +3139,7 @@
     <string name="cellular_security_notifications_controller_title" msgid="4853056963523277847">"नेटवर्क से जुड़ी सूचनाएं"</string>
     <string name="cellular_security_notifications_controller_summary" msgid="8339863845393759958">"इन मामलों में सूचना मिलेगी: डिवाइस के किसी असुरक्षित नेटवर्क से कनेक्ट होने पर या जब कोई नेटवर्क आपके डिवाइस का यूनीक आईडी या सिम आईडी रिकॉर्ड करे"</string>
     <string name="cellular_security_2G_network_generation_header" msgid="2892850064192939887">"नेटवर्क जनरेशन"</string>
-    <string name="cellular_security_2G_network_generation_summary" msgid="4041699962072749477">"2G नेटवर्क से सुरक्षित रखने वाली सुविधा, 2G नेटवर्क का इस्तेमाल करने से रोकती है, क्योंकि ये कम सुरक्षित होते हैं. इससे कुछ जगहों पर कनेक्टिविटी पर असर पड़ सकता है. आपातकालीन कॉल के लिए, 2G नेटवर्क का इस्तेमाल हमेशा किया जा सकता है. हालांकि, ऐसा हो सकता है कि अंतरराष्ट्रीय रोमिंग के दौरान कॉल कनेक्ट न हों."</string>
+    <string name="cellular_security_2G_network_generation_summary" msgid="4041699962072749477">"2G नेटवर्क से सुरक्षित रखने वाली सुविधा, डिवाइस को 2G नेटवर्क से कनेक्ट होने से रोकती है, क्योंकि ये कम सुरक्षित होते हैं. इस वजह से, कुछ जगहों पर कनेक्टिविटी खराब हो सकती है. आपातकालीन कॉल के लिए, 2G नेटवर्क का इस्तेमाल हमेशा किया जा सकता है. हालांकि, ऐसा हो सकता है कि अंतरराष्ट्रीय रोमिंग के दौरान कॉल कनेक्ट न हों."</string>
     <string name="cellular_security_2G_network_generation_title" msgid="706766676947606951">"2G नेटवर्क से सुरक्षित रखने वाली सुविधा"</string>
     <string name="cellular_security_settings_encryption_title" msgid="4013084091666375780">"एन्क्रिप्शन"</string>
     <string name="cellular_security_network_generations_title" msgid="2343026988833783854">"नेटवर्क की जनरेशन"</string>
@@ -3571,7 +3574,8 @@
     <string name="color_orange" msgid="216547825489739010">"ऑरेंज"</string>
     <string name="color_purple" msgid="6603701972079904843">"पर्पल"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"सिम स्थिति"</string>
-    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"सिम के बारे में (सिम स्लॉट %1$d)"</string>
+    <!-- no translation found for sim_status_title_sim_slot (8727408941064901486) -->
+    <skip />
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"आपका सिम बदल दिया गया है"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"सेट करने के लिए टैप करें"</string>
@@ -4807,6 +4811,10 @@
     <string name="double_tap_power_lockscreen_shortcut_tip_description" msgid="7572626485518591928">"<xliff:g id="DOUBLE_TAP_POWER_TARGET_ACTION">%1$s</xliff:g> भी लॉक स्क्रीन का एक शॉर्टकट है. इसे बदलने के लिए टैप करें."</string>
     <string name="double_tap_power_wallet_footer_title" msgid="4626950875173822614">"आपके मौजूदा डिफ़ॉल्ट वॉलेट ऐप्लिकेशन में, हाथ के इस जेस्चर को इस्तेमाल करने की सुविधा उपलब्ध नहीं है"</string>
     <string name="double_tap_power_wallet_footer_learn_more_text" msgid="4871482943751760132">"डिफ़ॉल्ट वॉलेट बदलें"</string>
+    <!-- no translation found for keywords_double_tap_power (1238828843085517844) -->
+    <skip />
+    <!-- no translation found for keywords_double_tap_power_wallet_action (1118418868964220150) -->
+    <skip />
     <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"सेल्फ़ी के लिए कैमरा फ़्लिप करें"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"नेविगेशन मोड"</string>
@@ -5514,7 +5522,7 @@
     <string name="media_controls_show_player" msgid="8504571042365814021">"मीडिया प्लेयर दिखाएं"</string>
     <string name="keywords_media_controls" msgid="8345490568291778638">"मीडिया"</string>
     <string name="camera_extensions_fallback_title" msgid="3604579046777004989">"कैमरा सॉफ़्टवेयर एक्सटेंशन को अनुमति दें"</string>
-    <string name="camera_extensions_fallback_description" msgid="4306833827773277263">"इससे कैमरे की ऐडवांस सुविधाओं के लिए, डिफ़ॉल्ट सॉफ़्टवेयर लागू हो जाता है. जैसे, एचडीआर, नाइट या कैमरे के अन्य एक्सटेंशन."</string>
+    <string name="camera_extensions_fallback_description" msgid="4306833827773277263">"इससे कैमरे की ऐडवांस सुविधाओं, जैसे कि एचडीआर, नाइट कैमरा या कैमरे के अन्य एक्सटेंशन के लिए डिफ़ॉल्ट सॉफ़्टवेयर लागू हो जाता है."</string>
     <string name="connected_device_see_all_summary" msgid="2056010318537268108">"ब्लूटूथ चालू हो जाएगा"</string>
     <string name="provider_internet_settings" msgid="3831259474776313323">"इंटरनेट"</string>
     <string name="provider_network_settings_title" msgid="2624756136016346774">"सिम"</string>
@@ -5604,7 +5612,7 @@
     <string name="smart_forwarding_input_mdn_dialog_title" msgid="7542216086697868415">"फ़ोन नंबर डालें"</string>
     <string name="smart_forwarding_missing_mdn_text" msgid="2907314684242542226">"फ़ोन नंबर नहीं डाला गया."</string>
     <string name="smart_forwarding_missing_alert_dialog_text" msgid="7870419247987316112">"ठीक है"</string>
-    <string name="enable_2g_title" msgid="5657132300321750181">"2G नेटवर्क से परहेज़"</string>
+    <string name="enable_2g_title" msgid="5657132300321750181">"2G नेटवर्क से सुरक्षित रखने वाली सुविधा"</string>
     <string name="enable_2g_summary" msgid="6194875539424151678">"यह सुविधा डिवाइसों को 2G नेटवर्क से कनेक्ट होने से रोकती है, क्योंकि ये नेटवर्क कम सुरक्षित होते हैं. इस वजह से, कुछ जगहों पर कनेक्टिविटी खराब हो सकती है. इस सुविधा के चालू रहने पर, आपातकालीन कॉल के लिए कभी भी 2G नेटवर्क का इस्तेमाल किया जा सकता है. हालांकि, ऐसा हो सकता है कि अंतरराष्ट्रीय रोमिंग के दौरान कॉल कनेक्ट न हों."</string>
     <string name="enable_2g_summary_disabled_carrier" msgid="8141118453219482762">"<xliff:g id="CARRIER_NAME_2G">%1$s</xliff:g> के लिए 2G नेटवर्क होना ज़रूरी है"</string>
     <string name="require_cellular_encryption_title" msgid="6087085031703089235">"सुरक्षित किए गए नेटवर्क को ही अनुमति दें"</string>
@@ -5790,8 +5798,7 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"पासवर्ड"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"अन्य डिवाइसों के साथ काम करने की क्षमता को बेहतर बनाएं"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"ऑडियो क्वालिटी कम करके, कान की मशीन जैसे डिवाइसों को अपने फ़ोन से कनेक्ट करें"</string>
-    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
-    <skip />
+    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="689007549232438065">"इससे, ऑडियो शेयर करने की सुविधा बंद हो जाती है, ताकि अन्य डिवाइसों के साथ काम करने की क्षमता को बेहतर बनाने के लिए सेटिंग कॉन्फ़िगर की जा सकें"</string>
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"आस-पास चलने वाला ऑडियो सुनें"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"ऑडियो शेयर करने की सुविधा, Auracast™ में काम करती है"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"ऑडियो स्ट्रीम का नाम"</string>
@@ -5932,8 +5939,6 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"पिन मिटाएं"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"खाता वापस पाने के लिए ईमेल पता जोड़ें"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"अपने ईमेल पते की पुष्टि करें"</string>
-    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
-    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"वेबसाइट के कॉन्टेंट के आधार पर फ़िल्टर"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"वेबसाइट फ़िल्टर, साइटें ब्लॉक करना, ब्राउज़र फ़िल्टर, अश्लील साइटें ब्लॉक करना, साइटें फ़िल्टर करना, खोज के नतीजे ब्लॉक करना, अश्लील कॉन्टेंट वाले खोज नतीजे फ़िल्टर करना, कॉन्टेंट से जुड़ी पाबंदियां"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"इस फ़ोन पर कुछ ऐप्लिकेशन और ब्राउज़र के लिए अश्लील कॉन्टेंट को फ़िल्टर करें. हालांकि, अन्य ऐप्लिकेशन, डिवाइसों या ब्राउज़र में अश्लील कॉन्टेंट फिर भी दिख सकता है."</string>

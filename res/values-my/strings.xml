@@ -994,7 +994,7 @@
     <string name="nfc_reboot_dialog_confirm" msgid="4769763632008584567">"ပြန်စရန်"</string>
     <string name="external_display_on" msgid="2560104443500154333">"ဖွင့်"</string>
     <string name="external_display_off" msgid="5634413756025351374">"ပိတ်"</string>
-    <string name="external_display_settings_title" msgid="3865786552022665355">"ပြင်ပသုံး ဖန်သားပြင်"</string>
+    <string name="external_display_settings_title" msgid="3865786552022665355">"ပြင်ပဖန်သားပြင်များ"</string>
     <string name="builtin_display_settings_category" msgid="3441388849060771885">"အသင့်ပါ ဖန်သားပြင်"</string>
     <string name="builtin_display_settings_universal_cursor_title" msgid="209064877333151313">"အထွေထွေသုံး ကာဆာ"</string>
     <string name="builtin_display_settings_universal_cursor_description" msgid="4209129904885332824">"ဖန်သားပြင်များကြား သင့်မောက်စ်ကို ရွှေ့နိုင်သည်"</string>
@@ -1015,7 +1015,8 @@
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"ချိတ်ဆက်ထားသည့် ဖန်သားပြင် မရှိပါ"</string>
     <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"စတင်ရန် ပြင်ပဖန်သားပြင်ကို ချိတ်ဆက်ပါ (သို့) အခြားကြိုးသုံးပြီး စမ်းကြည့်ပါ"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"နောက်ထပ် ရွေးစရာများ"</string>
-    <string name="external_display_topology_hint" msgid="854973327795578470">"ပြကွက်များ ပြန်စီရန် ဖိဆွဲပါ"</string>
+    <!-- no translation found for external_display_topology_hint (885396727047321347) -->
+    <skip />
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"အသင့်ပါဖန်သားပြင် စင့်ခ်လုပ်ခြင်း"</string>
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"ဆက်တင်အသစ်များကို သုံးမလား။"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"ဖန်သားပြင်သည် သင့်ဆန္ဒအတိုင်း မလုပ်ဆောင်ပါက ယခင်ဆက်တင်များသို့ ပြန်ပြောင်းနိုင်သည်"</string>
@@ -1584,7 +1585,8 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"သိုလှောင်ခန်းနှင့် ကက်ရှ်"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"သိုလှောင်မှု ဆက်တင်များ"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
-    <string name="eid_multi_sim" msgid="6659492335576379274">"E​ID (ဆင်းမ်ကတ်အထိုင် <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <!-- no translation found for eid_multi_sim (3054468215477777096) -->
+    <skip />
     <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"သိမ်းထားသည့် ကွန်ရက်ကို ရွေးပြီး ကြည့်နိုင်သည်"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
@@ -1950,6 +1952,8 @@
     <string name="lockpattern_recording_intro_header" msgid="8325736706877916560">"သော့ဖွင့်ရန်ပုံစံကို ဆွဲပါ"</string>
     <string name="lockpattern_recording_intro_footer" msgid="2656868858594487197">"အကူအညီရယူရန် Menuကိုနှိပ်ပါ"</string>
     <string name="lockpattern_recording_inprogress" msgid="7268008332694009191">"ပြီးဆုံးလျှင် လက်ချောင်းကို လွှတ်လိုက်ပါ။"</string>
+    <!-- no translation found for lockpattern_recording_inprogress_click (8502597789237564270) -->
+    <skip />
     <string name="lockpattern_recording_incorrect_too_short" msgid="3351522018450593723">"အနည်းဆုံး အစက် <xliff:g id="NUMBER">%d</xliff:g> စက်ကိုဆက်ပါ။.ထပ်မံကြိုးစားပါဦး။"</string>
     <string name="lockpattern_pattern_entered_header" msgid="7709618312713127249">"ပုံစံကို သိမ်းလိုက်ပါပြီ"</string>
     <string name="lockpattern_need_to_confirm" msgid="6489499109451714360">"အတည်ပြုရန် ပုံစံကိုထပ်ဆွဲပါ"</string>
@@ -2324,7 +2328,7 @@
     <string name="pointer_scale_increase_content_description" msgid="1049632123702664450">"မြားအရွယ်အစား ကြီးရန်"</string>
     <string name="pointer_scale_keywords" msgid="8939432511048322072">"စကေး၊ အရွယ်အစား၊ ‘မြားအရွယ်အစား’၊ ‘မောက်စ်ညွှန်မြားအကြီး’၊ ‘အကြီး’၊ မြင်သာသော"</string>
     <string name="game_controller_settings_category" msgid="8557472715034961918">"ဂိမ်းထိန်းချုပ်ခြင်း"</string>
-    <string name="vibrate_input_devices" msgid="5192591087864449142">"တစ်ဆင့်ပြန်ညွှန်ပြခြင်း တုန်ခါမှု"</string>
+    <string name="vibrate_input_devices" msgid="5192591087864449142">"တစ်ဆင့်ပြန်ညွှန်ခြင်း တုန်ခါမှု"</string>
     <string name="vibrate_input_devices_summary" msgid="8791680891376689823">"ချိတ်ဆက်ထားသည့်အခါ တုန်ခါမှုကို ဂိမ်းခလုတ်ဆီသို့ ပို့ရန်"</string>
     <string name="keyboard_layout_dialog_title" msgid="8770130364048089954">"လက်ကွက်အပြင်အဆင်ရွေးချယ်ရန်"</string>
     <string name="keyboard_layout_dialog_setup_button" msgid="6546245862744626706">"လက်ကွက်အပြင်အဆင်များကို စီစဉ်သတ်မှတ်ရန်"</string>
@@ -3570,7 +3574,8 @@
     <string name="color_orange" msgid="216547825489739010">"လိမ္မော်"</string>
     <string name="color_purple" msgid="6603701972079904843">"ခရမ်း"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"ဆင်းမ်ကတ် အခြေအနေ"</string>
-    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"ဆင်းမ်ကတ် အခြေအနေ (ဆင်းမ်ကတ်အထိုင် %1$d)"</string>
+    <!-- no translation found for sim_status_title_sim_slot (8727408941064901486) -->
+    <skip />
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"သင့်ဆင်းမ်ကတ်များ ပြောင်းလိုက်ပြီ"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"တပ်ဆင်ရန်တို့ပါ"</string>
@@ -4806,6 +4811,10 @@
     <string name="double_tap_power_lockscreen_shortcut_tip_description" msgid="7572626485518591928">"<xliff:g id="DOUBLE_TAP_POWER_TARGET_ACTION">%1$s</xliff:g> သည် သင့်လော့ခ်မျက်နှာပြင် ဖြတ်လမ်းလည်း ဖြစ်သည်။ ၎င်းကိုပြောင်းရန် တို့ပါ။"</string>
     <string name="double_tap_power_wallet_footer_title" msgid="4626950875173822614">"သင်၏လက်ရှိ မူရင်း Wallet အက်ပ်သည် ဤလက်ဟန်ကို မပံ့ပိုးပါ"</string>
     <string name="double_tap_power_wallet_footer_learn_more_text" msgid="4871482943751760132">"မူရင်း Wallet ပြောင်းနိုင်သည်"</string>
+    <!-- no translation found for keywords_double_tap_power (1238828843085517844) -->
+    <skip />
+    <!-- no translation found for keywords_double_tap_power_wallet_action (1118418868964220150) -->
+    <skip />
     <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"ဆယ်လ်ဖီရိုက်ရန် ကင်မရာလှည့်ခြင်း"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"လမ်းညွှန်မုဒ်"</string>
@@ -5789,8 +5798,7 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"စကားဝှက်"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"တွဲဖက်အသုံးပြုနိုင်မှု ပိုကောင်းအောင်လုပ်ခြင်း"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"အသံအရည်အသွေး လျှော့ချခြင်းဖြင့် နားကြားကိရိယာများ၊ကဲ့သို့ စက်အချို့ကို ကူညီချိတ်ဆက်နိုင်သည်"</string>
-    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
-    <skip />
+    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="689007549232438065">"တွဲဖက်အသုံးပြုနိုင်မှုကို စီစဉ်သတ်မှတ်ရန် အော်ဒီယို မျှဝေခြင်း ပိတ်နိုင်သည်"</string>
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"အနီးတစ်ဝိုက်ရှိ အသံကို နားထောင်ခြင်း"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"အော်ဒီယို မျှဝေခြင်းသည် Auracast™ ကို ပံ့ပိုးသည်"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"အသံ ထုတ်လွှင့်ခြင်း အမည်"</string>
@@ -5931,8 +5939,6 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"ပင်နံပါတ်ဖျက်ရန်"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"ပြန်လည်ရယူရေးအီးမေးလ် ထည့်ပါ"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"သင့်အီးမေးလ်ကို အတည်ပြုပါ"</string>
-    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
-    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"ဝဘ်ဆိုက် အကြောင်းအရာဖီလ်တာ"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"ဝဘ်ဆိုက်ဖီလ်တာ၊ ဝဘ်ဆိုက်များပိတ်ထားရန်၊ ဘရောင်ဇာဖီလ်တာများ၊ မဖွယ်မရာဝဘ်ဆိုက်များ ပိတ်ထားရန်၊ ဝဘ်ဆိုက်များကို စစ်ထုတ်ရန်၊ ရှာဖွေမှုရလဒ်များ ပိတ်ထားရန်၊ မဖွယ်မရာ ရှာဖွေမှုရလဒ်များကို စစ်ထုတ်ရန်၊ အကြောင်းအရာ ကန့်သတ်ချက်များ"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"ဤဖုန်းရှိ အက်ပ်နှင့် ဘရောင်ဇာအချို့တွင် မဖွယ်မရာအကြောင်းအရာကို ကူညီစစ်ထုတ်ပေးသည်။ အခြားအက်ပ်၊ စက် (သို့) ဘရောင်ဇာများတွင် မဖွယ်မရာအကြောင်းအရာကို ဆက်မြင်ရနိုင်သည်။"</string>

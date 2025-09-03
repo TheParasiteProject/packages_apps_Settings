@@ -1015,7 +1015,8 @@
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"Ez dago pantailarik konektatuta"</string>
     <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"Hasteko, konektatu kanpoko pantaila bat edo erabili beste kable bat"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"Aukera gehiago"</string>
-    <string name="external_display_topology_hint" msgid="854973327795578470">"Pantailak berrantolatzeko, eduki itzazu sakatuta eta arrasta itzazu."</string>
+    <!-- no translation found for external_display_topology_hint (885396727047321347) -->
+    <skip />
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"Islatu pantaila integratua"</string>
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Ezarpen berriak erabili nahi dituzu?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Pantailak behar bezala funtzionatzen ez badu, aurreko ezarpenak erabil ditzakezu berriro"</string>
@@ -1584,7 +1585,8 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"Memoria eta cachea"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"Memoriaren ezarpenak"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​IDa"</string>
-    <string name="eid_multi_sim" msgid="6659492335576379274">"E​IDa (SIMaren <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>. ataka)"</string>
+    <!-- no translation found for eid_multi_sim (3054468215477777096) -->
+    <skip />
     <string name="imei_multi_sim" msgid="6990044568468728075">"IMEIa: <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"Hura ikusteko, aukeratu gordetako sarea"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEIa"</string>
@@ -1950,6 +1952,8 @@
     <string name="lockpattern_recording_intro_header" msgid="8325736706877916560">"Marraztu desblokeatzeko eredu bat"</string>
     <string name="lockpattern_recording_intro_footer" msgid="2656868858594487197">"Laguntza lortzeko, sakatu Menua."</string>
     <string name="lockpattern_recording_inprogress" msgid="7268008332694009191">"Bukatutakoan, jaso hatza"</string>
+    <!-- no translation found for lockpattern_recording_inprogress_click (8502597789237564270) -->
+    <skip />
     <string name="lockpattern_recording_incorrect_too_short" msgid="3351522018450593723">"Konektatu <xliff:g id="NUMBER">%d</xliff:g> puntu gutxienez. Saiatu berriro."</string>
     <string name="lockpattern_pattern_entered_header" msgid="7709618312713127249">"Erregistratu da eredua"</string>
     <string name="lockpattern_need_to_confirm" msgid="6489499109451714360">"Berresteko, marraztu eredua berriro"</string>
@@ -2414,8 +2418,7 @@
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Erantzun inkestari"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Erabilerraztasunari buruzko inkesta"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Partekatu iritzia"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"Zeinen gustura zaude gai ilunarekin?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Erantzun inkestari"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Partekatu iritzia"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Zeinen gustura zaude luparekin?"</string>
@@ -3571,7 +3574,8 @@
     <string name="color_orange" msgid="216547825489739010">"Laranja"</string>
     <string name="color_purple" msgid="6603701972079904843">"Morea"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"SIMaren egoera"</string>
-    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"SIMaren egoera (SIMaren %1$d. ataka)"</string>
+    <!-- no translation found for sim_status_title_sim_slot (8727408941064901486) -->
+    <skip />
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"SIMak aldatu dira"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"Konfiguratzeko, sakatu hau"</string>
@@ -4807,6 +4811,10 @@
     <string name="double_tap_power_lockscreen_shortcut_tip_description" msgid="7572626485518591928">"<xliff:g id="DOUBLE_TAP_POWER_TARGET_ACTION">%1$s</xliff:g> pantaila blokeaturako lasterbidea da ere. Sakatu aldatzeko."</string>
     <string name="double_tap_power_wallet_footer_title" msgid="4626950875173822614">"Diru-zorro lehenetsiak ez du onartzen keinu hau"</string>
     <string name="double_tap_power_wallet_footer_learn_more_text" msgid="4871482943751760132">"Aldatu diru-zorro lehenetsia"</string>
+    <!-- no translation found for keywords_double_tap_power (1238828843085517844) -->
+    <skip />
+    <!-- no translation found for keywords_double_tap_power_wallet_action (1118418868964220150) -->
+    <skip />
     <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"Biratu kamera selfieak ateratzeko"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"Nabigazio modua"</string>
@@ -5790,8 +5798,7 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Pasahitza"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Hobetu bateragarritasuna"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Konektatzen laguntzen die gailu batzuei, hala nola audifonoei, audio-kalitatea murriztuta"</string>
-    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
-    <skip />
+    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="689007549232438065">"Audioa partekatzeko eginbidea desaktibatzen du, bateragarritasuna konfiguratzeko"</string>
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Entzun inguruko audioa"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Audioa partekatzeko eginbideak Auracast™ onartzen du"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Zuzeneko audio-igorpenaren izena"</string>
@@ -5932,8 +5939,6 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Ezabatu PINa"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Gehitu kontua berreskuratzeko helbide elektronikoa"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Egiaztatu helbide elektronikoa"</string>
-    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
-    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Webguneen eduki-iragazkiak"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Webguneen iragazkiak, webguneak blokeatzea, arakatzaileen iragazkiak, webgune esplizituak blokeatzea, webguneak iragaztea, bilaketa-emaitzak blokeatzea, bilaketa-emaitza esplizituak iragaztea, edukiaren murriztapenak"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Telefono honetako zenbait aplikazio eta arakatzailetan eduki esplizitua iragazten laguntzen dute. Baliteke eduki esplizitua beste aplikazio, gailu edo arakatzaile batzuetan agertzea."</string>

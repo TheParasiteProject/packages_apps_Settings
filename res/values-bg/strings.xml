@@ -1015,7 +1015,8 @@
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"Няма свързан екран"</string>
     <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"Свържете външен екран, за да започнете, или опитайте с друг кабел"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"Още опции"</string>
-    <string name="external_display_topology_hint" msgid="854973327795578470">"Задръжте и плъзнете, за да пренаредите екраните."</string>
+    <!-- no translation found for external_display_topology_hint (885396727047321347) -->
+    <skip />
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"Дублиране на вградения дисплей"</string>
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Да се използват ли новите настройки?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Ако дисплеят ви не работи така, както искате, можете да се върнете към предишните си настройки"</string>
@@ -1584,7 +1585,8 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"Хранилище и кеш"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"Настройки на хранилището"</string>
     <string name="status_eid" msgid="3588471107671992684">"EID"</string>
-    <string name="eid_multi_sim" msgid="6659492335576379274">"EID (слот <xliff:g id="EID_SLOT_ID">%1$d</xliff:g> за SIM карта)"</string>
+    <!-- no translation found for eid_multi_sim (3054468215477777096) -->
+    <skip />
     <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"За преглед изберете запазена мрежа"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
@@ -1950,6 +1952,8 @@
     <string name="lockpattern_recording_intro_header" msgid="8325736706877916560">"Начертайте фигура за отключване"</string>
     <string name="lockpattern_recording_intro_footer" msgid="2656868858594487197">"Натиснете „Меню“ за помощ"</string>
     <string name="lockpattern_recording_inprogress" msgid="7268008332694009191">"Вдигнете пръст, когато е готово"</string>
+    <!-- no translation found for lockpattern_recording_inprogress_click (8502597789237564270) -->
+    <skip />
     <string name="lockpattern_recording_incorrect_too_short" msgid="3351522018450593723">"Свържете поне <xliff:g id="NUMBER">%d</xliff:g> точки. Опитайте отново."</string>
     <string name="lockpattern_pattern_entered_header" msgid="7709618312713127249">"Фигурата е записана"</string>
     <string name="lockpattern_need_to_confirm" msgid="6489499109451714360">"За потвърждение начертайте фигурата отново"</string>
@@ -2414,8 +2418,7 @@
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Участие в анкетата"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Анкета за достъпност"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Споделяне на отзиви"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"Доколко сте доволни от тъмната тема?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Участие в анкетата"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Споделяне на отзиви"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Доколко сте доволни от функцията за увеличение?"</string>
@@ -3571,7 +3574,8 @@
     <string name="color_orange" msgid="216547825489739010">"Оранжево"</string>
     <string name="color_purple" msgid="6603701972079904843">"Лилаво"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"Състояние на SIM картата"</string>
-    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"Съст. на SIM картата (слот %1$d за SIM)"</string>
+    <!-- no translation found for sim_status_title_sim_slot (8727408941064901486) -->
+    <skip />
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm, <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"SIM картите ви бяха променени"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"Докоснете, за да настроите"</string>
@@ -4807,6 +4811,10 @@
     <string name="double_tap_power_lockscreen_shortcut_tip_description" msgid="7572626485518591928">"<xliff:g id="DOUBLE_TAP_POWER_TARGET_ACTION">%1$s</xliff:g> е и пряк път на заключения екран. Докоснете за промяна."</string>
     <string name="double_tap_power_wallet_footer_title" msgid="4626950875173822614">"Текущото ви основно приложение за портфейл не поддържа този жест"</string>
     <string name="double_tap_power_wallet_footer_learn_more_text" msgid="4871482943751760132">"Промяна на основното приложение за портфейл"</string>
+    <!-- no translation found for keywords_double_tap_power (1238828843085517844) -->
+    <skip />
+    <!-- no translation found for keywords_double_tap_power_wallet_action (1118418868964220150) -->
+    <skip />
     <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"Обръщане на камерата за селфи"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"Режим на навигация"</string>
@@ -5790,8 +5798,7 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Парола"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Подобряване на съвместимостта"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Улеснява свързването на някои устройства, като например слухови апарати, като намалява качеството на звука"</string>
-    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
-    <skip />
+    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="689007549232438065">"Изключва функцията за споделяне на звука с цел конфигуриране на съвместимостта"</string>
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Слушане на аудио в близост"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Функцията за споделяне на звука поддържа Auracast™"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Име на аудиопотока"</string>
@@ -5932,8 +5939,6 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Изтриване на ПИН кода"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Добавяне на имейл адрес за възстановяване"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Потвърдете имейл адреса си"</string>
-    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
-    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Филтри за съдържанието на уебсайтовете"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"филтри за уебсайтове, блокиране на сайтове, филтри на браузъра, блокиране на сайтове с нецензурно съдържание, филтриране на сайтове, блокиране на резултатите от търсенето, филтриране на резултатите от търсенето с нецензурно съдържание, ограничения за съдържанието"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Филтриране на нецензурното съдържание в някои приложения и браузъри на този телефон. Възможно е нецензурното съдържание да продължи да се показва в други приложения, устройства или браузъри."</string>
