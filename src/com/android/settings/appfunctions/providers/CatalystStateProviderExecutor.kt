@@ -61,28 +61,36 @@ class CatalystStateProviderExecutor(
             val semaphore = Semaphore(MAX_PARALLELISM)
             val deferredList =
                 screenKeyList.map { screenKey ->
-                    async{
+                    async {
                         if (Flags.parameterisedScreensInAppFunctions()) {
                             semaphore.withPermit {
                                 try {
-                                    buildPerScreenDeviceStates(screenKey, appFunctionType)
+                                    buildPerScreenDeviceStates(
+                                        screenKey,
+                                        appFunctionType,
+                                        perScreenConfigMap[screenKey]?.additionalDescription,
+                                    )
                                 } catch (e: Exception) {
                                     Log.e(
                                         TAG,
                                         "Error building per screen device states for $screenKey",
-                                        e
+                                        e,
                                     )
                                     null
                                 }
                             }
                         } else {
                             try {
-                                buildPerScreenDeviceStates(screenKey, appFunctionType)
+                                buildPerScreenDeviceStates(
+                                    screenKey,
+                                    appFunctionType,
+                                    perScreenConfigMap[screenKey]?.additionalDescription,
+                                )
                             } catch (e: Exception) {
                                 Log.e(
                                     TAG,
                                     "Error building per screen device states for $screenKey",
-                                    e
+                                    e,
                                 )
                                 null
                             }
@@ -98,6 +106,7 @@ class CatalystStateProviderExecutor(
     private suspend fun CoroutineScope.buildPerScreenDeviceStates(
         screenKey: String,
         appFunctionType: DeviceStateAppFunctionType,
+        additionalDescription: String?,
     ): List<PerScreenDeviceStates> {
         Log.v(TAG, "Building per screen device states for $screenKey")
         val hierarchy = getEnabledPreferencesHierarchy(config, context, appFunctionType, screenKey)
@@ -105,13 +114,22 @@ class CatalystStateProviderExecutor(
         return hierarchy.map { entry ->
             val screenMetaData = entry.key
             val preferencesHierarchy = entry.value
-            val states = buildPerScreenDeviceStates(screenMetaData, preferencesHierarchy)
+            val states =
+                buildPerScreenDeviceStates(
+                    screenMetaData,
+                    preferencesHierarchy,
+                    additionalDescription,
+                )
             Log.v(TAG, "Built per screen device states for $screenKey")
             states
         }
     }
 
-    private suspend fun CoroutineScope.buildPerScreenDeviceStates(screenMetaData: PreferenceScreenMetadata, preferencesHierarchy: List<PreferenceHierarchyNode>): PerScreenDeviceStates {
+    private suspend fun CoroutineScope.buildPerScreenDeviceStates(
+        screenMetaData: PreferenceScreenMetadata,
+        preferencesHierarchy: List<PreferenceHierarchyNode>,
+        additionalDescription: String?,
+    ): PerScreenDeviceStates {
         val deviceStateItemList = mutableListOf<DeviceStateItem>()
         preferencesHierarchy.forEach {
             val metadata = it.metadata
@@ -145,14 +163,17 @@ class CatalystStateProviderExecutor(
 
         // This is hack because in general parameters are not human readable. We remove known
         // internal keys then just dump the rest in the description.
-        val basicDescription = screenMetaData.getPreferenceScreenTitle(context)?.toString() ?: ""
+        val basicDescription =
+            (screenMetaData.getPreferenceScreenTitle(context)?.toString() ?: "") +
+                (additionalDescription ?: "")
         val arguments = screenMetaData.arguments?.clone() as? BaseBundle
         arguments?.remove("source")
-        val descriptionSuffix = if (arguments == null) {
-            ""
-        } else {
-            ". " + arguments.keySet().joinToString(", ") { "$it=${arguments.get(it)}" }
-        }
+        val descriptionSuffix =
+            if (arguments == null) {
+                ""
+            } else {
+                ". " + arguments.keySet().joinToString(", ") { "$it=${arguments.get(it)}" }
+            }
         val description = basicDescription + descriptionSuffix
 
         val launchingIntent = screenMetaData.getLaunchIntent(context, null)

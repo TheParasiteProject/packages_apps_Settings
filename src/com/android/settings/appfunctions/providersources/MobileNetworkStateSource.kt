@@ -69,7 +69,8 @@ class MobileNetworkStateSource : DeviceStateSource {
                 DeviceStateItem(
                     key = "mobile_data_used_$subId",
                     jsonValue = getDataUsedString(context, subId),
-                    hintText = "Data used of subscription ID $subId in this cycle",
+                    hintText =
+                        "Data used of subscription ID $subId in this cycle | This SIM data usage screen shows the amount of data each app has consumed from a specific SIM card.",
                 ),
                 DeviceStateItem(
                     key = "mobile_network_name_$subId",

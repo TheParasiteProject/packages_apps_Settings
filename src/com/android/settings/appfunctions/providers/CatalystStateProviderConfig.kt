@@ -108,6 +108,7 @@ import com.android.settings.system.SystemDashboardScreen
 import com.android.settings.vpn2.VpnSettingsScreen
 import com.android.settings.wfd.WifiDisplayScreen
 import com.android.settings.wifi.ConfigureWifiScreen
+import com.android.settings.wifi.WifiDataUsagePreference
 import com.android.settings.wifi.calling.WifiCallingScreen
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiScreen
 import com.android.settings.wifi.tether.WifiHotspotScreen
@@ -145,6 +146,7 @@ data class PerScreenCatalystConfig(
     // TODO(b/405344827): map categories to PreferenceMetadata#tags
     val appFunctionTypes: Set<DeviceStateAppFunctionType> =
         setOf(DeviceStateAppFunctionType.GET_UNCATEGORIZED),
+    val additionalDescription: String? = null,
 )
 
 /**
@@ -177,6 +179,8 @@ private fun getCatalystScreenConfigs() =
             enabled = true,
             screenKey = BatterySaverScreen.KEY,
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_BATTERY),
+            additionalDescription =
+                ". The Battery Saver screen allows users to set the device to Standard or Extreme Battery Saver mode. Users can also configure schedules and reminders for Battery Saver.",
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = BluetoothDashboardScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = LockScreenPreferenceScreen.KEY),
@@ -269,6 +273,8 @@ private fun getCatalystScreenConfigs() =
         PerScreenCatalystConfig(
             enabled = true,
             screenKey = AmbientDisplayAlwaysOnPreferenceScreen.KEY,
+            additionalDescription =
+                ". Always-on-display settings indicates whether the lock screen, including the time, is visible when the phone is off.",
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = DataUsageAppDetailScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AppInfoInstallUnknownAppsScreen.KEY),
@@ -378,6 +384,8 @@ private fun getCatalystScreenConfigs() =
             enabled = true,
             screenKey = DataUsageListScreen.KEY,
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_MOBILE_DATA),
+            additionalDescription =
+                ". This SIM data usage screen shows the amount of data each app has consumed from a specific SIM card.",
         ),
     )
 
@@ -758,5 +766,13 @@ private fun getDeviceStateItemList() =
             enabled = true,
             settingKey = AlarmsAndRemindersAppDetailScreen.KEY,
             settingScreenKey = AlarmsAndRemindersAppListScreen.KEY,
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
+            settingKey = WifiDataUsagePreference.KEY,
+            settingScreenKey = NetworkProviderScreen.KEY,
+            hintText = { _, _ ->
+                "This data usage shows the amount of data consumed by the device between specific dates that was not transmitted over a mobile carrier network."
+            },
         ),
     )
