@@ -19,6 +19,7 @@ package com.android.settings.appfunctions.providers
 import android.app.appsearch.GenericDocument
 import android.content.Context
 import android.content.Intent
+import android.os.BaseBundle
 import android.util.Log
 import com.android.settings.appfunctions.CatalystConfig
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
@@ -142,10 +143,22 @@ class CatalystStateProviderExecutor(
             }
         }
 
+        // This is hack because in general parameters are not human readable. We remove known
+        // internal keys then just dump the rest in the description.
+        val basicDescription = screenMetaData.getPreferenceScreenTitle(context)?.toString() ?: ""
+        val arguments = screenMetaData.arguments?.clone() as? BaseBundle
+        arguments?.remove("source")
+        val descriptionSuffix = if (arguments == null) {
+            ""
+        } else {
+            ". " + arguments.keySet().joinToString(", ") { "$it=${arguments.get(it)}" }
+        }
+        val description = basicDescription + descriptionSuffix
+
         val launchingIntent = screenMetaData.getLaunchIntent(context, null)
         val states =
             PerScreenDeviceStates(
-                description = screenMetaData.getPreferenceScreenTitle(context)?.toString() ?: "",
+                description = description,
                 deviceStateItems = deviceStateItemList,
                 intentUri = launchingIntent?.toUri(Intent.URI_INTENT_SCHEME),
             )

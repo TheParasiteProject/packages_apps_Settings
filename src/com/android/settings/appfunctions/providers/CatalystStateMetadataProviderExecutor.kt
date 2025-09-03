@@ -19,6 +19,7 @@ package com.android.settings.appfunctions.providers
 import android.app.appsearch.GenericDocument
 import android.content.Context
 import android.content.Intent
+import android.os.BaseBundle
 import android.os.Binder
 import android.util.Log
 import com.android.settings.appfunctions.CatalystConfig
@@ -144,8 +145,20 @@ class CatalystStateMetadataProviderExecutor(
         }
 
         val launchingIntent = screenMetaData.getLaunchIntent(context, null)
+
+        // This is hack because in general parameters are not human readable. We remove known
+        // internal keys then just dump the rest in the description.
+        val basicDescription = screenMetaData.getPreferenceScreenTitle(context)?.toString() ?: ""
+        val arguments = screenMetaData.arguments?.clone() as? BaseBundle
+        arguments?.remove("source")
+        val descriptionSuffix = if (arguments == null) {
+            ""
+        } else {
+            ". " + arguments.keySet().joinToString(", ") { "$it=${arguments.get(it)}" }
+        }
+        val description = basicDescription + descriptionSuffix
         return PerScreenMetadata(
-            description = screenMetaData.getPreferenceScreenTitle(context)?.toString() ?: "",
+            description = description,
             deviceStateItemsMetadata = deviceStateItemMetadataList,
             intentUri = launchingIntent?.toUri(Intent.URI_INTENT_SCHEME),
         )
