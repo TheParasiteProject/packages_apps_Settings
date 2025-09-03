@@ -85,6 +85,9 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
     override val keywords: Int
         get() = R.string.keywords_always_show_time_info
 
+    override val indexable
+        get() = true
+
     override fun getMetricsCategory() = SettingsEnums.AMBIENT_DISPLAY_ALWAYS_ON
 
     override val highlightMenuKey: Int
@@ -135,8 +138,6 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
     }
 
     override fun fragmentClass(): Class<out Fragment>? = AmbientPreferenceFragment::class.java
-
-    override fun isIndexable(context: Context) = true
 
     override fun hasCompleteHierarchy() = true
 

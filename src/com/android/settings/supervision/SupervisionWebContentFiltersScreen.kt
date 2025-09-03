@@ -76,6 +76,9 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
     override val title: Int
         get() = R.string.supervision_web_content_filters_title
 
+    override val indexable
+        get() = true
+
     override val keywords: Int
         get() = R.string.supervision_web_content_filters_keywords
 
@@ -99,8 +102,6 @@ open class SupervisionWebContentFiltersScreen : PreferenceScreenMixin, Preferenc
             supervisionClient?.close()
         }
     }
-
-    override fun isIndexable(context: Context) = true
 
     override fun hasCompleteHierarchy() = true
 
