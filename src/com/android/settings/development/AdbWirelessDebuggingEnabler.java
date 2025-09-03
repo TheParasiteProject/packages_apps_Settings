@@ -35,9 +35,9 @@ import com.android.settingslib.core.lifecycle.events.OnResume;
 /**
  * Class to control the switch bar in the wireless debugging fragment.
  */
-public class WirelessDebuggingEnabler implements SwitchWidgetController.OnSwitchChangeListener,
+public class AdbWirelessDebuggingEnabler implements SwitchWidgetController.OnSwitchChangeListener,
         LifecycleObserver, OnResume, OnPause {
-    private static final String TAG = "WirelessDebuggingEnabler";
+    private static final String TAG = AdbWirelessDebuggingEnabler.class.getSimpleName();
 
     private final SwitchWidgetController mSwitchWidget;
     private Context mContext;
@@ -47,7 +47,7 @@ public class WirelessDebuggingEnabler implements SwitchWidgetController.OnSwitch
     private final ContentObserver mSettingsObserver;
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
-    public WirelessDebuggingEnabler(Context context, SwitchWidgetController switchWidget,
+    public AdbWirelessDebuggingEnabler(Context context, SwitchWidgetController switchWidget,
             OnEnabledListener listener, Lifecycle lifecycle) {
         mContext = context;
         mSwitchWidget = switchWidget;
@@ -122,7 +122,7 @@ public class WirelessDebuggingEnabler implements SwitchWidgetController.OnSwitch
 
     @Override
     public boolean onSwitchToggled(boolean isChecked) {
-        if (isChecked && !WirelessDebuggingPreferenceController.isWifiConnected(mContext)) {
+        if (isChecked && !AdbWirelessDebuggingPreferenceController.isWifiConnected(mContext)) {
             // No connected Wi-Fi network. Reset the switch to off.
             Toast.makeText(mContext, com.android.settingslib.R.string.adb_wireless_no_network_msg,
                             Toast.LENGTH_LONG)

@@ -46,10 +46,11 @@ import com.android.settingslib.development.DeveloperOptionsPreferenceController;
  * This controls the primary switch controller in the developer options page for
  * "Wireless debugging".
  */
-public class WirelessDebuggingPreferenceController extends DeveloperOptionsPreferenceController
+public class AdbWirelessDebuggingPreferenceController extends DeveloperOptionsPreferenceController
         implements Preference.OnPreferenceChangeListener, PreferenceControllerMixin,
         LifecycleObserver, OnResume, OnPause {
-    private static final String TAG = "WirelessDebugPrefCtrl";
+    private static final String TAG =
+            AdbWirelessDebuggingPreferenceController.class.getSimpleName();
     private final IAdbManager mAdbManager;
     private final ContentResolver mContentResolver;
     private final ContentObserver mSettingsObserver;
@@ -57,7 +58,7 @@ public class WirelessDebuggingPreferenceController extends DeveloperOptionsPrefe
 
     public static final String KEY_TOGGLE_ADB_WIRELESS = "toggle_adb_wireless";
 
-    public WirelessDebuggingPreferenceController(Context context, Lifecycle lifecycle) {
+    public AdbWirelessDebuggingPreferenceController(Context context, Lifecycle lifecycle) {
         super(context);
 
         if (lifecycle != null) {

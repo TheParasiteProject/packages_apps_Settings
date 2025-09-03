@@ -326,10 +326,10 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
 
         if (DevelopmentTiles.WirelessDebugging.class.getName().equals(
                 componentName.getClassName()) && getDevelopmentOptionsController(
-                WirelessDebuggingPreferenceController.class).isAvailable()) {
+                AdbWirelessDebuggingPreferenceController.class).isAvailable()) {
             Log.d(TAG, "Long press from wireless debugging qstile");
             new SubSettingLauncher(getContext())
-                    .setDestination(WirelessDebuggingFragment.class.getName())
+                    .setDestination(AdbWirelessDebuggingFragment.class.getName())
                     .setSourceMetricsCategory(SettingsEnums.SETTINGS_ADB_WIRELESS)
                     .launch();
         }
@@ -742,7 +742,7 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
         controllers.add(new SelectDSUPreferenceController(context));
         controllers.add(new AdbPreferenceController(context, fragment));
         controllers.add(new ClearAdbKeysPreferenceController(context, fragment));
-        controllers.add(new WirelessDebuggingPreferenceController(context, lifecycle));
+        controllers.add(new AdbWirelessDebuggingPreferenceController(context, lifecycle));
         controllers.add(new AdbAuthorizationTimeoutPreferenceController(context));
         controllers.add(new LocalTerminalPreferenceController(context));
         controllers.add(new LinuxTerminalPreferenceController(context));
