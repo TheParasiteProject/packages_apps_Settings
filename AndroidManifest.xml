@@ -821,7 +821,7 @@
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:exported="true"
                 android:clearTaskOnLaunch="true"
-                android:theme="@style/Theme.SubSettingsBase">
+                android:theme="@style/Theme.SubSettingsBase.Expressive">
             <intent-filter>
                 <action android:name="android.bluetooth.devicepicker.action.LAUNCH" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -4236,7 +4236,7 @@
         <!-- Show regulatory info (from settings item or dialing "*#07#") -->
         <activity
             android:name="RegulatoryInfoDisplayActivity"
-            android:theme="@style/Theme.SubSettingsBase"
+            android:theme="@style/Theme.SubSettingsBase.Expressive"
             android:label="@string/regulatory_labels"
             android:exported="true"
             android:enabled="@bool/config_show_regulatory_info">
@@ -5712,7 +5712,7 @@
         <!-- Provide direct entry into Dev settings - Running Services -->
         <activity android:name="Settings$DevRunningServicesActivity"
                 android:label="@string/runningservices_settings_title"
-                android:theme="@style/Theme.SubSettingsBase"
+                android:theme="@style/Theme.SubSettingsBase.Expressive"
                 android:enabled="true"
                 android:exported="true"
                 android:excludeFromRecents="true"
