@@ -125,16 +125,20 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
         )
 
     override fun onCreate(context: PreferenceLifecycleContext) {
-        keyedObserver = KeyedObserver { _, _ -> context.notifyPreferenceChange(KEY) }
-        ambientWallpaperPreference
-            .storage(context)
-            .addObserver(AmbientWallpaperPreference.KEY, keyedObserver, HandlerExecutor.main)
+        if (isEntryPoint(context)) {
+            keyedObserver = KeyedObserver { _, _ -> context.notifyPreferenceChange(KEY) }
+            ambientWallpaperPreference
+                .storage(context)
+                .addObserver(AmbientWallpaperPreference.KEY, keyedObserver, HandlerExecutor.main)
+        }
     }
 
     override fun onDestroy(context: PreferenceLifecycleContext) {
-        ambientWallpaperPreference
-            .storage(context)
-            .removeObserver(AmbientWallpaperPreference.KEY, keyedObserver)
+        if (isEntryPoint(context)) {
+            ambientWallpaperPreference
+                .storage(context)
+                .removeObserver(AmbientWallpaperPreference.KEY, keyedObserver)
+        }
     }
 
     override fun fragmentClass(): Class<out Fragment>? = AmbientPreferenceFragment::class.java

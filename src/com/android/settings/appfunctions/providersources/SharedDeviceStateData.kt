@@ -18,19 +18,40 @@ package com.android.settings.appfunctions.providersources
 
 import android.content.Context
 import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
+import android.util.Log
+import com.android.settingslib.spaprivileged.model.app.AppListRepositoryImpl
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 /** Provides data shared by multiple [DeviceStateSource]s, which is computed lazily. */
 class SharedDeviceStateData(private val context: Context) {
-    val installedApplications: List<InstalledApplication> by lazy {
-        val packageManager = context.packageManager
-        val installedApplications =
-            packageManager.getInstalledApplications(PackageManager.MATCH_DISABLED_COMPONENTS)
-        installedApplications.map { info ->
-            InstalledApplication(
-                info = info,
-                label = packageManager.getApplicationLabel(info).toString(),
-            )
+    lateinit var installedApplications: List<InstalledApplication>
+
+    suspend fun initialize() {
+        if (::installedApplications.isInitialized) return
+        withContext(Dispatchers.IO) {
+            val appContext = context.applicationContext
+            val repo = AppListRepositoryImpl(appContext)
+            val packageManager = appContext.packageManager
+            val applicationsInfo = repo.loadAndMaybeExcludeSystemApps(appContext.userId, true)
+
+            installedApplications =
+                applicationsInfo.mapNotNull { info ->
+                    try {
+                        InstalledApplication(
+                            info = info,
+                            label = packageManager.getApplicationLabel(info).toString(),
+                        )
+                    } catch (e: Exception) {
+                        // error handling: if one app fails, log it and skip it.
+                        Log.w(
+                            "SharedDeviceStateData",
+                            "Could not load label for ${info.packageName}",
+                            e,
+                        )
+                        null
+                    }
+                }
         }
     }
 
