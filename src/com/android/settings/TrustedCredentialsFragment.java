@@ -355,18 +355,22 @@ public class TrustedCredentialsFragment extends ObservableFragment
 
             TextView title = convertView.findViewById(android.R.id.title);
             UserInfo userInfo = getUserInfoByGroup(groupPosition);
+            String category;
             if (userInfo.isManagedProfile()) {
-                title.setText(mDevicePolicyManager.getResources().getString(WORK_CATEGORY_HEADER,
-                        () -> getString(com.android.settingslib.R.string.category_work)));
+                category = mDevicePolicyManager.getResources().getString(WORK_CATEGORY_HEADER,
+                        () -> getString(com.android.settingslib.R.string.category_work));
             } else if (userInfo.isPrivateProfile()) {
-                title.setText(mDevicePolicyManager.getResources().getString(PRIVATE_CATEGORY_HEADER,
-                        () -> getString(com.android.settingslib.R.string.category_private)));
+                category = mDevicePolicyManager.getResources().getString(PRIVATE_CATEGORY_HEADER,
+                        () -> getString(com.android.settingslib.R.string.category_private));
             } else {
-                title.setText(mDevicePolicyManager.getResources().getString(
+                category = mDevicePolicyManager.getResources().getString(
                         PERSONAL_CATEGORY_HEADER,
-                        () -> getString(com.android.settingslib.R.string.category_personal)));
+                        () -> getString(com.android.settingslib.R.string.category_personal));
 
             }
+            title.setText(category);
+            title.setContentDescription(
+                    getString(R.string.trusted_credentials_category_content_description, category));
             title.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
 
             return convertView;
