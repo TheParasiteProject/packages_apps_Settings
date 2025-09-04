@@ -1015,7 +1015,8 @@
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"Aucun écran connecté"</string>
     <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"Connectez un écran externe pour commencer ou essayez d\'utiliser un autre câble"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"Autres options"</string>
-    <string name="external_display_topology_hint" msgid="854973327795578470">"Maintenez le doigt sur les écrans et faites-les glisser pour les réorganiser."</string>
+    <!-- no translation found for external_display_topology_hint (885396727047321347) -->
+    <skip />
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"Dupliquer l\'écran intégré"</string>
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Utiliser les nouveaux paramètres?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Si votre écran ne fonctionne pas comme vous le souhaitez, vous pouvez rétablir vos paramètres précédents"</string>
@@ -1584,7 +1585,8 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"Stockage et mise en cache"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"Paramètres de stockage"</string>
     <string name="status_eid" msgid="3588471107671992684">"EID"</string>
-    <string name="eid_multi_sim" msgid="6659492335576379274">"EID (fente pour carte SIM <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <!-- no translation found for eid_multi_sim (3054468215477777096) -->
+    <skip />
     <string name="imei_multi_sim" msgid="6990044568468728075">"IIEM <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"Pour l\'afficher, sélectionnez un réseau enregistré"</string>
     <string name="status_imei" msgid="5719752369250485007">"IIEM"</string>
@@ -1950,6 +1952,8 @@
     <string name="lockpattern_recording_intro_header" msgid="8325736706877916560">"Dessiner un schéma de déverrouillage"</string>
     <string name="lockpattern_recording_intro_footer" msgid="2656868858594487197">"Appuyez sur Menu pour obtenir de l\'aide."</string>
     <string name="lockpattern_recording_inprogress" msgid="7268008332694009191">"Relevez le doigt lorsque vous avez terminé"</string>
+    <!-- no translation found for lockpattern_recording_inprogress_click (8502597789237564270) -->
+    <skip />
     <string name="lockpattern_recording_incorrect_too_short" msgid="3351522018450593723">"Reliez au moins <xliff:g id="NUMBER">%d</xliff:g> points. Veuillez réessayer."</string>
     <string name="lockpattern_pattern_entered_header" msgid="7709618312713127249">"Schéma enregistré"</string>
     <string name="lockpattern_need_to_confirm" msgid="6489499109451714360">"Retracez le schéma pour confirmer."</string>
@@ -2414,8 +2418,7 @@
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Répondre au sondage"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Sondage sur l\'accessibilité"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Envoyer vos commentaires"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"Dans quelle mesure êtes-vous satisfait du thème Sombre?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Répondre au sondage"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Envoyer vos commentaires"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Quel est votre degré de satisfaction à l\'égard de l\'agrandissement?"</string>
@@ -2446,7 +2449,7 @@
     <string name="accessibility_magnification_cursor_following_continuous" msgid="1119319218662522794">"L\'écran se déplace en continu pour suivre le mouvement du curseur de la souris"</string>
     <string name="accessibility_magnification_cursor_following_center" msgid="3504798009192014460">"L\'écran se déplace pour laisser le curseur de la souris au centre de l\'écran"</string>
     <string name="accessibility_magnification_cursor_following_edge" msgid="8675207762416655758">"L\'écran se déplace lorsque le curseur de la souris touche les rebords de l\'écran"</string>
-    <string name="accessibility_screen_magnification_follow_typing_title" msgid="494025442124701045">"Suivi de la saisie"</string>
+    <string name="accessibility_screen_magnification_follow_typing_title" msgid="494025442124701045">"Suivre la saisie"</string>
     <string name="accessibility_screen_magnification_follow_typing_summary" msgid="2678347754211619662">"La loupe suit le texte lorsque vous tapez"</string>
     <string name="accessibility_screen_magnification_follow_keyboard_title" msgid="3412060515554192262">"Suivre la cible du clavier"</string>
     <string name="accessibility_screen_magnification_follow_keyboard_summary" msgid="2379353603675828805">"La loupe suit l\'élément sélectionné lorsque vous naviguez avec votre clavier"</string>
@@ -2454,7 +2457,7 @@
     <string name="accessibility_screen_magnification_nav_ime_summary" msgid="2102651227079047801">"Zoomez sur le clavier pour agrandir"</string>
     <string name="accessibility_screen_magnification_nav_ime_unavailable_summary" msgid="2248787024685382054">"Non offert : agrandi partiellement"</string>
     <string name="accessibility_screen_magnification_always_on_title" msgid="3814297443759580936">"Garder activée lors du changement d\'appli"</string>
-    <string name="accessibility_screen_magnification_always_on_summary" msgid="642275893256862796">"La loupe reste activée et dézoome lorsque vous changez d\'applis"</string>
+    <string name="accessibility_screen_magnification_always_on_summary" msgid="642275893256862796">"La loupe reste activée et dézoome lorsque vous changez d\'appli"</string>
     <string name="accessibility_screen_magnification_always_on_unavailable_summary" msgid="3844732482037416038">"Non disponible lorsque vous agrandissez seulement une partie de l\'écran"</string>
     <string name="accessibility_screen_magnification_joystick_title" msgid="1803769708582404964">"Manche"</string>
     <string name="accessibility_screen_magnification_joystick_summary" msgid="4640300148573982720">"Activez et déplacez la loupe à l\'aide d\'un manche à l\'écran. Touchez et maintenez, puis faites glisser le manche pour contrôler la loupe. Touchez et faites glisser pour déplacer le manche lui-même."</string>
@@ -3136,8 +3139,8 @@
     <string name="cellular_security_notifications_controller_title" msgid="4853056963523277847">"Notifications du réseau"</string>
     <string name="cellular_security_notifications_controller_summary" msgid="8339863845393759958">"Recevez une notification lorsque votre appareil se connecte à un réseau non chiffré ou lorsqu\'un réseau enregistre l\'identifiant unique de votre appareil ou de votre carte SIM"</string>
     <string name="cellular_security_2G_network_generation_header" msgid="2892850064192939887">"Génération du réseau"</string>
-    <string name="cellular_security_2G_network_generation_summary" msgid="4041699962072749477">"La protection contre le réseau 2G permet d\'éviter les réseaux 2G, qui sont moins sécurisés. Cela peut limiter la connectivité à certains endroits. Le réseau 2G est toujours autorisé pour les appels d\'urgence, mais les appels peuvent ne pas se connecter si vous êtes en itinérance à l\'étranger."</string>
-    <string name="cellular_security_2G_network_generation_title" msgid="706766676947606951">"Protection contre le réseau 2G"</string>
+    <string name="cellular_security_2G_network_generation_summary" msgid="4041699962072749477">"La protection contre les réseaux 2G permet d\'éviter les réseaux 2G, qui sont moins sécurisés. Cela peut limiter la connectivité à certains endroits. La 2G est toujours autorisée pour les appels d\'urgence, mais les appels peuvent ne pas se connecter si vous êtes en itinérance à l\'étranger."</string>
+    <string name="cellular_security_2G_network_generation_title" msgid="706766676947606951">"Protection contre les réseaux 2G"</string>
     <string name="cellular_security_settings_encryption_title" msgid="4013084091666375780">"Chiffrement"</string>
     <string name="cellular_security_network_generations_title" msgid="2343026988833783854">"Générations de réseaux"</string>
     <string name="cellular_security_network_generations_summary" msgid="139087814553929402">"Vous pouvez configurer chaque carte SIM installée afin qu\'elle se connecte uniquement aux réseaux qui prennent en charge la 3G, la 4G et la 5G. La carte SIM ne se connectera pas aux réseaux 2G plus anciens et non sécurisés. Ce paramètre peut limiter votre connectivité si le seul réseau disponible est un réseau 2G. En cas d\'urgence, la 2G peut être utilisée."</string>
@@ -3571,7 +3574,8 @@
     <string name="color_orange" msgid="216547825489739010">"Orange"</string>
     <string name="color_purple" msgid="6603701972079904843">"Mauve"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"État de la carte SIM"</string>
-    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"État de la carte SIM (fente SIM %1$d)"</string>
+    <!-- no translation found for sim_status_title_sim_slot (8727408941064901486) -->
+    <skip />
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"Échange des cartes SIM réussi"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"Touchez pour configurer"</string>
@@ -4807,6 +4811,10 @@
     <string name="double_tap_power_lockscreen_shortcut_tip_description" msgid="7572626485518591928">"<xliff:g id="DOUBLE_TAP_POWER_TARGET_ACTION">%1$s</xliff:g> est également votre raccourci d\'écran de verrouillage. Touchez l\'écran pour le modifier."</string>
     <string name="double_tap_power_wallet_footer_title" msgid="4626950875173822614">"Votre appli de portefeuille par défaut actuelle ne prend pas en charge ce geste"</string>
     <string name="double_tap_power_wallet_footer_learn_more_text" msgid="4871482943751760132">"Changer le portefeuille par défaut"</string>
+    <!-- no translation found for keywords_double_tap_power (1238828843085517844) -->
+    <skip />
+    <!-- no translation found for keywords_double_tap_power_wallet_action (1118418868964220150) -->
+    <skip />
     <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"Changer d\'appareil photo pour prendre un égoportrait"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"Mode de navigation"</string>
@@ -5604,7 +5612,7 @@
     <string name="smart_forwarding_input_mdn_dialog_title" msgid="7542216086697868415">"Entrer le numéro de téléphone"</string>
     <string name="smart_forwarding_missing_mdn_text" msgid="2907314684242542226">"Le numéro de téléphone est manquant."</string>
     <string name="smart_forwarding_missing_alert_dialog_text" msgid="7870419247987316112">"OK"</string>
-    <string name="enable_2g_title" msgid="5657132300321750181">"Protection contre le réseau 2G"</string>
+    <string name="enable_2g_title" msgid="5657132300321750181">"Protection contre les réseaux 2G"</string>
     <string name="enable_2g_summary" msgid="6194875539424151678">"Évite l\'utilisation des réseaux 2G, qui sont moins sécurisés. Cela peut limiter la connectivité à certains endroits. Le réseau 2G est toujours autorisé pour les appels d\'urgence, mais les appels peuvent ne pas se connecter si vous êtes en itinérance à l\'étranger."</string>
     <string name="enable_2g_summary_disabled_carrier" msgid="8141118453219482762">"<xliff:g id="CARRIER_NAME_2G">%1$s</xliff:g> requiert que la 2G soit activée"</string>
     <string name="require_cellular_encryption_title" msgid="6087085031703089235">"Autoriser seulement les réseaux chiffrés"</string>
@@ -5790,8 +5798,7 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Mot de passe"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Améliorer la compatibilité"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Aide certains appareils, comme les prothèses auditives, à se connecter en réduisant la qualité audio"</string>
-    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
-    <skip />
+    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="689007549232438065">"Désactive le partage audio pour configurer la compatibilité"</string>
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Écouter l\'audio à proximité"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Le partage audio prend en charge Auracast🅪"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Nom du flux audio"</string>
@@ -5932,8 +5939,6 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Supprimer le NIP"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Ajouter une adresse courriel de récupération"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Valider votre adresse courriel"</string>
-    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
-    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Filtres de contenu de site Web"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Filtres de sites Web, bloquer les sites, filtres de navigateur, bloquer les sites explicites, filtrer les sites, bloquer les résultats de recherche, filtrer les résultats de recherche explicites, restrictions liées au contenu"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Aide à filtrer le contenu explicite sur certaines applis et certains navigateurs sur ce téléphone. Le contenu explicite peut toujours s\'afficher sur d\'autres applis, appareils ou navigateurs."</string>
