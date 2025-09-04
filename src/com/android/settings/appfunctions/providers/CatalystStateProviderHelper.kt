@@ -43,7 +43,7 @@ suspend fun CoroutineScope.getEnabledPreferencesHierarchy(
     context: Context,
     appFunctionType: DeviceStateAppFunctionType? = null,
     screenKey: String,
-): Pair<PreferenceScreenMetadata, List<PreferenceHierarchyNode>>? {
+): Map<PreferenceScreenMetadata, List<PreferenceHierarchyNode>> {
     val settingConfigMap = config.deviceStateItems.associateBy { it.settingKey }
     val perScreenConfigMap = config.screenConfigs.associateBy { it.screenKey }
     val perScreenConfig = perScreenConfigMap[screenKey]
@@ -52,13 +52,13 @@ suspend fun CoroutineScope.getEnabledPreferencesHierarchy(
             !perScreenConfig.enabled ||
             (appFunctionType != null && appFunctionType !in perScreenConfig.appFunctionTypes)
     ) {
-        return null
+        return mapOf()
     }
     val screenMetaData =
         PreferenceScreenRegistry.create(context, PreferenceScreenCoordinate(screenKey, null))
-            ?: return null
+            ?: return mapOf()
     if (screenMetaData is PreferenceAvailabilityProvider && !screenMetaData.isAvailable(context)) {
-        return null
+        return mapOf()
     }
     val preferenceHierarchy = mutableListOf<PreferenceHierarchyNode>()
     // TODO if child node is PreferenceScreen, recursively process it
@@ -70,5 +70,5 @@ suspend fun CoroutineScope.getEnabledPreferencesHierarchy(
 
         preferenceHierarchy.add(it)
     }
-    return screenMetaData to preferenceHierarchy
+    return mapOf(screenMetaData to preferenceHierarchy)
 }

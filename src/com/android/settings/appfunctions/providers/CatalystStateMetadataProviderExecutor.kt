@@ -26,6 +26,8 @@ import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.android.settings.appfunctions.DeviceStateMetadataProviderExecutorResult
 import com.android.settingslib.graph.PreferenceGetterFlags
 import com.android.settingslib.graph.toProto
+import com.android.settingslib.metadata.PreferenceHierarchyNode
+import com.android.settingslib.metadata.PreferenceScreenMetadata
 import com.android.settingslib.metadata.ReadWritePermit
 import com.android.settingslib.metadata.SensitivityLevel
 import com.android.settingslib.metadata.getPreferenceScreenTitle
@@ -68,17 +70,24 @@ class CatalystStateMetadataProviderExecutor(
                     }
                 }
             val results = deferredList.awaitAll()
-            perScreenDeviceStatesList.addAll(results.filterNotNull())
+            perScreenDeviceStatesList.addAll(results.filterNotNull().flatten())
         }
         return DeviceStateMetadataProviderExecutorResult(states = perScreenDeviceStatesList)
     }
 
     private suspend fun CoroutineScope.buildPerScreenDeviceStatesMetadata(
         screenKey: String
-    ): PerScreenMetadata? {
-        val (screenMetaData, preferencesHierarchy) =
-            getEnabledPreferencesHierarchy(config, context, appFunctionType = null, screenKey)
-                ?: return null
+    ): List<PerScreenMetadata> {
+        val hierarchy = getEnabledPreferencesHierarchy(config, context, appFunctionType = null, screenKey)
+
+        return hierarchy.map { entry ->
+            val screenMetaData = entry.key
+            val preferencesHierarchy = entry.value
+            buildPerScreenDeviceStatesMetadata(screenMetaData, preferencesHierarchy)
+        }
+    }
+
+    private suspend fun CoroutineScope.buildPerScreenDeviceStatesMetadata(screenMetaData: PreferenceScreenMetadata, preferencesHierarchy: List<PreferenceHierarchyNode>): PerScreenMetadata {
         val deviceStateItemMetadataList = mutableListOf<DeviceStateItemMetadata>()
         preferencesHierarchy.forEach {
             val metadata = it.metadata
@@ -102,6 +111,7 @@ class CatalystStateMetadataProviderExecutor(
                 }
             deviceStateItemMetadataList.add(
                 DeviceStateItemMetadata(
+                    // TODO: Expose parameterization
                     key = metadataProto.key,
                     purpose = metadataProto.key,
                     name =
