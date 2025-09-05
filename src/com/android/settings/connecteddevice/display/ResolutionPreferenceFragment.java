@@ -48,6 +48,7 @@ import com.android.settings.connecteddevice.display.ExternalDisplaySettingsConfi
 import com.android.settingslib.widget.SelectorWithWidgetPreference;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -172,12 +173,17 @@ public class ResolutionPreferenceFragment extends SettingsPreferenceFragmentBase
             return;
         }
         mResolutionPreferences.clear();
+        List<Mode> supportedModes = new ArrayList<>(mDisplay.getSupportedModes());
+        supportedModes.sort(
+                Comparator.comparingInt(Mode::getPhysicalWidth)
+                        .thenComparingInt(Mode::getPhysicalHeight)
+                        .reversed());
 
         var remainingModes =
                 addModePreferences(
                         context,
                         getTopPreference(context, screen),
-                        mDisplay.getSupportedModes(),
+                        supportedModes,
                         this::isTopMode,
                         mDisplay);
         addRemainingPreferences(
