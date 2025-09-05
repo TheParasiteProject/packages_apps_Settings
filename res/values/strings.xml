@@ -7875,8 +7875,10 @@
     <string name="trusted_credentials_disable_confirmation">Disable the system CA certificate?</string>
     <!-- Alert dialog confirmation when removing a user CA certificate. -->
     <string name="trusted_credentials_remove_confirmation">Permanently remove the user CA certificate?</string>
-    <!-- Content description for personal category in trusted credentials. [CHAR LIMIT=none]-->
-    <string name="trusted_credentials_category_content_description"><xliff:g id="credential_category" example="Personal">%s</xliff:g> CA certificates, double tap to expand or collapse</string>
+    <!-- Content description for expanding the given certificate category in trusted credentials. [CHAR LIMIT=none]-->
+    <string name="trusted_credentials_category_content_description_to_expand"><xliff:g id="credential_category" example="Personal">%s</xliff:g> CA certificates, collapsed, double tap to expand</string>
+    <!-- Content description for collapsing the given certificate category in trusted credentials. [CHAR LIMIT=none]-->
+    <string name="trusted_credentials_category_content_description_to_collapse"><xliff:g id="credential_category" example="Personal">%s</xliff:g> CA certificates, expanded, double tap to collapse</string>
 
     <!-- Header for a list of items that a credential entry is required. For example, a network uses this credential. [CHAR LIMIT=NONE] -->
     <string name="credential_being_used_by">Being used by</string>
