@@ -104,66 +104,7 @@ public class ResolutionPreferenceFragment extends SettingsPreferenceFragmentBase
         }
         addPreferencesFromResource(EXTERNAL_DISPLAY_RESOLUTION_SETTINGS_RESOURCE);
         updateDisplayModeLimits(mInjector.getContext());
-
-        if (enableResolutionApplyConfirmation()) {
-            getParentFragmentManager()
-                    .setFragmentResultListener(
-                            ResolutionChangeDialogFragment.KEY_RESULT,
-                            this,
-                            (requestKey, bundle) -> {
-                                if (mInjector == null) {
-                                    return;
-                                }
-                                boolean confirmed =
-                                        bundle.getBoolean(
-                                                ResolutionChangeDialogFragment.KEY_CONFIRMED,
-                                                false);
-                                int displayId = getDisplayIdArg();
-                                if (confirmed) {
-                                    Mode selectedMode =
-                                            bundle.getParcelable(
-                                                    ResolutionChangeDialogFragment.KEY_NEW_MODE,
-                                                    Mode.class);
-                                    if (selectedMode == null) {
-                                        // This should never happen, just added to handle nullable
-                                        // getParcelable()
-                                        Log.w(
-                                                TAG,
-                                                "Selected mode was not set from dialog fragment"
-                                                        + " result, reverting display#"
-                                                        + displayId
-                                                        + " resolution");
-                                        mInjector.resetUserPreferredDisplayMode(displayId);
-                                        return;
-                                    }
-                                    Log.i(
-                                            TAG,
-                                            "Updating display#"
-                                                    + displayId
-                                                    + " resolution to "
-                                                    + modeToReadableString(selectedMode));
-                                    mInjector.setUserPreferredDisplayMode(
-                                            displayId, selectedMode, /* storeMode= */ true);
-                                } else {
-                                    // Proactively update UI since it will take time for the reset
-                                    // to be propagated to DisplayManager and for DisplayManager to
-                                    // update the listener back
-                                    Mode existingMode =
-                                            bundle.getParcelable(
-                                                    ResolutionChangeDialogFragment
-                                                            .KEY_EXISTING_MODE,
-                                                    Mode.class);
-                                    updateAllPreferenceStates(existingMode);
-                                    Log.i(
-                                            TAG,
-                                            "Reverting display#"
-                                                    + displayId
-                                                    + " resolution to "
-                                                    + modeToReadableString(existingMode));
-                                    mInjector.resetUserPreferredDisplayMode(displayId);
-                                }
-                            });
-        }
+        setupResolutionApplyConfirmationHandler();
     }
 
     @Override
@@ -516,6 +457,67 @@ public class ResolutionPreferenceFragment extends SettingsPreferenceFragmentBase
             return "";
         }
         return m.getPhysicalWidth() + " x " + m.getPhysicalHeight();
+    }
+
+    private void setupResolutionApplyConfirmationHandler() {
+        if (!enableResolutionApplyConfirmation()) {
+            return;
+        }
+        getParentFragmentManager()
+                .setFragmentResultListener(
+                        ResolutionChangeDialogFragment.KEY_RESULT,
+                        this,
+                        (requestKey, bundle) -> {
+                            if (mInjector == null) {
+                                return;
+                            }
+                            boolean confirmed =
+                                    bundle.getBoolean(
+                                            ResolutionChangeDialogFragment.KEY_CONFIRMED, false);
+                            int displayId = getDisplayIdArg();
+                            if (confirmed) {
+                                Mode selectedMode =
+                                        bundle.getParcelable(
+                                                ResolutionChangeDialogFragment.KEY_NEW_MODE,
+                                                Mode.class);
+                                if (selectedMode == null) {
+                                    // This should never happen, just added to handle nullable
+                                    // getParcelable()
+                                    Log.w(
+                                            TAG,
+                                            "Selected mode was not set from dialog fragment"
+                                                    + " result, reverting display#"
+                                                    + displayId
+                                                    + " resolution");
+                                    mInjector.resetUserPreferredDisplayMode(displayId);
+                                    return;
+                                }
+                                Log.i(
+                                        TAG,
+                                        "Updating display#"
+                                                + displayId
+                                                + " resolution to "
+                                                + modeToReadableString(selectedMode));
+                                mInjector.setUserPreferredDisplayMode(
+                                        displayId, selectedMode, /* storeMode= */ true);
+                            } else {
+                                // Proactively update UI since it will take time for the reset
+                                // to be propagated to DisplayManager and for DisplayManager to
+                                // update the listener back
+                                Mode existingMode =
+                                        bundle.getParcelable(
+                                                ResolutionChangeDialogFragment.KEY_EXISTING_MODE,
+                                                Mode.class);
+                                updateAllPreferenceStates(existingMode);
+                                Log.i(
+                                        TAG,
+                                        "Reverting display#"
+                                                + displayId
+                                                + " resolution to "
+                                                + modeToReadableString(existingMode));
+                                mInjector.resetUserPreferredDisplayMode(displayId);
+                            }
+                        });
     }
 
     private boolean enableResolutionApplyConfirmation() {
