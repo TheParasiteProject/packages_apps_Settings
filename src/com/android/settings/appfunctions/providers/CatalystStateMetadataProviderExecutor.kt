@@ -19,11 +19,13 @@ package com.android.settings.appfunctions.providers
 import android.app.appsearch.GenericDocument
 import android.content.Context
 import android.content.Intent
+import android.os.BaseBundle
 import android.os.Binder
 import android.util.Log
 import com.android.settings.appfunctions.CatalystConfig
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.android.settings.appfunctions.DeviceStateMetadataProviderExecutorResult
+import com.android.settings.flags.Flags
 import com.android.settingslib.graph.PreferenceGetterFlags
 import com.android.settingslib.graph.toProto
 import com.android.settingslib.metadata.PreferenceHierarchyNode
@@ -40,6 +42,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.sync.Semaphore
+import kotlinx.coroutines.sync.withPermit
 
 /* A [DeviceStateExecutor] that provides device state metadata information for Settings that are
 exposed using Catalyst framework. Configured in [CatalystStateProviderConfig]. */
@@ -58,14 +62,26 @@ class CatalystStateMetadataProviderExecutor(
     ): DeviceStateMetadataProviderExecutorResult {
         val perScreenDeviceStatesList = mutableListOf<PerScreenMetadata>()
         coroutineScope {
+            val semaphore = Semaphore(MAX_PARALLELISM)
             val deferredList =
                 screenKeyList.map { screenKey ->
                     async {
-                        try {
-                            buildPerScreenDeviceStatesMetadata(screenKey)
-                        } catch (e: Exception) {
-                            Log.e(TAG, "error building $screenKey", e)
-                            null
+                        if (Flags.parameterisedScreensInAppFunctions()) {
+                            semaphore.withPermit {
+                                try {
+                                    buildPerScreenDeviceStatesMetadata(screenKey)
+                                } catch (e: Exception) {
+                                    Log.e(TAG, "error building $screenKey", e)
+                                    null
+                                }
+                            }
+                        } else {
+                            try {
+                                buildPerScreenDeviceStatesMetadata(screenKey)
+                            } catch (e: Exception) {
+                                Log.e(TAG, "error building $screenKey", e)
+                                null
+                            }
                         }
                     }
                 }
@@ -129,8 +145,20 @@ class CatalystStateMetadataProviderExecutor(
         }
 
         val launchingIntent = screenMetaData.getLaunchIntent(context, null)
+
+        // This is hack because in general parameters are not human readable. We remove known
+        // internal keys then just dump the rest in the description.
+        val basicDescription = screenMetaData.getPreferenceScreenTitle(context)?.toString() ?: ""
+        val arguments = screenMetaData.arguments?.clone() as? BaseBundle
+        arguments?.remove("source")
+        val descriptionSuffix = if (arguments == null) {
+            ""
+        } else {
+            ". " + arguments.keySet().joinToString(", ") { "$it=${arguments.get(it)}" }
+        }
+        val description = basicDescription + descriptionSuffix
         return PerScreenMetadata(
-            description = screenMetaData.getPreferenceScreenTitle(context)?.toString() ?: "",
+            description = description,
             deviceStateItemsMetadata = deviceStateItemMetadataList,
             intentUri = launchingIntent?.toUri(Intent.URI_INTENT_SCHEME),
         )
@@ -138,5 +166,6 @@ class CatalystStateMetadataProviderExecutor(
 
     companion object {
         private const val TAG = "CatalystStateMetadataProviderExecutor"
+        private const val MAX_PARALLELISM = 5
     }
 }
