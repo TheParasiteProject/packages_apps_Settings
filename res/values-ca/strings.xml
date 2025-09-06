@@ -1015,7 +1015,8 @@
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"No hi ha cap pantalla connectada"</string>
     <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"Connecta una pantalla externa per començar o prova d\'utilitzar un altre cable"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"Més opcions"</string>
-    <string name="external_display_topology_hint" msgid="854973327795578470">"Mantén premut i arrossega per reorganitzar les pantalles."</string>
+    <!-- no translation found for external_display_topology_hint (885396727047321347) -->
+    <skip />
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"Duplica la pantalla integrada"</string>
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Vols utilitzar la nova configuració?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Si la pantalla no funciona com vols, pots tornar a la configuració anterior"</string>
@@ -1584,7 +1585,8 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"Emmagatzematge i memòria cau"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"Configuració d\'emmagatzematge"</string>
     <string name="status_eid" msgid="3588471107671992684">"EID"</string>
-    <string name="eid_multi_sim" msgid="6659492335576379274">"EID (ranura de la SIM <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <!-- no translation found for eid_multi_sim (3054468215477777096) -->
+    <skip />
     <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"Selecciona una xarxa desada per veure-la"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
@@ -1950,6 +1952,8 @@
     <string name="lockpattern_recording_intro_header" msgid="8325736706877916560">"Dibuixa un patró de desbloqueig"</string>
     <string name="lockpattern_recording_intro_footer" msgid="2656868858594487197">"Premeu Menú per obtenir ajuda."</string>
     <string name="lockpattern_recording_inprogress" msgid="7268008332694009191">"Deixa anar el dit quan acabis"</string>
+    <!-- no translation found for lockpattern_recording_inprogress_click (8502597789237564270) -->
+    <skip />
     <string name="lockpattern_recording_incorrect_too_short" msgid="3351522018450593723">"Connecta <xliff:g id="NUMBER">%d</xliff:g> punts com a mínim. Torna-ho a provar."</string>
     <string name="lockpattern_pattern_entered_header" msgid="7709618312713127249">"Patró gravat"</string>
     <string name="lockpattern_need_to_confirm" msgid="6489499109451714360">"Torna a dibuixar el patró per confirmar-lo"</string>
@@ -2414,8 +2418,7 @@
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Fes l\'enquesta"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Enquesta sobre accessibilitat"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Comparteix els teus suggeriments"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"Quin és el teu grau de satisfacció amb el tema fosc?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Fes l\'enquesta"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Comparteix els teus suggeriments"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Quin és el teu grau de satisfacció amb l\'ampliació?"</string>
@@ -3131,12 +3134,12 @@
     <string name="adaptive_connectivity_mobile_network_switch_title" msgid="1852172801040818123">"Optimitza la xarxa per allargar la bateria"</string>
     <string name="adaptive_connectivity_mobile_network_switch_summary" msgid="8336459750352233615">"Selecciona automàticament la millor connexió de xarxa per allargar la durada de la bateria"</string>
     <string name="cellular_security_title" msgid="5562899485544677941">"Seguretat de xarxes mòbils"</string>
-    <string name="cellular_security_summary" msgid="1893770670709928113">"Tipus de xarxa, encriptació, controls de notificació"</string>
-    <string name="cellular_security_top_intro" msgid="6749166804080092892">"Aquesta configuració ajuda a protegir les trucades, els missatges i les dades de xarxes obsoletes o sense encriptació que podrien exposar-te al robatori de dades o a la vigilància"</string>
+    <string name="cellular_security_summary" msgid="1893770670709928113">"Tipus de xarxa, encriptació, controls de notificacions"</string>
+    <string name="cellular_security_top_intro" msgid="6749166804080092892">"Aquesta configuració ajuda a protegir les trucades, els missatges i les dades de xarxes obsoletes o no encriptades que podrien exposar-te al robatori de dades o a la vigilància"</string>
     <string name="cellular_security_settings_title" msgid="7779141923670352595">"Seguretat de xarxes mòbils"</string>
     <string name="cellular_security_notifications" msgid="4619728340612184944">"Notificacions"</string>
     <string name="cellular_security_notifications_controller_title" msgid="4853056963523277847">"Notificacions de la xarxa"</string>
-    <string name="cellular_security_notifications_controller_summary" msgid="8339863845393759958">"Rep notificacions quan el dispositiu es connecti a una xarxa sense encriptació o quan una xarxa registri l\'identificador únic del dispositiu o de la SIM"</string>
+    <string name="cellular_security_notifications_controller_summary" msgid="8339863845393759958">"Rep notificacions quan el dispositiu es connecti a una xarxa no encriptada o quan una xarxa registri l\'identificador únic del dispositiu o de la SIM"</string>
     <string name="cellular_security_2G_network_generation_header" msgid="2892850064192939887">"Generació de xarxes"</string>
     <string name="cellular_security_2G_network_generation_summary" msgid="4041699962072749477">"La protecció contra xarxes 2G evita les xarxes 2G, que són menys segures. Això pot limitar la connectivitat en alguns llocs. El 2G sempre es permet per a les trucades d\'emergència, però és possible que no es connectin si utilitzes la itinerància internacional."</string>
     <string name="cellular_security_2G_network_generation_title" msgid="706766676947606951">"Protecció contra xarxes 2G"</string>
@@ -3573,7 +3576,8 @@
     <string name="color_orange" msgid="216547825489739010">"Taronja"</string>
     <string name="color_purple" msgid="6603701972079904843">"Porpra"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"Estat de la SIM"</string>
-    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"Estat de la SIM (ranura de la SIM %1$d)"</string>
+    <!-- no translation found for sim_status_title_sim_slot (8727408941064901486) -->
+    <skip />
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"Les SIM han canviat"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"Toca per configurar"</string>
@@ -4809,6 +4813,10 @@
     <string name="double_tap_power_lockscreen_shortcut_tip_description" msgid="7572626485518591928">"<xliff:g id="DOUBLE_TAP_POWER_TARGET_ACTION">%1$s</xliff:g> també és la drecera de la pantalla de bloqueig. Toca per canviar-ho."</string>
     <string name="double_tap_power_wallet_footer_title" msgid="4626950875173822614">"L\'aplicació Wallet predeterminada actual no admet aquest gest"</string>
     <string name="double_tap_power_wallet_footer_learn_more_text" msgid="4871482943751760132">"Canvia la cartera predeterminada"</string>
+    <!-- no translation found for keywords_double_tap_power (1238828843085517844) -->
+    <skip />
+    <!-- no translation found for keywords_double_tap_power_wallet_action (1118418868964220150) -->
+    <skip />
     <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"Gira la càmera per fer una selfie"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"Mode de navegació"</string>
@@ -5792,8 +5800,7 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Contrasenya"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Millora la compatibilitat"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Ajuda que es connectin alguns dispositius, com ara audiòfons, reduint la qualitat de l\'àudio"</string>
-    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
-    <skip />
+    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="689007549232438065">"Desactiva la compartició d\'àudio per configurar la compatibilitat"</string>
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Escolta àudio a prop"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"La compartició d\'àudio admet Auracast™"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Nom del flux d\'àudio"</string>
@@ -5934,8 +5941,6 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Suprimeix el PIN"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Afegeix una adreça electrònica de recuperació"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Verifica l\'adreça electrònica"</string>
-    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
-    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Filtres de contingut de llocs web"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Filtres de llocs web, bloqueig de llocs web, filtres del navegador, bloqueig de llocs web explícits, filtració de llocs web, bloqueig de resultats de cerca, filtració de resultats de cerca explícits, restriccions de contingut"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Ajuda a filtrar el contingut explícit en algunes aplicacions i navegadors d\'aquest telèfon. És possible que el contingut explícit continuï mostrant-se en altres aplicacions, dispositius o navegadors."</string>

@@ -117,19 +117,23 @@ open class DoubleTapPowerScreen(context: Context) :
         }
 
     override fun onCreate(context: PreferenceLifecycleContext) {
-        keyedObserver = KeyedObserver { _, _ -> context.notifyPreferenceChange(KEY) }
-        for (doubleTapKey in doubleTapKeys) {
-            doubleTapPowerToOpenCameraDataStore.addObserver(
-                doubleTapKey,
-                keyedObserver,
-                HandlerExecutor.main,
-            )
+        if (isEntryPoint(context)) {
+            keyedObserver = KeyedObserver { _, _ -> context.notifyPreferenceChange(KEY) }
+            for (doubleTapKey in doubleTapKeys) {
+                doubleTapPowerToOpenCameraDataStore.addObserver(
+                    doubleTapKey,
+                    keyedObserver,
+                    HandlerExecutor.main,
+                )
+            }
         }
     }
 
     override fun onDestroy(context: PreferenceLifecycleContext) {
-        for (doubleTapKey in doubleTapKeys) {
-            doubleTapPowerToOpenCameraDataStore.removeObserver(doubleTapKey, keyedObserver)
+        if (isEntryPoint(context)) {
+            for (doubleTapKey in doubleTapKeys) {
+                doubleTapPowerToOpenCameraDataStore.removeObserver(doubleTapKey, keyedObserver)
+            }
         }
     }
 

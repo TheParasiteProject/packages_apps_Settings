@@ -1015,7 +1015,8 @@
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"કોઈ ડિસ્પ્લે કનેક્ટ કરેલું નથી"</string>
     <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"શરૂઆત કરવા માટે બાહ્ય ડિસ્પ્લે કનેક્ટ કરો અથવા જુદો કેબલ ઉપયોગમાં લઈને પ્રયાસ કરો"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"વધુ વિકલ્પો"</string>
-    <string name="external_display_topology_hint" msgid="854973327795578470">"ડિસ્પ્લેનો ક્રમ બદલવા માટે દબાવી રાખીને ખેંચો."</string>
+    <!-- no translation found for external_display_topology_hint (885396727047321347) -->
+    <skip />
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"મિરર બિલ્ટ-ઇન ડિસ્પ્લે"</string>
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"નવા સેટિંગનો ઉપયોગ કરીએ?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"જો તમારું ડિસ્પ્લે તમારી ઇચ્છા અનુસાર કામ ન કરી રહ્યું હોય, તો તમે તમારા અગાઉના સેટિંગ પર પાછા જઈ શકો છો"</string>
@@ -1584,7 +1585,8 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"સ્ટોરેજ અને કૅશ મેમરી"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"સ્ટોરેજ સેટિંગ"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
-    <string name="eid_multi_sim" msgid="6659492335576379274">"E​ID (સિમ કાર્ડનો સ્લૉટ <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <!-- no translation found for eid_multi_sim (3054468215477777096) -->
+    <skip />
     <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"જોવા માટે, સાચવેલું નેટવર્ક પસંદ કરો"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
@@ -1950,6 +1952,8 @@
     <string name="lockpattern_recording_intro_header" msgid="8325736706877916560">"એક અનલૉક પૅટર્ન દોરો"</string>
     <string name="lockpattern_recording_intro_footer" msgid="2656868858594487197">"સહાય માટે મેનૂ દબાવો."</string>
     <string name="lockpattern_recording_inprogress" msgid="7268008332694009191">"પૂર્ણ થવા પર આંગળી છોડી દો"</string>
+    <!-- no translation found for lockpattern_recording_inprogress_click (8502597789237564270) -->
+    <skip />
     <string name="lockpattern_recording_incorrect_too_short" msgid="3351522018450593723">"ઓછામાં ઓછા <xliff:g id="NUMBER">%d</xliff:g> ડોટ્સ કનેક્ટ કરો. ફરીથી પ્રયાસ કરો."</string>
     <string name="lockpattern_pattern_entered_header" msgid="7709618312713127249">"પૅટર્ન રેકોર્ડ કરી"</string>
     <string name="lockpattern_need_to_confirm" msgid="6489499109451714360">"કન્ફર્મ કરવા માટે ફરીથી પૅટર્ન દોરો"</string>
@@ -2414,8 +2418,7 @@
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"સર્વેક્ષણમાં ભાગ લો"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"ઍક્સેસિબિલિટીનું સર્વેક્ષણ"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"તમારો પ્રતિસાદ શેર કરો"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"ડાર્ક થીમથી તમે કેટલા સંતુષ્ટ છો?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"સર્વેક્ષણમાં ભાગ લો"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"તમારો પ્રતિસાદ શેર કરો"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"મોટું કરવાની સુવિધાથી તમે કેટલા સંતુષ્ટ છો?"</string>
@@ -2593,7 +2596,7 @@
     <string name="accessibility_standard_dark_theme_summary" msgid="5266722109397649822">"આ સુવિધા, ડાર્ક થીમને સપોર્ટ કરતા તમારા ડિવાઇસ અને ઍપ માટે ડાર્ક થીમ ચાલુ કરે છે"</string>
     <string name="accessibility_expanded_dark_theme_title" msgid="9221540446783335817">"મોટું કરેલું"</string>
     <string name="accessibility_expanded_dark_theme_title_in_search" msgid="7467343853315678576">"મોટી કરેલી ડાર્ક થીમ"</string>
-    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"આ સુવિધા, ડાર્ક થીમને સપોર્ટ ન કરતી મોટાભાગની ઍપ પર ઑટોમૅટિક રીતે ડાર્ક થીમ લાગુ કરે છે. આ સુવિધા, ઍક્સેસિબિલિટી અને વાંચનક્ષમતાને બહેતર બનાવે છે, પરંતુ તેને કારણે કેટલીક ઍપ યોગ્ય રીતે ડિસ્પ્લે થઈ શકે છે."</string>
+    <string name="accessibility_expanded_dark_theme_summary" msgid="6910183648769192345">"આ સુવિધા, ડાર્ક થીમને સપોર્ટ ન કરતી મોટાભાગની ઍપ પર ઑટોમૅટિક રીતે ડાર્ક થીમ લાગુ કરે છે. આ સુવિધા, ઍક્સેસિબિલિટી અને વાંચનક્ષમતાને બહેતર બનાવે છે, પરંતુ તેને કારણે કેટલીક ઍપ અયોગ્ય રીતે ડિસ્પ્લે થઈ શકે છે."</string>
     <string name="keywords_expanded_dark_theme" msgid="8366925785183600306">"ઉલટાવવાની ફરજ પાડો, વિપરીત રંગમાં બદલવું, કૉન્ટ્રાસ્ટ"</string>
     <string name="accessibility_disable_animations" msgid="2993529829457179058">"ઍનિમેશન કાઢી નાખો"</string>
     <string name="accessibility_disable_animations_summary" msgid="5828228669556554565">"સ્ક્રીન પર હિલચાલ ઘટાડો"</string>
@@ -3134,7 +3137,7 @@
     <string name="cellular_security_settings_title" msgid="7779141923670352595">"મોબાઇલ નેટવર્ક સુરક્ષા"</string>
     <string name="cellular_security_notifications" msgid="4619728340612184944">"નોટિફિકેશન"</string>
     <string name="cellular_security_notifications_controller_title" msgid="4853056963523277847">"નેટવર્ક સંબંધિત નોટિફિકેશન"</string>
-    <string name="cellular_security_notifications_controller_summary" msgid="8339863845393759958">"જ્યારે તમારું ડિવાઇસ એન્ક્રિપ્ટ નહીં થયેલા નેટવર્ક સાથે કનેક્ટ થાય અથવા જ્યારે કોઈ નેટવર્ક તમારા અજોડ ડિવાઇસ અથવા સિમ કાર્ડ IDને રેકોર્ડ કરે ત્યારે નોટિફિકેશન મેળવો"</string>
+    <string name="cellular_security_notifications_controller_summary" msgid="8339863845393759958">"જ્યારે તમારું ડિવાઇસ એન્ક્રિપ્ટ નહીં થયેલા નેટવર્ક સાથે કનેક્ટ થાય અથવા જ્યારે કોઈ નેટવર્ક તમારા વિશિષ્ટ ડિવાઇસ અથવા સિમ કાર્ડ IDને રેકોર્ડ કરે ત્યારે નોટિફિકેશન મેળવો"</string>
     <string name="cellular_security_2G_network_generation_header" msgid="2892850064192939887">"નેટવર્ક જનરેશન"</string>
     <string name="cellular_security_2G_network_generation_summary" msgid="4041699962072749477">"2G નેટવર્ક સુરક્ષા ઓછા સુરક્ષિત હોય તેવા 2G નેટવર્કને ટાળે છે. આનાથી કેટલીક જગ્યાએ કનેક્ટિવિટી મર્યાદિત થઈ શકે છે. ઇમર્જન્સી કૉલ માટે 2Gની હંમેશાં માટે મંજૂરી આપી છે, પરંતુ જો તમે આંતરરાષ્ટ્રીય રોમિંગમાં હો, તો કૉલ કનેક્ટ ન પણ થઈ શકે."</string>
     <string name="cellular_security_2G_network_generation_title" msgid="706766676947606951">"2G નેટવર્ક સુરક્ષા"</string>
@@ -3571,7 +3574,8 @@
     <string name="color_orange" msgid="216547825489739010">"નારંગી"</string>
     <string name="color_purple" msgid="6603701972079904843">"જાંબલી"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"સિમ સ્થિતિ"</string>
-    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"સિમ કાર્ડનું સ્ટેટસ (સિમ કાર્ડનો સ્લૉટ %1$d)"</string>
+    <!-- no translation found for sim_status_title_sim_slot (8727408941064901486) -->
+    <skip />
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"તમારા સિમ કાર્ડ બદલાયા છે"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"સેટ કરવા માટે ટૅપ કરો"</string>
@@ -4807,6 +4811,10 @@
     <string name="double_tap_power_lockscreen_shortcut_tip_description" msgid="7572626485518591928">"<xliff:g id="DOUBLE_TAP_POWER_TARGET_ACTION">%1$s</xliff:g> પણ તમારી લૉક સ્ક્રીનનો શૉર્ટકટ છે. તેને બદલવા માટે ટૅપ કરો."</string>
     <string name="double_tap_power_wallet_footer_title" msgid="4626950875173822614">"તમારી હાલની ડિફૉલ્ટ વૉલેટ ઍપ આ સંકેતને સપોર્ટ કરતી નથી"</string>
     <string name="double_tap_power_wallet_footer_learn_more_text" msgid="4871482943751760132">"ડિફૉલ્ટ વૉલેટ બદલો"</string>
+    <!-- no translation found for keywords_double_tap_power (1238828843085517844) -->
+    <skip />
+    <!-- no translation found for keywords_double_tap_power_wallet_action (1118418868964220150) -->
+    <skip />
     <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"સેલ્ફી માટે કૅમેરાને ફ્લિપ કરો"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"નૅવિગેશન મોડ"</string>
@@ -5790,8 +5798,7 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"પાસવર્ડ"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"સુસંગતતા બહેતર બનાવો"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"સાંભળવામાં મદદ આપતા યંત્રો જેવા અમુક ડિવાઇસને ઑડિયોની ક્વૉલિટી ઘટાડીને કનેક્ટ થવામાં સહાય કરે છે"</string>
-    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
-    <skip />
+    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="689007549232438065">"સુસંગતતા ગોઠવવા માટે ઑડિયો શેરિંગ બંધ કરે છે"</string>
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"નજીકના ઑડિયો સાંભળો"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Auracast™ને ઑડિયો શેરિંગ સપોર્ટ કરે છે"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"ઑડિયો સ્ટ્રીમનું નામ"</string>
@@ -5932,8 +5939,6 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"પિન ડિલીટ કરો"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"રિકવરી ઇમેઇલ ઍડ્રેસ ઉમેરો"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"તમારા ઇમેઇલ ઍડ્રેસની ચકાસણી કરો"</string>
-    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
-    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"વેબસાઇટ પરના કન્ટેન્ટના ફિલ્ટર"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"વેબસાઇટના ફિલ્ટર, સાઇટ બ્લૉક કરો, બ્રાઉઝરના ફિલ્ટર, અયોગ્ય સાઇટ બ્લૉક કરો, સાઇટને ફિલ્ટર કરો, શોધ પરિણામો બ્લૉક કરો, અયોગ્ય શોધ પરિણામો ફિલ્ટર કરો, કન્ટેન્ટ પ્રતિબંધો"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"આ ફોનમાં અમુક ઍપ અને બ્રાઉઝર પર અયોગ્ય કન્ટેન્ટ ફિલ્ટર કરવામાં મદદ કરો. અન્ય ઍપ, ડિવાઇસ અથવા બ્રાઉઝર પર અયોગ્ય કન્ટેન્ટ હજી પણ દેખાઈ શકે છે."</string>

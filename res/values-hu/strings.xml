@@ -899,7 +899,7 @@
     <string name="lockpassword_password_too_short" msgid="1938086368137797700">"{count,plural, =1{Legalább # karakter legyen}other{Legalább # karakter legyen}}"</string>
     <string name="lockpassword_password_too_short_all_numeric" msgid="4301294924022401502">"{count,plural, =1{Ha csak számokat használ, adjon meg legalább egy számjegyet}other{Ha csak számokat használ, adjon meg legalább # számjegyet}}"</string>
     <string name="lockpassword_pin_too_short" msgid="8910105226463085689">"{count,plural, =1{A PIN-kódnak legalább # számjegyből kell állnia}other{A PIN-kódnak legalább # számjegyből kell állnia}}"</string>
-    <string name="lockpassword_pin_too_short_autoConfirm_extra_message" msgid="3271351502900762571">"{count,plural, =1{A PIN-kódnak legalább # számjegyből kell állnia, de a nagyobb biztonság érdekében javasoljuk, hogy {minAutoConfirmLen} jegyű PIN-kódot adjon meg}other{A PIN-kódnak legalább # számjegyből kell állnia, de a nagyobb biztonság érdekében javasoljuk, hogy {minAutoConfirmLen} jegyű PIN-kódot adjon meg}}"</string>
+    <string name="lockpassword_pin_too_short_autoConfirm_extra_message" msgid="3271351502900762571">"{count,plural, =1{A PIN-kódnak legalább # számjegyből kell állnia, de a nagyobb biztonság érdekében javasoljuk, hogy {minAutoConfirmLen} jegyű PIN-kódot adjon meg.}other{A PIN-kódnak legalább # számjegyből kell állnia, de a nagyobb biztonság érdekében javasoljuk, hogy {minAutoConfirmLen} jegyű PIN-kódot adjon meg.}}"</string>
     <string name="lockpassword_password_too_long" msgid="1940345313260498308">"{count,plural, =1{# karakternél rövidebbnek kell lennie}other{# karakternél rövidebbnek kell lennie}}"</string>
     <string name="lockpassword_pin_too_long" msgid="1678212054564388576">"{count,plural, =1{# számjegynél rövidebbnek kell lennie}other{# számjegynél rövidebbnek kell lennie}}"</string>
     <string name="lockpassword_pin_recently_used" msgid="6650277060998923465">"Az eszközrendszergazda nem engedélyezi a legutóbbi PIN-kódok használatát"</string>
@@ -1015,7 +1015,8 @@
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"Nincs csatlakoztatva kijelző"</string>
     <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"A kezdéshez csatlakoztasson külső kijelzőt, vagy próbálkozzon másik kábellel"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"További lehetőségek"</string>
-    <string name="external_display_topology_hint" msgid="854973327795578470">"A kijelzők átrendezéséhez tartsa lenyomva és húzza őket."</string>
+    <!-- no translation found for external_display_topology_hint (885396727047321347) -->
+    <skip />
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"Beépített kijelző tükrözése"</string>
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Az új beállításokat szeretné használni?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Ha a kijelző nem úgy működik, ahogy szeretné, visszaállíthatja a korábbi beállításokat."</string>
@@ -1584,7 +1585,8 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"Tárhely és gyorsítótár"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"Tárolóhely beállításai"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
-    <string name="eid_multi_sim" msgid="6659492335576379274">"EID (SIM-foglalat: <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <!-- no translation found for eid_multi_sim (3054468215477777096) -->
+    <skip />
     <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"A megtekintéshez válassza ki a mentett hálózatot"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
@@ -1950,6 +1952,8 @@
     <string name="lockpattern_recording_intro_header" msgid="8325736706877916560">"Rajzoljon egy feloldási mintát"</string>
     <string name="lockpattern_recording_intro_footer" msgid="2656868858594487197">"Nyomja meg a Menü gombot, ha segítségre van szüksége."</string>
     <string name="lockpattern_recording_inprogress" msgid="7268008332694009191">"Emelje fel az ujját, ha kész."</string>
+    <!-- no translation found for lockpattern_recording_inprogress_click (8502597789237564270) -->
+    <skip />
     <string name="lockpattern_recording_incorrect_too_short" msgid="3351522018450593723">"Kössön össze legalább <xliff:g id="NUMBER">%d</xliff:g> pontot. Próbálja újra."</string>
     <string name="lockpattern_pattern_entered_header" msgid="7709618312713127249">"Minta rögzítve"</string>
     <string name="lockpattern_need_to_confirm" msgid="6489499109451714360">"Rajzolja újra a mintát a megerősítéshez"</string>
@@ -2414,8 +2418,7 @@
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Kérdőív kitöltése"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Felmérés a kisegítő lehetőségekről"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Ossza meg velünk a véleményét"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"Mennyire elégedett a Sötét témával?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Kérdőív kitöltése"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Ossza meg velünk a véleményét"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Mennyire elégedett a nagyítással?"</string>
@@ -3571,7 +3574,8 @@
     <string name="color_orange" msgid="216547825489739010">"Narancssárga"</string>
     <string name="color_purple" msgid="6603701972079904843">"Lila"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"SIM-kártya állapota"</string>
-    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"SIM állapota (%1$d. SIM-foglalat)"</string>
+    <!-- no translation found for sim_status_title_sim_slot (8727408941064901486) -->
+    <skip />
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"Sikerült a SIM-váltás"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"Koppintson ide a beállításhoz"</string>
@@ -4289,7 +4293,7 @@
     <string name="zen_mode_trigger_summary_managed_by_app" msgid="8631011868193102098">"Kezelő: <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="zen_mode_confirm_disable_mode_title" msgid="7314998098582325018">"Tiltja a(z) <xliff:g id="MODE_NAME">%1$s</xliff:g> módot?"</string>
     <string name="zen_mode_confirm_disable_message" msgid="2703882646066764140">"Ez a mód soha nem kapcsol be, ha tiltva van"</string>
-    <string name="zen_mode_action_disable" msgid="3552921561331044881">"Kikapcsolás"</string>
+    <string name="zen_mode_action_disable" msgid="3552921561331044881">"Tiltás"</string>
     <string name="zen_mode_confirm_enable_mode_title" msgid="6020902148457106017">"Engedélyezi ezt: <xliff:g id="MODE_NAME">%1$s</xliff:g>?"</string>
     <string name="zen_mode_confirm_enable_message" msgid="8707142927858064775">"Ez a mód automatikusan is bekapcsolhat a beállítások függvényében"</string>
     <string name="zen_mode_action_enable" msgid="1161480633223176531">"Bekapcsolás"</string>
@@ -4807,6 +4811,10 @@
     <string name="double_tap_power_lockscreen_shortcut_tip_description" msgid="7572626485518591928">"A(z) <xliff:g id="DOUBLE_TAP_POWER_TARGET_ACTION">%1$s</xliff:g> a lezárási képernyő gyorsparancsa is. Koppintson a módosításához."</string>
     <string name="double_tap_power_wallet_footer_title" msgid="4626950875173822614">"Az aktuális alapértelmezett tárcaalkalmazás nem támogatja ezt a kézmozdulatot"</string>
     <string name="double_tap_power_wallet_footer_learn_more_text" msgid="4871482943751760132">"Alapértelmezett tárca módosítása"</string>
+    <!-- no translation found for keywords_double_tap_power (1238828843085517844) -->
+    <skip />
+    <!-- no translation found for keywords_double_tap_power_wallet_action (1118418868964220150) -->
+    <skip />
     <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"Szelfikészítés a kamera megfordításával"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"Navigációs mód"</string>
@@ -5790,8 +5798,7 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Jelszó"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"A kompatibilitás javítása"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"A hangminőség csökkentésével segíti bizonyos eszközök (például hallókészülék) csatlakoztatását."</string>
-    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
-    <skip />
+    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="689007549232438065">"A kompatibilitás konfigurálása érdekében kikapcsolja a hangmegosztást"</string>
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Közeli hangforrás hallgatása"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"A hangmegosztás támogatja az Auracast™ funkciót"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Audiostream neve"</string>
@@ -5932,8 +5939,6 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"PIN-kód törlése"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Biztonsági e-mail-cím hozzáadása"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Igazolja e-mail-címét"</string>
-    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
-    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Webhelytartalom-szűrők"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Webhelyszűrők, Webhelyek letiltása, Böngészőszűrők, Szókimondó webhelyek letiltása, Webhelyek szűrése, Keresési találatok letiltása, Szókimondó keresési találatok szűrése, tartalmi korlátozások"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Segít kiszűrni a felnőtteknek szóló tartalmakat bizonyos alkalmazásokban és böngészőkben ezen a telefonon. Más alkalmazásokban, eszközökön vagy böngészőkben a felnőtteknek szóló tartalmak továbbra is megjelenhetnek."</string>

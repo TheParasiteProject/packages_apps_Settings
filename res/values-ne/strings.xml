@@ -1015,7 +1015,8 @@
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"कुनै पनि डिस्प्ले कनेक्ट गरिएको छैन"</string>
     <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"सुरु गर्न बाह्य डिस्प्ले कनेक्ट गर्नुहोस् वा अर्कै केबल प्रयोग गरी हेर्नुहोस्"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"थप विकल्पहरू"</string>
-    <string name="external_display_topology_hint" msgid="854973327795578470">"डिस्प्लेहरू पुनः मिलाउन होल्ड गरी ड्र्याग गर्नुहोस्।"</string>
+    <!-- no translation found for external_display_topology_hint (885396727047321347) -->
+    <skip />
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"अन्तर्निर्मित डिस्प्ले मिरर गर्नुहोस्"</string>
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"नयाँ सेटिङ प्रयोग गर्ने हो?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"तपाईंको डिस्प्लेले तपाईंले चाहे जस्तो काम गरिरहेको छैन भने तपाईं आफ्ना हालका सेटिङ उल्ट्याएर पहिलेकै सेटिङ लागू गर्न सक्नुहुन्छ"</string>
@@ -1584,7 +1585,8 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"भण्डारण र क्यास"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"भण्डारण सेटिङहरू"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
-    <string name="eid_multi_sim" msgid="6659492335576379274">"E​ID (SIM स्लट <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <!-- no translation found for eid_multi_sim (3054468215477777096) -->
+    <skip />
     <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"हेर्नका लागि, सेभ गरिएको नेटवर्क छनौट गर्नुहोस्"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
@@ -1950,6 +1952,8 @@
     <string name="lockpattern_recording_intro_header" msgid="8325736706877916560">"अनलक प्याटर्न हाल्नुहोस्"</string>
     <string name="lockpattern_recording_intro_footer" msgid="2656868858594487197">"मद्दतका लागि मेनुमा थिच्नुहोस्।"</string>
     <string name="lockpattern_recording_inprogress" msgid="7268008332694009191">"सकिएपछि औँला उचाल्नुहोस्।"</string>
+    <!-- no translation found for lockpattern_recording_inprogress_click (8502597789237564270) -->
+    <skip />
     <string name="lockpattern_recording_incorrect_too_short" msgid="3351522018450593723">"कम्तीमा <xliff:g id="NUMBER">%d</xliff:g>वटा थोप्लाहरू जोड्नुहोस्। फेरि प्रयास गर्नुहोस्:"</string>
     <string name="lockpattern_pattern_entered_header" msgid="7709618312713127249">"प्याटर्न रेकर्ड गरियो"</string>
     <string name="lockpattern_need_to_confirm" msgid="6489499109451714360">"पुष्टि गर्न फेरि प्याटर्न हाल्नुहोस्"</string>
@@ -2414,8 +2418,7 @@
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"सर्वेक्षणमा भाग लिनुहोस्"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Accessibility Survey"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"प्रतिक्रिया दिनुहोस्"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"तपाईं अँध्यारो थिमसँग कत्तिको सन्तुष्ट हुनुहुन्छ?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"सर्वेक्षणमा भाग लिनुहोस्"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"प्रतिक्रिया दिनुहोस्"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"तपाईं \"जुम इन\" सुविधासँग कत्तिको सन्तुष्ट हुनुहुन्छ?"</string>
@@ -3571,7 +3574,8 @@
     <string name="color_orange" msgid="216547825489739010">"सुन्तले"</string>
     <string name="color_purple" msgid="6603701972079904843">"बैजनी"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"SIM को स्थिति"</string>
-    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"SIM को स्थिति (SIM स्लट %1$d)"</string>
+    <!-- no translation found for sim_status_title_sim_slot (8727408941064901486) -->
+    <skip />
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"तपाईंका SIM बदलिएका छन्"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"सेटअप गर्न ट्याप गर्नुहोस्"</string>
@@ -4807,6 +4811,10 @@
     <string name="double_tap_power_lockscreen_shortcut_tip_description" msgid="7572626485518591928">"<xliff:g id="DOUBLE_TAP_POWER_TARGET_ACTION">%1$s</xliff:g> तपाईंको लक स्क्रिनको सर्टकट पनि हो। परिवर्तन गर्न ट्याप गर्नुहोस्।"</string>
     <string name="double_tap_power_wallet_footer_title" msgid="4626950875173822614">"तपाईंको हालको डिफल्ट Wallet एपमा यो जेस्चर प्रयोग गर्न मिल्दैन"</string>
     <string name="double_tap_power_wallet_footer_learn_more_text" msgid="4871482943751760132">"डिफल्ट Wallet परिवर्तन गर्नुहोस्"</string>
+    <!-- no translation found for keywords_double_tap_power (1238828843085517844) -->
+    <skip />
+    <!-- no translation found for keywords_double_tap_power_wallet_action (1118418868964220150) -->
+    <skip />
     <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"सेल्फी खिच्न क्यामेरा फ्लिप गर्ने"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"नेभिगेसन मोड"</string>
@@ -5790,8 +5798,7 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"पासवर्ड"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"कम्प्याटिबिलिटी बढाउनुहोस्"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"अडियोको गुणस्तर कम गरेर हियरिङ डिभाइस जस्ता केही डिभाइसहरू कनेक्ट गर्न मद्दत गर्छ"</string>
-    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
-    <skip />
+    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="689007549232438065">"कम्प्याटिबिलिटी कन्फिगर गर्न अडियो सेयरिङ अफ गर्छ"</string>
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"नजिकैको अडियो सुन्नुहोस्"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"अडियो सेयर गर्ने सुविधामा Auracast™ प्रयोग गर्न मिल्छ"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"अडियो स्ट्रिमको नाम"</string>
@@ -5932,8 +5939,6 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"PIN मेटाउनुहोस्"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"रिकभरी इमेल ठेगाना हाल्नुहोस्"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"आफ्नो इमेल ठेगाना पुष्टि गर्नुहोस्"</string>
-    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
-    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"वेबसाइटका कन्टेन्टसम्बन्धी फिल्टरहरू"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"वेबसाइटसम्बन्धी फिल्टरहरू, साइटहरू ब्लक गर्नुहोस्, ब्राउजरसम्बन्धी फिल्टरहरू, अश्लील साइटहरू ब्लक गर्नुहोस्, साइटहरू फिल्टर गर्नुहोस्, खोज परिणामहरू ब्लक गर्नुहोस्, अश्लील खोज परिणामहरू फिल्टर गर्नुहोस्, कन्टेन्टसम्बन्धी प्रतिबन्धहरू"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"यो फोनमा भएका केही एप र ब्राउजरहरूमा अश्लील कन्टेन्ट फिल्टर गर्न मद्दत गर्छ। अन्य एप, डिभाइस वा ब्राउजरहरूमा भने अझै पनि अश्लील कन्टेन्ट देखिन सक्छ।"</string>

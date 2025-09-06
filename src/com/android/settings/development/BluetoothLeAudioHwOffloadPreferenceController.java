@@ -87,7 +87,7 @@ public class BluetoothLeAudioHwOffloadPreferenceController
                 SystemProperties.getBoolean(A2DP_OFFLOAD_DISABLED_PROPERTY, false);
         if (leAudioEnabled && leAudioOffloadSupported && !a2dpOffloadDisabled) {
             final boolean offloadDisabled =
-                    SystemProperties.getBoolean(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, true);
+                    SystemProperties.getBoolean(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, false);
             ((TwoStatePreference) mPreference).setChecked(offloadDisabled);
         } else {
             mPreference.setEnabled(false);

@@ -1015,7 +1015,8 @@
     <string name="external_display_no_display_connected_screen_title" msgid="4854597444155430591">"Není připojen žádný displej"</string>
     <string name="external_display_no_display_connected_screen_summary" msgid="3114991534614756600">"Pokud chcete začít, připojte externí displej nebo zkuste použít jiný kabel"</string>
     <string name="external_display_more_options_title" msgid="1222751990705118774">"Další možnosti"</string>
-    <string name="external_display_topology_hint" msgid="854973327795578470">"Uspořádání displejů můžete změnit přetažením."</string>
+    <!-- no translation found for external_display_topology_hint (885396727047321347) -->
+    <skip />
     <string name="external_display_mirroring_title" msgid="2688288527687724603">"Zrcadlit vestavěný displej"</string>
     <string name="external_display_resolution_change_dialog_title" msgid="8834095214420638411">"Použít nová nastavení?"</string>
     <string name="external_display_resolution_change_dialog_description" msgid="813174417182932956">"Pokud váš displej nefunguje, jak chcete, můžete se vrátit k předchozímu nastavení."</string>
@@ -1584,7 +1585,8 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"Úložiště a mezipaměť"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"Nastavení úložiště"</string>
     <string name="status_eid" msgid="3588471107671992684">"EID"</string>
-    <string name="eid_multi_sim" msgid="6659492335576379274">"EID (slot na SIM kartu <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <!-- no translation found for eid_multi_sim (3054468215477777096) -->
+    <skip />
     <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"K zobrazení je potřeba vybrat uloženou síť"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
@@ -1950,6 +1952,8 @@
     <string name="lockpattern_recording_intro_header" msgid="8325736706877916560">"Proveďte odemykací gesto"</string>
     <string name="lockpattern_recording_intro_footer" msgid="2656868858594487197">"Nápovědu zobrazíte stisknutím klávesy Menu."</string>
     <string name="lockpattern_recording_inprogress" msgid="7268008332694009191">"Nakonec zvedněte prst z obrazovky"</string>
+    <!-- no translation found for lockpattern_recording_inprogress_click (8502597789237564270) -->
+    <skip />
     <string name="lockpattern_recording_incorrect_too_short" msgid="3351522018450593723">"Spojte alespoň <xliff:g id="NUMBER">%d</xliff:g> tečky. Zkuste to znovu."</string>
     <string name="lockpattern_pattern_entered_header" msgid="7709618312713127249">"Gesto bylo zaznamenáno"</string>
     <string name="lockpattern_need_to_confirm" msgid="6489499109451714360">"Gesto znovu zadejte a tím ho potvrďte"</string>
@@ -2414,8 +2418,7 @@
     <string name="accessibility_send_survey_title" msgid="7494065908292980253">"Vyplnit průzkum"</string>
     <string name="accessibility_send_survey_notification_channel" msgid="6136555229886306184">"Průzkum přístupnosti"</string>
     <string name="dark_theme_survey_notification_title" msgid="662387994868661452">"Podělte se o svůj názor"</string>
-    <!-- no translation found for dark_theme_survey_notification_summary (8706870943336979672) -->
-    <skip />
+    <string name="dark_theme_survey_notification_summary" msgid="8706870943336979672">"Jak jste spokojeni s tmavým motivem?"</string>
     <string name="dark_theme_survey_notification_action" msgid="7693304950750954402">"Vyplnit průzkum"</string>
     <string name="magnification_survey_notification_title" msgid="8308432889772152950">"Podělte se o svůj názor"</string>
     <string name="magnification_survey_notification_summary" msgid="2238290609820811258">"Jak vám vyhovuje zvětšení?"</string>
@@ -3571,7 +3574,8 @@
     <string name="color_orange" msgid="216547825489739010">"Oranžová"</string>
     <string name="color_purple" msgid="6603701972079904843">"Fialová"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"Stav SIM karty"</string>
-    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"Stav SIM karty (slot na SIM kartu %1$d)"</string>
+    <!-- no translation found for sim_status_title_sim_slot (8727408941064901486) -->
+    <skip />
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"SIM karty se změnily"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"Klepnutím přejděte do Nastavení"</string>
@@ -4807,6 +4811,10 @@
     <string name="double_tap_power_lockscreen_shortcut_tip_description" msgid="7572626485518591928">"<xliff:g id="DOUBLE_TAP_POWER_TARGET_ACTION">%1$s</xliff:g> je taky vaše zkratka pro obrazovku uzamčení. Klepnutím ji změňte."</string>
     <string name="double_tap_power_wallet_footer_title" msgid="4626950875173822614">"Aktuální výchozí aplikace peněženky tohle gesto nepodporuje"</string>
     <string name="double_tap_power_wallet_footer_learn_more_text" msgid="4871482943751760132">"Změňte výchozí peněženku"</string>
+    <!-- no translation found for keywords_double_tap_power (1238828843085517844) -->
+    <skip />
+    <!-- no translation found for keywords_double_tap_power_wallet_action (1118418868964220150) -->
+    <skip />
     <string name="double_twist_for_camera_mode_title" msgid="472455236910935684">"Přepnout na selfie gestem zápěstí"</string>
     <string name="double_twist_for_camera_mode_summary" msgid="592503740044744951"></string>
     <string name="system_navigation_title" msgid="4890381153527184636">"Navigační režim"</string>
@@ -5792,8 +5800,7 @@
     <string name="audio_sharing_stream_password_title" msgid="7026649168165764602">"Heslo"</string>
     <string name="audio_sharing_stream_compatibility_title" msgid="5690947186724469918">"Zlepšit kompatibilitu"</string>
     <string name="audio_sharing_stream_compatibility_description" msgid="8170241188606110963">"Pomáhá s připojením některých zařízení (například sluchadel) tím, že snižuje kvalitu zvuku"</string>
-    <!-- no translation found for audio_sharing_stream_compatibility_disabled_description (689007549232438065) -->
-    <skip />
+    <string name="audio_sharing_stream_compatibility_disabled_description" msgid="689007549232438065">"Vypne sdílení zvuku, aby bylo možné nakonfigurovat kompatibilitu"</string>
     <string name="audio_sharing_nearby_audio_title" msgid="4795438407040677177">"Poslouchejte zvuk v okolí"</string>
     <string name="audio_sharing_footer_description" msgid="4786942197840271680">"Sdílení zvuku podporuje Auracast™"</string>
     <string name="audio_sharing_stream_name_dialog_title" msgid="6706027295417556499">"Název zvukového streamu"</string>
@@ -5934,8 +5941,6 @@
     <string name="supervision_delete_pin_preference_title" msgid="8447541098148430866">"Smazat PIN"</string>
     <string name="supervision_add_pin_recovery_title" msgid="3487098027604685794">"Přidat e-mail pro obnovení"</string>
     <string name="supervision_verify_pin_recovery_title" msgid="3166602415814821497">"Ověřte svou e‑mailovou adresu"</string>
-    <!-- no translation found for supervision_app_store_filters_title (3358631395247752727) -->
-    <skip />
     <string name="supervision_web_content_filters_title" msgid="2412562442507104921">"Filtry obsahu webů"</string>
     <string name="supervision_web_content_filters_keywords" msgid="8469519676189544447">"Filtry webu, blokování webů, filtry prohlížeče, blokování explicitních webů, filtrování webů, blokování výsledků vyhledávání, filtrování explicitních výsledků vyhledávání, omezení obsahu"</string>
     <string name="supervision_web_content_filters_top_intro" msgid="8056274290725144441">"Pomáhejte odfiltrovat explicitní obsah v některých aplikacích a prohlížečích na tomhle telefonu. Explicitní obsah se může dál zobrazovat v jiných aplikacích, zařízeních a prohlížečích."</string>
