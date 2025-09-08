@@ -384,6 +384,11 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
                     }
                     return Unit.INSTANCE;
                 });
+        new AirplaneModeRepository(requireContext()).collectAirplaneModeChanged(viewLifecycleOwner,
+                (isAirplaneModeOn) -> {
+                    notifyAirplaneModeForPreferences(isAirplaneModeOn);
+                    return Unit.INSTANCE;
+                });
     }
 
     @Override
@@ -570,6 +575,22 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
         final Bundle bundle = new Bundle();
         bundle.putInt(Settings.EXTRA_SUB_ID, getSubId());
         return bundle;
+    }
+
+    @VisibleForTesting
+    void notifyAirplaneModeForPreferences(boolean isAirplaneModeOn) {
+        // notify preferences' airplaneModeCallback
+        List<AbstractPreferenceController> allPreferencesList =
+                getPreferenceControllersAsList();
+        Log.d(LOG_TAG, "notifyAirplaneModeForPreferences");
+
+        for (AbstractPreferenceController subPreference : allPreferencesList) {
+            if (subPreference instanceof AirplaneModeChangedCallback) {
+                ((AirplaneModeChangedCallback) subPreference)
+                        .notifyAirplaneModeChanged(isAirplaneModeOn);
+            }
+        }
+        updatePreferenceStates();
     }
 
     private int getSubId() {
