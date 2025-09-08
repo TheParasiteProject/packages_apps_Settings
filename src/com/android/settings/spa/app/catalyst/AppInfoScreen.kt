@@ -26,9 +26,9 @@ import com.android.settings.R
 import com.android.settings.applications.appinfo.AppInfoDashboardFragment
 import com.android.settings.applications.packageName
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen
-import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen.Companion.hasOverlayPermission
+import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen.Companion.displayOverOtherAppsFilter
 import com.android.settings.applications.specialaccess.pictureinpicture.PictureInPictureAppDetailScreen
-import com.android.settings.applications.specialaccess.pictureinpicture.PictureInPictureAppDetailScreen.Companion.hasPictureInPictureActivity
+import com.android.settings.applications.specialaccess.pictureinpicture.PictureInPictureAppDetailScreen.Companion.pictureInPictureFilter
 import com.android.settings.core.PreferenceScreenMixin
 import com.android.settings.flags.Flags
 import com.android.settingslib.metadata.PreferenceCategory
@@ -78,10 +78,10 @@ open class AppInfoScreen(context: Context, override val arguments: Bundle) :
         preferenceHierarchy(context) {
             +PreferenceCategory("advanced_app_info", R.string.advanced_apps) += {
                 arguments.putString("source", SOURCE)
-                if (hasPictureInPictureActivity(context, appInfo)) {
+                if (pictureInPictureFilter(context, appInfo)) {
                     +(PictureInPictureAppDetailScreen.KEY args arguments)
                 }
-                if (hasOverlayPermission(context, appInfo)) {
+                if (displayOverOtherAppsFilter(context, appInfo)) {
                     +(DisplayOverOtherAppsAppDetailScreen.KEY args arguments)
                 }
             }

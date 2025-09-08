@@ -24,15 +24,13 @@ import android.app.compat.CompatChanges
 import android.app.settings.SettingsEnums
 import android.content.Context
 import android.content.pm.ApplicationInfo
-import android.content.pm.PackageInfo
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.PowerExemptionManager
-import android.os.Process
-import android.os.UserHandle
 import androidx.core.net.toUri
 import com.android.settings.Settings.AlarmsAndRemindersActivity
 import com.android.settings.applications.CatalystAppListFragment.Companion.DEFAULT_SHOW_SYSTEM
+import com.android.settings.applications.getPackageInfoWithPermissions
+import com.android.settings.applications.isPermissionRequested
 import com.android.settings.flags.Flags
 import com.android.settings.utils.highlightPreference
 import com.android.settings.utils.makeLaunchIntent
@@ -63,6 +61,9 @@ open class AlarmsAndRemindersAppDetailScreen(context: Context, arguments: Bundle
     override val op
         get() = AppOpsManager.OP_SCHEDULE_EXACT_ALARM
 
+    override val permission: String?
+        get() = PERMISSION
+
     override val setModeByUid: Boolean?
         get() = true
 
@@ -75,7 +76,7 @@ open class AlarmsAndRemindersAppDetailScreen(context: Context, arguments: Bundle
     // Edge case: what if the app's read permission is revoked/granted
     override fun isAvailable(context: Context) =
         super.isAvailable(context) &&
-            hasScheduleExactAlarmPermission(context, packageInfo?.applicationInfo)
+            alarmsAndRemindersFilter(context, packageInfo?.applicationInfo)
 
     override fun getMetricsCategory() = SettingsEnums.ALARMS_AND_REMINDERS
 
@@ -89,37 +90,28 @@ open class AlarmsAndRemindersAppDetailScreen(context: Context, arguments: Bundle
 
     companion object {
         const val KEY = "special_access_alarms_and_reminders_app_detail"
+        const val BROADER_PERMISSION = USE_EXACT_ALARM
+        const val PERMISSION = SCHEDULE_EXACT_ALARM
 
         @JvmStatic fun parameters(context: Context) = parameters(context, DEFAULT_SHOW_SYSTEM)
 
         fun parameters(context: Context, showSystemApp: Boolean) =
-            parameters(context, showSystemApp, ::hasScheduleExactAlarmPermission)
+            parameters(context, showSystemApp, ::alarmsAndRemindersFilter)
 
-        private fun hasScheduleExactAlarmPermission(
-            context: Context,
-            appInfo: ApplicationInfo?,
-        ): Boolean {
+        private fun alarmsAndRemindersFilter(context: Context, appInfo: ApplicationInfo?): Boolean {
             if (appInfo == null) return false
             val packageInfo =
-                try {
-                    context.packageManager.getPackageInfoAsUser(
-                        appInfo.packageName,
-                        PackageManager.GET_PERMISSIONS,
-                        UserHandle.myUserId(),
-                    )
-                } catch (_: Exception) {
-                    return false
-                }
+                context.getPackageInfoWithPermissions(appInfo.packageName) ?: return false
 
             val hasRequestScheduleExactAlarmPermission =
-                isPermissionRequested(packageInfo, SCHEDULE_EXACT_ALARM) &&
+                isPermissionRequested(packageInfo, PERMISSION) &&
                     CompatChanges.isChangeEnabled(
                         AlarmManager.REQUIRE_EXACT_ALARM_PERMISSION,
                         appInfo.packageName,
                         appInfo.userHandle,
                     )
             val hasRequestUseExactAlarm =
-                isPermissionRequested(packageInfo, USE_EXACT_ALARM) &&
+                isPermissionRequested(packageInfo, BROADER_PERMISSION) &&
                     CompatChanges.isChangeEnabled(
                         AlarmManager.ENABLE_USE_EXACT_ALARM,
                         appInfo.packageName,
@@ -133,18 +125,7 @@ open class AlarmsAndRemindersAppDetailScreen(context: Context, arguments: Bundle
                 hasRequestScheduleExactAlarmPermission &&
                     (hasRequestUseExactAlarm || isPowerAllowListed)
 
-            // If trumped, this app will be filtered out as its allowed value cannot be changed.
-            if (isTrumped) {
-                return false
-            }
-
-            return hasRequestScheduleExactAlarmPermission && !isSystemOrRootUid(appInfo)
+            return hasRequestScheduleExactAlarmPermission && !isTrumped
         }
-
-        private fun isPermissionRequested(packageInfo: PackageInfo?, permission: String): Boolean =
-            packageInfo?.requestedPermissions?.let { permission in it } ?: false
-
-        private fun isSystemOrRootUid(appInfo: ApplicationInfo): Boolean =
-            UserHandle.getAppId(appInfo.uid) in listOf(Process.SYSTEM_UID, Process.ROOT_UID)
     }
 }
