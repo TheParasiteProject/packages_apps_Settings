@@ -14859,4 +14859,11 @@
     <string name="identity_check_notification_summary">Identity Check prevents unwanted access to your apps. Now available with any app that uses Fingerprint or Face Unlock.</string>
     <!-- Identity Check promo notification button text -->
     <string name="identity_check_view_details">View details</string>
+
+    <!-- An error shown to the user when we failed to refresh the status of one or more Safety Center entries. [CHAR LIMIT=60] -->
+    <string name="safety_center_refresh_error">Couldn\’t check settings</string>
+    <!-- The summary shown to the user when a subpage of safety sources in Safety Center all have an unknown status. We expect the status of the sources to eventually update and the summary will change [CHAR LIMIT=NONE] -->
+    <string name="safety_center_subpage_unknown_summary">No info yet</string>
+    <!-- The default summary of the device unlock subpage of safety center -->
+    <string name="device_unlock_subpage_default_summary"></string>
 </resources>
