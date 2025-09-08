@@ -90,6 +90,7 @@ open class MobileNetworkScreen(override val arguments: Bundle) :
                 +MobileNetworkMainSwitchPreference(context, subId) order +0
                 val data = MobileNetworkData(context, coroutineScope, subId)
                 +EnabledStateUntitledCategory(subId) += {
+                    +MobileNetworkDataUsagePreference(context, coroutineScope, subId)
                     +MobileNetworkSpnPreference(context, subId)
                     +MobileNetworkPhoneNumberPreference(data)
                     +MobileNetworkImeiPreference(context, subId)

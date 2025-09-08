@@ -135,4 +135,33 @@ public class BluetoothLeAudioHwOffloadPreferenceControllerTest {
                 SystemProperties.getBoolean(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, false);
         assertThat(leAueioDisabled).isFalse();
     }
+
+    @Test
+    public void isDefaultValue_offloadNotSupported_shouldReturnTrue() {
+        // LE Audio offload is not supported.
+        SystemProperties.set(LE_AUDIO_OFFLOAD_SUPPORTED_PROPERTY, Boolean.toString(false));
+        SystemProperties.set(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, Boolean.toString(false));
+
+        assertThat(mController.isDefaultValue()).isTrue();
+    }
+
+    @Test
+    public void isDefaultValue_offloadSupportedAndEnabled_shouldReturnTrue() {
+        // Offload is supported
+        SystemProperties.set(LE_AUDIO_OFFLOAD_SUPPORTED_PROPERTY, Boolean.toString(true));
+        // LE Audio offload is NOT disabled (i.e., it's enabled), which is the default state.
+        SystemProperties.set(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, Boolean.toString(false));
+
+        assertThat(mController.isDefaultValue()).isTrue();
+    }
+
+    @Test
+    public void isDefaultValue_offloadSupportedAndDisabled_shouldReturnFalse() {
+        // Offload is supported
+        SystemProperties.set(LE_AUDIO_OFFLOAD_SUPPORTED_PROPERTY, Boolean.toString(true));
+        // LE Audio offload is disabled, which is NOT the default state.
+        SystemProperties.set(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, Boolean.toString(true));
+
+        assertThat(mController.isDefaultValue()).isFalse();
+    }
 }

@@ -21,6 +21,8 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.os.Process
+import android.os.UserHandle
 import android.util.IconDrawableFactory
 import androidx.annotation.CallSuper
 import androidx.preference.Preference
@@ -72,10 +74,20 @@ abstract class SpecialAccessAppDetailScreen(context: Context, override val argum
     private lateinit var keyedObserver: KeyedObserver<String>
 
     private val dataStore: KeyValueStore =
-        AppOpsModeDataStore(SpecialAccessSwitchPreference.KEY, context, this, op, setModeByUid)
+        AppOpsModeDataStore(
+            SpecialAccessSwitchPreference.KEY,
+            context,
+            this,
+            op,
+            permission,
+            setModeByUid,
+        )
 
     /** App ops to control. */
     abstract val op: Int
+
+    /** Special access permission needed to be requested. */
+    abstract val permission: String?
 
     /**
      * Indicates how to set op mode.
@@ -202,10 +214,20 @@ abstract class SpecialAccessAppDetailScreen(context: Context, override val argum
                         AppListRepositoryImpl(context)
                             .loadAndMaybeExcludeSystemApps(context.userId, !showSystemApp)
                     }
-                    .filter { filter(context, it) }
+                    .filter {
+                        filter(context, it) &&
+                            isNotInChangeablePackages(it) &&
+                            !isSystemOrRootUid(it)
+                    }
                     .sortedWith(context.applicationInfoComparator)
             for (appInfo in appInfos) emit(appInfo.packageName.toArguments())
         }
+
+        private fun isSystemOrRootUid(appInfo: ApplicationInfo): Boolean =
+            UserHandle.getAppId(appInfo.uid) in listOf(Process.SYSTEM_UID, Process.ROOT_UID)
+
+        private fun isNotInChangeablePackages(appInfo: ApplicationInfo): Boolean =
+            appInfo.packageName !in setOf("com.android.systemui")
     }
 
     /**

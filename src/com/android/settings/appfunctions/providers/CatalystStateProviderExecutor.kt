@@ -129,7 +129,9 @@ class CatalystStateProviderExecutor(
             jsonValue?.let {
                 deviceStateItemList.add(
                     DeviceStateItem(
-                        key = metadata.key,
+                        // Binding key is either equal to the key or contains the package name or
+                        // other item specific id necessary to distinguish the items.
+                        key = metadata.bindingKey,
                         purpose = metadata.key,
                         name =
                             LocalizedString(

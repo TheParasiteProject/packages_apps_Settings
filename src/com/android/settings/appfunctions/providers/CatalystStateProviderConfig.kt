@@ -38,6 +38,7 @@ import com.android.settings.applications.specialaccess.AppInfoInstallUnknownApps
 import com.android.settings.applications.specialaccess.AppInfoManageWriteSettingsScreen
 import com.android.settings.applications.specialaccess.AppsFullScreenIntentScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen
+import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppListScreen
 import com.android.settings.applications.specialaccess.SpecialAccessSettingsScreen
 import com.android.settings.applications.specialaccess.WifiControlAppDetailScreen
 import com.android.settings.applications.specialaccess.WifiControlAppListScreen
@@ -319,10 +320,7 @@ private fun getCatalystScreenConfigs() =
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_NOTIFICATIONS),
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = ResetDashboardScreen.KEY),
-        PerScreenCatalystConfig(
-            enabled = true,
-            screenKey = DisplayOverOtherAppsAppDetailScreen.KEY,
-        ),
+        PerScreenCatalystConfig(enabled = true, screenKey = DisplayOverOtherAppsAppListScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = PictureInPictureAppListScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = WifiControlAppListScreen.KEY),
         PerScreenCatalystConfig(
@@ -733,6 +731,11 @@ private fun getDeviceStateItemList() =
             settingKey = StoragePreferenceScreen.KEY_PREF_TEMP,
             settingScreenKey = StoragePreferenceScreen.KEY,
             hintText = { _, _ -> "Total device storage used by temporary system files" },
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
+            settingKey = DisplayOverOtherAppsAppDetailScreen.KEY,
+            settingScreenKey = DisplayOverOtherAppsAppListScreen.KEY,
         ),
         DeviceStateItemConfig(
             enabled = true,
