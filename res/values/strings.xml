@@ -9445,7 +9445,7 @@
     <string name="lock_screen_notifs_show_full_list">Full list</string>
 
     <!-- Configure notifications: Value for lockscreen notifications: show compact notifications (minimalism on) [CHAR LIMIT=30] -->
-    <string name="lock_screen_notifs_show_compact">Compact View</string>
+    <string name="lock_screen_notifs_show_compact">Compact</string>
 
     <!-- Configure notifications: Title for determining which notifications appear on the lock screen [CHAR LIMIT=60] -->
     <string name="lock_screen_notifs_title">Notifications on lock screen</string>
