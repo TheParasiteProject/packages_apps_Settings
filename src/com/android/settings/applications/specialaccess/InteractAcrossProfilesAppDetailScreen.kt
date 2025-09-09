@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.spa.app.catalyst
+package com.android.settings.applications.specialaccess
 
 import android.app.settings.SettingsEnums
 import android.content.Context
@@ -45,8 +45,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-@ProvidePreferenceScreen(AppInfoInteractAcrossProfilesScreen.KEY, parameterized = true)
-open class AppInfoInteractAcrossProfilesScreen(context: Context, override val arguments: Bundle) :
+@ProvidePreferenceScreen(InteractAcrossProfilesAppDetailScreen.KEY, parameterized = true)
+open class InteractAcrossProfilesAppDetailScreen(context: Context, override val arguments: Bundle) :
     PreferenceScreenMixin, PreferenceSummaryProvider, PreferenceTitleProvider {
 
     private val packageName = arguments.getString("app")!!
@@ -76,8 +76,8 @@ open class AppInfoInteractAcrossProfilesScreen(context: Context, override val ar
     override fun getSummary(context: Context): CharSequence =
         context.getString(
             when (storage.getBoolean(InteractAcrossProfilesMainSwitch.KEY)) {
-                true -> R.string.app_permission_summary_allowed
-                else -> R.string.app_permission_summary_not_allowed
+                true -> R.string.interact_across_profiles_summary_allowed
+                else -> R.string.interact_across_profiles_summary_not_allowed
             }
         )
 
@@ -98,7 +98,7 @@ open class AppInfoInteractAcrossProfilesScreen(context: Context, override val ar
         preferenceHierarchy(context) { +InteractAcrossProfilesMainSwitch(storage) }
 
     companion object {
-        const val KEY = "device_state_app_info_interact_across_profiles"
+        const val KEY = "special_access_interact_across_profiles_app_detail"
 
         const val KEY_EXTRA_PACKAGE_NAME = "package_name"
 

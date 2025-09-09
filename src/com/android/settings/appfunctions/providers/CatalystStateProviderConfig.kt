@@ -39,6 +39,8 @@ import com.android.settings.applications.specialaccess.AppInfoManageWriteSetting
 import com.android.settings.applications.specialaccess.AppsFullScreenIntentScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppListScreen
+import com.android.settings.applications.specialaccess.InteractAcrossProfilesAppDetailScreen
+import com.android.settings.applications.specialaccess.InteractAcrossProfilesAppListScreen
 import com.android.settings.applications.specialaccess.SpecialAccessSettingsScreen
 import com.android.settings.applications.specialaccess.WifiControlAppDetailScreen
 import com.android.settings.applications.specialaccess.WifiControlAppListScreen
@@ -97,7 +99,6 @@ import com.android.settings.notification.modes.ZenModesListScreen
 import com.android.settings.security.LockScreenPreferenceScreen
 import com.android.settings.sound.MediaControlsScreen
 import com.android.settings.spa.app.catalyst.AllAppsScreen
-import com.android.settings.spa.app.catalyst.AppInfoInteractAcrossProfilesScreen
 import com.android.settings.spa.app.catalyst.AppInfoScreen
 import com.android.settings.spa.app.catalyst.AppInfoStorageScreen
 import com.android.settings.spa.app.catalyst.AppStorageAppListScreen
@@ -296,10 +297,6 @@ private fun getCatalystScreenConfigs() =
         PerScreenCatalystConfig(enabled = true, screenKey = HardwareInfoScreen.KEY),
         PerScreenCatalystConfig(
             enabled = true,
-            screenKey = AppInfoInteractAcrossProfilesScreen.KEY,
-        ),
-        PerScreenCatalystConfig(
-            enabled = true,
             screenKey = AppInfoStorageScreen.KEY,
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_STORAGE),
         ),
@@ -327,6 +324,10 @@ private fun getCatalystScreenConfigs() =
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = ResetDashboardScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = DisplayOverOtherAppsAppListScreen.KEY),
+        PerScreenCatalystConfig(
+            enabled = true,
+            screenKey = InteractAcrossProfilesAppListScreen.KEY,
+        ),
         PerScreenCatalystConfig(enabled = true, screenKey = PictureInPictureAppListScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = WifiControlAppListScreen.KEY),
         PerScreenCatalystConfig(
@@ -744,6 +745,11 @@ private fun getDeviceStateItemList() =
             enabled = true,
             settingKey = DisplayOverOtherAppsAppDetailScreen.KEY,
             settingScreenKey = DisplayOverOtherAppsAppListScreen.KEY,
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
+            settingKey = InteractAcrossProfilesAppDetailScreen.KEY,
+            settingScreenKey = InteractAcrossProfilesAppListScreen.KEY,
         ),
         DeviceStateItemConfig(
             enabled = true,
