@@ -77,7 +77,8 @@ fun isPermissionRequested(packageInfo: PackageInfo?, permission: String): Boolea
 /** Returns true if the permission was granted for the given package, false otherwise. */
 fun isPermissionGranted(packageInfo: PackageInfo?, permission: String): Boolean {
     val index = packageInfo?.requestedPermissions?.indexOf(permission) ?: return false
-    val flags = packageInfo.requestedPermissionsFlags!![index]
+
+    val flags = packageInfo.requestedPermissionsFlags?.getOrNull(index) ?: return false
 
     return (flags and REQUESTED_PERMISSION_GRANTED) != 0
 }

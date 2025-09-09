@@ -39,6 +39,8 @@ import com.android.settings.applications.specialaccess.AppInfoManageWriteSetting
 import com.android.settings.applications.specialaccess.AppsFullScreenIntentScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppListScreen
+import com.android.settings.applications.specialaccess.InteractAcrossProfilesAppDetailScreen
+import com.android.settings.applications.specialaccess.InteractAcrossProfilesAppListScreen
 import com.android.settings.applications.specialaccess.SpecialAccessSettingsScreen
 import com.android.settings.applications.specialaccess.WifiControlAppDetailScreen
 import com.android.settings.applications.specialaccess.WifiControlAppListScreen
@@ -97,7 +99,6 @@ import com.android.settings.notification.modes.ZenModesListScreen
 import com.android.settings.security.LockScreenPreferenceScreen
 import com.android.settings.sound.MediaControlsScreen
 import com.android.settings.spa.app.catalyst.AllAppsScreen
-import com.android.settings.spa.app.catalyst.AppInfoInteractAcrossProfilesScreen
 import com.android.settings.spa.app.catalyst.AppInfoScreen
 import com.android.settings.spa.app.catalyst.AppInfoStorageScreen
 import com.android.settings.spa.app.catalyst.AppStorageAppListScreen
@@ -109,6 +110,7 @@ import com.android.settings.system.SystemDashboardScreen
 import com.android.settings.vpn2.VpnSettingsScreen
 import com.android.settings.wfd.WifiDisplayScreen
 import com.android.settings.wifi.ConfigureWifiScreen
+import com.android.settings.wifi.WifiDataUsagePreference
 import com.android.settings.wifi.calling.WifiCallingScreen
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiScreen
 import com.android.settings.wifi.tether.WifiHotspotScreen
@@ -146,6 +148,7 @@ data class PerScreenCatalystConfig(
     // TODO(b/405344827): map categories to PreferenceMetadata#tags
     val appFunctionTypes: Set<DeviceStateAppFunctionType> =
         setOf(DeviceStateAppFunctionType.GET_UNCATEGORIZED),
+    val additionalDescription: String? = null,
 )
 
 /**
@@ -178,6 +181,8 @@ private fun getCatalystScreenConfigs() =
             enabled = true,
             screenKey = BatterySaverScreen.KEY,
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_BATTERY),
+            additionalDescription =
+                ". The Battery Saver screen allows users to set the device to Standard or Extreme Battery Saver mode. Users can also configure schedules and reminders for Battery Saver.",
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = BluetoothDashboardScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = LockScreenPreferenceScreen.KEY),
@@ -270,6 +275,8 @@ private fun getCatalystScreenConfigs() =
         PerScreenCatalystConfig(
             enabled = true,
             screenKey = AmbientDisplayAlwaysOnPreferenceScreen.KEY,
+            additionalDescription =
+                ". Always-on-display settings indicates whether the lock screen, including the time, is visible when the phone is off.",
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = DataUsageAppDetailScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AppInfoInstallUnknownAppsScreen.KEY),
@@ -288,10 +295,6 @@ private fun getCatalystScreenConfigs() =
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = DateTimeSettingsScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = HardwareInfoScreen.KEY),
-        PerScreenCatalystConfig(
-            enabled = true,
-            screenKey = AppInfoInteractAcrossProfilesScreen.KEY,
-        ),
         PerScreenCatalystConfig(
             enabled = true,
             screenKey = AppInfoStorageScreen.KEY,
@@ -321,6 +324,10 @@ private fun getCatalystScreenConfigs() =
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = ResetDashboardScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = DisplayOverOtherAppsAppListScreen.KEY),
+        PerScreenCatalystConfig(
+            enabled = true,
+            screenKey = InteractAcrossProfilesAppListScreen.KEY,
+        ),
         PerScreenCatalystConfig(enabled = true, screenKey = PictureInPictureAppListScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = WifiControlAppListScreen.KEY),
         PerScreenCatalystConfig(
@@ -376,6 +383,8 @@ private fun getCatalystScreenConfigs() =
             enabled = true,
             screenKey = DataUsageListScreen.KEY,
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_MOBILE_DATA),
+            additionalDescription =
+                ". This SIM data usage screen shows the amount of data each app has consumed from a specific SIM card.",
         ),
     )
 
@@ -739,6 +748,11 @@ private fun getDeviceStateItemList() =
         ),
         DeviceStateItemConfig(
             enabled = true,
+            settingKey = InteractAcrossProfilesAppDetailScreen.KEY,
+            settingScreenKey = InteractAcrossProfilesAppListScreen.KEY,
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
             settingKey = PictureInPictureAppDetailScreen.KEY,
             settingScreenKey = PictureInPictureAppListScreen.KEY,
         ),
@@ -761,5 +775,13 @@ private fun getDeviceStateItemList() =
             enabled = true,
             settingKey = AlarmsAndRemindersAppDetailScreen.KEY,
             settingScreenKey = AlarmsAndRemindersAppListScreen.KEY,
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
+            settingKey = WifiDataUsagePreference.KEY,
+            settingScreenKey = NetworkProviderScreen.KEY,
+            hintText = { _, _ ->
+                "This data usage shows the amount of data consumed by the device between specific dates that was not transmitted over a mobile carrier network."
+            },
         ),
     )
