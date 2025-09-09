@@ -42,7 +42,6 @@ import com.android.settings.appfunctions.providersources.ScreenTimeoutStateSourc
 import com.android.settings.appfunctions.providersources.SharedDeviceStateData
 import com.android.settings.appfunctions.providersources.WifiStatusStateSource
 import com.android.settings.appfunctions.providersources.ZenModesStateSource
-import com.android.settings.flags.Flags
 import com.android.settings.fuelgauge.batteryusage.BatteryUsageStateSource
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
@@ -97,20 +96,7 @@ class AndroidApiStateProviderExecutor(private val context: Context) : DeviceStat
                 .filter { it.appFunctionType == appFunctionType }
                 .map { provider ->
                     async {
-                        if (Flags.parameterisedScreensInAppFunctions()) {
-                            semaphore.withPermit {
-                                val providerName = provider::class.simpleName
-                                try {
-                                    Log.v(TAG, "Getting device state from $providerName")
-                                    val state = provider.get(context, sharedDeviceStateData)
-                                    Log.v(TAG, "Got device state from $providerName")
-                                    state
-                                } catch (e: Exception) {
-                                    Log.e(TAG, "Error getting device state from $providerName", e)
-                                    null
-                                }
-                            }
-                        } else {
+                        semaphore.withPermit {
                             val providerName = provider::class.simpleName
                             try {
                                 Log.v(TAG, "Getting device state from $providerName")
@@ -132,6 +118,6 @@ class AndroidApiStateProviderExecutor(private val context: Context) : DeviceStat
 
     companion object {
         private const val TAG = "AndroidApiStateProviderExecutor"
-        private const val MAX_PARALLELISM = 5
+        private const val MAX_PARALLELISM = 3
     }
 }

@@ -24,7 +24,6 @@ import android.util.Log
 import com.android.settings.appfunctions.CatalystConfig
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.android.settings.appfunctions.DeviceStateProviderExecutorResult
-import com.android.settings.flags.Flags
 import com.android.settingslib.metadata.PersistentPreference
 import com.android.settingslib.metadata.PreferenceHierarchyNode
 import com.android.settingslib.metadata.PreferenceScreenMetadata
@@ -62,24 +61,7 @@ class CatalystStateProviderExecutor(
             val deferredList =
                 screenKeyList.map { screenKey ->
                     async {
-                        if (Flags.parameterisedScreensInAppFunctions()) {
-                            semaphore.withPermit {
-                                try {
-                                    buildPerScreenDeviceStates(
-                                        screenKey,
-                                        appFunctionType,
-                                        perScreenConfigMap[screenKey]?.additionalDescription,
-                                    )
-                                } catch (e: Exception) {
-                                    Log.e(
-                                        TAG,
-                                        "Error building per screen device states for $screenKey",
-                                        e,
-                                    )
-                                    null
-                                }
-                            }
-                        } else {
+                        semaphore.withPermit {
                             try {
                                 buildPerScreenDeviceStates(
                                     screenKey,
@@ -190,6 +172,6 @@ class CatalystStateProviderExecutor(
 
     companion object {
         private const val TAG = "CatalystStateProviderExecutor"
-        private const val MAX_PARALLELISM = 5
+        private const val MAX_PARALLELISM = 3
     }
 }

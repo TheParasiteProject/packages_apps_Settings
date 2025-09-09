@@ -25,7 +25,6 @@ import android.util.Log
 import com.android.settings.appfunctions.CatalystConfig
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.android.settings.appfunctions.DeviceStateMetadataProviderExecutorResult
-import com.android.settings.flags.Flags
 import com.android.settingslib.graph.PreferenceGetterFlags
 import com.android.settingslib.graph.toProto
 import com.android.settingslib.metadata.PreferenceHierarchyNode
@@ -66,16 +65,7 @@ class CatalystStateMetadataProviderExecutor(
             val deferredList =
                 screenKeyList.map { screenKey ->
                     async {
-                        if (Flags.parameterisedScreensInAppFunctions()) {
-                            semaphore.withPermit {
-                                try {
-                                    buildPerScreenDeviceStatesMetadata(screenKey)
-                                } catch (e: Exception) {
-                                    Log.e(TAG, "error building $screenKey", e)
-                                    null
-                                }
-                            }
-                        } else {
+                        semaphore.withPermit {
                             try {
                                 buildPerScreenDeviceStatesMetadata(screenKey)
                             } catch (e: Exception) {
@@ -94,7 +84,8 @@ class CatalystStateMetadataProviderExecutor(
     private suspend fun CoroutineScope.buildPerScreenDeviceStatesMetadata(
         screenKey: String
     ): List<PerScreenMetadata> {
-        val hierarchy = getEnabledPreferencesHierarchy(config, context, appFunctionType = null, screenKey)
+        val hierarchy =
+            getEnabledPreferencesHierarchy(config, context, appFunctionType = null, screenKey)
 
         return hierarchy.map { entry ->
             val screenMetaData = entry.key
@@ -103,7 +94,10 @@ class CatalystStateMetadataProviderExecutor(
         }
     }
 
-    private suspend fun CoroutineScope.buildPerScreenDeviceStatesMetadata(screenMetaData: PreferenceScreenMetadata, preferencesHierarchy: List<PreferenceHierarchyNode>): PerScreenMetadata {
+    private suspend fun CoroutineScope.buildPerScreenDeviceStatesMetadata(
+        screenMetaData: PreferenceScreenMetadata,
+        preferencesHierarchy: List<PreferenceHierarchyNode>,
+    ): PerScreenMetadata {
         val deviceStateItemMetadataList = mutableListOf<DeviceStateItemMetadata>()
         preferencesHierarchy.forEach {
             val metadata = it.metadata
@@ -151,11 +145,12 @@ class CatalystStateMetadataProviderExecutor(
         val basicDescription = screenMetaData.getPreferenceScreenTitle(context)?.toString() ?: ""
         val arguments = screenMetaData.arguments?.clone() as? BaseBundle
         arguments?.remove("source")
-        val descriptionSuffix = if (arguments == null) {
-            ""
-        } else {
-            ". " + arguments.keySet().joinToString(", ") { "$it=${arguments.get(it)}" }
-        }
+        val descriptionSuffix =
+            if (arguments == null) {
+                ""
+            } else {
+                ". " + arguments.keySet().joinToString(", ") { "$it=${arguments.get(it)}" }
+            }
         val description = basicDescription + descriptionSuffix
         return PerScreenMetadata(
             description = description,
@@ -166,6 +161,6 @@ class CatalystStateMetadataProviderExecutor(
 
     companion object {
         private const val TAG = "CatalystStateMetadataProviderExecutor"
-        private const val MAX_PARALLELISM = 5
+        private const val MAX_PARALLELISM = 3
     }
 }
