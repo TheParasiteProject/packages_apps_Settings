@@ -24,6 +24,10 @@
         <item name="android:windowIsFloating">true</item>
     </style>
 
+    <style name="Transparent.NoAnimation" parent="Transparent">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
     <style name="Theme.Settings" parent="Theme.SettingsBase">
         <item name="android:clipToPadding">false</item>
         <item name="android:clipChildren">false</item>
