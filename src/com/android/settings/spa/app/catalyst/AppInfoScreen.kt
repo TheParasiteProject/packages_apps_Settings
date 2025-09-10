@@ -27,6 +27,7 @@ import com.android.settings.applications.appinfo.AppInfoDashboardFragment
 import com.android.settings.applications.packageName
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen.Companion.displayOverOtherAppsFilter
+import com.android.settings.applications.specialaccess.SpecialAccessAppDetailScreen.Companion.hasSpecialAccessPermission
 import com.android.settings.applications.specialaccess.pictureinpicture.PictureInPictureAppDetailScreen
 import com.android.settings.applications.specialaccess.pictureinpicture.PictureInPictureAppDetailScreen.Companion.pictureInPictureFilter
 import com.android.settings.core.PreferenceScreenMixin
@@ -78,10 +79,10 @@ open class AppInfoScreen(context: Context, override val arguments: Bundle) :
         preferenceHierarchy(context) {
             +PreferenceCategory("advanced_app_info", R.string.advanced_apps) += {
                 arguments.putString("source", SOURCE)
-                if (pictureInPictureFilter(context, appInfo)) {
+                if (hasSpecialAccessPermission(context, appInfo, ::pictureInPictureFilter)) {
                     +(PictureInPictureAppDetailScreen.KEY args arguments)
                 }
-                if (displayOverOtherAppsFilter(context, appInfo)) {
+                if (hasSpecialAccessPermission(context, appInfo, ::displayOverOtherAppsFilter)) {
                     +(DisplayOverOtherAppsAppDetailScreen.KEY args arguments)
                 }
             }
