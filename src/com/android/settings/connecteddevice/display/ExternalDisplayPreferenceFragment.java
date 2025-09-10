@@ -210,7 +210,7 @@ public class ExternalDisplayPreferenceFragment extends SettingsPreferenceFragmen
 
     @Override
     public int getMetricsCategory() {
-        return SettingsEnums.SETTINGS_CONNECTED_DEVICE_CATEGORY;
+        return SettingsEnums.SETTINGS_EXTERNAL_DISPLAY_CATEGORY;
     }
 
     @Override

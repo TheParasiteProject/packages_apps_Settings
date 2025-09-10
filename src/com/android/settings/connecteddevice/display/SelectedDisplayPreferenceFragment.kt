@@ -60,7 +60,7 @@ open class SelectedDisplayPreferenceFragment(
     private val prefComponents = mutableListOf<PrefComponent>()
 
     override fun getMetricsCategory(): Int {
-        return SettingsEnums.SETTINGS_CONNECTED_DEVICE_CATEGORY
+        return SettingsEnums.SETTINGS_EXTERNAL_DISPLAY_CATEGORY
     }
 
     override fun getHelpResource(): Int {
