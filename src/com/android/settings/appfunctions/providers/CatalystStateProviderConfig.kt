@@ -36,9 +36,10 @@ import com.android.settings.applications.specialaccess.AllFilesAccessAppDetailSc
 import com.android.settings.applications.specialaccess.AllFilesAccessAppListScreen
 import com.android.settings.applications.specialaccess.AppInfoInstallUnknownAppsScreen
 import com.android.settings.applications.specialaccess.AppInfoManageWriteSettingsScreen
-import com.android.settings.applications.specialaccess.AppsFullScreenIntentScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppListScreen
+import com.android.settings.applications.specialaccess.FullScreenNotificationsAppDetailScreen
+import com.android.settings.applications.specialaccess.FullScreenNotificationsAppListScreen
 import com.android.settings.applications.specialaccess.InteractAcrossProfilesAppDetailScreen
 import com.android.settings.applications.specialaccess.InteractAcrossProfilesAppListScreen
 import com.android.settings.applications.specialaccess.SpecialAccessSettingsScreen
@@ -326,6 +327,10 @@ private fun getCatalystScreenConfigs() =
         PerScreenCatalystConfig(enabled = true, screenKey = DisplayOverOtherAppsAppListScreen.KEY),
         PerScreenCatalystConfig(
             enabled = true,
+            screenKey = FullScreenNotificationsAppListScreen.KEY,
+        ),
+        PerScreenCatalystConfig(
+            enabled = true,
             screenKey = InteractAcrossProfilesAppListScreen.KEY,
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = PictureInPictureAppListScreen.KEY),
@@ -366,7 +371,6 @@ private fun getCatalystScreenConfigs() =
             appFunctionTypes = setOf(DeviceStateAppFunctionType.GET_MOBILE_DATA),
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = WifiDisplayScreen.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = AppsFullScreenIntentScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = AppsNotificationAccessScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = PreviouslyConnectedDeviceScreen.KEY),
         PerScreenCatalystConfig(
@@ -745,6 +749,11 @@ private fun getDeviceStateItemList() =
             enabled = true,
             settingKey = DisplayOverOtherAppsAppDetailScreen.KEY,
             settingScreenKey = DisplayOverOtherAppsAppListScreen.KEY,
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
+            settingKey = FullScreenNotificationsAppDetailScreen.KEY,
+            settingScreenKey = FullScreenNotificationsAppListScreen.KEY,
         ),
         DeviceStateItemConfig(
             enabled = true,
