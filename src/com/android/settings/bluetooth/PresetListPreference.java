@@ -18,6 +18,8 @@ package com.android.settings.bluetooth;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -52,6 +54,25 @@ public class PresetListPreference extends CustomListPreference {
 
     public PresetListPreference(@NonNull Context context) {
         super(context, null);
+    }
+
+    @Nullable
+    @Override
+    protected Parcelable onSaveInstanceState() {
+        final Parcelable superState = super.onSaveInstanceState();
+        return new SavedState(superState, getEntries(), getEntryValues(), getValue());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@Nullable Parcelable state) {
+        if (state instanceof SavedState myState) {
+            super.onRestoreInstanceState(myState.getSuperState());
+            setEntries(myState.mEntryNames);
+            setEntryValues(myState.mEntryValues);
+            setValue(myState.mValue);
+        } else {
+            super.onRestoreInstanceState(state);
+        }
     }
 
     @Override
@@ -153,5 +174,46 @@ public class PresetListPreference extends CustomListPreference {
             addAll(list);
             notifyDataSetChanged();
         }
+    }
+
+    private static class SavedState extends BaseSavedState {
+        CharSequence[] mEntryNames;
+        CharSequence[] mEntryValues;
+        String mValue;
+
+        SavedState(Parcelable superState, CharSequence[] entryNames, CharSequence[] entryValues,
+                String value) {
+            super(superState);
+            this.mEntryNames = entryNames;
+            this.mEntryValues = entryValues;
+            this.mValue = value;
+        }
+
+        private SavedState(Parcel in) {
+            super(in);
+            this.mEntryNames = in.readCharSequenceArray();
+            this.mEntryValues = in.readCharSequenceArray();
+            this.mValue = in.readString();
+        }
+
+        @Override
+        public void writeToParcel(Parcel out, int flags) {
+            super.writeToParcel(out, flags);
+            out.writeCharSequenceArray(this.mEntryNames);
+            out.writeCharSequenceArray(this.mEntryValues);
+            out.writeString(this.mValue);
+        }
+
+        public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator<>() {
+            @Override
+            public SavedState createFromParcel(Parcel in) {
+                return new SavedState(in);
+            }
+
+            @Override
+            public SavedState[] newArray(int size) {
+                return new SavedState[size];
+            }
+        };
     }
 }
