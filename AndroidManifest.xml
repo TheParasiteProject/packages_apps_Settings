@@ -2491,7 +2491,7 @@
                   android:exported="false" />
 
         <activity android:name=".security.CredentialStorage"
-                android:theme="@style/Transparent"
+                android:theme="@style/Transparent.NoAnimation"
                 android:launchMode="singleTop"
                 android:exported="true"
                 android:configChanges="orientation|keyboardHidden|screenSize">
