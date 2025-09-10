@@ -33,12 +33,15 @@ import com.android.settingslib.metadata.getPreferenceTitle
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.LocalizedString
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
+import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withPermit
+import kotlinx.coroutines.withTimeout
 
 /* A [DeviceStateProvider] that provides device state information for Settings that are
 exposed using Catalyst framework. Configured in [CatalystStateProviderConfig]. */
@@ -61,21 +64,24 @@ class CatalystStateProviderExecutor(
             val deferredList =
                 screenKeyList.map { screenKey ->
                     async {
-                        semaphore.withPermit {
-                            try {
-                                buildPerScreenDeviceStates(
-                                    screenKey,
-                                    appFunctionType,
-                                    perScreenConfigMap[screenKey]?.additionalDescription,
-                                )
-                            } catch (e: Exception) {
-                                Log.e(
-                                    TAG,
-                                    "Error building per screen device states for $screenKey",
-                                    e,
-                                )
-                                null
+                        try {
+                            withTimeout(PER_SCREEN_TIMEOUT_MS) {
+                                semaphore.withPermit {
+                                    try {
+                                        buildPerScreenDeviceStates(
+                                            screenKey,
+                                            appFunctionType,
+                                            perScreenConfigMap[screenKey]?.additionalDescription,
+                                        )
+                                    } catch (e: Exception) {
+                                        Log.e(TAG, "error building $screenKey", e)
+                                        null
+                                    }
+                                }
                             }
+                        } catch (e: TimeoutCancellationException) {
+                            Log.e(TAG, "Timed out building screen: $screenKey", e)
+                            null
                         }
                     }
                 }
@@ -173,5 +179,6 @@ class CatalystStateProviderExecutor(
     companion object {
         private const val TAG = "CatalystStateProviderExecutor"
         private const val MAX_PARALLELISM = 3
+        private val PER_SCREEN_TIMEOUT_MS = 5.seconds
     }
 }

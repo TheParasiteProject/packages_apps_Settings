@@ -104,12 +104,15 @@ open class MobileNetworkScreen(override val arguments: Bundle) :
         }
 
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?): Intent? {
-        return makeLaunchIntent(
-            context,
-            MobileNetworkActivity::class.java,
-            arguments,
-            metadata?.bindingKey,
-        )
+        val intent =
+            makeLaunchIntent(
+                context,
+                MobileNetworkActivity::class.java,
+                arguments,
+                metadata?.bindingKey,
+            )
+        intent.putExtra(Settings.EXTRA_SUB_ID, subId)
+        return intent
     }
 
     override val restrictionKeys

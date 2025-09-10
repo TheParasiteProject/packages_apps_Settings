@@ -37,12 +37,15 @@ import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateI
 import com.google.android.appfunctions.schema.common.v1.devicestate.LocalizedString
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenMetadata
 import com.google.android.appfunctions.schema.common.v1.devicestate.Sensitivity
+import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withPermit
+import kotlinx.coroutines.withTimeout
 
 /* A [DeviceStateExecutor] that provides device state metadata information for Settings that are
 exposed using Catalyst framework. Configured in [CatalystStateProviderConfig]. */
@@ -65,13 +68,20 @@ class CatalystStateMetadataProviderExecutor(
             val deferredList =
                 screenKeyList.map { screenKey ->
                     async {
-                        semaphore.withPermit {
-                            try {
-                                buildPerScreenDeviceStatesMetadata(screenKey)
-                            } catch (e: Exception) {
-                                Log.e(TAG, "error building $screenKey", e)
-                                null
+                        try {
+                            withTimeout(PER_SCREEN_TIMEOUT_MS) {
+                                semaphore.withPermit {
+                                    try {
+                                        buildPerScreenDeviceStatesMetadata(screenKey)
+                                    } catch (e: Exception) {
+                                        Log.e(TAG, "error building $screenKey", e)
+                                        null
+                                    }
+                                }
                             }
+                        } catch (e: TimeoutCancellationException) {
+                            Log.e(TAG, "Timed out building screen: $screenKey", e)
+                            null
                         }
                     }
                 }
@@ -162,5 +172,6 @@ class CatalystStateMetadataProviderExecutor(
     companion object {
         private const val TAG = "CatalystStateMetadataProviderExecutor"
         private const val MAX_PARALLELISM = 3
+        private val PER_SCREEN_TIMEOUT_MS = 5.seconds
     }
 }
