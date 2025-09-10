@@ -31,6 +31,7 @@ import com.android.internal.accessibility.AccessibilityShortcutController.ACCESS
 import com.android.settings.R
 import com.android.settings.Settings.HearingDevicesActivity
 import com.android.settings.accessibility.AccessibilityHearingAidsFragment
+import com.android.settings.accessibility.FeedbackManager
 import com.android.settings.accessibility.Flags
 import com.android.settings.accessibility.HearingAidHelper
 import com.android.settings.accessibility.HearingAidUtils
@@ -163,6 +164,7 @@ open class HearingDevicesScreen(context: Context) :
                 +HearingAidCompatibilitySwitchPreference(context)
             }
             +HearingDevicesFooterPreference(context)
+            +HearingDevicesFeedbackButtonPreference { FeedbackManager(context, metricsCategory) }
         }
 
     override fun isAvailable(context: Context): Boolean = hearingAidHelper.isHearingAidSupported
