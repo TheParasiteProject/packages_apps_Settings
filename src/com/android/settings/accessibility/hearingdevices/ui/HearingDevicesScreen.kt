@@ -73,7 +73,7 @@ open class HearingDevicesScreen(context: Context) :
         get() = R.string.menu_key_accessibility
 
     override val indexable
-        get() = true
+        get() = false
 
     override val keywords: Int
         get() = R.string.keywords_hearing_aids
@@ -82,17 +82,21 @@ open class HearingDevicesScreen(context: Context) :
         get() = R.drawable.ic_hearing_aid
 
     private var lifecycleContext: PreferenceLifecycleContext? = null
-    private val localBluetoothManager: LocalBluetoothManager =
+    private val localBluetoothManager: LocalBluetoothManager by lazy {
         Utils.getLocalBluetoothManager(context)
-    private var profileManager: LocalBluetoothProfileManager = localBluetoothManager.profileManager
-    private var hearingAidHelper: HearingAidHelper = HearingAidHelper(context)
+    }
+    private val profileManager: LocalBluetoothProfileManager by lazy {
+        localBluetoothManager.profileManager
+    }
+    private val hearingAidHelper: HearingAidHelper by lazy { HearingAidHelper(context) }
 
-    private val hearingDeviceEventChangedReceiver: BroadcastReceiver =
+    private val hearingDeviceEventChangedReceiver: BroadcastReceiver by lazy {
         object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent?) {
                 lifecycleContext?.notifyPreferenceChange(KEY)
             }
         }
+    }
 
     override fun onCreate(context: PreferenceLifecycleContext) {
         super.onCreate(context)
@@ -132,6 +136,11 @@ open class HearingDevicesScreen(context: Context) :
         }
     }
 
+    override fun onDestroy(context: PreferenceLifecycleContext) {
+        super.onDestroy(context)
+        lifecycleContext = null
+    }
+
     override fun getMetricsCategory(): Int = SettingsEnums.ACCESSIBILITY_HEARING_AID_SETTINGS
 
     override fun isFlagEnabled(context: Context): Boolean = Flags.catalystHearingDevices()
@@ -145,9 +154,9 @@ open class HearingDevicesScreen(context: Context) :
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
         preferenceHierarchy(context) {
             +HearingDevicesTopIntroPreference(context)
-            +AvailableHearingDevicePreferenceCategory()
+            +AvailableHearingDevicePreferenceCategory(context, metricsCategory)
             +AddDevicePreference(context)
-            +SavedHearingDevicePreferenceCategory()
+            +SavedHearingDevicePreferenceCategory(metricsCategory)
             +HearingDeviceOptionsPreferenceCategory() += {
                 +AudioRoutingPreference()
                 +HearingDeviceShortcutPreference(context, metricsCategory)
@@ -182,7 +191,7 @@ open class HearingDevicesScreen(context: Context) :
         }
 
         val stringResId =
-            when (connectedDevice.getDeviceSide()) {
+            when (connectedDevice.deviceSide) {
                 SIDE_LEFT -> R.string.accessibility_hearingaid_left_side_device_summary
                 SIDE_RIGHT -> R.string.accessibility_hearingaid_right_side_device_summary
                 else -> R.string.accessibility_hearingaid_active_device_summary
@@ -218,16 +227,6 @@ open class HearingDevicesScreen(context: Context) :
         }
     }
 
-    class AvailableHearingDevicePreferenceCategory(
-        key: String = "available_hearing_devices",
-        title: Int = R.string.accessibility_hearing_device_connected_title,
-    ) : PreferenceCategory(key, title)
-
-    class SavedHearingDevicePreferenceCategory(
-        key: String = "previously_connected_hearing_devices",
-        title: Int = R.string.accessibility_hearing_device_saved_title,
-    ) : PreferenceCategory(key, title)
-
     class HearingDeviceOptionsPreferenceCategory(
         key: String = "hearing_options_category",
         title: Int = R.string.accessibility_screen_option,
@@ -235,7 +234,7 @@ open class HearingDevicesScreen(context: Context) :
 
     class HearingDeviceShortcutPreference(context: Context, metricsCategory: Int) :
         AccessibilityShortcutPreference(
-            context,
+            context = context,
             key = "hearing_aids_shortcut_preference",
             title = R.string.accessibility_hearing_device_shortcut_title,
             componentName = ACCESSIBILITY_HEARING_AIDS_COMPONENT_NAME,
