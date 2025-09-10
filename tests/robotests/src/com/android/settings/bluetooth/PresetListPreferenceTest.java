@@ -32,7 +32,6 @@ import org.mockito.junit.MockitoRule;
 import org.robolectric.RobolectricTestRunner;
 
 import java.util.Arrays;
-import java.util.List;
 
 /** Tests for {@link PresetListPreference}. */
 @RunWith(RobolectricTestRunner.class)
@@ -41,27 +40,38 @@ public class PresetListPreferenceTest {
     @Rule
     public final MockitoRule mMockitoRule = MockitoJUnit.rule();
 
+    private static final CharSequence[] TEST_ENTRY_NAMES = {"Preset1", "Preset2", "Preset3"};
+    private static final CharSequence[] TEST_ENTRY_VALUES = {"1", "2", "3"};
+    private static final String TEST_INITIAL_VALUE = "1";
     private final Context mContext = ApplicationProvider.getApplicationContext();
     private PresetListPreference mPreference;
 
     @Mock
     PresetListPreference.PresetArrayAdapter mAdapter;
-    private static final CharSequence[] TEST_ENTRY_VALUES = {"1", "2", "3"};
 
     @Before
     public void setUp() {
         mPreference = new PresetListPreference(mContext);
         mPreference.setAdapter(mAdapter);
+        mPreference.setEntries(TEST_ENTRY_NAMES);
         mPreference.setEntryValues(TEST_ENTRY_VALUES);
+        mPreference.setValue(TEST_INITIAL_VALUE);
     }
 
     @Test
     public void setValue_refreshAdapter() {
-        mPreference.setValue("2");
+        String testValue = "2";
+        mPreference.setValue(testValue);
 
-        List<String> entryStringList = Arrays.stream(TEST_ENTRY_VALUES)
-                .map(entry -> entry == null ? null : entry.toString())
-                .toList();
-        verify(mAdapter).setSelectedIndex(entryStringList.indexOf("2"));
+        verify(mAdapter).setSelectedIndex(Arrays.asList(TEST_ENTRY_VALUES).indexOf(testValue));
+    }
+
+    @Test
+    public void setEntries_refreshAdapter() {
+        CharSequence[] updatedEntries = {"Preset1", "Preset2"};
+
+        mPreference.setEntries(updatedEntries);
+
+        verify(mAdapter).updateList(Arrays.asList(updatedEntries));
     }
 }
