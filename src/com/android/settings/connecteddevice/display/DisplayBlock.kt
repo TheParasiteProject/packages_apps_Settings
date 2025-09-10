@@ -18,6 +18,7 @@ package com.android.settings.connecteddevice.display
 
 import android.graphics.Outline
 import android.graphics.PointF
+import android.graphics.Rect
 import android.os.Bundle
 import android.os.Trace
 import android.util.Log
@@ -38,8 +39,10 @@ import kotlin.time.Duration.Companion.milliseconds
 /** Represents a draggable block in the topology pane. */
 class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injector.context!!) {
     @VisibleForTesting
-    val highlightPx = context.resources.getDimensionPixelSize(R.dimen.display_block_highlight_width)
-    val cornerRadiusPx =
+    internal val highlightPx =
+        context.resources.getDimensionPixelSize(R.dimen.display_block_highlight_width)
+    @VisibleForTesting
+    internal val cornerRadiusPx =
         context.resources.getDimensionPixelSize(R.dimen.display_block_corner_radius)
 
     // Id of the logical display this DisplayBlock represents
@@ -170,22 +173,48 @@ class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injecto
         renderSurfaceView(fetchedSurface)
     }
 
+    /**
+     * Reparents surface to the SurfaceControl of wallpaperView, so that view will render `surface`.
+     * Any surfaces which may be parented to wallpaperView already should be passed in oldSurfaces
+     * and they will be removed from the wallpaperView's hierarchy and released.
+     *
+     * TODO(b/426102638): In mirroring mode, area outside the letterbox will be translucent, causing
+     *   display behind to be shown. This can possibly be fixed by adding another surface with just
+     *   empty opaque background
+     */
     private fun renderSurfaceView(surface: SurfaceControl) {
         val surfaceScale = surfaceScale ?: return
         val surfaceSize = surfaceSize ?: return
         val isMirroringOtherDisplay = logicalDisplayId != displayIdToShowWallpaper
 
         Trace.beginSection("Settings Wallpaper renderSurfaceView display#$displayIdToShowWallpaper")
-        injector.updateSurfaceView(
-            oldSurfaces,
-            surface,
-            wallpaperView,
-            surfaceScale,
-            surfaceSize,
-            cornerRadiusPx.toFloat(),
-            isMirroringOtherDisplay,
-        )
+
+        val t = injector.createSurfaceTransaction()
+        t.reparent(surface, wallpaperView.surfaceControl)
+
+        // Calculate the final (scaled) dimensions of the wallpaper content
+        val scaledSurfaceWidth = surfaceSize.width * surfaceScale
+        val scaledSurfaceHeight = surfaceSize.height * surfaceScale
+        // Calculate the top-left position needed to center the surface within the wallpaperView
+        val positionX = (wallpaperView.width - scaledSurfaceWidth) / 2f
+        val positionY = (wallpaperView.height - scaledSurfaceHeight) / 2f
+        val destinationCrop = Rect(0, 0, surfaceSize.width, surfaceSize.height)
+
+        t.setScale(surface, surfaceScale, surfaceScale)
+        t.setPosition(surface, positionX, positionY)
+        t.setCrop(surface, destinationCrop)
+        // Corner radius should not be applied when display is letterboxed
+        if (!isMirroringOtherDisplay) {
+            // Corner radius has to be set on the original surface size, so apply a inverse scale
+            // here.
+            t.setCornerRadius(surface, cornerRadiusPx.toFloat() / surfaceScale)
+        }
+
+        oldSurfaces.forEach { t.remove(it) }
+        t.apply()
+        oldSurfaces.forEach { it.release() }
         oldSurfaces.clear()
+
         Trace.endSection()
     }
 
