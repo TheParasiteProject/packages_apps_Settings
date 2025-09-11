@@ -5996,14 +5996,14 @@
     <string name="dark_theme_timing_category">Timing</string>
     <!-- Title for the accessibility preference for applying the original dark theme. [CHAR LIMIT=35] -->
     <string name="accessibility_standard_dark_theme_title">Standard</string>
-    <!-- Title in the search result for standard dark theme mode. -->
-    <string name="accessibility_standard_dark_theme_title_in_search">Standard Dark theme</string>
+    <!-- Title in the search result for standard dark theme mode. [BACKUP_MESSAGE_ID: 1374136983709402050] -->
+    <string name="accessibility_standard_dark_theme_title_in_search">Standard dark theme</string>
     <!-- Summary for the accessibility preference for applying the original dark theme. [CHAR LIMIT=100] -->
     <string name="accessibility_standard_dark_theme_summary">Turns on dark theme for your device and apps that support dark theme</string>
     <!-- Title for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=35] -->
     <string name="accessibility_expanded_dark_theme_title">Expanded</string>
-    <!-- Title in the search result for expanded dark theme mode. -->
-    <string name="accessibility_expanded_dark_theme_title_in_search">Expanded Dark theme</string>
+    <!-- Title in the search result for expanded dark theme mode. [BACKUP_MESSAGE_ID: 7467343853315678576] -->
+    <string name="accessibility_expanded_dark_theme_title_in_search">Expanded dark theme</string>
     <!-- Summary for the accessibility preference for forcing all apps to use dark theme. [CHAR LIMIT=NONE] -->
     <string name="accessibility_expanded_dark_theme_summary">Automatically applies dark theme to most apps that don\'t support it. This can improve accessibility and readability, but may cause some apps to display incorrectly.</string>
     <!-- Search keywords for the Expanded dark theme settings. [CHAR_LIMIT=NONE] -->
@@ -6066,13 +6066,13 @@
     <string name="accessibility_display_inversion_shortcut_title">Color inversion shortcut</string>
     <!-- Intro for the accessibility preference to configure display color inversion. [CHAR LIMIT=NONE] -->
     <string name="accessibility_display_inversion_preference_intro_text">Color inversion turns light screens dark. It also turns dark screens light.</string>
-    <!-- Subtitle for the accessibility preference to configure display color inversion. [CHAR LIMIT=NONE] -->
+    <!-- Subtitle for the accessibility preference to configure display color inversion. [CHAR LIMIT=NONE] [BACKUP_MESSAGE_ID: 4494767676482389509] -->
     <string name="accessibility_display_inversion_preference_subtitle">
         <![CDATA[<b>Keep in mind</b><br/>
         <ol>
             <li>\u00a0Colors will change in media and images</li>
             <li>\u00a0Color inversion works on all apps</li>
-            <li>\u00a0To display a dark background, Dark theme can be used instead</li>
+            <li>\u00a0To display a dark background, dark theme can be used instead</li>
         </ol>
         ]]>
     </string>
@@ -9110,10 +9110,10 @@
     <string name="mode_wallpaper_title_secondary_list">dim the wallpaper</string>
     <!-- Do not disturb: device effect summary [CHAR LIMIT=NONE] -->
     <string name="mode_wallpaper_summary">Filter the brightness of the wallpaper</string>
-    <!-- Do not disturb: device effect option, title or first in list [CHAR LIMIT=80] -->
-    <string name="mode_dark_theme_title">Enable Dark theme</string>
-    <!-- Do not disturb: device effect option, not first in list [CHAR LIMIT=80] -->
-    <string name="mode_dark_theme_title_secondary_list">enable Dark theme</string>
+    <!-- Do not disturb: device effect option, title or first in list [CHAR LIMIT=80] [BACKUP_MESSAGE_ID: 1938553262958310149] -->
+    <string name="mode_dark_theme_title">Enable dark theme</string>
+    <!-- Do not disturb: device effect option, not first in list [CHAR LIMIT=80] [BACKUP_MESSAGE_ID: 2590918156799917127] -->
+    <string name="mode_dark_theme_title_secondary_list">enable dark theme</string>
     <!-- Do not disturb: device effect summary [CHAR LIMIT=NONE] -->
     <string name="mode_dark_theme_summary">Switch the device theme to use a dark background, which is easier on the eyes</string>
     <!-- [CHAR LIMIT=NONE] Zen mode settings: Summary for sound interruption settings -->
@@ -11812,8 +11812,8 @@
     <!-- [CHAR LIMIT=60] Summary string on dark theme explaining why the toggle is disabled while the setting is off-->
     <string name="dark_ui_mode_disabled_summary_dark_theme_off">Temporarily turned on due to Battery Saver</string>
 
-    <!-- [CHAR_LIMIT=50] Title string in the dark theme slice(suggestion) -->
-    <string name="dark_theme_slice_title">Try Dark theme</string>
+    <!-- [CHAR_LIMIT=50] Title string in the dark theme slice(suggestion) [BACKUP_MESSAGE_ID: 4684222119481114062] -->
+    <string name="dark_theme_slice_title">Try dark theme</string>
 
     <!-- [CHAR_LIMIT=50] Subtitle string in the dark theme slice(suggestion) -->
     <string name="dark_theme_slice_subtitle">Helps extend battery life</string>
