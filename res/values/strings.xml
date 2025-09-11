@@ -167,6 +167,12 @@
     <string name="bluetooth_hearing_device_settings_summary">Shortcut, hearing aid compatibility</string>
     <!-- Connected devices settings. Title for hearing aids presets. A preset is a set of hearing aid settings. User can apply different settings in different environments (e.g. Outdoor, Restaurant, Home) [CHAR LIMIT=60] [BACKUP_MESSAGE_ID=5429761844739722885] -->
     <string name="bluetooth_hearing_aids_presets">Preset</string>
+    <!-- Connected devices settings. Title for hearing aids presets of left side device. A preset is a set of hearing aid settings. User can apply different settings in different environments (e.g. Outdoor, Restaurant, Home) [CHAR LIMIT=60] -->
+    <string name="bluetooth_hearing_aids_presets_left">Left Preset</string>
+    <!-- Connected devices settings. Title for hearing aids presets of right side device. A preset is a set of hearing aid settings. User can apply different settings in different environments (e.g. Outdoor, Restaurant, Home) [CHAR LIMIT=60] -->
+    <string name="bluetooth_hearing_aids_presets_right">Right Preset</string>
+    <!-- Connected devices settings. Summary for binaural hearing aids presets. A preset is a set of hearing aid settings. User can apply different settings in different environments (e.g. Outdoor, Restaurant, Home) [CHAR LIMIT=60] -->
+    <string name="bluetooth_hearing_aids_presets_binaural_summary">Left: <xliff:g id="preset_name" example="Outdoor">%1$s</xliff:g> Right: <xliff:g id="preset_name" example="Outdoor">%2$s</xliff:g></string>
     <!-- Connected devices settings. Summary of the preference when no preset info is obtained from the remote device [CHAR LIMIT=60] -->
     <string name="bluetooth_hearing_aids_presets_empty_list_message">There are no presets programmed by your audiologist</string>
     <!-- Message when selecting hearing aids presets failed. [CHAR LIMIT=NONE] -->
