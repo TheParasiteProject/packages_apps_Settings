@@ -375,6 +375,8 @@ open class ConnectedDisplayInjector(open val context: Context?) {
 
     open fun createSurfaceTransaction() = SurfaceControl.Transaction()
 
+    open fun getSurfaceControlBuilder() = SurfaceControl.Builder()
+
     private companion object {
         private const val TAG = "ConnectedDisplayInjector"
     }

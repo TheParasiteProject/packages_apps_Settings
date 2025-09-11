@@ -27,12 +27,14 @@ import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.ArgumentCaptor
 import org.mockito.Mockito.any
 import org.mockito.Mockito.anyFloat
 import org.mockito.Mockito.eq
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.never
 import org.mockito.Mockito.reset
+import org.mockito.Mockito.times
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
 import org.robolectric.RobolectricTestRunner
@@ -76,6 +78,16 @@ class DisplayBlockTest {
 
         override fun createSurfaceTransaction(): SurfaceControl.Transaction {
             return mockTransaction
+        }
+
+        override fun getSurfaceControlBuilder(): SurfaceControl.Builder {
+            return object : SurfaceControl.Builder() {
+                override fun build(): SurfaceControl {
+                    val mockSurfaceControl = mock(SurfaceControl::class.java)
+                    `when`(mockSurfaceControl.isValid()).thenReturn(true)
+                    return mockSurfaceControl
+                }
+            }
         }
 
         override fun wallpaper(displayId: Int): SurfaceControl? = wallpapers.remove(displayId)
@@ -252,6 +264,34 @@ class DisplayBlockTest {
         injector.testHandler.flush()
 
         verify(mockTransaction, never()).setCornerRadius(any(), anyFloat())
+    }
+
+    @Test
+    fun renderSurfaceView_inMirroringMode_createsAndShowsBackground() {
+        val wallpaper = SurfaceControl.Builder().setName("wallpaper").build()
+        injector.wallpapers[MIRRORED_DISPLAY_ID] = wallpaper
+        block.reset(
+            DISPLAY_ID,
+            MIRRORED_DISPLAY_ID,
+            PointF(0f, 0f),
+            PointF(0f, 0f),
+            0.5f,
+            DISPLAY_SIZE,
+        )
+
+        block.updateSurfaceView()
+        injector.testHandler.flush()
+
+        val surfaceCaptor = ArgumentCaptor.forClass(SurfaceControl::class.java)
+        // Verify both the wallpaper and backgroundSurface is reparented
+        verify(mockTransaction, times(2))
+            .reparent(surfaceCaptor.capture(), eq(block.wallpaperView.surfaceControl))
+        val backgroundSurface = surfaceCaptor.allValues.get(1)
+
+        verify(mockTransaction).setAlpha(eq(backgroundSurface), eq(0.5f))
+        verify(mockTransaction).show(eq(backgroundSurface))
+
+        verify(mockTransaction).setLayer(eq(wallpaper), eq(1))
     }
 
     private fun applyRequestedSize() {

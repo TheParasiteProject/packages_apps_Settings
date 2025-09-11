@@ -67,6 +67,7 @@ class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injecto
     // the new surface is put in place. This list can have more than one item because we may get
     // two reset calls before we get a single surfaceChange callback.
     private val oldSurfaces = mutableListOf<SurfaceControl>()
+    private var letterboxBackgroundSurface: SurfaceControl? = null
     private var wallpaperSurface: SurfaceControl? = null
 
     private val updateSurfaceView = Runnable { updateSurfaceView() }
@@ -177,10 +178,6 @@ class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injecto
      * Reparents surface to the SurfaceControl of wallpaperView, so that view will render `surface`.
      * Any surfaces which may be parented to wallpaperView already should be passed in oldSurfaces
      * and they will be removed from the wallpaperView's hierarchy and released.
-     *
-     * TODO(b/426102638): In mirroring mode, area outside the letterbox will be translucent, causing
-     *   display behind to be shown. This can possibly be fixed by adding another surface with just
-     *   empty opaque background
      */
     private fun renderSurfaceView(surface: SurfaceControl) {
         val surfaceScale = surfaceScale ?: return
@@ -203,11 +200,29 @@ class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injecto
         t.setScale(surface, surfaceScale, surfaceScale)
         t.setPosition(surface, positionX, positionY)
         t.setCrop(surface, destinationCrop)
-        // Corner radius should not be applied when display is letterboxed
-        if (!isMirroringOtherDisplay) {
-            // Corner radius has to be set on the original surface size, so apply a inverse scale
-            // here.
+        if (isMirroringOtherDisplay) {
+            // In mirroring mode, area outside the letterbox will be translucent, causing display
+            // behind to be spilling over. The workaround here is to add another black background
+            // surface behind the original wallpaper surface
+            val backgroundSurface =
+                injector
+                    .getSurfaceControlBuilder()
+                    .setName("Letterbox background display#$logicalDisplayId")
+                    .setColorLayer()
+                    .build()
+            letterboxBackgroundSurface = backgroundSurface
+
+            t.reparent(backgroundSurface, wallpaperView.surfaceControl)
+            // Set main wallpaper surface to be on top of the background
+            t.setLayer(surface, 1)
+
+            t.setAlpha(backgroundSurface, 0.5f)
+            t.show(backgroundSurface)
+        } else {
+            // Corner radius should only be applied when display is not letterboxed, and has to be
+            // set on the original surface size, so apply a inverse scale here.
             t.setCornerRadius(surface, cornerRadiusPx.toFloat() / surfaceScale)
+            letterboxBackgroundSurface = null
         }
 
         oldSurfaces.forEach { t.remove(it) }
@@ -249,8 +264,10 @@ class DisplayBlock(val injector: ConnectedDisplayInjector) : FrameLayout(injecto
         surfaceSize: Size,
     ) {
         wallpaperSurface?.let { oldSurfaces.add(it) }
+        letterboxBackgroundSurface?.let { oldSurfaces.add(it) }
         injector.handler.removeCallbacks(updateSurfaceView)
         wallpaperSurface = null
+        letterboxBackgroundSurface = null
         positionInPane = topLeft
 
         this.logicalDisplayId = logicalDisplayId
