@@ -84,11 +84,6 @@ class MobileNetworkStateSource : DeviceStateSource {
                     hintText = "Phone number of subscription ID $subId",
                 ),
                 DeviceStateItem(
-                    key = "imei_$subId",
-                    jsonValue = getImei(telephonyManager),
-                    hintText = "IMEI of subscription ID $subId",
-                ),
-                DeviceStateItem(
                     key = "data_roaming_enabled_$subId",
                     jsonValue = telephonyManager.isDataRoamingEnabled.toString(),
                     hintText = "Whether the data roaming of subscription ID $subId is enabled",
@@ -140,12 +135,6 @@ class MobileNetworkStateSource : DeviceStateSource {
         val template: CharSequence = context.getText(R.string.data_used_formatted)
 
         return TextUtils.expandTemplate(template, number, units).toString()
-    }
-
-    private fun getImei(telephonyManager: TelephonyManager): String {
-        val phoneType = telephonyManager.currentPhoneType
-        return if (phoneType == TelephonyManager.PHONE_TYPE_CDMA) telephonyManager.meid ?: String()
-        else telephonyManager.imei ?: String()
     }
 
     private fun getPreferredNetworkMode(context: Context, subId: Int): String {

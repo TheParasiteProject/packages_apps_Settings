@@ -34,14 +34,16 @@ import com.android.settings.applications.specialaccess.AlarmsAndRemindersAppDeta
 import com.android.settings.applications.specialaccess.AlarmsAndRemindersAppListScreen
 import com.android.settings.applications.specialaccess.AllFilesAccessAppDetailScreen
 import com.android.settings.applications.specialaccess.AllFilesAccessAppListScreen
-import com.android.settings.applications.specialaccess.AppInfoInstallUnknownAppsScreen
-import com.android.settings.applications.specialaccess.AppInfoManageWriteSettingsScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppDetailScreen
 import com.android.settings.applications.specialaccess.DisplayOverOtherAppsAppListScreen
 import com.android.settings.applications.specialaccess.FullScreenNotificationsAppDetailScreen
 import com.android.settings.applications.specialaccess.FullScreenNotificationsAppListScreen
+import com.android.settings.applications.specialaccess.InstallUnknownAppsAppDetailScreen
+import com.android.settings.applications.specialaccess.InstallUnknownAppsAppListScreen
 import com.android.settings.applications.specialaccess.InteractAcrossProfilesAppDetailScreen
 import com.android.settings.applications.specialaccess.InteractAcrossProfilesAppListScreen
+import com.android.settings.applications.specialaccess.ManageWriteSettingsAppDetailScreen
+import com.android.settings.applications.specialaccess.ManageWriteSettingsAppListScreen
 import com.android.settings.applications.specialaccess.SpecialAccessSettingsScreen
 import com.android.settings.applications.specialaccess.WifiControlAppDetailScreen
 import com.android.settings.applications.specialaccess.WifiControlAppListScreen
@@ -280,8 +282,8 @@ private fun getCatalystScreenConfigs() =
                 ". Always-on-display settings indicates whether the lock screen, including the time, is visible when the phone is off.",
         ),
         PerScreenCatalystConfig(enabled = true, screenKey = DataUsageAppDetailScreen.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = AppInfoInstallUnknownAppsScreen.KEY),
-        PerScreenCatalystConfig(enabled = true, screenKey = AppInfoManageWriteSettingsScreen.KEY),
+        PerScreenCatalystConfig(enabled = true, screenKey = InstallUnknownAppsAppListScreen.KEY),
+        PerScreenCatalystConfig(enabled = true, screenKey = ManageWriteSettingsAppListScreen.KEY),
         PerScreenCatalystConfig(enabled = true, screenKey = ColorModeScreen.KEY),
         PerScreenCatalystConfig(
             enabled = true,
@@ -784,6 +786,16 @@ private fun getDeviceStateItemList() =
             enabled = true,
             settingKey = AlarmsAndRemindersAppDetailScreen.KEY,
             settingScreenKey = AlarmsAndRemindersAppListScreen.KEY,
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
+            settingKey = ManageWriteSettingsAppDetailScreen.KEY,
+            settingScreenKey = ManageWriteSettingsAppListScreen.KEY,
+        ),
+        DeviceStateItemConfig(
+            enabled = true,
+            settingKey = InstallUnknownAppsAppDetailScreen.KEY,
+            settingScreenKey = InstallUnknownAppsAppListScreen.KEY,
         ),
         DeviceStateItemConfig(
             enabled = true,

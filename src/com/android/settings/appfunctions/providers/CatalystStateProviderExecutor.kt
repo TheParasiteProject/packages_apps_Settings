@@ -24,12 +24,14 @@ import android.util.Log
 import com.android.settings.appfunctions.CatalystConfig
 import com.android.settings.appfunctions.DeviceStateAppFunctionType
 import com.android.settings.appfunctions.DeviceStateProviderExecutorResult
+import com.android.settings.deviceinfo.imei.ImeiPreference
 import com.android.settingslib.metadata.PersistentPreference
 import com.android.settingslib.metadata.PreferenceHierarchyNode
 import com.android.settingslib.metadata.PreferenceScreenMetadata
 import com.android.settingslib.metadata.getPreferenceScreenTitle
 import com.android.settingslib.metadata.getPreferenceSummary
 import com.android.settingslib.metadata.getPreferenceTitle
+import com.android.settingslib.spaprivileged.model.app.AppListRepositoryImpl
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.LocalizedString
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
@@ -58,37 +60,44 @@ class CatalystStateProviderExecutor(
         appFunctionType: DeviceStateAppFunctionType,
         params: GenericDocument?,
     ): DeviceStateProviderExecutorResult {
-        val perScreenDeviceStatesList = mutableListOf<PerScreenDeviceStates>()
-        coroutineScope {
-            val semaphore = Semaphore(MAX_PARALLELISM)
-            val deferredList =
-                screenKeyList.map { screenKey ->
-                    async {
-                        try {
-                            withTimeout(PER_SCREEN_TIMEOUT_MS) {
-                                semaphore.withPermit {
-                                    try {
-                                        buildPerScreenDeviceStates(
-                                            screenKey,
-                                            appFunctionType,
-                                            perScreenConfigMap[screenKey]?.additionalDescription,
-                                        )
-                                    } catch (e: Exception) {
-                                        Log.e(TAG, "error building $screenKey", e)
-                                        null
+        // Cache the app list as it is used for multiple screens and is expensive to compute.
+        AppListRepositoryImpl.useCaching = true
+        try {
+            val perScreenDeviceStatesList = mutableListOf<PerScreenDeviceStates>()
+            coroutineScope {
+                val semaphore = Semaphore(MAX_PARALLELISM)
+                val deferredList =
+                    screenKeyList.map { screenKey ->
+                        async {
+                            try {
+                                withTimeout(PER_SCREEN_TIMEOUT_MS) {
+                                    semaphore.withPermit {
+                                        try {
+                                            buildPerScreenDeviceStates(
+                                                screenKey,
+                                                appFunctionType,
+                                                perScreenConfigMap[screenKey]?.additionalDescription,
+                                            )
+                                        } catch (e: Exception) {
+                                            Log.e(TAG, "error building $screenKey", e)
+                                            null
+                                        }
                                     }
                                 }
+                            } catch (e: TimeoutCancellationException) {
+                                Log.e(TAG, "Timed out building screen: $screenKey", e)
+                                null
                             }
-                        } catch (e: TimeoutCancellationException) {
-                            Log.e(TAG, "Timed out building screen: $screenKey", e)
-                            null
                         }
                     }
-                }
-            val results = deferredList.awaitAll()
-            perScreenDeviceStatesList.addAll(results.filterNotNull().flatten())
+                val results = deferredList.awaitAll()
+                perScreenDeviceStatesList.addAll(results.filterNotNull().flatten())
+            }
+            return DeviceStateProviderExecutorResult(states = perScreenDeviceStatesList)
+        } finally {
+            // Disable caching for the next execution to avoid stale data.
+            AppListRepositoryImpl.useCaching = false
         }
-        return DeviceStateProviderExecutorResult(states = perScreenDeviceStatesList)
     }
 
     private suspend fun CoroutineScope.buildPerScreenDeviceStates(
@@ -122,14 +131,15 @@ class CatalystStateProviderExecutor(
         preferencesHierarchy.forEach {
             val metadata = it.metadata
             val config = settingConfigMap[metadata.key]
-            // skip over explicitly disabled preferences
             val jsonValue =
-                when (metadata) {
-                    is PersistentPreference<*> ->
+                when {
+                    // TODO(b/444419242): Handle IME redaction properly.
+                    isImePreference(metadata.key) -> "REDACTED"
+                    metadata is PersistentPreference<*> ->
                         metadata
                             .storage(context)
                             .getValue(metadata.key, metadata.valueType as Class<Any>)
-                            .toString()
+                            ?.toString()
                     else -> metadata.getPreferenceSummary(context)?.toString()
                 }
             jsonValue?.let {
@@ -174,6 +184,10 @@ class CatalystStateProviderExecutor(
                 intentUri = launchingIntent?.toUri(Intent.URI_INTENT_SCHEME),
             )
         return states
+    }
+
+    private fun isImePreference(prefKey: String): Boolean {
+        return prefKey.startsWith(ImeiPreference.KEY_PREFIX)
     }
 
     companion object {
