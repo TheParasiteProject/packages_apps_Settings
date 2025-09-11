@@ -16,9 +16,12 @@
 
 package com.android.settings.bluetooth;
 
+import static com.google.common.truth.Truth.assertThat;
+
 import static org.mockito.Mockito.verify;
 
 import android.content.Context;
+import android.os.Parcelable;
 
 import androidx.test.core.app.ApplicationProvider;
 
@@ -73,5 +76,16 @@ public class PresetListPreferenceTest {
         mPreference.setEntries(updatedEntries);
 
         verify(mAdapter).updateList(Arrays.asList(updatedEntries));
+    }
+
+    @Test
+    public void onSaveAndRestoreInstanceState_entriesAndValueAreRestored() {
+        final Parcelable savedState = mPreference.onSaveInstanceState();
+        final PresetListPreference newPreference = new PresetListPreference(mContext);
+        newPreference.onRestoreInstanceState(savedState);
+
+        assertThat(newPreference.getEntries()).isEqualTo(TEST_ENTRY_NAMES);
+        assertThat(newPreference.getEntryValues()).isEqualTo(TEST_ENTRY_VALUES);
+        assertThat(newPreference.getValue()).isEqualTo(TEST_INITIAL_VALUE);
     }
 }
