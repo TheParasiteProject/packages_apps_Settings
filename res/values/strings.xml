@@ -11340,8 +11340,6 @@
     <string name="disabled_by_advanced_protection_setting_is_off_message">For your security, Advanced Protection requires this setting to remain off</string>
     <!-- Short summary for dialog displayed when user performs an action on their phone that's blocked by Advanced Protection. [CHAR LIMIT=NONE] -->
     <string name="disabled_by_advanced_protection_action_message">For your security, Advanced Protection prevents this action</string>
-    <!-- Short summary for dialog displayed when user tries to connect to a Wi-Fi Wired Equivalent Privacy (WEP) network on their phone that's blocked by Advanced Protection. [CHAR LIMIT=NONE] -->
-    <string name="disabled_by_advanced_protection_wep_action_message">This network uses WEP, an outdated encryption method that can put your data at risk. WEP connections are blocked by Advanced Protection.</string>
     <!-- Title for a button that will resolve to a help URL explaining what Advanced Protection is. [CHAR LIMIT=50] -->
     <string name="disabled_by_advanced_protection_help_button_title">Settings</string>
 
