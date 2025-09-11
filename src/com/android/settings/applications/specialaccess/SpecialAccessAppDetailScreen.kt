@@ -207,21 +207,26 @@ abstract class SpecialAccessAppDetailScreen(context: Context, override val argum
         fun parameters(
             context: Context,
             showSystemApp: Boolean,
-            filter: (Context, ApplicationInfo?) -> Boolean,
+            customFilter: (Context, ApplicationInfo?) -> Boolean,
         ): Flow<Bundle> = flow {
             val appInfos =
                 withContext(Dispatchers.IO) {
                         AppListRepositoryImpl(context)
                             .loadAndMaybeExcludeSystemApps(context.userId, !showSystemApp)
                     }
-                    .filter {
-                        filter(context, it) &&
-                            isNotInChangeablePackages(it) &&
-                            !isSystemOrRootUid(it)
-                    }
+                    .filter { hasSpecialAccessPermission(context, it, customFilter) }
                     .sortedWith(context.applicationInfoComparator)
             for (appInfo in appInfos) emit(appInfo.packageName.toArguments())
         }
+
+        fun hasSpecialAccessPermission(
+            context: Context,
+            appInfo: ApplicationInfo,
+            customFilter: (Context, ApplicationInfo?) -> Boolean,
+        ) =
+            customFilter(context, appInfo) &&
+                isNotInChangeablePackages(appInfo) &&
+                !isSystemOrRootUid(appInfo)
 
         private fun isSystemOrRootUid(appInfo: ApplicationInfo): Boolean =
             UserHandle.getAppId(appInfo.uid) in listOf(Process.SYSTEM_UID, Process.ROOT_UID)
