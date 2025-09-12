@@ -265,13 +265,10 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
         use(DisableSimFooterPreferenceController.class).init(mSubId);
         use(NrDisabledInDsdsFooterPreferenceController.class).init(mSubId);
 
-        if (!isCatalystEnabled()) {
+        if (!isCatalystEnabled() || !Flags.deeplinkNetworkAndInternet25q4()) {
             use(MobileNetworkSpnPreferenceController.class).init(this, mSubId);
             use(MobileNetworkPhoneNumberPreferenceController.class).init(mSubId);
             use(MobileNetworkImeiPreferenceController.class).init(this, mSubId);
-        }
-
-        if (!isCatalystEnabled() || !Flags.deeplinkNetworkAndInternet25q4()) {
             use(ApnPreferenceController.class).init(mSubId);
         }
 
@@ -301,9 +298,10 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
         use(CarrierPreferenceController.class).init(mSubId);
         if (!isCatalystEnabled() || !Flags.deeplinkNetworkAndInternet25q4()) {
             use(DataUsagePreferenceController.class).init(mSubId);
+            use(EnabledNetworkModePreferenceController.class)
+                    .init(mSubId, getParentFragmentManager());
         }
         use(PreferredNetworkModePreferenceController.class).init(mSubId);
-        use(EnabledNetworkModePreferenceController.class).init(mSubId, getParentFragmentManager());
         use(DataServiceSetupPreferenceController.class).init(mSubId);
         use(Enable2gPreferenceController.class).init(mSubId);
         use(CarrierWifiTogglePreferenceController.class).init(getLifecycle(), mSubId);
