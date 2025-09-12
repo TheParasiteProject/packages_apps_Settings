@@ -5546,6 +5546,8 @@
     <string name="accessibility_send_feedback_title">Send feedback</string>
     <!-- Title for button preference to start the survey process for the accessibility [CHAR LIMIT=30] -->
     <string name="accessibility_send_survey_title">Take survey</string>
+    <!-- Title for button preference to start disability support [CHAR LIMIT=NONE] -->
+    <string name="accessibility_disability_support_title"></string>
     <!-- Channel name for the accessibility survey notification. [CHAR LIMIT=50] -->
     <string name="accessibility_send_survey_notification_channel">Accessibility Survey</string>
     <!-- Title of a survey notification about dark theme. [CHAR LIMIT=50] -->
@@ -8323,6 +8325,8 @@
     <string name="help_url_insecure_vpn" translatable="false"></string>
     <!-- url for learning more about IT admin policy disabling -->
     <string name="help_url_action_disabled_by_it_admin" translatable="false"></string>
+    <!-- Url for Accessibility Disability Support [DO NOT TRANSLATE] -->
+    <string name="help_url_accessibility_disability_support" translatable="false"></string>
 
     <!-- User account title [CHAR LIMIT=30] -->
     <string name="user_account_title">Account for content</string>
