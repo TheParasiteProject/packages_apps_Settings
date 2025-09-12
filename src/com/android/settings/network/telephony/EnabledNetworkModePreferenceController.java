@@ -71,7 +71,7 @@ import java.util.stream.Stream;
 public class EnabledNetworkModePreferenceController extends
         BasePreferenceController implements
         ListPreference.OnPreferenceChangeListener, DefaultLifecycleObserver,
-        SubscriptionsChangeListener.SubscriptionsChangeListenerClient {
+        SubscriptionsChangeListener.SubscriptionsChangeListenerClient, AirplaneModeChangedCallback {
 
     private static final String LOG_TAG = "EnabledNetworkMode";
     private static final long BITMASK_2G = TelephonyManager.NETWORK_TYPE_BITMASK_GSM
@@ -94,6 +94,7 @@ public class EnabledNetworkModePreferenceController extends
     private SatelliteManager mSatelliteManager;
     private boolean mIsSatelliteSessionStarted = false;
     private boolean mIsCurrentSubscriptionForSatellite = false;
+    protected boolean mIsAirplaneModeOn = false;
 
     @VisibleForTesting
     final SelectedNbIotSatelliteSubscriptionCallback mSelectedNbIotSatelliteSubscriptionCallback =
@@ -239,6 +240,11 @@ public class EnabledNetworkModePreferenceController extends
         return true;
     }
 
+    @Override
+    public void notifyAirplaneModeChanged(boolean isAirplaneModeOn) {
+        this.mIsAirplaneModeOn = isAirplaneModeOn;
+    }
+
     public void init(int subId, FragmentManager fragmentManager) {
         mSubId = subId;
         mFragmentManager = fragmentManager;
@@ -276,7 +282,8 @@ public class EnabledNetworkModePreferenceController extends
                 + mIsSatelliteSessionStarted + " / mIsCurrentSubscriptionForSatellite : "
                 + mIsCurrentSubscriptionForSatellite);
         return isCallStateIdle()
-                && !(mIsSatelliteSessionStarted && mIsCurrentSubscriptionForSatellite);
+                && !(mIsSatelliteSessionStarted && mIsCurrentSubscriptionForSatellite)
+                && !mIsAirplaneModeOn;
     }
 
     private final class PreferenceEntriesBuilder {
