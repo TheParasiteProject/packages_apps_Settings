@@ -68,6 +68,7 @@ import java.util.stream.Stream;
 /**
  * Preference controller for "Enabled network mode"
  */
+// LINT.IfChange
 public class EnabledNetworkModePreferenceController extends
         BasePreferenceController implements
         ListPreference.OnPreferenceChangeListener, DefaultLifecycleObserver,
@@ -85,7 +86,8 @@ public class EnabledNetworkModePreferenceController extends
     private Preference mPreference;
     private PreferenceScreen mPreferenceScreen;
     private TelephonyManager mTelephonyManager;
-    private PreferenceEntriesBuilder mBuilder;
+    @VisibleForTesting
+    PreferenceEntriesBuilder mBuilder;
     private SubscriptionsChangeListener mSubscriptionsListener;
     private int mCallState = TelephonyManager.CALL_STATE_IDLE;
     private PhoneCallStateTelephonyCallback mTelephonyCallback;
@@ -208,14 +210,9 @@ public class EnabledNetworkModePreferenceController extends
         }
 
         final ListPreference listPreference = (ListPreference) preference;
+        mBuilder.refresh();
+        mBuilder.updateListPreference(listPreference);
 
-        mBuilder.setPreferenceEntries();
-        mBuilder.setPreferenceValueAndSummary();
-
-        listPreference.setEntries(mBuilder.getEntries());
-        listPreference.setEntryValues(mBuilder.getEntryValues());
-        listPreference.setValue(Integer.toString(mBuilder.getSelectedEntryValue()));
-        listPreference.setSummary(mBuilder.getSummary());
         boolean listPreferenceEnabled = isPreferenceShallEnabled();
         listPreference.setEnabled(listPreferenceEnabled);
         if (!listPreferenceEnabled) {
@@ -286,7 +283,7 @@ public class EnabledNetworkModePreferenceController extends
                 && !mIsAirplaneModeOn;
     }
 
-    private final class PreferenceEntriesBuilder {
+    public static class PreferenceEntriesBuilder {
         private CarrierConfigCache mCarrierConfigCache;
         private Context mContext;
         private TelephonyManager mTelephonyManager;
@@ -882,7 +879,8 @@ public class EnabledNetworkModePreferenceController extends
                     .toArray(String[]::new);
         }
 
-        private int getSelectedEntryValue() {
+        /** Return the selected entry. */
+        public int getSelectedEntryValue() {
             return mSelectedEntry;
         }
 
@@ -900,7 +898,8 @@ public class EnabledNetworkModePreferenceController extends
             }
         }
 
-        private String getSummary() {
+        /** Return the summary. */
+        public String getSummary() {
             return mSummary;
         }
 
@@ -916,6 +915,30 @@ public class EnabledNetworkModePreferenceController extends
             return mIs5gEntryDisplayed;
         }
 
+        /**
+         * Returns the resources associated with Subscription.
+         *
+         * @return Resources associated with Subscription.
+         */
+        @VisibleForTesting
+        Resources getResourcesForSubId() {
+            return SubscriptionManager.getResourcesForSubId(mContext, mSubId);
+        }
+
+        /** Refresh builder data */
+        public void refresh() {
+            setPreferenceEntries();
+            setPreferenceValueAndSummary();
+        }
+
+        /** Updates the list preference */
+        public void updateListPreference(ListPreference listPreference) {
+            refresh();
+            listPreference.setEntries(getEntries());
+            listPreference.setEntryValues(getEntryValues());
+            listPreference.setValue(Integer.toString(getSelectedEntryValue()));
+            listPreference.setSummary(getSummary());
+        }
     }
 
     @VisibleForTesting
@@ -955,16 +978,6 @@ public class EnabledNetworkModePreferenceController extends
         }
     }
 
-    /**
-     * Returns the resources associated with Subscription.
-     *
-     * @return Resources associated with Subscription.
-     */
-    @VisibleForTesting
-    Resources getResourcesForSubId() {
-        return SubscriptionManager.getResourcesForSubId(mContext, mSubId);
-    }
-
     @Override
     public void onAirplaneModeChanged(boolean airplaneModeEnabled) {
     }
@@ -977,3 +990,4 @@ public class EnabledNetworkModePreferenceController extends
         }
     }
 }
+// LINT.ThenChange(EnabledNetworkModePreference.kt)
