@@ -93,6 +93,7 @@ open class MobileNetworkScreen(override val arguments: Bundle) :
                     +MobileNetworkDataUsagePreference(context, coroutineScope, subId)
                     +MobileNetworkSpnPreference(context, subId)
                     +MobileNetworkPhoneNumberPreference(data)
+                    +EnabledNetworkModePreference(data)
                     +MobileNetworkImeiPreference(context, subId)
                     +(DataUsageListScreen.KEY args arguments)
                     +UntitledPreferenceCategoryMetadata("apn_and_protection_container") += {

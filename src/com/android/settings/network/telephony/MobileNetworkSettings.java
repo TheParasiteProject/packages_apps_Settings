@@ -263,13 +263,10 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
         use(DisableSimFooterPreferenceController.class).init(mSubId);
         use(NrDisabledInDsdsFooterPreferenceController.class).init(mSubId);
 
-        if (!isCatalystEnabled()) {
+        if (!isCatalystEnabled() || !Flags.deeplinkNetworkAndInternet25q4()) {
             use(MobileNetworkSpnPreferenceController.class).init(this, mSubId);
             use(MobileNetworkPhoneNumberPreferenceController.class).init(mSubId);
             use(MobileNetworkImeiPreferenceController.class).init(this, mSubId);
-        }
-
-        if (!isCatalystEnabled() || !Flags.deeplinkNetworkAndInternet25q4()) {
             use(ApnPreferenceController.class).init(mSubId);
         }
 
@@ -299,9 +296,10 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
         use(CarrierPreferenceController.class).init(mSubId);
         if (!isCatalystEnabled() || !Flags.deeplinkNetworkAndInternet25q4()) {
             use(DataUsagePreferenceController.class).init(mSubId);
+            use(EnabledNetworkModePreferenceController.class)
+                    .init(mSubId, getParentFragmentManager());
         }
         use(PreferredNetworkModePreferenceController.class).init(mSubId);
-        use(EnabledNetworkModePreferenceController.class).init(mSubId, getParentFragmentManager());
         use(DataServiceSetupPreferenceController.class).init(mSubId);
         use(Enable2gPreferenceController.class).init(mSubId);
         use(CarrierWifiTogglePreferenceController.class).init(getLifecycle(), mSubId);
@@ -382,6 +380,11 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
                         Log.d(LOG_TAG, "Due to subscription not visible, closes page");
                         finishFragment();
                     }
+                    return Unit.INSTANCE;
+                });
+        new AirplaneModeRepository(requireContext()).collectAirplaneModeChanged(viewLifecycleOwner,
+                (isAirplaneModeOn) -> {
+                    notifyAirplaneModeForPreferences(isAirplaneModeOn);
                     return Unit.INSTANCE;
                 });
     }
@@ -570,6 +573,22 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings impleme
         final Bundle bundle = new Bundle();
         bundle.putInt(Settings.EXTRA_SUB_ID, getSubId());
         return bundle;
+    }
+
+    @VisibleForTesting
+    void notifyAirplaneModeForPreferences(boolean isAirplaneModeOn) {
+        // notify preferences' airplaneModeCallback
+        List<AbstractPreferenceController> allPreferencesList =
+                getPreferenceControllersAsList();
+        Log.d(LOG_TAG, "notifyAirplaneModeForPreferences");
+
+        for (AbstractPreferenceController subPreference : allPreferencesList) {
+            if (subPreference instanceof AirplaneModeChangedCallback) {
+                ((AirplaneModeChangedCallback) subPreference)
+                        .notifyAirplaneModeChanged(isAirplaneModeOn);
+            }
+        }
+        updatePreferenceStates();
     }
 
     private int getSubId() {
