@@ -24,6 +24,11 @@ fun getNotificationsIntents() =
         GET_NOTIFICATIONS,
         listOf(
             StaticIntent(
+                description = "Notifications: Settings to manage and customize notifications.",
+                intentUri =
+                    "intent:#Intent;action=android.settings.NOTIFICATION_SETTINGS;package=com.android.settings;end",
+            ),
+            StaticIntent(
                 description =
                     "Notification history: Settings to see the history of notifications received.",
                 intentUri =
