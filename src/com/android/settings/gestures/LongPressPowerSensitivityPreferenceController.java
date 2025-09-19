@@ -66,7 +66,7 @@ public class LongPressPowerSensitivityPreferenceController extends SliderPrefere
         super.displayPreference(screen);
         mPreference = screen.findPreference(getPreferenceKey());
         if (mPreference != null) {
-            mPreference.setUpdatesContinuously(false);
+            mPreference.setUpdatesContinuously(true);
             mPreference.setHapticFeedbackMode(
                     SliderPreference.HAPTIC_FEEDBACK_MODE_ON_TICKS);
             mPreference.setSliderIncrement(1);
