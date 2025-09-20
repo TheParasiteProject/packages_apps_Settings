@@ -181,9 +181,11 @@
             android:key="hdr_max_brightness_percent"
             android:title="@string/hdr_max_brightness_percent_title"
             android:max="100"
-            app:min="10"
+            android:min="10"
             android:defaultValue="100"
             android:dependency="hdr_display"
+            settings:units="%"
+            settings:continuousUpdates="true"
             settings:controller="com.android.settings.display.HdrDisplayBrightnessPreferenceController"
             settings:interval="1"/>
 
