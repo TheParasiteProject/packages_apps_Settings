@@ -16,9 +16,19 @@
 
 package com.android.settings.display;
 
+import static android.provider.Settings.System.MIN_REFRESH_RATE;
+import static android.provider.Settings.System.PEAK_REFRESH_RATE;
+
+import android.app.ActivityManager;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.database.ContentObserver;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
+import android.provider.Settings;
 
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreferenceCompat;
@@ -46,12 +56,36 @@ public class RefreshRateSettings extends RadioButtonPickerFragment {
     private Context mContext;
     private RefreshRateUtils mUtils;
     private SwitchPreferenceCompat mVrrSwitchPref;
+    private ContentObserver mContentObserver;
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         mContext = context;
         mUtils = new RefreshRateUtils(context);
+
+        final ContentResolver cr = mContext.getContentResolver();
+        mContentObserver = new ContentObserver(new Handler(Looper.getMainLooper())) {
+            @Override
+            public void onChange(boolean selfChange, Uri uri) {
+                super.onChange(selfChange, uri);
+                if (selfChange) return;
+                final String key = uri.getLastPathSegment();
+                if (key == null) return;
+                switch (key) {
+                    case MIN_REFRESH_RATE:
+                    case PEAK_REFRESH_RATE:
+                        updateCheckedState(String.valueOf(mUtils.getCurrentRefreshRate()));
+                        updateVrrPref();
+                        break;
+                };
+            }
+        };
+
+        cr.registerContentObserver(Settings.System.getUriFor(MIN_REFRESH_RATE),
+                false, mContentObserver, ActivityManager.getCurrentUser());
+        cr.registerContentObserver(Settings.System.getUriFor(PEAK_REFRESH_RATE),
+                false, mContentObserver, ActivityManager.getCurrentUser());
     }
 
     @Override
@@ -109,6 +143,15 @@ public class RefreshRateSettings extends RadioButtonPickerFragment {
     @Override
     public int getMetricsCategory() {
         return -1;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        if (mContentObserver != null) {
+            mContext.getContentResolver().unregisterContentObserver(mContentObserver);
+            mContentObserver = null;
+        }
     }
 
     private class RefreshRateCandidateInfo extends CandidateInfo {
