@@ -47,12 +47,12 @@ open class AboutBaseCard : MaterialCardView {
             (defaultPadding * 1.5).toInt(),
         )
         layout.setBackgroundColor(
-            resources.getColor(R.color.contextual_card_background, context.theme)
+            resources.getColor(R.color.contextual_card_background_color, context.theme)
         )
         addView(layout)
         radius = defaultRadius.toFloat()
         setCardBackgroundColor(
-            resources.getColor(R.color.contextual_card_background, context.theme)
+            resources.getColor(R.color.contextual_card_background_color, context.theme)
         )
         cardElevation = 0f
         strokeColor = resources.getColor(R.color.contextual_card_stroke_color, context.theme)

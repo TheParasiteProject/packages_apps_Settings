@@ -78,7 +78,7 @@ class DeviceCardView : AboutBaseCard {
         linearLayout.addView(card_title)
         linearLayout.addView(card_summary)
         linearLayout.setBackgroundColor(
-            resources.getColor(R.color.contextual_card_background, null)
+            resources.getColor(R.color.contextual_card_background_color, context.theme)
         )
         layout.addView(linearLayout)
         a.recycle()

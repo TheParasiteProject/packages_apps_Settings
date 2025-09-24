@@ -82,7 +82,7 @@ class RomCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(contex
         linearLayout.addView(rom_title)
         linearLayout.addView(rom_version)
         linearLayout.setBackgroundColor(
-            resources.getColor(R.color.contextual_card_background, null)
+            resources.getColor(R.color.contextual_card_background_color, context.theme)
         )
         layout.addView(rom_logo, rlparams)
         layout.addView(linearLayout, lparamas)
