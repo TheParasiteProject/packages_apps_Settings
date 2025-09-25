@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: The dotOS Project
+ * SPDX-FileCopyrightText: TheParasiteProject
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 package com.android.settings.deviceinfo.aboutphone
 
 import android.app.usage.StorageStatsManager
@@ -6,6 +12,7 @@ import android.content.Intent
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Path
+import android.os.Environment
 import android.os.Parcel
 import android.os.Parcelable
 import android.os.storage.StorageManager
@@ -79,11 +86,16 @@ class StorageCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(co
         layout.addView(storageTitle)
         setupStorageInfo(context)
         addView(layout)
-        setTouchListener(layout)
         radius = defaultRadius.toFloat()
         layout.setOnClickListener {
             context.startActivity(Intent(Settings.ACTION_INTERNAL_STORAGE_SETTINGS))
         }
+
+        layout.isClickable = true
+        layout.foreground =
+            context
+                .obtainStyledAttributes(intArrayOf(android.R.attr.selectableItemBackground))
+                .use { it.getDrawable(0) }
     }
 
     private fun setupStorageInfo(context: Context?) {
@@ -141,33 +153,55 @@ class StorageCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(co
     private fun manageStorageInfo(storageInfoUsed: TextView, storageInfoTotal: TextView) {
         val storageManager: StorageManager? = context.getSystemService(StorageManager::class.java)
         if (storageManager != null) {
-            val volumes = storageManager.volumes
-            for (vol in volumes) {
-                val path = vol.getPath()
-                if (vol.isMountedReadable) {
-                    if (vol.getType() == VolumeInfo.TYPE_PRIVATE) {
-                        val stats = context.getSystemService(StorageStatsManager::class.java)
-                        try {
-                            totalBytes = stats!!.getTotalBytes(vol.getFsUuid())
-                            freeBytes = stats!!.getFreeBytes(vol.getFsUuid())
-                            usedBytes = totalBytes - freeBytes
-                        } catch (e: IOException) {
-                            Log.w("StorageManager", e)
-                        }
+            totalBytes = 0
+            freeBytes = 0
+            usedBytes = 0
+
+            val stats = context.getSystemService(StorageStatsManager::class.java)
+
+            storageManager.volumes.forEach { vol ->
+                if (vol.isMountedReadable && vol.type == VolumeInfo.TYPE_PRIVATE) {
+                    try {
+                        val currentTotal = stats!!.getTotalBytes(vol.fsUuid)
+                        val currentFree = stats!!.getFreeBytes(vol.fsUuid)
+
+                        totalBytes += currentTotal
+                        freeBytes += currentFree
+                        usedBytes += (currentTotal - currentFree)
+                    } catch (e: IOException) {
+                        Log.w("StorageManager", e)
                     }
-                    val used = Formatter.formatFileSize(context, usedBytes, Formatter.FLAG_SHORTER)
-                    val total =
-                        Formatter.formatFileSize(context, totalBytes, Formatter.FLAG_SHORTER)
-                    storageInfoUsed.text = used
-                    storageInfoTotal.text = String.format("/%s", total)
-                    if (totalBytes > 0) {
-                        mUsedPercent = (usedBytes * 100 / totalBytes).toInt()
-                        waveView.progress = mUsedPercent
-                    }
-                    waveView.setLowStorage(freeBytes < storageManager.getStorageLowBytes(path))
                 }
             }
-            anim = ProgressBarAnimation(waveView, 100f, mUsedPercent.toFloat())
+
+            val used = Formatter.formatFileSize(context, usedBytes, Formatter.FLAG_SHORTER)
+            val total = Formatter.formatFileSize(context, totalBytes, Formatter.FLAG_SHORTER)
+
+            storageInfoUsed.text = used
+            storageInfoTotal.text = String.format("/%s", total)
+            if (totalBytes > 0) {
+                mUsedPercent = ((usedBytes.toFloat() * 100f) / totalBytes.toFloat()).toInt()
+                waveView.progress = mUsedPercent
+            } else {
+                mUsedPercent = 0
+                waveView.progress = 0
+            }
+
+            val primaryVolume = storageManager.primaryStorageVolume
+            val primaryVolumeDir = primaryVolume?.directory
+            if (
+                primaryVolume?.state == Environment.MEDIA_MOUNTED &&
+                    primaryVolumeDir != null &&
+                    primaryVolumeDir?.path?.isNullOrEmpty() == false
+            ) {
+                waveView.setLowStorage(
+                    freeBytes < storageManager.getStorageLowBytes(primaryVolumeDir)
+                )
+            } else {
+                waveView.setLowStorage(true)
+            }
+
+            anim = ProgressBarAnimation(waveView, 0f, mUsedPercent.toFloat())
             anim!!.duration = 1250
             waveView.startAnimation(anim!!)
         } else {

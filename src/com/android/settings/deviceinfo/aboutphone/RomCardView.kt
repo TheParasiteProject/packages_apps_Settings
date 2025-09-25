@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: The dotOS Project
+ * SPDX-FileCopyrightText: TheParasiteProject
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 package com.android.settings.deviceinfo.aboutphone
 
 import android.content.Context
@@ -22,14 +28,6 @@ class RomCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(contex
         val rom_logo = ImageView(context)
         rom_logo.setPadding(72, 72, 72, 72)
         rom_logo.adjustViewBounds = true
-        /*
-        rom_logo.imageTintList = ColorStateList.valueOf(
-            Utils.getColorAttrDefaultColor(
-                context,
-                android.R.attr.colorAccent
-            )
-        )
-        */
         linearLayout.id = R.id.rom_logo_id
         val ic_rom_logo = context.getPackageManager().getApplicationIcon("com.android.systemui")
         rom_logo.setImageDrawable(ic_rom_logo)

@@ -1,12 +1,14 @@
+/*
+ * SPDX-FileCopyrightText: The dotOS Project
+ * SPDX-FileCopyrightText: TheParasiteProject
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 package com.android.settings.deviceinfo.aboutphone
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
-import android.view.MotionEvent
-import android.view.View
 import android.widget.RelativeLayout
 import com.android.settings.R
 import com.google.android.material.card.MaterialCardView
@@ -57,5 +59,11 @@ open class AboutBaseCard : MaterialCardView {
         cardElevation = 0f
         strokeColor = resources.getColor(R.color.contextual_card_stroke_color, context.theme)
         strokeWidth = resources.getDimensionPixelSize(R.dimen.contextual_card_stroke_width)
+
+        isClickable = true
+        foreground =
+            context
+                .obtainStyledAttributes(intArrayOf(android.R.attr.selectableItemBackground))
+                .use { it.getDrawable(0) }
     }
 }
