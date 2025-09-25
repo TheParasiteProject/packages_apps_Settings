@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: The dotOS Project
+ * SPDX-FileCopyrightText: TheParasiteProject
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 package com.android.settings.deviceinfo.aboutphone
 
 import android.content.Context
@@ -103,6 +109,12 @@ class DeviceCardView : AboutBaseCard {
             mEditText!!.setText(mDeviceName)
             alert.show()
         }
+
+        layout.isClickable = true
+        layout.foreground =
+            context
+                .obtainStyledAttributes(intArrayOf(android.R.attr.selectableItemBackground))
+                .use { it.getDrawable(0) }
     }
 
     fun setListener(listener: onDeviceChanged) {
