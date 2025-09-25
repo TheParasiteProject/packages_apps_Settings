@@ -57,42 +57,5 @@ open class AboutBaseCard : MaterialCardView {
         cardElevation = 0f
         strokeColor = resources.getColor(R.color.contextual_card_stroke_color, context.theme)
         strokeWidth = resources.getDimensionPixelSize(R.dimen.contextual_card_stroke_width)
-        setTouchListener(layout)
-    }
-
-    fun setTouchListener(view: View) {
-        view.isClickable = true
-        view.setOnTouchListener { _, event ->
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    val scaleDownX = ObjectAnimator.ofFloat(this, "scaleX", 0.9f)
-                    val scaleDownY = ObjectAnimator.ofFloat(this, "scaleY", 0.9f)
-                    scaleDownX.duration = 200
-                    scaleDownY.duration = 200
-                    val scaleDown = AnimatorSet()
-                    scaleDown.play(scaleDownX).with(scaleDownY)
-                    scaleDown.start()
-                }
-                MotionEvent.ACTION_UP -> {
-                    val scaleDownX2 = ObjectAnimator.ofFloat(this, "scaleX", 1f)
-                    val scaleDownY2 = ObjectAnimator.ofFloat(this, "scaleY", 1f)
-                    scaleDownX2.duration = 200
-                    scaleDownY2.duration = 200
-                    val scaleDown2 = AnimatorSet()
-                    scaleDown2.play(scaleDownX2).with(scaleDownY2)
-                    scaleDown2.start()
-                }
-                MotionEvent.ACTION_CANCEL -> {
-                    val scaleDownX2 = ObjectAnimator.ofFloat(this, "scaleX", 1f)
-                    val scaleDownY2 = ObjectAnimator.ofFloat(this, "scaleY", 1f)
-                    scaleDownX2.duration = 200
-                    scaleDownY2.duration = 200
-                    val scaleDown2 = AnimatorSet()
-                    scaleDown2.play(scaleDownX2).with(scaleDownY2)
-                    scaleDown2.start()
-                }
-            }
-            false
-        }
     }
 }
