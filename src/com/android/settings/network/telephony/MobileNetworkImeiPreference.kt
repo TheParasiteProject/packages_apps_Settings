@@ -34,6 +34,7 @@ import com.android.settingslib.metadata.PreferenceLifecycleContext
 import com.android.settingslib.metadata.PreferenceLifecycleProvider
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.PreferenceSummaryProvider
+import com.android.settingslib.metadata.PreferenceTitleProvider
 import com.android.settingslib.preference.PreferenceBinding
 
 // LINT.IfChange
@@ -43,6 +44,7 @@ class MobileNetworkImeiPreference(private val context: Context, private val subI
     PreferenceBinding,
     PreferenceLifecycleProvider,
     PreferenceSummaryProvider,
+    PreferenceTitleProvider,
     PreferenceAvailabilityProvider {
 
     private val isAvailable =
@@ -50,12 +52,12 @@ class MobileNetworkImeiPreference(private val context: Context, private val subI
             (Utils.isMobileDataCapable(context) || Utils.isVoiceCapable(context)) &&
             (Flags.isDualSimOnboardingEnabled() && SubscriptionManager.isValidSubscriptionId(subId))
     private var imei: String? = if (isAvailable) context.telephonyManager(subId)?.imei else ""
+    private val formattedTitle: String = context.getFormattedTitle()
 
     override val key: String
         get() = KEY
 
-    override val title: Int
-        get() = R.string.status_imei
+    override fun getTitle(context: Context): CharSequence? = formattedTitle
 
     override fun getSummary(context: Context): CharSequence? = imei
 
@@ -75,7 +77,7 @@ class MobileNetworkImeiPreference(private val context: Context, private val subI
                         ImeiInfoDialogFragment.show(
                             context.childFragmentManager,
                             this,
-                            context.getString(R.string.status_imei),
+                            formattedTitle,
                         )
                     }
                 return@OnPreferenceClickListener true
@@ -95,6 +97,17 @@ class MobileNetworkImeiPreference(private val context: Context, private val subI
             INVALID_SIM_SLOT_INDEX
         }
     }
+
+    private fun Context.getFormattedTitle(): String =
+        try {
+            val titleId =
+                if (imei == telephonyManager?.primaryImei) R.string.imei_primary
+                else R.string.status_imei
+            getString(titleId)
+        } catch (exception: Exception) {
+            Log.e(TAG, "PrimaryImei not available.", exception)
+            getString(R.string.status_imei)
+        }
 
     companion object {
         private const val TAG = "MobileNetworkImeiPreference"
