@@ -21,7 +21,6 @@ import android.util.Log
 import androidx.preference.Preference
 import com.android.settings.R
 import com.android.settings.Utils
-import com.android.settings.wifi.utils.activeModemCount
 import com.android.settings.wifi.utils.isAdminUser
 import com.android.settings.wifi.utils.telephonyManager
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
@@ -36,9 +35,8 @@ import com.android.settingslib.preference.PreferenceBindingPlaceholder
 /** Preference to show IMEI information for single and multi modem devices. */
 class ImeiPreference(
     context: Context,
-    private val index: Int,
+    private val slotIndex: Int,
     private val activeModemCount: Int,
-    private val imeiList: List<String> = listOf<String>(),
 ) :
     PreferenceMetadata,
     PreferenceBinding,
@@ -49,9 +47,10 @@ class ImeiPreference(
     PreferenceAvailabilityProvider {
 
     private val formattedTitle: String = context.getFormattedTitle()
+    private val formattedSummary: String = context.getFormattedSummary()
 
     override val key: String
-        get() = KEY_PREFIX + "${index + 1}"
+        get() = KEY_PREFIX + "${slotIndex + 1}"
 
     override fun isAvailable(context: Context): Boolean =
         context.isAdminUser == true &&
@@ -59,7 +58,7 @@ class ImeiPreference(
 
     override fun getTitle(context: Context): CharSequence? = formattedTitle
 
-    override fun getSummary(context: Context): CharSequence? = getFormattedSummary()
+    override fun getSummary(context: Context): CharSequence? = formattedSummary
 
     override fun bind(preference: Preference, metadata: PreferenceMetadata) {
         super.bind(preference, metadata)
@@ -69,7 +68,7 @@ class ImeiPreference(
     override fun onCreate(context: PreferenceLifecycleContext) {
         context.requirePreference<Preference>(key).onPreferenceClickListener =
             Preference.OnPreferenceClickListener {
-                ImeiInfoDialogFragment.show(context.childFragmentManager, index, formattedTitle)
+                ImeiInfoDialogFragment.show(context.childFragmentManager, slotIndex, formattedTitle)
                 return@OnPreferenceClickListener true
             }
     }
@@ -78,60 +77,51 @@ class ImeiPreference(
         if (activeModemCount <= 1) {
             getString(R.string.status_imei)
         } else {
-            getString(R.string.imei_multi_sim, index + 1)
+            getString(R.string.imei_multi_sim, slotIndex + 1)
         }
 
-    private fun getFormattedSummary(): String {
+    private fun Context.getFormattedSummary(): String {
+        val imeiList = getImeiList()
         return when {
-            imeiList.isEmpty() || index >= imeiList.size -> String()
-            else -> {
-                imeiList[index]
-            }
+            imeiList.isEmpty() -> String()
+            slotIndex >= imeiList.size -> imeiList[0]
+            else -> imeiList[slotIndex]
         }
     }
 
-    companion object {
-        const val TAG = "ImeiPreference"
-        const val KEY_PREFIX = "imei_info"
-    }
-}
-
-/**
- * As per GSMA specification TS37, below Primary IMEI requirements are mandatory to support
- * TS37_2.2_REQ_5 TS37_2.2_REQ_8 (Attached the document has description about this test cases)
- *
- * b/434700998, using the lower IMEI as the primary IMEI. IMEI 1 = primary IMEI i.e. lower IMEI IMEI
- * 2 = non-primary IMEI
- */
-val Context.getImeiList: List<String>
-    get() = buildList {
+    /**
+     * As per GSMA specification TS37, below Primary IMEI requirements are mandatory to support
+     * TS37_2.2_REQ_5 TS37_2.2_REQ_8 (Attached the document has description about this test cases)
+     *
+     * b/434700998, using the lower IMEI as the primary IMEI. IMEI 1 = primary IMEI i.e. lower IMEI
+     * IMEI 2 = non-primary IMEI
+     */
+    private fun Context.getImeiList(): List<String> = buildList {
         telephonyManager?.let {
             var primaryImei = String()
             try {
                 primaryImei = it.primaryImei
             } catch (exception: Exception) {
-                Log.e(ImeiPreference.TAG, "PrimaryImei not available.", exception)
+                Log.e(TAG, "PrimaryImei not available.", exception)
             }
-            var imeiListFromSlot: List<String> = buildList {
+            val imeiListFromSlot: List<String> = buildList {
                 for (slotIndex in 0..activeModemCount - 1) {
-                    try {
-                        val slotImei = it.getImei(slotIndex)
-                        add(slotImei ?: String())
-                    } catch (exception: Exception) {
-                        Log.e(ImeiPreference.TAG, "Slot[$slotIndex] imei not available.", exception)
+                    val slotImei = it.getImei(slotIndex)
+                    if (slotImei != null && primaryImei != slotImei) {
+                        add(slotImei)
                     }
                 }
             }
-            Log.d(ImeiPreference.TAG, "each slot's IMEI:$imeiListFromSlot")
-
             imeiListFromSlot.sorted()
-            if (primaryImei.isNotEmpty() && imeiListFromSlot.size >= 2) {
-                // imeiListFromSlot remove primaryImei
-                imeiListFromSlot =
-                    imeiListFromSlot.toMutableList().apply { remove(primaryImei) }.toList()
-                // imeiList add primaryImei
+            if (!primaryImei.isEmpty()) {
                 add(primaryImei)
             }
             addAll(imeiListFromSlot)
         }
     }
+
+    companion object {
+        private const val TAG = "ImeiPreference"
+        const val KEY_PREFIX = "imei_info"
+    }
+}
