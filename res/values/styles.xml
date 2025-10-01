@@ -69,7 +69,7 @@
         <item name="android:scrollbarStyle">outsideOverlay</item>
     </style>
 
-    <style name="Theme.Network" parent="@style/Theme.Material3.DynamicColors.DayNight">
+    <style name="Theme.Network" parent="@style/Theme.SettingsCompat.DayNight">
         <item name="textInputStyle">@style/Widget.Network.TextInputLayout</item>
     </style>
 
@@ -476,13 +476,13 @@
     </style>
 
     <style name="SearchBarStyle">
-        <item name="android:theme">@style/Theme.MaterialComponents.DayNight</item>
+        <item name="android:theme">@style/Theme.SettingsCompat.DayNight</item>
         <item name="cardCornerRadius">@dimen/search_bar_corner_radius</item>
         <item name="cardElevation">0dp</item>
     </style>
 
     <style name="SearchBarStyle_v2">
-        <item name="android:theme">@style/Theme.MaterialComponents.DayNight</item>
+        <item name="android:theme">@style/Theme.SettingsCompat.DayNight</item>
         <item name="cardCornerRadius">40dp</item>
         <item name="cardElevation">0dp</item>
         <item name="strokeWidth">1dp</item>

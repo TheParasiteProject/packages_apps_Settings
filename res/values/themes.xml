@@ -117,6 +117,8 @@
         <item name="android:windowSoftInputMode">adjustResize</item>
     </style>
 
+    <style name="Theme.SettingsCompat.DayNight" parent="@style/Theme.Material3.DynamicColors.DayNight" />
+
     <style name="Theme.AlertDialog" parent="@style/Theme.AlertDialog.SettingsLib">
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="android:clipToPadding">true</item>
@@ -234,11 +236,11 @@
     </style>
 
     <!-- Material theme for the pages containing TabLayout and ViewPager -->
-    <style name="Theme.TabTheme" parent="@style/Theme.MaterialComponents.DayNight">
+    <style name="Theme.TabTheme" parent="@style/Theme.SettingsCompat.DayNight">
         <item name="colorPrimary">@*android:color/edge_effect_device_default_light</item>
     </style>
 
-    <style name="Theme.CollapsingToolbar.Settings" parent="@style/Theme.MaterialComponents.DayNight">
+    <style name="Theme.CollapsingToolbar.Settings" parent="@style/Theme.SettingsCompat.DayNight">
         <item name="elevationOverlayEnabled">true</item>
         <item name="elevationOverlayColor">?attr/colorPrimary</item>
         <item name="colorPrimary">@*android:color/primary_device_default_settings_light</item>
