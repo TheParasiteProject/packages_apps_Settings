@@ -321,8 +321,8 @@
     <string name="sim_lock_off" product="desktop" msgid="903164661366964150">"Kërko kodin PIN për të përdorur pajisjen"</string>
     <string name="status_number" product="tablet" msgid="6746773328312218158">"MDN"</string>
     <string name="status_number" product="default" msgid="2333455505912871374">"Numri i telefonit"</string>
-    <string name="status_number_sim_slot" product="tablet" msgid="201933499714762935">"MDN %1$d"</string>
-    <string name="status_number_sim_slot" product="default" msgid="8033783200178721660">"Numri i telefonit %1$d"</string>
+    <string name="status_number_sim_slot" product="tablet" msgid="2595836594107617972">"MDN (foleja %1$d e kartës SIM)"</string>
+    <string name="status_number_sim_slot" product="default" msgid="7154930998382872847">"Numri i telefonit (foleja %1$d e SIM)"</string>
     <string name="status_number_sim_status" product="tablet" msgid="9003886361856568694">"MDN në kartën SIM"</string>
     <string name="status_number_sim_status" product="default" msgid="7536755538266735352">"Numri i telefonit në kartën SIM"</string>
     <string name="storage_wizard_init_v2_internal_title" product="tablet" msgid="2049551739429034707">"Formato kartën SD si hapësirë ruajtëse të brendshme"</string>

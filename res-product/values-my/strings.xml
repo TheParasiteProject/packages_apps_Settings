@@ -321,8 +321,8 @@
     <string name="sim_lock_off" product="desktop" msgid="903164661366964150">"စက်ပစ္စည်းသုံးရန် ပင်နံပါတ်လိုသည်"</string>
     <string name="status_number" product="tablet" msgid="6746773328312218158">"MDNနံပါတ်"</string>
     <string name="status_number" product="default" msgid="2333455505912871374">"ဖုန်းနံပါတ်"</string>
-    <string name="status_number_sim_slot" product="tablet" msgid="201933499714762935">"MDN %1$d"</string>
-    <string name="status_number_sim_slot" product="default" msgid="8033783200178721660">"ဖုန်းနံပါတ် %1$d"</string>
+    <string name="status_number_sim_slot" product="tablet" msgid="2595836594107617972">"MDN (ဆင်းမ်ကတ်အထိုင် %1$d)"</string>
+    <string name="status_number_sim_slot" product="default" msgid="7154930998382872847">"ဖုန်းနံပါတ် (ဆင်းမ်ကတ်အထိုင် %1$d)"</string>
     <string name="status_number_sim_status" product="tablet" msgid="9003886361856568694">"ဆင်းမ်ထဲက MDN"</string>
     <string name="status_number_sim_status" product="default" msgid="7536755538266735352">"ဆင်းမ်ထဲက ဖုန်းနံပါတ်"</string>
     <string name="storage_wizard_init_v2_internal_title" product="tablet" msgid="2049551739429034707">"စက်တွင်းသိုလှောင်ခန်းအတွက် SD ကတ် ဖော်မက်လုပ်ရန်"</string>
