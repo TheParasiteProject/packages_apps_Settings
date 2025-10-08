@@ -1187,7 +1187,7 @@
     <string name="wifi_dpp_add_device" msgid="8695656122114721335">"డివైజ్‌ను జోడించండి"</string>
     <string name="wifi_dpp_connect_network_using_qr_code" msgid="6975258007798254937">"ఈ నెట్‌వర్క్‌కు డివైజ్‌‌ను జోడించడానికి QR కోడ్‌ను ఉపయోగించండి"</string>
     <string name="wifi_dpp_qr_code_is_not_valid_format" msgid="5190689503019328279">"QR కోడ్ చెల్లుబాటు అయ్యే ఫార్మాట్‌లో లేదు"</string>
-    <string name="retry" msgid="7542103800274026915">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="retry" msgid="7542103800274026915">"మళ్లీ ట్రై చేయండి"</string>
     <string name="wifi_shared" msgid="8850748923537589782">"ఇతర పరికర యూజర్‌లతో షేర్ చేయండి"</string>
     <string name="shared_message" msgid="2104244057926025072">"షేర్ చేయబడింది"</string>
     <string name="private_message" msgid="5897966950396765392">"ప్రైవేట్"</string>
@@ -1585,15 +1585,17 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"స్టోరేజ్ &amp; కాష్"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"స్టోరేజ్‌ సెట్టింగ్‌లు"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
-    <string name="eid_multi_sim" msgid="3054468215477777096">"E​ID <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>"</string>
-    <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
+    <string name="eid_multi_sim" msgid="6659492335576379274">"E​ID (SIM స్లాట్ <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <string name="imei_multi_sim" msgid="27798473711249145">"IMEI (SIM స్లాట్ <xliff:g id="IMEI_SLOT_ID">%1$d</xliff:g>)"</string>
+    <string name="imei_multi_sim_primary" msgid="4320457587114117400">"IMEI (SIM స్లాట్ <xliff:g id="IMEI_SLOT_ID_PRIMARY">%1$d</xliff:g>) (ప్రధాన)"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"చూడటానికి, సేవ్ చేసిన నెట్‌వర్క్‌ను ఎంచుకోండి"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"IMEI SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"MIN"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"PRL వెర్షన్"</string>
-    <string name="meid_multi_sim" msgid="3124054561186721453">"MEID <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
+    <string name="meid_multi_sim" msgid="5076814185188481456">"MEID (SIM స్లాట్ <xliff:g id="MEID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <string name="meid_multi_sim_primary" msgid="6269908735700854437">"MEID (SIM స్లాట్ <xliff:g id="MEID_SLOT_ID_PRIMARY">%1$d</xliff:g>) (ప్రధాన)"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"ఆన్"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"ఆఫ్"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -3578,7 +3580,7 @@
     <string name="color_orange" msgid="216547825489739010">"నారింజ రంగు"</string>
     <string name="color_purple" msgid="6603701972079904843">"ఊదా రంగు"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"SIM స్టేటస్"</string>
-    <string name="sim_status_title_sim_slot" msgid="8727408941064901486">"SIM %1$d స్టేటస్"</string>
+    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"SIM స్టేటస్‌ (SIM స్లాట్ %1$d)"</string>
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"మీ SIMలు మార్చబడ్డాయి"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"సెటప్ చేయడానికి నొక్కండి"</string>
@@ -5324,6 +5326,8 @@
     <string name="sim_onboarding_next" msgid="6415025179929475355">"తర్వాత"</string>
     <string name="sim_onboarding_progressbar_turning_sim_on" msgid="1163318788393361574">"<xliff:g id="CARRIER_NAME">%1$s</xliff:g>ను ఆన్ చేస్తోంది…"</string>
     <string name="mobile_network_spn_title" msgid="3053793174495329077">"మొబైల్ నెట్‌వర్క్"</string>
+    <string name="imei_primary" msgid="5312232202518974440">"IMEI (ప్రైమరీ)"</string>
+    <string name="meid_primary" msgid="3256732684155678106">"MEID (ప్రైమరీ)"</string>
     <string name="mobile_network_phone_number_title" msgid="2090794402855021784">"ఫోన్ నంబర్"</string>
     <string name="mobile_network_sim_label_color_title" msgid="2401352348041132876">"SIM లేబుల్, రంగు"</string>
     <string name="sim_setup_channel_id" msgid="8797972565087458515">"నెట్‌వర్క్ యాక్టివేషన్"</string>
@@ -5357,7 +5361,7 @@
     <string name="network_connection_request_dialog_title" msgid="1896186380874289434">"పరికరానికి కనెక్ట్ చేయండి"</string>
     <string name="network_connection_request_dialog_summary" msgid="7693038309792726170">"మీ పరికరానికి కనెక్ట్ కావడానికి <xliff:g id="APPNAME">%1$s</xliff:g> యాప్ తాత్కాలిక Wi‑Fi నెట్‌వర్క్‌ను ఉపయోగించాలనుకుంటుంది"</string>
     <string name="network_connection_timeout_dialog_message" msgid="598509083077743772">"పరికరాలు ఏవీ కనుగొనబడలేదు. పరికరాలు ఆన్‌లో ఉన్నాయని మరియు కనెక్ట్ చేయడానికి అందుబాటులో ఉన్నాయని నిర్ధారించుకోండి."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="6022675321823723755">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="6022675321823723755">"మళ్లీ ట్రై చేయండి"</string>
     <string name="network_connection_errorstate_dialog_message" msgid="3360714322047603239">"ఏదో తప్పు జరిగింది. ఈ అప్లికేషన్ పరికరాన్ని ఎంచుకునే రిక్వెస్ట్‌ను రద్దు చేసింది."</string>
     <string name="network_connection_connect_successful" msgid="2587314077675642476">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
     <string name="network_connection_connect_failure" msgid="6803313816657494319">"కనెక్షన్ విఫలమైంది"</string>
@@ -5964,7 +5968,7 @@
     <string name="supervision_generic_error_page_message" msgid="1532001782155323205">"తర్వాత మళ్లీ ట్రై చేయండి"</string>
     <string name="supervision_generic_error_page_button_label" msgid="8972577027819946993">"వెనుకకు వెళ్లండి"</string>
     <string name="identity_check_issue_card_title" msgid="1409291461773228899">"ఐడెంటిటీ చెక్ మరిన్ని యాప్‌లలో పని చేస్తుంది"</string>
-    <string name="identity_check_issue_card_summary" msgid="2563597018905365665">"ఐడెంటిటీ చెక్, మీ యాప్‌లకు అవాంఛిత యాక్సెస్‌ను నిరోధిస్తుంది. ఇప్పుడు వేలిముద్ర లేదా ఫేస్ అన్‌లాక్‌ను ఉపయోగించే అన్ని యాప్‌లలో అందుబాటులో ఉంది."</string>
+    <string name="identity_check_issue_card_summary" msgid="2563597018905365665">"ఐడెంటిటీ చెక్, మీ యాప్‌ల్లోకి ఇతరులెవరూ రాకుండా అడ్డుకుంటుంది. ఈ ఫీచర్ ప్రస్తుతం, వేలిముద్రను లేదా ఫేస్ అన్‌లాక్‌ను ఉపయోగించే అన్ని యాప్‌ల్లో అందుబాటులో ఉంది."</string>
     <string name="identity_check_issue_card_button_text" msgid="9194407367671256494">"వివరాలను చూడండి"</string>
     <string name="identity_check_promo_card_title" msgid="4467736415491327717">"ఐడెంటిటీ చెక్ మరిన్ని యాప్‌లలో పని చేస్తుంది"</string>
     <string name="identity_check_promo_card_summary" msgid="3363308846024080168">"అప్‌డేట్‌లు:\n"<ul><li>"వేలిముద్ర లేదా ఫేస్ అన్‌లాక్‌ను ఉపయోగించే ఏదైనా యాప్‌నకు ఐడెంటిటీ చెక్ అనేది రక్షణను యాడ్ చేస్తుంది."</li>\n<li>"కాలక్రమేణా, ఐడెంటిటీ చెక్ ఇది మీరేనని వెరిఫై చేయడానికి, అలాగే మీ డివైజ్‌‌లోని యాప్‌లను సురక్షితం చేయడానికి మరిన్ని మార్గాలను యాడ్ చేయవచ్చు. "<a href="https://support.google.com/android?p=identity_check">"మీరు ఎక్కడ, ఎప్పుడు రక్షణ పొందుతారు అనే దాని గురించి మరింత తెలుసుకోండి"</a></li></ul></string>
@@ -5981,7 +5985,7 @@
     <string name="location_settings" msgid="6833222354060094170">"లొకేషన్ యాక్సెస్"</string>
     <string name="location_settings_subtitle" msgid="8471780117911010030">"లొకేషన్‌కు యాక్సెస్ ఉన్న యాప్‌లను, సర్వీస్‌లను చూడండి"</string>
     <string name="identity_check_notification_title" msgid="8004343932775654492">"ఐడెంటిటీ చెక్ మరిన్ని యాప్‌లలో పని చేస్తుంది"</string>
-    <string name="identity_check_notification_summary" msgid="3762060079941053730">"ఐడెంటిటీ చెక్, మీ యాప్‌లకు అవాంఛిత యాక్సెస్‌ను నిరోధిస్తుంది. ఇప్పుడు వేలిముద్ర లేదా ఫేస్ అన్‌లాక్‌ను ఉపయోగించే యాప్‌లలో అందుబాటులో ఉంటుంది."</string>
+    <string name="identity_check_notification_summary" msgid="3762060079941053730">"ఐడెంటిటీ చెక్, మీ యాప్‌ల్లోకి ఇతరులెవరూ రాకుండా అడ్డుకుంటుంది. ఈ ఫీచర్ ప్రస్తుతం, వేలిముద్రను లేదా ఫేస్ అన్‌లాక్‌ను ఉపయోగించే అన్ని యాప్‌ల్లో అందుబాటులో ఉంది."</string>
     <string name="identity_check_view_details" msgid="8752343542345818128">"వివరాలను చూడండి"</string>
     <string name="safety_center_refresh_error" msgid="1735955120364376704">"సెట్టింగ్‌లను చెక్ చేయడం సాధ్యపడలేదు"</string>
     <string name="safety_center_subpage_unknown_summary" msgid="874864620851714312">"ఇంకా ఏ సమాచారం లేదు"</string>

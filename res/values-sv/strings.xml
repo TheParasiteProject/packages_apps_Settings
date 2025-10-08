@@ -1585,15 +1585,17 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"Lagringsutrymme och cacheminne"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"Lagringsinställningar"</string>
     <string name="status_eid" msgid="3588471107671992684">"EID"</string>
-    <string name="eid_multi_sim" msgid="3054468215477777096">"EID <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>"</string>
-    <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
+    <string name="eid_multi_sim" msgid="6659492335576379274">"EID (SIM-kortsplats <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <string name="imei_multi_sim" msgid="27798473711249145">"IMEI (SIM-kortplats <xliff:g id="IMEI_SLOT_ID">%1$d</xliff:g>)"</string>
+    <string name="imei_multi_sim_primary" msgid="4320457587114117400">"IMEI (SIM-kortplats <xliff:g id="IMEI_SLOT_ID_PRIMARY">%1$d</xliff:g>) (primär)"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"Välj ett sparat nätverk att visa"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI-nummer"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"IMEI-nummer SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"MIN"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"PRL-version"</string>
-    <string name="meid_multi_sim" msgid="3124054561186721453">"MEID <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
+    <string name="meid_multi_sim" msgid="5076814185188481456">"MEID (SIM-kortplats <xliff:g id="MEID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <string name="meid_multi_sim_primary" msgid="6269908735700854437">"MEID (SIM-kortplats <xliff:g id="MEID_SLOT_ID_PRIMARY">%1$d</xliff:g>) (primär)"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"På"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"Av"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -3578,7 +3580,7 @@
     <string name="color_orange" msgid="216547825489739010">"Orange"</string>
     <string name="color_purple" msgid="6603701972079904843">"Lila"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"Status för SIM-kort"</string>
-    <string name="sim_status_title_sim_slot" msgid="8727408941064901486">"Status för SIM-kort %1$d"</string>
+    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"SIM-status (SIM-kortsplats %1$d)"</string>
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"SIM-kortet ändrades"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"Tryck för att konfigurera"</string>
@@ -4824,7 +4826,7 @@
     <string name="keywords_shade_panels" msgid="6181844937287087945">"skugga, paneler, aviseringar, snabbinställningar, separat, kombinerad, dubbel, enkel"</string>
     <string name="shade_panels_category" msgid="3262351355390846546">"Paneler"</string>
     <string name="shade_panels_separate_title" msgid="7839124123668116363">"Separat"</string>
-    <string name="shade_panels_separate_summary" msgid="4879360492042964895">"Svep från det övre högra hörnet för att öppna snabbinställningar. Svep från övre vänstra hörnet för att öppna aviseringar."</string>
+    <string name="shade_panels_separate_summary" msgid="4879360492042964895">"Svep nedåt från det övre högra hörnet för att öppna snabbinställningar. Svep nedåt från övre vänstra hörnet för att öppna aviseringar."</string>
     <string name="shade_panels_combined_title" msgid="2812149031368941984">"Kombinerad (klassisk)"</string>
     <string name="shade_panels_combined_summary" msgid="5884627562590432068">"Svep nedåt från skärmens överkant för att öppna den klassiska panelen som kombinerar aviseringar och snabbinställningar."</string>
     <string name="shade_panels_foldables_footer_message" msgid="3974376428811063936">"Kombinerad (klassisk) vy är begränsad till den yttre skärmen på den vikbara enheten"</string>
@@ -5324,6 +5326,8 @@
     <string name="sim_onboarding_next" msgid="6415025179929475355">"Nästa"</string>
     <string name="sim_onboarding_progressbar_turning_sim_on" msgid="1163318788393361574">"Aktiverar <xliff:g id="CARRIER_NAME">%1$s</xliff:g> …"</string>
     <string name="mobile_network_spn_title" msgid="3053793174495329077">"Mobilnätverk"</string>
+    <string name="imei_primary" msgid="5312232202518974440">"IMEI-nummer (primärt)"</string>
+    <string name="meid_primary" msgid="3256732684155678106">"MEID (primärt)"</string>
     <string name="mobile_network_phone_number_title" msgid="2090794402855021784">"Telefonnummer"</string>
     <string name="mobile_network_sim_label_color_title" msgid="2401352348041132876">"SIM-kortsetikett och -färg"</string>
     <string name="sim_setup_channel_id" msgid="8797972565087458515">"Nätverksaktivering"</string>
