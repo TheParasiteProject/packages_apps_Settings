@@ -1585,15 +1585,17 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"فضای ذخیره‌سازی و حافظه نهان"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"تنظیمات ذخیره‌سازی"</string>
     <string name="status_eid" msgid="3588471107671992684">"‏سند شناسایی جاسازی‌شده (EID)"</string>
-    <string name="eid_multi_sim" msgid="3054468215477777096">"‏سند شناسایی جاسازی‌شده (EID): <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>"</string>
-    <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
+    <string name="eid_multi_sim" msgid="6659492335576379274">"‏‫EID (شیار سیم‌کارت <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <string name="imei_multi_sim" msgid="27798473711249145">"‏‫IMEI (شیار سیم‌کارت <xliff:g id="IMEI_SLOT_ID">%1$d</xliff:g>)"</string>
+    <string name="imei_multi_sim_primary" msgid="4320457587114117400">"‏‫IMEI (شیار سیم‌کارت <xliff:g id="IMEI_SLOT_ID_PRIMARY">%1$d</xliff:g>) (اصلی)"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"برای مشاهده، شبکه ذخیره‌شده را انتخاب کنید"</string>
     <string name="status_imei" msgid="5719752369250485007">"IMEI"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"IMEI SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"MIN"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"‏نسخه PRL"</string>
-    <string name="meid_multi_sim" msgid="3124054561186721453">"MEID: <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
+    <string name="meid_multi_sim" msgid="5076814185188481456">"‏‫MEID (شیار سیم‌کارت <xliff:g id="MEID_SLOT_ID">%1$d</xliff:g>)"</string>
+    <string name="meid_multi_sim_primary" msgid="6269908735700854437">"‏‫MEID (شیار سیم‌کارت <xliff:g id="MEID_SLOT_ID_PRIMARY">%1$d</xliff:g>) (اصلی)"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"روشن"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"خاموش"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -2695,7 +2697,7 @@
     <string name="accessibility_one_handed_mode_auto_added_qs_tooltip_content" msgid="7914554254280416532">"حالت تک‌حرکت به «تنظیمات فوری» اضافه شد. هروقت خواستید برای روشن یا خاموش کردن آن تند به‌سمت پایین بکشید."</string>
     <string name="accessibility_one_handed_mode_qs_tooltip_content" msgid="2754332083184384603">"همچنین می‌توانید حالت تک‌حرکت را از بالای صفحه به «تنظیمات فوری» اضافه کنید"</string>
     <string name="accessibility_font_scaling_auto_added_qs_tooltip_content" msgid="7229921960884718332">"اندازه قلم به «تنظیمات فوری» اضافه شد. برای تغییر اندازه قلم، هرزمان خواستید تند به‌پایین بکشید."</string>
-    <string name="accessibility_quick_settings_tooltip_dismiss" msgid="3269120277643884190">"رد شدن"</string>
+    <string name="accessibility_quick_settings_tooltip_dismiss" msgid="3269120277643884190">"بستن"</string>
     <string name="accessibility_daltonizer_primary_switch_title" msgid="32064721588910540">"استفاده از تصحیح رنگ"</string>
     <string name="accessibility_daltonizer_shortcut_title" msgid="7480360363995502369">"میان‌بر «تصحیح رنگ»"</string>
     <string name="accessibility_daltonizer_about_title" msgid="6063650804116981287">"درباره تصحیح رنگ"</string>
@@ -3346,7 +3348,7 @@
     <string name="vpn_always_on_invalid_reason_other" msgid="4571905303713233321">"‏اطلاعات وارد‌شده از VPN همیشه‌روشن پشتیبانی نمی‌کند"</string>
     <string name="vpn_field_required" msgid="582849543970781302">"*ضروری"</string>
     <string name="vpn_cancel" msgid="5929410618112404383">"لغو"</string>
-    <string name="vpn_done" msgid="5137858784289564985">"رد کردن"</string>
+    <string name="vpn_done" msgid="5137858784289564985">"بستن"</string>
     <string name="vpn_save" msgid="683868204634860888">"ذخیره"</string>
     <string name="vpn_connect" msgid="7102335248484045354">"اتصال"</string>
     <string name="vpn_replace" msgid="1533147558671640341">"جایگزینی"</string>
@@ -3581,7 +3583,7 @@
     <string name="color_orange" msgid="216547825489739010">"نارنجی"</string>
     <string name="color_purple" msgid="6603701972079904843">"بنفش"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"وضعیت سیم‌کارت"</string>
-    <string name="sim_status_title_sim_slot" msgid="8727408941064901486">"‏وضعیت سیم‌کارت %1$d"</string>
+    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"‏وضعیت سیم‌کارت (شیار سیم‌کارت %1$d)"</string>
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"سیم‌کارت‌ها تغییر کرد"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"برای راه‌اندازی، تک‌ضرب بزنید"</string>
@@ -4827,7 +4829,7 @@
     <string name="keywords_shade_panels" msgid="6181844937287087945">"تیرگی، پانل‌ها، اعلان‌ها، تنظیمات فوری، تنظیمات فوری، جداگانه، ترکیبی، دوتایی، تکی"</string>
     <string name="shade_panels_category" msgid="3262351355390846546">"پانل‌ها"</string>
     <string name="shade_panels_separate_title" msgid="7839124123668116363">"جداسازی"</string>
-    <string name="shade_panels_separate_summary" msgid="4879360492042964895">"برای باز کردن «تنظیمات فوری»، از بالا سمت چپ تند به پایین بکشید برای باز کردن «اعلان‌ها»، از بالا سمت راست تند به پایین بکشید"</string>
+    <string name="shade_panels_separate_summary" msgid="4879360492042964895">"برای باز کردن «تنظیمات فوری»، از بالا سمت چپ تند به پایین بکشید برای باز کردن «اعلان‌ها»، از بالا سمت راست تند به پایین بکشید."</string>
     <string name="shade_panels_combined_title" msgid="2812149031368941984">"ترکیبی (کلاسیک)"</string>
     <string name="shade_panels_combined_summary" msgid="5884627562590432068">"برای دسترسی به پانل کلاسیک که اعلان‌ها و «تنظیمات فوری» را با هم ترکیب می‌کند، از بالای صفحه‌نمایش تند به پایین بکشید."</string>
     <string name="shade_panels_foldables_footer_message" msgid="3974376428811063936">"نمای ترکیبی (کلاسیک) محدود به صفحه‌نمایش بیرونی دستگاه تاشوی شما است"</string>
@@ -5119,7 +5121,7 @@
     <string name="prevent_ringing_option_mute" msgid="7446121133560945051">"بی‌صدا"</string>
     <string name="prevent_ringing_option_vibrate_summary" msgid="3435299885425754304">"لرزش"</string>
     <string name="prevent_ringing_option_mute_summary" msgid="3939350522269337013">"بی‌صدا کردن"</string>
-    <string name="prevent_ringing_option_unavailable_lpp_summary" msgid="8070356204398144241">"برای فعال کردن، ابتدا «فشار دادن و نگه داشتن دکمه روشن / خاموش» را به «منوی روشن/ خاموش» تغییر دهید."</string>
+    <string name="prevent_ringing_option_unavailable_lpp_summary" msgid="8070356204398144241">"برای فعال کردن، ابتدا «فشار دادن و نگه داشتن دکمه روشن / خاموش» را به «منو روشن/ خاموش» تغییر دهید."</string>
     <string name="pref_title_network_details" msgid="7329759534269363308">"جزئیات شبکه"</string>
     <string name="devices_title" msgid="649715719278562515">"دستگاه‌ها"</string>
     <string name="choose_network_title" msgid="5355609223363859430">"انتخاب شبکه"</string>
@@ -5327,6 +5329,8 @@
     <string name="sim_onboarding_next" msgid="6415025179929475355">"بعدی"</string>
     <string name="sim_onboarding_progressbar_turning_sim_on" msgid="1163318788393361574">"درحال روشن کردن <xliff:g id="CARRIER_NAME">%1$s</xliff:g>…"</string>
     <string name="mobile_network_spn_title" msgid="3053793174495329077">"شبکه تلفن همراه"</string>
+    <string name="imei_primary" msgid="5312232202518974440">"‏‫IMEI (اصلی)"</string>
+    <string name="meid_primary" msgid="3256732684155678106">"‏‫MEID (اصلی)"</string>
     <string name="mobile_network_phone_number_title" msgid="2090794402855021784">"شماره تلفن"</string>
     <string name="mobile_network_sim_label_color_title" msgid="2401352348041132876">"رنگ و برچسب سیم‌کارت"</string>
     <string name="sim_setup_channel_id" msgid="8797972565087458515">"فعال‌سازی شبکه"</string>
@@ -5474,12 +5478,12 @@
     <string name="select_invalid_bug_report_handler_toast_text" msgid="8857326334015386692">"این انتخاب دیگر معتبر نیست. دوباره امتحان کنید."</string>
     <string name="power_menu_setting_name" msgid="2394440932633137229">"دکمه روشن/خاموش را فشار دهید و نگه دارید"</string>
     <string name="power_menu_long_press_category_title" msgid="1051146091093775002">"برای دسترسی، دکمه روشن/خاموش را فشار دهید و نگه دارید"</string>
-    <string name="power_menu_long_press_for_power_menu_title" msgid="477584639843663599">"منوی روشن/خاموش"</string>
+    <string name="power_menu_long_press_for_power_menu_title" msgid="477584639843663599">"منو روشن/خاموش"</string>
     <string name="power_menu_long_press_for_assistant_title" msgid="6557738348262616455">"دستیار دیجیتالی"</string>
     <string name="power_menu_summary_long_press_for_assistant" msgid="32706459458422952">"دسترسی به دستیار دیجیتالی"</string>
-    <string name="power_menu_summary_long_press_for_power_menu" msgid="7617247135239683710">"دسترسی به منوی روشن/خاموش"</string>
+    <string name="power_menu_summary_long_press_for_power_menu" msgid="7617247135239683710">"دسترسی به منو روشن/خاموش"</string>
     <string name="lockscreen_privacy_not_secure" msgid="3251276389681975912">"برای استفاده، نخست قفل صفحه را تنظیم کنید"</string>
-    <string name="power_menu_power_volume_up_hint" msgid="5619917593676125759">"منوی روشن/خاموش:\nدکمه روشن/خاموش و دکمه افزایش صدا را هم‌زمان فشار دهید"</string>
+    <string name="power_menu_power_volume_up_hint" msgid="5619917593676125759">"منو روشن/خاموش:\nدکمه روشن/خاموش و دکمه افزایش صدا را هم‌زمان فشار دهید"</string>
     <string name="power_menu_power_prevent_ringing_hint" msgid="1169955014711158873">"جلوگیری از زنگ زدن:\nدکمه صدا را برای میان‌بر فشار دهید"</string>
     <string name="power_menu_long_press_for_assist_sensitivity_title" msgid="1626808509158422185">"مدت فشار دادن و نگه داشتن"</string>
     <string name="power_menu_long_press_for_assist_sensitivity_summary" msgid="7550610071666801935">"با انتخاب مدت زمان فشار دادن و نگه داشتن دکمه روشن/خاموش، میزان حساسیت را تنظیم کنید"</string>

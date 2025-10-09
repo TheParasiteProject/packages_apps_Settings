@@ -1585,15 +1585,17 @@
     <string name="storage_settings_for_app" msgid="229425418984637483">"Hapësira ruajtëse dhe memoria specifike"</string>
     <string name="storage_settings_title" msgid="486118156723194815">"Cilësimet e hapësirës ruajtëse"</string>
     <string name="status_eid" msgid="3588471107671992684">"E​ID"</string>
-    <string name="eid_multi_sim" msgid="3054468215477777096">"E​ID <xliff:g id="EID_SLOT_ID">%1$d</xliff:g>"</string>
-    <string name="imei_multi_sim" msgid="6990044568468728075">"IMEI <xliff:g id="IMEI_ID">%1$d</xliff:g>"</string>
+    <string name="eid_multi_sim" msgid="6659492335576379274">"E​ID (foleja <xliff:g id="EID_SLOT_ID">%1$d</xliff:g> e kartës SIM)"</string>
+    <string name="imei_multi_sim" msgid="27798473711249145">"IMEI (foleja <xliff:g id="IMEI_SLOT_ID">%1$d</xliff:g> e kartës SIM)"</string>
+    <string name="imei_multi_sim_primary" msgid="4320457587114117400">"IMEI (foleja <xliff:g id="IMEI_SLOT_ID_PRIMARY">%1$d</xliff:g> e kartës SIM) (kryesore)"</string>
     <string name="view_saved_network" msgid="1232387673095080910">"Për ta shfaqur, zgjidh rrjetin e ruajtur"</string>
     <string name="status_imei" msgid="5719752369250485007">"Numri IMEI"</string>
     <string name="status_imei_sv" msgid="6908985558726440951">"Numri IMEI SV"</string>
     <string name="status_min_number" msgid="4492899165438225714">"MINUTA"</string>
     <string name="status_msid_number" msgid="3871958248824595774">"MSID"</string>
     <string name="status_prl_version" msgid="9002131357502714281">"Versioni PRL"</string>
-    <string name="meid_multi_sim" msgid="3124054561186721453">"MEID <xliff:g id="MEID_ID">%1$d</xliff:g>"</string>
+    <string name="meid_multi_sim" msgid="5076814185188481456">"MEID (foleja <xliff:g id="MEID_SLOT_ID">%1$d</xliff:g> e kartës SIM)"</string>
+    <string name="meid_multi_sim_primary" msgid="6269908735700854437">"MEID (foleja <xliff:g id="MEID_SLOT_ID_PRIMARY">%1$d</xliff:g> e kartës SIM) (kryesore)"</string>
     <string name="scanning_status_text_on" msgid="3846571210578042940">"Aktiv"</string>
     <string name="scanning_status_text_off" msgid="4002352668313705132">"Joaktiv"</string>
     <string name="status_meid_number" msgid="6040380838489162650">"MEID"</string>
@@ -3578,7 +3580,7 @@
     <string name="color_orange" msgid="216547825489739010">"Portokalli"</string>
     <string name="color_purple" msgid="6603701972079904843">"Vjollcë"</string>
     <string name="sim_status_title" msgid="6188770698037109774">"Statusi i kartës SIM"</string>
-    <string name="sim_status_title_sim_slot" msgid="8727408941064901486">"Statusi i kartës SIM %1$d"</string>
+    <string name="sim_status_title_sim_slot" msgid="5421926522479103027">"Statusi i kartës SIM (foleja %1$d e SIM)"</string>
     <string name="sim_signal_strength" msgid="6351052821700294501">"<xliff:g id="DBM">%1$d</xliff:g> dBm <xliff:g id="ASU">%2$d</xliff:g> asu"</string>
     <string name="sim_notification_title" msgid="6839556577405929262">"Kartat e tua SIM u ndryshuan"</string>
     <string name="sim_notification_summary" msgid="5593339846307029991">"Trokit për ta konfiguruar"</string>
@@ -5324,6 +5326,8 @@
     <string name="sim_onboarding_next" msgid="6415025179929475355">"Para"</string>
     <string name="sim_onboarding_progressbar_turning_sim_on" msgid="1163318788393361574">"<xliff:g id="CARRIER_NAME">%1$s</xliff:g> po aktivizohet…"</string>
     <string name="mobile_network_spn_title" msgid="3053793174495329077">"Rrjeti celular"</string>
+    <string name="imei_primary" msgid="5312232202518974440">"IMEI (kryesor)"</string>
+    <string name="meid_primary" msgid="3256732684155678106">"MEID (kryesor)"</string>
     <string name="mobile_network_phone_number_title" msgid="2090794402855021784">"Numri i telefonit"</string>
     <string name="mobile_network_sim_label_color_title" msgid="2401352348041132876">"Etiketa e ngjyra e kartës SIM"</string>
     <string name="sim_setup_channel_id" msgid="8797972565087458515">"Aktivizimi i rrjetit"</string>
