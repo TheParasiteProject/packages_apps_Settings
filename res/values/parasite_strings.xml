@@ -121,4 +121,8 @@
     <string name="force_dark_title">Force apps dark</string>
     <string name="force_dark_summary">Force darker colors to apps lacking dark mode. May not work with all apps.</string>
 
+    <!-- Force LTE_CA -->
+    <string name="force_lte_ca_title">LTE carrier aggregation</string>
+    <string name="force_lte_ca_summary">Enhances LTE bandwidth by aggregating supported bands</string>
+
 </resources>
