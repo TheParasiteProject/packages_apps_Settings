@@ -118,7 +118,7 @@
     <string name="dark_theme_advanced_category">Advanced</string>
 
     <!-- Force dark mode -->
-    <string name="force_dark_title">Dark mode for third-party apps</string>
-    <string name="force_dark_summary">Forces darker colors in apps lacking dark mode. Some screens may appear off.</string>
+    <string name="force_dark_title">Force apps dark</string>
+    <string name="force_dark_summary">Force darker colors to apps lacking dark mode. May not work with all apps.</string>
 
 </resources>
