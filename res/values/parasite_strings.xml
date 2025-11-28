@@ -133,7 +133,7 @@
     <string name="double_tap_screen_to_sleep_summary">Double-tap an empty space on the lock screen to turn off the screen.</string>
 
     <!-- Force dark mode -->
-    <string name="force_dark_title">Dark mode for third-party apps</string>
-    <string name="force_dark_summary">Forces darker colors in apps lacking dark mode. Some screens may appear off.</string>
+    <string name="force_dark_title">Force apps dark</string>
+    <string name="force_dark_summary">Force darker colors to apps lacking dark mode. May not work with all apps.</string>
 
 </resources>
