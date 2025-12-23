@@ -81,10 +81,7 @@ open class MyDeviceInfoScreen :
                 +PreferenceCategory(
                     BASIC_INFO_CATEGORY,
                     R.string.my_device_info_basic_info_category_title,
-                ) +=
-                    {
-                        +DeviceNamePreference(context) order 1
-                    }
+                )
             }
             +PreferenceCategory(
                 DEVICE_DETAIL_CATEGORY,
