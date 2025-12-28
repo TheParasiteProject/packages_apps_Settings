@@ -8,7 +8,6 @@ package com.android.settings.display.darkmode
 
 import android.content.Context
 import android.content.pm.PackageManager
-import android.content.res.Configuration
 import com.android.settings.R
 import com.android.settingslib.datastore.KeyValueStore
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
@@ -23,11 +22,7 @@ class BerryBlackThemeSwitchPreference(private val berryBlackThemeDataStore: KeyV
 
     override fun storage(context: Context) = berryBlackThemeDataStore
 
-    override fun isAvailable(context: Context) =
-        isPackageInstalled(context, LINEAGE_BLACK_THEME) && context.isDarkMode()
-
-    private fun Context.isDarkMode() =
-        (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES) != 0
+    override fun isAvailable(context: Context) = isPackageInstalled(context, LINEAGE_BLACK_THEME)
 
     override fun getReadPermissions(context: Context) =
         LineageSettingsSecureStore.getReadPermissions()
