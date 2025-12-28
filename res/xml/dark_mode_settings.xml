@@ -75,6 +75,12 @@
             settings:searchable="false"/>
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="advanced_category"
+        android:title="@string/dark_theme_advanced_category">
+
+    </PreferenceCategory>
+
     <com.android.settingslib.widget.FooterPreference
         android:key="dark_theme_connection_footer"
         android:title= "@string/twilight_mode_pending_location"

@@ -118,6 +118,8 @@ abstract class BaseDarkModeScreen(context: Context) :
                 +StartTimePreference(uiModeManager)
                 +EndTimePreference(uiModeManager)
             }
+            +PreferenceCategory("advanced_category", R.string.dark_theme_advanced_category) += {
+            }
             +DarkModePendingLocationFooterPreference()
             +DarkModeExpandedFooterPreference()
             +DarkModeCustomModesFooterPreference()
