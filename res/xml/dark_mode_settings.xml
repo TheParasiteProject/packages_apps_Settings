@@ -79,6 +79,11 @@
         android:key="advanced_category"
         android:title="@string/dark_theme_advanced_category">
 
+        <lineageos.preference.SystemPropertySwitchPreference
+            android:key="persist.sys.debug.hwui.force_dark"
+            android:title="@string/hwui_force_dark_title"
+            android:summary="@string/hwui_force_dark_summary" />
+
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
