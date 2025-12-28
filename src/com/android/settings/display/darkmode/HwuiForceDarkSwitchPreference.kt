@@ -7,7 +7,6 @@
 package com.android.settings.display.darkmode
 
 import android.content.Context
-import android.content.res.Configuration
 import android.view.ThreadedRenderer
 import com.android.settings.R
 import com.android.settingslib.datastore.KeyValueStore
@@ -22,10 +21,7 @@ class HwuiForceDarkSwitchPreference(private val hwuiForceDarkDataStore: KeyValue
 
     override fun storage(context: Context) = hwuiForceDarkDataStore
 
-    override fun isAvailable(context: Context) = context.isDarkMode()
-
-    private fun Context.isDarkMode() =
-        (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES) != 0
+    override fun isAvailable(context: Context) = true
 
     override fun getReadPermissions(context: Context) = SystemPropertyStore.getReadPermissions()
 
