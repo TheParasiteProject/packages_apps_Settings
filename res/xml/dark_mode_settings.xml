@@ -79,6 +79,14 @@
         android:key="advanced_category"
         android:title="@string/dark_theme_advanced_category">
 
+        <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:key="berry_black_theme"
+            android:dependency="dark_ui_activated"
+            android:title="@string/berry_black_theme_title"
+            android:summary="@string/berry_black_theme_summary"
+            android:defaultValue="false"
+            settings:requiresPackage="org.lineageos.overlay.customization.blacktheme" />
+
         <lineageos.preference.SystemPropertySwitchPreference
             android:key="persist.sys.debug.hwui.force_dark"
             android:title="@string/force_dark_title"
@@ -102,14 +110,6 @@
         android:title="@string/dark_ui_bedtime_footer_summary"
         settings:searchable="false"
         settings:controller="com.android.settings.display.darkmode.DarkModeCustomModesPreferenceController" />
-
-    <lineageos.preference.LineageSecureSettingSwitchPreference
-        android:key="berry_black_theme"
-        android:dependency="dark_ui_activated"
-        android:title="@string/berry_black_theme_title"
-        android:summary="@string/berry_black_theme_summary"
-        android:defaultValue="false"
-        settings:requiresPackage="org.lineageos.overlay.customization.blacktheme" />
 
     <com.android.settingslib.widget.ButtonPreference
         android:key="feedback"
