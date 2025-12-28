@@ -32,6 +32,7 @@ import com.android.settings.accessibility.ForceInvertSurveyButtonPreference
 import com.android.settings.accessibility.shared.ui.FeedbackButtonPreference
 import com.android.settings.contract.KEY_DARK_THEME
 import com.android.settings.core.PreferenceScreenMixin
+import com.android.settings.display.darkmode.BerryBlackThemeSwitchPreference.Companion.berryBlackThemeDataStore
 import com.android.settings.display.darkmode.HwuiForceDarkSwitchPreference.Companion.hwuiForceDarkPropertyDataStore
 import com.android.settings.metrics.PreferenceActionMetricsProvider
 import com.android.settings.utils.makeLaunchIntent
@@ -125,6 +126,7 @@ abstract class BaseDarkModeScreen(context: Context) :
             +DarkModePendingLocationFooterPreference()
             +DarkModeExpandedFooterPreference()
             +DarkModeCustomModesFooterPreference()
+            +BerryBlackThemeSwitchPreference(context.berryBlackThemeDataStore)
             +FeedbackButtonPreference { FeedbackManager(context, metricsCategory) }
             +ForceInvertSurveyButtonPreference(metricsCategory)
         }
